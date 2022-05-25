@@ -1,0 +1,82 @@
+site_name: Emuera.EM+EE Document
+repo_url: https://gitlab.com/EvilMask/emuera.em.doc
+theme:
+  name: material
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - content.code.annotate
+  palette: 
+    - scheme: slate 
+      primary: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+nav:
+  - Home: README.md
+  - Reference:
+    - Reference\README.md
+    - HTML_STRINGLEN: Reference\HTML_STRINGLEN.md
+  - Changelog: Changelog\README.md
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+  - i18n:
+      default_language: !ENV [DEFAULT_LANGUAGE, "ja"]
+      languages:
+        ja:
+          name: 日本語
+          build: true
+          site_name: Emuera.EM+EE ドキュメント
+        en:
+          name: English
+          build: true
+        zh:
+          name: 简体中文
+          build: true
+          site_name: Emuera.EM+EE 帮助文档
+      nav_translations:
+        ja:
+          Home: ホーム
+          Reference: リファレンス
+          Changelog: 変更ログ
+          Extended API: 拡張されたAPI
+        zh:
+          Home: 首页
+          Reference: 参考手册
+          Changelog: 更新日志
+          Extended API: 被增强的API
+
+markdown_extensions:
+  # Python Markdown
+  - meta
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - admonition
+  # Python Markdown Extensions
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.keys
