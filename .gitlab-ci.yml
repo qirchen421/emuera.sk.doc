@@ -35,8 +35,6 @@ pages:
     - pip install mkdocs-material
     - pip install mkdocs-minify-plugin
     - pip install mkdocs-static-i18n
-    - pip install markdown
-    - pip install pymdown-extensions
     - mkdocs build -d public
   artifacts:
     paths:
