@@ -27,6 +27,7 @@ nav:
     - Reference/README.md
     - HTML系:
       - Reference/HTML_STRINGLEN.md
+    - 文字列操作・参照:
       - Reference/REGEXPMATCH.md
 
   - 変更ログ: Changelog/README.md

@@ -41,8 +41,12 @@
 
 !!! example "例"
 
-    ```
-    HTML_PRINT "文<space type='space' param='-100'>字"
+    ``` title="MAIN.ERB"
+    @SYSTEM_TITLE
+    
+    HTML_PRINT "文<shape type='space' param='-100'>字"
+
+    ONEINPUT
     ```
 
 ### `INPUT`系でマウスクリックを受け付けるように
@@ -65,7 +69,7 @@
     
 !!! example "例"
 
-    ```
+    ``` title="emuera.config"
     LOADTEXTとSAVETEXTで使える拡張子:txt,xml,json
     ```
 
@@ -90,7 +94,43 @@
 ### HTML系
 
 | 関数名                                        | 引数                                               | 戻り値 |
-| :-:                                           | :-                                                | :-:    |
+| :-                                            | :-                                                | :-     |
 | [`HTML_STRINGLEN`](./HTML_STRINGLEN.md)       | `string`(, `int`)                                 | `int`  |
+
+### 文字列操作・参照
+
+| 関数名                                        | 引数                                               | 戻り値 |
+| :-                                            | :-                                                | :-     |
 | [`REGEXPMATCH`](./REGEXPMATCH.md)             | `string`, `string`(, `int`)                       | `int`  |
 |                                               | `string`, `string`, `ref` `int`, `ref` `string`   | `int`  |
+
+### 変数操作・変数参照・CSV参照
+
+| 関数名                                            | 引数                                  | 戻り値    |
+| :-                                                | :-                                    | :-         |
+| [`ISDEFINED`](./ISDEFINED.md)                     | `string`                              | `int`      |
+| [`EXISTVAR`](./EXISTVAR.md)                       | `string`                              | `int`      |
+| [`ENUMFUNCBEGINSWITH`](./ENUMFUNCBEGINSWITH.md)   | `string`                              | `int`      |
+| [`ENUMVARBEGINSWITH`](./ENUMVARBEGINSWITH.md)     | `string`                              | `int`      |
+| [`ENUMMACROBEGINSWITH`](./ENUMMACROBEGINSWITH.md) | `string`                              | `int`      |
+| [`ENUMFUNCENDSWITH`](./ENUMFUNCENDSWITH.md)       | `string`                              | `int`      |
+| [`ENUMVARENDSWITH`](./ENUMVARENDSWITH.md)         | `string`                              | `int`      |
+| [`ENUMMACROENDSWITH`](./ENUMMACROENDSWITH.md)     | `string`                              | `int`      |
+| [`ENUMFUNCWITH`](./ENUMFUNCWITH.md)               | `string`                              | `int`      |
+| [`ENUMVARWITH`](./ENUMVARWITH.md)                 | `string`                              | `int`      |
+| [`ENUMMACROWITH`](./ENUMMACROWITH.md)             | `string`                              | `int`      |
+| [`GETVAR`](./GETVAR.md)                           | `string`                              | `int`      |
+| [`GETVARS`](./GETVARS.md)                         | `string`                              | `string`   |
+| [`SETVAR`](./SETVAR.md)                           | `string`, `any`                       | `1`        |
+| [`VARSETEX`](./VARSETEX.md)                       | `string`, `any`(, `int`, `int`, `int`)| `1`        |
+| [`ARRAYMSORTEX`](./ARRAYMSORTEX.md)               | `string`, `ref` `string`(, `int`)     | `1`        |
+|                                                   | `ref` `int`, `ref` `string`(, `int`)  | `1`        |
+
+### デバッグ補助・システムフロー制御
+
+| 関数名                                                        | 引数          |
+| :-                                                            | :-            |
+|[`QUIT_AND_RESTART`](./QUIT_AND_RESTART.md)                    | なし          |
+|[`FORCE_QUIT`](./FORCE_QUIT.md)                                | なし          |
+|[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md)        | なし          |
+|[`FORCE_BEGIN`](./FORCE_QUIT_AND_RESTART.md)                   | `identifier`  |

@@ -8,14 +8,16 @@
 !!! info "API"
 
     ```
-    <1> int REGEXPMATCH str, pattern(, output)
-    <2> int REGEXPMATCH str, pattern, ref groupCount, ref matches
+    1. int REGEXPMATCH str, pattern(, output)
+    2. int REGEXPMATCH str, pattern, ref groupCount, ref matches
     ```
 !!! note ""
 
     `str`が正規表現パターン`pattern`に合うなら合致結果の数を返す，そうでない場合0を返す
-    <1> `output`が者略または`0`以外の整数の場合，マッチグループ数を`RESULT:1`に、各マッチ結果を`RESULTS`に代入(合計「グループ数」×「戻り値」個)
-    <2> マッチグループ数を`groupCount`に、各マッチ結果を`matches`に代入(合計「グループ数」×「戻り値」個)
+    
+    1. `output`が者略または`0`以外の整数の場合，マッチグループ数を`RESULT:1`に、各マッチ結果を`RESULTS`に代入(合計「グループ数」×「戻り値」個)
+    
+    2. マッチグループ数を`groupCount`に、各マッチ結果を`matches`に代入(合計「グループ数」×「戻り値」個)
 
 !!! example "例"
 
