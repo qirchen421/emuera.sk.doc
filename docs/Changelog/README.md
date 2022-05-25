@@ -6,9 +6,14 @@ hide:
 
 ## Emueram.EM
 
+=== "v7"
+
+    * `HTML_STRINGLEN`機能拡張
+    * `REGEXPMATCH`機能拡張
+
 === "v6"
 
-    * セキュリティ対策のため，[`WebP`](https://developers.google.com/speed/webp)ソリューションを[`ImageProcessor`](https://imageprocessor.org/)+`libwebp`に変更しまた。
+    * セキュリティ誤検出対策のため，[`WebP`](https://developers.google.com/speed/webp)ソリューションを[`ImageProcessor`](https://imageprocessor.org/)+`libwebp`に変更しまた。
 
 === "v5"
 

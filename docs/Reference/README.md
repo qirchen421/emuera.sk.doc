@@ -133,4 +133,41 @@
 |[`QUIT_AND_RESTART`](./QUIT_AND_RESTART.md)                    | なし          |
 |[`FORCE_QUIT`](./FORCE_QUIT.md)                                | なし          |
 |[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md)        | なし          |
-|[`FORCE_BEGIN`](./FORCE_QUIT_AND_RESTART.md)                   | `identifier`  |
+|[`FORCE_BEGIN`](./FORCE_BEGIN.md)                              | `identifier`  |
+
+### 関数系（CALL等）
+
+| 関数名                                            | 引数           |
+| :-                                               | :-             |
+|[`EXISTFUNCTION`](./EXISTFUNCTION.md)             | `string`       |
+|[`TRYCALLF`](./TRYCALLF.md)                       | `string`       |
+|[`TRYCALLFORMF`](./TRYCALLFORMF.md)               | `formedString` |
+
+### 画像処理関連
+
+| 関数名                                            | 引数                                  | 戻り値    |
+| :-                                                | :-                                    | :-         |
+| [`GDRAWTEXT`](./GDRAWTEXT.md)                     | `int`, `string`(, `int`, `int`)       | `int`      |
+| [`GGETFONT`](./GGETFONT.md)                       | `int`                                 | `int`      |
+| [`GGETFONTSIZE`](./GGETFONTSIZE.md)               | `int`                                 | `int`      |
+| [`GGETTEXTSIZE`](./GGETTEXTSIZE.md)               | `string`, `string`, `int`(, `int`)    | `int`      |
+| [`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md)       | `int`, `int`, `int`(, `int`, `int`)   | `int`      |
+
+### サウンド系
+
+| 関数名                                        | 引数      | 戻り値    |
+| :-                                            | :-        | :-        |
+| [`PLAYSOUND`](./PLAYSOUND.md)                 | `string`  | なし      |
+| [`STOPSOUND`](./STOPSOUND.md)                 | なし      | なし      |
+| [`PLAYBGM`](./PLAYBGM.md)                     | `string`  | なし      |
+| [`STOPBGM`](./STOPBGM.md)                     | なし      | なし      |
+| [`EXISTSOUND`](./EXISTSOUND.md)               | `string`  | `int`     |
+| [`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md)       | `int`     | なし      |
+| [`SETBGMVOLUME`](./SETBGMVOLUME.md)           | `int`     | なし      |
+
+### XML系
+
+### MAP（連想配列）系
+
+### その他
+
