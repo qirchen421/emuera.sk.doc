@@ -1,13 +1,13 @@
-site_name: Emuera.EM+EE Document
+site_name: Emuera.EM+EE ドキュメント
 repo_url: https://gitlab.com/EvilMask/emuera.em.doc
 site_url: https://evilmask.gitlab.io/emuera.em.doc/
 theme:
   name: material
   features:
     - navigation.tracking
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.tabs
     - navigation.top
     - navigation.indexes
     - content.code.annotate
@@ -22,11 +22,14 @@ theme:
         icon: material/weather-night
         name: Switch to dark mode
 nav:
-  - Home: README.md
-  - Reference:
+  - ホーム: README.md
+  - リファレンス:
     - Reference/README.md
-    - HTML_STRINGLEN: Reference/HTML_STRINGLEN.md
-  - Changelog: Changelog/README.md
+    - HTML系:
+      - Reference/HTML_STRINGLEN.md
+      - Reference/REGEXPMATCH.md
+
+  - 変更ログ: Changelog/README.md
 plugins:
   - search
   - minify:
@@ -36,30 +39,28 @@ plugins:
       htmlmin_opts:
           remove_comments: true
   - i18n:
-      default_language: !ENV [DEFAULT_LANGUAGE, "ja"]
+      default_language: ja
       languages:
         ja:
           name: 日本語
           build: true
-          site_name: Emuera.EM+EE ドキュメント
         en:
           name: English
           build: true
+          site_name: Emuera.EM+EE Document
         zh:
           name: 简体中文
           build: true
           site_name: Emuera.EM+EE 帮助文档
       nav_translations:
-        ja:
-          Home: ホーム
-          Reference: リファレンス
-          Changelog: 変更ログ
-          Extended API: 拡張されたAPI
         zh:
-          Home: 首页
-          Reference: 参考手册
-          Changelog: 更新日志
-          Extended API: 被增强的API
+          ホーム: 首页
+          リファレンス: 参考手册
+          変更ログ: 更新日志
+        en:
+          ホーム: Home
+          リファレンス: Reference
+          変更ログ: Changelog
 
 markdown_extensions:
   # Python Markdown

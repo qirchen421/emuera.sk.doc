@@ -89,6 +89,8 @@
 
 ### HTML系
 
-| 関数名                                            | 引数                          | 戻り値 |
-| :----------------------------------------------: | :---------------------------: | :----: |
-| [`HTML_STRINGLEN`](/Reference/HTML_STRINGLEN)    | `string`(, `int`)             | `int`  |
+| 関数名                                        | 引数                                               | 戻り値 |
+| :-:                                           | :-                                                | :-:    |
+| [`HTML_STRINGLEN`](./HTML_STRINGLEN.md)       | `string`(, `int`)                                 | `int`  |
+| [`REGEXPMATCH`](./REGEXPMATCH.md)             | `string`, `string`(, `int`)                       | `int`  |
+|                                               | `string`, `string`, `ref` `int`, `ref` `string`   | `int`  |

@@ -1,4 +1,9 @@
 # HTML_STRINGLEN
+
+| 関数名                                        | 引数                                               | 戻り値 |
+| :-:                                           | :-                                                | :-:    |
+| [`HTML_STRINGLEN`](./HTML_STRINGLEN.md)       | `string`(, `int`)                                 | `int`  |
+
 !!! info "API"
 
     ```
@@ -11,15 +16,17 @@
 
 !!! example "例"
 
+    ``` title="MAIN.ERB"
+    @SYSTEM_TITLE
+
+        HTML_SUBSTRING "AB<b>CD</b>EFG",4
+        PRINTSL RESULTS
+        PRINTSL RESULTS:1
+
+        ONEINPUT
     ```
-    HTML_SUBSTRING　"AB<b>CD</b>EFG",4
-    PRINTSL RESULTS
-    PRINTSL RESULTS:1
-    ```
-    <div class="annotate" markdown>
     ```  title="結果"
     AB<b>C</b>
     <b>D</b>EFG
     ```
-    </div>
     太字は普通より幅広いからです

@@ -5,7 +5,7 @@ hide:
 # ようこそ
 
 ## EmueraEM+EEとは
-> EmueraEM+EEは、[Emuera私家版](https://ux.getuploader.com/ninnohito/)()をベースに改造を施したEmueraです。
+> EmueraEM+EEは、[Emuera私家版](https://ux.getuploader.com/ninnohito/)をベースに改造を施したEmueraです。
 
 ### Emuera私家版
 !!! quote "引用"
