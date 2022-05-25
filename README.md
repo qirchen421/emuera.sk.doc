@@ -1,7 +1,7 @@
 # Contribute guide
 
 1. Fork and clone this repository.
-2. Edit `.md` files for your language, by adding ;ang-code.
+2. Edit `.md` files for your language, by adding lang-code.
     
     For example:
     | Default(ja)   | English(en)   | Chinese(zh)   |
