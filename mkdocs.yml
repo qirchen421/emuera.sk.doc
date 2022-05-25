@@ -1,5 +1,6 @@
 site_name: Emuera.EM+EE Document
 repo_url: https://gitlab.com/EvilMask/emuera.em.doc
+site_url: https://evilmask.gitlab.io/emuera.em.doc/
 theme:
   name: material
   features:
