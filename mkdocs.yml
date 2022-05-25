@@ -23,9 +23,9 @@ theme:
 nav:
   - Home: README.md
   - Reference:
-    - Reference\README.md
-    - HTML_STRINGLEN: Reference\HTML_STRINGLEN.md
-  - Changelog: Changelog\README.md
+    - Reference/README.md
+    - HTML_STRINGLEN: Reference/HTML_STRINGLEN.md
+  - Changelog: Changelog/README.md
 plugins:
   - search
   - minify:
