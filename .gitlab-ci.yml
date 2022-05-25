@@ -33,7 +33,7 @@ pages:
   script:
     - pip install mkdocs
     - pip install mkdocs-material
-    = pip install mkdocs-minify-plugin
+    - pip install mkdocs-minify-plugin
     - pip install markdown
     - pip install pymdown-extensions
     - mkdocs build -d public
