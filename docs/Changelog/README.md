@@ -4,7 +4,7 @@ hide:
 ---
 # 変更ログ
 
-## Emueram.EM
+## Emuera.EM
 
 === "v7"
 
