@@ -4,9 +4,9 @@
 2. Edit `.md` files for your language, by adding lang-code.
     
     For example:
-    | Default(ja)   | English(en)   | Chinese(zh)   |
-    | ---           | ---           | ---           |
-    | README.md     | README.en.md  | README.zh.md  |
+    | Default(ja) | English(en)  | Chinese(zh)  |
+    | ----------- | ------------ | ------------ |
+    | README.md   | README.en.md | README.zh.md |
 4. Commit to your forked repository and make a pull request.
 
 # Preview on local machine
@@ -29,4 +29,5 @@
 
 # Release Page
 
-[日本語](https://evilmask.gitlab.io/emuera.em.doc/) [English](https://evilmask.gitlab.io/emuera.em.doc/en/) [简体中文](https://evilmask.gitlab.io/emuera.em.doc/zh/)
+| [日本語](https://evilmask.gitlab.io/emuera.em.doc/) | [English](https://evilmask.gitlab.io/emuera.em.doc/en/) | [简体中文](https://evilmask.gitlab.io/emuera.em.doc/zh/) |
+| :-------------------------------------------------: | :-----------------------------------------------------: | :------------------------------------------------------: |
