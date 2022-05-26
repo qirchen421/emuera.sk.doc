@@ -30,14 +30,21 @@
 
 !!! example "例"
 
+    ``` { #language-erh title="DEFINE.ERH" }
+    #DIMS CONST Foo1 = "1"
+    #DIM Foo2, 2, 2
+    #DIMS CONST Foo3 = "3", "4"
+    #DIM MyFoo 
+    ```
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
+        #DIMS Local3DFoo, 2, 2, 2
 
-        PRINTFORML "Foo"で始まる変数・定数名の数:{ENUMFUNCBEGINSWITH("Foo")}
-        ENUMFUNCENDSWITH "Foo"
+        PRINTFORML "Foo"で始まる変数・定数名の数:{ENUMVARBEGINSWITH("Foo")}
+        ENUMVARENDSWITH "Foo"
         PRINTFORML "Foo"で終わる変数・定数名の数:{RESULT}
         CALL PrintFoo
-        ENUMFUNCWITH "Foo"
+        ENUMVARWITH "Foo"
         PRINTFORML "Foo"を含んだ変数・定数名の数:{RESULT}
         CALL PrintFoo
 
@@ -53,9 +60,9 @@
         PRINTL
     ```
     ``` title="結果"
-    "Foo"で始まる関数名の数:3
-    "Foo"で終わる関数名の数:3
-    PrintFoo, Dummy1Foo, Dummy2Foo
-    "Foo"を含んだ関数名の数:7
-    PrintFoo, Foo1, Foo2, Foo3, Dummy1Foo, Dummy2Foo, My_Foo_Func
+    "Foo"で始まる変数・定数名の数:3
+    "Foo"で終わる変数・定数名の数:1
+    MyFoo
+    "Foo"を含んだ変数・定数名の数:4
+    Foo1, Foo2, Foo3, MyFoo
     ```
