@@ -2,7 +2,7 @@ site_name: Emuera.EM+EE ドキュメント
 repo_url: https://gitlab.com/EvilMask/emuera.em.doc
 site_url: https://evilmask.gitlab.io/emuera.em.doc/
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js
+  - javascripts/highlight.min.js
   - javascripts/erabasic-highlighths.min.js
 extra_css:
   - css/eraBasic.min.css
