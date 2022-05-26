@@ -7,7 +7,7 @@
 
 !!! info "API"
 
-    ```
+    ```  { #language-erbapi }
     1. int REGEXPMATCH str, pattern(, output)
     2. int REGEXPMATCH str, pattern, ref groupCount, ref matches
     ```
@@ -19,13 +19,13 @@
     
     2. マッチグループ数を`groupCount`に、各マッチ結果を`matches`に代入(合計「グループ数」×「戻り値」個)
 
-!!! example "例"
-
-    ``` title="MAIN.ERB"
+!!! example "例" 
+    
+    ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
         #DIM groupCount
         #DIMS matches, 10
-        #DIM i
+        #DIM REF i
         #DIM j
         #DIM count
 
@@ -42,8 +42,9 @@
         NEXT
         
         ONEINPUT
-    ```
-    ```  title="結果"
+        
+    ``` 
+    ``` title="結果"
     合致結果数:3
     合致結果数:3 グループ数:2
     結果1:

@@ -5,10 +5,11 @@
 | [`HTML_STRINGLEN`](./HTML_STRINGLEN.md)       | `string`(, `int`)                                 | `int`  |
 
 !!! info "API"
-
-    ```
+    
+    ``` { #language-erbapi }
     int HTML_STRINGLEN html(, returnPixel)
     ```
+    
 !!! note ""
 
     `HTML_PRINT`で`html`を表示した結果の幅を返す、複数行がある場合1行目の幅を返す
@@ -16,7 +17,7 @@
 
 !!! example "例"
 
-    ``` title="MAIN.ERB"
+    ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
 
         HTML_SUBSTRING "AB<b>CD</b>EFG",4
@@ -25,7 +26,7 @@
 
         ONEINPUT
     ```
-    ```  title="結果"
+    ``` title="結果"
     AB<b>C</b>
     <b>D</b>EFG
     ```

@@ -1,13 +1,20 @@
 site_name: Emuera.EM+EE ドキュメント
 repo_url: https://gitlab.com/EvilMask/emuera.em.doc
 site_url: https://evilmask.gitlab.io/emuera.em.doc/
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js
+  - javascripts/erabasic-highlighths.min.js
+extra_css:
+  - css/eraBasic.min.css
 theme:
   name: material
+  highlightjs: false
   features:
     - navigation.tracking
     - navigation.tabs
     - navigation.top
     - navigation.indexes
+    - navigation.expand
     - content.code.annotate
   palette: 
     - scheme: slate 
@@ -71,11 +78,10 @@ markdown_extensions:
       permalink: true
   - admonition
   # Python Markdown Extensions
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
-      use_pygments: true
   - pymdownx.tabbed:
       alternate_style: true 
   - pymdownx.inlinehilite

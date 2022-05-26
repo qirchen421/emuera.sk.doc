@@ -41,7 +41,7 @@
 
 !!! example "例"
 
-    ``` title="MAIN.ERB"
+    ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
     
     HTML_PRINT "文<shape type='space' param='-100'>字"
