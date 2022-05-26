@@ -37,6 +37,7 @@ nav:
       - Reference/ISDEFINED.md
       - Reference/EXISTVAR.md
       - Reference/ENUMFUNC.md
+      - Reference/ENUMVAR.md
 
   - 変更ログ: Changelog/README.md
 plugins:
