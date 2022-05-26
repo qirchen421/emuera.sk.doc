@@ -26,3 +26,7 @@
     mkdocs serve
     ```
 5. Preview in the browser. (The default URL should be http://127.0.0.1:8000/emuera.em.doc/)
+
+# Release Page
+
+[日本語](https://evilmask.gitlab.io/emuera.em.doc/) [English](https://evilmask.gitlab.io/emuera.em.doc/en/) [简体中文](https://evilmask.gitlab.io/emuera.em.doc/zh/)
