@@ -119,9 +119,9 @@
 | ![](../assets/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string`                               | `int`    |
 | ![](../assets/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string`                               | `int`    |
 | ![](../assets/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`GETVAR`](./GETVAR.md)                 | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`GETVARS`](./GETVARS.md)               | `string`                               | `string` |
-| ![](../assets/IconEM.webp)[`SETVAR`](./SETVAR.md)                 | `string`, `any`                        | `1`      |
+| ![](../assets/IconEM.webp)[`GETVAR`](./GETSETVAR.md)              | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`GETVARS`](./GETSETVAR.md)             | `string`                               | `string` |
+| ![](../assets/IconEM.webp)[`SETVAR`](./GETSETVAR.md)              | `string`, `any`                        | `1`      |
 | ![](../assets/IconEM.webp)[`VARSETEX`](./VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`) | `1`      |
 | ![](../assets/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string`(, `int`)      | `1`      |
 |                                                                   | `ref` `int`, `ref` `string`(, `int`)   | `1`      |

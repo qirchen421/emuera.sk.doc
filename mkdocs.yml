@@ -38,6 +38,8 @@ nav:
       - Reference/EXISTVAR.md
       - Reference/ENUMFUNC.md
       - Reference/ENUMVAR.md
+      - Reference/ENUMMACRO.md
+      - Reference/GETSETVAR.md
 
   - 変更ログ: Changelog/README.md
 plugins:
