@@ -26,15 +26,15 @@ cache:
 before_script:
   - python --version  # For debugging
   - pip install virtualenv
+  - pip install mkdocs
+  - pip install mkdocs-material
+  - pip install mkdocs-minify-plugin
+  - pip install mkdocs-static-i18n
   - virtualenv venv
   - source venv/bin/activate
 
 pages:
   script:
-    - pip install mkdocs
-    - pip install mkdocs-material
-    - pip install mkdocs-minify-plugin
-    - pip install mkdocs-static-i18n
     - mkdocs build -d public
   artifacts:
     expire_in: 3 hrs
