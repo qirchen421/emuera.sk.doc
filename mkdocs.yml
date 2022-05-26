@@ -15,7 +15,6 @@ theme:
     - navigation.top
     - navigation.indexes
     - navigation.expand
-    - content.code.annotate
   palette: 
     - scheme: slate 
       primary: light blue
@@ -34,6 +33,9 @@ nav:
       - Reference/HTML_STRINGLEN.md
     - 文字列操作・参照:
       - Reference/REGEXPMATCH.md
+    - 変数操作・変数参照・CSV参照:
+      - Reference/ISDEFINED.md
+      - Reference/EXISTVAR.md
 
   - 変更ログ: Changelog/README.md
 plugins:

@@ -148,23 +148,13 @@
         contains: [StrPlaceHolder, IntPlaceHolder, EscapeChar, FormStringEolChar],
     };
     const FormEolCommand = {
-        begin: [
-            /PRINTFORMS?(K|D)?(L|W)?\b|PRINTSINGLEFORMS?(K|D)?\b|PRINTFORM(C|LC)?(K|D)?\b|PRINTPLAINFORM\b|DRAWLINEFORM\b|STRLENFORM\b|STRLENFORMU\b|ENCODETOUNI\b|THROW\b|GOTOFORM\b|TRYGOTOFORM\b|DEBUGPRINTFORM\b|DEBUGPRINTFORML\b|REUSELASTLINE\b/,
-            / /,
-        ],
-        beginScope: {
-            1: 'built_in'
-        },
+        begin: /PRINTFORMS?(K|D)?(L|W)?\b|PRINTSINGLEFORMS?(K|D)?\b|PRINTFORM(C|LC)?(K|D)?\b|PRINTPLAINFORM\b|DRAWLINEFORM\b|STRLENFORM\b|STRLENFORMU\b|ENCODETOUNI\b|THROW\b|GOTOFORM\b|TRYGOTOFORM\b|DEBUGPRINTFORM\b|DEBUGPRINTFORML\b|REUSELASTLINE\b/,
+        beginScope: 'built_in',
         contains: [FormStringEol],
     }
     const FormFuncCommand = {
-        begin: [
-            /JUMPFORM\b|CALLFORM\b|TRYJUMPFORM\b|TRYCALLFORM\b|CALLFORMF\b|TRYCJUMPFORM\b|TRYCCALLFORM\b/,
-            / /,
-        ],
-        beginScope: {
-            1: 'keyword'
-        },
+        begin: /JUMPFORM\b|CALLFORM\b|TRYJUMPFORM\b|TRYCALLFORM\b|CALLFORMF\b|TRYCJUMPFORM\b|TRYCCALLFORM\b/,
+        beginScope: 'keyword',
         end: /[,(]|$/,
         endScope: "operator",
         contains: [FormStringFuncName],
@@ -182,17 +172,12 @@
         match: /,/,
     }
     const ReturnCommand = {
-        begin: [
-            /RETURNFORM\b/,
-            / /,
-        ],
-        beginScope: {
-            1: 'built_in'
-        },
+        begin: /RETURNFORM\b/,
+        beginScope: 'built_in',
         contains: [Comma, FormStringReturn],
     }
 
-    const PlaceHolderContains = [LeftRight, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, OperatorExceptMod, PunctuationExceptRB]
+    const PlaceHolderContains = [LeftRight, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, OperatorExceptMod, PunctuationExceptRB]
     StrPlaceHolder.contains = PlaceHolderContains;
     IntPlaceHolder.contains = PlaceHolderContains;
     const ErhRoot = [SkipComment, Descriptor, Keyword, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
