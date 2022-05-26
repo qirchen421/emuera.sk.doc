@@ -1,10 +1,10 @@
 # ENUMFUNC系
 
-| 関数名                                                          | 引数     | 戻り値 |
-| :-------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md) | `string` | `int`  |
-| ![](../assets/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.md)   | `string` | `int`  |
-| ![](../assets/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.md)       | `string` | `int`  |
+| 関数名                                                                 | 引数     | 戻り値 |
+| :--------------------------------------------------------------------- | :------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.md)       | `string` | `int`  |
 
 !!! info "API"
     

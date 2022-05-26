@@ -1,10 +1,10 @@
 # ENUMMACRO系
 
-| 関数名                                                            | 引数     | 戻り値 |
-| :---------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string` | `int`  |
-| ![](../assets/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string` | `int`  |
-| ![](../assets/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string` | `int`  |
+| 関数名                                                                   | 引数     | 戻り値 |
+| :----------------------------------------------------------------------- | :------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string` | `int`  |
 
 !!! info "API"
     

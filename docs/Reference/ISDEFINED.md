@@ -1,8 +1,8 @@
 # ISDEFINED
 
-| 関数名                                                  | 引数     | 戻り値 |
-| :------------------------------------------------------ | :------- | :----- |
-| ![](../assets/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md) | `string` | `int`  |
+| 関数名                                                         | 引数     | 戻り値 |
+| :------------------------------------------------------------- | :------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md) | `string` | `int`  |
 
 !!! info "API"
     

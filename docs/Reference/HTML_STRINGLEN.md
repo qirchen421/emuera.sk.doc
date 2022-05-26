@@ -1,8 +1,8 @@
 # HTML_STRINGLEN
 
-| 関数名                                                            | 引数              | 戻り値 |
-| :---------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
+| 関数名                                                                   | 引数              | 戻り値 |
+| :----------------------------------------------------------------------- | :---------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
 
 !!! info "API"
     

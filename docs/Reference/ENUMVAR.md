@@ -1,10 +1,10 @@
 # ENUMVAR系
 
-| 関数名                                                        | 引数     | 戻り値 |
-| :------------------------------------------------------------ | :------- | :----- |
-| ![](../assets/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.md) | `string` | `int`  |
-| ![](../assets/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.md)   | `string` | `int`  |
-| ![](../assets/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.md)       | `string` | `int`  |
+| 関数名                                                               | 引数     | 戻り値 |
+| :------------------------------------------------------------------- | :------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.md)       | `string` | `int`  |
 
 !!! info "API"
     
