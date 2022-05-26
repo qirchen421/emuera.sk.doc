@@ -37,6 +37,7 @@ pages:
     - pip install mkdocs-static-i18n
     - mkdocs build -d public
   artifacts:
+    expire_in: 3 hrs
     paths:
       - public
   rules:
