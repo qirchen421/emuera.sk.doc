@@ -106,25 +106,25 @@
 
 ### 変数操作・変数参照・CSV参照
 
-| 関数名                                                                      | 引数                                   | 戻り値   |
-| :-------------------------------------------------------------------------- | :------------------------------------- | :------- |
-| ![](../assets/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md)                     | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md)                       | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNCBEGINSWITH.md)   | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVARBEGINSWITH.md)     | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACROBEGINSWITH.md) | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNCENDSWITH.md)       | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVARENDSWITH.md)         | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACROENDSWITH.md)     | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNCWITH.md)               | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMVARWITH`](./ENUMVARWITH.md)                 | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACROWITH.md)             | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`GETVAR`](./GETVAR.md)                           | `string`                               | `int`    |
-| ![](../assets/IconEM.webp)[`GETVARS`](./GETVARS.md)                         | `string`                               | `string` |
-| ![](../assets/IconEM.webp)[`SETVAR`](./SETVAR.md)                           | `string`, `any`                        | `1`      |
-| ![](../assets/IconEM.webp)[`VARSETEX`](./VARSETEX.md)                       | `string`, `any`(, `int`, `int`, `int`) | `1`      |
-| ![](../assets/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)               | `string`, `ref` `string`(, `int`)      | `1`      |
-|                                                                             | `ref` `int`, `ref` `string`(, `int`)   | `1`      |
+| 関数名                                                            | 引数                                   | 戻り値   |
+| :---------------------------------------------------------------- | :------------------------------------- | :------- |
+| ![](../assets/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md)           | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md)             | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md)   | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.md)     | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.md)         | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.md)     | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.md)       | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.md)           | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`GETVAR`](./GETVAR.md)                 | `string`                               | `int`    |
+| ![](../assets/IconEM.webp)[`GETVARS`](./GETVARS.md)               | `string`                               | `string` |
+| ![](../assets/IconEM.webp)[`SETVAR`](./SETVAR.md)                 | `string`, `any`                        | `1`      |
+| ![](../assets/IconEM.webp)[`VARSETEX`](./VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`) | `1`      |
+| ![](../assets/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string`(, `int`)      | `1`      |
+|                                                                   | `ref` `int`, `ref` `string`(, `int`)   | `1`      |
 
 ### デバッグ補助・システムフロー制御
 

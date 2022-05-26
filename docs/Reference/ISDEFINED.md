@@ -1,7 +1,7 @@
 # ISDEFINED
 
-|                         関数名                          | 引数     | 戻り値 |
-| :-----------------------------------------------------: | :------- | :----: |
+| 関数名                                                  | 引数     | 戻り値 |
+| :------------------------------------------------------ | :------- | :----- |
 | ![](../assets/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md) | `string` | `int`  |
 
 !!! info "API"
@@ -24,13 +24,13 @@
     ```
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
-    #DIM キャラデータ, 2 = 1000, 200
+        #DIM キャラデータ, 2 = 1000, 200
 
-    PRINTFORML {ISDEFINED("体力")} {キャラデータ:体力}
-    PRINTFORML {ISDEFINED("気力")} {キャラデータ:気力}
-    PRINTFORML {ISDEFINED("攻撃力")}
+        PRINTFORML {ISDEFINED("体力")} {キャラデータ:体力}
+        PRINTFORML {ISDEFINED("気力")} {キャラデータ:気力}
+        PRINTFORML {ISDEFINED("攻撃力")}
 
-    ONEINPUT
+        ONEINPUT
     ```
     ``` title="結果"
     1 1000

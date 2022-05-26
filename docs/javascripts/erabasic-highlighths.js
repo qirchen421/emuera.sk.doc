@@ -5,7 +5,7 @@
     }
     const Keyword = {
         scope: 'keyword',
-        match: /IF\b|ELSE(IF)?\b|ENDIF\b|WHILE\b|DO\b|LOOP\b|WEND\b|SELECECASE\b|ENDSELECT\b|CASE(ELSE)?\b|FOR\b|NEXT\b|RETURNF?\b|CATCH\b|ENDCATCH\b|FUNC\b|ENDFUNC\b/,
+        match: /S?IF\b|ELSE(IF)?\b|ENDIF\b|WHILE\b|DO\b|LOOP\b|WEND\b|SELECECASE\b|ENDSELECT\b|CASE(ELSE)?\b|FOR\b|NEXT\b|RETURNF?\b|CATCH\b|ENDCATCH\b|FUNC\b|ENDFUNC\b/,
     }
     const ApiType = {
         scope: 'type',

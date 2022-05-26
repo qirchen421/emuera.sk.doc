@@ -36,6 +36,7 @@ nav:
     - 変数操作・変数参照・CSV参照:
       - Reference/ISDEFINED.md
       - Reference/EXISTVAR.md
+      - Reference/ENUMFUNC.md
 
   - 変更ログ: Changelog/README.md
 plugins:
