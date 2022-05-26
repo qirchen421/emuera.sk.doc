@@ -111,3 +111,10 @@ code.hljs {
 .hljs-meta-keyword {
     font-weight: 700
 }
+tr td img {
+    width: 1.2em;
+    margin-right: 0.5em;
+}
+h3 img {
+    margin-right: 0.3em;
+}
