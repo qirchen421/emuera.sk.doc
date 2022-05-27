@@ -1,10 +1,10 @@
 # SETVAR、GETVAR系
 
-| 関数名                                                      | 引数            | 戻り値   |
-| :---------------------------------------------------------- | :-------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETVAR.md)    | `string`        | `int`    |
-| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETVAR.md)   | `string`        | `string` |
-| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md) | `string`, `any` | `1`      |
+| 関数名                                                       | 引数            | 戻り値   |
+| :----------------------------------------------------------- | :-------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.md)  | `string`        | `int`    |
+| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md) | `string`        | `string` |
+| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)  | `string`, `any` | `1`      |
 
 !!! info "API"
     

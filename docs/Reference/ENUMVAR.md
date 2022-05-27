@@ -20,9 +20,9 @@
     - `ENUMVARENDSWITH`は，`keyword`で終わる変数・定数名を返します。
     - `ENUMVARWITH`は，`keyword`を含んだ変数・定数名を返します。
 
-!!! warning "注意"
+    !!! warning "注意"
 
-    [`EXISTVAR`](./EXISTVAR.md)と違って，ローカル変数・定数を列挙しません。
+        [`EXISTVAR`](./EXISTVAR.md)と違って，ローカル変数・定数を列挙しません。
 
 !!! hint "ヒント"
 

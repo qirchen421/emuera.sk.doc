@@ -40,6 +40,7 @@ nav:
       - Reference/ENUMVAR.md
       - Reference/ENUMMACRO.md
       - Reference/GETSETVAR.md
+      - Reference/VARSETEX.md
 
   - 変更ログ: Changelog/README.md
 plugins:

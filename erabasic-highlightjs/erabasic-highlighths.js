@@ -1,6 +1,6 @@
 (function () {
     const LeftRight = {
-        scope: 'built_in',
+        scope: 'meta keyword',
         match: /LEFT\b|RIGHT\b/,
     }
     const Keyword = {

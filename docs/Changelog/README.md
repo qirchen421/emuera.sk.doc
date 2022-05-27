@@ -40,7 +40,14 @@ hide:
 
 === "v1"
 
-    初公開
+    * 初公開
 
 ## Emuera.EE
 
+=== "v14"
+
+    * `GETMEMORYUSAGE`、`CLEARMEMORY`追加
+
+=== "v13"
+
+    * `ERD`機能（`ERH`変数の配列に`CSV`変数のように名前を付けられる機能）追加
