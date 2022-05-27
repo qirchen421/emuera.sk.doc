@@ -1,1 +1,5 @@
 /public
+
+pyproject.toml
+poetry.lock
+*.ps1
