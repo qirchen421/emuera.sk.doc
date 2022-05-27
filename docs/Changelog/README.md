@@ -46,8 +46,67 @@ hide:
 
 === "v14"
 
-    * `GETMEMORYUSAGE`、`CLEARMEMORY`追加
+	* 関数追加：`GETMEMORYUSAGE`, `CLEARMEMORY`
 
 === "v13"
 
-    * `ERD`機能（`ERH`変数の配列に`CSV`変数のように名前を付けられる機能）追加
+	* ERD機能追加
+
+=== "v12"
+
+	* 関数追加：`FORCE_BEGIN`
+	* `PLAYSOUND`機能拡張 10チャンネルに対応
+
+=== "v11fix"
+
+	* `UPDATECHECK`修正
+
+=== "v11"
+
+	* 関数追加：`GDRAWGWITHROTATE`, `QUIT_AND_RESTART`, `FORCE_QUIT`, `FORCE_QUIT_AND_RESTART`
+
+=== "v10"
+
+	* 関数追加：`UPDATECHECK`
+
+=== "v9"
+
+	* WebPに対応
+
+=== "v8"
+
+	* 関数追加：`TRYCALLF`, `TRYCALLFORMF`
+
+=== "v7"
+
+	* 関数追加：`GGETTEXTSIZE`
+
+=== "v6"
+
+	* 関数追加：`EXISTFUNCTION`
+
+=== "v5fix"
+
+	* `OUTPUTLOG`機能拡張の脆弱性を修正
+
+=== "v5"
+
+	* `OUTPUTLOG`機能拡張
+
+=== "v4"
+
+	* 関数追加：`GGETFONT`, `GGETFONTSIZE`
+
+=== "v3"
+
+	* 関数追加：`GDRAWTEXT`
+
+=== "v2"
+
+	* `INPUTMOUSEKEY`機能拡張
+
+=== "v1"
+
+	初公開
+	
+	* 関数追加：`PLAYSOUND`,`STOPSOUND`,`PLAYBGM`,`STOPBGM`,`EXISTSOUND`,`SETSOUNDVOLUME`,`SETBGMVOLUME`
