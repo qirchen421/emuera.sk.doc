@@ -41,6 +41,18 @@ nav:
       - Reference/ENUMMACRO.md
       - Reference/GETSETVAR.md
       - Reference/VARSETEX.md
+    - デバッグ補助・システムフロー制御
+      - Reference/QUIT_AND_RESTART.md
+    - 関数系（CALL等）
+      - Reference/EXISTFUNCTION.md
+      - Reference/TRYCALLF.md
+      - Reference/TRYCALLFORMF.md
+    - 画像処理関連
+      - Reference/GDRAWTEXT.md
+      - Reference/GGETFONT.md
+      - Reference/GGETFONTSIZE.md
+      - Reference/GGETTESTSIZE.md
+      
 
   - 変更ログ: Changelog/README.md
 plugins:

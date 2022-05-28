@@ -11,7 +11,7 @@
     ```
 
 	引数で指定した関数が存在するかの式中関数。通常関数なら1を、式中関数(数値型)なら2を、式中関数(文字列型)なら3を返す
-	システム関数やシステム組み込み式中関数は0を返す
+	システム組み込み式中関数は0を返す。システム関数はERB内で記述されている場合は1を、そうでなければ0を返す
 
 !!! hint "ヒント"
 
@@ -21,11 +21,13 @@
 
     ``` { #language-erb title="MAIN.ERB" }
 	@SYSTEM_TITLE
+	#DIM DYNAMIC LCOUNT
 
-		PRINTSL EXISTFUNCTION("TEST1")
-		PRINTSL EXISTFUNCTION("TEST2")
-		PRINTSL EXISTFUNCTION("TEST3")
-		PRINTSL EXISTFUNCTION("SYSTEM_TITLE")
+		PRINTVL EXISTFUNCTION("TEST1")
+		PRINTVL EXISTFUNCTION("TEST2")
+		PRINTVL EXISTFUNCTION("TEST3")
+		PRINTVL EXISTFUNCTION("SYSTEM_TITLE")
+		PRINTVL EXISTFUNCTION("SHOP")
 		WAIT
 
 	@TEST1
@@ -41,5 +43,6 @@
 	1
 	2
 	3
+	1
 	0
     ```
