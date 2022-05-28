@@ -57,6 +57,14 @@ nav:
       - Reference/GGETFONTSTYLE.md
       - Reference/GGETTEXTSIZE.md
       - Reference/GDRAWGWITHROTATE.md
+  - サウンド系:
+      - Reference/PLAYSOUND.md
+      - Reference/STOPSOUND.md
+      - Reference/PLAYBGM.md
+      - Reference/STOPBGM.md
+      - Reference/EXISTSOUND.md
+      - Reference/SETSOUNDVOLUME.md
+      - Reference/SETBGMVOLUME.md
       
 
   - 変更ログ: Changelog/README.md

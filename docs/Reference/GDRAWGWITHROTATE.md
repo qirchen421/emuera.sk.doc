@@ -10,7 +10,7 @@
 	int GDRAWGWITHROTATE gID, destID, Angle(, x, y)
 	```
 
-	`destID`の画像を`Angle`の角度で右回転させて`gID`に貼り付ける
+	`destID`の画像を`Angle`の角度で右回転させて`gID`に貼り付ける  
 	`x`と`y`は回転の中心点を指定する。省略した場合は`x/2`, `y/2`となる（画像全体の中心点）
 
 !!! hint "ヒント"

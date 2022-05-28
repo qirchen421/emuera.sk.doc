@@ -10,7 +10,7 @@
 	int GDRAWTEXT gID, text(, x, y)
 	```
 
-	`gID`で指定した`Graphics`に`text`を描写する。フォント等は`GSETFONT`で指定したものを使う
+	`gID`で指定した`Graphics`に`text`を描写する。フォント等は`GSETFONT`で指定したものを使う  
 	`x`,`y`を省略した場合は`0`, `0`の位置に描写する
 
 !!! hint "ヒント"
