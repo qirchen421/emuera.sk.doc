@@ -65,7 +65,7 @@ nav:
       - Reference/EXISTSOUND.md
       - Reference/SETSOUNDVOLUME.md
       - Reference/SETBGMVOLUME.md
-    - その他
+    - その他:
       - Reference/UPDATECHECK.md
       - Reference/GETMEMORYUSAGE.md
       - Reference/CLEARMEMORY.md
