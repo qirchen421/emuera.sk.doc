@@ -43,6 +43,9 @@ nav:
       - Reference/VARSETEX.md
     - デバッグ補助・システムフロー制御:
       - Reference/QUIT_AND_RESTART.md
+      - Reference/FORCE_QUIT.md
+      - Reference/FORCE_QUIT_AND_RESTART.md
+      - Reference/FORCE_BEGIN.md
     - 関数系（CALL等）:
       - Reference/EXISTFUNCTION.md
       - Reference/TRYCALLF.md
@@ -51,7 +54,9 @@ nav:
       - Reference/GDRAWTEXT.md
       - Reference/GGETFONT.md
       - Reference/GGETFONTSIZE.md
-      - Reference/GGETTESTSIZE.md
+      - Reference/GGETFONTSTYLE.md
+      - Reference/GGETTEXTSIZE.md
+      - Reference/GDRAWGWITHROTATE.md
       
 
   - 変更ログ: Changelog/README.md
