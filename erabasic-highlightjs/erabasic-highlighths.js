@@ -200,7 +200,27 @@
     hljs.registerLanguage("erbi", GetRule(true, false));
     hljs.registerLanguage("erbapi", GetRule(false));
 })();
-
+(function(){
+    const CSVItem = {
+        begin:/[^,;]/,
+        end:/(?=,|;|\n|$)/,
+        scope:'string',
+    };
+    const CSVComment = {
+        begin:/;/,
+        end:/\n|$/,
+        scope:'comment',
+    };
+    hljs.registerLanguage("csv", function (_hljs) {
+        return {
+            name: "CSV",
+            case_insensitive: false,
+            unicodeRegex: true,
+            disableAutodetect: true,
+            contains: [CSVComment, CSVItem],
+        }
+    });
+})();
 document$.subscribe(() => {
     document.querySelectorAll('div#language-erh pre code').forEach((el) => {
         el.innerHTML = hljs.highlight(el.innerText, {
@@ -225,6 +245,11 @@ document$.subscribe(() => {
     document.querySelectorAll('div#language-erbapi pre code').forEach((el) => {
         el.innerHTML = hljs.highlight(el.innerText, {
             language: 'erbapi'
+        }).value
+    });
+    document.querySelectorAll('div#language-csv pre code').forEach((el) => {
+        el.innerHTML = hljs.highlight(el.innerText, {
+            language: 'csv'
         }).value
     });
 })

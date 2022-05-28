@@ -26,12 +26,12 @@
     命令としてのみ使用可能
 
 !!! example "例"
-	``` { #language-erb title="GameBase.csv" }
-	バージョン情報URL,C:\test.txt
+	``` { #language-csv title="GameBase.csv" }
+	バージョン情報URL, C:\test.txt
 	バージョン名.1.00
 	```
 
-	``` { #language-erb title="C:\test.txt" }
+	``` title="C:\test.txt"
 	1.01
 	https://evilmask.gitlab.io/emuera.em.doc/
 	```
