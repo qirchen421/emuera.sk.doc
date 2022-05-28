@@ -1,7 +1,7 @@
 # FORCE_QUIT_AND_RESTART
 
-| 関数名| 引数 | 戻り値 |
-| :-----| :--- | :----- |
+| 関数名                                                                                   | 引数   | 戻り値 |
+| :--------------------------------------------------------------------------------------- | :----- | :----- |
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | `void` | `void` |
 
 !!! info "API"

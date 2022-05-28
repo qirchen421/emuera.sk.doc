@@ -1,8 +1,8 @@
 # GDRAWTEXT
 
-| 関数名| 引数 | 戻り値 |
-| :-----| :--- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md) | `int`, `string`(, `int`, `int`) | `int` |
+| 関数名                                                         | 引数                            | 戻り値 |
+| :------------------------------------------------------------- | :------------------------------ | :----- |
+| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md) | `int`, `string`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 

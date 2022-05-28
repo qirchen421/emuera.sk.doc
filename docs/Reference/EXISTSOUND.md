@@ -1,8 +1,8 @@
 # EXISTSOUND
 
-| 関数名| 引数 | 戻り値 |
-| :-----| :--- | :----- |
-| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.md) | `string` | `int` |
+| 関数名                                                           | 引数     | 戻り値 |
+| :--------------------------------------------------------------- | :------- | :----- |
+| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.md) | `string` | `int`  |
 
 !!! info "API"
 

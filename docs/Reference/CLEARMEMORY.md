@@ -1,8 +1,8 @@
 # CLEARMEMORY
 
-| 関数名| 引数 | 戻り値 |
-| :-----| :--- | :----- |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md) | `void` | `int` |
+| 関数名                                                             | 引数   | 戻り値 |
+| :----------------------------------------------------------------- | :----- | :----- |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md) | `void` | `int`  |
 
 !!! info "API"
 
