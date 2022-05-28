@@ -14,7 +14,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    - navigation.expand
+    #- navigation.expand
   palette: 
     - scheme: slate 
       primary: light blue
@@ -41,6 +41,7 @@ nav:
       - Reference/ENUMMACRO.md
       - Reference/GETSETVAR.md
       - Reference/VARSETEX.md
+      - Reference/ARRAYMSORTEX.md
     - デバッグ補助・システムフロー制御:
       - Reference/QUIT_AND_RESTART.md
       - Reference/FORCE_QUIT.md
