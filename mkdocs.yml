@@ -66,12 +66,13 @@ nav:
       - Reference/EXISTSOUND.md
       - Reference/SETSOUNDVOLUME.md
       - Reference/SETBGMVOLUME.md
+    - XML系:
+      - Reference/XML_MANAGE.md
     - その他:
       - Reference/EXISTFILE.md
       - Reference/UPDATECHECK.md
       - Reference/GETMEMORYUSAGE.md
       - Reference/CLEARMEMORY.md
-      
 
   - 変更ログ: Changelog/README.md
 plugins:
