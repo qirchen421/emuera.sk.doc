@@ -8,7 +8,7 @@
 !!! info "API"
 
     ```  { #language-erbapi }
-    int XML_TOSTR xmlId
+    string XML_TOSTR xmlId
     ```
     `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の内容を返すます。
 
