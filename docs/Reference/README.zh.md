@@ -198,7 +198,6 @@
 | ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.md)           | `int`, `string`(, `int`)                                     | `int`    |
 |                                                                                    | `ref` `string`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.md)                 | `int`, `string`                                              | `int`    |
-|                                                                                    | `ref` `string`, `string`                                     | `int`    |
 |                                                                                    | `int`, `string`, `string`(, `int`)                           | `int`    |
 |                                                                                    | `ref` `string`, `string`, `string`(, `int`)                  | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE`](./XML_ADDATTRIBUTE.md)       | `int`, `string`, `string`(, `string`, `int`, `int`)          | `int`    |
