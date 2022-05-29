@@ -11,13 +11,13 @@
     1. int XML_GET xml, xpath(, doOutput, outputType)
     2. int XML_GET xml, xpath, ref outputArray, outputType
     ```
-    `xpath`の規則で`xml`からノードを選択し、結果数を返します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。
-    `xml`が文字列である場合，その内容からノードを選択し，`xml`整数である場合，保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合，`-1`をを返します。
+    `xpath`の規則で`xml`からノードを選択し、合致結果数を返します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。
+    `xml`が文字列である場合，その内容からノードを選択し，`xml`整数である場合，保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合，`-1`を返します。
     
     1. `doOutput`が`0`または省略した場合，合致結果数のみ返し，そうでない場合，合致結果を`RESULTS`に代入します。
     2. そうでない場合，合致結果を`outputArray`に代入します。
 
-    outputTypeの値によって，代入結果を決めます。
+    `outputType`の値によって，代入結果を決めます。
 
     - `1`: ノードの`InnerText`
     - `2`: ノードの`InnerXml`
