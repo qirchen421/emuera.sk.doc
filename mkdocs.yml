@@ -73,6 +73,9 @@ nav:
       - Reference/XML_TOSTR.md
       - Reference/XML_ADDNODE.md
       - Reference/XML_REMOVENODE.md
+      - Reference/XML_REPLACE.md
+      - Reference/XML_ADDATTRIBUTE.md
+      - Reference/XML_REMOVEATTRIBUTE.md
     - その他:
       - Reference/EXISTFILE.md
       - Reference/UPDATECHECK.md
