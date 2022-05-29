@@ -14,7 +14,7 @@
     int XML_EXIST xmlId
     ```
 
-    关于 [`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 的生成、删除、判断是否存在的一系列函数。
+    关于 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 的生成、删除、判断是否存在的一系列函数。
     
     - `XML_DOCUMENT`：解析 `xmlContent` 并保存为 `XmlDocument`。  
         如果已经存在 `xmlId` 对应的 `XmlDocument`（创建失败），返回 `0`；创建成功时，返回 `1`。
