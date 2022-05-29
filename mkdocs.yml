@@ -68,6 +68,7 @@ nav:
       - Reference/SETBGMVOLUME.md
     - XML系:
       - Reference/XML_MANAGE.md
+      - Reference/XML_GET.md
     - その他:
       - Reference/EXISTFILE.md
       - Reference/UPDATECHECK.md
