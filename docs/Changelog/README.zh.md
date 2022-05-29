@@ -35,7 +35,7 @@ hide:
 === "v2"
 
     * 删除 `FUNCEXIST` 函数（请使用 EE 版的 `EXISTFUNCTION` 函数作为替代）。
-    * 修改函数名：`VAREXIST` → `EXISTVAR`（为与 `EXISTFUNCTION` 的命名格式保持一致）。
+    * 修改函数名：`VAREXIST` → `EXISTVAR`（为了与 `EXISTFUNCTION` 的命名格式保持一致）。
     * 新增函数：`XML_DOCUMENT` / `XML_RELEASE` / `XML_SET` / `XML_EXIST` / `XML_TOSTR`。
     * `XML_GET` 函数的第 1 个参数允许使用整型（整数类型）。
 
@@ -51,7 +51,7 @@ hide:
 
 === "v13"
 
-    * 新增 ERD 功能：以类似「CSV 变量的调用方法」来使用 ERH 变量。
+    * 新增 ERD 功能：以「类似 CSV 变量的调用方法」来使用 ERH 变量。
 
 === "v12"
 

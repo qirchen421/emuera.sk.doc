@@ -15,8 +15,8 @@ theme:
     - navigation.top
     - navigation.indexes
     #- navigation.expand
-  palette: 
-    - scheme: slate 
+  palette:
+    - scheme: slate
       primary: light blue
       toggle:
         icon: material/weather-sunny
@@ -101,6 +101,15 @@ plugins:
         zh:
           ホーム: 首页
           リファレンス: 参考手册
+          HTML系: HTML 系列
+          文字列操作・参照: 字符串操作 / 引用
+          変数操作・変数参照・CSV参照: 变量操作 / 变量引用 / CSV 引用
+          デバッグ補助・システムフロー制御: 调试辅助 / 系统流程控制
+          関数系（CALL等）: 函数系列（CALL 相关）
+          画像処理関連: 图像处理相关
+          サウンド系: 音频处理相关
+          XML系: XML 文件处理相关
+          その他: 其他
           変更ログ: 更新日志
         en:
           ホーム: Home
@@ -122,7 +131,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.keys
