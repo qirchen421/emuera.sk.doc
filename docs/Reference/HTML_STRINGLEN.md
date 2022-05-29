@@ -13,6 +13,10 @@
     `HTML_PRINT`で`html`を表示した結果の幅を返す、複数行がある場合1行目の幅を返します。
     `returnPixel`が`0`または省略した場半角文字単位で返す、そうでない場合はピクセル数を返します。
 
+    !!! warning "注意"
+
+        `<nobr></nobr>`で囲まない限り，いくら長い文字列でも返した数値は「ウィンドウび幅の幅-スクロールバーの幅」を超えません。
+
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
@@ -22,14 +26,13 @@
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
 
-        HTML_SUBSTRING "AB<b>CD</b>EFG",4
-        PRINTSL RESULTS
-        PRINTSL RESULTS:1
+        PRINTFORML {HTML_STRINGLEN("<b>B</b>")}
+        PRINTFORML {HTML_STRINGLEN("<b>B</b>", 1)} {GETCONFIG("フォントサイズ")/2}
 
         ONEINPUT
     ```
     ``` title="結果"
-    AB<b>C</b>
-    <b>D</b>EFG
+    2
+    9 8
     ```
     太字は普通より幅広いからです

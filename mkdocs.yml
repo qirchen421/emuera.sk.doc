@@ -31,6 +31,7 @@ nav:
     - Reference/README.md
     - HTML系:
       - Reference/HTML_STRINGLEN.md
+      - Reference/HTML_SUBSTRING.md
     - 文字列操作・参照:
       - Reference/REGEXPMATCH.md
     - 変数操作・変数参照・CSV参照:

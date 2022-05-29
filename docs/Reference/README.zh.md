@@ -112,6 +112,7 @@
 | 函数名                                                                   | 参数              | 返回值 |
 | :----------------------------------------------------------------------- | :---------------- | :----- |
 | ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `int`  |
 
 ### 字符串操作 / 引用
 
@@ -185,9 +186,9 @@
 
 | 函数名                                                                             | 参数                                                         | 返回值   |
 | :--------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md)               | `int`, `string`                                              | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)                 | `int`                                                        | `1`      |
-| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)                     | `int`                                                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md)                 | `int`, `string`                                              | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)                  | `int`                                                        | `1`      |
+| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)                    | `int`                                                        | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)                         | `any`, `string`(, `int`, `int`)                              | `int`    |
 |                                                                                    | `any`, `string`, `ref` `string[]`, `int`                     | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_SET`](./XML_SET.md)                         | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
