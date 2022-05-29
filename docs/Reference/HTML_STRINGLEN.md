@@ -10,8 +10,8 @@
     int HTML_STRINGLEN html(, returnPixel)
     ```
 
-    `HTML_PRINT`で`html`を表示した結果の幅を返す、複数行がある場合1行目の幅を返す
-    `returnPixel`が`0`または省略した場半角文字単位で返す、そうでない場合はピクセル数を返す
+    `HTML_PRINT`で`html`を表示した結果の幅を返す、複数行がある場合1行目の幅を返します。
+    `returnPixel`が`0`または省略した場半角文字単位で返す、そうでない場合はピクセル数を返します。
 
 !!! hint "ヒント"
 
