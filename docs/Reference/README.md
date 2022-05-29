@@ -192,22 +192,22 @@
 
 ### MAP（連想配列）系
 
-| 関数名                                                             | 引数                              | 戻り値   |
-| :----------------------------------------------------------------- | :-------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_CREATE.md)   | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_EXIST.md)     | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_RELEASE.md) | `string`                          | `1`      |
-| ![](../assets/images/IconEM.webp)[`MAP_GET`](./MAP_GET.md)         | `string`                          | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_HAS`](./MAP_HAS.md)         | `string`, `string`                | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_SET`](./MAP_SET.md)         | `string`, `string`, `string`      | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_REMOVE`](./MAP_REMOVE.md)   | `string`, `string`                | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_SIZE`](./MAP_SIZE.md)       | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_CLEAR`](./MAP_CLEAR.md)     | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md) | `string`                          | `string` |
-|                                                                    | `string`, `int`                   | `string` |
-|                                                                    | `string`, `ref` `string[]`, `int` | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_TOXML.md)     | `string`                          | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_FROMXML.md) | `string`, `string`                | `int`    |
+| 関数名                                                                   | 引数                              | 戻り値   |
+| :----------------------------------------------------------------------- | :-------------------------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_MANAGE.md)         | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_MANAGE.md)          | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_MANAGE.md)        | `string`                          | `1`      |
+| ![](../assets/images/IconEM.webp)[`MAP_GET`](./MAP_OPERATION.md)         | `string`, `string`                | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_HAS`](./MAP_OPERATION.md)         | `string`, `string`                | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_SET`](./MAP_OPERATION.md)         | `string`, `string`, `string`      | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_REMOVE`](./MAP_OPERATION.md)      | `string`, `string`                | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_SIZE`](./MAP_OPERATION.md)        | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_CLEAR`](./MAP_OPERATION.md)       | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md)       | `string`                          | `string` |
+|                                                                          | `string`, `int`                   | `string` |
+|                                                                          | `string`, `ref` `string[]`, `int` | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)   | `string`                          | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md) | `string`, `string`                | `int`    |
 
 ### その他
 
