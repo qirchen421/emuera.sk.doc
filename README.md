@@ -13,6 +13,11 @@
     | ----------- | ------------ | ------------ |
     | README.md   | README.en.md | README.zh.md |
 4. Commit to your forked repository and make a pull request.
+    
+        Note: Your don't neet to change and link that link to the internal file, like
+        changing [`REGEXPMATCH`](./REGEXPMATCH.md) into [`REGEXPMATCH`](./REGEXPMATCH.en.md)
+        the mkdocs will handle it automatically. Just simply add a `REGEXPMATCH.en.md` into
+        the folder.
 
 # Preview on local machine
 
