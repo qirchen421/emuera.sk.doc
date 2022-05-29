@@ -69,6 +69,10 @@ nav:
     - XML系:
       - Reference/XML_MANAGE.md
       - Reference/XML_GET.md
+      - Reference/XML_SET.md
+      - Reference/XML_TOSTR.md
+      - Reference/XML_ADDNODE.md
+      - Reference/XML_REMOVENODE.md
     - その他:
       - Reference/EXISTFILE.md
       - Reference/UPDATECHECK.md
