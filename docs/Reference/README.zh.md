@@ -115,10 +115,10 @@
 
 ### 字符串操作 / 引用
 
-| 函数名                                                             | 参数                                            | 返回值 |
-| :----------------------------------------------------------------- | :---------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                     | `int`  |
-|                                                                    | `string`, `string`, `ref` `int`, `ref` `string` | `int`  |
+| 函数名                                                             | 参数                                              | 返回值 |
+| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
+| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`  |
+|                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`  |
 
 ### 变量操作 / 变量引用 / CSV 引用
 
@@ -139,8 +139,8 @@
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md)             | `string`                               | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)              | `string`, `any`                        | `1`      |
 | ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`) | `1`      |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string`(, `int`)      | `1`      |
-|                                                                          | `ref` `int`, `ref` `string`(, `int`)   | `1`      |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`)    | `1`      |
+|                                                                          | `ref` `int`, `ref` `string[]`(, `int`) | `1`      |
 
 ### 调试辅助 / 系统流程控制
 
@@ -188,8 +188,8 @@
 | ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_DOCUMENT.md)               | `int`, `string`                                              | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_RELEASE.md)                 | `int`                                                        | `1`      |
 | ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_EXIST.md)                     | `int`                                                        | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)                         | `any`, `string`, `int`, `int`                                | `int`    |
-|                                                                                    | `any`, `string`, `ref` `string`, `int`                       | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)                         | `any`, `string`(, `int`)                                     | `int`    |
+|                                                                                    | `any`, `string`, `ref` `string[]`, `int`                     | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_SET`](./XML_SET.md)                         | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
 |                                                                                    | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.md)                     | `int`                                                        | `string` |

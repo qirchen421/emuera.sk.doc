@@ -1,9 +1,9 @@
 # ARRAYMSORTEX
 
-| 関数名                                                               | 引数                                 | 戻り値 |
-| :------------------------------------------------------------------- | :----------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string`(, `int`)    | `1`    |
-|                                                                      | `ref` `int`, `ref` `string`(, `int`) | `1`    |
+| 関数名                                                               | 引数                                   | 戻り値 |
+| :------------------------------------------------------------------- | :------------------------------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`)    | `1`    |
+|                                                                      | `ref` `int`, `ref` `string[]`(, `int`) | `1`    |
 
 !!! info "API"
 

@@ -1,9 +1,9 @@
 # REGEXPMATCH
 
-| 関数名                                                             | 引数                                            | 戻り値 |
-| :----------------------------------------------------------------- | :---------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                     | `int`  |
-|                                                                    | `string`, `string`, `ref` `int`, `ref` `string` | `int`  |
+| 関数名                                                             | 引数                                              | 戻り値 |
+| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
+| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`  |
+|                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`  |
 
 !!! info "API"
 
