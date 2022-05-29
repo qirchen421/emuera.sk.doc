@@ -76,6 +76,11 @@ nav:
       - Reference/XML_REPLACE.md
       - Reference/XML_ADDATTRIBUTE.md
       - Reference/XML_REMOVEATTRIBUTE.md
+    - MAP（連想配列）系:
+      - Reference/MAP_MANAGE.md
+      - Reference/MAP_OPERATION.md
+      - Reference/MAP_GETKEYS.md
+      - Reference/MAP_SERIALIZATION.md
     - その他:
       - Reference/EXISTFILE.md
       - Reference/UPDATECHECK.md
