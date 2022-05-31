@@ -72,7 +72,25 @@
     ``` title="emuera.config"
     LOADTEXTとSAVETEXTで使える拡張子:txt,xml,json
     ```
+### ![](../assets/images/IconEM.webp)`REPLACE`の拡張
+!!! summary ""
 
+    `REPLACE`の第三引数が文字列配列変数，第四引数が0以外の場合，第二引数と合致する部分を順次に文字列配列の要素で入れ替えり，その結果を返します。
+    
+!!! example "例"
+
+    ``` { #language-erb title="MAIN.ERB" }
+    @SYSTEM_TITLE
+    #DIMS str = "pen", "apple"
+    #DIMS orig = "I have a {1}, I have an {2}, ..."
+
+    PRINTSL REPLACE(orig, "\\{\\d+\\}", str, 1)
+
+    ONEINPUT
+    ```
+    ``` title="结果"
+    I have a pen, I have an apple, ...
+    ```
 ### ![](../assets/images/IconEE.webp)`INPUTMOUSEKEY`でボタン使用可能に
 !!! summary ""
 

@@ -104,7 +104,25 @@
 !!! summary ""
 
     第四个参数类似 `SETFONT` 的 4 bit 参数用法：1=**粗体** 2=_斜体_ 4=<s>删除线</s> 8=<u>下划线</u>；可省略。
+### ![](../assets/images/IconEM.webp)`REPLACE` 的功能扩充
+!!! summary ""
 
+    `REPLACE` 的第三个参数为字符串数组变量，第四个参数为 `0` 以外的值时，依次将与第二个参数相同的部分用字符串数组的内容替换，并返回替换后的结果。
+    
+!!! example "示例代码"
+
+    ``` { #language-erb title="MAIN.ERB" }
+    @SYSTEM_TITLE
+    #DIMS str = "pen", "apple"
+    #DIMS orig = "I have a {1}, I have an {2}, ..."
+
+    PRINTSL REPLACE(orig, "\\{\\d+\\}", str, 1)
+
+    ONEINPUT
+    ```
+    ``` title="输出结果"
+    I have a pen, I have an apple, ...
+    ```
 ## 新增的命令 / 行内函数
 
 ### HTML 系列
