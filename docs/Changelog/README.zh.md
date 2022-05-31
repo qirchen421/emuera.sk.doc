@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v8"
+
+    * 扩展 `XML_GET` / `REPLACE` 相关功能。
+    * 修复关于 `XML_REMOVEATTRIBUTE` / `VARSETEX` 的错误。
+
 === "v7"
 
     * 新增 `HTML_STRINGLEN` 功能。
@@ -44,6 +49,11 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+
+=== "v15"
+
+	* 修复关于 `ERD` 的错误（定义了代码中未定义的参数时会报错退出）。
+	* 修复关于 `GDRAWTEXT` 的错误（没有调用`GSETFONT`之前调用时会报错退出）。
 
 === "v14"
 

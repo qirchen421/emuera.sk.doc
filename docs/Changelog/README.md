@@ -6,6 +6,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v8"
+
+    * 機能拡張：`XML_GET`, `REPLACE`
+    * バグ修正：`XML_REMOVEATTRIBUTE`, `VARSETEX`
+  
 === "v7"
 
     * `HTML_STRINGLEN`機能拡張
