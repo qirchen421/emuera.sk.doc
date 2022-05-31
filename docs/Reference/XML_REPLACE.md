@@ -10,8 +10,8 @@
 
     ```  { #language-erbapi }
     1. int XML_REPLACE xmlId, newXml
-    3. int XML_REPLACE xmlId, xpath, newXml(, doSetAll)
-    4. int XML_REPLACE ref xml, xpath, newXml(, doSetAll)
+    2. int XML_REPLACE xmlId, xpath, newXml(, doSetAll)
+    3. int XML_REPLACE ref xml, xpath, newXml(, doSetAll)
     ```
     指定した`XML`に対して，`xpath`の規則で`xml`からノードを選択し、合致ノードを`newXml`で上書きします([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。`doSetAll`が`0`または省略し，かつ合致結果数が`1`以上である場合，上書きを行われません。成功した場合，合致結果の数を返す。失敗した場合，`0`を返す。
 

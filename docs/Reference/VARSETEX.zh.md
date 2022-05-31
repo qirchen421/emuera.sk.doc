@@ -19,7 +19,7 @@
 
         目前，当 `setLowestDim` 为 `0` 或直接省略时，`from` / `to` 的指定会被忽略并赋值给整个数组，预计在 v8 版本中修复。
 
-    !!! danger "改进计划"
+    !!! danger "计划变更"
 
         为了和 [`VARSET`](https://osdn.net/projects/emuera/wiki/excom#h5-VARSET.20.3C.E5.A4.89.E6.95.B0.E5.90.8D.3E.7B.2C.20.3C.E6.95.B0.E5.BC.8F.20or.20.E6.96.87.E5.AD.97.E5.88.97.E5.BC.8F.3E.2C.20.3C.E9.85.8D.E5.88.97.E7.AF.84.E5.9B.B2.E5.88.9D.E5.80.A4.3E.2C.20.3C.E9.85.8D.E5.88.97.E7.AF.84.E5.9B.B2.E7.B5.82.E5.80.A4.2B1.3E.7D) 统一，EMv8 将实现「省略第二参数的情况下使用默认值（`0` / 空字符串）」。
 
