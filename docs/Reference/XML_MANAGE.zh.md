@@ -23,7 +23,7 @@
 
     !!! warning "注意"
 
-        生成的 `XmlDocument` 不能直接保存到硬盘文件中，「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        生成的 `XmlDocument` 不会自动保存到硬盘文件中，「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

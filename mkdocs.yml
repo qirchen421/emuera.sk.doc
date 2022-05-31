@@ -28,65 +28,65 @@ theme:
 nav:
   - ホーム: README.md
   - リファレンス:
-    - Reference/README.md
-    - HTML系:
-      - Reference/HTML_STRINGLEN.md
-      - Reference/HTML_SUBSTRING.md
-    - 文字列操作・参照:
-      - Reference/REGEXPMATCH.md
-    - 変数操作・変数参照・CSV参照:
-      - Reference/ISDEFINED.md
-      - Reference/EXISTVAR.md
-      - Reference/ENUMFUNC.md
-      - Reference/ENUMVAR.md
-      - Reference/ENUMMACRO.md
-      - Reference/GETSETVAR.md
-      - Reference/VARSETEX.md
-      - Reference/ARRAYMSORTEX.md
-    - デバッグ補助・システムフロー制御:
-      - Reference/QUIT_AND_RESTART.md
-      - Reference/FORCE_QUIT.md
-      - Reference/FORCE_QUIT_AND_RESTART.md
-      - Reference/FORCE_BEGIN.md
-    - 関数系（CALL等）:
-      - Reference/EXISTFUNCTION.md
-      - Reference/TRYCALLF.md
-      - Reference/TRYCALLFORMF.md
-    - 画像処理関連:
-      - Reference/GDRAWTEXT.md
-      - Reference/GGETFONT.md
-      - Reference/GGETFONTSIZE.md
-      - Reference/GGETFONTSTYLE.md
-      - Reference/GGETTEXTSIZE.md
-      - Reference/GDRAWGWITHROTATE.md
-    - サウンド系:
-      - Reference/PLAYSOUND.md
-      - Reference/STOPSOUND.md
-      - Reference/PLAYBGM.md
-      - Reference/STOPBGM.md
-      - Reference/EXISTSOUND.md
-      - Reference/SETSOUNDVOLUME.md
-      - Reference/SETBGMVOLUME.md
-    - XML系:
-      - Reference/XML_MANAGE.md
-      - Reference/XML_GET.md
-      - Reference/XML_SET.md
-      - Reference/XML_TOSTR.md
-      - Reference/XML_ADDNODE.md
-      - Reference/XML_REMOVENODE.md
-      - Reference/XML_REPLACE.md
-      - Reference/XML_ADDATTRIBUTE.md
-      - Reference/XML_REMOVEATTRIBUTE.md
-    - MAP（連想配列）系:
-      - Reference/MAP_MANAGE.md
-      - Reference/MAP_OPERATION.md
-      - Reference/MAP_GETKEYS.md
-      - Reference/MAP_SERIALIZATION.md
-    - その他:
-      - Reference/EXISTFILE.md
-      - Reference/UPDATECHECK.md
-      - Reference/GETMEMORYUSAGE.md
-      - Reference/CLEARMEMORY.md
+      - Reference/README.md
+      - HTML系:
+          - Reference/HTML_STRINGLEN.md
+          - Reference/HTML_SUBSTRING.md
+      - 文字列操作・参照:
+          - Reference/REGEXPMATCH.md
+      - 変数操作・変数参照・CSV参照:
+          - Reference/ISDEFINED.md
+          - Reference/EXISTVAR.md
+          - Reference/ENUMFUNC.md
+          - Reference/ENUMVAR.md
+          - Reference/ENUMMACRO.md
+          - Reference/GETSETVAR.md
+          - Reference/VARSETEX.md
+          - Reference/ARRAYMSORTEX.md
+      - デバッグ補助・システムフロー制御:
+          - Reference/QUIT_AND_RESTART.md
+          - Reference/FORCE_QUIT.md
+          - Reference/FORCE_QUIT_AND_RESTART.md
+          - Reference/FORCE_BEGIN.md
+      - 関数系（CALL等）:
+          - Reference/EXISTFUNCTION.md
+          - Reference/TRYCALLF.md
+          - Reference/TRYCALLFORMF.md
+      - 画像処理関連:
+          - Reference/GDRAWTEXT.md
+          - Reference/GGETFONT.md
+          - Reference/GGETFONTSIZE.md
+          - Reference/GGETFONTSTYLE.md
+          - Reference/GGETTEXTSIZE.md
+          - Reference/GDRAWGWITHROTATE.md
+      - サウンド系:
+          - Reference/PLAYSOUND.md
+          - Reference/STOPSOUND.md
+          - Reference/PLAYBGM.md
+          - Reference/STOPBGM.md
+          - Reference/EXISTSOUND.md
+          - Reference/SETSOUNDVOLUME.md
+          - Reference/SETBGMVOLUME.md
+      - XML系:
+          - Reference/XML_MANAGE.md
+          - Reference/XML_GET.md
+          - Reference/XML_SET.md
+          - Reference/XML_TOSTR.md
+          - Reference/XML_ADDNODE.md
+          - Reference/XML_REMOVENODE.md
+          - Reference/XML_REPLACE.md
+          - Reference/XML_ADDATTRIBUTE.md
+          - Reference/XML_REMOVEATTRIBUTE.md
+      - MAP（連想配列）系:
+          - Reference/MAP_MANAGE.md
+          - Reference/MAP_OPERATION.md
+          - Reference/MAP_GETKEYS.md
+          - Reference/MAP_SERIALIZATION.md
+      - その他:
+          - Reference/EXISTFILE.md
+          - Reference/UPDATECHECK.md
+          - Reference/GETMEMORYUSAGE.md
+          - Reference/CLEARMEMORY.md
 
   - 変更ログ: Changelog/README.md
 plugins:
@@ -96,7 +96,7 @@ plugins:
       minify_js: true
       minify_css: true
       htmlmin_opts:
-          remove_comments: true
+        remove_comments: true
   - i18n:
       default_language: ja
       languages:
@@ -123,6 +123,7 @@ plugins:
           画像処理関連: 图像处理相关
           サウンド系: 音频处理相关
           XML系: XML 文件处理相关
+          MAP（連想配列）系: MAP（映射数组）相关
           その他: 其他
           変更ログ: 更新日志
         en:
