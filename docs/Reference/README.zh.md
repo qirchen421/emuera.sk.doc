@@ -85,25 +85,6 @@
     ``` title="emuera.config"
     LOADTEXTとSAVETEXTで使える拡張子:txt,xml,json
     ```
-
-### ![](../assets/images/IconEE.webp)`INPUTMOUSEKEY` 支持直接获取按钮的值
-
-!!! summary ""
-
-    当命令执行时若 `RESULT:0 == 1`（鼠标点击事件），被点击的按钮的值同时也会保存到 `RESULT:5`。
-
-### ![](../assets/images/IconEE.webp)`OUTPUTLOG` 支持自定义输出日志的文件名
-
-!!! summary ""
-
-    使用 `OUTPUTLOG` 的字符串参数（格式同 `PRINTS`）来指定输出日志的文件名（包括扩展名和路径）。
-    `v5fix` 修复了可以访问上级目录的安全性漏洞，现在只允许指定同级以及下级子目录。
-
-### ![](../assets/images/IconEE.webp)`GSETFONT` 支持设置字体样式
-
-!!! summary ""
-
-    第四个参数类似 `SETFONT` 的 4 bit 参数用法：1=**粗体** 2=_斜体_ 4=<s>删除线</s> 8=<u>下划线</u>；可省略。
 ### ![](../assets/images/IconEM.webp)`REPLACE` 的功能扩充
 !!! summary ""
 
@@ -123,6 +104,25 @@
     ``` title="输出结果"
     I have a pen, I have an apple, ...
     ```
+### ![](../assets/images/IconEE.webp)`INPUTMOUSEKEY` 支持直接获取按钮的值
+
+!!! summary ""
+
+    当命令执行时若 `RESULT:0 == 1`（鼠标点击事件），被点击的按钮的值同时也会保存到 `RESULT:5`。
+
+### ![](../assets/images/IconEE.webp)`OUTPUTLOG` 支持自定义输出日志的文件名
+
+!!! summary ""
+
+    使用 `OUTPUTLOG` 的字符串参数（格式同 `PRINTS`）来指定输出日志的文件名（包括扩展名和路径）。
+    `v5fix` 修复了可以访问上级目录的安全性漏洞，现在只允许指定同级以及下级子目录。
+
+### ![](../assets/images/IconEE.webp)`GSETFONT` 支持设置字体样式
+
+!!! summary ""
+
+    第四个参数类似 `SETFONT` 的 4 bit 参数用法：1=**粗体** 2=_斜体_ 4=<s>删除线</s> 8=<u>下划线</u>；可省略。
+
 ## 新增的命令 / 行内函数
 
 ### HTML 系列
