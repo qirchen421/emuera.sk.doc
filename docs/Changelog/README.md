@@ -44,6 +44,11 @@ hide:
 
 ## Emuera.EE
 
+=== "v15"
+
+	* ERD機能の修正（ハードコーディング変数に定義されてない引数を定義した時の例外落ち）
+	* GDRAWTEXTの修正（GSETFONTを使用せずに実行した場合の例外落ち）
+
 === "v14"
 
 	* 関数追加：`GETMEMORYUSAGE`, `CLEARMEMORY`
