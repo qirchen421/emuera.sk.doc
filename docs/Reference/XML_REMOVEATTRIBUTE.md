@@ -15,10 +15,6 @@
 
     1. `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合，`-1`を返します。
     2. `xml`がらノードを選択し，結果を`xml`に代入します。`xml`が変数でなければなりません。
-    
-    !!! bug "BUG"
-
-        現在，この関数にバグがあって，常に例外がでます。EMv8に修正する予定です。
 
     !!! warning "注意"
 

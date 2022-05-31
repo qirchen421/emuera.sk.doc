@@ -16,10 +16,6 @@
     1. 从根据 `xmlId` 指定的 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 中检索元素。若指定的 `XmlDocument` 不存在，返回 `-1`。
     2. 从指定的 `xml` 内容中检索元素，并将新的结果重新赋值给 `xml`；`xml` 必须是变量。
 
-    !!! bug "BUG"
-
-        目前这个函数存在 bug，经常出现删除失败的情况。预计将在 EMv8 中修复。
-
     !!! warning "注意"
 
         获取的 XML 不是真正的 `XmlNode` 节点实例，因此在 `xpath` 的开头使用「`//`」快捷表示方法并不会生效。

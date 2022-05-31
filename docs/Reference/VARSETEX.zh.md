@@ -7,21 +7,13 @@
 !!! info "API"
 
     ```  { #language-erbapi }
-    1 VARSETEX varName, value(, setLowestDim, from, to)
+    1 VARSETEX varName, value(, setAllDim, from, to)
     ```
     
     与本家的 [`VARSET`](https://osdn.net/projects/emuera/wiki/excom#h5-VARSET.20.3C.E5.A4.89.E6.95.B0.E5.90.8D.3E.7B.2C.20.3C.E6.95.B0.E5.BC.8F.20or.20.E6.96.87.E5.AD.97.E5.88.97.E5.BC.8F.3E.2C.20.3C.E9.85.8D.E5.88.97.E7.AF.84.E5.9B.B2.E5.88.9D.E5.80.A4.3E.2C.20.3C.E9.85.8D.E5.88.97.E7.AF.84.E5.9B.B2.E7.B5.82.E5.80.A4.2B1.3E.7D) 类似，将名为 `varName`（字符串）的变量赋值为 `value`，而不是直接使用变量标识符。  
-    `setLowestDim` 为 `0` 或直接省略时，将整个数组的所有元素赋值为 `value`；否则，只赋值给最低维度的数组。  
+    `setAllDim` 不为 `0` 或直接省略时，将整个数组的所有元素赋值为 `value`；否则，只赋值给最低维度的数组。  
     可以用 `from` / `to` 两个参数来指定赋值数组开始和结束的位置（不包括下标为 `to` 的元素）。  
     省略 `to` 参数时，一直赋值到数组的末尾；省略 `from` 参数时，从数组的第一个元素（下标为 `0`）开始赋值。
-
-    !!! bug "BUG"
-
-        目前，当 `setLowestDim` 为 `0` 或直接省略时，`from` / `to` 的指定会被忽略并赋值给整个数组，预计在 v8 版本中修复。
-
-    !!! danger "计划变更"
-
-        为了和 [`VARSET`](https://osdn.net/projects/emuera/wiki/excom#h5-VARSET.20.3C.E5.A4.89.E6.95.B0.E5.90.8D.3E.7B.2C.20.3C.E6.95.B0.E5.BC.8F.20or.20.E6.96.87.E5.AD.97.E5.88.97.E5.BC.8F.3E.2C.20.3C.E9.85.8D.E5.88.97.E7.AF.84.E5.9B.B2.E5.88.9D.E5.80.A4.3E.2C.20.3C.E9.85.8D.E5.88.97.E7.AF.84.E5.9B.B2.E7.B5.82.E5.80.A4.2B1.3E.7D) 统一，EMv8 将实现「省略第二参数的情况下使用默认值（`0` / 空字符串）」。
 
 !!! hint "提示"
 
@@ -62,6 +54,18 @@
             NEXT
             PRINTL
         NEXT
+        PRINTL
+        VARSET 二维整型数组
+
+        ; 第三个参数省略时
+        VARSETEX "二维整型数组:1:2", -1
+        FOR i, 0, 3
+            PRINTFORMS @"数组{i} -> "
+            FOR j, 0, 4
+                PRINTFORM {二维整型数组:i:j, 3, RIGHT}
+            NEXT
+            PRINTL
+        NEXT
 
         ONEINPUT
     ``` 
@@ -71,4 +75,8 @@
     数组0 ->   0  0  0  0
     数组1 ->   0  0 -1 -1
     数组2 ->   0  0  0  0
+    
+    数组0 ->   0  0 -1 -1
+    数组1 ->   0  0 -1 -1
+    数组2 ->   0  0 -1 -1
     ```
