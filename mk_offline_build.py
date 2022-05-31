@@ -15,3 +15,6 @@ with open("mkdocs.yml", mode='r', encoding="utf-8") as fs:
 os.system('mkdocs build -d release')
 os.remove('mkdocs.yml')
 os.rename('mkdocs.bak.yml', 'mkdocs.yml')
+os.remove('./release/404.html')
+os.remove('./release/sitemap.xml')
+os.remove('./release/sitemap.xml.gz')
