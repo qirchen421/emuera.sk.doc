@@ -16,3 +16,8 @@ hide:
 > 本ドキュメントは、[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)の利用範囲でご利用ください。
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
+
+## 連絡先
+エラー報告、要望などは下記Discordサーバーにてご連絡ください
+
+<iframe src="https://discord.com/widget?id=428432103042973706&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
