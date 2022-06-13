@@ -12,10 +12,10 @@
     2. int XML_GET xml, xpath, ref outputArray, outputType
     ```
     `xpath`の規則で`xml`からノードを選択し、合致結果数を返します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。
-    `xml`が文字列である場合，その内容からノードを選択し，`xml`整数である場合，保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合，`-1`を返します。
+    `xml`が文字列である場合、その内容からノードを選択します。`xml`が整数である場合、保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合、`-1`を返します。
     
-    1. `doOutput`が`0`または省略した場合，合致結果数のみ返し，そうでない場合，合致結果を`RESULTS`に代入します。
-    2. そうでない場合，合致結果を`outputArray`に代入します。
+    1. `doOutput`が`0`または省略した場合、合致結果数のみ返し、そうでない場合、合致結果を`RESULTS`に代入します。
+    2. そうでない場合、合致結果を`outputArray`に代入します。
 
     `outputType`の値によって，代入結果を決めます。
 
@@ -27,7 +27,7 @@
 
     !!! warning "注意"
 
-        実際の`XmlNode`インスタンスを得ることではないから，`xpath`の先頭に「`//`」の表現を使っても意味がありません。
+        実際の`XmlNode`インスタンスを得ることではないため、`xpath`の先頭に「`//`」の表現を使っても意味がありません。
 
 !!! hint "ヒント"
 

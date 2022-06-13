@@ -10,7 +10,7 @@
     ```  { #language-erbapi }
     string XML_TOSTR xmlId
     ```
-    `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の内容を返すます。
+    `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の内容を返します。
 
 !!! hint "ヒント"
 

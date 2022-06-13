@@ -22,12 +22,12 @@
 
     `MAP`（連想配列，[`Dictionary<string,string>`](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）に保存されたデータを操作する関数です。
     
-    - `MAP_GET`：`mapName`に対応する`MAP`に`key`に対応する値を返します。存在していない場合，または`MAP`自体が存在しない場合も，空文字列を返します。例外発生しないので必要があれば`MAP_HAS`、[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
-    - `MAP_HAS`：`mapName`に対応する`MAP`に`key`の存否を確認し，存在する場合`1`を返す，そうでない場合`0`を返します。`MAP`自体が存在しない場合，`-1`を返します。
-    - `MAP_SET`：`mapName`に対応する`MAP`に`key`に対応する値を`value`で上書きします。`key`が存在しない場合`key`を追加し，`1`を返します。`MAP`自体が存在しない場合，`-1`を返します。
-    - `MAP_REMOVE`：`mapName`に対応する`MAP`にある`key`と対応する値を削除し，`1`を返します。`MAP`自体が存在しない場合，`-1`を返します。
-    - `MAP_SIZE`：`mapName`に対応する`MAP`にキー・値ペアの数を返します。`MAP`自体が存在しない場合，`-1`を返します。
-    - `MAP_CLEAR`：`mapName`に対応する`MAP`にキー・値ペアをすべて削除し，`1`を返します。`MAP`自体が存在しない場合，`-1`を返します。
+    - `MAP_GET`：`mapName`に対応する`MAP`の`key`に対応する値を返します。存在していない場合、または`MAP`自体が存在しない場合も、空文字列を返します。例外は発生しないので、必要があれば`MAP_HAS`、[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
+    - `MAP_HAS`：`mapName`に対応する`MAP`の`key`の存否を確認し、存在する場合`1`を返す。そうでない場合`0`を返します。`MAP`自体が存在しない場合、`-1`を返します。
+    - `MAP_SET`：`mapName`に対応する`MAP`の`key`に対応する値を`value`で上書きします。`key`が存在しない場合`key`を追加し、`1`を返します。`MAP`自体が存在しない場合、`-1`を返します。
+    - `MAP_REMOVE`：`mapName`に対応する`MAP`の`key`に対応する値を削除し、`1`を返します。`MAP`自体が存在しない場合、`-1`を返します。
+    - `MAP_SIZE`：`mapName`に対応する`MAP`のキー・値ペアの数を返します。`MAP`自体が存在しない場合、`-1`を返します。
+    - `MAP_CLEAR`：`mapName`に対応する`MAP`のキー・値ペアをすべて削除し、`1`を返します。`MAP`自体が存在しない場合、`-1`を返します。
 
 !!! hint "ヒント"
 

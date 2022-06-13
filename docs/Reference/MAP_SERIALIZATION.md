@@ -12,10 +12,10 @@
     2. int MAP_FROMXML, mapName, xmlMap
     ```
 
-    `MAP`（連想配列，[`Dictionary<string,string>`](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）と`XML`と互いに変換する関数です。`MAP`の内容をセーブファイルに保存したい時に使えます。
+    `MAP`（連想配列，[`Dictionary<string,string>`](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）と`XML`を互いに変換する関数です。`MAP`の内容をセーブファイルに保存したい時に使えます。
 
     - `MAP_TOXML`：`mapName`に対応する`MAP`を`XML`へ変換して返します。
-    - `MAP_FROMXML`：`mapName`に対応する`MAP`に、`XML`にあるキー・値ペアを読み取て上書きします。
+    - `MAP_FROMXML`：`mapName`に対応する`MAP`に、`XML`のキー・値ペアを読み取り上書きします。
 
     `XML`は、必ず
     ``` xml

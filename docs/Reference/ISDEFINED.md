@@ -10,7 +10,7 @@
     int ISDEFINED macroName
     ```
 
-    `macroName`と同名なマクロ(`#DEFINE XXX`)が定義されていたら`1`を返します。定義されていない場合`0`を返します。
+    `macroName`と同名のマクロ(`#DEFINE XXX`)が定義されていたら`1`を返します。定義されていない場合`0`を返します。
 
 !!! hint "ヒント"
 

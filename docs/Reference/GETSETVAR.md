@@ -14,7 +14,7 @@
     1 SETVAR varName, value
     ```
 
-    `varName`で表した変数・定数の`GET`、`SET`関数です（定数は`SET`できい）。
+    `varName`で表した変数・定数の`GET`、`SET`関数です（定数は`SET`不可）。
 
     - `GETVAR`は，`varName`で表した整数型変数・定数の値を返します。
     - `GETVARS`は，`varName`で表した文字列型変数・定数の値を返します。
