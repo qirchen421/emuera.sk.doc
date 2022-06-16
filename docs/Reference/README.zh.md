@@ -127,10 +127,10 @@
 
 ### HTML 系列
 
-| 函数名                                                                   | 参数              | 返回值 |
-| :----------------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `int`  |
+| 函数名                                                                   | 参数              | 返回值   |
+| :----------------------------------------------------------------------- | :---------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
 ### 字符串操作 / 引用
 
