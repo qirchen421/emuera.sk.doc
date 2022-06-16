@@ -14,7 +14,8 @@
     int ENUMMACROWITH keyword
     ```
 
-    定義されたマクロ名が`keyword`を含んでいればを`RESULTS`に代入，総数を返します。
+    定義されたマクロ名で`keyword`を含んでいるマクロの総数を返す  
+	また、`keyword`を含むマクロ名を`RESULTS`の配列に代入する
 
     - `ENUMMACROBEGINSWITH`は，`keyword`で始まるマクロ名を返します。
     - `ENUMMACROENDSWITH`は，`keyword`で終わるマクロ名を返します。

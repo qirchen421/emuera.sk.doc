@@ -14,7 +14,8 @@
     int ENUMFUNCWITH keyword
     ```
 
-    定義された関数名が`keyword`を含んでいればを`RESULTS`に代入，総数を返します。
+    定義された関数で、`keyword`を含んでいる関数の総数を返す  
+	また、`keyword`を含む関数名を`RESULTS`の配列に代入する
 
     - `ENUMFUNCBEGINSWITH`は，`keyword`で始まる関数名を返します。
     - `ENUMFUNCENDSWITH`は，`keyword`で終わる関数名を返します。

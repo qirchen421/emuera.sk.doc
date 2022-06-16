@@ -11,14 +11,15 @@
     1. int XML_REMOVEATTRIBUTE xmlId, xpath(, doSetAll)
     2. int XML_REMOVEATTRIBUTE ref xml, xpath(, doSetAll)
     ```
-    指定した`XML`に対して，`xpath`で選択した属性を削除します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。`doSetAll`が`0`または省略し，かつ合致結果数が`1`以上である場合，追加を行われません。成功した場合，合致結果の数を返す。失敗した場合，`0`を返す。
+    指定した`XML`に対して、`xpath`で選択した属性を削除します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。  
+	`doSetAll`が`0`または省略、かつ合致結果数が`1`以上である場合、追加は行われません。成功した場合、合致結果の数を返す。失敗した場合、`0`を返す。
 
-    1. `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合，`-1`を返します。
-    2. `xml`がらノードを選択し，結果を`xml`に代入します。`xml`が変数でなければなりません。
+    1. `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合、`-1`を返します。
+    2. `xml`からノードを選択し、結果を`xml`に代入します。`xml`は変数でなければなりません。
 
     !!! warning "注意"
 
-        実際の`XmlNode`インスタンスを得ることではないから，`xpath`の先頭に「`//`」の表現を使っても意味がありません。
+        実際の`XmlNode`インスタンスを得ることではないため、`xpath`の先頭に「`//`」の表現を使っても意味がありません。
 
 !!! hint "ヒント"
 

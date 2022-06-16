@@ -14,15 +14,15 @@
     int XML_EXIST xmlId
     ```
 
-    [`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の作り、削除、存否確認に関する関数です。
+    [`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の作成、削除、存否確認に関する関数です。
     
-    - `XML_DOCUMENT`：`xmlContent`を解析し、`XmlDocument`として保存する。`xmlId`に対応する`XmlDocument`がすでに存在している場合，`0`を返す，成功した場合，`1`を返します。
+    - `XML_DOCUMENT`：`xmlContent`を解析し、`XmlDocument`として保存する。`xmlId`に対応する`XmlDocument`がすでに存在している場合、`0`を返す。成功した場合、`1`を返します。
     - `XML_RELEASE`：`xmlId`に対応する`XmlDocument`を削除します。
-    - `XML_EXIST`：`xmlId`に対応する`XmlDocument`の存否を確認し，存在するなら`1`を返す，そうでない場合`0`を返します。。
+    - `XML_EXIST`：`xmlId`に対応する`XmlDocument`の存否を確認し、存在するなら`1`を返す。そうでない場合`0`を返します。
 
     !!! warning "注意"
 
-        作成した`XmlDocument`は直接にセーブファイルに保存できない，「タイトル画面へ戻る」か[`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA)をすると自動的に削除されます。
+        作成した`XmlDocument`は直接にセーブファイルに保存されません。「タイトル画面へ戻る」か[`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA)をすると自動的に削除されます。
 
 !!! hint "ヒント"
 

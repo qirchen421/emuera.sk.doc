@@ -14,7 +14,8 @@
     int ENUMVARWITH keyword
     ```
 
-    定義された変数・定数名が`keyword`を含んでいればを`RESULTS`に代入，総数を返します。
+    定義された変数・定数名で`keyword`を含んでいる変数・定数の総数を返す  
+	また、`keyword`を含む変数・定数名を`RESULTS`の配列に代入する
 
     - `ENUMVARBEGINSWITH`は，`keyword`で始まる変数・定数名を返します。
     - `ENUMVARENDSWITH`は，`keyword`で終わる変数・定数名を返します。

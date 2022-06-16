@@ -10,7 +10,7 @@
     int HTML_SUBSTRING html, width
     ```
 
-    `html`を`HTML_PRINT`でプリントした場合，`width`（半角文字数）を超えない部分を返します。
+    `html`を`HTML_PRINT`でプリントした結果を、`width`（半角文字数）で分割して返す
 
     !!! warning "注意"
 

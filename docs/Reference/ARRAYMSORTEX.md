@@ -14,10 +14,10 @@
     
     本家版[`ARRAYMSORTEX`](https://osdn.net/projects/emuera/wiki/excom#h5-ARRAYMSORT.20array1.7B.2C.20array2....7D)と似ています。
     
-    1. `indexName`で表した変数配列を並べ替え，その変化を基準に，`arrayNameList`内すべての行列を同じ順で並べ替えます。
-    2. `indexArray`を並べ替え，その変化を基準に，`arrayNameList`内すべての行列を同じ順で並べ替えます。
+    1. `indexName`で表した変数配列を並べ替え，そのソートを基準に，`arrayNameList`内すべての配列を同じ順で並べ替えます。
+    2. `indexArray`を並べ替え，そのソートを基準に，`arrayNameList`内すべての配列を同じ順で並べ替えます。
 
-    `sortAscending`が`0`以外または省略した場合，正順で並べ替え，そうでない場合，逆順で並べ替えます。
+    `sortAscending`が`0`以外または省略した場合，昇順で並べ替え，そうでない場合，降順で並べ替えます。
 
 !!! hint "ヒント"
 
