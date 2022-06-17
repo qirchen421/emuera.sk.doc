@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v8b"
+
+	* 修复关于 `REPLACE` 扩展带来的错误(该错误会导致eraTW的AA显示发生错误)。
+	* 将 `HTML_SUBSTRING` 的返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
+
 === "v8"
 
     * 扩展 `XML_GET` / `REPLACE` 相关功能。

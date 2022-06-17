@@ -1,8 +1,8 @@
 # HTML_SUBSTRING
 
-| 函数名                                                                   | 参数            | 返回值 |
-| :----------------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int` | `int`  |
+| 函数名                                                                   | 参数            | 返回值   |
+| :----------------------------------------------------------------------- | :-------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int` | `string` |
 
 !!! info "API"
 
@@ -11,6 +11,10 @@
     ```
 
     使用 `HTML_PRINT` 命令打印 `html` 时，返回不超过 `width`（半角字符数量）的部分。
+
+    !!! warning "注意"
+
+        `v8b` 开始将返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
 
 !!! hint "提示"
 
@@ -21,8 +25,7 @@
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
 
-        HTML_SUBSTRING "AB<b>CD</b>EFG",4
-        PRINTSL RESULTS
+        PRINTSL HTML_SUBSTRING("AB<b>CD</b>EFG",4)
         PRINTSL RESULTS:1
 
         ONEINPUT

@@ -6,6 +6,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v8b"
+
+	* バグ修正：`REPLACE`拡張による不具合の修正(eraTWのAAマップ表示エラーの原因になる)。
+	* 仕様変更：`HTML_SUBSTRING`の戻り値を整数型(常に`1`)から文字列型(`RESULTS:0`と同じ)に変更。
+
 === "v8"
 
     * 機能拡張：`XML_GET`, `REPLACE`

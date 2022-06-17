@@ -115,10 +115,10 @@
 
 ### HTML系
 
-| 関数名                                                                   | 引数              | 戻り値 |
-| :----------------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `int`  |
+| 関数名                                                                   | 引数              | 戻り値   |
+| :----------------------------------------------------------------------- | :---------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
 ### 文字列操作・参照
 
