@@ -24,6 +24,10 @@
     同梱のEmuera-Anchorは英語圏のeraコミュニティで使用されているEmueraです
     各UIやエラーメッセージ等が英語になっています。必要に応じて使い分けてください
 
+### ![](../assets/images/IconEE.webp)`Emuera-Anchor`を同梱
+!!! summary ""
+
+	Emuera-Anchorのホットキー拡張機能を移植。Ctrl+Tでタイトル画面に戻る、Ctrl+Rで再起動、Ctrl+OでERB再読み込み
 ## 定数・変数
 
 ### ![](../assets/images/IconEE.webp)`ERH`で定義した変数の配列に、`CSV`ファイル/`ERD`ファイルで名前を付けられるように
