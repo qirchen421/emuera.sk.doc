@@ -35,7 +35,7 @@
         #DIM total
 
         total = ENUMFILES("csv")
-        PRINTFORML 全ファイル数：{total}
+        PRINTFORML 全ファイル数（サブフォルダを除く）：{total}
         FOR i, 0, total
             PRINTSL RESULTS:i
         NEXT
@@ -50,7 +50,7 @@
         ONEINPUT
     ```
     ``` title="結果"
-    全ファイル数：3
+    全ファイル数（サブフォルダを除く）：3
     csv\VariableSize.csv
     csv\_Default.config
     csv\_Fixed.config

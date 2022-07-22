@@ -35,7 +35,7 @@
         #DIM total
 
         total = ENUMFILES("csv")
-        PRINTFORML 所有文件数目：{total}
+        PRINTFORML 所有文件数目（子文件夹除外）：{total}
         FOR i, 0, total
             PRINTSL RESULTS:i
         NEXT
@@ -50,7 +50,7 @@
         ONEINPUT
     ```
     ``` title="输出结果"
-    所有文件数目：3
+    所有文件数目（子文件夹除外）：3
     csv\VariableSize.csv
     csv\_Default.config
     csv\_Fixed.config
