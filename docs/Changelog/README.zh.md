@@ -62,6 +62,11 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+=== "v18"
+
+	* `INPUTMOUSEKEY`现在可以处理以字符串为索引的按钮
+	* `VariableSize.csv`现在可以禁用`COUNT`变量
+	* 按键宏文件现在使用`UTF-8`保存
 
 === "v17"
 
