@@ -21,7 +21,7 @@
     命令、式中関数両方対応しています。
 
 !!! example "例"
-    ``` title="フォルダ構造の構成"
+    ``` title="フォルダの構成"
     csv
      - Chara
         - Chara001.csv
