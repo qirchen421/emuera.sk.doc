@@ -6,6 +6,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v9"
+
+    * 関数追加：`ENUMFILES`。
+
 === "v8c"
 
 	* バグ修正：`libwebp.dll`バージョンアップ，一部`Win11`に`webp`ファイルが読み込めない問題に対応。

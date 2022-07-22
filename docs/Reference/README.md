@@ -234,9 +234,10 @@
 
 ### その他
 
-| 関数名                                                                   | 引数     | 戻り値 |
-| :----------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)           | `string` | `int`  |
-| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)       | なし     | なし   |
-| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md) | なし     | `int`  |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)       | なし     | `int`  |
+| 関数名                                                                   | 引数                        | 戻り値 |
+| :----------------------------------------------------------------------- | :-------------------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)           | `string`                    | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFILES`](./ENUMFILES.md)           | `string`(, `string`, `int`) | `int`  |
+| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)       | なし                        | なし   |
+| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md) | なし                        | `int`  |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)       | なし                        | `int`  |

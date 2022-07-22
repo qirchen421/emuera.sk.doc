@@ -7,6 +7,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v9"
+
+    * 新增函数：`ENUMFILES`。
+
 === "v8c"
 
 	* `libwebp.dll` 版本升级，该升级解决了一部分系统无法读取`webp`文件的问题。

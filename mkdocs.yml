@@ -84,6 +84,7 @@ nav:
           - Reference/MAP_SERIALIZATION.md
       - その他:
           - Reference/EXISTFILE.md
+          - Reference/ENUMFILES.md
           - Reference/UPDATECHECK.md
           - Reference/GETMEMORYUSAGE.md
           - Reference/CLEARMEMORY.md
