@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v10"
+
+    * 新增HTML标签：`<clearbutton>`。
+    * 性能提高：修正算法以提高 `XML_GET` 的性能。
+
 === "v9"
 
     * 新增函数：`ENUMFILES`。

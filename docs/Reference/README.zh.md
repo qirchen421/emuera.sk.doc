@@ -40,11 +40,12 @@
 
 ## 改变了标准库的命令 / 行内函数
 
-### ![](../assets/images/IconEM.webp)`HTML_PRINT` 标签的属性值允许使用负数
+### ![](../assets/images/IconEM.webp)`HTML_PRINT` 相关更改
 
 !!! summary ""
 
-    `HTML_PRINT` 的 `<space>` 标签可以给 `param` 属性指定负数值。
+    - `HTML_PRINT` 的 `<space>` 标签可以给 `param` 属性指定负数值。
+    - `HTML_PRINT` 添加 `<clearbutton>` 标签。`<clearbutton>` 标签包围的内容不会被按钮化（`title`、`pos`属性的功能仍然有效）
 
 !!! example "示例代码"
 
@@ -52,6 +53,7 @@
     @SYSTEM_TITLE
 
         HTML_PRINT "文<shape type='space' param='-100'>字"
+        HTML_PRINT "<clearbutton><button value='1' title='提示文字'>[1] 确定</button></clearbutton>"
 
         ONEINPUT
     ```

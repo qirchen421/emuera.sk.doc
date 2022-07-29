@@ -6,6 +6,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v10"
+
+    * HTMLタグ追加：`<clearbutton>`。
+    * 性能向上：アルゴリズム修正による`XML_GET`の性能向上。
+
 === "v9"
 
     * 関数追加：`ENUMFILES`。

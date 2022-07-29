@@ -48,10 +48,11 @@
 
 ## 仕様が変更された命令・式中関数
 
-### ![](../assets/images/IconEM.webp)`HTML_PRINT`で負数を使用可能に
+### ![](../assets/images/IconEM.webp)`HTML_PRINT`関連の変更
 !!! summary ""
 
-    `HTML_PRINT`の`<space>`タグで`param`に負数を指定できます
+    - `HTML_PRINT`の`<space>`タグで`param`に負数を指定できます
+    - `HTML_PRINT`の`<clearbutton>`タグの追加。`<clearbutton>`は囲った部分のボタンかを無効とする（`title`、`pos`属性の機能は残る）
 
 !!! example "例"
 
@@ -59,6 +60,7 @@
     @SYSTEM_TITLE
     
     HTML_PRINT "文<shape type='space' param='-100'>字"
+    HTML_PRINT "<clearbutton><button value='1' title='ツールチップ'>[1] 確定</button></clearbutton>"
 
     ONEINPUT
     ```
