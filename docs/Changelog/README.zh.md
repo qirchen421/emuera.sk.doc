@@ -67,6 +67,12 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+
+=== "v19"
+
+	* `ERD` 读取高速化
+	* 使 `_Rename.csv` 在调试控制台生效
+
 === "v18"
 
 	* `INPUTMOUSEKEY`现在可以处理以字符串为索引的按钮
