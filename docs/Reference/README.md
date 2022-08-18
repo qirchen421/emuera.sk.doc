@@ -58,6 +58,7 @@
 
     - `HTML_PRINT`の`<space>`タグで`param`に負数を指定できます
     - `HTML_PRINT`の`<clearbutton>`タグの追加。`<clearbutton>`は囲った部分のボタンかを無効とする（`title`、`pos`属性の機能は残る）
+        - 属性`notooltip`が`true`の場合、ボタン`title`属性も無効とすいる
 
 !!! example "例"
 
@@ -65,7 +66,8 @@
     @SYSTEM_TITLE
     
     HTML_PRINT "文<shape type='space' param='-100'>字"
-    HTML_PRINT "<clearbutton><button value='1' title='ツールチップ'>[1] 確定</button></clearbutton>"
+    HTML_PRINT "<clearbutton><button value='1' title='ツールチップ1'>[1] 確定</button></clearbutton>"
+    HTML_PRINT "<clearbutton notooltip='true'><button value='2' title='ツールチップ2'>[2] 戻る</button></clearbutton>"
 
     ONEINPUT
     ```

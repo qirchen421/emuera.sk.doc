@@ -46,6 +46,7 @@
 
     - `HTML_PRINT` 的 `<space>` 标签可以给 `param` 属性指定负数值。
     - `HTML_PRINT` 添加 `<clearbutton>` 标签。`<clearbutton>` 标签包围的内容不会被按钮化（`title`、`pos`属性的功能仍然有效）
+        - 属性`notooltip`为`true`时，同时将按钮的`title`属性无效化
 
 !!! example "示例代码"
 
