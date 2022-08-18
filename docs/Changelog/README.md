@@ -6,6 +6,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v11"
+
+    * HTMLタグ属性追加：`<clearbutton>`に`notooltip`属性追加。
+
 === "v10"
 
     * HTMLタグ追加：`<clearbutton>`。
