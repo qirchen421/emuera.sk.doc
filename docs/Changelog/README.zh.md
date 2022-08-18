@@ -72,6 +72,11 @@ hide:
 
 ## Emuera.EE
 
+=== "v20"
+
+	* `ERD` 读取进一步高速化
+	* 可以用`CSV`来配置`DAY`,`TIME`,`MONEY`数组了
+
 === "v19"
 
 	* `ERD` 读取高速化
