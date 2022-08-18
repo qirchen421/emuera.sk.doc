@@ -46,6 +46,11 @@
 
 	`COUNT,-1`を記述することで`COUNT`を使用禁止変数に設定できます。この場合、`REPEAT`の行は起動時に警告が入り、実行時にはエラー落ちします
 
+### ![](../assets/images/IconEE.webp)`DAY`,`TIME`,`MONEY`にCSVを適用可能に
+!!! summary ""
+
+	`DAY.csv`,`TIME.csv`,`MONEY.csv`で他CSVのように名前を付けられ、`DAYNAME`,`TIMENAME`,`MONEYNAME`が使用可能になります
+
 ## 仕様が変更された命令・式中関数
 
 ### ![](../assets/images/IconEM.webp)`HTML_PRINT`関連の変更

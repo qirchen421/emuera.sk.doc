@@ -66,6 +66,10 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v20"
+
+	* `DAY`,`TIME`,`MONEY`に`CSV`を適用可能に
+
 === "v19"
 
 	* `ERD`読み込みの高速化
