@@ -1,8 +1,8 @@
 # GGETFONTSTYLE
 
-| 函数名                                                                 | 参数   | 返回值 |
-| :--------------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md) | `void` | `void` |
+| 函数名                                                                 | 参数  | 返回值 |
+| :--------------------------------------------------------------------- | :---- | :----- |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md) | `int` | `int`  |
 
 !!! info "API"
 
