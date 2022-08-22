@@ -1,21 +1,31 @@
-# XML_GET
+# XML_GET系
 
-| 関数名                                                     | 引数                                   | 戻り値 |
-| :--------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md) | `any`, `string`(, `int`, `int`)        | `int`  |
-|                                                            | `any`, `string`, `ref` `string`, `int` | `int`  |
+| 関数名                                                            | 引数                                          | 戻り値 |
+| :---------------------------------------------------------------- | :-------------------------------------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)        | `any`, `string`(, `int`, `int`)               | `int`  |
+|                                                                   | `any`, `string`, `ref` `string[]`(, `int`)    | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_GET_BYNAME`](./XML_GET.md) | `string`, `string`(, `int`, `int`)            | `int`  |
+|                                                                   | `string`, `string`, `ref` `string[]`(, `int`) | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
     1. int XML_GET xml, xpath(, doOutput, outputType)
-    2. int XML_GET xml, xpath, ref outputArray, outputType
+    2. int XML_GET xml, xpath, ref outputArray(, outputType)
+    3. int XML_GET_BYNAME xmlName, xpath(, doOutput, outputType)
+    4. int XML_GET_BYNAME xmlName, xpath, ref outputArray(, outputType)
     ```
-    `xpath`の規則で`xml`からノードを選択し、合致結果数を返します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。
-    `xml`が文字列である場合、その内容からノードを選択します。`xml`が整数である場合、保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)が存在していない場合、`-1`を返します。
-    
-    1. `doOutput`が`0`または省略した場合、合致結果数のみ返し、そうでない場合、合致結果を`RESULTS`に代入します。
-    2. そうでない場合、合致結果を`outputArray`に代入します。
+    `xpath`の規則で`xml`(`xmlName`)からノードを選択し、合致結果数を返します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。
+
+    書式`1`と`2`には、`xml`が文字列である場合、その内容からノードを選択します。`xml`が整数である場合、`xml`を文字列に変換した結果([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))をキーとして、保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。`XmlDocument`が存在していない場合、`-1`を返します。
+
+    書式`3`と`4`には、`xmlName`をキーとして、保存した`XmlDocument`からノードを選択します。
+
+    なお，
+
+    - 書式`1`と`3`: `doOutput`が`0`または省略した場合、合致結果数のみ返し、そうでない場合、合致結果を`RESULTS`に代入します。
+
+    - 書式`2`と`4`: 合致結果を`outputArray`に代入します。
 
     `outputType`の値によって，代入結果を決めます。
 

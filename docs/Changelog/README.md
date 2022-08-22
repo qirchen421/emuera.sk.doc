@@ -6,6 +6,12 @@ hide:
 
 ## Emuera.EM
 
+=== "v12"
+
+    * 機能拡張：「セーブデータを圧縮して保存する」コンフィグ機能追加，[`説明文`](../Reference/README.md#_5)に参照。
+    * 機能拡張：XML、MAPがセーブデータの中で保存可能，[`説明文`](../Reference/README.md#xmlmap)に参照。
+	* 仕様変更：XML系の命令の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり，[`リファレンス`](../Reference/README.md#xml)に参照。
+
 === "v11"
 
     * HTMLタグ属性追加：`<clearbutton>`に`notooltip`属性追加。

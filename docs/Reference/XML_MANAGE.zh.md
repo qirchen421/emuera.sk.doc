@@ -2,9 +2,9 @@
 
 | 函数名                                                             | 参数            | 返回值 |
 | :----------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md) | `int`, `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)  | `int`           | `1`    |
-| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)    | `int`           | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md) | `any`, `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)  | `any`           | `1`    |
+| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)    | `any`           | `int`  |
 
 !!! info "API"
 
@@ -14,7 +14,7 @@
     int XML_EXIST xmlId
     ```
 
-    关于 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 的生成、删除、判断是否存在的一系列函数。
+    关于 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 的生成、删除、判断是否存在的一系列函数。若 `xmlId` 为整数，则使用其字符串转换结果值([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))。
     
     - `XML_DOCUMENT`：解析 `xmlContent` 并保存为 `XmlDocument`。  
         如果已经存在 `xmlId` 对应的 `XmlDocument`（创建失败），返回 `0`；创建成功时，返回 `1`。

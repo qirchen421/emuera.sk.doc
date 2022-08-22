@@ -7,6 +7,12 @@ hide:
 
 ## Emuera.EM
 
+=== "v12"
+
+    * 新增「セーブデータを圧縮して保存する」设置项，参见[`相关说明`](../Reference/README.md#_5)。
+    * 新增将 XML、MAP 数据保存进存档的功能，参见[`相关说明`](../Reference/README.md#xmlmap)。
+	* 调整 XML 系列命令的行为，现在使用字符串作为 ID，兼容旧版本，参见[`参考手册`](../Reference/README.md#xml)。
+
 === "v11"
 
     * 新增HTML标签属性：添加了`<clearbutton>`标签的`notooltip`属性。
