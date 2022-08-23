@@ -42,7 +42,7 @@
 
     可以再设置界面或者`emuera.config`中进行设置
 
-    * 该功能只有在 [`セーブデータをバイナリ形式で保存する`](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B) 为 `YES` 时有效
+    * 该功能只有在「[セーブデータをバイナリ形式で保存する](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」为 `YES` 时有效
 
 !!! example "示例代码"
     ``` title="emuera.config"
@@ -77,7 +77,7 @@
 
 	可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](./README.md#xml)、[`MAP`](./README.md#map) 的 ID。
 
-    * 该功能只有在 [`セーブデータをバイナリ形式で保存する`](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B) 为 `YES` 时有效
+    * 该功能只有在「[セーブデータをバイナリ形式で保存する](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」为 `YES` 时有效
     * 即使设定了 ID，若内存中不存在该数据则不会保存进存档文件。
     * 存档中保存的数据的 ID 没有在 CSV 中设定时会被丢弃。
     * 存档与旧版本及本家版的 Emuera.exe 兼容。
