@@ -28,6 +28,30 @@
     附带的 `Emuera-Anchor` 是 era 英语圈使用的 Emuera。
     UI 菜单栏 / 设置项 / 报错信息等为英文，请根据实际需要选择使用。
 
+### ![](../assets/images/IconEE.webp)`Emuera-Anchor` 的键盘按键扩展机能的移植
+!!! summary ""
+
+    Emuera-Anchor 的键盘按键扩展机能的移植。用 `Ctrl+T` 返回标题画面、`Ctrl+R` 重启、`Ctrl+O` 重新读取 ERB 文件
+
+### ![](../assets/images/IconEE.webp)按键宏文件以UTF-8保存
+!!! summary ""
+
+    使按键宏文件得以支持其它语言
+### ![](../assets/images/IconEM.webp)存档保存时进行压缩
+!!! summary ""
+
+    可以再设置界面或者`emuera.config`中进行设置
+
+    * 该功能只有在「[セーブデータをバイナリ形式で保存する](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」为 `YES` 时有效
+
+!!! example "示例代码"
+    ``` title="emuera.config"
+    セーブデータを圧縮して保存する:YES
+    ```
+
+!!! warning "注意"
+
+    开启压缩功能的存档不兼容旧版本及本家版的 Emuera.exe。
 ## 常量 / 变量
 
 ### ![](../assets/images/IconEE.webp)支持使用 `CSV` 文件 / `ERD` 文件来调用 `ERH` 文件中定义的数组变量
@@ -37,6 +61,45 @@
     读取方式类似在 ERH 文件中定义变量，并且可以像现在的 CSV 用法那样给数组命名。
     `./CSV/` 文件夹下为 `变量名.CSV`，`./ERB/` 文件夹下为 `变量名.ERD`，调用语法仍与 CSV 变量相同。
     如果存在 2 个以上的同名变量，启动时会抛出错位并终止运行。
+
+### ![](../assets/images/IconEE.webp)可在 `VariableSize.csv` 中设置禁用 `COUNT` 变量
+!!! summary ""
+
+    通过加入 `COUNT,-1` 行来禁用 `COUNT` 。若如此做，`REPEAT` 所在的行会在启动时弹出经过、并在运行时报错终止。
+
+### ![](../assets/images/IconEE.webp)可以通过 CSV 来配置 `DAY`，`TIME`，`MONEY`
+!!! summary ""
+
+    可用 `DAY.csv`，`TIME.csv`，`MONEY.csv` 来像其它 CSV 一样配置数值与名称转换，并应用于 `DAYNAME`，`TIMENAME`，`MONEYNAME` 变量
+
+### ![](../assets/images/IconEM.webp)`XML`、`MAP` 数据可以保存进存档文件
+!!! summary ""
+
+	可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](./README.md#xml)、[`MAP`](./README.md#map) 的 ID。
+
+    * 该功能只有在「[セーブデータをバイナリ形式で保存する](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」为 `YES` 时有效
+    * 即使设定了 ID，若内存中不存在该数据则不会保存进存档文件。
+    * 存档中保存的数据的 ID 没有在 CSV 中设定时会被丢弃。
+    * 存档与旧版本及本家版的 Emuera.exe 兼容。
+
+!!! example "示例代码"
+
+    ``` { #language-csv title="VarExtSample.CSV" }
+    ; 设置希望保存在global.sav中的MAP的ID。一行可以设置多个。
+    ; 也可用多行，多个文件(例如VarExt1.csv, VarExt2.csv, VarExt3.csv等)来进行设定。
+    GLOBAL_MAPS, MyMap, MyMap2
+    GLOBAL_MAPS, MyMap3
+    ; 设置希望保存在global.sav中的XmlDocument的ID。
+    GLOBAL_XMLS, 0, MyXml
+    ; 设置希望保存在save*.sav中的MAP的ID。
+    SAVE_MAPS, MyMap4
+    ; 设置希望保存在save*.sav中的XmlDocument的ID。
+    SAVE_XMLS, 1, MyXml2
+    ```
+
+!!! warning "注意"
+
+    CSV文件所设置的 ID 的前后空格将被删除。
 
 ## 改变了标准库的命令 / 行内函数
 
@@ -81,7 +144,7 @@
 !!! summary ""
 
     `LOADTEXT` / `SAVETEXT` 第一个参数为字符串时，以此为路径加载 / 保存文件。
-    指定的路径必须为 `Emuera.exe` 同级的相对路径（试图使用 `..` 回到更上级的目录是无效的）。此外，只允许使用 `emuera.config` 中配置的 `LOADTEXTとSAVETEXTで使える拡張子` 里包含的扩展名（默认只有 `txt`）。
+    指定的路径必须为 `Emuera.exe` 同级的相对路径（试图使用 `..` 回到更上级的目录是无效的）。此外，只允许使用设置界面或者 `emuera.config` 中配置的 `LOADTEXTとSAVETEXTで使える拡張子` 里包含的扩展名（默认只有 `txt`）。
 
 !!! example "示例代码"
 
@@ -188,6 +251,7 @@
 | ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)               | `int`, `string`(, `int`, `int`)     | `int`  |
 | ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                 | `int`                               | `int`  |
 | ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)         | `int`                               | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md)       | `int`                               | `int`  |
 | ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md)         | `string`, `string`, `int`(, `int`)  | `int`  |
 | ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
 
@@ -205,27 +269,35 @@
 
 ### XML 文件处理相关
 
-| 函数名                                                                             | 参数                                                         | 返回值   |
-| :--------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md)                 | `int`, `string`                                              | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)                  | `int`                                                        | `1`      |
-| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)                    | `int`                                                        | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)                         | `any`, `string`(, `int`, `int`)                              | `int`    |
-|                                                                                    | `any`, `string`, `ref` `string[]`, `int`                     | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_SET`](./XML_SET.md)                         | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
-|                                                                                    | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.md)                     | `int`                                                        | `string` |
-| ![](../assets/images/IconEM.webp)[`XML_ADDNODE`](./XML_ADDNODE.md)                 | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
-|                                                                                    | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.md)           | `int`, `string`(, `int`)                                     | `int`    |
-|                                                                                    | `ref` `string`, `string`(, `int`)                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.md)                 | `int`, `string`                                              | `int`    |
-|                                                                                    | `int`, `string`, `string`(, `int`)                           | `int`    |
-|                                                                                    | `ref` `string`, `string`, `string`(, `int`)                  | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE`](./XML_ADDATTRIBUTE.md)       | `int`, `string`, `string`(, `string`, `int`, `int`)          | `int`    |
-|                                                                                    | `ref` `string`, `string`, `string`(, `string`, `int`, `int`) | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE`](./XML_REMOVEATTRIBUTE.md) | `int`, `string`(, `int`)                                     | `int`    |
-|                                                                                    | `ref` `string`, `string`(, `int`)                            | `int`    |
+| 函数名                                                                                    | 参数                                                         | 返回值   |
+| :---------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md)                        | `any`, `string`                                              | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)                         | `any`                                                        | `1`      |
+| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)                           | `any`                                                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)                                | `any`, `string`(, `int`, `int`)                              | `int`    |
+|                                                                                           | `any`, `string`, `ref` `string[]`(, `int`)                   | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_GET_BYNAME`](./XML_GET.md)                         | `string`, `string`(, `int`, `int`)                           | `int`    |
+|                                                                                           | `string`, `string`, `ref` `string[]`(, `int`)                | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_SET`](./XML_SET.md)                                | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
+|                                                                                           | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_SET_BYNAME`](./XML_SET.md)                         | `string`, `string`, `string`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.md)                            | `int`                                                        | `string` |
+| ![](../assets/images/IconEM.webp)[`XML_ADDNODE`](./XML_ADDNODE.md)                        | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
+|                                                                                           | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_ADDNODE_BYNAME`](./XML_ADDNODE.md)                 | `string`, `string`, `string`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.md)                  | `int`, `string`(, `int`)                                     | `int`    |
+|                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](./XML_REMOVENODE.md)           | `string`, `string`(, `int`)                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.md)                        | `int`, `string`                                              | `int`    |
+|                                                                                           | `int`, `string`, `string`(, `int`)                           | `int`    |
+|                                                                                           | `ref` `string`, `string`, `string`(, `int`)                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](./XML_REPLACE.md)                 | `string`, `string`, `string`(, `int`)                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE`](./XML_ADDATTRIBUTE.md)              | `int`, `string`, `string`(, `string`, `int`, `int`)          | `int`    |
+|                                                                                           | `ref` `string`, `string`, `string`(, `string`, `int`, `int`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE_BYNAME`](./XML_ADDATTRIBUTE.md)       | `string`, `string`, `string`(, `string`, `int`, `int`)       | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE`](./XML_REMOVEATTRIBUTE.md)        | `int`, `string`(, `int`)                                     | `int`    |
+|                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)                                  | `int`    |
 
 ### MAP（映射数组）相关
 

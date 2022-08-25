@@ -23,7 +23,7 @@
 
     !!! warning "注意"
 
-        生成的 `MAP` 不会自动保存到硬盘文件中，「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        关于生成的 `MAP` 保存进存档文件请参考「[`XML`、`MAP` 保存功能](./README.md#xmlmap)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

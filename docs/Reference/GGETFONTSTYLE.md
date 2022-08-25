@@ -1,8 +1,8 @@
 # GGETFONTSTYLE
 
-| 関数名                                                                 | 引数   | 戻り値 |
-| :--------------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md) | `void` | `void` |
+| 関数名                                                                 | 引数  | 戻り値 |
+| :--------------------------------------------------------------------- | :---- | :----- |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md) | `int` | `int`  |
 
 !!! info "API"
 

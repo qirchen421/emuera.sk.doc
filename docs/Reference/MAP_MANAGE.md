@@ -22,7 +22,7 @@
 
     !!! warning "注意"
 
-        作成した`MAP`は直接にセーブファイルに保存できません。「タイトル画面へ戻る」か[`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA)をすると自動的に削除されます。
+        作成した`MAP`をセーブファイルへ保存するには「[`XML`、`MAP`セーブ機能](./README.md#xmlmap)」に参照してください。「タイトル画面へ戻る」か[`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA)をすると自動的に削除されます。
 
 !!! hint "ヒント"
 

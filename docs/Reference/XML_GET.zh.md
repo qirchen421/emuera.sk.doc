@@ -1,22 +1,30 @@
-# XML_GET
+# XML_GET 系列
 
-| 函数名                                                     | 参数                                   | 返回值 |
-| :--------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md) | `any`, `string`(, `int`, `int`)        | `int`  |
-|                                                            | `any`, `string`, `ref` `string`, `int` | `int`  |
+| 函数名                                                            | 参数                                          | 返回值 |
+| :---------------------------------------------------------------- | :-------------------------------------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)        | `any`, `string`(, `int`, `int`)               | `int`  |
+|                                                                   | `any`, `string`, `ref` `string[]`(, `int`)      | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_GET_BYNAME`](./XML_GET.md) | `string`, `string`(, `int`, `int`)            | `int`  |
+|                                                                   | `string`, `string`, `ref` `string[]`(, `int`) | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
     1. int XML_GET xml, xpath(, doOutput, outputType)
-    2. int XML_GET xml, xpath, ref outputArray, outputType
+    2. int XML_GET xml, xpath, ref outputArray(, outputType)
+    3. int XML_GET_BYNAME xmlName, xpath(, doOutput, outputType)
+    4. int XML_GET_BYNAME xmlName, xpath, ref outputArray(, outputType)
     ```
-    根据 `xpath` 选择的元素节点（详见 [`XPath` 的介绍](https://www.octoparse.jp/blog/xpath-introduction)）在指定的 `XML` 中检索。  
-    如果 `xml` 是字符串，则在内容的 XML 文本中检索节点。  
-    如果 `xml` 是整型数值，则从该 ID 指定的 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 中检索节点；若 `XmlDocument` 不存在，返回 `-1`。
+    根据 `xpath` 选择的元素节点（详见 [`XPath` 的介绍](https://www.runoob.com/xpath/xpath-tutorial.html)）在指定的 `XML` 中检索。
 
-    1. 如果参数 `doOutput` 为 `0` 或直接省略，仅返回匹配到的结果数量；否则将匹配结果赋值给 `RESULTS`。
-    2. 如果参数 `outputArray` 为字符串数组变量，则会将匹配结果赋值给 `outputArray`。
+    对于形式 `1` 和 `2`，如果 `xml` 是字符串，则在内容的 XML 文本中检索节点。如果 `xml` 是整型数值，则在以其字符串转换结果([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))为 ID 而指定的 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 中检索节点；若 `XmlDocument` 不存在，返回 `-1`。
+
+    对于形式 `3` 和 `4`，在以 `xmlName` 为 ID 指定的 `XmlDocument` 中检索节点；若 `XmlDocument` 不存在，返回 `-1`。
+
+    同时，
+
+    - 对于形式`1`和`3`: 如果参数 `doOutput` 为 `0` 或直接省略，仅返回匹配到的结果数量；否则将匹配结果赋值给 `RESULTS`。
+    - 对于形式`2`和`4`: 如果参数 `outputArray` 为字符串数组变量，则会将匹配结果赋值给 `outputArray`。
 
     根据参数 `outputType` 的值决定返回结果的类型：
 
