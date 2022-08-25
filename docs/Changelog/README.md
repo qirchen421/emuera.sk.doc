@@ -70,6 +70,10 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v21"
+
+	* `GETTEXTBOX`,`SETTEXTBOX`追加
+
 === "v20"
 
 	* `DAY`,`TIME`,`MONEY`に`CSV`を適用可能に
