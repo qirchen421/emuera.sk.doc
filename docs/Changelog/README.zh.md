@@ -78,6 +78,10 @@ hide:
 
 ## Emuera.EE
 
+=== "v21"
+
+	* 新增函数：`GETTEXTBOX`,`SETTEXTBOX`
+
 === "v20"
 
 	* `ERD` 读取进一步高速化
