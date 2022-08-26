@@ -9,22 +9,22 @@ hide:
 
 === "v12"
 
-    * 新增「セーブデータを圧縮して保存する」设置项，参见[`相关说明`](../Reference/README.md#_5)。
-    * 新增将 XML、MAP 数据保存进存档的功能，参见[`相关说明`](../Reference/README.md#xmlmap)。
-	* 调整 XML 系列命令的行为，现在使用字符串作为 ID，兼容旧版本，参见[`参考手册`](../Reference/README.md#xml)。
+    * 新增「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」设置项。
+    * 新增将 [XML、MAP 数据保存进存档](../Reference/README.md#xmlmap)的功能。
+	* 调整 [XML 系列命令](../Reference/README.md#xml)的行为，现在使用字符串作为 ID，兼容旧版本。
 
 === "v11"
 
-    * 新增HTML标签属性：添加了`<clearbutton>`标签的`notooltip`属性。
+    * 新增HTML标签属性：添加了 `<clearbutton>` 标签的 [`notooltip`](../Reference/README.md#html_print) 属性。
 
 === "v10"
 
-    * 新增HTML标签：`<clearbutton>`。
-    * 性能提高：修正算法以提高 `XML_GET` 的性能。
+    * 新增HTML标签：[`<clearbutton>`](../Reference/README.md#html_print)。
+    * 性能提高：修正算法以提高 [`XML_GET`](../Reference/XML_GET.md) 的性能。
 
 === "v9"
 
-    * 新增函数：`ENUMFILES`。
+    * 新增函数：[`ENUMFILES`](../Reference/ENUMFILES.md)。
 
 === "v8c"
 
@@ -32,18 +32,18 @@ hide:
 
 === "v8b"
 
-	* 修复关于 `REPLACE` 扩展带来的错误(该错误会导致eraTW的AA显示发生错误)。
-	* 将 `HTML_SUBSTRING` 的返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
+	* 修复关于 [`REPLACE` 扩展](../Reference/README.md#replace)带来的错误(该错误会导致eraTW的AA显示发生错误)。
+	* 将 [`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md) 的返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
 
 === "v8"
 
-    * 扩展 `XML_GET` / `REPLACE` 相关功能。
-    * 修复关于 `XML_REMOVEATTRIBUTE` / `VARSETEX` 的错误。
+    * 扩展 [`XML_GET`](../Reference/XML_GET.md) / [`REPLACE`](../Reference/README.md#replace) 相关功能。
+    * 修复关于 [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md) / [`VARSETEX`](../Reference/VARSETEX.md) 的错误。
 
 === "v7"
 
-    * 新增 `HTML_STRINGLEN` 功能。
-    * 新增 `REGEXPMATCH` 功能。
+    * 扩展 [`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.md) 功能。
+    * 扩展 [`REGEXPMATCH`](../Reference/REGEXPMATCH.md) 功能。
 
 === "v6"
 
@@ -51,25 +51,25 @@ hide:
 
 === "v5"
 
-    * 修订关于 `XML_SET` / `XML_GET` 的说明。
-    * 补充关于 `XML_TOSTR` 的说明。
-    * 新增函数：`XML_ADDNODE` / `XML_REMOVENODE` / `XML_ADDATTRIBUTE` / `XML_REMOVEATTRIBUTE` / `XML_REPLACE`。
+    * 修订关于 [`XML_SET`](../Reference/XML_SET.md) / [`XML_GET`](../Reference/XML_SET.md) 的说明。
+    * 补充关于 [`XML_TOSTR`](../Reference/XML_TOSTR.md) 的说明。
+    * 新增函数：[`XML_ADDNODE`](../Reference/XML_ADDNODE.md) / [`XML_REMOVENODE`](../Reference/XML_REMOVENODE.md) / [`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.md) / [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md) / [`XML_REPLACE`](../Reference/XML_REPLACE.md)。
 
 === "v4"
 
-    * 修复关于 `MAP_TOXML` 的错误。
-    * 新增函数：`MAP_CLEAR` / `MAP_SIZE` / `MAP_GETKEYS` / `XML_TOSTR`。
-    * 修复关于 `INPUT` 系列扩展命令的错误。
+    * 修复关于 [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md) 的错误。
+    * 新增函数：[`MAP_CLEAR`](../Reference/MAP_OPERATION.md) / [`MAP_SIZE`](../Reference/MAP_OPERATION.md) / [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
+    * 修复关于 [`INPUT` 系列命令扩展](../Reference/README.md#input)的错误。
 
 === "v3"
 
-    * 新增函数：`EXISTFILE` / `MAP_CREATE` / `MAP_EXIST` / `MAP_RELEASE` / `MAP_GET` / `MAP_HAS` / `MAP_SET` / `MAP_REMOVE` / `MAP_TOXML` / `MAP_FROMXML`。
+    * 新增函数：[`EXISTFILE`](../Reference/EXISTFILE.md) / [`MAP_CREATE`](../Reference/MAP_MANAGE.md) / [`MAP_EXIST`](../Reference/MAP_MANAGE.md) / [`MAP_RELEASE`](../Reference/MAP_MANAGE.md) / [`MAP_GET`](../Reference/MAP_OPERATION.md) / [`MAP_HAS`](../Reference/MAP_OPERATION.md) / [`MAP_SET`](../Reference/MAP_OPERATION.md) / [`MAP_REMOVE`](../Reference/MAP_OPERATION.md) / [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md) / [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.md)。
 
 === "v2"
 
-    * 删除 `FUNCEXIST` 函数（请使用 EE 版的 `EXISTFUNCTION` 函数作为替代）。
-    * 修改函数名：`VAREXIST` → `EXISTVAR`（为了与 `EXISTFUNCTION` 的命名格式保持一致）。
-    * 新增函数：`XML_DOCUMENT` / `XML_RELEASE` / `XML_SET` / `XML_EXIST` / `XML_TOSTR`。
+    * 删除 `FUNCEXIST` 函数（请使用 EE 版的 [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md) 函数作为替代）。
+    * 修改函数名：`VAREXIST` → [`EXISTVAR`](../Reference/EXISTVAR.md)（为了与 `EXISTFUNCTION` 的命名格式保持一致）。
+    * 新增函数：[`XML_DOCUMENT`](../Reference/XML_MANAGE.md) / [`XML_RELEASE`](../Reference/XML_MANAGE.md) / [`XML_SET`](../Reference/XML_SET.md) / [`XML_EXIST`](../Reference/XML_MANAGE.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
     * `XML_GET` 函数的第 1 个参数允许使用整型（整数类型）。
 
 === "v1"
@@ -80,32 +80,32 @@ hide:
 
 === "v21"
 
-	* 新增函数：`GETTEXTBOX`,`SETTEXTBOX`
+	* 新增函数：[`GETTEXTBOX`](../Reference/GETTEXTBOX.md) / [`SETTEXTBOX`](../Reference/SETTEXTBOX.md)。
 
 === "v20"
 
-	* `ERD` 读取进一步高速化
-	* 可以用`CSV`来配置`DAY`,`TIME`,`MONEY`数组了
+	* `ERD` 读取进一步高速化。
+	* 可以[用 `CSV` 来配置 `DAY`, `TIME`, `MONEY` 数组](../Reference/README.md#csv-daytimemoney)了。
 
 === "v19"
 
-	* `ERD` 读取高速化
-	* 使 `_Rename.csv` 在调试控制台生效
+	* `ERD` 读取高速化。
+	* 使 `_Rename.csv` 在调试控制台生效。
 
 === "v18"
 
-	* `INPUTMOUSEKEY`现在可以处理以字符串为索引的按钮
-	* `VariableSize.csv`现在可以禁用`COUNT`变量
-	* 按键宏文件现在使用`UTF-8`保存
+	* `INPUTMOUSEKEY` 现在可以处理以字符串为索引的按钮。
+	* `VariableSize.csv` 现在可以禁用 `COUNT` 变量。
+	* 按键宏文件现在使用 `UTF-8` 保存。
 
 === "v17"
 
-	* 增加了 ERD 功能的开启/关闭设置项
+	* 增加了 ERD 功能的开启/关闭设置项。
 
 === "v16"
 
-	* ERD 功能修复（无法根据CSV变量下标获取元素值的问题）
-	* 从 Emuera-Anchor 移植了键盘操作加强的功能
+	* ERD 功能修复（无法根据CSV变量下标获取元素值的问题）。
+	* 从 Emuera-Anchor 移植了键盘操作加强的功能。
 
 === "v15"
 

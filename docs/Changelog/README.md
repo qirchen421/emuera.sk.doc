@@ -8,22 +8,22 @@ hide:
 
 === "v12"
 
-    * 機能拡張：「セーブデータを圧縮して保存する」コンフィグ機能追加，[`説明文`](../Reference/README.md#_5)に参照。
-    * 機能拡張：XML、MAPがセーブデータの中で保存可能，[`説明文`](../Reference/README.md#xmlmap)に参照。
-	* 仕様変更：XML系の命令の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり，[`リファレンス`](../Reference/README.md#xml)に参照。
+    * 機能拡張：「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」コンフィグ機能追加。
+    * 機能拡張：[XML、MAPがセーブデータの中で保存](../Reference/README.md#xmlmap)可能。
+	* 仕様変更：[XML系の命令](../Reference/README.md#xml)の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり。
 
 === "v11"
 
-    * HTMLタグ属性追加：`<clearbutton>`に`notooltip`属性追加。
+    * HTMLタグ属性追加：`<clearbutton>`に[`notooltip`](../Reference/README.md#html_print)属性追加。
 
 === "v10"
 
-    * HTMLタグ追加：`<clearbutton>`。
-    * 性能向上：アルゴリズム修正による`XML_GET`の性能向上。
+    * HTMLタグ追加：[`<clearbutton>`](../Reference/README.md#html_print)。
+    * 性能向上：アルゴリズム修正による[`XML_GET`](../Reference/XML_GET.md)の性能向上。
 
 === "v9"
 
-    * 関数追加：`ENUMFILES`。
+    * 関数追加：[`ENUMFILES`](../Reference/ENUMFILES.md)。
 
 === "v8c"
 
@@ -31,18 +31,18 @@ hide:
 
 === "v8b"
 
-	* バグ修正：`REPLACE`拡張による不具合の修正(eraTWのAAマップ表示エラーの原因になる)。
-	* 仕様変更：`HTML_SUBSTRING`の戻り値を整数型(常に`1`)から文字列型(`RESULTS:0`と同じ)に変更。
+	* バグ修正：[`REPLACE`拡張](../Reference/README.md#replace)による不具合の修正(eraTWのAAマップ表示エラーの原因になる)。
+	* 仕様変更：[`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md)(常に`1`)から文字列型(`RESULTS:0`と同じ)に変更。
 
 === "v8"
 
-    * 機能拡張：`XML_GET`, `REPLACE`
-    * バグ修正：`XML_REMOVEATTRIBUTE`, `VARSETEX`
+    * 機能拡張：[`XML_GET`](../Reference/XML_GET.md), [`REPLACE`](../Reference/README.md#replace)
+    * バグ修正：[`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md), [`VARSETEX`](../Reference/VARSETEX.md)
   
 === "v7"
 
-    * `HTML_STRINGLEN`機能拡張
-    * `REGEXPMATCH`機能拡張
+    * [`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.md)機能拡張
+    * [`REGEXPMATCH`](../Reference/REGEXPMATCH.md)機能拡張
 
 === "v6"
 
@@ -50,25 +50,25 @@ hide:
 
 === "v5"
 
-    * `XML_SET`, `XML_GET`の説明文の修正。
-    * `XML_TOSTR`の説明文追加。
-    * 関数追加：`XML_ADDNODE`, `XML_REMOVENODE`, `XML_ADDATTRIBUTE`, `XML_REMOVEATTRIBUTE`, `XML_REPLACE`。
+    * [`XML_SET`](../Reference/XML_SET.md), [`XML_GET`](../Reference/XML_SET.md)の説明文の修正。
+    * [`XML_TOSTR`](../Reference/XML_TOSTR.md)の説明文追加。
+    * 関数追加：[`XML_ADDNODE`](../Reference/XML_ADDNODE.md), [`XML_REMOVENODE`](../Reference/XML_REMOVENODE.md), [`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.md), [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md), [`XML_REPLACE`](../Reference/XML_REPLACE.md)。
 
 === "v4"
 
-    * `MAP_TOXML`バグ修正。
-    * 関数追加：`MAP_CLEAR`, `MAP_SIZE`, `MAP_GETKEYS`, `XML_TOSTR`。
-    * `INPUT`系拡張機能の修正。
+    * [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md)バグ修正。
+    * 関数追加：[`MAP_CLEAR`](../Reference/MAP_OPERATION.md), [`MAP_SIZE`](../Reference/MAP_OPERATION.md), [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md), [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
+    * [`INPUT`系拡張](../Reference/README.md#input)機能の修正。
 
 === "v3"
 
-    * 関数追加：`EXISTFILE`, `MAP_CREATE`, `MAP_EXIST`, `MAP_RELEASE`, `MAP_GET`, `MAP_HAS`, `MAP_SET`, `MAP_REMOVE`, `MAP_TOXML`, `MAP_FROMXML`。
+    * 関数追加：[`EXISTFILE`](../Reference/EXISTFILE.md), [`MAP_CREATE`](../Reference/MAP_MANAGE.md), [`MAP_EXIST`](../Reference/MAP_MANAGE.md), [`MAP_RELEASE`](../Reference/MAP_MANAGE.md), [`MAP_GET`](../Reference/MAP_OPERATION.md), [`MAP_HAS`](../Reference/MAP_OPERATION.md), [`MAP_SET`](../Reference/MAP_OPERATION.md), [`MAP_REMOVE`](../Reference/MAP_OPERATION.md), [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md), [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.md)。
 
 === "v2"
     
-    * `FUNCEXIST`を削除しました(EE版の`EXISTFUNCTION`を使ってください)
-    * 関数名変更：`VAREXIST`→`EXISTVAR`(`EXISTFUNCTION`と一致するため)
-    * 関数追加：`XML_DOCUMENT`, `XML_RELEASE`, `XML_SET`, `XML_EXIST`, `XML_TOSTR`。
+    * `FUNCEXIST`を削除しました(EE版の[`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md)を使ってください)
+    * 関数名変更：`VAREXIST`→[`EXISTVAR`](../Reference/EXISTVAR.md)(`EXISTFUNCTION`と一致するため)
+    * 関数追加：[`XML_DOCUMENT`](../Reference/XML_MANAGE.md), [`XML_RELEASE`](../Reference/XML_MANAGE.md), [`XML_SET`](../Reference/XML_SET.md), [`XML_EXIST`](../Reference/XML_MANAGE.md), [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
     * `XML_GET` 第1引数が整数型になれるようにしまた。
 
 === "v1"
@@ -78,12 +78,12 @@ hide:
 ## Emuera.EE
 === "v21"
 
-	* `GETTEXTBOX`,`SETTEXTBOX`追加
+	* [`GETTEXTBOX`](../Reference/GETTEXTBOX.md), [`SETTEXTBOX`](../Reference/SETTEXTBOX.md)追加
 
 === "v20"
 
 	* `ERD`読み込みの更に高速化
-	* `DAY`,`TIME`,`MONEY`に`CSV`を適用可能に
+	* [`DAY`,`TIME`,`MONEY`に`CSV`を適用可能に](../Reference/README.md#daytimemoneycsv)
 
 === "v19"
 
