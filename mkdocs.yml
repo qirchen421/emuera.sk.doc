@@ -88,6 +88,8 @@ nav:
           - Reference/UPDATECHECK.md
           - Reference/GETMEMORYUSAGE.md
           - Reference/CLEARMEMORY.md
+          - Reference/GETTEXTBOX.md
+          - Reference/SETTEXTBOX.md
 
   - 変更ログ: Changelog/README.md
 plugins:

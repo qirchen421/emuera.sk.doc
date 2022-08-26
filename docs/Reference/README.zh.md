@@ -320,10 +320,12 @@
 
 ### 其他
 
-| 函数名                                                                   | 参数                        | 返回值 |
-| :----------------------------------------------------------------------- | :-------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)           | `string`                    | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMFILES`](./ENUMFILES.md)           | `string`(, `string`, `int`) | `int`  |
-| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)       | 无                          | 无     |
-| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md) | 无                          | `int`  |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)       | 无                          | `int`  |
+| 函数名                                                                   | 参数                        | 返回值   |
+| :----------------------------------------------------------------------- | :-------------------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)           | `string`                    | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMFILES`](./ENUMFILES.md)           | `string`(, `string`, `int`) | `int`    |
+| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)       | 无                          | 无       |
+| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md) | 无                          | `int`    |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)       | 无                          | `int`    |
+| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./GETTEXTBOX.md)         | 无                          | `string` |
+| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](./SETTEXTBOX.md)         | 无                          | `1`      |
