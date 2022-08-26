@@ -54,7 +54,7 @@
     开启压缩功能的存档不兼容旧版本及本家版的 Emuera.exe。
 ## 常量 / 变量
 
-### ![](../assets/images/IconEE.webp)支持使用 `CSV` 文件 / `ERD` 文件来调用 `ERH` 文件中定义的数组变量
+### ![](../assets/images/IconEE.webp)使用 `CSV` 文件 / `ERD` 文件来调用 `ERH` 文件中定义的数组变量
 
 !!! summary ""
 
@@ -62,17 +62,17 @@
     `./CSV/` 文件夹下为 `变量名.CSV`，`./ERB/` 文件夹下为 `变量名.ERD`，调用语法仍与 CSV 变量相同。
     如果存在 2 个以上的同名变量，启动时会抛出错位并终止运行。
 
-### ![](../assets/images/IconEE.webp)可在 `VariableSize.csv` 中设置禁用 `COUNT` 变量
+### ![](../assets/images/IconEE.webp)在 `VariableSize.csv` 中设置禁用 `COUNT` 变量
 !!! summary ""
 
     通过加入 `COUNT,-1` 行来禁用 `COUNT` 。若如此做，`REPEAT` 所在的行会在启动时弹出经过、并在运行时报错终止。
 
-### ![](../assets/images/IconEE.webp)可以通过 CSV 来配置 `DAY`，`TIME`，`MONEY`
+### ![](../assets/images/IconEE.webp)通过 CSV 来配置 `DAY`，`TIME`，`MONEY`
 !!! summary ""
 
     可用 `DAY.csv`，`TIME.csv`，`MONEY.csv` 来像其它 CSV 一样配置数值与名称转换，并应用于 `DAYNAME`，`TIMENAME`，`MONEYNAME` 变量
 
-### ![](../assets/images/IconEM.webp)`XML`、`MAP` 数据可以保存进存档文件
+### ![](../assets/images/IconEM.webp)将`XML`、`MAP` 数据保存进存档文件
 !!! summary ""
 
 	可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](./README.md#xml)、[`MAP`](./README.md#map) 的 ID。
