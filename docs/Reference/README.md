@@ -237,6 +237,11 @@
 | ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`)    | `1`      |
 |                                                                          | `ref` `int`, `ref` `string[]`(, `int`) | `1`      |
 
+### 入力・ウェイト
+| 関数名                                                                   | 引数                                   | 戻り値   |
+| :----------------------------------------------------------------------- | :------------------------------------- | :------- |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md)             | `VOID`                                 | `int`,`string`    |
+
 ### デバッグ補助・システムフロー制御
 
 | 関数名                                                                                   | 引数         |
