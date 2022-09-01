@@ -225,7 +225,7 @@
     const PlaceHolderContains = [LeftRight, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, OperatorExceptMod, PunctuationExceptRB]
     StrPlaceHolder.contains = PlaceHolderContains;
     IntPlaceHolder.contains = PlaceHolderContains;
-    AtPlaceHolder.contains = PlaceHolderContains;
+    AtPlaceHolder.contains = [LeftRight, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, Operator, Punctuation];
     const ErhRoot = [QuotedComment, SpecialMacro, SpecialComment, Comment, Descriptor, Keyword, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
     const ErbRoot = [QuotedComment, SpecialMacro, SpecialComment, Comment, FuncDefine, Descriptor, FormEolCommand, FormFuncCommand, ReturnCommand, PlainTextPrint, FuncCall, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
     const ErbAPIRoot = [BuildIn, ApiType, Identifier, Operator, Punctuation, Number];
