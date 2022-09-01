@@ -6,6 +6,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v13"
+
+    * 機能拡張：HTML画像系パラメータ[書式拡張](../Reference/README.md#html_print)。
+    * 機能拡張：[`PRINT_IMG`引数追加](../Reference/README.md#html_printprint)。
+
 === "v12"
 
     * 機能拡張：「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」コンフィグ機能追加。
@@ -76,6 +81,10 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v22"
+
+    * 仕様変更：[ERD機能](../Reference/README.md#erhcsverd)は一つの変数名に対し複数の定義ファイルの中に、同じ識別子が定義されている場合だけ、起動時にエラー吐いて終了する。違う識別子を同じ整数に置き換え可能になる。
+
 === "v21"
 
 	* [`GETTEXTBOX`](../Reference/GETTEXTBOX.md), [`SETTEXTBOX`](../Reference/SETTEXTBOX.md)追加

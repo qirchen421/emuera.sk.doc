@@ -59,8 +59,10 @@
 !!! summary ""
 
     读取方式类似在 ERH 文件中定义变量，并且可以像现在的 CSV 用法那样给数组命名。
+    
     `./CSV/` 文件夹下为 `变量名.CSV`，`./ERB/` 文件夹下为 `变量名.ERD`，调用语法仍与 CSV 变量相同。
-    如果存在 2 个以上的同名变量，启动时会抛出错位并终止运行。
+    
+    即使同一个变量存在多个设置文件，只有在定义了相同标识符的情况下，启动时会抛出错位并终止运行。不同标识符可以替换为同一个整数。
 
 ### ![](../assets/images/IconEE.webp)在 `VariableSize.csv` 中设置禁用 `COUNT` 变量
 !!! summary ""
@@ -110,18 +112,41 @@
     - `HTML_PRINT` 的 `<space>` 标签可以给 `param` 属性指定负数值。
     - `HTML_PRINT` 添加 `<clearbutton>` 标签。`<clearbutton>` 标签包围的内容不会被按钮化（`title`、`pos`属性的功能仍然有效）
         - 属性`notooltip`为`true`时，同时将按钮的`title`属性无效化
-
+    - 在设置 `HTML_PRINT` 的 `<img>`、`<shape>` 的标签属性 `width`、`height`、`ypos`、`param` 时，在数值后添加 `px`（不区分大小写）则使数值被识别为像素数而不是字体大小的百分比。
 !!! example "示例代码"
 
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
 
         HTML_PRINT "文<shape type='space' param='-100'>字"
-        HTML_PRINT "<clearbutton><button value='1' title='提示文字'>[1] 确定</button></clearbutton>"
+        HTML_PRINT "<clearbutton><button value='1' title='ツールチップ1'>[1] 確定</button></clearbutton>"
+        HTML_PRINT "<clearbutton notooltip='true'><button value='2' title='ツールチップ2'>[2] 戻る</button></clearbutton>"
+        HTML_PRINT "<shape type='rect' param='0,0,200px,100'>"
 
         ONEINPUT
     ```
 
+### ![](../assets/images/IconEM.webp)与 `HTML_PRINT` 有关的 `PRINT` 系列命令的更改
+
+!!! summary ""
+    - 为 `PRINT_IMG` 添加4个参数（可省略）
+    - 可在 `PRINT_IMG`, `PRINT_RECT`, `PRINT_SPACE` 的整型参数后添加关键字 `px`（不区分大小写）
+!!! info "API"
+
+    ``` { #language-erbapi }
+    PRINT_IMG src(, srcb, width, height, ypos)
+    ```
+    与 `HTML_PRINT` 命令的 `<img>` 标签相同
+!!! example "示例代码"
+
+    ``` { #language-erb title="MAIN.ERB" }
+    @SYSTEM_TITLE
+    
+        PRINT_IMG "Normal", "Hover", (500+A) px, 100
+        PRINT_SPACE 200 px
+
+        ONEINPUT
+    ```
 ### ![](../assets/images/IconEM.webp)`INPUT` 系列命令支持接收鼠标点击事件
 
 !!! summary ""

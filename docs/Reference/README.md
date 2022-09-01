@@ -55,7 +55,8 @@
 !!! summary ""
 
     ERHで定義した変数名を準拠にファイルを読み込み、既存のCSV変数と同じように配列に名前を付けることができる。現時点では一次元配列変数にのみ対応
-    CSVフォルダ内で使えるものは従来どおり「変数名.csv」、ERB内で使えるものは「変数名.ERD」ファイルとなる。書式はCSV変数のファイルと同じ。これらが2つ以上存在する場合は起動時にエラー吐いて終了する
+
+    CSVフォルダ内で使えるものは従来どおり「変数名.csv」、ERB内で使えるものは「変数名.ERD」ファイルとなる。書式はCSV変数のファイルと同じ。これらが2つ以上存在しても、同じ識別子が定義されている場合だけ起動時にエラー吐いて終了する。違う識別子を同じ整数に置き換え可能
 
 ### ![](../assets/images/IconEE.webp)`VariableSize.csv`で`COUNT`を使用禁止変数に設定できるように
 !!! summary ""
@@ -103,19 +104,42 @@
     - `HTML_PRINT`の`<space>`タグで`param`に負数を指定できます
     - `HTML_PRINT`の`<clearbutton>`タグの追加。`<clearbutton>`は囲った部分のボタンかを無効とする（`title`、`pos`属性の機能は残る）
         - 属性`notooltip`が`true`の場合、ボタン`title`属性も無効とすいる
+    - `HTML_PRINT`の`<img>`、`<shape>`タグの属性`width`、`height`、`ypos`、`param`を設定する時、数値の後に`px`（大小文字不問）を追加すると，数値をフォントサイズとの百分率で解釈の代わりに，ピクセル数とする。
 
 !!! example "例"
 
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
     
-    HTML_PRINT "文<shape type='space' param='-100'>字"
-    HTML_PRINT "<clearbutton><button value='1' title='ツールチップ1'>[1] 確定</button></clearbutton>"
-    HTML_PRINT "<clearbutton notooltip='true'><button value='2' title='ツールチップ2'>[2] 戻る</button></clearbutton>"
+        HTML_PRINT "文<shape type='space' param='-100'>字"
+        HTML_PRINT "<clearbutton><button value='1' title='ツールチップ1'>[1] 確定</button></clearbutton>"
+        HTML_PRINT "<clearbutton notooltip='true'><button value='2' title='ツールチップ2'>[2] 戻る</button></clearbutton>"
+        HTML_PRINT "<shape type='rect' param='0,0,200px,100'>"
 
-    ONEINPUT
+        ONEINPUT
     ```
 
+### ![](../assets/images/IconEM.webp)`HTML_PRINT`に関する`PRINT`系命令の変更
+
+!!! summary ""
+    - `PRINT_IMG`に引数4つをついかした（省略可）
+    - `PRINT_IMG`, `PRINT_RECT`, `PRINT_SPACE`の整数型引数の後にも`px`（大小文字不問）を追加可能になる
+!!! info "API"
+
+    ``` { #language-erbapi }
+    PRINT_IMG src(, srcb, width, height, ypos)
+    ```
+    HTML_PRINT命令の`<img>`タグに相当する
+!!! example "例"
+
+    ``` { #language-erb title="MAIN.ERB" }
+    @SYSTEM_TITLE
+    
+        PRINT_IMG "Normal", "Hover", (500+A) px, 100
+        PRINT_SPACE 200 px
+
+        ONEINPUT
+    ```
 ### ![](../assets/images/IconEM.webp)`INPUT`系でマウスクリックを受け付けるように
 !!! summary ""
 

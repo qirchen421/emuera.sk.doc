@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v13"
+
+    * 扩展了 HTML 图像相关参数的[输入格式](../Reference/README.md#html_print)。
+    * 新增了 [`PRINT_IMG` 的参数](../Reference/README.md#html_printprint)。
+
 === "v12"
 
     * 新增「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」设置项。
@@ -77,6 +82,9 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+=== "v22"
+
+    * [ERD 功能](../Reference/README.md#csv-erd-erh)现在对于同一个变量的多个定义文件，只有其中定义了相同标识符时会报错，不同标识符现在可以替换为同一个整数。
 
 === "v21"
 
