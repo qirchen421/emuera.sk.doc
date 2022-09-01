@@ -152,6 +152,12 @@
         end: /\}/,
         endScope: "doctag",
     };
+    const AtPlaceHolder = {
+        begin: /\\@/,
+        beginScope: "doctag",
+        end: /\\@/,
+        endScope: "doctag",
+    };
     const AtFormStringChar = {
         match: /[^\\"{%]+/,
     }
@@ -159,7 +165,7 @@
         scope: 'string',
         begin: /@"/,
         end: /"/,
-        contains: [StrPlaceHolder, IntPlaceHolder, EscapeChar, AtFormStringChar],
+        contains: [AtPlaceHolder, StrPlaceHolder, IntPlaceHolder, EscapeChar, AtFormStringChar],
     };
     const FormStringFuncNameChar = {
         match: /[^\\{%\n,(]+/,
@@ -168,7 +174,7 @@
         scope: 'title.function.invoke',
         begin: /./,
         endsParent: true,
-        contains: [StrPlaceHolder, IntPlaceHolder, EscapeChar, FormStringFuncNameChar],
+        contains: [AtPlaceHolder, StrPlaceHolder, IntPlaceHolder, EscapeChar, FormStringFuncNameChar],
     };
     const FormStringEolChar = {
         match: /[^\\{%\n]+/,
@@ -178,7 +184,7 @@
         begin: /./,
         end: /$/,
         excludeEnd: true,
-        contains: [StrPlaceHolder, IntPlaceHolder, EscapeChar, FormStringEolChar],
+        contains: [AtPlaceHolder, StrPlaceHolder, IntPlaceHolder, EscapeChar, FormStringEolChar],
     };
     const FormEolCommand = {
         begin: /PRINTFORMS?(K|D)?(L|W)?\b|PRINTSINGLEFORMS?(K|D)?\b|PRINTFORM(C|LC)?(K|D)?\b|PRINTPLAINFORM\b|DRAWLINEFORM\b|STRLENFORM\b|STRLENFORMU\b|ENCODETOUNI\b|THROW\b|GOTOFORM\b|TRYGOTOFORM\b|DEBUGPRINTFORM\b|DEBUGPRINTFORML\b|REUSELASTLINE\b/,
@@ -219,6 +225,7 @@
     const PlaceHolderContains = [LeftRight, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, OperatorExceptMod, PunctuationExceptRB]
     StrPlaceHolder.contains = PlaceHolderContains;
     IntPlaceHolder.contains = PlaceHolderContains;
+    AtPlaceHolder.contains = PlaceHolderContains;
     const ErhRoot = [QuotedComment, SpecialMacro, SpecialComment, Comment, Descriptor, Keyword, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
     const ErbRoot = [QuotedComment, SpecialMacro, SpecialComment, Comment, FuncDefine, Descriptor, FormEolCommand, FormFuncCommand, ReturnCommand, PlainTextPrint, FuncCall, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
     const ErbAPIRoot = [BuildIn, ApiType, Identifier, Operator, Punctuation, Number];
