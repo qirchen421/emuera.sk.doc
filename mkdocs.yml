@@ -43,6 +43,8 @@ nav:
           - Reference/GETSETVAR.md
           - Reference/VARSETEX.md
           - Reference/ARRAYMSORTEX.md
+      - 入力・ウェイト:
+          - Reference/INPUTANY.md
       - デバッグ補助・システムフロー制御:
           - Reference/QUIT_AND_RESTART.md
           - Reference/FORCE_QUIT.md
@@ -129,6 +131,7 @@ plugins:
           MAP（連想配列）系: MAP（映射数组）相关
           その他: 其他
           変更ログ: 更新日志
+          入力・ウェイト: 输入 / 等待
         en:
           ホーム: Home
           リファレンス: Reference

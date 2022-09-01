@@ -85,6 +85,7 @@ hide:
 === "v22"
 
     * [ERD 功能](../Reference/README.md#csv-erd-erh)现在对于同一个变量的多个定义文件，只有其中定义了相同标识符时会报错，不同标识符现在可以替换为同一个整数。
+    * 新增命令 [`INPUTANY`](../Reference/INPUTANY.md)
 
 === "v21"
 

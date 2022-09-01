@@ -252,6 +252,12 @@
 | ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`)    | `1`      |
 |                                                                          | `ref` `int`, `ref` `string[]`(, `int`) | `1`      |
 
+### 输入 / 等待
+
+| 函数名                                                       | 参数 | 返回值           |
+| :----------------------------------------------------------- | :--- | :--------------- |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | 无   | `int` / `string` |
+
 ### 调试辅助 / 系统流程控制
 
 | 函数名                                                                                   | 参数         |
