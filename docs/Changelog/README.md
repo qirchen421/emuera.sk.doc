@@ -6,6 +6,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v13fix"
+
+    * バグ修正：機能拡張による`PRINT_IMG`と`<img>`タグの画像表示の不具合を修正。
+
 === "v13"
 
     * 機能拡張：HTML画像系パラメータ[書式拡張](../Reference/README.md#html_print)。

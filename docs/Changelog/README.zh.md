@@ -7,6 +7,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v13fix"
+
+    * 修复关于功能扩展导致的用 `PRINT_IMG` 与 `<img>` 标签显示图像报错的问题。
+
 === "v13"
 
     * 扩展了 HTML 图像相关参数的[输入格式](../Reference/README.md#html_print)。
