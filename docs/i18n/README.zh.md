@@ -26,8 +26,8 @@ hide:
 | 语言                                                                                                                | 翻译文件                                       | 完成度  |
 | :------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------- | :------ |
 | 日本語                                                                                                              | (默认语言)                                     | 100.00% |
-| [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.en.xml](../assets/files/emuera.en.xml) | 100.00% |
-| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) |                                                | 27.93%  |
+| [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.en.xml](../assets/files/emuera.eng.xml) | 100.00% |
+| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zh.xml](../assets/files/emuera.zhs.xml) | 31.80%  |
 
 ## 配置文件
 
