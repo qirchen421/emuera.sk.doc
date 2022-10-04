@@ -23,11 +23,11 @@ hide:
     Emueraの表示言語:English
     ```
 
-| 言語                                                                                                                | 翻訳ファイル                                   | 完成度  |
-| :------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------- | :------ |
-| 日本語                                                                                                              | (デフォルト言語)                               | 100.00% |
-| [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.en.xml](../assets/files/emuera.eng.xml) | 100.00% |
-| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zh.xml](../assets/files/emuera.zhs.xml) | 31.80%  |
+| 言語                                                                                                                | 翻訳ファイル                                     | 完成度  |
+| :------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------- | :------ |
+| 日本語                                                                                                              | (デフォルト言語)                                 | 100.00% |
+| [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.eng.xml](../assets/files/emuera.eng.xml) | 100.00% |
+| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 72.51%% |
 
 ## コンフィグ
 
@@ -36,6 +36,10 @@ hide:
     コンフィグ項目は日本語、英語同時に対応し、コンフィグファイルは`UTF-8-BOM`で保存するようにしました。
 
     `ヘルプ`→`設定`→`環境`→`CONFIGファイルの内容を英語で保存する`を選択した場合，コンフィグ項目が英語で出力します。もしくはコンフィグファイル(*.config)に`CONFIGファイルの内容を英語で保存する`/`Output English items in the config file`項目で設定できます。
+
+    なお、"_Replace.csv"の項目も英語で設定できるようになりました。
+
+### emuera.config
 
 | 日本語                                                | 英語                                                       | デフォルト      |
 | :---------------------------------------------------- | :--------------------------------------------------------- | :-------------- |
@@ -113,3 +117,36 @@ hide:
 | CONFIGファイルの内容を英語で保存する                  | Output English items in the config file                    | `NO`            |
 | Emueraの表示言語                                      | Emuera interface language                                  | (空文字列)      |
 | Emueraのアイコンのパス                                | Path to a custom window icon                               | (空文字列)      |
+
+### debug.config
+
+| 日本語                               | 英語                                 | デフォルト |
+| :----------------------------------- | :----------------------------------- | :--------- |
+| 起動時にデバッグウインドウを表示する | Show debug window on startup         | `YES`      |
+| デバッグウインドウを最前面に表示する | Debug window always on top           | `YES`      |
+| デバッグウィンドウ幅                 | Debug window width                   | `400`      |
+| デバッグウィンドウ高さ               | Debug window height                  | `300`      |
+| デバッグウィンドウ位置を指定する     | Fixed debug window starting position | `NO`       |
+| デバッグウィンドウ位置X              | Debug window X position              | `0`        |
+| デバッグウィンドウ位置Y              | Debug window Y position              | `0`        |
+
+### _replace.csv
+
+| 日本語            | 英語                     |
+| :---------------- | :----------------------- |
+| お金の単位        | Currency symbol          |
+| 単位の位置        | Currency symbol position |
+| 起動時簡略表示    | Loading message          |
+| 販売アイテム数    | Max shop item storage    |
+| DRAWLINE文字      | DRAWLINE character       |
+| BAR文字1          | BAR character 1          |
+| BAR文字2          | BAR character 2          |
+| システムメニュー0 | System menu 0            |
+| システムメニュー1 | System menu 1            |
+| COM_ABLE初期値    | Default COM_ABLE         |
+| 汚れの初期値      | Default Stain            |
+| 時間切れ表示      | Time up message          |
+| EXPLVの初期値     | Default EXPLV            |
+| PALAMLVの初期値   | Default PALAMLV          |
+| PBANDの初期値     | Default PBAND            |
+| RELATIONの初期値  | Default RELATION         |

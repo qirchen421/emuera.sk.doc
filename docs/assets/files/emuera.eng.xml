@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <lang>
     <name>English</name>
+    <tr id="UI.MainWindow.FileFilter"><![CDATA[ERB file]]></tr>
     <tr id="UI.MainWindow.File"><![CDATA[File(&F)]]></tr>
     <tr id="UI.MainWindow.File.Restart"><![CDATA[Restart(&R)]]></tr>
     <tr id="UI.MainWindow.File.SaveLog"><![CDATA[Save log...(&S)]]></tr>
@@ -45,6 +46,7 @@
     <tr id="UI.ConfigDialog.Environment.UseKeyMacro"><![CDATA[Use keyboard macros]]></tr>
     <tr id="UI.ConfigDialog.Environment.AutoSave"><![CDATA[Make autosave]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseSaveFolder"><![CDATA[Use sav folder for save data]]></tr>
+    <tr id="UI.ConfigDialog.Environment.EnglishConfigOutput"><![CDATA[Output English items in the config file]]></tr>
     <tr id="UI.ConfigDialog.Environment.MaxLog"><![CDATA[Lines in history log]]></tr>
     <tr id="UI.ConfigDialog.Environment.InfiniteLoopAlertTime"><![CDATA[Milliseconds for infinite loop warn]]></tr>
     <tr id="UI.ConfigDialog.Environment.SaveDataPerPage"><![CDATA[Number of used save slots]]></tr>
