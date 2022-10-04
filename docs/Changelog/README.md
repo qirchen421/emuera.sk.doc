@@ -6,6 +6,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v14"
+
+    * 機能拡張：[`GCLEAR`](../Reference/README.md#gclear)で指定区域を指定した色で置き換えるように。
+    * 機能拡張：[Emueraアイコン指定機能](../Reference/README.md#emuera)。
+
 === "v13fix"
 
     * バグ修正：機能拡張による`PRINT_IMG`と`<img>`タグの画像表示の不具合を修正。

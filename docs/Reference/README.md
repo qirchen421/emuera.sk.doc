@@ -49,6 +49,15 @@
 
     圧縮機能オンしたセーブデータは古いバージョン、本家版のEmuera.exeとの互換性がありません
 
+### ![](../assets/images/IconEM.webp)Emueraアイコン指定機能
+!!! summary ""
+
+    `emuera.config`のコンフィグ項目で設定可能です
+
+    コンフィグ項目`Emueraのアイコンのパス`に画像のパスを入力してください。パスは`Emuera.exe`を相対パスで指定(`..`は無効)。
+
+    変化するのはタイトルバーとタスクバーのアイコンだけです（`Emuera.exe`のアイコンは変化しません）。
+
 ## 定数・変数
 
 ### ![](../assets/images/IconEE.webp)`ERH`で定義した変数の配列に、`CSV`ファイル/`ERD`ファイルで名前を付けられるように
@@ -218,6 +227,18 @@
 !!! summary ""
 
     第4引数に`SETFONT`と同じ4ビット数(1=太字 2=斜体 4=打ち消し線 8=下線)指定で装飾を付けられるように 省略可能
+
+### ![](../assets/images/IconEE.webp)`GCLEAR`で指定区域を指定した色で置き換えるように
+!!! summary ""
+
+    書式2を追加するより，第三～第六引数で区域のX、Y、幅、高さを指定可能になりました。
+
+!!! info "API"
+    ``` { #language-erbapi }
+    1. GCLEAR GID, cARGB
+    2. GCLEAR GID, cARGB, x, y, width, height
+    ```
+
 
 ## 新規に追加された命令・式中関数
 

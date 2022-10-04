@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v14"
+
+    * 扩展了 [`GCLEAR`](../Reference/README.md#gclear) 的功能使其能用指定颜色替换指定区域。
+    * 新增了 [Emuera 图标设置功能](../Reference/README.md#emuera)。
+
 === "v13fix"
 
     * 修复关于功能扩展导致的用 `PRINT_IMG` 与 `<img>` 标签显示图像报错的问题。
