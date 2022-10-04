@@ -6,6 +6,7 @@ extra_javascript:
   - javascripts/erabasic-highlighths.min.js
 extra_css:
   - css/eraBasic.min.css
+  - css/extra.css
 theme:
   name: material
   highlightjs: false
@@ -92,8 +93,8 @@ nav:
           - Reference/CLEARMEMORY.md
           - Reference/GETTEXTBOX.md
           - Reference/SETTEXTBOX.md
-
   - 変更ログ: Changelog/README.md
+  - i18n: i18n/README.md
 plugins:
   - search
   - minify:

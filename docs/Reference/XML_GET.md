@@ -17,7 +17,7 @@
     ```
     `xpath`の規則で`xml`(`xmlName`)からノードを選択し、合致結果数を返します([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。
 
-    書式`1`と`2`には、`xml`が文字列である場合、その内容からノードを選択します。`xml`が整数である場合、`xml`を文字列に変換した結果([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))をキーとして、保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。`XmlDocument`が存在していない場合、`-1`を返します。
+    書式`1`と`2`には、`xml`が文字列である場合、その内容からノードを選択します。`xml`が整数である場合、`xml`を文字列に変換した結果([`TOSTR`](https://osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))をキーとして、保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)からノードを選択します。`XmlDocument`が存在していない場合、`-1`を返します。
 
     書式`3`と`4`には、`xmlName`をキーとして、保存した`XmlDocument`からノードを選択します。
 

@@ -18,7 +18,7 @@
     指定した`XML`に対して、`xpath`の規則で`xml`からノードを選択し、合致ノードを`newXml`で上書きします([`XPath`について](https://www.octoparse.jp/blog/xpath-introduction))。  
 	`doSetAll`が`0`または省略、かつ合致結果数が`1`以上である場合、上書きは行われません。成功した場合、合致結果の数を返す。失敗した場合、`0`を返す。
 
-    1. `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)のルートノードを`newXml`で上書きします。`XmlDocument`が存在していない場合、`-1`を返します。`xmlId`は整数型の場合、その文字列に変換した結果([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))を使います。
+    1. `xmlId`で保存した[`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)のルートノードを`newXml`で上書きします。`XmlDocument`が存在していない場合、`-1`を返します。`xmlId`は整数型の場合、その文字列に変換した結果([`TOSTR`](https://osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))を使います。
     2. `xmlId`を文字列に変換した結果(`TOSTR`)をキーとして、保存した`XmlDocument`からノードを選択します。`XmlDocument`が存在していない場合、`-1`を返します。
     3. `xml`からノードを選択し、結果を`xml`に代入します。`xml`は変数でなければなりません。
     4. `xmlName`をキーとして、保存した`XmlDocument`からノードを選択します。`XmlDocument`が存在していない場合、`-1`を返します。

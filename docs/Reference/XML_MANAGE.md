@@ -14,7 +14,7 @@
     int XML_EXIST xmlId
     ```
 
-    [`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の作成、削除、存否確認に関する関数です。`xmlId`は整数型の場合、その文字列に変換した結果([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))を使います。
+    [`XmlDocument`](https://docs.microsoft.com/ja-jp/dotnet/api/system.xml.xmldocument?view=netframework-4.8)の作成、削除、存否確認に関する関数です。`xmlId`は整数型の場合、その文字列に変換した結果([`TOSTR`](https://osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))を使います。
     
     - `XML_DOCUMENT`：`xmlContent`を解析し、`XmlDocument`として保存する。`xmlId`に対応する`XmlDocument`がすでに存在している場合、`0`を返す。成功した場合、`1`を返します。
     - `XML_RELEASE`：`xmlId`に対応する`XmlDocument`を削除します。
@@ -22,7 +22,7 @@
 
     !!! warning "注意"
 
-        作成した`XmlDocument`をセーブファイルへ保存するには「[`XML`、`MAP`セーブ機能](./README.md#xmlmap)」に参照してください。「タイトル画面へ戻る」か[`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA)をすると自動的に削除されます。
+        作成した`XmlDocument`をセーブファイルへ保存するには「[`XML`、`MAP`セーブ機能](./README.md#xmlmap)」に参照してください。「タイトル画面へ戻る」か[`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA)をすると自動的に削除されます。
 
 !!! hint "ヒント"
 
