@@ -85,6 +85,11 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "V24"
+	* 多言語化に対応(EMv14に同じく)
+	* `GETNUM`を多次元配列ERDに対応
+	* [`ERDNAME`](../Reference//ERDNAME.md)追加
+
 === "v23"
 
 	* `ERD`機能を二次元配列、三次元配列でも使えるように

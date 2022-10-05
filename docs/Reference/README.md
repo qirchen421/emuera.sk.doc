@@ -218,6 +218,12 @@
 
     第4引数に`SETFONT`と同じ4ビット数(1=太字 2=斜体 4=打ち消し線 8=下線)指定で装飾を付けられるように 省略可能
 
+### ![](../assets/images/IconEE.webp)`GETNUM`の`ERD`対応
+!!! summary ""
+
+	`GETNUM`がERDにも対応し、省略可能な第3引数を指定できるように。第3引数は多次元配列の次元を指し、左から1,2,3となる(式中関数`VARSIZE`の仕様とは異なるため注意)
+	また、式中関数`VARSIZE`の次元指定を`ERD`と同じく1,2,3とするコンフィグ項目を追加
+
 ## 新規に追加された命令・式中関数
 
 ### HTML系
@@ -254,6 +260,7 @@
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)              | `string`, `any`                        | `1`      |
 | ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`) | `1`      |
 | ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`)    | `1`      |
+| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)               | `variable`, `int`(, `int`)             | `string` |
 |                                                                          | `ref` `int`, `ref` `string[]`(, `int`) | `1`      |
 
 ### 入力・ウェイト
