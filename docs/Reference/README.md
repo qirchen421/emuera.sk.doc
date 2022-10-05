@@ -228,7 +228,6 @@
 
     第4引数に`SETFONT`と同じ4ビット数(1=太字 2=斜体 4=打ち消し線 8=下線)指定で装飾を付けられるように 省略可能
 
-<<<<<<< HEAD
 ### ![](../assets/images/IconEE.webp)`GETNUM`の`ERD`対応
 !!! summary ""
 
@@ -245,8 +244,6 @@
     1. GCLEAR GID, cARGB
     2. GCLEAR GID, cARGB, x, y, width, height
     ```
-
->>>>>>> 8109ff9d751129316d3e34e13ce3fa3c6eb99665
 
 ## 新規に追加された命令・式中関数
 
