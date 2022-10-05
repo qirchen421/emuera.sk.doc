@@ -38,7 +38,7 @@
 
     コンフィグ画面もしくは`emuera.config`で設定可能です
 
-    * 「[セーブデータをバイナリ形式で保存する](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
+    * 「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
 
 !!! example "例"
     ``` title="emuera.config"
@@ -49,6 +49,15 @@
 
     圧縮機能オンしたセーブデータは古いバージョン、本家版のEmuera.exeとの互換性がありません
 
+### ![](../assets/images/IconEM.webp)Emueraアイコン指定機能
+!!! summary ""
+
+    `emuera.config`のコンフィグ項目で設定可能です
+
+    コンフィグ項目`Emueraのアイコンのパス`に画像のパスを入力してください。パスは`Emuera.exe`を相対パスで指定(`..`は無効)。
+
+    変化するのはタイトルバーとタスクバーのアイコンだけです（`Emuera.exe`のアイコンは変化しません）。
+
 ## 定数・変数
 
 ### ![](../assets/images/IconEE.webp)`ERH`で定義した変数の配列に、`CSV`ファイル/`ERD`ファイルで名前を付けられるように
@@ -56,27 +65,28 @@
 
     `ERH`で定義した変数名を準拠にファイルを読み込み、既存の`CSV`変数と同じように配列に名前を付けることができる
 
-    `CSV`フォルダ内で使えるものは従来どおり`「変数名.csv」`、`ERB`内で使えるものは`「変数名.ERD」`ファイルとなる。書式は`CSV`変数のファイルと同じ。これらが2つ以上存在しても、同じ識別子が定義されている場合だけ起動時にエラー吐いて終了する。違う識別子を同じ整数に置き換え可能  
-	また、多次元配列の変数に名前を付ける場合は、各次元に応じてファイル名に`@`から続く数字を記すことで対応する。左の添字から`1`,`2`,`3`と対応している  
+    `CSV`フォルダ内で使えるものは従来どおり`「変数名.csv」`、`ERB`内で使えるものは`「変数名.ERD」`ファイルとなる。書式は`CSV`変数のファイルと同じ。これらが2つ以上存在しても、同じ識別子が定義されている場合だけ起動時にエラー吐いて終了する。違う識別子を同じ整数に置き換え可能
+
+    また、多次元配列の変数に名前を付ける場合は、各次元に応じてファイル名に`@`から続く数字を記すことで対応する。左の添字から`1`,`2`,`3`と対応している  
 
 !!! example "例"
 
     ``` { #language-csv title="ERH.ERH" }
-	#DIM HOGE, 3
-	#DIM HOGE2D, 3, 3
-	#DIM HOGE3D, 3, 3, 3
-	```
+    #DIM HOGE, 3
+    #DIM HOGE2D, 3, 3
+    #DIM HOGE3D, 3, 3, 3
+    ```
 
 
     ``` title="ERBフォルダ"
-	HOGE.ERD
-	HOGE2D@1.ERD
-	HOGE2D@2.ERD
-	HOGE3D@1.ERD
-	HOGE3D@2.ERD
-	HOGE3D@3.ERD
-	```
-	
+    HOGE.ERD
+    HOGE2D@1.ERD
+    HOGE2D@2.ERD
+    HOGE3D@1.ERD
+    HOGE3D@2.ERD
+    HOGE3D@3.ERD
+    ```
+    
 ### ![](../assets/images/IconEE.webp)`VariableSize.csv`で`COUNT`を使用禁止変数に設定できるように
 !!! summary ""
 
@@ -92,7 +102,7 @@
 
     CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./README.md#xml)、[`MAP`](./README.md#map)のIDが設定可能になります
 
-    * 「[セーブデータをバイナリ形式で保存する](https://zh.osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
+    * 「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
     * IDを設定したとしても、メモリにないならセーブデータへ保存しません
     * セーブデータの中に保存されたデータのIDがCSVで設定されていない場合、読み捨てます
     * セーブデータが古いバージョン、本家版のEmuera.exeとの互換性があります
@@ -218,11 +228,25 @@
 
     第4引数に`SETFONT`と同じ4ビット数(1=太字 2=斜体 4=打ち消し線 8=下線)指定で装飾を付けられるように 省略可能
 
+<<<<<<< HEAD
 ### ![](../assets/images/IconEE.webp)`GETNUM`の`ERD`対応
 !!! summary ""
 
 	`GETNUM`がERDにも対応し、省略可能な第3引数を指定できるように。第3引数は多次元配列の次元を指し、左から1,2,3となる(式中関数`VARSIZE`の仕様とは異なるため注意)
 	また、式中関数`VARSIZE`の次元指定を`ERD`と同じく1,2,3とするコンフィグ項目を追加
+=======
+### ![](../assets/images/IconEE.webp)`GCLEAR`で指定区域を指定した色で置き換えるように
+!!! summary ""
+
+    書式2を追加するより，第三～第六引数で区域のX、Y、幅、高さを指定可能になりました。
+
+!!! info "API"
+    ``` { #language-erbapi }
+    1. GCLEAR GID, cARGB
+    2. GCLEAR GID, cARGB, x, y, width, height
+    ```
+
+>>>>>>> 8109ff9d751129316d3e34e13ce3fa3c6eb99665
 
 ## 新規に追加された命令・式中関数
 

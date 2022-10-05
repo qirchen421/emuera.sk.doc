@@ -14,7 +14,7 @@
     int XML_EXIST xmlId
     ```
 
-    关于 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 的生成、删除、判断是否存在的一系列函数。若 `xmlId` 为整数，则使用其字符串转换结果值([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))。
+    关于 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 的生成、删除、判断是否存在的一系列函数。若 `xmlId` 为整数，则使用其字符串转换结果值([`TOSTR`](https://osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))。
     
     - `XML_DOCUMENT`：解析 `xmlContent` 并保存为 `XmlDocument`。  
         如果已经存在 `xmlId` 对应的 `XmlDocument`（创建失败），返回 `0`；创建成功时，返回 `1`。
@@ -23,7 +23,7 @@
 
     !!! warning "注意"
 
-        关于将生成的 `XmlDocument` 保存进存档文件请参考「[`XML`、`MAP` 保存功能](./README.md#xmlmap)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://zh.osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        关于将生成的 `XmlDocument` 保存进存档文件请参考「[`XML`、`MAP` 保存功能](./README.md#xmlmap)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

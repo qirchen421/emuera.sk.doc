@@ -17,7 +17,7 @@
     ```
     根据 `xpath` 选择的元素节点（详见 [`XPath` 的介绍](https://www.runoob.com/xpath/xpath-tutorial.html)）在指定的 `XML` 中检索。
 
-    对于形式 `1` 和 `2`，如果 `xml` 是字符串，则在内容的 XML 文本中检索节点。如果 `xml` 是整型数值，则在以其字符串转换结果([`TOSTR`](https://zh.osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))为 ID 而指定的 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 中检索节点；若 `XmlDocument` 不存在，返回 `-1`。
+    对于形式 `1` 和 `2`，如果 `xml` 是字符串，则在内容的 XML 文本中检索节点。如果 `xml` 是整型数值，则在以其字符串转换结果([`TOSTR`](https://osdn.net/projects/emuera/wiki/exmeth#h5-str.20TOSTR.28int.20value.2C.20str.20format.20.3D.20.22.22.29))为 ID 而指定的 [`XmlDocument`](https://docs.microsoft.com/zh-cn/dotnet/api/system.xml.xmldocument?view=netframework-4.8) 中检索节点；若 `XmlDocument` 不存在，返回 `-1`。
 
     对于形式 `3` 和 `4`，在以 `xmlName` 为 ID 指定的 `XmlDocument` 中检索节点；若 `XmlDocument` 不存在，返回 `-1`。
 
