@@ -120,6 +120,10 @@
     SAVE_MAPS, MyMap4
     ; save*.savの中で保存しようとするXmlDocumentのID
     SAVE_XMLS, 1, MyXml2
+    ; GLOBALがついた変数と似ている、RESETDATAの時に変化しない、RESETGLOBALの時に削除
+    STATIC_MAPS, MyMap5
+    ; GLOBALがついた変数と似ている、RESETDATAの時に変化しない、RESETGLOBALの時に削除
+    STATIC_XMLS, 1, MyXml3
     ```
 
 !!! warning "注意"

@@ -10,6 +10,7 @@ hide:
 
     * 機能拡張：[`GCLEAR`](../Reference/README.md#gclear)で指定区域を指定した色で置き換えるように。
     * 機能拡張：[Emueraアイコン指定機能](../Reference/README.md#emuera)。
+    * 機能拡張：[`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmap)が指定できるように。
 
 === "v13fix"
 

@@ -125,6 +125,10 @@
     SAVE_MAPS, MyMap4
     ; 设置希望保存在save*.sav中的XmlDocument的ID。
     SAVE_XMLS, 1, MyXml2
+    ; 与有GLOBAL标记的变量类似，RESETDATA时不变，RESETGLOBAL时被删除
+    STATIC_MAPS, MyMap5
+    ; 与有GLOBAL标记的变量类似，RESETDATA时不变，RESETGLOBAL时被删除
+    STATIC_XMLS, 1, MyXml3
     ```
 
 !!! warning "注意"

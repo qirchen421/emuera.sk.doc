@@ -11,6 +11,7 @@ hide:
 
     * 扩展了 [`GCLEAR`](../Reference/README.md#gclear) 的功能使其能用指定颜色替换指定区域。
     * 新增了 [Emuera 图标设置功能](../Reference/README.md#emuera)。
+    * 现在可以指定 [`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmap) 了。
 
 === "v13fix"
 
