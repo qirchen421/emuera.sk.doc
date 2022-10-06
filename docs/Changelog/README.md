@@ -91,8 +91,8 @@ hide:
 
 ## Emuera.EE
 === "V24"
-	* 多言語化に対応(EMv14に同じく)
-	* `GETNUM`を多次元配列ERDに対応
+	* [多言語化](../i18n/README.md)に対応(EMv14に同じく)
+	* `GETNUM`を[多次元配列ERDに対応](../Reference/README.md#getnumerd)
 	* [`ERDNAME`](../Reference//ERDNAME.md)追加
 
 === "v23"

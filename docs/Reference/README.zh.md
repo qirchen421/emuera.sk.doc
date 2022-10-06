@@ -242,6 +242,12 @@
 
     第四个参数类似 `SETFONT` 的 4 bit 参数用法：1=**粗体** 2=_斜体_ 4=<s>删除线</s> 8=<u>下划线</u>；可省略。
 
+### ![](../assets/images/IconEE.webp)`GETNUM`的`ERD`支持
+!!! summary ""
+
+	`GETNUM` 现在也支持 ERD 功能，追加了可省略的第3参数。第3参数用来指定数组维度，从左到右依次为 1, 2, 3 (注意这与行内函数 `VARSIZE` 的指定行为不同)
+	另外，追加了 `VARSIZE` 使用与 ERD 相同的维度指定方式的配置选项。
+
 ### ![](../assets/images/IconEE.webp)`GCLEAR` 支持用指定颜色替换指定区域
 !!! summary ""
 
@@ -290,6 +296,7 @@
 | ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`) | `1`      |
 | ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`)    | `1`      |
 |                                                                          | `ref` `int`, `ref` `string[]`(, `int`) | `1`      |
+| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)               | `variable`, `int`(, `int`)             | `string` |
 
 ### 输入 / 等待
 

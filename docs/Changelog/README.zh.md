@@ -91,6 +91,11 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+=== "V24"
+	* [多语言支持](../i18n/README.md)(同EMv14)
+	* `GETNUM` 现在支持[多维数组的 ERD 功能](../Reference/README.md#getnumerd)
+	* 新增 [`ERDNAME`](../Reference//ERDNAME.md) 函数
+
 === "v23"
 
     * [`ERD` 功能](../Reference/README.md#csv-erd-erh)现在也支持二维和三维数组。

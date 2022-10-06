@@ -44,6 +44,7 @@ nav:
           - Reference/GETSETVAR.md
           - Reference/VARSETEX.md
           - Reference/ARRAYMSORTEX.md
+          - Reference/ERDNAME.md
       - 入力・ウェイト:
           - Reference/INPUTANY.md
       - デバッグ補助・システムフロー制御:

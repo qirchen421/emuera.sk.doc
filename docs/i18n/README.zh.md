@@ -27,7 +27,7 @@ hide:
 | :------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------- | :------ |
 | 日本語                                                                                                              | (默认语言)                                       | 100.00% |
 | [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.eng.xml](../assets/files/emuera.eng.xml) | 100.00% |
-| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 72.51%% |
+| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 81.38% |
 
 ## 配置文件
 
@@ -112,6 +112,7 @@ hide:
 | 文字列変数の代入に文字列式を強制する                  | String variable assignment on valid with string expression | `NO`            |
 | UPDATECHECKを許可しない                               | Disallow UPDATECHECK                                       | `NO`            |
 | ERD機能を利用する                                     | Use ERD                                                    | `YES`           |
+| VARSIZEの次元指定をERD機能に合わせる                  | Imitate ERD to VARSIZE dimension specification             | `NO`            |
 | LOADTEXTとSAVETEXTで使える拡張子                      | Valid extensions for LOADTEXT and SAVETEXT                 | `txt`           |
 | セーブデータを圧縮して保存する                        | Compress save data                                         | `NO`            |
 | CONFIGファイルの内容を英語で保存する                  | Output English items in the config file                    | `NO`            |
