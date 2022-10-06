@@ -102,6 +102,7 @@ ERB scripts may not work properly.]]></tr>
     <tr id="UI.ConfigDialog.System2.NoAutoCompleteCVar"><![CDATA[Don't autocomplete arguments in character variables]]></tr>
     <tr id="UI.ConfigDialog.System2.DisallowUpdateCheck"><![CDATA[Don't allow UPDATECHECK]]></tr>
     <tr id="UI.ConfigDialog.System2.UseERD"><![CDATA[Use ERD files]]></tr>
+    <tr id="UI.ConfigDialog.System2.VarsizeDimConfig"><![CDATA[Imitate ERD to VARSIZE dimension specification]]></tr>
     <tr id="UI.ConfigDialog.System2.SaveLoadExt"><![CDATA[Usable ectension in LOADTEXT and SAVETEXT]]></tr>
     <tr id="UI.ConfigDialog.Compatibility"><![CDATA[Compatibility]]></tr>
     <tr id="UI.ConfigDialog.Compatibility.Warning"><![CDATA[※Many things work differently between Emuera and eramaker,
@@ -155,12 +156,12 @@ Settings apply only at start]]></tr>
     <tr id="UI.DebugDialog"><![CDATA[Emuera - DebugDialog]]></tr>
     <tr id="UI.DebugDialog.StackTrace"><![CDATA[Stack Trace]]></tr>
     <tr id="UI.DebugDialog.Console"><![CDATA[Console]]></tr>
-    <tr id="UI.DebugDialog.StayOnTop"><![CDATA[Always on top]]></tr>
+    <tr id="UI.DebugDialog.StayOnTop"><![CDATA[Stay On Top]]></tr>
     <tr id="UI.DebugDialog.UpdateData"><![CDATA[Update data]]></tr>
     <tr id="UI.DebugDialog.Close"><![CDATA[Close]]></tr>
     <tr id="UI.DebugDialog.File.SaveWatchList"><![CDATA[Save watch list]]></tr>
     <tr id="UI.DebugDialog.File.LoadWatchList"><![CDATA[Load watch list]]></tr>
-    <tr id="UI.DebugDialog.Setting"><![CDATA[Setting(&C)]]></tr>
+    <tr id="UI.DebugDialog.Setting"><![CDATA[Settings(&C)]]></tr>
     <tr id="UI.DebugDialog.Setting.Config"><![CDATA[Config(&C)]]></tr>
     <tr id="UI.DebugDialog.VariableWatch"><![CDATA[Variable Watch]]></tr>
     <tr id="UI.DebugDialog.VariableWatch.Object"><![CDATA[Object]]></tr>
