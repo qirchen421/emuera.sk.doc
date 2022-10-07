@@ -30,6 +30,20 @@
     pip install mkdocs-minify-plugin
     pip install mkdocs-static-i18n
     ```
+    If you want to make an offline build, you should additionally install:
+    ``` bash
+    pip install mkdocs-minify-plugin
+    ```
+    The versions of the latest building environment are:
+    | Name                       | Version |
+    | -------------------------- | ------- |
+    | Python                     | 3.10.4  |
+    | mkdocs                     | 1.4.0   |
+    | mkdocs-material            | 8.5.6   |
+    | mkdocs-material-extensions | 1.0.3   |
+    | mkdocs-minify-plugin       | 0.5.0   |
+    | mkdocs-static-i18n         | 0.47    |
+
 4. Run the command to build and start local server:
 
     ``` bash
