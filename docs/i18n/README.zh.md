@@ -4,7 +4,7 @@ hide:
 ---
 # 多语言支持
 
-> EmueraEM+EE从`Emuera1824+v15+EMv14+EEv23`版本开始支持多语言。
+> EmueraEM+EE从`Emuera1824+v16+EMv14+EEv23`版本开始支持多语言。
 
 ## 界面语言
 
@@ -27,7 +27,7 @@ hide:
 | :------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------- | :------ |
 | 日本語                                                                                                              | (默认语言)                                       | 100.00% |
 | [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.eng.xml](../assets/files/emuera.eng.xml) | 100.00% |
-| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 81.38% |
+| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 81.42% |
 
 ## 配置文件
 

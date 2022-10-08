@@ -4,7 +4,7 @@ hide:
 ---
 # 多言語化
 
-> EmueraEM+EEは、`Emuera1824+v15+EMv14+EEv24`から多言語化しました。
+> EmueraEM+EEは、`Emuera1824+v16+EMv14+EEv24`から多言語化しました。
 
 ## 表示言語
 
@@ -27,7 +27,7 @@ hide:
 | :------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------- | :------ |
 | 日本語                                                                                                              | (デフォルト言語)                                 | 100.00% |
 | [English](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1850904001)  | [emuera.eng.xml](../assets/files/emuera.eng.xml) | 100.00% |
-| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 81.38%  |
+| [简体中文](https://docs.google.com/spreadsheets/d/1wxXyXjQLZyKm1dqg8GwvvVD2oG2uaFPL2zDHKjrNbNM/edit#gid=1945272582) | [emuera.zhs.xml](../assets/files/emuera.zhs.xml) | 81.42%  |
 
 ## コンフィグ
 

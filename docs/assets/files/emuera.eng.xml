@@ -921,6 +921,7 @@ Error.AttributeCanNotInterpretNum	<{0}> tag has a {1}" attribute with a value th
     <tr id="Error.GParamIsNegative"><![CDATA[{0}: Specified less than or equal 0({2}) to {1} Graphics]]></tr>
     <tr id="Error.GParamTooLarge"><![CDATA[{0}: Specified more than {2}({3}) to {1 }Graphics]]></tr>
     <tr id="Error.ImgRefOutOfRange"><![CDATA[{0}: Specified out of range of image file]]></tr>
+    <tr id="Error.MinInt64CanNotApplyABS"><![CDATA[{0}: Can not get the absolute value of the Int64 minimum]]></tr>
     <tr id="MessageBox.ConfigError"><![CDATA[Config Error]]></tr>
     <tr id="MessageBox.TooSmallFontSize"><![CDATA[Font size is too small (Less than 8).]]></tr>
     <tr id="MessageBox.LineHeightLessThanFontSize"><![CDATA[The line height will be interpreted the same as the font size due to it being smaller.]]></tr>
@@ -997,4 +998,5 @@ The drawing process cannot continue and will be terminated.]]></tr>
     <tr id="SystemLine.ReloadingErb"><![CDATA[Reloading ERB files...]]></tr>
     <tr id="SystemLine.ReloadCompleted"><![CDATA[Reload has been completeds]]></tr>
     <tr id="SystemLine.LogFileHasBeenCreated"><![CDATA[※※※Log file {0} has been created※※※]]></tr>
+    <tr id="SystemLine.MinusWontWork"><![CDATA[The minus operation to the Int64 minimum will not take effect]]></tr>
 </lang>

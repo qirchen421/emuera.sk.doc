@@ -736,6 +736,7 @@
     <tr id="Error.GParamIsNegative"><![CDATA[{0}函数: 将Graphics的{1}设置为了0以下的值({2})]]></tr>
     <tr id="Error.GParamTooLarge"><![CDATA[{0}函数: 将Graphics的{1}设置为了{2}以上的值({3})]]></tr>
     <tr id="Error.ImgRefOutOfRange"><![CDATA[{0}函数: 选择范围在图像范围之外]]></tr>
+    <tr id="Error.MinInt64CanNotApplyABS"><![CDATA[{0}函数: 无法对带符号64位整数的最小值({1})取绝对值]]></tr>
     <tr id="MessageBox.ConfigError"><![CDATA[设定错误]]></tr>
     <tr id="MessageBox.TooSmallFontSize"><![CDATA[字体大小过小(下限为8)]]></tr>
     <tr id="MessageBox.LineHeightLessThanFontSize"><![CDATA[由于行高小于字体大小，将其视为与字体大小等同]]></tr>
@@ -812,4 +813,5 @@
     <tr id="SystemLine.ReloadingErb"><![CDATA[重新载入ERB文件中……]]></tr>
     <tr id="SystemLine.ReloadCompleted"><![CDATA[重新载入完毕]]></tr>
     <tr id="SystemLine.LogFileHasBeenCreated"><![CDATA[※※※已创建Log文件{0}※※※]]></tr>
+    <tr id="SystemLine.MinusWontWork"><![CDATA[对整型最小值({0})进行-操作其值也不对发生变化]]></tr>
 </lang>
