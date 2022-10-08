@@ -109,7 +109,7 @@ plugins:
       languages:
         ja:
           name: 日本語
-          build: true
+          build: false
         en:
           name: English
           build: true
