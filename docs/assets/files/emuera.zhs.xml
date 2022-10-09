@@ -106,7 +106,9 @@
     <tr id="UI.ConfigDialog.System2.VarsizeDimConfig"><![CDATA[VARSIZE使用与ERD相同的维度指定方式]]></tr>
     <tr id="UI.ConfigDialog.System2.SaveLoadExt"><![CDATA[允许在LOADTEXT和SAVETEXT中使用的扩展名]]></tr>
     <tr id="UI.ConfigDialog.Compatibility"><![CDATA[兼容性]]></tr>
-    <tr id="UI.ConfigDialog.Compatibility.Warning"><![CDATA[抛出内容]]></tr>
+    <tr id="UI.ConfigDialog.Compatibility.Warning"><![CDATA[※本页面是为了解决eramaker与Emuera的运行表现不同、
+Emuera的历史版本有效的内容变得无效等等现象而设置的。
+若默认设置运行时没有问题请不要更改这里的设置。]]></tr>
     <tr id="UI.ConfigDialog.Compatibility.ExecuteErrorLine"><![CDATA[执行无法解析的行]]></tr>
     <tr id="UI.ConfigDialog.Compatibility.NameForCallname"><![CDATA[CALLNAME为空时以NAME的值代入]]></tr>
     <tr id="UI.ConfigDialog.Compatibility.EramakerRAND"><![CDATA[使虚拟变量RAND的表现与eramaker一致]]></tr>
