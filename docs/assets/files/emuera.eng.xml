@@ -778,12 +778,6 @@ Settings apply only at start]]></tr>
     <tr id="Error.InvalidCharacterReference"><![CDATA[&{0}; is not an appropriate character reference]]></tr>
     <tr id="Error.OoRUnicodeHtml"><![CDATA[&{0}; is out of the Unicode range (Surrogate pairs are not allowed)]]></tr>
     <tr id="Error.UnexpectedCloseTag"><![CDATA[There's no <{0}> before </{0}>]]></tr>
-    <tr id="Error.UnexpectedCloseP"><![CDATA[There's no <p> before </p>]]></tr>
-    <tr id="Error.UnexpectedCloseNobr"><![CDATA[There's no <nobr> before </nobr>]]></tr>
-    <tr id="Error.UnexpectedCloseFont"><![CDATA[There's no <font> before </font>]]></tr>
-    <tr id="Error.UnexpectedCloseButton"><![CDATA[There's no <button> before </button>]]></tr>
-    <tr id="Error.UnexpectedCloseNonbutton"><![CDATA[There's no <nonbutton> before </nonbutton>]]></tr>
-    <tr id="Error.UnexpectedCloseClearbutton"><![CDATA[There's no <clearbutton> before </clearbutton>]]></tr>
     <tr id="Error.CanNotInterpretCloseTag"><![CDATA[The closing tag </{0}> cannot be interpreted]]></tr>
     <tr id="Error.AttributeSetToTag"><![CDATA[There's an attribute set to <{0}>
 Error.DuplicateTag	<{0}> is duplicated
