@@ -6,6 +6,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v14fix"
+
+    * バグ修正：一部キーボード入力が無効の不具合を修正
+
 === "v14"
 
     * [私家版v16](https://ux.getuploader.com/ninnohito/download/482)へのアップデート。

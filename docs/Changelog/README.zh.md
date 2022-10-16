@@ -7,6 +7,10 @@ hide:
 
 ## Emuera.EM
 
+=== "v14fix"
+
+    * 修复关于使用键盘输入时部分输入无效的问题。
+
 === "v14"
 
     * 更新至[私家版v16](https://ux.getuploader.com/ninnohito/download/482)。
