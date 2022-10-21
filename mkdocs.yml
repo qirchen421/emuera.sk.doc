@@ -86,6 +86,8 @@ nav:
           - Reference/MAP_OPERATION.md
           - Reference/MAP_GETKEYS.md
           - Reference/MAP_SERIALIZATION.md
+      - DataTable（データベース）系:
+          - Reference/DT_MANAGE.md
       - その他:
           - Reference/EXISTFILE.md
           - Reference/ENUMFILES.md
@@ -134,6 +136,7 @@ plugins:
           その他: 其他
           変更ログ: 更新日志
           入力・ウェイト: 输入 / 等待
+          DataTable（データベース）系: DataTable（数据库）相关
         en:
           ホーム: Home
           リファレンス: Reference

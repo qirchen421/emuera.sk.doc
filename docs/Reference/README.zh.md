@@ -102,10 +102,10 @@
 
     可用 `DAY.csv`，`TIME.csv`，`MONEY.csv` 来像其它 CSV 一样配置数值与名称转换，并应用于 `DAYNAME`，`TIMENAME`，`MONEYNAME` 变量
 
-### ![](../assets/images/IconEM.webp)将`XML`、`MAP` 数据保存进存档文件
+### ![](../assets/images/IconEM.webp)将`XML`、`MAP`、`DataTable` 数据保存进存档文件
 !!! summary ""
 
-	可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](./README.md#xml)、[`MAP`](./README.md#map) 的 ID。
+	可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](./README.md#xml)、[`MAP`](./README.md#map)、[`DataTable`](./README.md#datatable) 的 ID。
 
     * 该功能只有在「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」为 `YES` 时有效
     * 即使设定了 ID，若内存中不存在该数据则不会保存进存档文件。
@@ -115,20 +115,20 @@
 !!! example "示例代码"
 
     ``` { #language-csv title="VarExtSample.CSV" }
-    ; 设置希望保存在global.sav中的MAP的ID。一行可以设置多个。
+    ; 设置希望保存在global.sav中的MAP, XmlDocument, DataTable的ID。一行可以设置多个。
     ; 也可用多行，多个文件(例如VarExt1.csv, VarExt2.csv, VarExt3.csv等)来进行设定。
     GLOBAL_MAPS, MyMap, MyMap2
     GLOBAL_MAPS, MyMap3
-    ; 设置希望保存在global.sav中的XmlDocument的ID。
     GLOBAL_XMLS, 0, MyXml
-    ; 设置希望保存在save*.sav中的MAP的ID。
+    GLOBAL_DTS, db
+    ; 设置希望保存在save*.sav中的MAP, XmlDocument, DataTable的ID。
     SAVE_MAPS, MyMap4
-    ; 设置希望保存在save*.sav中的XmlDocument的ID。
     SAVE_XMLS, 1, MyXml2
+    SAVE_DTS, mydb1
     ; 与有GLOBAL标记的变量类似，RESETDATA时不变，RESETGLOBAL时被删除
     STATIC_MAPS, MyMap5
-    ; 与有GLOBAL标记的变量类似，RESETDATA时不变，RESETGLOBAL时被删除
     STATIC_XMLS, 1, MyXml3
+    STATIC_DTS, db2
     ```
 
 !!! warning "注意"
@@ -399,6 +399,14 @@
 | ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)   | `string`                          | `string` |
 | ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md) | `string`, `string`                | `int`    |
 
+### DataTable（数据库）相关
+| 関数名                                                          | 引数            | 戻り値 |
+| :-------------------------------------------------------------- | :-------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)  | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md) | `string`        | `1`    |
+| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)  | `string`, `int` | `int`  |
 ### 其他
 
 | 函数名                                                                   | 参数                        | 返回值   |

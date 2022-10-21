@@ -97,10 +97,10 @@
 
     `DAY.csv`,`TIME.csv`,`MONEY.csv`で他CSVのように名前を付けられ、`DAYNAME`,`TIMENAME`,`MONEYNAME`が使用可能になります
 
-### ![](../assets/images/IconEM.webp)`XML`、`MAP`がセーブデータの中で保存できるように
+### ![](../assets/images/IconEM.webp)`XML`、`MAP`、`DataTable`がセーブデータの中で保存できるように
 !!! summary ""
 
-    CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./README.md#xml)、[`MAP`](./README.md#map)のIDが設定可能になります
+    CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./README.md#xml)、[`MAP`](./README.md#map)、[`DataTable`](./README.md#datatable)のIDが設定可能になります
 
     * 「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
     * IDを設定したとしても、メモリにないならセーブデータへ保存しません
@@ -110,20 +110,20 @@
 !!! example "例"
 
     ``` { #language-csv title="VarExtSample.CSV" }
-    ; global.savの中で保存しようとするMAPのID。一行複数個設定可能
+    ; global.savの中で保存しようとするMAP, XmlDocument, DataTableのID。一行複数個設定可能
     ; 複数行、複数ファイル(例えばVarExt1.csv, VarExt2.csv, VarExt3.csvなど)で設定も可
     GLOBAL_MAPS, MyMap, MyMap2
     GLOBAL_MAPS, MyMap3
-    ; global.savの中で保存しようとするXmlDocumentのID
     GLOBAL_XMLS, 0, MyXml
-    ; save*.savの中で保存しようとするMAPのID
+    GLOBAL_DTS, db
+    ; save*.savの中で保存しようとするMAP, XmlDocument, DataTableのID
     SAVE_MAPS, MyMap4
-    ; save*.savの中で保存しようとするXmlDocumentのID
     SAVE_XMLS, 1, MyXml2
+    SAVE_DTS, mydb1
     ; GLOBALがついた変数と似ている、RESETDATAの時に変化しない、RESETGLOBALの時に削除
     STATIC_MAPS, MyMap5
-    ; GLOBALがついた変数と似ている、RESETDATAの時に変化しない、RESETGLOBALの時に削除
     STATIC_XMLS, 1, MyXml3
+    STATIC_DTS, db2
     ```
 
 !!! warning "注意"
@@ -383,6 +383,16 @@
 |                                                                          | `string`, `ref` `string[]`, `int` | `string` |
 | ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)   | `string`                          | `string` |
 | ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md) | `string`, `string`                | `int`    |
+
+### DataTable（データベース）系
+
+| 関数名                                                          | 引数            | 戻り値 |
+| :-------------------------------------------------------------- | :-------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)  | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md) | `string`        | `1`    |
+| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)  | `string`, `int` | `int`  |
 
 ### その他
 
