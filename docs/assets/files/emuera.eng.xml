@@ -916,6 +916,11 @@ Error.AttributeCanNotInterpretNum	<{0}> tag has a {1}" attribute with a value th
     <tr id="Error.GParamTooLarge"><![CDATA[{0}: Specified more than {2}({3}) to {1 }Graphics]]></tr>
     <tr id="Error.ImgRefOutOfRange"><![CDATA[{0}: Specified out of range of image file]]></tr>
     <tr id="Error.MinInt64CanNotApplyABS"><![CDATA[{0}: Can not get the absolute value of the Int64 minimum]]></tr>
+    <tr id="Error.UnsupportedType"><![CDATA[{0}: Specified unsupported type]]></tr>
+    <tr id="Error.ArgsNotFitExpr"><![CDATA[{0}: The count of the arguments ({1}) is not matching {2}+{3}n]]></tr>
+    <tr id="Error.DTLackOfNamedColumn"><![CDATA[{0}: There is no column named "{2}" in the DataTable "{1}"]]></tr>
+    <tr id="Error.DTInvalidDataType"><![CDATA[{0}: Attempt to assign a different type of value to column "{2}" in the DataTable "{1}"]]></tr>
+    <tr id="Error.DTCanNotEditIdColumn"><![CDATA[{0}: Can not change the "id" column in the DataTable "{1}"]]></tr>
     <tr id="MessageBox.ConfigError"><![CDATA[Config Error]]></tr>
     <tr id="MessageBox.TooSmallFontSize"><![CDATA[Font size is too small (Less than 8).]]></tr>
     <tr id="MessageBox.LineHeightLessThanFontSize"><![CDATA[The line height will be interpreted the same as the font size due to it being smaller.]]></tr>

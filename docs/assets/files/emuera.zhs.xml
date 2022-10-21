@@ -29,7 +29,7 @@
     <tr id="UI.MainWindow.MsgBox.MultiInstanceInfo"><![CDATA[要允许同时开启多个窗口实例，请在emuera.config设置相关选项。]]></tr>
     <tr id="UI.MainWindow.MsgBox.FolderNotFound"><![CDATA[找不到文件夹]]></tr>
     <tr id="UI.MainWindow.MsgBox.NoCsvFolder"><![CDATA[找不到csv文件夹。]]></tr>
-    <tr id="UI.MainWindow.MsgBox.NoErbFolder"><![CDATA[找不到csv文件夹。]]></tr>
+    <tr id="UI.MainWindow.MsgBox.NoErbFolder"><![CDATA[找不到erb文件夹。]]></tr>
     <tr id="UI.MainWindow.MsgBox.FailedCreateDebugFolder"><![CDATA[创建debug文件夹失败。]]></tr>
     <tr id="UI.MainWindow.MsgBox.ArgPathNotExists"><![CDATA[指定的文件或文件夹不存在]]></tr>
     <tr id="UI.MainWindow.MsgBox.InvalidArg"><![CDATA[只能对ERB文件进行拖放操作]]></tr>
@@ -43,7 +43,7 @@
     <tr id="UI.ConfigDialog.Environment.UseMouse"><![CDATA[使用鼠标]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseMenu"><![CDATA[使用菜单]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseDebugCommand"><![CDATA[使用调试命令]]></tr>
-    <tr id="UI.ConfigDialog.Environment.AllowMultipleInstances"><![CDATA[运行多个窗口实例]]></tr>
+    <tr id="UI.ConfigDialog.Environment.AllowMultipleInstances"><![CDATA[允许运行多个窗口实例]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseKeyMacro"><![CDATA[使用按键宏]]></tr>
     <tr id="UI.ConfigDialog.Environment.AutoSave"><![CDATA[开启自动保存]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseSaveFolder"><![CDATA[将存档保存到sav文件夹]]></tr>
@@ -916,6 +916,11 @@ Emuera的历史版本有效的内容变得无效等等现象而设置的。
     <tr id="Error.GParamTooLarge"><![CDATA[{0}函数: 将Graphics的{1}设置为了{2}以上的值({3})]]></tr>
     <tr id="Error.ImgRefOutOfRange"><![CDATA[{0}函数: 选择范围在图像范围之外]]></tr>
     <tr id="Error.MinInt64CanNotApplyABS"><![CDATA[{0}函数: 无法对带符号64位整数的最小值({1})取绝对值]]></tr>
+    <tr id="Error.UnsupportedType"><![CDATA[{0}函数: 指定了不支持的类型]]></tr>
+    <tr id="Error.ArgsNotFitExpr"><![CDATA[{0}函数: 参数数量({1})不满足{2}+{3}n]]></tr>
+    <tr id="Error.DTLackOfNamedColumn"><![CDATA[{0}函数:  DataTable("{1}")中没有名为"{2}"的列]]></tr>
+    <tr id="Error.DTInvalidDataType"><![CDATA[{0}函数: 尝试为DataTable("{1}")的"{2}"列赋予与设定不同类型的值]]></tr>
+    <tr id="Error.DTCanNotEditIdColumn"><![CDATA[{0}函数: 无法改变DataTable("{1}")的"id"列]]></tr>
     <tr id="MessageBox.ConfigError"><![CDATA[设定错误]]></tr>
     <tr id="MessageBox.TooSmallFontSize"><![CDATA[字体大小过小(下限为8)]]></tr>
     <tr id="MessageBox.LineHeightLessThanFontSize"><![CDATA[由于行高小于字体大小，将其视为与字体大小等同]]></tr>
