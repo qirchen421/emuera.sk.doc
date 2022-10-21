@@ -15,7 +15,7 @@ hide:
     * [私家版v16](https://ux.getuploader.com/ninnohito/download/482)へのアップデート。
     * 機能拡張：[`GCLEAR`](../Reference/README.md#gclear)で指定区域を指定した色で置き換えるように。
     * 機能拡張：[Emueraアイコン指定機能](../Reference/README.md#emuera)。
-    * 機能拡張：[`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmap)が指定できるように。
+    * 機能拡張：[`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmapdatatable)が指定できるように。
 
 === "v13fix"
 
@@ -29,7 +29,7 @@ hide:
 === "v12"
 
     * 機能拡張：「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」コンフィグ機能追加。
-    * 機能拡張：[XML、MAPがセーブデータの中で保存](../Reference/README.md#xmlmap)可能。
+    * 機能拡張：[XML、MAPがセーブデータの中で保存](../Reference/README.md#xmlmapdatatable)可能。
     * 仕様変更：[XML系の命令](../Reference/README.md#xml)の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり。
 
 === "v11"

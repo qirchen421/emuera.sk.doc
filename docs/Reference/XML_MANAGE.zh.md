@@ -23,7 +23,7 @@
 
     !!! warning "注意"
 
-        关于将生成的 `XmlDocument` 保存进存档文件请参考「[`XML`、`MAP` 保存功能](./README.md#xmlmap)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        关于将生成的 `XmlDocument` 保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.md#xmlmapdatatable)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

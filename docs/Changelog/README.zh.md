@@ -16,7 +16,7 @@ hide:
     * 更新至[私家版v16](https://ux.getuploader.com/ninnohito/download/482)。
     * 扩展了 [`GCLEAR`](../Reference/README.md#gclear) 的功能使其能用指定颜色替换指定区域。
     * 新增了 [Emuera 图标设置功能](../Reference/README.md#emuera)。
-    * 现在可以指定 [`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmap) 了。
+    * 现在可以指定 [`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmapdatatable) 了。
 
 === "v13fix"
 
@@ -30,7 +30,7 @@ hide:
 === "v12"
 
     * 新增「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」设置项。
-    * 新增将 [XML、MAP 数据保存进存档](../Reference/README.md#xmlmap)的功能。
+    * 新增将 [XML、MAP 数据保存进存档](../Reference/README.md#xmlmapdatatable)的功能。
 	* 调整 [XML 系列命令](../Reference/README.md#xml)的行为，现在使用字符串作为 ID，兼容旧版本。
 
 === "v11"
