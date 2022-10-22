@@ -11,6 +11,7 @@ hide:
 
     * 新增了 [`DataTable` 系列函数](../Reference/README.md#datatable)。
     * 修复了字体大小不为 `16` 时输入栏的显示问题。
+    * 修复了用户定义的程序图标的透明通道信息无效的问题。
 
 === "v14fix"
 
