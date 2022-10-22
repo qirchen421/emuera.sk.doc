@@ -28,7 +28,7 @@ before_script:
   - pip install virtualenv
   - pip install mkdocs
   - pip install mkdocs-material
-  - pip install mkdocs-minify-plugin
+  - pip install mkdocs-minify-plugin==0.5.0
   - pip install mkdocs-static-i18n
   - virtualenv venv
   - source venv/bin/activate
