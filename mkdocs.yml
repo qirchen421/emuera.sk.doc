@@ -88,6 +88,10 @@ nav:
           - Reference/MAP_SERIALIZATION.md
       - DataTable（データベース）系:
           - Reference/DT_MANAGE.md
+          - Reference/DT_COLUMN.md
+          - Reference/DT_ROW.md
+          - Reference/DT_CELL.md
+          - Reference/DT_SELECT.md
       - その他:
           - Reference/EXISTFILE.md
           - Reference/ENUMFILES.md

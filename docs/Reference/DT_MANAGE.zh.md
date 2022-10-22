@@ -1,6 +1,6 @@
 # DataTable 管理相关函数
 
-| 函数名                                                            | 参数     | 返回值 |
+| 函数名                                                          | 参数            | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
 | ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)  | `string`        | `int`  |
 | ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)   | `string`        | `int`  |

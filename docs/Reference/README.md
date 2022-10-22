@@ -386,13 +386,29 @@
 
 ### DataTable（データベース）系
 
-| 関数名                                                          | 引数            | 戻り値 |
-| :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)  | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)   | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md) | `string`        | `1`    |
-| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)   | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)  | `string`, `int` | `int`  |
+| 関数名                                                                | 引数                                                      | 戻り値   |
+| :-------------------------------------------------------------------- | :-------------------------------------------------------- | :------- |
+| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)        | `string`                                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)         | `string`                                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md)       | `string`                                                  | `1`      |
+| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)         | `string`                                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)        | `string`, `int`                                           | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](./DT_COLUMN.md)    | `string`, `string`(, `any`, `int`)                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](./DT_COLUMN.md)  | `string`, `string`                                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.md) | `string`, `string`                                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.md) | `string`                                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_ADD`](./DT_ROW.md)          | `string`([, `string`, `any`] ...)                         | `int`    |
+|                                                                       | `string`, `ref` `string[]`, `ref` `any[]`, `int`          | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_SET`](./DT_ROW.md)          | `string`, `int`, `string`, `any`([, `string`, `any`] ...) | `int`    |
+|                                                                       | `string`, `int`, `ref` `string[]`, `ref` `any[]`, `int`   | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_REMOVE`](./DT_ROW.md)       | `string`, `int`                                           | `int`    |
+|                                                                       | `string`, `ref` `int[]`, `int`                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.md)       | `string`                                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.md)        | `string`, `int`, `string`(, `int`)                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.md)       | `string`, `int`, `string`(, `int`)                        | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.md)     | `string`, `int`, `string`(, `int`)                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.md)        | `string`, `int`, `string`(, `any`, `int`)                 | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_SELECT`](./DT_SELECT.md)        | `string`(, `string`, `string`, `ref` `int[]`)             | `int`    |
 
 ### その他
 
