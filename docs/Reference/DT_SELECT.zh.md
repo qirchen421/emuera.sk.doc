@@ -15,7 +15,7 @@
 
     - 若省略 `filterExpression`，选择所有的行。
     - 若省略 `sortRule`，不进行排序。
-    - 若为指定 `output` ，将 `id` 的值依次代入 `RESULT` 数组（从 `RESULT:1` 开始）。
+    - 若未指定 `output` ，将 `id` 的值依次代入 `RESULT` 数组（从 `RESULT:1` 开始）。
 
     请参考 [`C#` 的 `DataTable.Select`](https://learn.microsoft.com/zh-cn/dotnet/api/system.data.datatable.select?view=netframework-4.8#system-data-datatable-select(system-string-system-string)) 的说明。
 

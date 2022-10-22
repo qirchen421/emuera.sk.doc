@@ -23,7 +23,7 @@
     - `DT_CREATE`：生成名为 `dataTableName` 的 `DataTable`。  
         如果已经存在名为 `dataTableName` 的 `DataTable`（创建失败），返回 `0`；若创建成功，返回 `1`。
     - `DT_EXIST`：判断是否存在名为 `dataTableName` 的 `DataTable`，若存在，返回 `1`；否则返回 `0`。
-    - `DT_RELEASE`：`删除名为 `dataTableName` 的 `DataTable`。
+    - `DT_RELEASE`：删除名为 `dataTableName` 的 `DataTable`。
     - `DT_CLEAR`：删除名为 `dataTableName` 的 `DataTable` 中保存的所有行（不会清除列的设置），返回 `1`。若指定的 `DataTable` 本身就不存在，返回 `-1`。
     - `DT_NOCASE`：设置名为 `dataTableName` 的 `DataTable` 在 [`DT_SELECT`](./DT_SELECT.md) 函数处理字符串比较时是否无视大小写。返回 `1`。若指定的 `DataTable` 本身就不存在，返回 `-1`。
         - `ignoreCase` 为 `0` 时（默认值）：大小写敏感
