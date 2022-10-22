@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v15"
+
+    * 新增了 [`DataTable` 系列函数](../Reference/README.md#datatable)。
+    * 修复了字体大小不为 `16` 时输入栏的显示问题。
+
 === "v14fix"
 
     * 修复关于使用键盘输入时部分输入无效的问题。
