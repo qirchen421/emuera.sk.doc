@@ -1,6 +1,7 @@
 ---
 hide:
   - navigation
+  - toc
 ---
 # 変更ログ
 

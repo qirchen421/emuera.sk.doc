@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # XML_ADDATTRIBUTE 系列
 
 | 函数名                                                                              | 参数                                                         | 返回值 |

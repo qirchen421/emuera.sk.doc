@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # EXISTSOUND
 
 | 関数名                                                           | 引数     | 戻り値 |

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # UPDATECHECK
 
 | 函数名                                                             | 参数   | 返回值 |

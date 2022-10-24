@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # UPDATECHECK
 
 | 関数名                                                             | 引数   | 戻り値 |

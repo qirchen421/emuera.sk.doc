@@ -1,8 +1,8 @@
 ---
 hide:
   - navigation
+  - toc
 ---
-
 # 欢迎
 
 ## EmueraEM+EE 是什么

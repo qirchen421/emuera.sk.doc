@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # XML_REMOVENODE系
 
 | 関数名                                                                          | 引数                              | 戻り値 |

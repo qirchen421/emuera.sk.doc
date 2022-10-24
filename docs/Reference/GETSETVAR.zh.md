@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # SETVAR / GETVAR 系列
 
 | 函数名                                                       | 参数            | 返回值   |

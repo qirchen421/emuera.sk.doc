@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # FORCE_QUIT_AND_RESTART
 
 | 関数名                                                                                   | 引数   | 戻り値 |
