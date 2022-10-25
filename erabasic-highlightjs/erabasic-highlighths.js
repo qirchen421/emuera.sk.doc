@@ -221,6 +221,16 @@
         beginScope: 'built_in',
         contains: [Comma, FormStringReturn],
     }
+    const ApiIndex = {
+        begin: [
+            /[0-9a-z]+/,
+            /\./,
+        ],
+        beginScope: {
+            1: "number",
+            2: "punctuation"
+        },
+    }
 
     const PlaceHolderContains = [LeftRight, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, OperatorExceptMod, PunctuationExceptRB]
     StrPlaceHolder.contains = PlaceHolderContains;
@@ -228,7 +238,7 @@
     AtPlaceHolder.contains = [LeftRight, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, Operator, Punctuation];
     const ErhRoot = [QuotedComment, SpecialMacro, SpecialComment, Comment, Descriptor, Keyword, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
     const ErbRoot = [QuotedComment, SpecialMacro, SpecialComment, Comment, FuncDefine, Descriptor, FormEolCommand, FormFuncCommand, ReturnCommand, PlainTextPrint, FuncCall, MethodCall, Keyword, BuildIn, BuildInVar, Identifier, String, Number, AtFormString, PreProcessor, Operator, Punctuation];
-    const ErbAPIRoot = [BuildIn, ApiType, Identifier, Operator, Punctuation, Number];
+    const ErbAPIRoot = [ApiIndex, BuildIn, ApiType, Identifier, Operator, Punctuation, Number];
     const GetRule = function (case_insensitive, erh) {
         return function (_hljs) {
             return {
@@ -236,7 +246,7 @@
                 case_insensitive: case_insensitive,
                 unicodeRegex: true,
                 disableAutodetect: true,
-                contains: erh===undefined ? ErbAPIRoot : (erh? ErhRoot : ErbRoot),
+                contains: erh === undefined ? ErbAPIRoot : (erh ? ErhRoot : ErbRoot),
             }
         }
     };
@@ -246,16 +256,16 @@
     hljs.registerLanguage("erbi", GetRule(true, false));
     hljs.registerLanguage("erbapi", GetRule(false));
 })();
-(function(){
+(function () {
     const CSVItem = {
-        begin:/[^,;]/,
-        end:/(?=,|;|\n|$)/,
-        scope:'string',
+        begin: /[^,;]/,
+        end: /(?=,|;|\n|$)/,
+        scope: 'string',
     };
     const CSVComment = {
-        begin:/;/,
-        end:/\n|$/,
-        scope:'comment',
+        begin: /;/,
+        end: /\n|$/,
+        scope: 'comment',
     };
     hljs.registerLanguage("csv", function (_hljs) {
         return {

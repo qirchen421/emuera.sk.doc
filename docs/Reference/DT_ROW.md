@@ -18,14 +18,14 @@ hide:
 !!! info "API"
 
     ```  { #language-erbapi }
-    1. int DT_ROW_ADD dataTableName, ([, columnName, columnValue] ...)
-    2. int DT_ROW_ADD dataTableName, columnNames, columnValues, count
+    a. int DT_ROW_ADD dataTableName, ([, columnName, columnValue] ...)
+    b. int DT_ROW_ADD dataTableName, columnNames, columnValues, count
 
-    1. int DT_ROW_SET dataTableName, idValue, ([, columnName, columnValue] ...)
-    2. int DT_ROW_ADD dataTableName, idValue, columnNames, columnValues, count
+    a. int DT_ROW_SET dataTableName, idValue, ([, columnName, columnValue] ...)
+    b. int DT_ROW_ADD dataTableName, idValue, columnNames, columnValues, count
 
-    1. int DT_ROW_REMOVE dataTableName, idValue
-    2. int DT_ROW_REMOVE dataTableName, idValues, count
+    a. int DT_ROW_REMOVE dataTableName, idValue
+    b. int DT_ROW_REMOVE dataTableName, idValues, count
 
     int DT_ROW_LENGTH dataTableName
     ```
