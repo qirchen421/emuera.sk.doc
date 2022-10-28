@@ -159,6 +159,7 @@
         - `color` 属性：サ子区域的背景色。可省略。格式与 `<font>` 标签相同。
     - 现在图像、`div` 之类的超过行高度的内容即使所在行移出画面也能正常显示了。
     - `HTML_PRINT` 的 `<img>` 标签添加 `srcm` 属性。与 CBG 系列的按钮映射图像相似。执行 [INPUT 系列命令的扩展模式](./README.md#input)或 `INPUTMOUSEKEY` 命令时，将鼠标正下方的按钮映射图像颜色（RGB部分）赋值到 `RESULT:3`（`INPUTMOUSEKEY` 时赋值到 `RESULT:6`）。
+    - `HTML_PRINT` 添加第二参数（整型）。第二参数不为 `0`（默认值）时，不会发生强制换行。
 
 !!! example "示例代码"
 

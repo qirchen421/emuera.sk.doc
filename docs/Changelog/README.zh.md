@@ -8,6 +8,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v16fix"
+
+    * 修复了部分情况下按钮不响应鼠标操作等问题。
+    * 新增了 [`HTML_PRINT` 的第二参数](../Reference/README.md#html_print)。
+
 === "v16"
 
     *  新增了 [`DT_TOXML`](../Reference/DT_SERIALIZATION.md) / [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md) / [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md) / [`MOVETEXTBOX`](../Reference/TEXTBOX.md) / [`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。

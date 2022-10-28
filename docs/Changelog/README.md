@@ -7,6 +7,11 @@ hide:
 
 ## Emuera.EM
 
+=== "v16fix"
+
+    * バグ修正：一部状況でボタンがマウスに反応しないなどの不具合を修正。
+    * 機能拡張：[`HTML_PRINT`の第二引数](../Reference/README.md#html_print)を追加。
+
 === "v16"
 
     * 関数追加：[`DT_TOXML`](../Reference/DT_SERIALIZATION.md), [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md)，[`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md)，[`MOVETEXTBOX`](../Reference/TEXTBOX.md)，[`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。
