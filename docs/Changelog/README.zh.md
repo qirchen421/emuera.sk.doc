@@ -111,6 +111,10 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+=== "v25"
+	* 移植了 `Emuera-Anchor` 的[剪贴板功能](../Reference/README.md#emuera-anchor_2)
+	* 补充了遗漏的翻译
+
 === "V24"
 	* [多语言支持](../i18n/README.md)(同EMv14)
 	* `GETNUM` 现在支持[多维数组的 ERD 功能](../Reference/README.md#getnumerd)

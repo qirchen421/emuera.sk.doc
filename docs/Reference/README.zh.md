@@ -62,6 +62,11 @@
 
     只有标题栏和任务栏的图标会发生变化（`Emuera.exe` 的图标不会改变）。
 
+### ![](../assets/images/IconEE.webp)`Emuera-Anchor` 的剪贴板功能的移植
+!!! summary ""
+
+	添加了自动将 `Emuera` 的显示文字复制到剪贴板的功能。可在設定→剪贴板处设置。
+
 ## 常量 / 变量
 
 ### ![](../assets/images/IconEE.webp)使用 `CSV` 文件 / `ERD` 文件来调用 `ERH` 文件中定义的数组变量
