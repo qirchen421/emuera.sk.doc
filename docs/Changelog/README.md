@@ -7,6 +7,13 @@ hide:
 
 ## Emuera.EM
 
+=== "v16"
+
+    * 関数追加：[`DT_TOXML`](../Reference/DT_SERIALIZATION.md), [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md)，[`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md)，[`MOVETEXTBOX`](../Reference/TEXTBOX.md)，[`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。
+    * 機能拡張：[`<div>`タグ](../Reference/README.md#html_print)追加、`<img>`タグに`srcm`属性追加、描画仕様拡張。
+    * 機能拡張：`PRINT_IMG`命令に更に[2つの形式](../Reference/README.md#html_printprint)を追加。
+    * 機能拡張：[`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md)の配列サイズが指定できるように。
+
 === "v15"
 
     * 関数追加：[`DataTable`系関数](../Reference/README.md#datatable)を追加。
@@ -119,7 +126,7 @@ hide:
 
 === "v21"
 
-    * [`GETTEXTBOX`](../Reference/GETTEXTBOX.md), [`SETTEXTBOX`](../Reference/SETTEXTBOX.md)追加
+    * [`GETTEXTBOX`](../Reference/TEXTBOX.md), [`SETTEXTBOX`](../Reference/TEXTBOX.md)追加
 
 === "v20"
 

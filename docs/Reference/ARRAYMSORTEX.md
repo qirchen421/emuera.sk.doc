@@ -5,16 +5,16 @@ hide:
 
 # ARRAYMSORTEX
 
-| 関数名                                                               | 引数                                   | 戻り値 |
-| :------------------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`)    | `1`    |
-|                                                                      | `ref` `int`, `ref` `string[]`(, `int`) | `1`    |
+| 関数名                                                               | 引数                                          | 戻り値 |
+| :------------------------------------------------------------------- | :-------------------------------------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`, `int`)    | `1`    |
+|                                                                      | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`    |
 
 !!! info "API"
 
     ```  { #language-erbapi }
-    1. 1 ARRAYMSORTEX indexName, arrayNameList(, sortAscending)
-    2. 1 ARRAYMSORTEX indexArray, arrayNameList(, sortAscending)
+    1. 1 ARRAYMSORTEX indexName, arrayNameList(, sortAscending, size)
+    2. 1 ARRAYMSORTEX indexArray, arrayNameList(, sortAscending, size)
     ```
     
     本家版[`ARRAYMSORTEX`](https://osdn.net/projects/emuera/wiki/excom#h5-ARRAYMSORT.20array1.7B.2C.20array2....7D)と似ています。
@@ -22,7 +22,7 @@ hide:
     1. `indexName`で表した変数配列を並べ替え，そのソートを基準に，`arrayNameList`内すべての配列を同じ順で並べ替えます。
     2. `indexArray`を並べ替え，そのソートを基準に，`arrayNameList`内すべての配列を同じ順で並べ替えます。
 
-    `sortAscending`が`0`以外または省略した場合，昇順で並べ替え，そうでない場合，降順で並べ替えます。
+    `sortAscending`が`0`以外または省略した場合，昇順で並べ替え，そうでない場合，降順で並べ替えます。`size`を指定した場合、`0`または空文字列で終わるの代わりに、指定サイズの配列に参照します。
 
 !!! hint "ヒント"
 

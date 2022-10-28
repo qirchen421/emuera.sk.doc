@@ -92,14 +92,14 @@ nav:
           - Reference/DT_ROW.md
           - Reference/DT_CELL.md
           - Reference/DT_SELECT.md
+          - Reference/DT_SERIALIZATION.md
       - その他:
           - Reference/EXISTFILE.md
           - Reference/ENUMFILES.md
           - Reference/UPDATECHECK.md
           - Reference/GETMEMORYUSAGE.md
           - Reference/CLEARMEMORY.md
-          - Reference/GETTEXTBOX.md
-          - Reference/SETTEXTBOX.md
+          - Reference/TEXTBOX.md
   - 変更ログ: Changelog/README.md
   - i18n: i18n/README.md
 plugins:

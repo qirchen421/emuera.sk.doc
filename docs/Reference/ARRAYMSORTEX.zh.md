@@ -5,16 +5,16 @@ hide:
 
 # ARRAYMSORTEX
 
-| 函数名                                                               | 参数                                   | 返回值 |
-| :------------------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`)    | `1`    |
-|                                                                      | `ref` `int`, `ref` `string[]`(, `int`) | `1`    |
+| 函数名                                                               | 参数                                          | 返回值 |
+| :------------------------------------------------------------------- | :-------------------------------------------- | :----- |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`, `int`)    | `1`    |
+|                                                                      | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`    |
 
 !!! info "API"
 
     ```  { #language-erbapi }
-    1. 1 ARRAYMSORTEX array_indexName, arrayNameList(, sortAscending)
-    2. 1 ARRAYMSORTEX array_indexArray, arrayNameList(, sortAscending)
+    1. 1 ARRAYMSORTEX array_indexName, arrayNameList(, sortAscending, size)
+    2. 1 ARRAYMSORTEX array_indexArray, arrayNameList(, sortAscending, size)
     ```
     
     与本家的 [`ARRAYMSORTEX`](https://osdn.net/projects/emuera/wiki/excom#h5-ARRAYMSORT.20array_a.7B.2C.20array_b....7D) 函数类似。
@@ -22,7 +22,7 @@ hide:
     1. 将名为 `array_indexName` 的数组变量重新排序，以排序后的顺序为基准，继续排列 `arrayNameList` 里的矩阵。
     2. 将数组变量 `array_indexArray` 重新排序，以排序后的顺序为基准，继续排列 `arrayNameList` 里的矩阵。
 
-    `sortAscending` 参数设置为「`0` 以外的数值」或直接省略时，顺序排列；否则倒序排列。
+    `sortAscending` 参数设置为「`0` 以外的数值」或直接省略时，顺序排列；否则倒序排列。若指定了 `size`，则不将 `0` / 空字符串视为数组结尾，而是参考指定的数组范围。
 
 !!! hint "提示"
 

@@ -8,6 +8,13 @@ hide:
 
 ## Emuera.EM
 
+=== "v16"
+
+    *  新增了 [`DT_TOXML`](../Reference/DT_SERIALIZATION.md) / [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md) / [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md) / [`MOVETEXTBOX`](../Reference/TEXTBOX.md) / [`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。
+    * 新增了 [`<div>` 标签](../Reference/README.md#html_print)，`<img>` 标签新增了 `srcm` 属性，扩展了渲染时的特性。
+    * 为 `PRINT_IMG` 命令添加了[另外两种调用形式](../Reference/README.md#html_print-print)。
+    * [`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md) 现在可以指定数组大小了。
+
 === "v15"
 
     * 新增了 [`DataTable` 系列函数](../Reference/README.md#datatable)。
@@ -120,7 +127,7 @@ hide:
 
 === "v21"
 
-	* 新增函数：[`GETTEXTBOX`](../Reference/GETTEXTBOX.md) / [`SETTEXTBOX`](../Reference/SETTEXTBOX.md)。
+	* 新增函数：[`GETTEXTBOX`](../Reference/TEXTBOX.md) / [`SETTEXTBOX`](../Reference/TEXTBOX.md)。
 
 === "v20"
 
