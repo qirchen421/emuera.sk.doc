@@ -147,7 +147,7 @@ Please don't change anything if there's no issues.]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.IgnoreTags"><![CDATA[Ignore <> tags]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.ReplaceTags"><![CDATA[Replace <> with]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.NewLineOnly"><![CDATA[Show new lines only - Classic Mode]]></tr>
-    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[Clear Clipboard and Buffer when game screen clears]]></tr>
+    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[Clear Clipboard and Buffer when back to title]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.TriggerToUse"><![CDATA[Triggers to Use]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.LClick"><![CDATA[LeftClick - Mouse]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.MClick"><![CDATA[MiddleClick - Mouse]]></tr>

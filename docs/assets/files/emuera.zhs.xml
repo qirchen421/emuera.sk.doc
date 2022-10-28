@@ -147,7 +147,7 @@ Emuera的历史版本有效的内容变得无效等等现象而设置的。
     <tr id="UI.ConfigDialog.Clipboard.IgnoreTags"><![CDATA[无视文本中的<>标签]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.ReplaceTags"><![CDATA[将标签<>替换为以下文字]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.NewLineOnly"><![CDATA[只复制新行]]></tr>
-    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[画面清除的同时清除剪贴板与历史记录]]></tr>
+    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[返回标题画面的同时清除剪贴板与历史记录]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.TriggerToUse"><![CDATA[复制到剪贴板的时机]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.LClick"><![CDATA[鼠标左键单击时]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.MClick"><![CDATA[转动鼠标滚轮时]]></tr>
