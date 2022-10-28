@@ -58,6 +58,11 @@
 
     変化するのはタイトルバーとタスクバーのアイコンだけです（`Emuera.exe`のアイコンは変化しません）。
 
+### ![](../assets/images/IconEE.webp)`Emuera-Anchor`の`Clipboard`機能を移植
+!!! summary ""
+
+	設定→クリップボードから、`Emuera`で表示したテキストを自動的にクリップボードでコピーする機能を追加
+
 ## 定数・変数
 
 ### ![](../assets/images/IconEE.webp)`ERH`で定義した変数の配列に、`CSV`ファイル/`ERD`ファイルで名前を付けられるように

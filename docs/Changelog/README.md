@@ -110,7 +110,11 @@ hide:
     * 初公開
 
 ## Emuera.EE
-=== "V24"
+=== "v25"
+	* `Emuera-Anchor`の[`Clipboard`機能](../Reference/README.md#emuera-anchorclipboard)を移植
+	* 翻訳を補完
+
+=== "v24"
 	* [多言語化](../i18n/README.md)に対応(EMv14に同じく)
 	* `GETNUM`を[多次元配列ERDに対応](../Reference/README.md#getnumerd)
 	* [`ERDNAME`](../Reference//ERDNAME.md)追加
