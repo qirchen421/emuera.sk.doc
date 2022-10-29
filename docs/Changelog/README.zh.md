@@ -11,7 +11,7 @@ hide:
 === "v16fix"
 
     * 修复了部分情况下按钮不响应鼠标操作等问题。
-    * 新增了 [`HTML_PRINT` 的第二参数](../Reference/README.md#html_print)。
+    * 新增了 [`HTML_PRINT` 的第二参数](../Reference/README.md#html_print)以及 `<div>` 标签的 `size`、`rect` 属性。
 
 === "v16"
 
