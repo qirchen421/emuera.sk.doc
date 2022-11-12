@@ -120,6 +120,11 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v26"
+	* `GSETPEN`による[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)機能拡張
+	* [`GGETPEN`](../Reference//GGETPEN.md),[`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md),[`GGETBRUSH`](../Reference/GGETBRUSH.md)追加
+	* [ツールチップ機能拡張命令](../Reference/TOOLTIP_EXTENSION.md)追加
+
 === "v25"
 	* `Emuera-Anchor`の[`Clipboard`機能](../Reference/README.md#emuera-anchorclipboard)を移植
 	* 翻訳を補完

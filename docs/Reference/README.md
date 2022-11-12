@@ -326,6 +326,15 @@
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | なし         |
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier` |
 
+### ツールチップ系
+
+| 関数名                                                                           | 引数     |
+| :------------------------------------------------------------------------------- | :------- |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`    |
+
 ### 関数系（CALL等）
 
 | 関数名                                                                 | 引数           |
@@ -344,6 +353,10 @@
 | ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md)       | `int`                               | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md)         | `string`, `string`, `int`(, `int`)  | `int`    |
 | ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.md)                   | `int`                               | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md)         | `int`                               | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md)               | `int`                               | `int`    |
+
 
 ### サウンド系
 
