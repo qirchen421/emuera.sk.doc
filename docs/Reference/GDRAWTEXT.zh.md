@@ -15,7 +15,7 @@ hide:
     int GDRAWTEXT gID, text(, x, y)
     ```
 
-    在 `gID` 指定的 `Graphics` 中绘制 `text`。字体等使用 `GSETFONT` 指定的样式。  
+    在 `gID` 指定的 `Graphics` 中绘制 `text`。字体、描边等使用 `GSETFONT` / `GSETPEN` 指定的样式。  
     省略参数 `x` / `y` 时，默认在 `(0, 0)` 的位置绘制。
 
 !!! hint "提示"
@@ -29,11 +29,12 @@ hide:
     #DIM DYNAMIC LCOUNT
 
     	FOR LCOUNT, 1, 6
-    		GCREATE LCOUNT, 2000, 250
+    		GCREATE LCOUNT, 2000, 300
     		GSETFONT LCOUNT, "Arial", LCOUNT*50, 0
+    		GSETPEN LCOUNT, 0xFFFF0000, 5
     		GDRAWTEXT LCOUNT, "ABC"
     		SPRITECREATE @"TEST{LCOUNT}", LCOUNT
-    		HTML_PRINT @"<img src='TEST{LCOUNT}' srcb='' height='250'>"
+    		HTML_PRINT @"<img src='TEST{LCOUNT}' srcb='' height='300'>"
     		REPEAT 2
     			PRINTL
     		REND

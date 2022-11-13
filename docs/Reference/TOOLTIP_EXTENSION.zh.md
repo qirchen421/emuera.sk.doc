@@ -3,9 +3,9 @@ hide:
   - toc
 ---
 
-# TOOLTIP機能拡張
+# TOOLTIPS 功能扩展
 
-| 関数名                                                                           | 引数     |
+| 函数名                                                                           | 参数     |
 | :------------------------------------------------------------------------------- | :------- |
 | ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
 | ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
@@ -21,21 +21,21 @@ hide:
     TOOLTIP_FORMAT formatFlags
     ```
 
-	`HTML_PRINT`のツールチップ機能拡張機能です
+	`HTML_PRINT` 的提示框功能扩展。
     
-	- `TOOLTIP_CUSTOM`：下記のツールチップ機能拡張を使用する場合、`TOOLTIP_CUSTOM`の引数に非`0`を指定することで機能がオンになります。`0`を指定するとオフになり、従来のツールチップ表示に戻ります
-	- `TOOLTIP_SETFONT`：ツールチップ内に適用されるフォント名を指定します
-	- `TOOLTIP_SETFONTSIZE`：ツールチップ内で適用されるフォントサイズを指定します
-	- `TOOLTIP_FORMAT`：ツールチップ内のテキストフォーマットを指定できます。引数はC#の[`TextFormatFlags`](https://learn.microsoft.com/ja-jp/dotnet/api/system.windows.forms.textformatflags?view=netframework-4.8)に準拠します
-	- 本家からあった`TOOLTIP_SETCOLOR`が機能するように。ツールチップ拡張をオンにしてる場合に適用されます
-	- ツールチップ内で`<br>`タグを使用可能に。こちらはツールチップ拡張がオフでも使用可能
+	- `TOOLTIP_CUSTOM`：要使用以下提示框功能扩展时，`TOOLTIP_CUSTOM` 的参数设为非 `0` 以开启功能。指定为 `0` 时扩展功能关闭，以原版提示框的方式显示。
+	- `TOOLTIP_SETFONT`：设置提示框内文字的字体名称。
+	- `TOOLTIP_SETFONTSIZE`：设置提示框内文字的字体大小名称。
+	- `TOOLTIP_FORMAT`：设置提示框内文本的格式。参数参考 C# 的 [`TextFormatFlags`](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.forms.textformatflags?view=netframework-4.8)。
+	- 原版中已有的 `TOOLTIP_SETCOLOR` 现在在扩展功能开启时能正常生效。
+	- 提示框内现在可使用 `<br>` 标签。扩展功能关闭时仍然有效。
 
-!!! hint "ヒント"
+!!! hint "提示"
 
-    命令のみの機能です
+    仅支持命令式写法。
 
 
-!!! example "例" 
+!!! example "示例代码" 
     
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE 
