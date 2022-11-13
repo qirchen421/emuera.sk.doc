@@ -156,18 +156,18 @@
             - `relative`（デフォルト）：今の文字位置で描画。
             - `abosolute`：ウィンドウの固定位置で描画、スクロールしても移動しません。`(0, 0)`はウィンドウの左下、`ypos`は上方向が正です。
         - `margin`属性：サブエリアの全四辺のマージン領域。省略可。
-            - `margin='all'`：`all`を四辺すべてに適用します。`px`、フォントサイズ両方可。
-            - `margin='leftRight,topBottom'`：`leftRight`を上下、`leftRight`を左右に適用します。`px`、フォントサイズ両方可。
-            - `margin='top,leftRight,bottom'`：`top`を上、`leftRight`を左右、`bottom`を下に適用します。`px`、フォントサイズ両方可。
-            - `margin='top,right,bottom,left'`：`top`を上、`right`を右、`bottom`を下、`left`を左に適用します。`px`、フォントサイズ両方可。
+            - `margin='all'`：`all`を四辺すべてに適用します。`px`、フォントサイズ百分率両方可。
+            - `margin='leftRight,topBottom'`：`leftRight`を上下、`leftRight`を左右に適用します。`px`、フォントサイズ百分率両方可。
+            - `margin='top,leftRight,bottom'`：`top`を上、`leftRight`を左右、`bottom`を下に適用します。`px`、フォントサイズ百分率両方可。
+            - `margin='top,right,bottom,left'`：`top`を上、`right`を右、`bottom`を下、`left`を左に適用します。`px`、フォントサイズ百分率両方可。
         - `padding`属性：サブエリアの全四辺のパディング領域。省略可。指定のフォーマットは`margin`属性と同じです。
         - `border`属性：サブエリアの境界の幅。省略可。指定のフォーマットは`margin`属性と同じです。
         - `bcolor`属性：サブエリアの境界の色。省略可。指定のフォーマットは`margin`属性と似ているが、色の書式は`<font>`タグの`color`属性と同じです。
         - `radius`属性：サブエリアの境界の外側の角の丸め（半径）。省略可。
-            - `radius='all'`：`all`を全4角に適用します。`px`、フォントサイズ両方可。
-            - `radius='ltRb,rtLb'`：`ltRb`を左上と右下、`rtLb`右上と左下に適用します。`px`、フォントサイズ両方可。
-            - `radius='lt,rtLb,rb'`：`lt`を左上、`rtLb`を右上と左下、`rb`を右下に適用します。`px`、フォントサイズ両方可。
-            - `radius='lt,rt,rb,lb'`：`lt`を左上、`rt`を右上、`rb`を右下、`lb`を左下に適用します。`px`、フォントサイズ両方可。
+            - `radius='all'`：`all`を全四角に適用します。`px`、フォントサイズ百分率両方可。
+            - `radius='ltRb,rtLb'`：`ltRb`を左上と右下、`rtLb`右上と左下に適用します。`px`、フォントサイズ百分率両方可。
+            - `radius='lt,rtLb,rb'`：`lt`を左上、`rtLb`を右上と左下、`rb`を右下に適用します。`px`、フォントサイズ百分率両方可。
+            - `radius='lt,rt,rb,lb'`：`lt`を左上、`rt`を右上、`rb`を右下、`lb`を左下に適用します。`px`、フォントサイズ百分率両方可。
     - 画像、`div`など行の高さを超えた内容は所在行が画面外でも表示可能にしました。
     - `HTML_PRINT`の`<img>`タグに属性`srcm`を追加。CBG系のボタンマップと似ています。[INPUT系の拡張モード](./README.md#input)または`INPUTMOUSEKEY`命令を実行するとき，マウスカーソル直下のボタンマップ画像の色（RGB部分）を`RESULT:3`(`INPUTMOUSEKEY`の場合`RESULT:6`)に代入します。
     - `HTML_PRINT`に第二引数（整数型）を追加。第二引数が`0`（デフォルト）以外の場合，強制改行をしなくなります。

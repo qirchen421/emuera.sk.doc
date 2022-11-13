@@ -11,7 +11,7 @@ hide:
 === "v17"
 
     * 新增了 [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
-    * [`<div>` 标签](../Reference/README.md#html_print) 新增 `display`、`margin`、`margin`、`padding`、`border`、`bcolor`、`radius`属性。
+    * [`<div>` 标签](../Reference/README.md#html_print) 新增 `display`、`margin`、`padding`、`border`、`bcolor`、`radius`属性。
     * 修正了重启后渲染 `<div>` 时报错终止的问题。
 
 === "v16fix2"
