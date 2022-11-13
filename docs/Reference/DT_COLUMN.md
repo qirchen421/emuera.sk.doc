@@ -12,6 +12,7 @@ hide:
 | ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.md)  | `string`, `string`                                            | `int`  |
 | ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.md)  | `string`                                                      | `int`  |
 | ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | 無し   |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_NAMES`](./DT_COLUMN.md)   | `string`(, `ref` `string[]`)                                  | `int`  |
 
 !!! info "API"
 
@@ -21,6 +22,7 @@ hide:
     int DT_COLUMN_REMOVE dataTableName, columnName
     int DT_COLUMN_LENGTH dataTableName
     int DT_COLUMN_OPTIONS dataTableName, columnName, option, optionValue([, option, optionValue] ...)
+    int DT_COLUMN_NAMES dataTableName(, outputArray)
     ```
 
     `DataTable`（データベース，[`DataTable`](https://learn.microsoft.com/ja-jp/dotnet/api/system.data.datatable?view=netframework-4.8)クラスを基づき）の列を操作する関数です。
@@ -38,6 +40,7 @@ hide:
     - `DT_COLUMN_LENGTH`：`dataTableName`に対応する`DataTable`の列の数を返します。`DataTable`自体が存在しない場合、`-1`を返します。
     - `DT_COLUMN_OPTIONS`：`dataTableName`に対応する`DataTable`の列`columnName`のオプションを指定します。`option`は大小文字無視。
         - `option`が`DEFAULT`：指定した列のデフォルト値を指定する。
+    - `DT_COLUMN_NAMES`：`dataTableName`に対応する`DataTable`のすべての列の名前を`outputArray`に順次代入します。`outputArray`が省略された場合、`RESULTS`に順次代入します。列数を返します。
 
     !!! warning "注意"
 
@@ -66,6 +69,12 @@ hide:
         DT_ROW_ADD "db", "name", "Name4", "age", 33, "height", 180
         DT_ROW_ADD "db", "name", "Name5", "age", 18, "height", 172
 
+        PRINT 列の名前：
+        FOR LOCAL, 0, DT_COLUMN_NAMES("db")
+            PRINTFORM %RESULTS:LOCAL% 
+        NEXT
+        PRINTL
+
         PRINTFORML 列の数：{DT_COLUMN_LENGTH("db")}，列「age」の存否：{DT_COLUMN_EXIST("db", "age")}
 
         PRINTFORML %DT_CELL_GETS("db", 1, "name")%の年齢は{DT_CELL_GET("db", 1, "age")}
@@ -77,6 +86,7 @@ hide:
         ONEINPUT
     ``` 
     ``` title="結果"
+    列の名前：id name height age 
     列の数：4，列「age」の存否：2
     Name2の年齢は5
     列の数：3，列「age」の存否：0

@@ -12,6 +12,7 @@ hide:
 | ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.md)  | `string`, `string`                                            | `int`  |
 | ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.md)  | `string`                                                      | `int`  |
 | ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | 无     |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_NAMES`](./DT_COLUMN.md)   | `string`(, `ref` `string[]`)                                  | `int`  |
 
 !!! info "API"
 
@@ -38,6 +39,7 @@ hide:
     - `DT_COLUMN_LENGTH`：返回名为 `dataTableName` 的 `DataTable` 的列数。若指定的 `DataTable` 本身就不存在，返回 `-1`。
     - `DT_COLUMN_OPTIONS`：对名为 `dataTableName` 的 `DataTable` 的 `columnName` 列的设置项进行设置。`option` 无视大小写。
         - `option` 为 `DEFAULT`：设定指定列的默认值。
+    - `DT_COLUMN_NAMES`：对名为 `dataTableName` 的 `DataTable` 的列名依次赋值给 `outputArray`。若 `outputArray` 被省略，则次赋值给 `RESULTS`。返回列数。
 
     !!! warning "注意"
 
@@ -65,6 +67,12 @@ hide:
         DT_ROW_ADD "db", "name", "Name4", "age", 33, "height", 180
         DT_ROW_ADD "db", "name", "Name5", "age", 18, "height", 172
 
+        PRINT 列名：
+        FOR LOCAL, 0, DT_COLUMN_NAMES("db")
+            PRINTFORM %RESULTS:LOCAL% 
+        NEXT
+        PRINTL
+
         PRINTFORML 列数：{DT_COLUMN_LENGTH("db")}，列「age」是否存在：{DT_COLUMN_EXIST("db", "age")}
 
         PRINTFORML %DT_CELL_GETS("db", 1, "name")%的年龄为{DT_CELL_GET("db", 1, "age")}
@@ -76,6 +84,7 @@ hide:
         ONEINPUT
     ```
     ``` title="输出结果"
+    列名：id name height age 
     列数：4，列「age」是否存在：2
     Name2的年龄为5
     列数：3，列「age」是否存在：0

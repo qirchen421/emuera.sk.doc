@@ -158,7 +158,23 @@
         - `size` 属性：`width` 与 `height` 的简略写法。格式：`size='width,height'`。
         - `rect` 属性：`xpos`、`ypos`、`width` 与 `height` 的简略写法。格式：`rect='xpos,ypos,width,height'`。
         - `depth` 属性：子区域的深度。可省略。负数向视线反方向移动，正数向视线同方向移动。
-        - `color` 属性：サ子区域的背景色。可省略。格式与 `<font>` 标签相同。
+        - `color` 属性：子区域的背景色。可省略。格式与 `<font>` 标签的 `color` 属性相同。
+        - `display` 属性：子区域的渲染方式。可省略。
+            - `relative`（默认值）：渲染在当前文字的现在位置。
+            - `abosolute`：渲染在窗口的固定位置，滚动鼠标滚轮也不会移动。原点 `(0, 0)` 为窗口左下，`ypos` 上方向为正。
+        - `margin` 属性：子区域的外边距。可省略。
+            - `margin='all'`：`all` 指定全部四条边。`px`、字体大小百分比均有效。
+            - `margin='leftRight,topBottom'`：`leftRight`指定上下、`leftRight`指定左右。`px`、字体大小百分比均有效。
+            - `margin='top,leftRight,bottom'`：`top`指定上、`leftRight`指定左右、`bottom`指定下。`px`、字体大小百分比均有效。
+            - `margin='top,right,bottom,left'`：`top`指定上、`right`指定右、`bottom`指定下、`left`指定左。`px`、字体大小百分比均有效。
+        - `padding` 属性：子区域的内边距。可省略。格式与 `margin` 属性相同。
+        - `border` 属性：子区域的边框宽度。可省略。格式与 `margin` 属性相同。
+        - `bcolor` 属性：子区域的边框颜色。可省略。格式与 `margin` 属性相似，颜色格式与 `<font>` 标签的 `color` 属性相同。
+        - `radius` 属性：子区域的边框圆角（半径）。可省略。
+            - `radius='all'`：`all`指定全四角。`px`、字体大小百分比均有效。
+            - `radius='ltRb,rtLb'`：`ltRb`指定左上和右下、`rtLb`右上和左下。`px`、字体大小百分比均有效。
+            - `radius='lt,rtLb,rb'`：`lt`指定左上、`rtLb`指定右上和左下、`rb`指定右下。`px`、字体大小百分比均有效。
+            - `radius='lt,rt,rb,lb'`：`lt`指定左上、`rt`指定右上、`rb`指定右下、`lb`指定左下。`px`、字体大小百分比均有效。
     - 现在图像、`div` 之类的超过行高度的内容即使所在行移出画面也能正常显示了。
     - `HTML_PRINT` 的 `<img>` 标签添加 `srcm` 属性。与 CBG 系列的按钮映射图像相似。执行 [INPUT 系列命令的扩展模式](./README.md#input)或 `INPUTMOUSEKEY` 命令时，将鼠标正下方的按钮映射图像颜色（RGB部分）赋值到 `RESULT:3`（`INPUTMOUSEKEY` 时赋值到 `RESULT:6`）。
     - `HTML_PRINT` 添加第二参数（整型）。第二参数不为 `0`（默认值）时，不会发生强制换行。

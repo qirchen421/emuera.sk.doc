@@ -7,6 +7,12 @@ hide:
 
 ## Emuera.EM
 
+=== "v17"
+
+    * 関数追加：[`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
+    * 機能拡張：[`<div>`タグ](../Reference/README.md#html_print)に`display`、`margin`、`margin`、`padding`、`border`、`bcolor`、`radius`属性を追加。
+    * バグ修正：再起動した後`<div>`を描画するの時エラーで落ちる不具合を修正。
+
 === "v16fix2"
 
     * バグ修正：`<div>`タグにおける描画タイミング、マウス判定などの不具合を修正。

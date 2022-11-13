@@ -52,6 +52,8 @@ nav:
           - Reference/FORCE_QUIT.md
           - Reference/FORCE_QUIT_AND_RESTART.md
           - Reference/FORCE_BEGIN.md
+      - ツールチップ系:
+          - Reference/TOOLTIP_EXTENSION.md
       - 関数系（CALL等）:
           - Reference/EXISTFUNCTION.md
           - Reference/TRYCALLF.md
@@ -63,6 +65,9 @@ nav:
           - Reference/GGETFONTSTYLE.md
           - Reference/GGETTEXTSIZE.md
           - Reference/GDRAWGWITHROTATE.md
+          - Reference/GGETPEN.md
+          - Reference/GGETPENWIDTH.md
+          - Reference/GGETBRUSH.md
       - サウンド系:
           - Reference/PLAYSOUND.md
           - Reference/STOPSOUND.md
@@ -136,6 +141,7 @@ plugins:
           画像処理関連: 图像处理相关
           サウンド系: 音频处理相关
           XML系: XML 文件处理相关
+          ツールチップ系: 提示框处理相关
           MAP（連想配列）系: MAP（映射数组）相关
           その他: 其他
           変更ログ: 更新日志

@@ -8,6 +8,12 @@ hide:
 
 ## Emuera.EM
 
+=== "v17"
+
+    * 新增了 [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
+    * [`<div>` 标签](../Reference/README.md#html_print) 新增 `display`、`margin`、`margin`、`padding`、`border`、`bcolor`、`radius`属性。
+    * 修正了重启后渲染 `<div>` 时报错终止的问题。
+
 === "v16fix2"
 
     * 修复了 `<div>` 标签的渲染时机，鼠标判定等方面的问题。
@@ -121,14 +127,19 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+=== "v26"
+	* 扩展了利用 `GSETPEN` 进行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) 的相关功能。
+	* 新增了 [`GGETPEN`](../Reference//GGETPEN.md) / [`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md) / [`GGETBRUSH`](../Reference/GGETBRUSH.md)。
+	* 新增了 [TOOLTIPS 功能扩展](../Reference/TOOLTIP_EXTENSION.md)相关函数。
+
 === "v25"
-	* 移植了 `Emuera-Anchor` 的[剪贴板功能](../Reference/README.md#emuera-anchor_2)
-	* 补充了遗漏的翻译
+	* 移植了 `Emuera-Anchor` 的[剪贴板功能](../Reference/README.md#emuera-anchor_2)。
+	* 补充了遗漏的翻译。
 
 === "V24"
-	* [多语言支持](../i18n/README.md)(同EMv14)
-	* `GETNUM` 现在支持[多维数组的 ERD 功能](../Reference/README.md#getnumerd)
-	* 新增 [`ERDNAME`](../Reference//ERDNAME.md) 函数
+	* [多语言支持](../i18n/README.md)(同EMv14)。
+	* `GETNUM` 现在支持[多维数组的 ERD 功能](../Reference/README.md#getnumerd)。
+	* 新增 [`ERDNAME`](../Reference//ERDNAME.md) 函数。
 
 === "v23"
 
