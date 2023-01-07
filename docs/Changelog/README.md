@@ -126,6 +126,14 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v28"
+	* `EM`のINPUT拡張が機能していなかったのを修正
+	* `EE`独自に`INPUT`命令を拡張
+	* [`FLOWINPUT`](../Reference///FLOWINPUT.md)追加
+
+=== "v27"
+	* `JukesBouver99`氏のパッチ提供で翻訳英語辞書に対応
+
 === "v26"
 	* `GSETPEN`による[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)機能拡張
 	* [`GGETPEN`](../Reference//GGETPEN.md),[`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md),[`GGETBRUSH`](../Reference/GGETBRUSH.md)追加
