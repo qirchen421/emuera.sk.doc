@@ -373,6 +373,12 @@
 | ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `string`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
 
+### AWAIT関連
+
+| 関数名                                                   | 引数 | 戻り値   |
+| :--------------------------------------------------------| :--- | :------- |
+| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md) | なし | `string` |
+
 ### 画像処理関連
 
 | 関数名                                                                       | 引数                                | 戻り値   |
@@ -386,7 +392,7 @@
 | ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.md)                   | `int`                               | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md)         | `int`                               | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md)               | `int`                               | `int`    |
-
+| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md) | `int`                               | `int`    |
 
 ### サウンド系
 

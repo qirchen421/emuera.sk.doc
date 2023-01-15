@@ -126,6 +126,13 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v29"
+	* `GCREATEFROMFILE`が機能しなくなっていたのを修正
+	* EMの`div`機能で`margin`,`border`,`padding`を指定したときに`div`内の文字が追従しなかったのを修正
+	* 翻訳辞書無効時にも内部処理が行われていて描画が重くなっていたのを修正
+	* [`MOUSEB`](../Reference///MOUSEB.md)追加
+	* [`SPRITEDISPOSEALL`](../Reference///SPRITEDISPOSEALL.md)追加
+
 === "v28"
 	* `EM`のINPUT拡張が機能していなかったのを修正
 	* `EE`独自に`INPUT`命令を拡張
