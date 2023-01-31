@@ -126,6 +126,10 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v30"
+	* [`SKIPLOG`](../Reference////SKIPLOG.md)命令追加
+	* メニューアクセスのショートカットキーが効かなくなっていた不具合を修正
+
 === "v29"
 	* `GCREATEFROMFILE`が機能しなくなっていたのを修正
 	* EMの`div`機能で`margin`,`border`,`padding`を指定したときに`div`内の文字が追従しなかったのを修正

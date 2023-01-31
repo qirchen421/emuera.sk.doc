@@ -311,6 +311,11 @@
 | ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`    |
 | ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
+### 表示操作・フォント操作・表示仕様参照
+| 関数名                                                     | 引数  | 戻り値 |
+| :--------------------------------------------------------- | :---- | :----- |
+| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md) | `int` | `void` |
+
 ### 文字列操作・参照
 
 | 関数名                                                             | 引数                                              | 戻り値 |
