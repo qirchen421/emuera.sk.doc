@@ -347,9 +347,11 @@
 | ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)               | `variable`, `int`(, `int`)                    | `string` |
 
 ### 入力・ウェイト
-| 関数名                                                       | 引数 | 戻り値           |
-| :----------------------------------------------------------- | :--- | :--------------- |
-| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | なし | `int` / `string` |
+| 関数名                                                       | 引数                     | 戻り値           |
+| :----------------------------------------------------------- | :----------------------- | :--------------- |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | なし                     | `int` / `string` |
+| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)     | (`int`, `int`, `int`)    | `int`            |
+| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)    | (`string`, `int`, `int`) | `string`         |
 
 ### デバッグ補助・システムフロー制御
 

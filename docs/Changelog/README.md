@@ -126,8 +126,11 @@ hide:
     * 初公開
 
 ## Emuera.EE
+==="v31"
+	* [`BINPUT`及び`BINPUTS`](../Reference///BINPUT.md)命令追加
+
 === "v30"
-	* [`SKIPLOG`](../Reference////SKIPLOG.md)命令追加
+	* [`SKIPLOG`](../Reference///SKIPLOG.md)命令追加
 	* メニューアクセスのショートカットキーが効かなくなっていた不具合を修正
 
 === "v29"
