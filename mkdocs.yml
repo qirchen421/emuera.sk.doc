@@ -33,6 +33,8 @@ nav:
       - HTML系:
           - Reference/HTML_STRINGLEN.md
           - Reference/HTML_SUBSTRING.md
+      - 表示操作・フォント操作・表示仕様参照:
+          - Referenve/SKIPLOG.md
       - 文字列操作・参照:
           - Reference/REGEXPMATCH.md
       - 変数操作・変数参照・CSV参照:
@@ -47,17 +49,21 @@ nav:
           - Reference/ERDNAME.md
       - 入力・ウェイト:
           - Reference/INPUTANY.md
+          - Referenve/BINPUT.md
       - デバッグ補助・システムフロー制御:
           - Reference/QUIT_AND_RESTART.md
           - Reference/FORCE_QUIT.md
           - Reference/FORCE_QUIT_AND_RESTART.md
           - Reference/FORCE_BEGIN.md
+          - Referenve/FLOWINPUT.md
       - ツールチップ系:
           - Reference/TOOLTIP_EXTENSION.md
       - 関数系（CALL等）:
           - Reference/EXISTFUNCTION.md
           - Reference/TRYCALLF.md
           - Reference/TRYCALLFORMF.md
+      - AWAIT関連:
+          - Referenve/MOUSEB.md
       - 画像処理関連:
           - Reference/GDRAWTEXT.md
           - Reference/GGETFONT.md
@@ -68,6 +74,7 @@ nav:
           - Reference/GGETPEN.md
           - Reference/GGETPENWIDTH.md
           - Reference/GGETBRUSH.md
+          - Referenve/SPRITEDISPOSEALL.md
       - サウンド系:
           - Reference/PLAYSOUND.md
           - Reference/STOPSOUND.md
