@@ -400,6 +400,7 @@
 | ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md)         | `int`                               | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md)               | `int`                               | `int`    |
 | ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md) | `int`                               | `int`    |
+| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.md)               | `int`, `int`, `int`, `int`, `int`   | `int`    |
 
 ### サウンド系
 

@@ -126,29 +126,32 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v32"
+	* [`GDRAWLINE`](../Reference/GDRAWLINE.md)追加
+
 === "v31fix"
 	* `BINPUT`と`div`機能を組み合わせると正常に動かない不具合を修正
 	* `BINPUT`実行時にボタンが一つも無い場合はデフォルト値を返すように。デフォルト値も無ければ従来どおりエラー
 	* `BINPUT`実行時になんらかの原因で画面描画が行われず`div`との併用ができなくなる不具合の修正
 
 ==="v31"
-	* [`BINPUT`及び`BINPUTS`](../Reference///BINPUT.md)命令追加
+	* [`BINPUT`及び`BINPUTS`](../Reference/BINPUT.md)命令追加
 
 === "v30"
-	* [`SKIPLOG`](../Reference///SKIPLOG.md)命令追加
+	* [`SKIPLOG`](../Reference/SKIPLOG.md)命令追加
 	* メニューアクセスのショートカットキーが効かなくなっていた不具合を修正
 
 === "v29"
 	* `GCREATEFROMFILE`が機能しなくなっていたのを修正
 	* EMの`div`機能で`margin`,`border`,`padding`を指定したときに`div`内の文字が追従しなかったのを修正
 	* 翻訳辞書無効時にも内部処理が行われていて描画が重くなっていたのを修正
-	* [`MOUSEB`](../Reference///MOUSEB.md)追加
-	* [`SPRITEDISPOSEALL`](../Reference///SPRITEDISPOSEALL.md)追加
+	* [`MOUSEB`](../Reference/MOUSEB.md)追加
+	* [`SPRITEDISPOSEALL`](../Reference/SPRITEDISPOSEALL.md)追加
 
 === "v28"
 	* `EM`のINPUT拡張が機能していなかったのを修正
 	* `EE`独自に`INPUT`命令を拡張
-	* [`FLOWINPUT`](../Reference///FLOWINPUT.md)追加
+	* [`FLOWINPUT`](../Reference/FLOWINPUT.md)追加
 
 === "v27"
 	* `JukesBouver99`氏のパッチ提供で翻訳英語辞書に対応
