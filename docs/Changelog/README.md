@@ -126,6 +126,10 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v33"
+	* [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)追加
+	* [`GCREATEFROMFILE`拡張](../Reference//README.md#gcreatefromfileに第三引数を指定することでemueraとの相対パスで画像を参照できるように)
+
 === "v32"
 	* [`GDRAWLINE`](../Reference/GDRAWLINE.md)追加
 

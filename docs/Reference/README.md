@@ -291,7 +291,7 @@
 	`GETNUM`がERDにも対応し、省略可能な第3引数を指定できるように。第3引数は多次元配列の次元を指し、左から1,2,3となる(式中関数`VARSIZE`の仕様とは異なるため注意)
 	また、式中関数`VARSIZE`の次元指定を`ERD`と同じく1,2,3とするコンフィグ項目を追加
 
-### ![](../assets/images/IconEE.webp)`GCLEAR`で指定区域を指定した色で置き換えるように
+### ![](../assets/images/IconEM.webp)`GCLEAR`で指定区域を指定した色で置き換えるように
 !!! summary ""
 
     書式2を追加するより，第三～第六引数で区域のX、Y、幅、高さを指定可能になりました。
@@ -301,6 +301,12 @@
     1. GCLEAR GID, cARGB
     2. GCLEAR GID, cARGB, x, y, width, height
     ```
+
+### ![](../assets/images/IconEE.webp)`GCREATEFROMFILE`に第三引数を指定することで、`Emuera`との相対パスで画像を参照できるように
+!!! summary ""
+
+	省略可能な第三引数が非0の場合、Emueraからの相対パスで画像を参照します  
+	これによりERBフォルダやCSVフォルダ、独自仕様のフォルダなども使用可能に
 
 ## 新規に追加された命令・式中関数
 
@@ -312,9 +318,10 @@
 | ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
 ### 表示操作・フォント操作・表示仕様参照
-| 関数名                                                     | 引数  | 戻り値 |
-| :--------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md) | `int` | `void` |
+| 関数名                                                                   | 引数  | 戻り値   |
+| :----------------------------------------------------------------------- | :---- | :------- |
+| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)               | `int` | `void`   |
+| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md) | `int` | `string` |
 
 ### 文字列操作・参照
 

@@ -35,6 +35,7 @@ nav:
           - Reference/HTML_SUBSTRING.md
       - 表示操作・フォント操作・表示仕様参照:
           - Reference/SKIPLOG.md
+          - Reference/GETDISPLAYLINE.md
       - 文字列操作・参照:
           - Reference/REGEXPMATCH.md
       - 変数操作・変数参照・CSV参照:
