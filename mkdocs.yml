@@ -77,6 +77,7 @@ nav:
           - Reference/GGETBRUSH.md
           - Reference/SPRITEDISPOSEALL.md
           - Reference/GDRAWLINE.md
+          - Reference/GDASHSTYLE.md
       - サウンド系:
           - Reference/PLAYSOUND.md
           - Reference/STOPSOUND.md

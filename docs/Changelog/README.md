@@ -126,6 +126,15 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v35"
+	* 再起動を繰り返すとメモリリークが起きる問題に対応するため、再起動処理を変更
+	* タイプ初期化子エラーの原因が判明したためtry-catch式でエラーメッセージを出すように(WMPの未インストールが原因)
+	* ERDの識別子とローカル変数の重複を確認するオプション項目を追加
+	* PRINT中に改行せずに[`BINPUT`](../Reference/BINPUT.md)を実行した際に、その行をボタンとして認識しない不具合を修正
+
+=== "v34"
+	* [`GDASHSTYLE`](../Reference/GDASHSTYLE.md)追加
+
 === "v33"
 	* [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)追加
 	* [`GCREATEFROMFILE`拡張](../Reference//README.md#gcreatefromfileに第三引数を指定することでemueraとの相対パスで画像を参照できるように)
