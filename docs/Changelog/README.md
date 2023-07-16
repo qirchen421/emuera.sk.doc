@@ -126,7 +126,7 @@ hide:
     * 初公開
 
 ## Emuera.EE
-==="v38"
+=== "v38"
 	* 一部のフォントでGDRAWTEXT及びGGETTEXTSIZEの挙動が怪しいのを修正
 	* EXISTFUNCTIONが大文字小文字無視のオプションに沿った挙動になるように
 	* CRER氏の協力により.NET 7に正式対応。感謝

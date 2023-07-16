@@ -12,12 +12,12 @@ hide:
 !!! info "API"
 
 	``` { #language-erbapi }
-	CALLF funcName
+	CALL funcName
 	```
 
-	`@`から始まる文字列で定義された関数を呼び出す
-	関数の終端に達するか`RETURN`が行われると、関数を終了し`CALL`を実行した行に戻る
-	`RETURN`が行われた場合は`RESULT`にその引数が、終端に達した場合は`RESULT`に`0`が入る
+	`@`から始まる文字列で定義された関数を呼び出す  
+	関数の終端に達するか`RETURN`が行われると、関数を終了し`CALL`を実行した行に戻る  
+	`RETURN`が行われた場合は`RESULT`にその引数が、終端に達した場合は`RESULT`に`0`が入る  
 
 !!! hint "ヒント"
 
