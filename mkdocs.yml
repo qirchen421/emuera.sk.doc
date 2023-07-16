@@ -60,6 +60,7 @@ nav:
       - ツールチップ系:
           - Reference/TOOLTIP_EXTENSION.md
       - 関数系（CALL等）:
+          - Reference/CALL.md
           - Reference/EXISTFUNCTION.md
           - Reference/TRYCALLF.md
           - Reference/TRYCALLFORMF.md

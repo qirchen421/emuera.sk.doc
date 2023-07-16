@@ -18,11 +18,12 @@
 
     Emuera1824+v11+webp+Secureを参考にWebP形式に対応していましたが、EMv6+EEv13から別のWebPライブラリを使用するように
 
-### ![](../assets/images/IconEE.webp)`Emuera-Anchor`を同梱
+### ~~![](../assets/images/IconEE.webp)`Emuera-Anchor`を同梱~~ 
 !!! summary ""
 
-    同梱のEmuera-Anchorは英語圏のeraコミュニティで使用されているEmueraです
-    各UIやエラーメッセージ等が英語になっています。必要に応じて使い分けてください
+    ~~同梱のEmuera-Anchorは英語圏のeraコミュニティで使用されているEmueraです~~ 
+    ~~各UIやエラーメッセージ等が英語になっています。必要に応じて使い分けてください~~
+	システム側に言語変更機能を搭載することで各言語に対応。Emuera-Anchorは削除
 
 ### ![](../assets/images/IconEE.webp)`Emuera-Anchor`のホットキー拡張機能を移植
 !!! summary ""
@@ -134,6 +135,16 @@
 !!! warning "注意"
 
     CSVファイルで設定されたIDの先頭のスペースと末尾のスペースが削除されるので、注意してください
+### ![](../assets/images/IconEE.webp)`ttf`、`otf`の動的読み込みに対応
+!!! summary ""
+
+	ルートディレクトリに`font`フォルダを作成し、そこに置くことでコンフィグ及び`GSETFONT`で使用可能になります
+
+### ![](../assets/images/IconEE.webp)`.NET 7`に対応
+!!! summary ""
+
+	CRER氏の協力の元、.NET 7に正式対応しました。感謝
+
 ## 仕様が変更された命令・式中関数
 
 ### ![](../assets/images/IconEM.webp)`HTML_PRINT`関連の変更
@@ -308,7 +319,7 @@
 	省略可能な第三引数が非0の場合、Emueraからの相対パスで画像を参照します  
 	これによりERBフォルダやCSVフォルダ、独自仕様のフォルダなども使用可能に
 
-## 新規に追加された命令・式中関数
+## 命令・式中関数の一覧
 
 ### HTML系
 
@@ -383,6 +394,7 @@
 
 | 関数名                                                                 | 引数           |
 | :--------------------------------------------------------------------- | :------------- |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)    | `functionName` |
 | ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `string`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
