@@ -321,6 +321,12 @@
 
 ## 命令・式中関数の一覧
 
+### PRINT系
+
+| 関数名                                                                   | 引数              | 戻り値   |
+| :---------------------------------------------------------------------------------------- | :---------------- | :------- |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`](./PRINT.md) | `string` | `void`    |
+
 ### HTML系
 
 | 関数名                                                                   | 引数              | 戻り値   |
@@ -371,6 +377,11 @@
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)     | (`int`, `int`, `int`)    | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)    | (`string`, `int`, `int`) | `string`         |
 
+### ループ・分岐構文
+| 関数名                                                       | 引数                     | 戻り値           |
+| :----------------------------------------------------------- | :----------------------- | :--------------- |
+| ![](../assets/images/Iconeramaker.webp)[`(S)IF-ELSEIF-ELSE-ENDIF`](./IF.md) | `operand`                     | `void` |
+
 ### デバッグ補助・システムフロー制御
 
 | 関数名                                                                                   | 引数                  |
@@ -396,7 +407,7 @@
 | :--------------------------------------------------------------------- | :------------- |
 | ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)    | `functionName` |
 | ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       |
-| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `string`       |
+| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
 
 ### AWAIT関連

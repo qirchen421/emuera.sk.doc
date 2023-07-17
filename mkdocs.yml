@@ -30,6 +30,8 @@ nav:
   - ホーム: README.md
   - リファレンス:
       - Reference/README.md
+      - PRINT系:
+          - Reference/PRINT.md
       - HTML系:
           - Reference/HTML_STRINGLEN.md
           - Reference/HTML_SUBSTRING.md
@@ -51,6 +53,8 @@ nav:
       - 入力・ウェイト:
           - Reference/INPUTANY.md
           - Reference/BINPUT.md
+      - ループ・分岐構文:
+          - Reference/IF.md
       - デバッグ補助・システムフロー制御:
           - Reference/QUIT_AND_RESTART.md
           - Reference/FORCE_QUIT.md
