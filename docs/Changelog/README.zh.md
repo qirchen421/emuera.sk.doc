@@ -127,6 +127,66 @@ hide:
     初次公开发布。
 
 ## Emuera.EE
+=== "v38"
+	* 修复了部分字体下GDRAWTEXT及GGETTEXTSIZE的行为不正确的问题。
+	* EXISTFUNCTION是否无视大小写与设置保持一致。
+	* CRER的帮助下正式支持.NET 7。感谢。
+
+=== "v37"
+	* 设置选项中添加了以UTF-8(非BOM)处理文件的功能。
+	* v36中对EXISTFUNCTION的修复严重影响了处理事件，故目前只有在第二参数非0时才会无视大小写。
+	* 修复了TINPUT系列指令添加了鼠标按键检测选项后，计时器的行为不正确的问题。
+
+=== "v36"
+	* 支持部分字体文件(ttf.otf)。
+	* 修复了ENUMFUNC及EXISTFUNCTION无法正常识别大小写交错的函数名的问题。
+
+=== "v35fix"
+	* 修复了BINPUTS的错误。
+
+=== "v35"
+	* 为了解决重复重启导致的内存泄漏问题，修改了重启机制。
+	* 为了明确类型初始化的报错，使用try-catch得到了报错信息。(原因是WMP未安装)
+	* 设置选项中添加了对ERD的变量名与局部变量重复的检查。
+	* 修复了使用PRINT并未换行时，执行[`BINPUT`](../Reference/BINPUT.md)无法识别该行按钮的问题。
+
+=== "v34"
+	* 新增了 [`GDASHSTYLE`](../Reference/GDASHSTYLE.md) 函数。
+
+=== "v33"
+	* 新增了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 函数。
+	* [`GCREATEFROMFILE`扩展](../Reference//README.md#gcreatefromfileemuera)
+
+=== "v32"
+	* 新增了 [`GDRAWLINE`](../Reference/GDRAWLINE.md) 函数。
+
+=== "v31fix"
+	* 修复了`BINPUT`和`div`功能组合后无法继续执行的问题。
+	* `BINPUT`执行时若无任何按钮则返回默认值。若无默认值则报错。
+	* 修复了`BINPUT`执行时由于某些原因不会重绘画面，导致与`div`并用时出现错误的问题。
+
+=== "v31"
+	* 新增了 [`BINPUT`及`BINPUTS`](../Reference/BINPUT.md) 函数。
+
+=== "v30"
+	* 新增了 [`SKIPLOG`](../Reference/SKIPLOG.md) 函数。
+	* 修复了菜单栏的快捷键无效的问题。
+
+=== "v29"
+	* 修复`GCREATEFROMFILE`无法正常生效的问题。
+	* 修复了`EM`的`div`功能中设定`margin`、`border`、`padding`后，`div`内的文字未能跟随设置的问题。
+	* 修复了关闭翻译词典时，仍会在内部处理，导致重复描绘的问题。
+	* 新增了 [`MOUSEB`](../Reference/MOUSEB.md) 函数。
+	* 新增了 [`SPRITEDISPOSEALL`](../Reference/SPRITEDISPOSEALL.md) 函数。
+
+=== "v28"
+	* 修复了`EM`的INPUT功能扩展无法正常生效的问题。
+	* `EE`方面对`INPUT`命令进行扩展。
+	* 新增了 [`FLOWINPUT`](../Reference/FLOWINPUT.md) 函数。
+
+=== "v27"
+	* `JukesBouver99`提供了英语翻译词典的补丁
+
 === "v26"
 	* 扩展了利用 `GSETPEN` 进行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) 的相关功能。
 	* 新增了 [`GGETPEN`](../Reference//GGETPEN.md) / [`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md) / [`GGETBRUSH`](../Reference/GGETBRUSH.md)。
