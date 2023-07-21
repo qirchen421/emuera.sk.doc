@@ -245,8 +245,8 @@
 
     `TINPUT`, `TINPUTS`, `TONEINPUT`, `TONEINPUTS` に第六引数追加(整数型，省略可，デフォルトは`0`)
 
-	-追加引数`==0`時、もしくは省略時は本家版と同じ挙動
-	-追加引数`!=0`時、右クリック等でのスキップ中に入力待ちを行わない
+	- 追加引数`==0`時、もしくは省略時は本家版と同じ挙動
+	- 追加引数`!=0`時、右クリック等でのスキップ中に入力待ちを行わない
 	ただしデフォルト値は適用される。上記`INPUT系でマウスクリックを受け付ける`と併用した場合はそれぞれ`RESULT:1`及び`RESULTS:1`に、
 	併用しなかった場合は通常通り`RESULT:0`及び`RESULTS:0`にデフォルト値が代入される
 
@@ -373,6 +373,9 @@
 ### 入力・ウェイト
 | 関数名                                                       | 引数                     | 戻り値           |
 | :----------------------------------------------------------- | :----------------------- | :--------------- |
+| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.md)  | (`int`, `int`, `int`)   | `void`     |
+| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.md) | (`int`, `int`, `int`)   | `void`     |
+| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.md) | なし   | `void`     |
 | ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | なし                     | `int` / `string` |
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)     | (`int`, `int`, `int`)    | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)    | (`string`, `int`, `int`) | `string`         |

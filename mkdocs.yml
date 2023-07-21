@@ -51,6 +51,8 @@ nav:
           - Reference/ARRAYMSORTEX.md
           - Reference/ERDNAME.md
       - 入力・ウェイト:
+          - Reference/INPUT.md
+          - Reference/WAIT.md
           - Reference/INPUTANY.md
           - Reference/BINPUT.md
       - ループ・分岐構文:
