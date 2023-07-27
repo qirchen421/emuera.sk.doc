@@ -18,11 +18,11 @@
 
     Emuera1824+v11+webp+Secureを参考にWebP形式に対応していましたが、EMv6+EEv13から別のWebPライブラリを使用するように
 
-### ~~![](../assets/images/IconEE.webp)`Emuera-Anchor`を同梱~~ 
+### ![](../assets/images/IconEE.webp)`Emuera-Anchor`を同梱(サポート終了)
 !!! summary ""
 
-    ~~同梱のEmuera-Anchorは英語圏のeraコミュニティで使用されているEmueraです~~ 
-    ~~各UIやエラーメッセージ等が英語になっています。必要に応じて使い分けてください~~
+    ~~同梱のEmuera-Anchorは英語圏のeraコミュニティで使用されているEmueraです~~  
+    ~~各UIやエラーメッセージ等が英語になっています。必要に応じて使い分けてください~~  
 	システム側に言語変更機能を搭載することで各言語に対応。Emuera-Anchorは削除
 
 ### ![](../assets/images/IconEE.webp)`Emuera-Anchor`のホットキー拡張機能を移植
@@ -326,6 +326,7 @@
 | 関数名                                                                   | 引数              | 戻り値   |
 | :---------------------------------------------------------------------------------------- | :---------------- | :------- |
 | ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`](./PRINT.md) | `string` | `void`    |
+| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.md) | なし | なし   |
 
 ### HTML系
 
@@ -389,6 +390,7 @@
 
 | 関数名                                                                                   | 引数                  |
 | :--------------------------------------------------------------------------------------- | :-------------------- |
+| ![](../assets/images/Iconeramaker.webp)[`QUIT`](./QUIT.md) | なし | なし   |
 | ![](../assets/images/IconEE.webp)[`QUIT_AND_RESTART`](./QUIT_AND_RESTART.md)             | なし                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.md)                         | なし                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | なし                  |
@@ -409,9 +411,19 @@
 | 関数名                                                                 | 引数           |
 | :--------------------------------------------------------------------- | :------------- |
 | ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)    | `functionName` |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md) | `labelName`   | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md) | なし | なし   |
 | ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
+
+### RETURN系
+
+| 関数名                                                                 | 引数           |
+| :--------------------------------------------------------------------- | :------------- |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)     | `引数に同じ`              |
+| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `strng`(, `string`,...)| `引数に同じ(数値型に変換)`|
 
 ### AWAIT関連
 

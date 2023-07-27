@@ -32,6 +32,7 @@ nav:
       - Reference/README.md
       - PRINT系:
           - Reference/PRINT.md
+          - Reference/DRAWLINE.md
       - HTML系:
           - Reference/HTML_STRINGLEN.md
           - Reference/HTML_SUBSTRING.md
@@ -58,6 +59,7 @@ nav:
       - ループ・分岐構文:
           - Reference/IF.md
       - デバッグ補助・システムフロー制御:
+          - Reference/QUIT.md
           - Reference/QUIT_AND_RESTART.md
           - Reference/FORCE_QUIT.md
           - Reference/FORCE_QUIT_AND_RESTART.md
@@ -67,9 +69,14 @@ nav:
           - Reference/TOOLTIP_EXTENSION.md
       - 関数系（CALL等）:
           - Reference/CALL.md
+          - Reference/JUMP.md
+          - Reference/GOTO.md
+          - Reference/RESTART.md
           - Reference/EXISTFUNCTION.md
           - Reference/TRYCALLF.md
           - Reference/TRYCALLFORMF.md
+      - RETURN系 :
+          - Reference/RETURN.md
       - AWAIT関連:
           - Reference/MOUSEB.md
       - 画像処理関連:
