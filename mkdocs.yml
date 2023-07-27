@@ -33,15 +33,23 @@ nav:
       - PRINT系:
           - Reference/PRINT.md
           - Reference/DRAWLINE.md
+          - Reference/PRINT_STATUS.md
       - HTML系:
           - Reference/HTML_STRINGLEN.md
           - Reference/HTML_SUBSTRING.md
       - 表示操作・フォント操作・表示仕様参照:
+          - Reference/BAR.md
           - Reference/SKIPLOG.md
           - Reference/GETDISPLAYLINE.md
       - 文字列操作・参照:
           - Reference/REGEXPMATCH.md
+      - 算術:
+          - Reference/TIMES.md
+      - キャラ操作・参照:
+          - Reference/ADDCHARA.md
+          - Reference/DELCHARA.md
       - 変数操作・変数参照・CSV参照:
+          - Reference/UPCHECK.md
           - Reference/ISDEFINED.md
           - Reference/EXISTVAR.md
           - Reference/ENUMFUNC.md
@@ -51,6 +59,8 @@ nav:
           - Reference/VARSETEX.md
           - Reference/ARRAYMSORTEX.md
           - Reference/ERDNAME.md
+      - セーブデータ操作:
+          - Reference/PUTFORM.md
       - 入力・ウェイト:
           - Reference/INPUT.md
           - Reference/WAIT.md
@@ -59,6 +69,8 @@ nav:
       - ループ・分岐構文:
           - Reference/IF.md
       - デバッグ補助・システムフロー制御:
+          - Reference/SAVEGAME.md
+          - Reference/BEGIN.md
           - Reference/QUIT.md
           - Reference/QUIT_AND_RESTART.md
           - Reference/FORCE_QUIT.md

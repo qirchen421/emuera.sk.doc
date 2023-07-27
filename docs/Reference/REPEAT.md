@@ -30,7 +30,6 @@ hide:
     
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE 
-	@SYSTEM_TITLE
 		REPEAT 5
 			SIF COUNT == 2
 				CONTINUE

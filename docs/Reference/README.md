@@ -327,6 +327,13 @@
 | :---------------------------------------------------------------------------------------- | :---------------- | :------- |
 | ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`](./PRINT.md) | `string` | `void`    |
 | ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.md) | なし | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.md)      | `int`| なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.md)   | `int`| なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.md)     | `int`| なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.md)      | `int`| なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.md)    | `int`| なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.md)     | なし | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.md) | なし | なし   |
 
 ### HTML系
 
@@ -338,6 +345,8 @@
 ### 表示操作・フォント操作・表示仕様参照
 | 関数名                                                                   | 引数  | 戻り値   |
 | :----------------------------------------------------------------------- | :---- | :------- |
+| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.md)  | `int`, `int`, `int`   | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.md) | `int`, `int`, `int`   | なし   |
 | ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)               | `int` | `void`   |
 | ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md) | `int` | `string` |
 
@@ -348,10 +357,23 @@
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`  |
 |                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`  |
 
+### 算術
+| 関数名                                                             | 引数                                              | 戻り値 |
+| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
+| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md) | `int`, `float`   | なし   |
+
+### キャラ操作・参照
+
+| 関数名                                                             | 引数                                              | 戻り値 |
+| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`ADDCHARA`](./ADDCHARA.md) | `int`(, `int`,...)   | なし   |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.md) | `int`(, `int`,...)   | なし   |
+
 ### 変数操作・変数参照・CSV参照
 
 | 関数名                                                                   | 引数                                          | 戻り値   |
 | :----------------------------------------------------------------------- | :-------------------------------------------- | :------- |
+| ![](../assets/images/Iconeramaker.webp)[`UPCHECK`](./UPCHECK.md) | なし | なし   |
 | ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md)           | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md)             | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md)   | `string`                                      | `int`    |
@@ -370,6 +392,11 @@
 | ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`, `int`)    | `1`      |
 |                                                                          | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`      |
 | ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)               | `variable`, `int`(, `int`)                    | `string` |
+
+### セーブデータ操作
+| 関数名                                                       | 引数                     | 戻り値           |
+| :----------------------------------------------------------- | :----------------------- | :--------------- |
+| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.md) | `string`   | なし   |
 
 ### 入力・ウェイト
 | 関数名                                                       | 引数                     | 戻り値           |
@@ -390,6 +417,9 @@
 
 | 関数名                                                                                   | 引数                  |
 | :--------------------------------------------------------------------------------------- | :-------------------- |
+| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.md) | なし   | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.md) | なし   | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.md) | `idenetifier` | なし   |
 | ![](../assets/images/Iconeramaker.webp)[`QUIT`](./QUIT.md) | なし | なし   |
 | ![](../assets/images/IconEE.webp)[`QUIT_AND_RESTART`](./QUIT_AND_RESTART.md)             | なし                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.md)                         | なし                  |
