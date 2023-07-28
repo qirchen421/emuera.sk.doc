@@ -28,6 +28,7 @@ theme:
         name: Switch to dark mode
 nav:
   - ホーム: README.md
+  - EmueraEM+EEの仕様: EMEE/EMEE_Summary.md
   - リファレンス:
       - Reference/README.md
       - PRINT系:

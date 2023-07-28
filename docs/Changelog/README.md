@@ -10,7 +10,7 @@ hide:
 === "v17"
 
     * 関数追加：[`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
-    * 機能拡張：[`<div>`タグ](../Reference/README.md#html_print)に`display`、`margin`、`padding`、`border`、`bcolor`、`radius`属性を追加。
+    * 機能拡張：[`<div>`タグ](../EMEE/EMEE_Summary.md#html_print)に`display`、`margin`、`padding`、`border`、`bcolor`、`radius`属性を追加。
     * バグ修正：再起動した後`<div>`を描画するの時エラーで落ちる不具合を修正。
 
 === "v16fix2"
@@ -21,18 +21,18 @@ hide:
 === "v16fix"
 
     * バグ修正：一部状況でボタンがマウスに反応しないなどの不具合を修正。
-    * 機能拡張：[`HTML_PRINT`の第二引数](../Reference/README.md#html_print)を追加、`<div>`タグの`size`、`rect`属性を追加。
+    * 機能拡張：[`HTML_PRINT`の第二引数](../EMEE/EMEE_Summary.md#html_print)を追加、`<div>`タグの`size`、`rect`属性を追加。
 
 === "v16"
 
     * 関数追加：[`DT_TOXML`](../Reference/DT_SERIALIZATION.md), [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md)，[`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md)，[`MOVETEXTBOX`](../Reference/TEXTBOX.md)，[`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。
-    * 機能拡張：[`<div>`タグ](../Reference/README.md#html_print)追加、`<img>`タグに`srcm`属性追加、描画仕様拡張。
-    * 機能拡張：`PRINT_IMG`命令に更に[2つの形式](../Reference/README.md#html_printprint)を追加。
+    * 機能拡張：[`<div>`タグ](../EMEE/EMEE_Summary.md#html_print)追加、`<img>`タグに`srcm`属性追加、描画仕様拡張。
+    * 機能拡張：`PRINT_IMG`命令に更に[2つの形式](../EMEE/EMEE_Summary.md#html_printprint)を追加。
     * 機能拡張：[`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md)の配列サイズが指定できるように。
 
 === "v15"
 
-    * 関数追加：[`DataTable`系関数](../Reference/README.md#datatable)を追加。
+    * 関数追加：[`DataTable`系関数](../EMEE/EMEE_Summary.md#datatable)を追加。
     * バグ修正：フォントサイズが`16`以外の時入力欄の表示不具合を修正。
     * バグ修正：ユーザー指定アイコンのアルファチャンネル情報が無効の不具合を修正。
 
@@ -43,9 +43,9 @@ hide:
 === "v14"
 
     * [私家版v16](https://ux.getuploader.com/ninnohito/download/482)へのアップデート。
-    * 機能拡張：[`GCLEAR`](../Reference/README.md#gclear)で指定区域を指定した色で置き換えるように。
-    * 機能拡張：[Emueraアイコン指定機能](../Reference/README.md#emuera)。
-    * 機能拡張：[`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmapdatatable)が指定できるように。
+    * 機能拡張：[`GCLEAR`](../EMEE/EMEE_Summary.md#gclear)で指定区域を指定した色で置き換えるように。
+    * 機能拡張：[Emueraアイコン指定機能](../EMEE/EMEE_Summary.md#emuera)。
+    * 機能拡張：[`STATIC_MAPS`/`STATIC_MAPS`](../EMEE/EMEE_Summary.md#xmlmapdatatable)が指定できるように。
 
 === "v13fix"
 
@@ -53,22 +53,22 @@ hide:
 
 === "v13"
 
-    * 機能拡張：HTML画像系パラメータ[書式拡張](../Reference/README.md#html_print)。
-    * 機能拡張：[`PRINT_IMG`引数追加](../Reference/README.md#html_printprint)。
+    * 機能拡張：HTML画像系パラメータ[書式拡張](../EMEE/EMEE_Summary.md#html_print)。
+    * 機能拡張：[`PRINT_IMG`引数追加](../EMEE/EMEE_Summary.md#html_printprint)。
 
 === "v12"
 
-    * 機能拡張：「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」コンフィグ機能追加。
-    * 機能拡張：[XML、MAPがセーブデータの中で保存](../Reference/README.md#xmlmapdatatable)可能。
-    * 仕様変更：[XML系の命令](../Reference/README.md#xml)の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり。
+    * 機能拡張：「[セーブデータを圧縮して保存する](../EMEE/EMEE_Summary.md#_5)」コンフィグ機能追加。
+    * 機能拡張：[XML、MAPがセーブデータの中で保存](../EMEE/EMEE_Summary.md#xmlmapdatatable)可能。
+    * 仕様変更：[XML系の命令](../EMEE/EMEE_Summary.md#xml)の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり。
 
 === "v11"
 
-    * HTMLタグ属性追加：`<clearbutton>`に[`notooltip`](../Reference/README.md#html_print)属性追加。
+    * HTMLタグ属性追加：`<clearbutton>`に[`notooltip`](../EMEE/EMEE_Summary.md#html_print)属性追加。
 
 === "v10"
 
-    * HTMLタグ追加：[`<clearbutton>`](../Reference/README.md#html_print)。
+    * HTMLタグ追加：[`<clearbutton>`](../EMEE/EMEE_Summary.md#html_print)。
     * 性能向上：アルゴリズム修正による[`XML_GET`](../Reference/XML_GET.md)の性能向上。
 
 === "v9"
@@ -81,12 +81,12 @@ hide:
 
 === "v8b"
 
-    * バグ修正：[`REPLACE`拡張](../Reference/README.md#replace)による不具合の修正(eraTWのAAマップ表示エラーの原因になる)。
+    * バグ修正：[`REPLACE`拡張](../EMEE/EMEE_Summary.md#replace)による不具合の修正(eraTWのAAマップ表示エラーの原因になる)。
     * 仕様変更：[`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md)(常に`1`)から文字列型(`RESULTS:0`と同じ)に変更。
 
 === "v8"
 
-    * 機能拡張：[`XML_GET`](../Reference/XML_GET.md), [`REPLACE`](../Reference/README.md#replace)
+    * 機能拡張：[`XML_GET`](../Reference/XML_GET.md), [`REPLACE`](../EMEE/EMEE_Summary.md#replace)
     * バグ修正：[`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md), [`VARSETEX`](../Reference/VARSETEX.md)
   
 === "v7"
@@ -108,7 +108,7 @@ hide:
 
     * [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md)バグ修正。
     * 関数追加：[`MAP_CLEAR`](../Reference/MAP_OPERATION.md), [`MAP_SIZE`](../Reference/MAP_OPERATION.md), [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md), [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
-    * [`INPUT`系拡張](../Reference/README.md#input)機能の修正。
+    * [`INPUT`系拡張](../EMEE/EMEE_Summary.md#input)機能の修正。
 
 === "v3"
 
@@ -192,21 +192,21 @@ hide:
 	* [ツールチップ機能拡張命令](../Reference/TOOLTIP_EXTENSION.md)追加
 
 === "v25"
-	* `Emuera-Anchor`の[`Clipboard`機能](../Reference/README.md#emuera-anchorclipboard)を移植
+	* `Emuera-Anchor`の[`Clipboard`機能](../EMEE/EMEE_Summary.md#emuera-anchorclipboard)を移植
 	* 翻訳を補完
 
 === "v24"
 	* [多言語化](../i18n/README.md)に対応(EMv14に同じく)
-	* `GETNUM`を[多次元配列ERDに対応](../Reference/README.md#getnumerd)
+	* `GETNUM`を[多次元配列ERDに対応](../EMEE/EMEE_Summary.md#getnumerd)
 	* [`ERDNAME`](../Reference//ERDNAME.md)追加
 
 === "v23"
 
-    * [`ERD`機能](../Reference/README.md#erhcsverd)を二次元配列、三次元配列でも使えるように
+    * [`ERD`機能](../EMEE/EMEE_Summary.md#erhcsverd)を二次元配列、三次元配列でも使えるように
 
 === "v22"
 
-    * 仕様変更：[`ERD`機能](../Reference/README.md#erhcsverd)は一つの変数名に対し複数の定義ファイルの中に、同じ識別子が定義されている場合だけ、起動時にエラー吐いて終了する。ひとつの配列に複数の識別子を指定可能になる。
+    * 仕様変更：[`ERD`機能](../EMEE/EMEE_Summary.md#erhcsverd)は一つの変数名に対し複数の定義ファイルの中に、同じ識別子が定義されている場合だけ、起動時にエラー吐いて終了する。ひとつの配列に複数の識別子を指定可能になる。
     * [`INPUTANY`](../Reference/INPUTANY.md)追加
 
 === "v21"
@@ -216,7 +216,7 @@ hide:
 === "v20"
 
     * `ERD`読み込みの更に高速化
-    * [`DAY`,`TIME`,`MONEY`に`CSV`を適用可能に](../Reference/README.md#daytimemoneycsv)
+    * [`DAY`,`TIME`,`MONEY`に`CSV`を適用可能に](../EMEE/EMEE_Summary.md#daytimemoneycsv)
 
 === "v19"
 

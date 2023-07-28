@@ -11,7 +11,7 @@ hide:
 === "v17"
 
     * 新增了 [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
-    * [`<div>` 标签](../Reference/README.md#html_print) 新增 `display`、`margin`、`padding`、`border`、`bcolor`、`radius`属性。
+    * [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print) 新增 `display`、`margin`、`padding`、`border`、`bcolor`、`radius`属性。
     * 修正了重启后渲染 `<div>` 时报错终止的问题。
 
 === "v16fix2"
@@ -22,18 +22,18 @@ hide:
 === "v16fix"
 
     * 修复了部分情况下按钮不响应鼠标操作等问题。
-    * 新增了 [`HTML_PRINT` 的第二参数](../Reference/README.md#html_print)以及 `<div>` 标签的 `size`、`rect` 属性。
+    * 新增了 [`HTML_PRINT` 的第二参数](../EMEE/EMEE_Summary.md#html_print)以及 `<div>` 标签的 `size`、`rect` 属性。
 
 === "v16"
 
     *  新增了 [`DT_TOXML`](../Reference/DT_SERIALIZATION.md) / [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md) / [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md) / [`MOVETEXTBOX`](../Reference/TEXTBOX.md) / [`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。
-    * 新增了 [`<div>` 标签](../Reference/README.md#html_print)，`<img>` 标签新增了 `srcm` 属性，扩展了渲染时的特性。
-    * 为 `PRINT_IMG` 命令添加了[另外两种调用形式](../Reference/README.md#html_print-print)。
+    * 新增了 [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print)，`<img>` 标签新增了 `srcm` 属性，扩展了渲染时的特性。
+    * 为 `PRINT_IMG` 命令添加了[另外两种调用形式](../EMEE/EMEE_Summary.md#html_print-print)。
     * [`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md) 现在可以指定数组大小了。
 
 === "v15"
 
-    * 新增了 [`DataTable` 系列函数](../Reference/README.md#datatable)。
+    * 新增了 [`DataTable` 系列函数](../EMEE/EMEE_Summary.md#datatable)。
     * 修复了字体大小不为 `16` 时输入栏的显示问题。
     * 修复了用户定义的程序图标的透明通道信息无效的问题。
 
@@ -44,9 +44,9 @@ hide:
 === "v14"
 
     * 更新至[私家版v16](https://ux.getuploader.com/ninnohito/download/482)。
-    * 扩展了 [`GCLEAR`](../Reference/README.md#gclear) 的功能使其能用指定颜色替换指定区域。
-    * 新增了 [Emuera 图标设置功能](../Reference/README.md#emuera)。
-    * 现在可以指定 [`STATIC_MAPS`/`STATIC_MAPS`](../Reference/README.md#xmlmapdatatable) 了。
+    * 扩展了 [`GCLEAR`](../EMEE/EMEE_Summary.md#gclear) 的功能使其能用指定颜色替换指定区域。
+    * 新增了 [Emuera 图标设置功能](../EMEE/EMEE_Summary.md#emuera)。
+    * 现在可以指定 [`STATIC_MAPS`/`STATIC_MAPS`](../EMEE/EMEE_Summary.md#xmlmapdatatable) 了。
 
 === "v13fix"
 
@@ -54,22 +54,22 @@ hide:
 
 === "v13"
 
-    * 扩展了 HTML 图像相关参数的[输入格式](../Reference/README.md#html_print)。
-    * 新增了 [`PRINT_IMG` 的参数](../Reference/README.md#html_printprint)。
+    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.md#html_print)。
+    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.md#html_printprint)。
 
 === "v12"
 
-    * 新增「[セーブデータを圧縮して保存する](../Reference/README.md#_5)」设置项。
-    * 新增将 [XML、MAP 数据保存进存档](../Reference/README.md#xmlmapdatatable)的功能。
-	* 调整 [XML 系列命令](../Reference/README.md#xml)的行为，现在使用字符串作为 ID，兼容旧版本。
+    * 新增「[セーブデータを圧縮して保存する](../EMEE/EMEE_Summary.md#_5)」设置项。
+    * 新增将 [XML、MAP 数据保存进存档](../EMEE/EMEE_Summary.md#xmlmapdatatable)的功能。
+	* 调整 [XML 系列命令](../EMEE/EMEE_Summary.md#xml)的行为，现在使用字符串作为 ID，兼容旧版本。
 
 === "v11"
 
-    * 新增HTML标签属性：添加了 `<clearbutton>` 标签的 [`notooltip`](../Reference/README.md#html_print) 属性。
+    * 新增HTML标签属性：添加了 `<clearbutton>` 标签的 [`notooltip`](../EMEE/EMEE_Summary.md#html_print) 属性。
 
 === "v10"
 
-    * 新增HTML标签：[`<clearbutton>`](../Reference/README.md#html_print)。
+    * 新增HTML标签：[`<clearbutton>`](../EMEE/EMEE_Summary.md#html_print)。
     * 性能提高：修正算法以提高 [`XML_GET`](../Reference/XML_GET.md) 的性能。
 
 === "v9"
@@ -82,12 +82,12 @@ hide:
 
 === "v8b"
 
-	* 修复关于 [`REPLACE` 扩展](../Reference/README.md#replace)带来的错误(该错误会导致eraTW的AA显示发生错误)。
+	* 修复关于 [`REPLACE` 扩展](../EMEE/EMEE_Summary.md#replace)带来的错误(该错误会导致eraTW的AA显示发生错误)。
 	* 将 [`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md) 的返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
 
 === "v8"
 
-    * 扩展 [`XML_GET`](../Reference/XML_GET.md) / [`REPLACE`](../Reference/README.md#replace) 相关功能。
+    * 扩展 [`XML_GET`](../Reference/XML_GET.md) / [`REPLACE`](../EMEE/EMEE_Summary.md#replace) 相关功能。
     * 修复关于 [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md) / [`VARSETEX`](../Reference/VARSETEX.md) 的错误。
 
 === "v7"
@@ -109,7 +109,7 @@ hide:
 
     * 修复关于 [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md) 的错误。
     * 新增函数：[`MAP_CLEAR`](../Reference/MAP_OPERATION.md) / [`MAP_SIZE`](../Reference/MAP_OPERATION.md) / [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
-    * 修复关于 [`INPUT` 系列命令扩展](../Reference/README.md#input)的错误。
+    * 修复关于 [`INPUT` 系列命令扩展](../EMEE/EMEE_Summary.md#input)的错误。
 
 === "v3"
 
@@ -133,21 +133,21 @@ hide:
 	* 新增了 [TOOLTIPS 功能扩展](../Reference/TOOLTIP_EXTENSION.md)相关函数。
 
 === "v25"
-	* 移植了 `Emuera-Anchor` 的[剪贴板功能](../Reference/README.md#emuera-anchor_2)。
+	* 移植了 `Emuera-Anchor` 的[剪贴板功能](../EMEE/EMEE_Summary.md#emuera-anchor_2)。
 	* 补充了遗漏的翻译。
 
 === "V24"
 	* [多语言支持](../i18n/README.md)(同EMv14)。
-	* `GETNUM` 现在支持[多维数组的 ERD 功能](../Reference/README.md#getnumerd)。
+	* `GETNUM` 现在支持[多维数组的 ERD 功能](../EMEE/EMEE_Summary.md#getnumerd)。
 	* 新增 [`ERDNAME`](../Reference//ERDNAME.md) 函数。
 
 === "v23"
 
-    * [`ERD` 功能](../Reference/README.md#csv-erd-erh)现在也支持二维和三维数组。
+    * [`ERD` 功能](../EMEE/EMEE_Summary.md#csv-erd-erh)现在也支持二维和三维数组。
 
 === "v22"
 
-    * [`ERD` 功能](../Reference/README.md#csv-erd-erh)现在对于同一个变量的多个定义文件，只有其中定义了相同标识符时会报错，不同标识符现在可以替换为同一个整数。
+    * [`ERD` 功能](../EMEE/EMEE_Summary.md#csv-erd-erh)现在对于同一个变量的多个定义文件，只有其中定义了相同标识符时会报错，不同标识符现在可以替换为同一个整数。
     * 新增命令 [`INPUTANY`](../Reference/INPUTANY.md)
 
 === "v21"
@@ -157,7 +157,7 @@ hide:
 === "v20"
 
 	* `ERD` 读取进一步高速化。
-	* 可以[用 `CSV` 来配置 `DAY`, `TIME`, `MONEY` 数组](../Reference/README.md#csv-daytimemoney)了。
+	* 可以[用 `CSV` 来配置 `DAY`, `TIME`, `MONEY` 数组](../EMEE/EMEE_Summary.md#csv-daytimemoney)了。
 
 === "v19"
 
