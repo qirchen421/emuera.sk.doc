@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 ### ![](../assets/images/IconEM.webp)リソースの占有解除
 !!! summary ""
 
@@ -17,8 +22,6 @@
 ### ![](../assets/images/IconEE.webp)`Emuera-Anchor`を同梱(サポート終了)
 !!! summary ""
 
-    ~~同梱のEmuera-Anchorは英語圏のeraコミュニティで使用されているEmueraです~~  
-    ~~各UIやエラーメッセージ等が英語になっています。必要に応じて使い分けてください~~  
 	システム側に言語変更機能を搭載することで各言語に対応。Emuera-Anchorは削除
 
 ### ![](../assets/images/IconEE.webp)`Emuera-Anchor`のホットキー拡張機能を移植

@@ -146,6 +146,15 @@ nav:
           - Reference/TEXTBOX.md
   - 変更ログ: Changelog/README.md
   - i18n: i18n/README.md
+  - Emueraの仕様:
+      - Emuera/README.md
+      - プレイヤー向け情報:
+        - Emuera/usage.md
+        - Emuera/config.md
+      - 開発者向け情報:
+        - Emuera/debugCom.md
+        - Emuera/debug.md
+        - Emuera/replace.md
   - eramakerの仕様:
       - eramaker/README.md
       - 一覧:
