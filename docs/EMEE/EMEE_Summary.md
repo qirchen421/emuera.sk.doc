@@ -102,7 +102,7 @@
 ### ![](../assets/images/IconEM.webp)`XML`、`MAP`、`DataTable`がセーブデータの中で保存できるように
 !!! summary ""
 
-    CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./README.md#xml)、[`MAP`](./README.md#map)、[`DataTable`](./README.md#datatable)のIDが設定可能になります
+    CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./EMEE_Summary.md#xml)、[`MAP`](./EMEE_Summary.md#map)、[`DataTable`](./EMEE_Summary.md#datatable)のIDが設定可能になります
 
     * 「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
     * IDを設定したとしても、メモリにないならセーブデータへ保存しません
@@ -176,7 +176,7 @@
             - `radius='lt,rtLb,rb'`：`lt`を左上、`rtLb`を右上と左下、`rb`を右下に適用します。`px`、フォントサイズ百分率両方可。
             - `radius='lt,rt,rb,lb'`：`lt`を左上、`rt`を右上、`rb`を右下、`lb`を左下に適用します。`px`、フォントサイズ百分率両方可。
     - 画像、`div`など行の高さを超えた内容は所在行が画面外でも表示可能にしました。
-    - `HTML_PRINT`の`<img>`タグに属性`srcm`を追加。CBG系のボタンマップと似ています。[INPUT系の拡張モード](./README.md#input)または`INPUTMOUSEKEY`命令を実行するとき，マウスカーソル直下のボタンマップ画像の色（RGB部分）を`RESULT:3`(`INPUTMOUSEKEY`の場合`RESULT:6`)に代入します。
+    - `HTML_PRINT`の`<img>`タグに属性`srcm`を追加。CBG系のボタンマップと似ています。[INPUT系の拡張モード](./EMEE_Summary.md#input)または`INPUTMOUSEKEY`命令を実行するとき，マウスカーソル直下のボタンマップ画像の色（RGB部分）を`RESULT:3`(`INPUTMOUSEKEY`の場合`RESULT:6`)に代入します。
     - `HTML_PRINT`に第二引数（整数型）を追加。第二引数が`0`（デフォルト）以外の場合，強制改行をしなくなります。
 
 !!! example "例"

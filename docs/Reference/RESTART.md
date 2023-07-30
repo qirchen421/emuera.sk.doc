@@ -47,7 +47,7 @@ hide:
 				PRINTL Sew, a needle pulling thread
 				RESTART
 			CASE 6
-				PRINTL La, a nore to follow Sew
+				PRINTL La, a note to follow Sew
 				RESTART
 			CASE 7
 				PRINTL Tea, a drink with jam and bread
@@ -62,7 +62,7 @@ hide:
 	Me, a name I call my self
 	Far, a long, long way to run
 	Sew, a needle pulling thread
-	La, a nore to follow Sew
+	La, a note to follow Sew
 	Tea, a drink with jam and bread
 	That will bring us back to Do
     ```

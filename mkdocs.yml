@@ -69,6 +69,8 @@ nav:
           - Reference/BINPUT.md
       - ループ・分岐構文:
           - Reference/IF.md
+          - Reference/REPEAT.md
+          - Reference/CONTINUE.md
       - デバッグ補助・システムフロー制御:
           - Reference/SAVEGAME.md
           - Reference/BEGIN.md
@@ -144,6 +146,13 @@ nav:
           - Reference/TEXTBOX.md
   - 変更ログ: Changelog/README.md
   - i18n: i18n/README.md
+  - eramakerの仕様:
+      - eramaker/README.md
+      - 一覧:
+        - eramaker/system_flow.md
+        - eramaker/CSV_format.md
+        - eramaker/ERB_format.md
+        - eramaker/variables.md
 plugins:
   - search
   - minify:
