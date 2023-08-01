@@ -151,10 +151,13 @@ nav:
       - プレイヤー向け情報:
         - Emuera/usage.md
         - Emuera/config.md
+        - Emuera/shortcut.md
       - 開発者向け情報:
+        - Emuera/glossary.md
         - Emuera/debugCom.md
         - Emuera/debug.md
         - Emuera/replace.md
+        - Emuera/config_files.md
   - eramakerの仕様:
       - eramaker/README.md
       - 一覧:
