@@ -207,8 +207,11 @@ plugins:
           DataTable（データベース）系: DataTable（数据库）相关
         en:
           ホーム: Home
+          EmueraEM+EEの仕様: EmueraEM+EE's Summary
           リファレンス: Reference
           変更ログ: Changelog
+          Emueraの仕様: Emuera's Summary
+          eramakerの仕様: eramaker's Summary
 
 markdown_extensions:
   # Python Markdown
