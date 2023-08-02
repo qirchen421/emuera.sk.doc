@@ -160,6 +160,8 @@ nav:
         - Emuera/config_files.md
         - Emuera/system_flow.md
         - Emuera/differences_of_Emuera_and_eramaker.md
+        - Emueraの追加機能:
+          - Emuera/expression.md
   - eramakerの仕様:
       - eramaker/README.md
       - 一覧:

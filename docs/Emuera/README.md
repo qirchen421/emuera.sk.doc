@@ -16,8 +16,8 @@ hide:
 - [コンフィグ項目の強制](config_files.md)
 - [フロー図](system_flow.md)
 - [eramakerとの相違点](differences_of_Emuera_and_eramaker.md)
-- Emueraで追加された拡張文法
-	- 一般
+- Emueraの追加機能
+	- [Emueraで追加された記法](general.md)
 	- 演算
 	- 定数・変数
 	- ユーザー定義の変数
