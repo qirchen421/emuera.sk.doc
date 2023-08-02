@@ -1,0 +1,26 @@
+
+- Information for end users
+  - [How to Use](usage.en.md)
+  - [Config Settings](config.md)(Still not translate)
+  - [Shortcut Keys](shortcut.en.md)
+
+- eramaker basic Information for Developers
+	- [Glossary](glossary.en.md)(Some items are still not translate)
+	- [Debug Commands](debugCom.en.md)
+	- [Debug Mode](debug.md)(Still not translate)
+	- [_replace.csv](replace.md)(Still not translate)
+	- [Forcing a Config item](config_files.md)(Still not translate)
+	- [Flowchart](system_flow.en.md)
+	- [Differences with eramaker](differences_of_Emuera_and_eramaker.en.md)
+	- Extended syntax added in Emuera
+		- [General](expression.en.md)
+		- [Operations](operand.en.md)(Some items are still not translate)
+		- [Constants / Variables](variables.en.md)(Some items are still not translate)
+		- User-Defined Variables(Still not import)
+		- Instructions(Still not import)
+		- Function / Preprocessor(Still not import)
+		- Functions that can be used in expressions(Still not import)
+		- User-defined in-expression functions(Still not import)
+		- Header Files（ERH）(Still not import)
+		- HTML_PRINT related(Still not import)
+		- Resource file(Still not import)
