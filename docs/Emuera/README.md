@@ -17,9 +17,9 @@ hide:
 - [フロー図](system_flow.md)
 - [eramakerとの相違点](differences_of_Emuera_and_eramaker.md)
 - Emueraの追加機能
-	- [Emueraで追加された記法](general.md)
-	- 演算
-	- 定数・変数
+	- [Emueraで追加された記法](expression.md)
+	- [演算](operand.md)
+	- [定数・変数](variables.md)
 	- ユーザー定義の変数
 	- 命令
 	- 関数・プリプロセッサ

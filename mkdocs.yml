@@ -162,6 +162,8 @@ nav:
         - Emuera/differences_of_Emuera_and_eramaker.md
         - Emueraの追加機能:
           - Emuera/expression.md
+          - Emuera/operand.md
+          - Emuera/variables.md
   - eramakerの仕様:
       - eramaker/README.md
       - 一覧:
