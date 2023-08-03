@@ -164,6 +164,8 @@ nav:
           - Emuera/expression.md
           - Emuera/operand.md
           - Emuera/variables.md
+          - Emuera/user_defined_variables.md
+          - Emuera/function.md
   - eramakerの仕様:
       - eramaker/README.md
       - 一覧:

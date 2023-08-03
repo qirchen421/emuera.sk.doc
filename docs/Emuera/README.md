@@ -20,9 +20,9 @@ hide:
 	- [Emueraで追加された記法](expression.md)
 	- [演算](operand.md)
 	- [定数・変数](variables.md)
-	- ユーザー定義の変数
+	- [ユーザー定義の変数](user_defined_variables.md)
 	- 命令
-	- 関数・プリプロセッサ
+	- [関数・プリプロセッサ](function.md)
 	- 式中で使える関数
 	- ユーザー定義の式中関数
 	- ヘッダーファイル（ERH）
