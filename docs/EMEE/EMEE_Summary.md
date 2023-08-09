@@ -38,7 +38,7 @@ hide:
 
     コンフィグ画面もしくは`emuera.config`で設定可能です
 
-    * 「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
+    * [`セーブデータをバイナリ形式で保存する`](../Emuera/config.md#_43)が`YES`の時のみ有効です
 
 !!! example "例"
     ``` title="emuera.config"
@@ -117,7 +117,7 @@ hide:
 
     CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./EMEE_Summary.md#xml)、[`MAP`](./EMEE_Summary.md#map)、[`DataTable`](./EMEE_Summary.md#datatable)のIDが設定可能になります
 
-    * 「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」が`YES`の時のみ有効です
+    * [`セーブデータをバイナリ形式で保存する`](../Emuera/config.md#_43)が`YES`の時のみ有効です
     * IDを設定したとしても、メモリにないならセーブデータへ保存しません
     * セーブデータの中に保存されたデータのIDがCSVで設定されていない場合、読み捨てます
     * セーブデータが古いバージョン、本家版のEmuera.exeとの互換性があります

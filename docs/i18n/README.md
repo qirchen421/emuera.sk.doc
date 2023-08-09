@@ -15,7 +15,7 @@ hide:
 
     `ヘルプ`→`設定`→`表示`→`Emuera表示言語`から表示言語を選べます。もしくはコンフィグファイル(*.config)に`Emueraの表示言語`/`Emuera interface language`項目で設定できます。
 
-    Emueraのコマンドラインに`-genlang`を追加すると(「[Emueraをデバッグモードで起動する](https://osdn.net/projects/emuera/wiki/debug#h4-Emuera.E3.82.92.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A7.E8.B5.B7.E5.8B.95.E3.81.99.E3.82.8B)」に参照してください)、デフォルト言語ファイルが自動的に生成され、`lang/emuera-default-lang.xml`の名前で保存されます。他の言語の翻訳、言語ファイルの配布は歓迎です。
+    Emueraのコマンドラインに`-genlang`を追加すると([Emueraをデバッグモードで起動する](../Emuera/debug.md)を参照してください)、デフォルト言語ファイルが自動的に生成され、`lang/emuera-default-lang.xml`の名前で保存されます。他の言語の翻訳、言語ファイルの配布は歓迎です。
 
 !!! example "例" 
     

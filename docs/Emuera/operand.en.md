@@ -28,7 +28,7 @@
 	However, the # cannot be omitted in the ternary operator in the format of \@～\@.  
 
 ### 代入演算子
-- `'=` 文字列式を用いた文字列型変数への代入を行う演算子 [詳しくはこちら](expression.md#文字列式中での書式付文字列form構文の使用)
+- `'=` 文字列式を用いた文字列型変数への代入を行う演算子 [詳しくはこちら](expression.md#form_2)
 
 ### インクリメント・デクリメント
 - `++` インクリメント
