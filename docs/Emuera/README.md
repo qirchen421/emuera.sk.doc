@@ -24,7 +24,7 @@ hide:
 	- 命令
 	- [関数・プリプロセッサ](function.md)
 	- 式中で使える関数
-	- ユーザー定義の式中関数
-	- ヘッダーファイル（ERH）
-	- HTML_PRINT関連
-	- リソースファイル
+	- [ユーザー定義の式中関数](user_defined_in_expression_function.md)
+	- [ヘッダーファイル（ERH）](ERH.md)
+	- [HTML_PRINT関連](HTML_PRINT.md)
+	- [リソースファイル](resources.md)
