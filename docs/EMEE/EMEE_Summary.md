@@ -63,6 +63,16 @@ hide:
 
 	設定→クリップボードから、`Emuera`で表示したテキストを自動的にクリップボードでコピーする機能を追加
 
+### ![](../assets/images/IconEE.webp)`ttf`、`otf`の動的読み込みに対応
+!!! summary ""
+
+	ルートディレクトリに`font`フォルダを作成し、そこに置くことでコンフィグ及び`GSETFONT`で使用可能になります
+
+### ![](../assets/images/IconEE.webp)`.NET 7`に対応
+!!! summary ""
+
+	CRER氏の協力の元、.NET 7に正式対応しました。感謝
+
 ## 定数・変数
 
 ### ![](../assets/images/IconEE.webp)`ERH`で定義した変数の配列に、`CSV`ファイル/`ERD`ファイルで名前を付けられるように
@@ -134,15 +144,6 @@ hide:
 !!! warning "注意"
 
     CSVファイルで設定されたIDの先頭のスペースと末尾のスペースが削除されるので、注意してください
-### ![](../assets/images/IconEE.webp)`ttf`、`otf`の動的読み込みに対応
-!!! summary ""
-
-	ルートディレクトリに`font`フォルダを作成し、そこに置くことでコンフィグ及び`GSETFONT`で使用可能になります
-
-### ![](../assets/images/IconEE.webp)`.NET 7`に対応
-!!! summary ""
-
-	CRER氏の協力の元、.NET 7に正式対応しました。感謝
 
 ## 仕様が変更された命令・式中関数
 

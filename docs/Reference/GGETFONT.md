@@ -12,7 +12,7 @@ hide:
 !!! info "API"
 
 	``` { #language-erbapi }
-	int GGETFONT gID
+	string GGETFONT gID
 	```
 
 	指定した`gID`の、`GSETFONT`で指定したフォント名を返す

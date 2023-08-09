@@ -12,7 +12,7 @@ hide:
 !!! info "API"
 
     ``` { #language-erbapi }
-    int GGETFONT gID
+    string GGETFONT gID
     ```
 
     返回指定的 `gID` 使用 `GSETFONT` 设置的字体名称。

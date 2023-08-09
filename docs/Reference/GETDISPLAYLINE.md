@@ -12,7 +12,7 @@ hide:
 !!! info "API"
 
 	``` { #language-erbapi }
-	int GETDISPLAYLINE lineNumber
+	string GETDISPLAYLINE lineNumber
 	```
 
 	表示済みの行から、指定した行の文字列を返す
