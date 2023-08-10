@@ -14,12 +14,13 @@ hide:
     ```  { #language-erbapi }
 	PRINTV(|K|D)(|L|W) integerVariable
 	PRINTS(|K|D)(|L|W) stringVariable
-	PRINTFORM (|K|D)(|L|W) formedString
+	PRINTFORM(|K|D)(|L|W) formedString
 	PRINTFORMS(|K|D)(|L|W) string
 	```
 	PRINT系の基本となる命令です。  
 
 	![](../assets/images/Iconeramaker.webp)1つ目の括弧内のキーワードは引数タイプを指定します。  
+
 	- なし - (<文字列>)  
 	- V - (<数式> <数式> ,<数式> ……)  
 	- S - <文字列式>  
@@ -27,15 +28,17 @@ hide:
 	- FORMS - <書式付文字列式>  
 
 	![](../assets/images/IconEmuera.webp)2つ目の括弧内のキーワードの"K"はFORCEKANA命令の適用を指定します。またキーワード"D"はSETCOLOR命令を無視することを指定します。キーワードKとDを同時に指定することはできません。  
+
 	- なし - `FORCEKANA`を無視し、`SETCOLOR`で指定された色で描画します。  
 	- K - `FORCEKANA`を適用して描画します。  
-	- D - `SETCOLOR`を無視してコンフィグで指定されたディフォルト色で描画します。
+	- D - `SETCOLOR`を無視してコンフィグで指定されたディフォルト色で描画します。  
 
-	![](../assets/images/Iconeramaker.webp)3つ目の括弧内のキーワードは描画後の改行、WAITの有無を指定します。
-	- なし - `PRINT`のみで改行や`WAIT`は行いません。
-	- L - `PRINT`後、改行します。
-	- W - `PRINT`後、改行し`WAIT`命令を行います。
-	- これらの組み合わせにより、例えば`PRINTSDW`であれば、引数として<文字列式>を指定し、ディフォルト色で描画し、`PRINT`後に`WAIT`命令を行うことを意味します。
+	![](../assets/images/Iconeramaker.webp)3つ目の括弧内のキーワードは描画後の改行、WAITの有無を指定します。  
+
+	- なし - `PRINT`のみで改行や`WAIT`は行いません。  
+	- L - `PRINT`後、改行します。  
+	- W - `PRINT`後、改行し`WAIT`命令を行います。  
+	- これらの組み合わせにより、例えば`PRINTSDW`であれば、引数として<文字列式>を指定し、ディフォルト色で描画し、`PRINT`後に`WAIT`命令を行うことを意味します。  
 
 !!! hint "ヒント"
 

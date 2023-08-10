@@ -33,8 +33,19 @@ nav:
       - Reference/README.md
       - PRINT系:
           - Reference/PRINT.md
+          - Reference/PRINTSINGLE.md
+          - Reference/PRINTC.md
+          - Reference/PRINTDATA.md
+          - Reference/PRINTBUTTON.md
+          - Reference/PRINTPLAIN.md
           - Reference/DRAWLINE.md
+          - Reference/CUSTOMDRAWLINE.md
+          - Reference/REUSELASTLINE.md
+          - Reference/CLEARLINE.md
           - Reference/PRINT_STATUS.md
+          - Reference/PRINT_IMG.md
+          - Reference/PRINT_RECT.md
+          - Reference/PRINT_SPACE.md
       - HTML系:
           - Reference/HTML_TAGSPLIT.md
           - Reference/HTML_POPPRINTINGSTR.md

@@ -21,9 +21,8 @@ hide:
 	- [演算](operand.md)
 	- [定数・変数](variables.md)
 	- [ユーザー定義の変数](user_defined_variables.md)
-	- 命令
+	- [命令・式中関数](../Reference/README.md)
 	- [関数・プリプロセッサ](function.md)
-	- 式中で使える関数
 	- [ユーザー定義の式中関数](user_defined_in_expression_function.md)
 	- [ヘッダーファイル（ERH）](ERH.md)
 	- [HTML_PRINT関連](HTML_PRINT.md)
