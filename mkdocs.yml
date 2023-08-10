@@ -240,6 +240,9 @@ plugins:
           変更ログ: Changelog
           Emueraの仕様: Emuera's Summary
           eramakerの仕様: eramaker's Summary
+          プレイヤー向け情報: Information for end users
+          開発者向け情報: eramaker basic Information for Developers
+          Emueraの追加機能: Extend feat added in Emuera
 
 markdown_extensions:
   # Python Markdown
