@@ -26,14 +26,16 @@ hide:
 	```
 	`PRINTDATA`系命令です。 私家改造版readmeによれば、  
 
-		*書式*  
-		PRINTDATA (数値変数：省略可)  
-			DATA (文字)  
-			DATAFORM (FORM文字列)  
-			DATALIST  
-				(DATA or DATAFORMの羅列)  
-			ENDLIST  
-		ENDDATA  
+    ```  { #language-erbapi }
+	;*書式*  
+	PRINTDATA (数値変数：省略可)  
+		DATA (文字)  
+		DATAFORM (FORM文字列)  
+		DATALIST  
+			(DATA or DATAFORMの羅列)  
+		ENDLIST  
+	ENDDATA  
+	```
 
 		*内容*  
 		DATA、DATAFORMおよびDATALIST～ENDLISTで指定した文字列を確率均一でランダムで表示  

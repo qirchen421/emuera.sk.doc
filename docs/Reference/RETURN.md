@@ -23,20 +23,25 @@ hide:
 	引数に指定された書式付文字列を数式として解析し、`RETURN`を行います。  
 	例えば、以下のようなことができます。  
 
-		A = 100
-		CALL TEST
-		PRINTFORMW RESULT == {RESULT}
+    ```  { #language-erbapi }
+	A = 100
+	CALL TEST
+	PRINTFORMW RESULT == {RESULT}
 
-		@TEST
-		STR = A * 10
-		RETURNFORM %STR%
+	@TEST
+	STR = A * 10
+	RETURNFORM %STR%
+	```
+
 	`RETURN`と異なり、%は剰余演算子ではなく文字列式の開始とみなされるので注意してください。  
 
-		;OK。Aの下２ケタを返す。
-			RETURN A % 100
+    ```  { #language-erbapi }
+	;OK。Aの下２ケタを返す。
+		RETURN A % 100
 
-		;エラー。%以降を文字列式として読もうとするので。
-			RETURNFORM A % 100
+	;エラー。%以降を文字列式として読もうとするので。
+		RETURNFORM A % 100
+	```
 	また、複数の返り値に対応しています。  
 	複数の返り値を指定した場合、先頭から`RESULT:0`、`RESULT:1``...という風に代入されます。  
 

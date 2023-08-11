@@ -67,6 +67,19 @@ nav:
           - Reference/DELCHARA.md
       - 変数操作・変数参照・CSV参照:
           - Reference/UPCHECK.md
+          - Reference/VARSIZE.md
+          - Reference/RESETDATA.md
+          - Reference/RESETGLOBAL.md
+          - Reference/RESET_STAIN.md
+          - Reference/SWAP.md
+          - Reference/CSVNAME.md
+          - Reference/CSV_STATUS.md
+          - Reference/GETNUM.md
+          - Reference/GETPALAMLV.md
+          - Reference/FINDELEMENT.md
+          - Reference/VARSET.md
+          - Reference/CVARSET.md
+          - Reference/ARRAYSHIFT.md
           - Reference/ISDEFINED.md
           - Reference/EXISTVAR.md
           - Reference/ENUMFUNC.md

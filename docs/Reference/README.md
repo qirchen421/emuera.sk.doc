@@ -74,6 +74,34 @@
 | 関数名                                                                   | 引数                                          | 戻り値   |
 | :----------------------------------------------------------------------- | :-------------------------------------------- | :------- |
 | ![](../assets/images/Iconeramaker.webp)[`UPCHECK`](./UPCHECK.md) | なし | なし   |
+| ![](../assets/images/IconEmuera.webp)[`VARSIZE`](./VARSIZE.md)   | `variable`                | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`VARSIZE()`](./VARSIZE.md) | `variable`(, `dimension`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`RESETDATA`](./RESETDATA.md) | なし | なし   |
+| ![](../assets/images/IconEmuera.webp)[`RESETGLOBAL`](./RESETGLOBAL.md) | なし | なし   |
+| ![](../assets/images/IconEmuera.webp)[`RESET_STAIN`](./RESET_STAIN.md) | `int`| なし   |
+| ![](../assets/images/IconEmuera.webp)[`SWAP`](./SWAP.md) | `variable`, `variable` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CSVNAME`](./CSVNAME.md)       | `int`| `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVCALLNAME`](./CSVNAME.md)   | `int`| `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVNICKNAME`](./CSVNAME.md)   | `int`| `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVMASTERNAME`](./CSVNAME.md) | `int`| `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVBASE`](./CSV_STATUS.md)     | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVCSTR`](./CSV_STATUS.md)     | `int`, `int` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVABL`](./CSV_STATUS.md)      | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVTALENT`](./CSV_STATUS.md)   | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVMARK`](./CSV_STATUS.md)     | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVEXP`](./CSV_STATUS.md)      | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVRELATION`](./CSV_STATUS.md) | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVJUEL`](./CSV_STATUS.md)     | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVEQUIP`](./CSV_STATUS.md)    | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CFLAG`](./CSV_STATUS.md)       | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.md) | `variable`, `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.md)   | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDELEMENT`](./FINDELEMENT.md)     | `variable`, `value`(, `int`, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDLASTELEMENT`](./FINDELEMENT.md) | `variable`, `value`(, `int`, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`VARSET`](./VARSET.md)       | `variable`(, `value`, `int`, `int`)   | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CVARSET`](./CVARSET.md) | `charaVariable`(, `int`, `int`, `int`, `int`) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYSHIFT`](./ARRAYSHIFT.md) | `variable`, `int`, `value`(, `int`, `int`) | なし   |
 | ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md)           | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md)             | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md)   | `string`                                      | `int`    |

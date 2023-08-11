@@ -20,13 +20,15 @@ hide:
 	引数は[`PRINTFORM`](./PRINT.md)と同様の書式を使用可  
 	なお、`REUSELASTLINE （この半角スペース必須）`とすれば、警告文なしで空行にできます  
 
-		$INPUT_LOOP  
-		INPUT  
-		IF RESULT != 0  
-			;!;CLEARLINE 1   
-			;!;REUSELASTLINE 無効ですよ  
-			GOTO INPUT_LOOP  
-		ENDIF  
+    ```  { #language-erbapi }
+	$INPUT_LOOP  
+	INPUT  
+	IF RESULT != 0  
+		;!;CLEARLINE 1   
+		;!;REUSELASTLINE 無効ですよ  
+		GOTO INPUT_LOOP  
+	ENDIF  
+	```
 
 	のように、[`GOTO INPUT_LOOP`](./GOTO.md)の前に`REUSELASTLINE`を呼び出すと、  
 	前の入力が画面から消去され、次の入力は前の入力と同じ行に表示される  
@@ -35,9 +37,11 @@ hide:
 	ちなみに`@USERXXX`系関数の条件分岐の最後に  
 	（対象は`@USERCOM`、`@USERSHOP`、`@USERABLUP`の3つ）  
 
-		;!;ELSE  
-			;!;REUSELASTLINE   
-		ENDIF  
+    ```  { #language-erbapi }
+	;!;ELSE  
+		;!;REUSELASTLINE   
+	ENDIF  
+	```
 
 	とやっておくと…？  
 	(Emuera専用なら`;!;`は必要なし)  
