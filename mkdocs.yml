@@ -80,6 +80,11 @@ nav:
           - Reference/VARSET.md
           - Reference/CVARSET.md
           - Reference/ARRAYSHIFT.md
+          - Reference/ARRAYREMOVE.md
+          - Reference/ARRAYSORT.md
+          - Reference/ARRAYCOPY.md
+          - Reference/ARRAYMSORT.md
+          - Reference/CUPCHECK.mD
           - Reference/ISDEFINED.md
           - Reference/EXISTVAR.md
           - Reference/ENUMFUNC.md
