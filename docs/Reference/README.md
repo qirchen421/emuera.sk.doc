@@ -43,12 +43,48 @@
 | ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
 ### 表示操作・フォント操作・表示仕様参照
-| 関数名                                                                   | 引数  | 戻り値   |
-| :----------------------------------------------------------------------- | :---- | :------- |
-| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.md)  | `int`, `int`, `int`   | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.md) | `int`, `int`, `int`   | なし   |
-| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)               | `int` | `void`   |
-| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md) | `int` | `string` |
+| 関数名                                                                           | 引数                  | 戻り値   |
+| :------------------------------------------------------------------------------- | :-------------------- | :------- |
+| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.md)                         | `int`, `int`, `int`   | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.md)                        | `int`, `int`, `int`   | なし     |
+| ![](../assets/images/IconEmuera.webp)[`SETCOLOR`](./SETCOLOR.md)                 | `int`, `int`, `int`   | なし     |
+|                                                                                  | `int`                 | なし     |
+| ![](../assets/images/IconEmuera.webp)[`RESETCOLOR`](./SETCOLOR.md)               | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`SETBGCOLOR`](./SETBGCOLOR.md)             | `int`, `int`, `int`   | なし     |
+|                                                                                  | `int`                 | なし     |
+| ![](../assets/images/IconEmuera.webp)[`RESETBGCOLOR`](./SETBGCOLOR.md)           | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`SETCOLORBYNAME`](./SETCOLORBYNAME.md)     | `colorName`           | なし     |
+| ![](../assets/images/IconEmuera.webp)[`SETBGCOLORBYNAME`](./SETCOLORBYNAME.md)   | `colorName`           | なし     |
+| ![](../assets/images/IconEmuera.webp)[`GETCOLOR`](./GETCOLOR.md)                 | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETBGCOLOR`](./GETCOLOR.md)               | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETDEFCOLOR`](./GETCOLOR.md)              | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETDEFBGCOLOR`](./GETCOLOR.md)            | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETFOCUSCOLOR`](./GETCOLOR.md)            | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`FONTBOLD`](./FONT_OPERATION.md)           | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`FONTITALIC`](./FONT_OPERATION.md)         | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`FONTSTYLE`](./FONT_OPERATION.md)          | `int`                 | なし     |
+| ![](../assets/images/IconEmuera.webp)[`FONTREGULAR`](./FONT_OPERATION.md)        | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`GETSTYLE`](./FONT_OPERATION.md)           | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CHKFONT`](./SETFONT.md)                   | `string`              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SETFONT`](./SETFONT.md)                   | `string`              | なし     |
+| ![](../assets/images/IconEmuera.webp)[`GETFONT`](./SETFONT.md)                   | なし                  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`FORCEKANA`](./FORCEKANA.md)               | `int`                 | なし     |
+| ![](../assets/images/IconEmuera.webp)[`ALIGNMENT`](./ALIGNMENT.md)               | `keyword`             | なし     |
+| ![](../assets/images/IconEmuera.webp)[`CURRENTALIGN`](./ALIGNMENT.md)            | なし                  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`REDRAW`](./REDRAW.md)                     | `int`                 | なし     |
+| ![](../assets/images/IconEmuera.webp)[`CURRENTREDRAW`](./REDRAW.md)              | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`PRINTCPERLINE`](./PRINTCPERLINE.md)       | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`LINEISEMPTY`](./LINEISEMPTY.md)           | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`BARSTR`](./BARSTR.md)                     | `int`, `int`, `int`   | `string` |
+| ![](../assets/images/IconEmuera.webp)[`MONEYSTR`](./MONEYSTR.md)                 | `int`, `option`       | `string` |
+| ![](../assets/images/IconEmuera.webp)[`SKIPDISP`](./SKIP_RELATE.md)              | `int`                 | なし     |
+| ![](../assets/images/IconEmuera.webp)[`NOSKIP`](./SKIP_RELATE.md)                | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`ENDNOSKIP`](./SKIP_RELATE.md)             | なし                  | なし     |
+| ![](../assets/images/IconEmuera.webp)[`ISSKIP`](./SKIP_RELATE.md)                | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MOUSESKIP`](./SKIP_RELATE.md)             | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MESSKIP`](./SKIP_RELATE.md)               | なし                  | `int`    |
+| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)                       | `int`                 | `void`   |
+| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md)         | `int`                 | `string` |
 
 ### 文字列操作・参照
 

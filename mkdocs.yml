@@ -56,6 +56,20 @@ nav:
           - Reference/HTML_SUBSTRING.md
       - 表示操作・フォント操作・表示仕様参照:
           - Reference/BAR.md
+          - Reference/SETCOLOR.md
+          - Reference/SETBGCOLOR.md
+          - Reference/SETCOLORBYNAME.md
+          - Reference/GETCOLOR.md
+          - Reference/FONT_OPERATION.md
+          - Reference/SETFONT.md
+          - Reference/FORCEKANA.md
+          - Reference/ALIGNMENT.md
+          - Reference/REDRAW.md
+          - Reference/PRINTCPERLINE.md
+          - Reference/LINEISEMPTY.md
+          - Reference/BARSTR.md
+          - Reference/MONEYSTR.md
+          - Reference/SKIP_RELATE.md
           - Reference/SKIPLOG.md
           - Reference/GETDISPLAYLINE.md
       - 文字列操作・参照:
