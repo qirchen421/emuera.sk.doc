@@ -73,6 +73,18 @@ nav:
           - Reference/SKIPLOG.md
           - Reference/GETDISPLAYLINE.md
       - 文字列操作・参照:
+          - Reference/TOUPPER.md
+          - Reference/TOSTR.md
+          - Reference/TOINT.md
+          - Reference/STRLEN.md
+          - Reference/SUBSTRING.md
+          - Reference/CHARATU.md
+          - Reference/STRFIND.md
+          - Reference/STRCOUNT.md
+          - Reference/SPLIT.md
+          - Reference/REPLACE.md
+          - Reference/ESCAPE.md
+          - Reference/UNICODE.md
           - Reference/REGEXPMATCH.md
       - 算術:
           - Reference/TIMES.md

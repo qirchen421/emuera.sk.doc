@@ -88,10 +88,35 @@
 
 ### 文字列操作・参照
 
-| 関数名                                                             | 引数                                              | 戻り値 |
-| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
-| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`  |
-|                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`  |
+| 関数名                                                             | 引数                                              | 戻り値   |
+| :----------------------------------------------------------------- | :------------------------------------------------ | :------- |
+| ![](../assets/images/IconEmuera.webp)[`TOUPPER`](./TOUPPER.md)     | `string`                                          | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOLOWER`](./TOUPPER.md)     | `string`                                          | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.md)      | `string`                                          | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.md)      | `string`                                          | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.md)         | `int`, `option`                                   | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)         | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md)     | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRLEN`](./STRLEN.md)       | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRLENS`](./STRLEN.md)      | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRLENFORM`](./STRLEN.md)   | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRLENU`](./STRLEN.md)      | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRLENSU`](./STRLEN.md)     | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRLENFORMU`](./STRLEN.md)  | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SUBSTRING`](./SUBSTRING.md) | `string`, `int`, `int`                            | `string` |
+| ![](../assets/images/IconEmuera.webp)[`SUBSTRINGU`](./SUBSTRING.md)| `string`, `int`, `int`                            | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CHARATU`](./CHARATU.md)     | `string`, `int`                                   | `string` |
+| ![](../assets/images/IconEmuera.webp)[`STRFIND`](./STRFIND.md)     | `string`, `string`(, `int`)                       | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRFINDU`](./STRFIND.md)    | `string`, `string`(, `int`)                       | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRCOUNT`](./STRCOUNT.md)   | `string`, `string`                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPLIT`](./SPLIT.md)         | `string`, `string`, `stringArray`                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRJOIN`](./SPLIT.md)       | `stringArray`(, `string`, `int`, `int`)           | `string` |
+| ![](../assets/images/IconEmuera.webp)[`REPLACE`](./REPLACE.md)     | `string`, `string`, `string`                      | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ESCAPE`](./ESCAPE.md)       | `string`                                          | `string` |
+| ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.md)     | `int`                                             | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.md) | `string`                                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`    |
+|                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
 ### 算術
 | 関数名                                                             | 引数                                              | 戻り値 |
