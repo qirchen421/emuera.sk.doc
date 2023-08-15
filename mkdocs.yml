@@ -88,6 +88,10 @@ nav:
           - Reference/REGEXPMATCH.md
       - 算術:
           - Reference/TIMES.md
+          - Reference/POWER.md
+          - Reference/ABS.md
+          - Reference/BIT_OPERATION.md
+          - Reference/MAX.md
       - キャラ操作・参照:
           - Reference/ADDCHARA.md
           - Reference/DELCHARA.md

@@ -119,9 +119,21 @@
 |                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
 ### 算術
-| 関数名                                                             | 引数                                              | 戻り値 |
-| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md) | `int`, `float`   | なし   |
+| 関数名                                                                 | 引数                                 | 戻り値 |
+| :--------------------------------------------------------------------- | :----------------------------------- | :----- |
+| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md)           | `int`, `float`                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.md)             | `integerVariable`, `int`, `int`      | `int`  |
+|                                                                        | `int`, `int`                         | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.md)                 | `int`                                | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.md)                | `int`                                | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)    | `int`, `int`                         | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)    | `integerVariable`, `int`(, `int`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)  | `integarVariable`, `int`(, `int`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`INVERTBIT`](./BIT_OPERATION.md) | `integarVariable`, `int`(, `int`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.md)                 | `int`(, `int`...)                    | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.md)                 | `int`(, `int`...)                    | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.md)               | `int`, `int`, `int`                  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.md)             | `int`, `int`, `int`                  | `int`  |
 
 ### キャラ操作・参照
 
