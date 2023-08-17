@@ -126,6 +126,7 @@
 |                                                                        | `int`, `int`                         | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.md)                 | `int`                                | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.md)                | `int`                                | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.md)               | `int`                                | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)    | `int`, `int`                         | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)    | `integerVariable`, `int`(, `int`...) | なし   |
 | ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)  | `integarVariable`, `int`(, `int`...) | なし   |
@@ -137,10 +138,22 @@
 
 ### キャラ操作・参照
 
-| 関数名                                                             | 引数                                              | 戻り値 |
-| :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`ADDCHARA`](./ADDCHARA.md) | `int`(, `int`,...)   | なし   |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.md) | `int`(, `int`,...)   | なし   |
+| 関数名                                                                                                  | 引数                                     | 戻り値 |
+| :------------------------------------------------------------------------------------------------------ | :--------------------------------------- | :----- |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`ADDCHARA`](./ADDCHARA.md) | `int`(, `int`,...)                       | なし   |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.md) | `int`(, `int`,...)                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`SWAPCHARA`](./SWAPCHARA.md)                                      | `int`, `int`                             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`SORTCHARA`](./SORTCHARA.md)                                      | `charaVariable`, `keyword`               | なし   |
+| ![](../assets/images/IconEmuera.webp)[`GETCHARA`](./GETCHARA.md)                                        | `int`                                    | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ADDDEFCHARA`](./ADDDEFCHARA.md)                                  | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ADDVOIDCHARA`](./ADDVOIDCHARA.md)                                | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DELALLCHARA`](./DELALLCHARA.md)                                  | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`PICKUPCHARA`](./PICKUPCHARA.md)                                  | `int`(, `int`...)                        | なし   |
+| ![](../assets/images/IconEmuera.webp)[`EXISTCSV`](./EXISTCSV.md)                                        | `int`                                    | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDCHARA`](./FINDCHARA.md)                                      | `charaVariable`, `int`(, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDLASTCHARA`](./FINDCHARA.md)                                  | `charaVariable`, `int`(, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.md)                                      | `int`, `int`                             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.md)                                | `int`                                    | なし   |
 
 ### 変数操作・変数参照・CSV参照
 

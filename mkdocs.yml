@@ -90,11 +90,23 @@ nav:
           - Reference/TIMES.md
           - Reference/POWER.md
           - Reference/ABS.md
+          - Reference/SQRT.md
           - Reference/BIT_OPERATION.md
           - Reference/MAX.md
       - キャラ操作・参照:
           - Reference/ADDCHARA.md
           - Reference/DELCHARA.md
+          - Reference/SWAPCHARA.md
+          - Reference/SORTCHARA.md
+          - Reference/GETCHARA.md
+          - Reference/ADDDEFCHARA.md
+          - Reference/ADDVOIDCHARA.md
+          - Reference/DELALLCHARA.md
+          - Reference/PICKUPCHARA.md
+          - Reference/EXISTCSV.md
+          - Reference/FINDCHARA.md
+          - Reference/COPYCHARA.md
+          - Reference/ADDCOPYCHARA.md
       - 変数操作・変数参照・CSV参照:
           - Reference/UPCHECK.md
           - Reference/VARSIZE.md
