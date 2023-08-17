@@ -213,9 +213,23 @@
 | ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)                 | `variable`, `int`(, `int`)                    | `string` |
 
 ### セーブデータ操作
-| 関数名                                                       | 引数                     | 戻り値           |
-| :----------------------------------------------------------- | :----------------------- | :--------------- |
-| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.md) | `string`   | なし   |
+| 関数名                                                                                              | 引数                     | 戻り値           |
+| :-------------------------------------------------------------------------------------------------- | :----------------------- | :--------------- |
+| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.md)                                    | `string`   | なし   |
+| ![](../assets/images/IconEmuera.webp)[`SAVEDATA`](./SAVEDATA.md)                                    | `int`, `string` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`LOADDATA`](./LOADDATA.md)                                    | `int`| なし   |
+| ![](../assets/images/IconEmuera.webp)[`DELDATA`](./DELDATA.md)                                      | `int`| なし   |
+| ![](../assets/images/IconEmuera.webp)[`CHKDATA`](./CHKDATA.md)                                      | `int`| `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SAVENOS`](./SAVENOS.md)                                      | `int`| `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SAVEGLOBAL`](./SAVEGLOBAL.md)                                | なし | なし   |
+| ![](../assets/images/IconEmuera.webp)[`LOADGLOBAL`](./LOADGLOBAL.md)                                | なし | `int`  |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEE.webp)[`OUTPUTLOG`](./OUTPUTLOG.md) | (`string`) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`SAVECHARA`](./SAVECHARA.md)                                  | `string`, `string`, `int`(, `int`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`LOADCHARA`](./LOADCHARA.md)                                  | `string`                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CHKCHARADATA`](./CHKCHARADATA.md)                            | `string`                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`FIND_CHARADATA`](./FIND_CHARADATA.md)                        | `string`                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.md)   | `string`, `int`(, `int`, `int`)       | `int`    |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.md)   | `int`(, `int`, `int`)                 | `string` |
 
 ### 入力・ウェイト
 | 関数名                                                       | 引数                     | 戻り値           |

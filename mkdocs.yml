@@ -138,6 +138,20 @@ nav:
           - Reference/ERDNAME.md
       - セーブデータ操作:
           - Reference/PUTFORM.md
+          - Reference/SAVEDATA.md
+          - Reference/LOADDATA.md
+          - Reference/DELDATA.md
+          - Reference/CHKDATA.md
+          - Reference/SAVENOS.md
+          - Reference/SAVEGLOBAL.md
+          - Reference/LOADGLOBAL.md
+          - Reference/OUTPUTLOG.md
+          - Reference/SAVECHARA.md
+          - Reference/LOADCHARA.md
+          - Reference/CHKCHARADATA.md
+          - Reference/FIND_CHARADATA.md
+          - Reference/SAVETEXT.md
+          - Reference/LOADTEXT.md
       - 入力・ウェイト:
           - Reference/INPUT.md
           - Reference/WAIT.md
