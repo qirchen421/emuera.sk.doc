@@ -152,6 +152,10 @@ nav:
           - Reference/FIND_CHARADATA.md
           - Reference/SAVETEXT.md
           - Reference/LOADTEXT.md
+      - 日付・時刻取得:
+          - Reference/GETTIME.md
+          - Reference/GETMILLISECOND.md
+          - Reference/GETSECOND.md
       - 入力・ウェイト:
           - Reference/INPUT.md
           - Reference/WAIT.md

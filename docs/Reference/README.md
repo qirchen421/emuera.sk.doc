@@ -231,6 +231,16 @@
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.md)   | `string`, `int`(, `int`, `int`)       | `int`    |
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.md)   | `int`(, `int`, `int`)                 | `string` |
 
+
+### 日付・時刻取得
+| 関数名                                                                       | 引数 | 戻り値           |
+| :--------------------------------------------------------------------------- | :--- | :--------------- |
+| ![](../assets/images/IconEmuera.webp)[`GETTIME`](./GETTIME.md)               | なし | `int`, `string`  |
+| ![](../assets/images/IconEmuera.webp)[`GETTIME()`](./GETTIME.md)             | なし | `int`            |
+| ![](../assets/images/IconEmuera.webp)[`GETTIMES()`](./GETTIME.md)            | なし | `string`         |
+| ![](../assets/images/IconEmuera.webp)[`GETMILLISECOND`](./GETMILLISECOND.md) | なし | `int`            |
+| ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md)           | なし | `int`            |
+
 ### 入力・ウェイト
 | 関数名                                                       | 引数                     | 戻り値           |
 | :----------------------------------------------------------- | :----------------------- | :--------------- |
