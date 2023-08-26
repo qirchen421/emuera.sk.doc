@@ -159,6 +159,12 @@ nav:
       - 入力・ウェイト:
           - Reference/INPUT.md
           - Reference/WAIT.md
+          - Reference/FORCEWAIT.md
+          - Reference/TINPUT.md
+          - Reference/ONEINPUT.md
+          - Reference/TONEINPUT.md
+          - Reference/WAITANYKEY.md
+          - Reference/INPUTMOUSEKEY.md
           - Reference/INPUTANY.md
           - Reference/BINPUT.md
       - ループ・分岐構文:

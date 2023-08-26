@@ -242,14 +242,24 @@
 | ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md)           | なし | `int`            |
 
 ### 入力・ウェイト
-| 関数名                                                       | 引数                     | 戻り値           |
-| :----------------------------------------------------------- | :----------------------- | :--------------- |
-| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.md)  | (`int`, `int`, `int`)   | `void`     |
-| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.md) | (`int`, `int`, `int`)   | `void`     |
-| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.md) | なし   | `void`     |
-| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | なし                     | `int` / `string` |
-| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)     | (`int`, `int`, `int`)    | `int`            |
-| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)    | (`string`, `int`, `int`) | `string`         |
+| 関数名                                                                     | 引数                                        | 戻り値           |
+| :------------------------------------------------------------------------- | :------------------------------------------ | :--------------- |
+| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.md)               | (`int`, `int`, `int`)                       | `void`           |
+| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.md)              | (`int`, `int`, `int`)                       | `void`           |
+| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.md)                 | なし                                        | `void`           |
+| ![](../assets/images/IconEmuera.webp)[`FORCEWAIT`](./FORCEWAIT.md)         | なし                                        | なし             |
+| ![](../assets/images/IconEmuera.webp)[`TINPUT`](./TINPUT.md)               | `int`, `int`(, `int`, `string`, `int`)      | `int`            |
+| ![](../assets/images/IconEmuera.webp)[`TINPUTS`](./TINPUT.md)              | `int`, `int`(, `int`, `string`, `int`)      | `string`         |
+| ![](../assets/images/IconEmuera.webp)[`TWAIT`](./TWAIT.md)                 | `int`, `int`                                | なし             |
+| ![](../assets/images/IconEmuera.webp)[`ONEINPUT`](./ONEINPUT.md)           | `int`(, `int`)                              | `int`            |
+| ![](../assets/images/IconEmuera.webp)[`ONEINPUTS`](./ONEINPUT.md)          | `string`(, `int`)                           | `string`         |
+| ![](../assets/images/IconEmuera.webp)[`TONEINPUT`](./TONEINPUT.md)         | `int`, `int`(, `int`, `string`, `int`)      | `int`            |
+| ![](../assets/images/IconEmuera.webp)[`TONEINPUTS`](./TONEINPUT.md)        | `int`, `string`(, `int`, `string`, `int`)   | `string`         |
+| ![](../assets/images/IconEmuera.webp)[`WAITANYKEY`](./WAITANYKEY.md)       | なし                                        | なし             |
+| ![](../assets/images/IconEmuera.webp)[`INPUTMOUSEKEY`](./INPUTMOUSEKEY.md) | `int`                                       | `int`            |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md)               | なし                                        | `int` / `string` |
+| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                       | `int`            |
+| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                    | `string`         |
 
 ### ループ・分岐構文
 | 関数名                                                       | 引数                     | 戻り値           |
