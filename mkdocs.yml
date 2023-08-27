@@ -161,6 +161,7 @@ nav:
           - Reference/WAIT.md
           - Reference/FORCEWAIT.md
           - Reference/TINPUT.md
+          - Reference/TWAIT.md
           - Reference/ONEINPUT.md
           - Reference/TONEINPUT.md
           - Reference/WAITANYKEY.md
@@ -171,6 +172,10 @@ nav:
           - Reference/IF.md
           - Reference/REPEAT.md
           - Reference/CONTINUE.md
+          - Reference/FOR.md
+          - Reference/WHILE.md
+          - Reference/DO.md
+          - Reference/SELECTCASE.md
       - デバッグ補助・システムフロー制御:
           - Reference/SAVEGAME.md
           - Reference/BEGIN.md

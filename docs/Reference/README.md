@@ -262,9 +262,23 @@
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                    | `string`         |
 
 ### ループ・分岐構文
-| 関数名                                                       | 引数                     | 戻り値           |
-| :----------------------------------------------------------- | :----------------------- | :--------------- |
-| ![](../assets/images/Iconeramaker.webp)[`(S)IF-ELSEIF-ELSE-ENDIF`](./IF.md) | `operand`                     | `void` |
+| 関数名                                                                      | 引数                                     | 戻り値 |
+| :-------------------------------------------------------------------------- | :--------------------------------------- | :----- |
+| ![](../assets/images/Iconeramaker.webp)[`(S)IF-ELSEIF-ELSE-ENDIF`](./IF.md) | `operand`                                | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`REPEAT`](./REPEAT.md)              | `int`                                    | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`REND`](./REPEAT.md)                | なし                                     | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`CONTINUE`](./CONTINUE.md)          | なし                                     | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`BREAK`](./CONTINUE.md)             | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`FOR`](./FOR.md)                      | `integerVariable`, `int`, `int`(, `int`) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`NEXT`](./FOR.md)                     | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`WHILE`](./WHILE.md)                  | `int`                                    | なし   |
+| ![](../assets/images/IconEmuera.webp)[`WEND`](./WHILE.md)                   | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DO`](./DO.md)                        | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`LOOP`](./DO.md)                      | `int`                                    | なし   |
+| ![](../assets/images/IconEmuera.webp)[`SELECTCASE`](./SELECTCASE.md)        | `any`                                    | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CASE`](./SELECTCASE.md)              | `any`                                    | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)          | なし                                     | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)         | なし                                     | なし   |
 
 ### デバッグ補助・システムフロー制御
 
