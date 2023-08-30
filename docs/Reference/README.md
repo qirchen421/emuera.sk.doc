@@ -43,6 +43,7 @@
 | ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
 ### 表示操作・フォント操作・表示仕様参照
+
 | 関数名                                                                           | 引数                  | 戻り値   |
 | :------------------------------------------------------------------------------- | :-------------------- | :------- |
 | ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.md)                         | `int`, `int`, `int`   | なし     |
@@ -119,6 +120,7 @@
 |                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
 ### 算術
+
 | 関数名                                                                 | 引数                                 | 戻り値 |
 | :--------------------------------------------------------------------- | :----------------------------------- | :----- |
 | ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md)           | `int`, `float`                       | なし   |
@@ -213,6 +215,7 @@
 | ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)                 | `variable`, `int`(, `int`)                    | `string` |
 
 ### セーブデータ操作
+
 | 関数名                                                                                              | 引数                     | 戻り値           |
 | :-------------------------------------------------------------------------------------------------- | :----------------------- | :--------------- |
 | ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.md)                                    | `string`   | なし   |
@@ -233,6 +236,7 @@
 
 
 ### 日付・時刻取得
+
 | 関数名                                                                       | 引数 | 戻り値           |
 | :--------------------------------------------------------------------------- | :--- | :--------------- |
 | ![](../assets/images/IconEmuera.webp)[`GETTIME`](./GETTIME.md)               | なし | `int`, `string`  |
@@ -242,6 +246,7 @@
 | ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md)           | なし | `int`            |
 
 ### 入力・ウェイト
+
 | 関数名                                                                     | 引数                                        | 戻り値           |
 | :------------------------------------------------------------------------- | :------------------------------------------ | :--------------- |
 | ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.md)               | (`int`, `int`, `int`)                       | `void`           |
@@ -262,6 +267,7 @@
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                    | `string`         |
 
 ### ループ・分岐構文
+
 | 関数名                                                                      | 引数                                     | 戻り値 |
 | :-------------------------------------------------------------------------- | :--------------------------------------- | :----- |
 | ![](../assets/images/Iconeramaker.webp)[`(S)IF-ELSEIF-ELSE-ENDIF`](./IF.md) | `operand`                                | なし   |
@@ -280,14 +286,25 @@
 | ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)          | なし                                     | なし   |
 | ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)         | なし                                     | なし   |
 
+### 乱数制御
+
+| 関数名                                                             | 引数  | 戻り値 |
+| :----------------------------------------------------------------- | :---- | :----- |
+| ![](../assets/images/IconEmuera.webp)[`RANDOMIZE`](./RANDOMIZE.md) | `int` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.md)  | なし  | なし   |
+| ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.md)  | なし  | なし   |
+
 ### デバッグ補助・システムフロー制御
 
 | 関数名                                                                                   | 引数                  |
 | :--------------------------------------------------------------------------------------- | :-------------------- |
-| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.md) | なし   | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.md) | なし   | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.md) | `idenetifier` | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`QUIT`](./QUIT.md) | なし | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.md)                       | なし                  |
+| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.md)                       | なし                  |
+| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.md)                             | `idenetifier`         |
+| ![](../assets/images/Iconeramaker.webp)[`QUIT`](./QUIT.md)                               | なし                  |
+| ![](../assets/images/IconEmuera.webp)[`CALLTRAIN`](./CALLTRAIN.md)                       | `int`                 |
+| ![](../assets/images/IconEmuera.webp)[`DOTRAIN`](./DOTRAIN.md)                           | `int`                 |
+| ![](../assets/images/IconEmuera.webp)[`THROW`](./THROW.md)                               | `string`              |
 | ![](../assets/images/IconEE.webp)[`QUIT_AND_RESTART`](./QUIT_AND_RESTART.md)             | なし                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.md)                         | なし                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | なし                  |

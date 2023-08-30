@@ -176,10 +176,15 @@ nav:
           - Reference/WHILE.md
           - Reference/DO.md
           - Reference/SELECTCASE.md
+      - 乱数制御:
+          - Reference/RANDOMIZE.md
       - デバッグ補助・システムフロー制御:
           - Reference/SAVEGAME.md
           - Reference/BEGIN.md
           - Reference/QUIT.md
+          - Reference/CALLTRAIN.md
+          - Reference/DOTRAIN.md
+          - Reference/THROW.md
           - Reference/QUIT_AND_RESTART.md
           - Reference/FORCE_QUIT.md
           - Reference/FORCE_QUIT_AND_RESTART.md
