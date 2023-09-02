@@ -197,6 +197,11 @@ nav:
           - Reference/JUMP.md
           - Reference/GOTO.md
           - Reference/RESTART.md
+          - Reference/TRY.md
+          - Reference/FORM.md
+          - Reference/TRYFORM.md
+          - Reference/CALLF.md
+          - Reference/CALLEVENT.md
           - Reference/EXISTFUNCTION.md
           - Reference/TRYCALLF.md
           - Reference/TRYCALLFORMF.md

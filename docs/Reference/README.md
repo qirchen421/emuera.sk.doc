@@ -328,7 +328,19 @@
 | ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | なし   |
 | ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md) | `labelName`   | なし   |
 | ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md) | なし | なし   |
-| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALL`](./TRY.md) | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMP`](./TRY.md) | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRY.md) | `labelName`                | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md) | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md) | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`GOTOFORM`](./FORM.md) | `labelName`                | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.md) | `formedString`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.md) | `formedString`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTOFORM`](./TRYFORM.md) | `formedString`             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | なし   |
+| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       | `int` |
 | ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`       |
 | ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
 
