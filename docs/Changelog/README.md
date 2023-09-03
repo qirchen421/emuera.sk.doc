@@ -154,7 +154,7 @@ hide:
 
 === "v33"
 	* [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)追加
-	* [`GCREATEFROMFILE`拡張](../Reference//README.md#gcreatefromfileに第三引数を指定することでemueraとの相対パスで画像を参照できるように)
+	* [`GCREATEFROMFILE`拡張](../Reference//README.md#gcreatefromfileemuera)
 
 === "v32"
 	* [`GDRAWLINE`](../Reference/GDRAWLINE.md)追加
