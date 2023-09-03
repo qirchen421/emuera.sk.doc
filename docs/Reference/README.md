@@ -322,27 +322,40 @@
 
 ### 関数系（CALL等）
 
-| 関数名                                                                 | 引数           |
-| :--------------------------------------------------------------------- | :------------- |
-| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)    | `functionName` |
-| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md) | `labelName`   | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md) | なし | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALL`](./TRY.md) | `functionName`(, `any`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMP`](./TRY.md) | `functionName`(, `any`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRY.md) | `labelName`                | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md) | `functionName`(, `any`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md) | `functionName`(, `any`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`GOTOFORM`](./FORM.md) | `labelName`                | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.md) | `formedString`(, `any`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.md) | `formedString`(, `any`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYGOTOFORM`](./TRYFORM.md) | `formedString`             | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | なし   |
-| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       | `int` |
-| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`       |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
+| 関数名                                                                 | 引数                       | 戻り値 |
+| :--------------------------------------------------------------------- | :------------------------- | ;----- |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)             | `functionName`             | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md)             | `functionName`             | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md)             | `labelName`                | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md)       | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALL`](./TRY.md)             | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMP`](./TRY.md)             | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRY.md)             | `labelName`                | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md)           | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md)           | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`GOTOFORM`](./FORM.md)           | `labelName`                | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.md)     | `formedString`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.md)     | `formedString`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTOFORM`](./TRYFORM.md)     | `formedString`             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)             | `functionName`             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md)         | `formedString`             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md)     | `functionName`             | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALL`](./TRYC.md)           | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCJUMP`](./TRYC.md)           | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRYC.md)            | `labelName`                | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md)       | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md)       | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCGOTOFORM`](./TRYC.md)       | `labelName`                | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CATCH`](./TRYC.md)              | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ENDCATCH`](./TRYC.md)           | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md)     | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md)     | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.md)     | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)            | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.md)         | なし                       | なし   |
+| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`                   | `int`  |
+| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`             | なし   |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString`             | なし   |
 
 ### RETURN系
 

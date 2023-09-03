@@ -24,8 +24,8 @@ hide:
 		内容：式中関数を通常の関数扱いで呼び出す、返り値は破棄される
 		疑似SETTERを作りたくてやった、今は反省している
 
-	当然だがRESULTやRESULTSは呼んだ式中関数内で操作していない限り、変化しない。
-	同系統の命令で、EM+EEにて[`TRYCALLF`](./TRYCALLF.md)、[`TRYCALLFORMF`](./TRYCALLFORMF.md)が追加されています。
+	当然だがRESULTやRESULTSは呼んだ式中関数内で操作していない限り、変化しない。  
+	同系統の命令で、EM+EEにて[`TRYCALLF`](./TRYCALLF.md)、[`TRYCALLFORMF`](./TRYCALLFORMF.md)が追加されています。  
 
 !!! hint "ヒント"
 

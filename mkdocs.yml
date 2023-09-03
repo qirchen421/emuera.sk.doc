@@ -197,6 +197,8 @@ nav:
     - Reference/TRYFORM.md
     - Reference/CALLF.md
     - Reference/CALLEVENT.md
+    - Reference/TRYC.md
+    - Reference/TRYLIST.md
     - Reference/EXISTFUNCTION.md
     - Reference/TRYCALLF.md
     - Reference/TRYCALLFORMF.md
