@@ -1,364 +1,360 @@
+extra_css:
+- css/eraBasic.min.css
+- css/extra.css
+extra_javascript:
+- javascripts/highlight.min.js
+- javascripts/erabasic-highlighths.min.js
+markdown_extensions:
+- meta
+- tables
+- attr_list
+- md_in_html
+- toc:
+    permalink: true
+- admonition
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.inlinehilite
+- pymdownx.superfences
+- pymdownx.keys
+nav:
+- ホーム: README.md
+- EmueraEM+EEの仕様: EMEE/EMEE_Summary.md
+- リファレンス:
+  - Reference/README.md
+  - PRINT系:
+    - Reference/PRINT.md
+    - Reference/PRINTSINGLE.md
+    - Reference/PRINTC.md
+    - Reference/PRINTDATA.md
+    - Reference/PRINTBUTTON.md
+    - Reference/PRINTPLAIN.md
+    - Reference/DRAWLINE.md
+    - Reference/CUSTOMDRAWLINE.md
+    - Reference/REUSELASTLINE.md
+    - Reference/CLEARLINE.md
+    - Reference/PRINT_STATUS.md
+    - Reference/PRINT_IMG.md
+    - Reference/PRINT_RECT.md
+    - Reference/PRINT_SPACE.md
+  - HTML系:
+    - Reference/HTML_TAGSPLIT.md
+    - Reference/HTML_POPPRINTINGSTR.md
+    - Reference/HTML_GETPRINTEDSTR.md
+    - Reference/HTML_ESCAPE.md
+    - Reference/HTML_TOPLAINTEXT.md
+    - Reference/HTML_STRINGLEN.md
+    - Reference/HTML_SUBSTRING.md
+  - 表示操作・フォント操作・表示仕様参照:
+    - Reference/BAR.md
+    - Reference/SETCOLOR.md
+    - Reference/SETBGCOLOR.md
+    - Reference/SETCOLORBYNAME.md
+    - Reference/GETCOLOR.md
+    - Reference/FONT_OPERATION.md
+    - Reference/SETFONT.md
+    - Reference/FORCEKANA.md
+    - Reference/ALIGNMENT.md
+    - Reference/REDRAW.md
+    - Reference/PRINTCPERLINE.md
+    - Reference/LINEISEMPTY.md
+    - Reference/BARSTR.md
+    - Reference/MONEYSTR.md
+    - Reference/SKIP_RELATE.md
+    - Reference/SKIPLOG.md
+    - Reference/GETDISPLAYLINE.md
+  - 文字列操作・参照:
+    - Reference/TOUPPER.md
+    - Reference/TOSTR.md
+    - Reference/TOINT.md
+    - Reference/STRLEN.md
+    - Reference/SUBSTRING.md
+    - Reference/CHARATU.md
+    - Reference/STRFIND.md
+    - Reference/STRCOUNT.md
+    - Reference/SPLIT.md
+    - Reference/REPLACE.md
+    - Reference/ESCAPE.md
+    - Reference/UNICODE.md
+    - Reference/REGEXPMATCH.md
+  - 算術:
+    - Reference/TIMES.md
+    - Reference/POWER.md
+    - Reference/ABS.md
+    - Reference/SQRT.md
+    - Reference/BIT_OPERATION.md
+    - Reference/MAX.md
+  - キャラ操作・参照:
+    - Reference/ADDCHARA.md
+    - Reference/DELCHARA.md
+    - Reference/SWAPCHARA.md
+    - Reference/SORTCHARA.md
+    - Reference/GETCHARA.md
+    - Reference/ADDDEFCHARA.md
+    - Reference/ADDVOIDCHARA.md
+    - Reference/DELALLCHARA.md
+    - Reference/PICKUPCHARA.md
+    - Reference/EXISTCSV.md
+    - Reference/FINDCHARA.md
+    - Reference/COPYCHARA.md
+    - Reference/ADDCOPYCHARA.md
+  - 変数操作・変数参照・CSV参照:
+    - Reference/UPCHECK.md
+    - Reference/VARSIZE.md
+    - Reference/RESETDATA.md
+    - Reference/RESETGLOBAL.md
+    - Reference/RESET_STAIN.md
+    - Reference/SWAP.md
+    - Reference/CSVNAME.md
+    - Reference/CSV_STATUS.md
+    - Reference/GETNUM.md
+    - Reference/GETPALAMLV.md
+    - Reference/FINDELEMENT.md
+    - Reference/VARSET.md
+    - Reference/CVARSET.md
+    - Reference/ARRAYSHIFT.md
+    - Reference/ARRAYREMOVE.md
+    - Reference/ARRAYSORT.md
+    - Reference/ARRAYCOPY.md
+    - Reference/ARRAYMSORT.md
+    - Reference/CUPCHECK.mD
+    - Reference/ISDEFINED.md
+    - Reference/EXISTVAR.md
+    - Reference/ENUMFUNC.md
+    - Reference/ENUMVAR.md
+    - Reference/ENUMMACRO.md
+    - Reference/GETSETVAR.md
+    - Reference/VARSETEX.md
+    - Reference/ARRAYMSORTEX.md
+    - Reference/ERDNAME.md
+  - セーブデータ操作:
+    - Reference/PUTFORM.md
+    - Reference/SAVEDATA.md
+    - Reference/LOADDATA.md
+    - Reference/DELDATA.md
+    - Reference/CHKDATA.md
+    - Reference/SAVENOS.md
+    - Reference/SAVEGLOBAL.md
+    - Reference/LOADGLOBAL.md
+    - Reference/OUTPUTLOG.md
+    - Reference/SAVECHARA.md
+    - Reference/LOADCHARA.md
+    - Reference/CHKCHARADATA.md
+    - Reference/FIND_CHARADATA.md
+    - Reference/SAVETEXT.md
+    - Reference/LOADTEXT.md
+  - 日付・時刻取得:
+    - Reference/GETTIME.md
+    - Reference/GETMILLISECOND.md
+    - Reference/GETSECOND.md
+  - 入力・ウェイト:
+    - Reference/INPUT.md
+    - Reference/WAIT.md
+    - Reference/FORCEWAIT.md
+    - Reference/TINPUT.md
+    - Reference/TWAIT.md
+    - Reference/ONEINPUT.md
+    - Reference/TONEINPUT.md
+    - Reference/WAITANYKEY.md
+    - Reference/INPUTMOUSEKEY.md
+    - Reference/INPUTANY.md
+    - Reference/BINPUT.md
+  - ループ・分岐構文:
+    - Reference/IF.md
+    - Reference/REPEAT.md
+    - Reference/CONTINUE.md
+    - Reference/FOR.md
+    - Reference/WHILE.md
+    - Reference/DO.md
+    - Reference/SELECTCASE.md
+  - 乱数制御:
+    - Reference/RANDOMIZE.md
+  - デバッグ補助・システムフロー制御:
+    - Reference/SAVEGAME.md
+    - Reference/BEGIN.md
+    - Reference/QUIT.md
+    - Reference/CALLTRAIN.md
+    - Reference/DOTRAIN.md
+    - Reference/THROW.md
+    - Reference/QUIT_AND_RESTART.md
+    - Reference/FORCE_QUIT.md
+    - Reference/FORCE_QUIT_AND_RESTART.md
+    - Reference/FORCE_BEGIN.md
+    - Reference/FLOWINPUT.md
+  - ツールチップ系:
+    - Reference/TOOLTIP_EXTENSION.md
+  - 関数系（CALL等）:
+    - Reference/CALL.md
+    - Reference/JUMP.md
+    - Reference/GOTO.md
+    - Reference/RESTART.md
+    - Reference/TRY.md
+    - Reference/FORM.md
+    - Reference/TRYFORM.md
+    - Reference/CALLF.md
+    - Reference/CALLEVENT.md
+    - Reference/EXISTFUNCTION.md
+    - Reference/TRYCALLF.md
+    - Reference/TRYCALLFORMF.md
+  - RETURN系:
+    - Reference/RETURN.md
+  - AWAIT関連:
+    - Reference/MOUSEB.md
+  - 画像処理関連:
+    - Reference/GDRAWTEXT.md
+    - Reference/GGETFONT.md
+    - Reference/GGETFONTSIZE.md
+    - Reference/GGETFONTSTYLE.md
+    - Reference/GGETTEXTSIZE.md
+    - Reference/GDRAWGWITHROTATE.md
+    - Reference/GGETPEN.md
+    - Reference/GGETPENWIDTH.md
+    - Reference/GGETBRUSH.md
+    - Reference/SPRITEDISPOSEALL.md
+    - Reference/GDRAWLINE.md
+    - Reference/GDASHSTYLE.md
+  - サウンド系:
+    - Reference/PLAYSOUND.md
+    - Reference/STOPSOUND.md
+    - Reference/PLAYBGM.md
+    - Reference/STOPBGM.md
+    - Reference/EXISTSOUND.md
+    - Reference/SETSOUNDVOLUME.md
+    - Reference/SETBGMVOLUME.md
+  - XML系:
+    - Reference/XML_MANAGE.md
+    - Reference/XML_GET.md
+    - Reference/XML_SET.md
+    - Reference/XML_TOSTR.md
+    - Reference/XML_ADDNODE.md
+    - Reference/XML_REMOVENODE.md
+    - Reference/XML_REPLACE.md
+    - Reference/XML_ADDATTRIBUTE.md
+    - Reference/XML_REMOVEATTRIBUTE.md
+  - MAP（連想配列）系:
+    - Reference/MAP_MANAGE.md
+    - Reference/MAP_OPERATION.md
+    - Reference/MAP_GETKEYS.md
+    - Reference/MAP_SERIALIZATION.md
+  - DataTable（データベース）系:
+    - Reference/DT_MANAGE.md
+    - Reference/DT_COLUMN.md
+    - Reference/DT_ROW.md
+    - Reference/DT_CELL.md
+    - Reference/DT_SELECT.md
+    - Reference/DT_SERIALIZATION.md
+  - その他:
+    - Reference/EXISTFILE.md
+    - Reference/ENUMFILES.md
+    - Reference/UPDATECHECK.md
+    - Reference/GETMEMORYUSAGE.md
+    - Reference/CLEARMEMORY.md
+    - Reference/TEXTBOX.md
+- 変更ログ: Changelog/README.md
+- i18n: i18n/README.md
+- Emueraの仕様:
+  - Emuera/README.md
+  - プレイヤー向け情報:
+    - Emuera/usage.md
+    - Emuera/config.md
+    - Emuera/shortcut.md
+  - 開発者向け情報:
+    - Emuera/glossary.md
+    - Emuera/debugCom.md
+    - Emuera/debug.md
+    - Emuera/replace.md
+    - Emuera/config_files.md
+    - Emuera/system_flow.md
+    - Emuera/differences_of_Emuera_and_eramaker.md
+    - Emueraの追加機能:
+      - Emuera/expression.md
+      - Emuera/operand.md
+      - Emuera/variables.md
+      - Emuera/user_defined_variables.md
+      - Emuera/function.md
+      - Emuera/user_defined_in_expression_function.md
+      - Emuera/ERH.md
+      - Emuera/HTML_PRINT.md
+      - Emuera/resources.md
+- eramakerの仕様:
+  - eramaker/README.md
+  - 一覧:
+    - eramaker/system_flow.md
+    - eramaker/CSV_format.md
+    - eramaker/ERB_format.md
+    - eramaker/variables.md
+plugins:
+- minify:
+    htmlmin_opts:
+      remove_comments: true
+    minify_css: true
+    minify_html: true
+    minify_js: true
+- i18n:
+    default_language: ja
+    languages:
+      en:
+        build: true
+        name: English
+        site_name: Emuera.EM+EE Document
+      ja:
+        build: false
+        name: 日本語
+      zh:
+        build: true
+        name: 简体中文
+        site_name: Emuera.EM+EE 帮助文档
+    nav_translations:
+      en:
+        EmueraEM+EEの仕様: EmueraEM+EE's Summary
+        Emueraの仕様: Emuera's Summary
+        Emueraの追加機能: Extend feat added in Emuera
+        eramakerの仕様: eramaker's Summary
+        プレイヤー向け情報: Information for end users
+        ホーム: Home
+        リファレンス: Reference
+        変更ログ: Changelog
+        開発者向け情報: eramaker basic Information for Developers
+      zh:
+        DataTable（データベース）系: DataTable（数据库）相关
+        HTML系: HTML 系列
+        MAP（連想配列）系: MAP（映射数组）相关
+        XML系: XML 文件处理相关
+        その他: 其他
+        サウンド系: 音频处理相关
+        ツールチップ系: 提示框处理相关
+        デバッグ補助・システムフロー制御: 调试辅助 / 系统流程控制
+        ホーム: 首页
+        リファレンス: 参考手册
+        入力・ウェイト: 输入 / 等待
+        変数操作・変数参照・CSV参照: 变量操作 / 变量引用 / CSV 引用
+        変更ログ: 更新日志
+        文字列操作・参照: 字符串操作 / 引用
+        画像処理関連: 图像处理相关
+        関数系（CALL等）: 函数系列（CALL 相关）
 site_name: Emuera.EM+EE ドキュメント
 repo_url: https://gitlab.com/EvilMask/emuera.em.doc
 site_url: https://evilmask.gitlab.io/emuera.em.doc/
-extra_javascript:
-  - javascripts/highlight.min.js
-  - javascripts/erabasic-highlighths.min.js
-extra_css:
-  - css/eraBasic.min.css
-  - css/extra.css
 theme:
-  name: material
-  highlightjs: false
   features:
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.top
-    - navigation.indexes
-    #- navigation.expand
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.top
+  - navigation.indexes
+  highlightjs: false
+  name: material
   palette:
-    - scheme: slate
-      primary: light blue
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-nav:
-  - ホーム: README.md
-  - EmueraEM+EEの仕様: EMEE/EMEE_Summary.md
-  - リファレンス:
-      - Reference/README.md
-      - PRINT系:
-          - Reference/PRINT.md
-          - Reference/PRINTSINGLE.md
-          - Reference/PRINTC.md
-          - Reference/PRINTDATA.md
-          - Reference/PRINTBUTTON.md
-          - Reference/PRINTPLAIN.md
-          - Reference/DRAWLINE.md
-          - Reference/CUSTOMDRAWLINE.md
-          - Reference/REUSELASTLINE.md
-          - Reference/CLEARLINE.md
-          - Reference/PRINT_STATUS.md
-          - Reference/PRINT_IMG.md
-          - Reference/PRINT_RECT.md
-          - Reference/PRINT_SPACE.md
-      - HTML系:
-          - Reference/HTML_TAGSPLIT.md
-          - Reference/HTML_POPPRINTINGSTR.md
-          - Reference/HTML_GETPRINTEDSTR.md
-          - Reference/HTML_ESCAPE.md
-          - Reference/HTML_TOPLAINTEXT.md
-          - Reference/HTML_STRINGLEN.md
-          - Reference/HTML_SUBSTRING.md
-      - 表示操作・フォント操作・表示仕様参照:
-          - Reference/BAR.md
-          - Reference/SETCOLOR.md
-          - Reference/SETBGCOLOR.md
-          - Reference/SETCOLORBYNAME.md
-          - Reference/GETCOLOR.md
-          - Reference/FONT_OPERATION.md
-          - Reference/SETFONT.md
-          - Reference/FORCEKANA.md
-          - Reference/ALIGNMENT.md
-          - Reference/REDRAW.md
-          - Reference/PRINTCPERLINE.md
-          - Reference/LINEISEMPTY.md
-          - Reference/BARSTR.md
-          - Reference/MONEYSTR.md
-          - Reference/SKIP_RELATE.md
-          - Reference/SKIPLOG.md
-          - Reference/GETDISPLAYLINE.md
-      - 文字列操作・参照:
-          - Reference/TOUPPER.md
-          - Reference/TOSTR.md
-          - Reference/TOINT.md
-          - Reference/STRLEN.md
-          - Reference/SUBSTRING.md
-          - Reference/CHARATU.md
-          - Reference/STRFIND.md
-          - Reference/STRCOUNT.md
-          - Reference/SPLIT.md
-          - Reference/REPLACE.md
-          - Reference/ESCAPE.md
-          - Reference/UNICODE.md
-          - Reference/REGEXPMATCH.md
-      - 算術:
-          - Reference/TIMES.md
-          - Reference/POWER.md
-          - Reference/ABS.md
-          - Reference/SQRT.md
-          - Reference/BIT_OPERATION.md
-          - Reference/MAX.md
-      - キャラ操作・参照:
-          - Reference/ADDCHARA.md
-          - Reference/DELCHARA.md
-          - Reference/SWAPCHARA.md
-          - Reference/SORTCHARA.md
-          - Reference/GETCHARA.md
-          - Reference/ADDDEFCHARA.md
-          - Reference/ADDVOIDCHARA.md
-          - Reference/DELALLCHARA.md
-          - Reference/PICKUPCHARA.md
-          - Reference/EXISTCSV.md
-          - Reference/FINDCHARA.md
-          - Reference/COPYCHARA.md
-          - Reference/ADDCOPYCHARA.md
-      - 変数操作・変数参照・CSV参照:
-          - Reference/UPCHECK.md
-          - Reference/VARSIZE.md
-          - Reference/RESETDATA.md
-          - Reference/RESETGLOBAL.md
-          - Reference/RESET_STAIN.md
-          - Reference/SWAP.md
-          - Reference/CSVNAME.md
-          - Reference/CSV_STATUS.md
-          - Reference/GETNUM.md
-          - Reference/GETPALAMLV.md
-          - Reference/FINDELEMENT.md
-          - Reference/VARSET.md
-          - Reference/CVARSET.md
-          - Reference/ARRAYSHIFT.md
-          - Reference/ARRAYREMOVE.md
-          - Reference/ARRAYSORT.md
-          - Reference/ARRAYCOPY.md
-          - Reference/ARRAYMSORT.md
-          - Reference/CUPCHECK.mD
-          - Reference/ISDEFINED.md
-          - Reference/EXISTVAR.md
-          - Reference/ENUMFUNC.md
-          - Reference/ENUMVAR.md
-          - Reference/ENUMMACRO.md
-          - Reference/GETSETVAR.md
-          - Reference/VARSETEX.md
-          - Reference/ARRAYMSORTEX.md
-          - Reference/ERDNAME.md
-      - セーブデータ操作:
-          - Reference/PUTFORM.md
-          - Reference/SAVEDATA.md
-          - Reference/LOADDATA.md
-          - Reference/DELDATA.md
-          - Reference/CHKDATA.md
-          - Reference/SAVENOS.md
-          - Reference/SAVEGLOBAL.md
-          - Reference/LOADGLOBAL.md
-          - Reference/OUTPUTLOG.md
-          - Reference/SAVECHARA.md
-          - Reference/LOADCHARA.md
-          - Reference/CHKCHARADATA.md
-          - Reference/FIND_CHARADATA.md
-          - Reference/SAVETEXT.md
-          - Reference/LOADTEXT.md
-      - 日付・時刻取得:
-          - Reference/GETTIME.md
-          - Reference/GETMILLISECOND.md
-          - Reference/GETSECOND.md
-      - 入力・ウェイト:
-          - Reference/INPUT.md
-          - Reference/WAIT.md
-          - Reference/FORCEWAIT.md
-          - Reference/TINPUT.md
-          - Reference/TWAIT.md
-          - Reference/ONEINPUT.md
-          - Reference/TONEINPUT.md
-          - Reference/WAITANYKEY.md
-          - Reference/INPUTMOUSEKEY.md
-          - Reference/INPUTANY.md
-          - Reference/BINPUT.md
-      - ループ・分岐構文:
-          - Reference/IF.md
-          - Reference/REPEAT.md
-          - Reference/CONTINUE.md
-          - Reference/FOR.md
-          - Reference/WHILE.md
-          - Reference/DO.md
-          - Reference/SELECTCASE.md
-      - 乱数制御:
-          - Reference/RANDOMIZE.md
-      - デバッグ補助・システムフロー制御:
-          - Reference/SAVEGAME.md
-          - Reference/BEGIN.md
-          - Reference/QUIT.md
-          - Reference/CALLTRAIN.md
-          - Reference/DOTRAIN.md
-          - Reference/THROW.md
-          - Reference/QUIT_AND_RESTART.md
-          - Reference/FORCE_QUIT.md
-          - Reference/FORCE_QUIT_AND_RESTART.md
-          - Reference/FORCE_BEGIN.md
-          - Reference/FLOWINPUT.md
-      - ツールチップ系:
-          - Reference/TOOLTIP_EXTENSION.md
-      - 関数系（CALL等）:
-          - Reference/CALL.md
-          - Reference/JUMP.md
-          - Reference/GOTO.md
-          - Reference/RESTART.md
-          - Reference/TRY.md
-          - Reference/FORM.md
-          - Reference/TRYFORM.md
-          - Reference/CALLF.md
-          - Reference/CALLEVENT.md
-          - Reference/EXISTFUNCTION.md
-          - Reference/TRYCALLF.md
-          - Reference/TRYCALLFORMF.md
-      - RETURN系 :
-          - Reference/RETURN.md
-      - AWAIT関連:
-          - Reference/MOUSEB.md
-      - 画像処理関連:
-          - Reference/GDRAWTEXT.md
-          - Reference/GGETFONT.md
-          - Reference/GGETFONTSIZE.md
-          - Reference/GGETFONTSTYLE.md
-          - Reference/GGETTEXTSIZE.md
-          - Reference/GDRAWGWITHROTATE.md
-          - Reference/GGETPEN.md
-          - Reference/GGETPENWIDTH.md
-          - Reference/GGETBRUSH.md
-          - Reference/SPRITEDISPOSEALL.md
-          - Reference/GDRAWLINE.md
-          - Reference/GDASHSTYLE.md
-      - サウンド系:
-          - Reference/PLAYSOUND.md
-          - Reference/STOPSOUND.md
-          - Reference/PLAYBGM.md
-          - Reference/STOPBGM.md
-          - Reference/EXISTSOUND.md
-          - Reference/SETSOUNDVOLUME.md
-          - Reference/SETBGMVOLUME.md
-      - XML系:
-          - Reference/XML_MANAGE.md
-          - Reference/XML_GET.md
-          - Reference/XML_SET.md
-          - Reference/XML_TOSTR.md
-          - Reference/XML_ADDNODE.md
-          - Reference/XML_REMOVENODE.md
-          - Reference/XML_REPLACE.md
-          - Reference/XML_ADDATTRIBUTE.md
-          - Reference/XML_REMOVEATTRIBUTE.md
-      - MAP（連想配列）系:
-          - Reference/MAP_MANAGE.md
-          - Reference/MAP_OPERATION.md
-          - Reference/MAP_GETKEYS.md
-          - Reference/MAP_SERIALIZATION.md
-      - DataTable（データベース）系:
-          - Reference/DT_MANAGE.md
-          - Reference/DT_COLUMN.md
-          - Reference/DT_ROW.md
-          - Reference/DT_CELL.md
-          - Reference/DT_SELECT.md
-          - Reference/DT_SERIALIZATION.md
-      - その他:
-          - Reference/EXISTFILE.md
-          - Reference/ENUMFILES.md
-          - Reference/UPDATECHECK.md
-          - Reference/GETMEMORYUSAGE.md
-          - Reference/CLEARMEMORY.md
-          - Reference/TEXTBOX.md
-  - 変更ログ: Changelog/README.md
-  - i18n: i18n/README.md
-  - Emueraの仕様:
-      - Emuera/README.md
-      - プレイヤー向け情報:
-        - Emuera/usage.md
-        - Emuera/config.md
-        - Emuera/shortcut.md
-      - 開発者向け情報:
-        - Emuera/glossary.md
-        - Emuera/debugCom.md
-        - Emuera/debug.md
-        - Emuera/replace.md
-        - Emuera/config_files.md
-        - Emuera/system_flow.md
-        - Emuera/differences_of_Emuera_and_eramaker.md
-        - Emueraの追加機能:
-          - Emuera/expression.md
-          - Emuera/operand.md
-          - Emuera/variables.md
-          - Emuera/user_defined_variables.md
-          - Emuera/function.md
-          - Emuera/user_defined_in_expression_function.md
-          - Emuera/ERH.md
-          - Emuera/HTML_PRINT.md
-          - Emuera/resources.md
-  - eramakerの仕様:
-      - eramaker/README.md
-      - 一覧:
-        - eramaker/system_flow.md
-        - eramaker/CSV_format.md
-        - eramaker/ERB_format.md
-        - eramaker/variables.md
-plugins:
-  - search
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
-      htmlmin_opts:
-        remove_comments: true
-  - i18n:
-      default_language: ja
-      languages:
-        ja:
-          name: 日本語
-          build: false
-        en:
-          name: English
-          build: true
-          site_name: Emuera.EM+EE Document
-        zh:
-          name: 简体中文
-          build: true
-          site_name: Emuera.EM+EE 帮助文档
-      nav_translations:
-        zh:
-          ホーム: 首页
-          リファレンス: 参考手册
-          HTML系: HTML 系列
-          文字列操作・参照: 字符串操作 / 引用
-          変数操作・変数参照・CSV参照: 变量操作 / 变量引用 / CSV 引用
-          デバッグ補助・システムフロー制御: 调试辅助 / 系统流程控制
-          関数系（CALL等）: 函数系列（CALL 相关）
-          画像処理関連: 图像处理相关
-          サウンド系: 音频处理相关
-          XML系: XML 文件处理相关
-          ツールチップ系: 提示框处理相关
-          MAP（連想配列）系: MAP（映射数组）相关
-          その他: 其他
-          変更ログ: 更新日志
-          入力・ウェイト: 输入 / 等待
-          DataTable（データベース）系: DataTable（数据库）相关
-        en:
-          ホーム: Home
-          EmueraEM+EEの仕様: EmueraEM+EE's Summary
-          リファレンス: Reference
-          変更ログ: Changelog
-          Emueraの仕様: Emuera's Summary
-          eramakerの仕様: eramaker's Summary
-          プレイヤー向け情報: Information for end users
-          開発者向け情報: eramaker basic Information for Developers
-          Emueraの追加機能: Extend feat added in Emuera
-
-markdown_extensions:
-  # Python Markdown
-  - meta
-  - tables
-  - attr_list
-  - md_in_html
-  - toc:
-      permalink: true
-  - admonition
-  # Python Markdown Extensions
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.inlinehilite
-  - pymdownx.superfences
-  - pymdownx.keys
+  - primary: light blue
+    scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+use_directory_urls: false
