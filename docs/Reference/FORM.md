@@ -25,7 +25,7 @@ hide:
 	```
 
 	のような使い方ができます。 `JUMPFORM`と`CALLFORM`は引数を指定できます。詳しくは[関数の`自作関数における引数指定`](../Emuera//function.md#_2)の項を参照してください。
-	なお、`GOTOFORM`で直接ループ・分岐構文内に入った場合については[`TRYGOTO`](./TRY.md)や[`ループ・分岐構文`](../Reference/README.md#_9)、[`TRYC`系](./TRYC.md)の項を参照してください。  
+	なお、`GOTOFORM`で直接ループ・分岐構文内に入った場合については[`TRYGOTO`](./TRY.md)や[`ループ・分岐構文`](../Reference/README.md#_8)、[`TRYC`系](./TRYC.md)の項を参照してください。  
 
 !!! hint "ヒント"
 

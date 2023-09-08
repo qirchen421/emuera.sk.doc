@@ -30,18 +30,6 @@
 |                                                                                                                                | `int`, `int`, `int`, `int`                                   | なし   |
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                         | `int`                                                        | なし   |
 
-### HTML系
-
-| 関数名                                                                   | 引数              | 戻り値   |
-| :----------------------------------------------------------------------- | :---------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md) | `string`(, `integerVariable`, `stringVariable`)   | `int`, `string` |
-| ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)    | `void`| `string`|
-| ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md) | `int`| `string`|
-| ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.md) | `string` | `string`|
-| ![](../assets/images/IconEmuera.webp)[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.md) | `string` | `string`|
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`    |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
-
 ### 表示操作・フォント操作・表示仕様参照
 
 | 関数名                                                                           | 引数                  | 戻り値   |
@@ -311,15 +299,6 @@
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)                           | `int`(, `int`, `int`) |
 
-### ツールチップ系
-
-| 関数名                                                                           | 引数     |
-| :------------------------------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`    |
-
 ### 関数系（CALL等）
 
 | 関数名                                                                 | 引数                       | 戻り値 |
@@ -359,16 +338,59 @@
 
 ### RETURN系
 
-| 関数名                                                                 | 引数           |
-| :--------------------------------------------------------------------- | :------------- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)     | `引数に同じ`              |
-| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `strng`(, `string`,...)| `引数に同じ(数値型に変換)`|
+| 関数名                                                                                              | 引数                    | 戻り値                     |
+| :-------------------------------------------------------------------------------------------------- | :---------------------- | :------------------------- |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)      | `引数に同じ`               |
+| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `strng`(, `string`,...) | `引数に同じ(数値型に変換)` |
+| ![](../assets/images/IconEmuera.webp)[`RETURNF`](../Emuera/user_defined_in_expression_function.md)  | `any`                   | `引数に同じ`               |
+
+### DEBUG系
+
+| 関数名                                                                    | 引数           | 戻り値 |
+| :------------------------------------------------------------------------ | :------------- | :----- |
+| ![](../assets/images/IconEmuera.webp)[`DEBUGPRINT`](./DEBUGPRINT.md)      | `string`       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DEBUGPRINTL`](./DEBUGPRINT.md)     | `string`       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DEBUGPRINTFORM`](./DEBUGPRINT.md)  | `formedString` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DEBUGPRINTFORML`](./DEBUGPRINT.md) | `formedString` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`DEBUGCLEAR`](./DEBUGPRINT.md)      | なし           | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md)        | `int`          | なし   |
+
+### ツールチップ系
+
+| 関数名                                                                           | 引数         |
+| :------------------------------------------------------------------------------- | :----------- |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETCOLOR`](./TOOLTIP_SETCOLOR.md) | `int`, `int` |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDELAY`](./TOOLTIP_SET.md)      | `int`        |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDURATION`](./TOOLTIP_SET.md)   | `int`        |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`        |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string`     |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`        |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`        |
+
+### HTML系
+
+| 関数名                                                                                 | 引数                                            | 戻り値          |
+| :------------------------------------------------------------------------------------- | :---------------------------------------------- | :-------------- |
+| ![](../assets/images/IconEmuera.webp)[`HTML_PRINT`](./HTML_PRINT.md)                   | `string`                                        | なし            |
+| ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md)             | `string`(, `integerVariable`, `stringVariable`) | `int`, `string` |
+| ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md) | なし                                            | `string`        |
+| ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md)   | `int`                                           | `string`        |
+| ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.md)                 | `string`                                        | `string`        |
+| ![](../assets/images/IconEmuera.webp)[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.md)       | `string`                                        | `string`        |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md)               | `string`(, `int`)                               | `int`           |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md)               | `string`, `int`                                 | `string`        |
 
 ### AWAIT関連
 
-| 関数名                                                   | 引数 | 戻り値   |
-| :--------------------------------------------------------| :--- | :------- |
-| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md) | なし | `string` |
+| 関数名                                                                | 引数      | 戻り値   |
+| :-------------------------------------------------------------------- | :-------- | :------- |
+| ![](../assets/images/IconEmuera.webp)[`AWAIT`](./AWAIT.md)            | `int`     | なし     |
+| ![](../assets/images/IconEmuera.webp)[`GETKEY`](./GETKEY.md)          | `keyCode` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETKEYTRIGGERED`](./GETKEY.md) | `keyCode` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MOUSEX`](./MOUSEXY.md)         | なし      | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MOUSEY`](./MOUSEXY.md)         | なし      | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.md)      | なし      | `int`    |
+| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md)              | なし      | `string` |
 
 ### 画像処理関連
 

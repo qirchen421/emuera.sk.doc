@@ -41,14 +41,6 @@ nav:
     - Reference/PRINT_IMG.md
     - Reference/PRINT_RECT.md
     - Reference/PRINT_SPACE.md
-  - HTML系:
-    - Reference/HTML_TAGSPLIT.md
-    - Reference/HTML_POPPRINTINGSTR.md
-    - Reference/HTML_GETPRINTEDSTR.md
-    - Reference/HTML_ESCAPE.md
-    - Reference/HTML_TOPLAINTEXT.md
-    - Reference/HTML_STRINGLEN.md
-    - Reference/HTML_SUBSTRING.md
   - 表示操作・フォント操作・表示仕様参照:
     - Reference/BAR.md
     - Reference/SETCOLOR.md
@@ -185,8 +177,6 @@ nav:
     - Reference/FORCE_QUIT_AND_RESTART.md
     - Reference/FORCE_BEGIN.md
     - Reference/FLOWINPUT.md
-  - ツールチップ系:
-    - Reference/TOOLTIP_EXTENSION.md
   - 関数系（CALL等）:
     - Reference/CALL.md
     - Reference/JUMP.md
@@ -204,7 +194,27 @@ nav:
     - Reference/TRYCALLFORMF.md
   - RETURN系:
     - Reference/RETURN.md
+  - DEBUG系:
+    - Reference/DEBUGPRINT.md
+    - Reference/ASSERT.md
+  - ツールチップ系:
+    - Reference/TOOLTIP_SETCOLOR.md
+    - Reference/TOOLTIP_SET.md
+    - Reference/TOOLTIP_EXTENSION.md
+  - HTML系:
+    - Reference/HTML_PRINT.md
+    - Reference/HTML_TAGSPLIT.md
+    - Reference/HTML_POPPRINTINGSTR.md
+    - Reference/HTML_GETPRINTEDSTR.md
+    - Reference/HTML_ESCAPE.md
+    - Reference/HTML_TOPLAINTEXT.md
+    - Reference/HTML_STRINGLEN.md
+    - Reference/HTML_SUBSTRING.md
   - AWAIT関連:
+    - Reference/AWAIT.md
+    - Reference/GETKEY.md
+    - Reference/MOUSEXY.md
+    - Reference/ISACTIVE.md
     - Reference/MOUSEB.md
   - 画像処理関連:
     - Reference/GDRAWTEXT.md

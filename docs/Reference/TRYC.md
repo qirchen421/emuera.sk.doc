@@ -33,7 +33,7 @@ hide:
 	文法としては[`IF～ELSE～ENDIF`](./IF.md)と同様になります（違いは関数があった場合の処理がなくてもよいこと）  
 	そのため、[`GOTO`](./GOTO.md)等の命令で直接`TRYC系～CATCH～ENDCATCH`内に入った場合、`IF～ELSEIF～ELSE～ENDIF`と同様に  
 	`CATCH`、`ENDCATCH`の直前まで通常通り実行したあとに、`ENDCATCH`の次の行へ飛び処理を続行します。  
-	また、`TRYCGOTO`・`TRYCGOTOFORM`で直接ループ・分岐構文内に入った場合については[`TRYGOTO`](./TRY.md)や[`ループ・分岐構文`](../Reference/README.md#_9)の項を参照してください。  
+	また、`TRYCGOTO`・`TRYCGOTOFORM`で直接ループ・分岐構文内に入った場合については[`TRYGOTO`](./TRY.md)や[`ループ・分岐構文`](../Reference/README.md#_8)の項を参照してください。  
 
     ```  { #language-erbapi }
 		TRYCCALL UNKNOWN_FUNC ;存在しない関数
