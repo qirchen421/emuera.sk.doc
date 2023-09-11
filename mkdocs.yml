@@ -217,6 +217,22 @@ nav:
     - Reference/ISACTIVE.md
     - Reference/MOUSEB.md
   - 画像処理関連:
+    - Reference/GCREATE.md
+    - Reference/GCREATEFROMFILE.md
+    - Reference/GDISPOSE.md
+    - Reference/GCLEAR.md
+    - Reference/GFILLRECTANGLE.md
+    - Reference/GDRAWG.md
+    - Reference/GDRAWGWITHMASK.md
+    - Reference/GDRAWSPRITE.md
+    - Reference/GSETCOLOR.md
+    - Reference/GSETBRUSH.md
+    - Reference/GSETFONT.md
+    - Reference/GSETPEN.md
+    - Reference/GCREATED.md
+    - Reference/GWIDTHHEIGHT.md
+    - Reference/GGETCOLOR.md
+    - Reference/GSAVELOAD.md
     - Reference/GDRAWTEXT.md
     - Reference/GGETFONT.md
     - Reference/GGETFONTSIZE.md

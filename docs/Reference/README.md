@@ -394,8 +394,47 @@
 
 ### 画像処理関連
 
+<details>
+<summary>画像処理関連命令について</summary>
+画像処理関係の命令です。  
+`G`で始まる`Graphics`系命令は、変更可能な描画領域を操作するための命令です。  
+`G`系命令を使用するには描画方式に`GRAPHICS`または`TEXTRENDERER`を指定する必要があります。  
+描画方式に`WINAPI`が指定されている場合、G系の命令は使用できずエラーになります。  
+`SPRITE`で始まる`Sprite`系命令は、スプライトに関する命令です。  
+スプライトは`resources`フォルダで宣言したリソースと同様に[`PRINT_IMG`](./PRINT_IMG.md)命令などで行中に表示することもできます。  
+`CBG`で始まる`ClientBackground`系命令は、クライアント領域の背景画像に関連した命令です。  
+
+画像処理系の命令での色指定はRGBではなくアルファ値（不透明度）を含む`ARGB`形式であることに注意して下さい。  
+`ARGB`型は16進数で`0xAARRGGBB`で表されます。  
+
+画像処理系の命令の大半は式中で関数として呼び出すこともできます。  
+関数として呼び出した場合には、結果の値は`RESULT`には代入されずに戻り値となります。  
+</details>
+
 | 関数名                                                                       | 引数                                | 戻り値   |
 | :--------------------------------------------------------------------------- | :---------------------------------- | :------- |
+| ![](../assets/images/IconEmuera.webp)[`GCREATE`](./GCREATE.md) | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md) | `int`, `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWG`](./GDRAWG.md) | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                    | `int`  |
+|                                                              | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `integerVariable` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWSPRITE`](./GDRAWSPRITE.md) | `int`, `string`                                                | `int`  |
+|                                                                        | `int`, `string`, `int`, `int`                                  | `int`  |
+|                                                                        | `int`, `string`, `int`, `int`, `int`, `int`                    | `int`  |
+|                                                                        | `int`, `string`, `int`, `int`, `int`, `int`, `integerVariable` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSETCOLOR`](./GSETCOLOR.md) | `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSETBRUSH`](./GSETBRUSH.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSETFONT`](./GSETFONT.md) | `int`, `string`, `string`(, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSETPEN`](./GSETPEN.md) | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCREATED`](./GCREATED.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GWIDTH`](./GWIDTHHEIGHT.md)  | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GHEIGHT`](./GWIDTHHEIGHT.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GGETCOLOR`](./GGETCOLOR.md) | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSAVE`](./GSAVELOAD.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GLOAD`](./GSAVELOAD.md) | `int`, `int` | `int`  |
 | ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)               | `int`, `string`(, `int`, `int`)     | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                 | `int`                               | `string` |
 | ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)         | `int`                               | `int`    |
