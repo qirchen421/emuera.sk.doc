@@ -35,6 +35,7 @@ nav:
     - Reference/PRINTPLAIN.md
     - Reference/DRAWLINE.md
     - Reference/CUSTOMDRAWLINE.md
+    - Reference/GETLINESTR.md
     - Reference/REUSELASTLINE.md
     - Reference/CLEARLINE.md
     - Reference/PRINT_STATUS.md
@@ -53,10 +54,12 @@ nav:
     - Reference/ALIGNMENT.md
     - Reference/REDRAW.md
     - Reference/PRINTCPERLINE.md
+    - Reference/PRINTCLENGTH.md
     - Reference/LINEISEMPTY.md
     - Reference/BARSTR.md
     - Reference/MONEYSTR.md
     - Reference/SKIP_RELATE.md
+    - Reference/COLOR_FROM.md
     - Reference/SKIPLOG.md
     - Reference/GETDISPLAYLINE.md
   - 文字列操作・参照:
@@ -72,14 +75,23 @@ nav:
     - Reference/REPLACE.md
     - Reference/ESCAPE.md
     - Reference/UNICODE.md
+    - Reference/STRFORM.md
     - Reference/REGEXPMATCH.md
   - 算術:
     - Reference/TIMES.md
     - Reference/POWER.md
     - Reference/ABS.md
     - Reference/SQRT.md
+    - Reference/MATH_EXTENSION.md
     - Reference/BIT_OPERATION.md
     - Reference/MAX.md
+    - Reference/SUMARRAY.md
+    - Reference/MATCH.md
+    - Reference/MAXMINARRAY.md
+    - Reference/CARRAY.md
+    - Reference/INRANGEARRAY.md
+    - Reference/GROUPCHECK.md
+    - Reference/CONVERT.md
   - キャラ操作・参照:
     - Reference/ADDCHARA.md
     - Reference/DELCHARA.md
@@ -233,6 +245,25 @@ nav:
     - Reference/GWIDTHHEIGHT.md
     - Reference/GGETCOLOR.md
     - Reference/GSAVELOAD.md
+    - Reference/SPRITECREATE.md
+    - Reference/SPRITEANIMECREATE.md
+    - Reference/SPRITEANIMEADDFRAME.md
+    - Reference/SPRITEDISPOSE.md
+    - Reference/SPRITEGETCOLOR.md
+    - Reference/SPRITECREATED.md
+    - Reference/SPRITEWIDTHHEIGHT.md
+    - Reference/SPRITEPOSXY.md
+    - Reference/SPRITESETPOS.md
+    - Reference/SPRITEMOVE.md
+    - Reference/CBGSETG.md
+    - Reference/CBGSETSPRITE.md
+    - Reference/CBGSETBMAPG.md
+    - Reference/CBGSETBUTTONSPRITE.md
+    - Reference/CBGCLEAR.md
+    - Reference/CBGREMOVEMAPB.md
+    - Reference/CBGCLEARBUTTON.md
+    - Reference/CBGREMOVERANGE.md
+    - Reference/SETANIMETIMER.md
     - Reference/GDRAWTEXT.md
     - Reference/GGETFONT.md
     - Reference/GGETFONTSIZE.md
@@ -276,6 +307,12 @@ nav:
     - Reference/DT_SELECT.md
     - Reference/DT_SERIALIZATION.md
   - その他:
+    - Reference/RAND.md
+    - Reference/CLEARTEXTBOX.md
+    - Reference/STRDATA.md
+    - Reference/STOPCALLTRAIN.md
+    - Reference/GETCONFIG.md
+    - Reference/CLIENTFIELD.md
     - Reference/EXISTFILE.md
     - Reference/ENUMFILES.md
     - Reference/UPDATECHECK.md

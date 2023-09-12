@@ -2,33 +2,34 @@
 
 ### PRINT系
 
-| 関数名                                                                                                                         | 引数                                                         | 戻り値 |
-| :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`](./PRINT.md) | `string`                                                     | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINTSINGLE(|V|S|FORM|FORMS)(|K|D)`](./PRINTSINGLE.md)                                  | `string`                                                     | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINT(|FORM)(C|LC)(|K|D)`](./PRINTC.md)                                                 | `string`                                                     | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINTDATA(|K|D)(|L|W)`](./PRINTDATA.md)                                                 | なし                                                         | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINTBUTTON(|C|LC)`](./PRINTBUTTON.md)                                                  | `string`, `any`                                              | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINTPLAIN(|FORM)`](./PRINTPLAIN.md)                                                    | `string`                                                     | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.md)                                                             | なし                                                         | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CUSTOMDRAWLINE`](./CUSTOMDRAWLINE.md)                                                   | `string`                                                     | なし   |
-| ![](../assets/images/IconEmuera.webp)[`DRAWLINEFORM`](./CUSTOMDRAWLINE.md)                                                     | `formedString`                                               | なし   |
-| ![](../assets/images/IconEmuera.webp)[`REUSELASTLINE`](./REUSELASTLINE.md)                                                     | `string`                                                     | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CLEARLINE`](./CLEARLINE.md)                                                             | `int`                                                        | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.md)                                                        | `int`                                                        | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.md)                                                     | `int`                                                        | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.md)                                                       | `int`                                                        | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.md)                                                        | `int`                                                        | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.md)                                                      | `int`                                                        | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.md)                                                       | なし                                                         | なし   |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.md)                                                   | なし                                                         | なし   |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`PRINT_IMG`](./PRINT_IMG.md)                            | `string`                                                     | なし   |
-|                                                                                                                                | `string`, `int`, `int`, `int`                                | なし   |
-|                                                                                                                                | `string`, `string`, `int`, `int`, `int`                      | なし   |
-|                                                                                                                                | `string`, `string`, `2DIntegerVariable`, `int`, `int`, `int` | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINT_RECT`](./PRINT_RECT.md)                                                           | `int`                                                        | なし   |
-|                                                                                                                                | `int`, `int`, `int`, `int`                                   | なし   |
-| ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                         | `int`                                                        | なし   |
+| 関数名                                                                                                                         | 引数                                                         | 戻り値   |
+| :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`](./PRINT.md) | `string`                                                     | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINTSINGLE(|V|S|FORM|FORMS)(|K|D)`](./PRINTSINGLE.md)                                  | `string`                                                     | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINT(|FORM)(C|LC)(|K|D)`](./PRINTC.md)                                                 | `string`                                                     | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINTDATA(|K|D)(|L|W)`](./PRINTDATA.md)                                                 | なし                                                         | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINTBUTTON(|C|LC)`](./PRINTBUTTON.md)                                                  | `string`, `any`                                              | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINTPLAIN(|FORM)`](./PRINTPLAIN.md)                                                    | `string`                                                     | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.md)                                                             | なし                                                         | なし     |
+| ![](../assets/images/IconEmuera.webp)[`CUSTOMDRAWLINE`](./CUSTOMDRAWLINE.md)                                                   | `string`                                                     | なし     |
+| ![](../assets/images/IconEmuera.webp)[`DRAWLINEFORM`](./CUSTOMDRAWLINE.md)                                                     | `formedString`                                               | なし     |
+| ![](../assets/images/IconEmuera.webp)[`GETLINESTR`](./GETLINESTR.md)                                                           | `string`                                                     | `string` |
+| ![](../assets/images/IconEmuera.webp)[`REUSELASTLINE`](./REUSELASTLINE.md)                                                     | `string`                                                     | なし     |
+| ![](../assets/images/IconEmuera.webp)[`CLEARLINE`](./CLEARLINE.md)                                                             | `int`                                                        | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.md)                                                        | `int`                                                        | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.md)                                                     | `int`                                                        | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.md)                                                       | `int`                                                        | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.md)                                                        | `int`                                                        | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.md)                                                      | `int`                                                        | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.md)                                                       | なし                                                         | なし     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.md)                                                   | なし                                                         | なし     |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`PRINT_IMG`](./PRINT_IMG.md)                            | `string`                                                     | なし     |
+|                                                                                                                                | `string`, `int`, `int`, `int`                                | なし     |
+|                                                                                                                                | `string`, `string`, `int`, `int`, `int`                      | なし     |
+|                                                                                                                                | `string`, `string`, `2DIntegerVariable`, `int`, `int`, `int` | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINT_RECT`](./PRINT_RECT.md)                                                           | `int`                                                        | なし     |
+|                                                                                                                                | `int`, `int`, `int`, `int`                                   | なし     |
+| ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                         | `int`                                                        | なし     |
 
 ### 表示操作・フォント操作・表示仕様参照
 
@@ -63,6 +64,7 @@
 | ![](../assets/images/IconEmuera.webp)[`REDRAW`](./REDRAW.md)                     | `int`                 | なし     |
 | ![](../assets/images/IconEmuera.webp)[`CURRENTREDRAW`](./REDRAW.md)              | なし                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`PRINTCPERLINE`](./PRINTCPERLINE.md)       | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`PRINTCLENGTH`](./PRINTCLENGTH.md)         | なし                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`LINEISEMPTY`](./LINEISEMPTY.md)           | なし                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`BARSTR`](./BARSTR.md)                     | `int`, `int`, `int`   | `string` |
 | ![](../assets/images/IconEmuera.webp)[`MONEYSTR`](./MONEYSTR.md)                 | `int`, `option`       | `string` |
@@ -72,6 +74,8 @@
 | ![](../assets/images/IconEmuera.webp)[`ISSKIP`](./SKIP_RELATE.md)                | なし                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`MOUSESKIP`](./SKIP_RELATE.md)             | なし                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`MESSKIP`](./SKIP_RELATE.md)               | なし                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMNAME`](./COLOR_FROM.md)         | `string`              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.md)          | `int`, `int`, `int`   | `string` |
 | ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)                       | `int`                 | `void`   |
 | ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md)         | `int`                 | `string` |
 
@@ -104,27 +108,46 @@
 | ![](../assets/images/IconEmuera.webp)[`ESCAPE`](./ESCAPE.md)       | `string`                                          | `string` |
 | ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.md)     | `int`                                             | `string` |
 | ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.md) | `string`                                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.md)     | `string`                                          | `string` |
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`    |
 |                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
 ### 算術
 
-| 関数名                                                                 | 引数                                 | 戻り値 |
-| :--------------------------------------------------------------------- | :----------------------------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md)           | `int`, `float`                       | なし   |
-| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.md)             | `integerVariable`, `int`, `int`      | `int`  |
-|                                                                        | `int`, `int`                         | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.md)                 | `int`                                | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.md)                | `int`                                | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.md)               | `int`                                | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)    | `int`, `int`                         | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)    | `integerVariable`, `int`(, `int`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)  | `integarVariable`, `int`(, `int`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`INVERTBIT`](./BIT_OPERATION.md) | `integarVariable`, `int`(, `int`...) | なし   |
-| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.md)                 | `int`(, `int`...)                    | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.md)                 | `int`(, `int`...)                    | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.md)               | `int`, `int`, `int`                  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.md)             | `int`, `int`, `int`                  | `int`  |
+| 関数名                                                                   | 引数                                         | 戻り値   |
+| :----------------------------------------------------------------------- | :------------------------------------------- | :------- |
+| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md)             | `int`, `float`                               | なし     |
+| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.md)               | `integerVariable`, `int`, `int`              | `int`    |
+|                                                                          | `int`, `int`                                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.md)                   | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.md)                  | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.md)                 | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBRT`](./MATH_EXTENSION.md)       | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`LOG`](./MATH_EXTENSION.md)        | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`LOG10`](./MATH_EXTENSION.md)      | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`EXPOMENT`](./MATH_EXTENSION.md)   | `int`                                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)      | `int`, `int`                                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)      | `integerVariable`, `int`(, `int`...)         | なし     |
+| ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)    | `integarVariable`, `int`(, `int`...)         | なし     |
+| ![](../assets/images/IconEmuera.webp)[`INVERTBIT`](./BIT_OPERATION.md)   | `integarVariable`, `int`(, `int`...)         | なし     |
+| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.md)                   | `int`(, `int`...)                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.md)                   | `int`(, `int`...)                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.md)                 | `int`, `int`, `int`                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.md)               | `int`, `int`, `int`                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SUMARRAY`](./SUMARRAY.md)         | `integerArray`(, `int`, `int`)               | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MATCH`](./MATCH.md)               | `array`, `any`, `int`, `int`                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MAXARRAY`](./MAXMINARRAY.md)      | `integerArray`, `int`, `int`                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MINARRAY`](./MAXMINARRAY.md)      | `integerArray`, `int`, `int`                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SUMCARRAY`](./CARRAY.md)          | `charaArray`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CMATCH`](./CARRAY.md)             | `charaArray`, `any`(, `int`, `int`)          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MAXCARRAY`](./CARRAY.md)          | `charaArray`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`MINCARRAY`](./CARRAY.md)          | `charaArray`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`INRANGEARRAY`](./INRANGEARRAY.md)  | `integerArray`, `int`, `int`(, `int`, `int`) | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`INRANGECARRAY`](./INRANGEARRAY.md) | `charaArray`, `int`, `int`(, `int`, `int`)   | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GROUPMATCH`](./GROUPCHECK.md)     | `any`, `any`...                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`NOSAMES`](./GROUPCHECK.md)        | `any`, `any`...                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.md)       | `any`, `any`...                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.md)           | `int`, `int`                                 | `string` |
 
 ### キャラ操作・参照
 
@@ -353,7 +376,7 @@
 | ![](../assets/images/IconEmuera.webp)[`DEBUGPRINTFORM`](./DEBUGPRINT.md)  | `formedString` | なし   |
 | ![](../assets/images/IconEmuera.webp)[`DEBUGPRINTFORML`](./DEBUGPRINT.md) | `formedString` | なし   |
 | ![](../assets/images/IconEmuera.webp)[`DEBUGCLEAR`](./DEBUGPRINT.md)      | なし           | なし   |
-| ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md)        | `int`          | なし   |
+| ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md)              | `int`          | なし   |
 
 ### ツールチップ系
 
@@ -411,42 +434,67 @@
 関数として呼び出した場合には、結果の値は`RESULT`には代入されずに戻り値となります。  
 </details>
 
-| 関数名                                                                       | 引数                                | 戻り値   |
-| :--------------------------------------------------------------------------- | :---------------------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`GCREATE`](./GCREATE.md) | `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md) | `int`, `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md) | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWG`](./GDRAWG.md) | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                    | `int`  |
-|                                                              | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `integerVariable` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWSPRITE`](./GDRAWSPRITE.md) | `int`, `string`                                                | `int`  |
-|                                                                        | `int`, `string`, `int`, `int`                                  | `int`  |
-|                                                                        | `int`, `string`, `int`, `int`, `int`, `int`                    | `int`  |
-|                                                                        | `int`, `string`, `int`, `int`, `int`, `int`, `integerVariable` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GSETCOLOR`](./GSETCOLOR.md) | `int`, `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GSETBRUSH`](./GSETBRUSH.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GSETFONT`](./GSETFONT.md) | `int`, `string`, `string`(, `int`) | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GSETPEN`](./GSETPEN.md) | `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GCREATED`](./GCREATED.md) | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GWIDTH`](./GWIDTHHEIGHT.md)  | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GHEIGHT`](./GWIDTHHEIGHT.md) | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GGETCOLOR`](./GGETCOLOR.md) | `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GSAVE`](./GSAVELOAD.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GLOAD`](./GSAVELOAD.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)               | `int`, `string`(, `int`, `int`)     | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                 | `int`                               | `string` |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)         | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md)       | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md)         | `string`, `string`, `int`(, `int`)  | `int`    |
-| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.md)                   | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md)         | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md)               | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md) | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.md)               | `int`, `int`, `int`, `int`, `int`   | `int`    |
-| ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.md)             | `int`, `int`, `int`                 | `int`    |
+| 関数名                                                                                 | 引数                                                                                    | 戻り値   |
+| :------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- | :------- |
+| ![](../assets/images/IconEmuera.webp)[`GCREATE`](./GCREATE.md)                         | `int`, `int`, `int`                                                                     | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md)         | `int`, `string`                                                                         | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md)                       | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md)                           | `int`, `int`                                                                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.md)           | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWG`](./GDRAWG.md)                           | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                    | `int`    |
+|                                                                                        | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `integerVariable` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.md)           | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWSPRITE`](./GDRAWSPRITE.md)                 | `int`, `string`                                                                         | `int`    |
+|                                                                                        | `int`, `string`, `int`, `int`                                                           | `int`    |
+|                                                                                        | `int`, `string`, `int`, `int`, `int`, `int`                                             | `int`    |
+|                                                                                        | `int`, `string`, `int`, `int`, `int`, `int`, `integerVariable`                          | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GSETCOLOR`](./GSETCOLOR.md)                     | `int`, `int`, `int`, `int`                                                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GSETBRUSH`](./GSETBRUSH.md)                     | `int`, `int`                                                                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GSETFONT`](./GSETFONT.md)                       | `int`, `string`, `string`(, `int`)                                                      | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GSETPEN`](./GSETPEN.md)                         | `int`, `int`, `int`                                                                     | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GCREATED`](./GCREATED.md)                       | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GWIDTH`](./GWIDTHHEIGHT.md)                     | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GHEIGHT`](./GWIDTHHEIGHT.md)                    | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GGETCOLOR`](./GGETCOLOR.md)                     | `int`, `int`, `int`                                                                     | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GSAVE`](./GSAVELOAD.md)                         | `int`, `int`                                                                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GLOAD`](./GSAVELOAD.md)                         | `int`, `int`                                                                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITECREATE`](./SPRITECREATE.md)               | `string`, `int`                                                                         | `int`    |
+|                                                                                        | `string`, `int`, `int`, `int`, `int`, `int`                                             | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEANIMECREATE`](./SPRITEANIMECREATE.md)     | `string`, `int`, `int`                                                                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEANIMEADDFRAME`](./SPRITEANIMEADDFRAME.md) | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEDISPOSE`](./SPRITEDISPOSE.md)             | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEGETCOLOR`](./SPRITEGETCOLOR.md)           | `string`, `int`, `int`                                                                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITECREATED`](./SPRITECREATED.md)             | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEWIDTH`](./SPRITEWIDTHHEIGHT.md)           | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEHEIGHT`](./SPRITEWIDTHHEIGHT.md)          | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEWIDTH`](./SPRITEWIDTHHEIGHT.md)           | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEHEIGHT`](./SPRITEWIDTHHEIGHT.md)          | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEPOSX`](./SPRITEPOSXY.md)                  | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEPOSY`](./SPRITEPOSXY.md)                  | `string`                                                                                | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITESETPOS`](./SPRITESETPOS.md)               | `string`, `int`, `int`                                                                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEMOVE`](./SPRITEMOVE.md)                   | `string`, `int`, `int`                                                                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETG`](./CBGSETG.md)                         | `int`, `int`, `int`, `int`                                                              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETSPRITE`](./CBGSETSPRITE.md)               | `string`, `int`, `int`, `int`                                                           | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETBMAPG`](./CBGSETBMAPG.md)                 | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETBUTTONSPRITE`](./CBGSETBUTTONSPRITE.md)   | `int`, `string`, `string`, `int`, `int`, `zDepth`                                       | `int`    |
+|                                                                                        | `int`, `string`, `string`, `int`, `int`, `zDepth`, `string`                             | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGCLEAR`](./CBGCLEAR.md)                       | なし                                                                                    | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGREMOVEMAPB`](./CBGREMOVEMAPB.md)             | なし                                                                                    | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGCLEARBUTTON`](./CBGCLEARBUTTON.md)           | なし                                                                                    | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGREMOVERANGE`](./CBGREMOVERANGE.md)           | `int`, `int`                                                                            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)             | `int`                                                                                   | なし     |
+| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)                         | `int`, `string`(, `int`, `int`)                                                         | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                           | `int`                                                                                   | `string` |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)                   | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md)                 | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md)                   | `string`, `string`, `int`(, `int`)                                                      | `int`    |
+| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md)           | `int`, `int`, `int`(, `int`, `int`)                                                     | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.md)                             | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md)                   | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md)                         | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md)           | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.md)                         | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |
+| ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.md)                       | `int`, `int`, `int`                                                                     | `int`    |
 
 ### サウンド系
 
@@ -543,14 +591,22 @@
 
 ### その他
 
-| 関数名                                                                   | 引数                        | 戻り値   |
-| :----------------------------------------------------------------------- | :-------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)           | `string`                    | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMFILES`](./ENUMFILES.md)           | `string`(, `string`, `int`) | `int`    |
-| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)       | なし                        | なし     |
-| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md) | なし                        | `int`    |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)       | なし                        | `int`    |
-| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](./TEXTBOX.md)            | `string`                    | `1`      |
-| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.md)            | なし                        | `string` |
-| ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.md)           | `int`, `int`, `int`         | `1`      |
-| ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.md)         | なし                        | `1`      |
+| 関数名                                                                     | 引数                        | 戻り値   |
+| :------------------------------------------------------------------------- | :-------------------------- | :------- |
+| ![](../assets/images/IconEmuera.webp)[`RAND`](./RAND.md)                   | `int`(, `int`)              | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CLEARTEXTBOX`](./CLEARTEXTBOX.md)   | なし                        | なし     |
+| ![](../assets/images/IconEmuera.webp)[`STRDATA`](./STRDATA.md)             | `stringVariable`            | なし     |
+| ![](../assets/images/IconEmuera.webp)[`STOPCALLTRAIN`](./STOPCALLTRAIN.md) | なし                        | なし     |
+| ![](../assets/images/IconEmuera.webp)[`GETCONFIG`](./GETCONFIG.md)         | `string`                    | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GETCONFIGS`](./GETCONFIG.md)        | `string`                    | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.md)     | なし                        | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.md)    | なし                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)             | `string`                    | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMFILES`](./ENUMFILES.md)             | `string`(, `string`, `int`) | `int`    |
+| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)         | なし                        | なし     |
+| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md)   | なし                        | `int`    |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)         | なし                        | `int`    |
+| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](./TEXTBOX.md)              | `string`                    | `1`      |
+| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.md)              | なし                        | `string` |
+| ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.md)             | `int`, `int`, `int`         | `1`      |
+| ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.md)           | なし                        | `1`      |

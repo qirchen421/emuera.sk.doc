@@ -29,15 +29,25 @@ hide:
     
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE 
-		;通常表示
-		PRINTFORML %TOSTR(12345)%
-		;パーセンテージ表示
-		PRINTFORML %TOSTR(12345, "P")%
-		;16進数表示
-		PRINTFORMW %TOSTR(12345, "X")%
+		A = 438765
+		PRINTSL TOSTR(A)
+		PRINTSL TOSTR(A, "x")
+		PRINTSL TOSTR(A, "X")
+		PRINTSL TOSTR(A, "D8")
+		PRINTSL TOSTR(A, "X8")
+		PRINTSL TOSTR(A, "00000000")
+		PRINTSL TOSTR(A, "########")
+		PRINTSL TOSTR(A, "#,###")
+		PRINTSL TOSTR(A, "0000万0000")
     ``` 
     ``` title="結果"
-	12345
-	1,234,500.00%
-	3039
+	438765　//標準
+	6b1ed　//"x" 16進数(小文字)
+	6B1ED　//"X" 16進数(大文字)
+	00438765　//"D8" 10進数 + 8桁
+	0006B1ED　//"X8" 16進数 + 8桁
+	00438765　//"00000000" 10進数 + 8桁
+	438765　//"########" 10進数
+	438,765　//"#,###" 3桁ごとに","
+	0043万8765　//"0000万0000" 8桁 + 4桁目に"万"
     ```
