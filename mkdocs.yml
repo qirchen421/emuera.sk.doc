@@ -353,6 +353,7 @@ nav:
     - eramaker/ERB_format.md
     - eramaker/variables.md
 plugins:
+- search
 - minify:
     htmlmin_opts:
       remove_comments: true
