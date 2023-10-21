@@ -253,7 +253,7 @@ hide:
 ### ![](../assets/images/IconEM.webp)`LOADTEXT`、`SAVETEXT`でファイル名を指定可能に
 !!! summary ""
 
-    `LOADTEXT`, `SAVETEXT` の第一引数が文字列の場合、第一引数をパスとしてファイルをロード/セーブします。`Emuera.exe`を相対パスで指定(".."は無効)。また、設定画面か`Emuera.config`から「LOADTEXTとSAVETEXTで使える拡張子」項目で決められた拡張子しか使えません。(デフォルトはtxtのみ)
+    `LOADTEXT`の第一引数、もしくは`SAVETEXT`の第二引数が文字列の場合、それぞれの引数をパスとしてファイルをロード/セーブします。`Emuera.exe`を相対パスで指定(".."は無効)。また、設定画面か`Emuera.config`から「LOADTEXTとSAVETEXTで使える拡張子」項目で決められた拡張子しか使えません。(デフォルトはtxtのみ)
     
 !!! example "例"
 
