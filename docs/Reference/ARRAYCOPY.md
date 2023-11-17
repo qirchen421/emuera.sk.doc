@@ -13,7 +13,7 @@ hide:
 
     ```  { #language-erbapi }
 	ARRAYCOPY variableName, variableName
-		```
+	```
 	無頓着な配列コピー命令ARRAYCOPY実装  
 	書式：ARRAYCOPY <コピー元変数名>, <コピー先変数名>  
 	内容：コピー元変数の値をコピー先変数へコピーする  
