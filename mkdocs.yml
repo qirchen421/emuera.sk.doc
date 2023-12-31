@@ -353,13 +353,7 @@ nav:
     - eramaker/ERB_format.md
     - eramaker/variables.md
 plugins:
-- search
-- minify:
-    htmlmin_opts:
-      remove_comments: true
-    minify_css: true
-    minify_html: true
-    minify_js: true
+- search:
 - i18n:
     default_language: ja
     languages:
@@ -402,6 +396,12 @@ plugins:
         文字列操作・参照: 字符串操作 / 引用
         画像処理関連: 图像处理相关
         関数系（CALL等）: 函数系列（CALL 相关）
+- minify:
+    htmlmin_opts:
+      remove_comments: true
+    minify_css: true
+    minify_html: true
+    minify_js: true
 site_name: Emuera.EM+EE ドキュメント
 repo_url: https://gitlab.com/EvilMask/emuera.em.doc
 site_url: https://evilmask.gitlab.io/emuera.em.doc/
@@ -424,4 +424,4 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-#use_directory_urls: false
+use_directory_urls: false
