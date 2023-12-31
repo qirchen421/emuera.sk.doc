@@ -1,3 +1,14 @@
+extra:
+  alternate:
+    - name: English
+      link: https://evilmask.gitlab.io/emuera.em.doc/en/
+      lang: en
+    - name: 日本語
+      link: https://evilmask.gitlab.io/emuera.em.doc/
+      lang: ja
+    - name: 簡体中文
+      link: https://evilmask.gitlab.io/emuera.em.doc/en/index.html/zh/
+      lang: zh
 extra_css:
 - css/eraBasic.min.css
 - css/extra.css
