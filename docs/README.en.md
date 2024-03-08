@@ -13,3 +13,6 @@ hide:
 > This document is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
+
+## Download
+[**Latest Version:Emuera1824+v18+EMv17+EEv43**](assets/files/Emuera1824+v18+EMv17+EEv43+Rikaichan.zip)
