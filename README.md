@@ -37,12 +37,12 @@
     The versions of the latest building environment are:
     | Name                       | Version |
     | -------------------------- | ------- |
-    | Python                     | 3.10.4  |
-    | mkdocs                     | 1.4.0   |
-    | mkdocs-material            | 8.5.6   |
-    | mkdocs-material-extensions | 1.0.3   |
-    | mkdocs-minify-plugin       | 0.5.0   |
-    | mkdocs-static-i18n         | 0.47    |
+    | Python                     | 3.12.2  |
+    | mkdocs                     | 1.5.3   |
+    | mkdocs-material            | 9.5.13  |
+    | mkdocs-material-extensions | 1.3.1   |
+    | mkdocs-minify-plugin       | 0.8.0   |
+    | mkdocs-static-i18n         | 1.2.2   |
 
 4. Run the command to build and start local server:
 
