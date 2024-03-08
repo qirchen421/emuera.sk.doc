@@ -15,4 +15,4 @@ hide:
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 
 ## Download
-[**Latest Version:Emuera1824+v18+EMv17+EEv43**](assets/files/Emuera1824+v18+EMv17+EEv43+Rikaichan.zip)
+[**Latest Version:Emuera1824+v18+EMv18+EEv45**](assets/files/Emuera1824+v18+EMv18+EEv45+Rikaichan.zip)

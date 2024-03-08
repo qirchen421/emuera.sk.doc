@@ -133,8 +133,16 @@ hide:
     * 初公開
 
 ## Emuera.EE
+== "v45"
+	* Ignominious.Reverie氏のパッチでNAudio版の機能拡張＆安定性向上
+	* フォントを指定せず[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)を行ったときに例外落ちするのを修正
+	* [`GETCONFIG`、`GETCONFIGS`](../Reference/GETCONFIG.md)でEMEE拡張コンフィグも取得できるように
+
+== "v44"
+	* [`PLAYSOUND`](../Reference/PLAYSOUND.md)の第二引数で再生回数を設定できるように
+
 === "v43"
-	* MOUSEB、UPDATECHECK、SPRITEANIMEADDFRAMEの不具合修正
+	* [`MOUSEB`](../Reference/MOUSEB.md)、[`UPDATECHECK`](../Reference/UPDATECHECK.md)、[`SPRITEANIMEADDFRAME`](../Reference/SPRITEANIMEADDFRAME.md)の不具合修正
 	* NAudio版の動作の安定性向上（Ignminious.Reverie、CRER）
 	* いくつかのコンフィグ項目の翻訳漏れを修正
 	* MogeMoc氏のリソースファイル読み込み処理のメモリ軽量化をマージ（RainForTW）
@@ -147,7 +155,7 @@ hide:
 	* 同梱の「libwebp.dll」に置き換え、「libsharpyuv.dll」を追加して使用してください
 
 === "v41"
-	* TOOLTIP_IMG追加
+	* [`TOOLTIP_IMG`](../Reference/TOOLTIP_EXTENSION.md)追加
 	* Linux向けに音楽再生ライブラリにNAudioを使用したバージョンを同梱（Ignominious.Reverie氏）
 
 === "v40"
@@ -157,34 +165,34 @@ hide:
 
 === "v39fix"
 	* CRER氏のパッチでエンコード違いのファイルが混在していても正常に読み込まれるように
-	* GETDOINGFUNCTION追加
+	* `GETDOINGFUNCTION`追加
 	* またまたCLEARLINEとdiv併用時の挙動が怪しいバグを修正 もう起きないはず
 
 === "v39"
 	* CRER氏のパッチでDPIスケールの問題を解決 したはず
-	* ARRAYREMOVEで第三引数を0以下にした時に、以降の配列を全て消す挙動が再現されてなかったのを修正
-	* PRINTCとPRINTLCの文字数が合わない問題を修正
+	* [`ARRAYREMOVE`](../Reference/ARRAYREMOVE.md)で第三引数を0以下にした時に、以降の配列を全て消す挙動が再現されてなかったのを修正
+	* [`PRINTC`と`PRINTLC`](../Reference/PRINT.md)の文字数が合わない問題を修正
 	* リソースCSV再読み込み機能を実装
 
 === "v38fix"
 	* CurrentCultureが変わってるせいで一部の関数と命令の挙動がおかしくなっていたのを修正
 
 === "v38"
-	* 一部のフォントでGDRAWTEXT及びGGETTEXTSIZEの挙動が怪しいのを修正
-	* EXISTFUNCTIONが大文字小文字無視のオプションに沿った挙動になるように
+	* 一部のフォントで[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)及び[`GGETTEXTSIZE`](../Reference/GGETTEXTSIZE.md)の挙動が怪しいのを修正
+	* [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md)が大文字小文字無視のオプションに沿った挙動になるように
 	* CRER氏の協力により.NET 7に正式対応。感謝
 
 === "v37"
 	* UTF-8(BOM無し)のファイルを扱えるコンフィグ項目を追加
-	* v36で行ったEXISTFUNCTIONの修正が処理時間に大きな影響を与えていたため、第二引数に非0を指定したときのみ大文字小文字を無視するように変更
-	* TINPUT系でマウスクリックオプションを付けたときにタイマーの挙動が怪しいのを修正
+	* v36で行った[`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md)の修正が処理時間に大きな影響を与えていたため、第二引数に非0を指定したときのみ大文字小文字を無視するように変更
+	* [`TINPUT`](../Reference/TINPUT.md)系でマウスクリックオプションを付けたときにタイマーの挙動が怪しいのを修正
 
 === "v36"
 	* フォントファイル(ttf.otf)に対応
-	* ENUMFUNC及びEXISTFUNCTIONで大文字小文字の表記揺れで正常に検索できない問題を修正
+	* [`ENUMFUNC`](../Reference/ENUMFUNC.md)及び[`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md)で大文字小文字の表記揺れで正常に検索できない問題を修正
 
 === "v35fix"
-	* BINPUTSの不具合を修正
+	* [`BINPUTS`](../Reference/BINPUT.md)の不具合を修正
 
 === "v35"
 	* 再起動を繰り返すとメモリリークが起きる問題に対応するため、再起動処理を変更
