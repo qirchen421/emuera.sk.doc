@@ -15,7 +15,7 @@ hide:
 	ARRAYSORT variableName(, FORWARD or BACK, startIndex, targetCount)
     ```
 	配列変数をソートするARRAYSORT実装  
-	書式：`ARRAYSORT` [対象変数](, [ソート方式(FORWARD or BACK)], [開始インデックス], [対象要素数])  
+	書式：`ARRAYSORT` \[対象変数\](, \[ソート方式(FORWARD or BACK)\], \[開始インデックス\], \[対象要素数\])  
 	内容：開始インデックスから対象要素数個の配列データをソートする  
 	　　　`FORWARD`で昇順、`BACK`で降順  
 
