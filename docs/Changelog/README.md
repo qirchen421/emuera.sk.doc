@@ -7,6 +7,13 @@ hide:
 
 ## Emuera.EM
 
+=== "v18"
+
+    * 関数追加：[`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.md)。
+    * バグ修正：[`<div>`タグ](../EMEE/EMEE_Summary.md#html_print)の行位置ずれ不具合を修正。
+    * バグ修正：[`DT_CELL_GETS`](../Reference/DT_CELL.md)の対象がINTの場合，エラーが出る不具合を修正。
+    * バグ修正：外層[`<clearbutton>`タグ](../EMEE/EMEE_Summary.md#html_print)が[`<div>`タグ](../EMEE/EMEE_Summary.md#html_print)の内容に対して無効の不具合を修正。
+
 === "v17"
 
     * 関数追加：[`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。

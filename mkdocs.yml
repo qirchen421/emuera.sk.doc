@@ -233,6 +233,7 @@ nav:
     - Reference/HTML_TOPLAINTEXT.md
     - Reference/HTML_STRINGLEN.md
     - Reference/HTML_SUBSTRING.md
+    - Reference/HTML_STRINGLINES.md
   - AWAIT関連:
     - Reference/AWAIT.md
     - Reference/GETKEY.md
