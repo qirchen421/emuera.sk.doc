@@ -136,7 +136,7 @@ nav:
           - Reference/ARRAYSORT.md
           - Reference/ARRAYCOPY.md
           - Reference/ARRAYMSORT.md
-          - Reference/CUPCHECK.mD
+          - Reference/CUPCHECK.md
           - Reference/ISDEFINED.md
           - Reference/EXISTVAR.md
           - Reference/ENUMFUNC.md
@@ -367,43 +367,54 @@ nav:
           - eramaker/variables.md
 
 plugins:
-  - search:
+  - search
   - i18n:
-      default_language: ja
+      docs_structure: suffix
+      fallback_to_default: true
       languages:
-        en: English
-        ja: 日本語
-        zh: 简体中文
-      nav_translations:
-        en:
+        - build: true
+          default: false
+          locale: en
+          name: English
           site_name: Emuera.EM+EE Document
-          EmueraEM+EEの仕様: EmueraEM+EE's Summary
-          Emueraの仕様: Emuera's Summary
-          Emueraの追加機能: Extend feat added in Emuera
-          eramakerの仕様: eramaker's Summary
-          プレイヤー向け情報: Information for end users
-          ホーム: Home
-          リファレンス: Reference
-          変更ログ: Changelog
-          開発者向け情報: eramaker basic Information for Developers
-        zh:
+          nav_translations:
+            EmueraEM+EEの仕様: EmueraEM+EE's Summary
+            Emueraの仕様: Emuera's Summary
+            Emueraの追加機能: Extend feat added in Emuera
+            eramakerの仕様: eramaker's Summary
+            プレイヤー向け情報: Information for end users
+            ホーム: Home
+            リファレンス: Reference
+            変更ログ: Changelog
+            開発者向け情報: eramaker basic Information for Developers
+        - build: true
+          default: true
+          locale: ja
+          name: 日本語
+        - build: true
+          default: false
+          locale: zh
+          name: 简体中文
           site_name: Emuera.EM+EE 帮助文档
-          DataTable（データベース）系: DataTable（数据库）相关
-          HTML系: HTML 系列
-          MAP（連想配列）系: MAP（映射数组）相关
-          XML系: XML 文件处理相关
-          その他: 其他
-          サウンド系: 音频处理相关
-          ツールチップ系: 提示框处理相关
-          デバッグ補助・システムフロー制御: 调试辅助 / 系统流程控制
-          ホーム: 首页
-          リファレンス: 参考手册
-          入力・ウェイト: 输入 / 等待
-          変数操作・変数参照・CSV参照: 变量操作 / 变量引用 / CSV 引用
-          変更ログ: 更新日志
-          文字列操作・参照: 字符串操作 / 引用
-          画像処理関連: 图像处理相关
-          関数系（CALL等）: 函数系列（CALL 相关）
+          nav_translations:
+            DataTable（データベース）系: DataTable（数据库）相关
+            HTML系: HTML 系列
+            MAP（連想配列）系: MAP（映射数组）相关
+            XML系: XML 文件处理相关
+            その他: 其他
+            サウンド系: 音频处理相关
+            ツールチップ系: 提示框处理相关
+            デバッグ補助・システムフロー制御: 调试辅助 / 系统流程控制
+            ホーム: 首页
+            リファレンス: 参考手册
+            入力・ウェイト: 输入 / 等待
+            変数操作・変数参照・CSV参照: 变量操作 / 变量引用 / CSV 引用
+            変更ログ: 更新日志
+            文字列操作・参照: 字符串操作 / 引用
+            画像処理関連: 图像处理相关
+            関数系（CALL等）: 函数系列（CALL 相关）
+      reconfigure_material: true
+      reconfigure_search: true
   - minify:
       htmlmin_opts:
         remove_comments: true
