@@ -6,7 +6,7 @@ with open("mkdocs.yml", mode='r', encoding="utf-8") as fs:
     data = yaml.load(fs.read(), yaml.SafeLoader)
     del data['repo_url']
     del data['site_url']
-    data['plugins'] = data['plugins'][1:]
+    data['plugins'] = ['offline', *data['plugins']]
     data['use_directory_urls'] = False
     fs.close()
     os.rename('mkdocs.yml', 'mkdocs.bak.yml')
