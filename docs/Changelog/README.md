@@ -133,12 +133,12 @@ hide:
     * 初公開
 
 ## Emuera.EE
-== "v45"
+=== "v45"
 	* Ignominious.Reverie氏のパッチでNAudio版の機能拡張＆安定性向上
 	* フォントを指定せず[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)を行ったときに例外落ちするのを修正
 	* [`GETCONFIG`、`GETCONFIGS`](../Reference/GETCONFIG.md)でEMEE拡張コンフィグも取得できるように
 
-== "v44"
+=== "v44"
 	* [`PLAYSOUND`](../Reference/PLAYSOUND.md)の第二引数で再生回数を設定できるように
 
 === "v43"
