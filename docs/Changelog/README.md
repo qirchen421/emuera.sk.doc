@@ -133,6 +133,11 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v46"
+	* [`GETDISPLAYLINE](../Reference/GETDISPLAYLINE.md)の引数が`LINECOUNT`に即した行を返すように修正
+	* [`FLOWINPUT`](../Reference/FLOWINPUT.md)拡張
+	* [`FLOWINPUTS`](../Reference//FLOWINPUT.md)追加
+
 === "v45"
 	* Ignominious.Reverie氏のパッチでNAudio版の機能拡張＆安定性向上
 	* フォントを指定せず[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)を行ったときに例外落ちするのを修正

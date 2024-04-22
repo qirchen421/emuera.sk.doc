@@ -3,16 +3,18 @@ hide:
   - toc
 ---
 
-# FLOWINPUT
+# FLOWINPUT,FLOWINPUTS
 
-| 関数名                                                               | 引数                  | 戻り値 |
-| :------------------------------------------------------------------- | :-------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)       | `int`(, `int`, `int`) | `void` |
+| 関数名                                                               | 引数                         | 戻り値 |
+| :------------------------------------------------------------------- | :--------------------------- | :----- |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)       | `int`(, `int`, `int`, `int`) | `void` |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.md)      | `int`(, `string`)            | `void` |
 
 !!! info "API"
 
 	``` { #language-erbapi }
-	FLOWINPUT default(, AllowLeftClick, AllowSkip)
+	FLOWINPUT default(, AllowLeftClick, AllowSkip, ForceSkip)
+	FLOWINPUTS toggle(, default)
 	```
 
 	フロー中のINPUT(`@SHOW_SHOP`内など)に対し、デフォルト値、左クリックの可否、スキップの可否のオプションを追加する
@@ -35,8 +37,13 @@ hide:
 	-追加引数`!=0`時、右クリック等でのスキップ中に入力待ちを行わない
 	ただしデフォルト値は適用される。上記`INPUT系でマウスクリックを受け付ける`と併用した場合はそれぞれ`RESULT:1`及び`RESULTS:1`に、
 	併用しなかった場合は通常通り`RESULT:0`及び`RESULTS:0`にデフォルト値が代入される
+	EEv46にて第四引数を追加。非0に設定すると`RESULT`にデフォルト値を入れて強制スキップするようになる  
 	```
+
+	FLOWINPUTSは第一引数非0で有効化。有効にするとシステムフロー上の`INPUT`が全て`INPUTS`扱いになる  
+	SHOP画面等、入力値で処理が変わる場面では`FLOWINPUT`でデフォルト値を設定することを推奨。その他の挙動制御は`FLOWINPUT`で行う  
+
 
 !!! hint "ヒント"
 
-	命令のみ対応しています
+	命令、式中関数両方対応しています
