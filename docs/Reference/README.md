@@ -78,6 +78,8 @@
 | ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.md)        | `int`, `int`, `int` | `string` |
 | ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)                     | `int`               | `void`   |
 | ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md)       | `int`               | `string` |
+| [`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md)       | `int`               | `void` |
+
 
 ### 文字列操作・参照
 
