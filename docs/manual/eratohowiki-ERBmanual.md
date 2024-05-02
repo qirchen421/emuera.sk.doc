@@ -11,17 +11,19 @@ eratohoまとめ V3 ERB構文講座
 [参考 ERBファイルの作成や改造時によくあるミスについてのQ&A](https://seesaawiki.jp/eratoho/d/ERB%ca%d4%bd%b8%a4%cb%a4%aa%a4%b1%a4%eb%c2%e5%c9%bd%c5%aa%a4%ca%a5%a8%a5%e9%a1%bc)  
   
 ---  
-  
-# 前編
 
 ## 基本  
 構文以前の部分です。`不明な～`などのエラーが出る時はこの部分が怪しいかも。  
   
+---
+
 ### 構文の記述は半角で行う  
 日本語の文章以外の部分は全て半角で入力しましょう。  
 見落としやすいのは全角スペースが主です。テキストエディタの検索機能で  
 全角スペースを検索すれば簡単に見つけられるはず。  
-  
+
+---
+
 ### 分岐や反復にはインデントを行う  
 これは直接エラーには繋がりませんが、後述する分岐や反復を使う際には  
 インデントを使用しましょう。インデントとは行頭に決まった量の空白を  
@@ -31,7 +33,9 @@ eratohoまとめ V3 ERB構文講座
 インデントに処理上の効果はありませんが、デバッグで自分が見直す時や  
 他の人に見てもらう時などに役立ちます。  
 必要ないだろうと思っても一応はつけておきましょう。  
-  
+
+---
+
 ### コメントアウト部分の行頭には`;`(半角セミコロン）をつける  
 構文の行頭に`;`をつけることによってその行をコメント化することができます。これをコメントアウトと言います。  
 コメントアウトとは書かれている処理が実行されない部分のことで  
@@ -39,17 +43,19 @@ eratohoまとめ V3 ERB構文講座
 メモ書き代わりに使われることがあります。  
 なお、コメントアウトでは全角文字を使っても構いません。  
   
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ;ここはコメントだから実行されないよ！  
 ```  
 
 Emuera1.807以降の追加機能で、構文の途中からでもコメントアウトを書けるようになりました。  
 ただし、`PRINT`系命令の後にある`;`はコメントアウトとして認識されず、文字列としてそのまま表示されます。  
 
- ``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = A + B ;ここはコメントアウト  
 PRINT ほげほげ ;でもここはコメントアウトにならない  
 ```
+
+---
 
 ### コメントアウトは詳しく正確につけましょう  
 コメントアウトを正しくつけることにより、なにか不具合があっても対処しやすくなります。  
@@ -61,22 +67,24 @@ PRINT ほげほげ ;でもここはコメントアウトにならない
 <details><summary>eramakerの仕様</summary>
 
 ### 各ファイルの最後の行には必ず1行以上の空行を入れる  
-`eramaker`の仕様上の問題で、ファイルの最後に空行がない場合  
-その直前の行が認識されなくなってしまいます。  
-`ENDIF～`というエラーのよくある原因の１つです。  
-（Emueraではこの問題は発生しません。）  
+`eramaker`の仕様上の問題で、ファイルの最後に空行がない場合<br/>
+その直前の行が認識されなくなってしまいます。<br/>
+`ENDIF～`というエラーのよくある原因の１つです。<br/>
+（Emueraではこの問題は発生しません。）<br/>
 </details>
 
-----  
+---
+
 ## 変数  
 計算などの処理で使われる変数についてです。  
   
+
 ### 変数とは？  
 変数とは計算結果を保存したり、ある数値とある数値を比較したりする際に  
 使用する入れ物のようなものです。  
 文章による説明だけではわかりづらいので一例を。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 0  
 B = 0  
 C = 0  
@@ -85,7 +93,7 @@ C = 0
 `A = 0`とは、変数`A`に`0`を代入する、ということを表しています。  
 上の`A`,`B`,`C`がそれぞれ変数です。現在はいずれも`0`が中に入っています。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 B = A + 1  
 C = A + 2  
 ```
@@ -94,7 +102,7 @@ C = A + 2
 ここで計算が行われ、`B`と`C`の中身が書き換えられました。`A`は`0`なので  
 `B`は`0 + 1`で`1`、`C`は`0 + 2`で`2`となります。`A`は`0`のまま変化していません。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = C  
 A = B  
 ```
@@ -103,7 +111,7 @@ A = B
 しかし、次の行で`A`に`B`、つまり`1`が代入されたため、`A`は`1`となります。  
 このように、同じ変数に複数回代入が行われると結果は上書きされます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 C = C + 2  
 A = B + C  
 ```
@@ -112,7 +120,9 @@ A = B + C
 計算前の`C`は`2`だったので、計算後の`C`は`2 + 2`で`4`です。  
 そして`A`に`B + C`、つまり`1 + 4`が代入されます。  
 ここまでの処理の結果、`A`は`5`、`B`は`1`、`C`は`4`となりました。  
-  
+
+---
+
 ### 変数の種類  
 変数には大きく分けて2種類のものがあります。  
 上の`A`,`B`,`C`のように数字を格納する『数値型変数(int型)』と  
@@ -123,7 +133,7 @@ A = B + C
 例えば`A`という変数の配列は、`A:0`,`A:1`,`A:2`,`A:3`, …という風に  
 `（変数名）:（配列番号）`で表現します。（`:`は半角のコロンを使用します）  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A:0 = 0  
 A:1 = 1  
 A:2 = 2  
@@ -140,41 +150,45 @@ A:3 = A:0 + A:1 + A:2
   
 どの変数がどの配列形式かは、[eramaker用変数リスト](../eramaker/variables.md)や[Emuera用定数・変数](../Emuera/variables.md)に載っています。
   
+---
+
 ### 変数の使い方  
 基本的には[eramakerの変数リストのページ](../eramaker/variables.md)に書いてある通りです。  
 ここでは扱いに注意が必要なものを主に取り上げます。  
   
-#### `A - Z`
+- `A - Z`
 上記ページでは記述されていませんが、配列として使用できます。  
 `A`は`A:0`と同じです。  
 つまり、`A:0`の値を変えたあとは`A`の値も同様に変化しています。  
   
-#### `FLAG`/`TFLAG`/`CFLAG`
+- `FLAG`/`TFLAG`/`CFLAG`
 `FLAG`・`TFLAG`はゲームシステムに関する部分に使われるため  
 特定のキャラのみに使用するフラグを管理する際にはCFLAGを使用しましょう。  
 また、非常に被りやすいので使用の際はフラグ一覧表を良く確認しましょう。  
 フラグ一覧表は、各バリアントに同梱されている「変数資料.txt」などを見てください。  
 <details><summary>eramakerの仕様</summary>
 
-なお、`eramaker`の仕様では`0～999`までの1000個の数字を使えるとなっていますが、実際にはバグにより`0～998`までの999個しか使えません。  
-999を使うとセーブデータが破壊されてしまいますので絶対に使用しないでください。  
-TFLAGは調教ごとにリセットされることにも注意してください。  
-（Emueraを使用する場合には、CFLAG:999を利用してもセーブデータ破壊は起こりません。また設定により、1000個を超える数字を使うこともできます。）  
+なお、`eramaker`の仕様では`0～999`までの1000個の数字を使えるとなっていますが、実際にはバグにより`0～998`までの999個しか使えません。<br/>
+999を使うとセーブデータが破壊されてしまいますので絶対に使用しないでください。<br/>
+TFLAGは調教ごとにリセットされることにも注意してください。<br/>
+（Emueraを使用する場合には、CFLAG:999を利用してもセーブデータ破壊は起こりません。また設定により、1000個を超える数字を使うこともできます。）<br/>
 </details>
 
-#### `TEQUIP`
+- `TEQUIP`
 　上のフラグ系と同様に被りやすいので使用の際はフラグ一覧表を確認しましょう。  
   
+---
+
 ### 2次元配列について  
 2次元配列形式の変数は、主にキャラに関するデータに使われています。  
 そのため、2次元配列変数の読み方は以下のようになっていることがほとんどです。  
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ;変数「ABL」、「TALENT」などの例
 （能力の種類）:（キャラの登録番号）:（能力の番号）  
 
 ```
   
-#### `TALENT:5:20`
+- `TALENT:5:20`
 これは登録番号`5`のキャラの`20`番の素質を表します。(`20`の部分はtalent.csvで定義した名前で代替可能)  
 ここで気をつけないといけないことは、キャラの登録番号(`ID`)とキャラ番号(`NO`)の違いです。  
 eratohoならキャラ番号5はチルノとなっていますが  
@@ -185,7 +199,7 @@ eratohoならキャラ番号5はチルノとなっていますが
 チルノの登録番号は2となり、その状態で霊夢を売却(`DELCHARA`)するとリスト全体が  
 1つ手前にずれ、チルノの登録番号は1となります。  
   
-#### `TALENT:100`
+- `TALENT:100`
 見た感じこれは2次元配列ではないように見えますね。  
 しかし、これは`TALENT:TARGET:100`が省略されたもので、現在調教中もしくは  
 調教予定のキャラの`100`番の素質を表しています。  
@@ -193,19 +207,19 @@ eratohoならキャラ番号5はチルノとなっていますが
 `TARGET`は指定されることが多いためか省略可能となっています。  
 <details><summary>eramakerの仕様</summary>
 
-ちなみに、上の項で`TALENT:5:20`というのを説明しましたが  
-eramakerの仕様上の問題で実際にこう記述しても登録番号５の  
-キャラの20番の素質を表すことはできません。  
-その原因がこの`TARGET`の省略で、`TALENT:5`まで読み込んだ時点で  
-`TALENT:TARGET:5`の省略されたものと判断されてしまい  
-エラーの原因になってしまうようです。  
-実際に登録番号5のキャラの20番の素質を表したい場合は  
-``` { #language-erb title="MAIN.ERB" }
-A = 5  
-TALENT:A:20  
+ちなみに、上の項で`TALENT:5:20`というのを説明しましたが<br/>
+eramakerの仕様上の問題で実際にこう記述しても登録番号５の<br/>
+キャラの20番の素質を表すことはできません。<br/>
+その原因がこの`TARGET`の省略で、`TALENT:5`まで読み込んだ時点で<br/>
+`TALENT:TARGET:5`の省略されたものと判断されてしまい<br/>
+エラーの原因になってしまうようです。<br/>
+実際に登録番号5のキャラの20番の素質を表したい場合は<br/>
 ```
-というように、一旦変数に登録番号を格納するなどの工夫が必要となります。  
-（Emueraを使用する場合にはこの問題は発生しません。`TALENT:5:20`も意図通り利用できます。）  
+A = 5
+TALENT:A:20
+```
+というように、一旦変数に登録番号を格納するなどの工夫が必要となります。<br/>
+（Emueraを使用する場合にはこの問題は発生しません。`TALENT:5:20`も意図通り利用できます。）<br/>
 </details>
 
 <!--
@@ -213,11 +227,14 @@ TALENT:A:20
 変数に関する詳しい情報は[eramaker変数情報](https://seesaawiki.jp/eratoho/d/eramaker%ca%d1%bf%f4%be%f0%ca%f3)も参照してください。  
 -->
 
+---
+
 ## 演算  
 数値処理には欠かせない計算の方法です。  
   
 ### 基本的な四則演算  
 四則演算を行うための基本的な演算子  
+
 |コード  |結果|
 |:--     |:-- |
 |`A + B` |AとBの和をとる。（足し算）|
@@ -226,8 +243,11 @@ TALENT:A:20
 |`A / B` |AとBの商をとる。（割り算）小数点以下は切り捨て。|
 |`A % B` |AをBで割ったときの余りをとる。（剰余）|
   
+
+---
 ### 自身に対する四則演算  
 `A = A + B`の様な形式は次のように省略できる。  
+
 |コード  |結果|
 |:--     |:--|
 |`A += B`|`A = A + B`と同じ。|  
@@ -236,13 +256,17 @@ TALENT:A:20
 |`A /= B`|`A = A / B`と同じ。|  
 |`A %= B`|`A = A % B`と同じ。|  
   
+
+---
 ### 論理演算子  
 ビット演算のために使う特殊な演算子です。  
+
 |コード  |結果|
 |:--     |:--|
 |`A \| B`|AとBをOR演算したものを返す。|  
 |`A & B` |AとBをAND演算したものを返す。|  
 
+---
   
 ## 表示  
 主に口上で使用する、画面に文字などを表示させる[`PRINT`](../Reference/PRINT.md)系の構文です。  
@@ -263,10 +287,10 @@ TALENT:A:20
 |`PRINTFORMS`|文字列変数を表示します。|  
 |`PUTFORM`|`PRINTFORM`と同様ですが、セーブデータ専用です。|  
   
-各命令の後にLやWをつけると、改行や入力待ち（Enterキーを押すまで進まない）を  
+各命令の後に`L`や`W`をつけると、改行や入力待ち（Enterキーを押すまで進まない）を  
 させることができます。例えば、  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 PRINT あ  
 PRINT い  
 PRINTL う  
@@ -292,12 +316,14 @@ PRINTL お
 
 と表示されます。  
   
+---
+
 ### PRINT系命令の使い方  
 上の項にある通り、`PRINT`系の命令にはそれぞれの用途がありますが  
 実際には`PRINTFORM`でほとんどのものを代用することができます。  
 普通の文章を表示させるなら  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 PRINTFORM あいうえお  
 ```
 
@@ -305,23 +331,24 @@ PRINTFORM あいうえお
 半角スペースを入れておくのを忘れないようにしましょう。  
 数値変数を組み合わせて表示させるなら  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 5  
 PRINTFORM 変数Ａは｛A｝です  
 ```
 
-のように変数名を半角の{}で括って記述します。  
+のように変数名を半角の`{~~~}`で括って記述します。  
 
 文字列変数なら  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 STR:0 = かきくけこ  
 PRINTFORM あいうえお%STR:0%さしすせそ  
 ```
 
 のように変数名を`%~~~%`で括って記述します。  
 　  
-`PRINTFORM`もまた後ろにL、Wをつけることで、  
+`PRINTFORM`もまた後ろに`L`、`W`をつけることで、  
+
 - `PRINTFORML`：改行ありだが改行や入力待ちをせず次の行も表示
 - `PRINTFORMW`：改行してその行で表示を止める
 
@@ -331,12 +358,14 @@ PRINTFORM あいうえお%STR:0%さしすせそ
 セーブデータの表示を変更する機会は少ないと思われるので割愛します。  
 詳しくは[`PUTFORM`](../Reference/PUTFORM.md)のページを参照
 
+---
+
 ### その他の表示  
 文字を表示した後改行させるには`PRINTFORML`を使いますが  
 文字を表示させずに改行させたい、つまり空白行を表示させたいという  
 場合にも`PRINTL`、`PRINTFORML`を使います。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 PRINTFORML あいう  
 PRINTFORML   
 PRINTFORML えお  
@@ -358,9 +387,7 @@ PRINTFORML えお
 ```
 　このように長い横線を表示させることができます。  
   
-----  
-
-# 後編
+---  
 
 ## 分岐と反復
 
@@ -372,6 +399,7 @@ PRINTFORML えお
 その比較に使われるのが『比較演算子』で、`==`,`!=`,`<`,`>`,`<=`,`>=`などがあります。  
 `==`は等しい、`!=`は等しくない、不等号はそれぞれそのままの意味です。  
 例えば、`A = 0`, `B = 1`, `C = 0`のとき  
+
 |式|真偽(Emueraでは真は1、偽は0を返す)|  
 |:--|:--|  
 |`A == B`|偽（`false`、正しくない）|  
@@ -389,7 +417,7 @@ PRINTFORML えお
 この場合、`0`が偽、それ以外が真です。  
 <!--（関連記事：[[ERB編集における代表的なエラー#!= 0は-1も含まれる]]）-->  
   
-#### 否定演算子（Emueraのみ）  
+#### 否定演算子
 Emueraでは、比較演算子の他に『否定演算子』というものがあり、`!`（感嘆符）で表します。  
 これには、直後の条件式の結果を逆転させる効果があります。上の例で言えば、  
 `!(A > B)`は真、`!(A <= C)`は偽になります。  
@@ -398,7 +426,7 @@ Emueraでは、比較演算子の他に『否定演算子』というものが�
 複数の条件式を使う場合は、条件式と条件式の間に`&&`や`||`を記述します。  
 `&&`は「○○かつ××」に使用し、`||`は「○○または××」に使用します。  
 例えば、`A == 0`かつ`B == 1`という条件の場合は  
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 A == 0 && B == 1  
 ```  
   
@@ -406,7 +434,7 @@ A == 0 && B == 1
   
 `A == 0`または`B == 0`という条件なら  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 A == 0 || B == 0  
 ```  
   
@@ -414,13 +442,15 @@ A == 0 || B == 0
   
 もっと複雑に、`A == 0`で`B == 1`、または`A == 0`で`C == 1`なら  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 (A == 0 && B == 1) || (A == 0 && C == 1)　もしくは  
 A == 0 && (B == 1 || C == 1)  
 ```  
   
 となります。  
   
+---
+
 #### キャラの能力や素質を判定する  
 よく使われる条件式の中に、キャラの能力や素質を判断するものがあります。  
 例えば、調教中のキャラが処女の時、`TALENT:TARGET:処女 == 1`が成立します。  
@@ -431,19 +461,21 @@ A == 0 && (B == 1 || C == 1)
 逆に、`TALENT:TARGET:処女 == 0`（あるいは`!TALENT:TARGET:処女`）と書いた場合には、  
 「調教中のキャラが処女ではない」という意味になります。  
   
-調教中のキャラの従順がLv3以上の時は、ABL:TARGET:従順 >= 3 が成立します。  
+調教中のキャラの従順がLv3以上の時は、`ABL:TARGET:従順 >= 3`が成立します。  
 能力や刻印はLvがそのまま数値となります。  
 体力や経験などレベルで表されない能力は、値がそのまま使用されます。  
 調教中のキャラのＶ経験が10以上であるという条件を表すなら、  
-EXP:TARGET:Ｖ経験 >= 10 となります。  
+`EXP:TARGET:Ｖ経験 >= 10`となります。  
   
+---
+
 #### ランダム(乱数)  
 `RAND:（数値もしくは数値変数）`と記述することで、一定の範囲の中から  
 ランダムで数値を決定することができます。  
 例えば、`A = RAND:10`と記述した場合、変数`A`は0から9(0からカウントするため上限は9)までの  
 いずれかの整数になります。また、  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 A = 5  
 B = RAND:A  
 ```  
@@ -451,6 +483,9 @@ B = RAND:A
 の場合、変数`B`は0から4(0からカウントするため上限は4)までのいずれかの整数になります。  
 <!--（関連記事：[[ERB編集における代表的なエラー#RANDの使い方]]）-->  
   
+
+---
+
 ### 分岐  
 ○○が××した時□□を表示する、のような処理を行うのが分岐です。  
 分岐に使われる構文には主に`IF`や`SIF`、`SELECTCASE`などがあります。  
@@ -459,7 +494,7 @@ B = RAND:A
 もし○○ならば、という処理に最もよく使われる構文です。  
 [`IF`のリファレンスページ](../Reference/IF.md)  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A == 0  
 　　PRINTFORML 変数Ａは0です。  
 ELSEIF B == 0  
@@ -480,7 +515,7 @@ ENDIF
 上の例文では処理の部分が1行ずつしかありませんが、実際には  
 次の`ELSEIF`,`ELSE`,`ENDIF`までの処理が全て行われます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF 条件式１  
 　　処理１  
 　　処理２  
@@ -498,7 +533,7 @@ ENDIF
   
 判定したい条件が3つ以上ある場合は、`ELSEIF`を増やしていくことができます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A == 0  
 　　PRINTFORML 変数Ａは０です。  
 ELSEIF B == 0  
@@ -512,7 +547,7 @@ ENDIF
   
 判定したい条件が1つの場合は、`ELSEIF`以下の部分はなくても構いません。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A == 0  
 　　PRINTFORML 変数Ａは０です。  
 ELSE  
@@ -522,7 +557,7 @@ ENDIF
   
 条件を満たさない時何もしない場合、`ELSE`以下の部分はなくても構いません。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A == 0  
 　　PRINTFORML 変数Ａは０です。  
 ELSEIF B == 0  
@@ -536,19 +571,21 @@ ENDIF
 （関連記事：[[ERB編集における代表的なエラー#ELSEIF を　ELSE　としてしまう/　ELSE　IF　としてしまう]]）  
 （関連記事：[[ERB編集における代表的なエラー#お前はもう死んでいる分岐]]）  
 -->  
-  
+
+---
+
 #### `SIF`  
 上の`IF - ENDIF`を簡略化したのが`SIF`になります。  
 [`SIF`のリファレンスページ](../Reference/IF.md)  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 SIF A == 0  
 　　PRINTFORML 変数Ａは０です。  
 ```  
   
 `SIF`には`ENDIF`が必要ない、`ELSEIF`や`ELSE`が使用できない、  
 直後の1行しか実行できない、などの特徴があります。例えば  
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 SIF 条件式  
 　　処理１  
 　　処理２  
@@ -561,21 +598,21 @@ SIF 条件式
   
 <details><summary>eramakerの仕様</summary>  
   
-また、eramakerでは  
-  
-``` { #language-erb title="MAIN.ERB" }  
-SIF 条件式  
-　　;コメント  
-　　処理１  
-```  
-  
-のように、SIF の直後にコメント行を入れると、必ず処理１が実行されてしまいますので、これも注意が必要です。  
-（Emueraではコメント行がきちんと無視されるので、条件式が真であるときのみ処理１が実行されます。）  
+また、eramakerでは<br/>
+```
+SIF 条件式
+　　;コメント
+　　処理１
+```
+のように、SIF の直後にコメント行を入れると、必ず処理１が実行されてしまいますので、これも注意が必要です。<br/>
+（Emueraではコメント行がきちんと無視されるので、条件式が真であるときのみ処理１が実行されます。）<br/>
 <!--（関連記事：[[ERB編集における代表的なエラー#SIFの直後にコメントを置くのは危険]]）-->  
 </details>  
   
+---
+
 #### `IF`と`SIF`の組み合わせ  
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF 条件式１  
 　　SIF 条件式２  
 　　　　処理１  
@@ -587,7 +624,7 @@ ENDIF
 と記述すると、条件式１と条件式２の両方が真である場合は処理１から３を全て実行し、  
 条件式２だけが成立する時は処理２と３のみを実行します。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 SIF 条件式１  
 　　IF 条件式２  
 　　　　処理１  
@@ -598,14 +635,16 @@ SIF 条件式１
 （条件式１が偽の場合は`IF 条件式２`の行だけを読み飛ばすので、「`ENDIF`に対応する`IF`が無い！」というエラーになる）  
 `SIF`の直後の行に`IF`や`SIF`などの分岐や反復を行う文は書かないようにしましょう。  
   
-#### SELECTCASE - CASE - CASEELSE - ENDSELECT  
+---
+
+#### `SELECTCASE - CASE - CASEELSE - ENDSELECT`
 IF 文と似た機能を持つ構文として`SELECTCASE - CASE - CASEELSE - ENDSELECT`があります。  
 1つの数値変数の値によって処理を分岐させる時に使います。  
 例えば乱数によって処理を分岐させる時に便利な構文です。  
 [`SELECTCASE`のリファレンスページ](../Reference/SELECTCASE.md)  
   
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 SELECTCASE A  
 　　CASE 0  
 　　　　PRINTFORML 変数Ａは０です。  
@@ -618,7 +657,7 @@ ENDSELECT
   
 これは、次の`IF`文と同じ意味を持ちます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A == 0  
 　　PRINTFORML 変数Ａは０です。  
 ELSEIF A == 1  
@@ -631,7 +670,7 @@ ENDIF
 `SELECTCASE`文は、`CASE`の後ろに書かれた数値が`SELECTCASE`の直後に書かれた数値変数（この場合は`A`）と等しいかどうかを判定して分岐します。  
 `CASE`については次のような書き方をすることもできます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 SELECTCASE A  
 　　CASE 1, 2, 3  
 　　　　PRINTFORML 変数Ａは１、２、３のいずれかです。  
@@ -652,7 +691,7 @@ ENDSELECT
 また、`CASE`に書く条件は、カンマで区切って複数指定することができます。  
 よってこの`SELECTCASE`文は、次の`IF`文と同じ意味を持ちます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A == 1 || A == 2 || A == 3  
 　　PRINTFORML 変数Ａは１、２、３のいずれかです。  
 ELSEIF A >= 4 && A <= 9  
@@ -668,17 +707,19 @@ ENDIF
 ```  
 <!--（関連記事：[[Emueraについての補足#IFを使うべきかSELECTCASEを使うべきか]]）-->  
   
+---
+
 #### 三項演算子  
 三項演算子は、正確に言えば分岐構文ではありませんが、`IF`文から派生してできた演算子なので、ここで説明します。  
 三項演算子は、次のような形を取ります。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 <代入先変数> = <条件式> ? <真の場合の代入値> # <偽の場合の代入値>  
 ```  
   
 例えば、変数`A`が3以上の時に1、そうでない場合に0を変数`B`に代入する操作は、`IF`文を使うと次のようになります。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF A >= 3  
 　　B = 1  
 ELSE  
@@ -687,23 +728,25 @@ ENDIF
 ```  
 これを三項演算子で表現すると、次のように1行で書けます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 B = A >= 3 ? 1 # 0  
 ```  
   
 三項演算子は文字列変数に対しても使用できます。文字列を扱う場合は、三項演算子を `\@ ～ \@`で囲みます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 PRINTFORML %CALLNAME:TARGET%は\@ TALENT:処女 ? 処女です。 # 処女ではありません。 \@  
 ```  
   
 上の文は、`TALENT:TARGET:処女`が0以外の時に『（TARGETの呼び名）は処女です。』と出力し、  
 `TALENT:TARGET:処女`が0の時に『（TARGETの呼び名）は処女ではありません。』と出力します。  
   
+---
+
 #### 三項演算子と`SELECTCASE`との組み合わせ  
 `SELECTCASE`文に三項演算子を組み込むと、条件式を更に分岐させられます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 SELECTCASE RAND:(TALENT:処女 ? 3 # 2)  
 	CASE 0  
 		PRINTFORMW 無条件1  
@@ -719,7 +762,7 @@ ENDSELECT
 実行すると、`CASE 0`、`CASE 1`は無条件で`RAND`抽選の対象になりますが、`CASE 2`は対象が処女でないと`RAND`抽選から弾かれます。  
 この`SELECTCASE`文は、次の`IF`文と同じ意味を持ちます。  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 IF RAND:3 == 0 && TALENT:0 == 1  
 	PRINTFORMW 処女限定  
 ELSEIF RAND:2 == 0  
@@ -729,13 +772,17 @@ ELSE
 ENDIF  
 ```  
   
+---
+
 ### 反復  
 同じ処理を複数回繰り返すときに使うのが反復（ループ処理）です。  
   
+---
+
 #### `REPEAT - REND`  
 [`REPEAT`のリファレンスページ](../Reference/REPEAT.md)  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 REPEAT 数式  
 　　処理  
 REND  
@@ -745,18 +792,20 @@ REND
 繰り返す回数は`REPEAT`の直後にある数値、または数値変数に代入されている値です。`A + 1`などの数式を置くこともできます。  
 例えば、  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 REPEAT 10  
 　　PRINTFORML あ  
 REND  
 ```  
 と記述すると、『あ』が10行表示されます。  
   
-##### COUNT  
+---
+
+##### `COUNT`  
 変数`COUNT`は、現在までに何回繰り返しを行ったかを格納しています。  
 `REPEAT - REND`内の処理を最初に行う時はまだ1回目の繰り返しの途中（1回目の繰り返しが完了していない）なので  
   
-``` { #language-erb title="MAIN.ERB" }  
+``` { #language-erb title="ERB" }  
 REPEAT 10  
 　　PRINTFORML 現在{COUNT}回目です。  
 REND  
@@ -770,7 +819,7 @@ REND
 ##### `REPEAT`と`IF`,`SIF`の組み合わせ
 `REPEAT - REND`の間にも`IF`や`SIF`を使用することができます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 REPEAT 10  
 　　IF COUNT == 5  
 　　　　PRINTFORML 6回目です？  
@@ -788,7 +837,7 @@ REND
 退避・返還する処理を行うなどの工夫をするか、  
 後で説明する`FOR - NEXT`で代用する必要があります。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ;REPEAT を入れ子にする例  
 REPEAT 10  
 　　COUNT:1 = COUNT  
@@ -800,11 +849,13 @@ REND
 ```
 <!--（関連記事：[[ERB編集における代表的なエラー#二重REPEAT文]]）  -->
   
+---
+
 ##### `CONTINUE`と`BREAK`
 `REPEAT - REND`間で、以降の処理を行わずに次の繰り返しに入る場合には`CONTINUE`を、  
 以降の処理を行わず、繰り返し自体を終了させる場合には`BREAK`を使用します。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 REPEAT 10  
 　　A = COUNT  
 　　IF A == 5  
@@ -822,7 +873,7 @@ REND
 
 となります。また、  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 REPEAT 10  
 　　A = COUNT  
 　　IF A == 5  
@@ -840,10 +891,12 @@ REND
 
 までになります。  
   
+---
+
 #### `FOR - NEXT`  
 [`FOR-NEXT`のリファレンスページ](../Reference/FOR.md)
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 FOR <カウンタ数値変数>, <数式>, <数式>[, <数式>]  
 　　処理  
 NEXT  
@@ -852,13 +905,13 @@ NEXT
 `REPEAT - REND`の機能強化版が`FOR - NEXT`です。  
 例えば、次の2つのスクリプトは全く同じ動作をします。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 FOR COUNT, 0, 10  
 　　PRINTFORML {COUNT}回目  
 NEXT  
 ```
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 REPEAT 10  
 　　PRINTFORML {COUNT}回目  
 REND  
@@ -868,7 +921,7 @@ REND
 `REPEAT`では繰り返しの回数を数える変数は`COUNT`に固定されていましたが、`FOR`ではこの変数を好きな変数に設定することができます。  
 カウンタ変数を別にすることで、`REPEAT`では面倒だったループの入れ子を簡単に実現できます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ;入れ子の例  
 FOR A, 0, 10  
 　　FOR B, 0, 10  
@@ -881,7 +934,7 @@ NEXT
 3番目の`<数式>`で、繰り返しを終わる`<カウンタ数値変数>`の値を指定します。  
 例えば、  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 FOR COUNT, 3, 8  
 　　PRINTFORM {COUNT}:  
 NEXT  
@@ -898,7 +951,7 @@ NEXT
 `FOR`の後ろの4番目の`<数式>`は、ループを1回繰り返すごとにカウンタ変数に加算される値を設定できます。省略すると自動的に1が設定されます。  
 例えば、  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 FOR COUNT, 0, 10, 2  
 　　PRINTFORM {COUNT}:  
 NEXT  
@@ -913,10 +966,12 @@ NEXT
 と表示されます。  
 なお、`REPEAT - REND`と同様に`CONTINUE`と`BREAK`も使用できます。  
   
+---
+
 #### `WHILE - WEND`
 [`WHILE-WEND`のリファレンスページ](../Reference/WHILE.md)
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 WHILE 条件式  
 　　処理  
 WEND  
@@ -925,7 +980,7 @@ WEND
 条件式が真である間、ループを繰り返します。  
 例えば、次のスクリプトは「あ」を10行表示します。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 0  
 WHILE A < 10  
 　　PRINTFORML あ  
@@ -937,10 +992,12 @@ WEND
 `A < 10`はいつまでも真のままとなり、無限ループに陥ってしまいますので注意が必要です。  
 `WHILE - WEND`でも`CONTINUE`と`BREAK`を使用できます。  
   
+---
+
 #### `DO - LOOP`
 [`DO-LOOP`のリファレンスページ](../Reference/DO.md)
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 DO  
 　　処理  
 LOOP 条件式  
@@ -950,14 +1007,14 @@ LOOP 条件式
 `WHILE - WEND`との見た目の違いは条件式の位置が違う程度ですが、最初の繰り返しが必ず実行されるという特徴があります。  
 次の2つのスクリプトを見比べてみてください。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 0  
 WHILE A < 0  
 　　PRINTFORML あ  
 WEND  
 ```
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 0  
 DO  
 　　PRINTFORML あ  
@@ -971,13 +1028,14 @@ LOOP A < 0
 また、`DO - LOOP`内で`CONTINUE`文を呼ぶと、`DO`ではなく`LOOP`に飛ぶことにも注意してください。  
 次のスクリプトは（`DO → CONTINUE → DO`ではなく）`DO → CONTINUE → LOOP 0`の順に実行されるので、無限ループにはなりません。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 DO  
 　　CONTINUE  
 LOOP 0  
 ```
 <!-- （関連記事：[[Emueraについての補足#CONTINUEの処理に関して]]）  -->
   
+---
 
 ## 関数と関数呼び出し  
 ここからは主に機能パッチやバリアントを作成する際に使う範囲となります。  
@@ -987,7 +1045,7 @@ LOOP 0
 任意の場所から使えるようにしたものを関数と言います。  
 例として、変数`A`の値を10倍にする関数を作ってみましょう。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @A_TEN_TIMES  
 A = A * 10  
 ```
@@ -995,7 +1053,7 @@ A = A * 10
 `@`の後に半角英数と`_`（アンダーバー）で関数の名前を付けることができます。  
 それ以降の処理が関数で行う内容となります。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 0  
 CALL A_TEN_TIMES  
 PRINTFORML 変数Ａは{A}です。  
@@ -1015,11 +1073,13 @@ PRINTFORML 変数Ａは{A}です。
 関数の名前は他と同じにならないよう注意しましょう。  
 <!-- （関連記事：[[ERB編集における代表的なエラー#（関数が）かぶった！？]]）  -->
   
-### RETURN と戻り値  
+---
+
+### `RETURN`と戻り値  
 ある条件を満たした時、関数を途中で終わらせたいという場合は  
 RETURN <数値> と記述します。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @TEST  
 SIF A == 0  
 　　RETURN 0  
@@ -1031,7 +1091,7 @@ A = A * 5
 この時、`RESULT`を関数の **戻り値（返り値）** といいます。  
 例えば、  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @TEST2  
 IF A == 0  
 　　RETURN 0  
@@ -1045,7 +1105,7 @@ ENDIF
 ```
 という関数を作り、別の場所から呼び出すと  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 0  
 CALL TEST2  
 PRINTFORML {RESULT}  
@@ -1062,11 +1122,13 @@ PRINTFORML {RESULT}
 上から順に`0`,`2`,`9`が表示されます。  
 なおEmueraでは、`RETURN`文に数値変数や数式を指定できるほか、カンマで区切って複数の戻り値を指定することもできます。  
   
+---
+
 ### 引数  
 Emueraでは、関数は **引数** を取ることができます。引数とは、関数を`CALL`で呼び出す時に関数に渡すことのできる変数です。  
 上に書いた関数`@TEST2`を、引数を取るように書き換えたのが次の例文です。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @TEST2, ARG  
 IF ARG == 0  
 　　RETURN 0  
@@ -1081,7 +1143,7 @@ ENDIF
 
 呼び出すときは次のようにします。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 CALL TEST2, 0  
 PRINTFORML {RESULT}  
   
@@ -1095,22 +1157,24 @@ PRINTFORML {RESULT}
 `CALL TEST2, 0`を実行すると、`ARG`に0が代入され、関数内で`ARG`を参照することができます。  
 引数は複数取ることができ、そのような場合は`ARG, ARG:1, ARG:2, …`のように定義します。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @TEST3, ARG, ARG:1, ARG:2  
 （略）  
 ```
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 CALL TEST3, 0, 7, 3  
 ```
 
 引数には文字列変数も取ることができ、その場合は ARGS を使います。  
   
+---
+
 ### ローカル変数  
 `A`,`B`などの一文字変数や`COUNT`など多くの変数は、プログラム全体で同時に一つの変数を共通で使用します。  
 ですが、それが原因でバグが発生することがあります。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @MAIN  
 FOR COUNT, 0, 10  
 　　CALL FUNC  
@@ -1129,7 +1193,7 @@ NEXT
 そこで、ある関数の中でしか使えない変数（ローカル変数）を用意すれば、この問題は解決するはずです。  
 そのローカル変数が`LOCAL`と`LOCALS`です。次の例を見てください。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @EVENTFIRST  
 　　LOCAL = 123  
 　　CALL FUNC001  
@@ -1147,6 +1211,8 @@ NEXT
 なお、`LOCALS`は`LOCAL`の文字列変数バージョンです。  
 先に説明した`ARG`と`ARGS`もローカル変数として扱われます。  
   
+---
+
 #### LOCAL, ARG の初期化タイミングに注意  
 他の言語でプログラミングをしたことのある人には特に注意して頂きたいのですが、  
 **`LOCAL`や`ARG`は関数が呼び出されたタイミングで初期化されない**  
@@ -1154,7 +1220,7 @@ NEXT
 の2点に気をつける必要があります。  
 この特徴は、関数の再帰などを利用した場合に注意が必要です。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @SAMPLE  
 LOCAL += 1  
 IF LOCAL < 10  
@@ -1171,7 +1237,7 @@ ENDIF
   
 `ARG`についても同様です。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 @SAMPLE2, ARG  
 SIF ARG >= 10  
 　　RETURN  
@@ -1183,9 +1249,9 @@ PRINTVL ARG
 
 <details><summary>プログラマ向けの話</summary>
 
-Emueraの内部の話になりますが、`LOCAL`はEmuera内部で「`関数名@LOCAL`」という名前の変数として定義されています。  
-言い換えれば、erabasicのローカル変数は、特定の関数の中でしか参照できないグローバル変数（のようなもの）ということになります。  
-C# でいえば次のようなコードに相当します。  
+Emueraの内部の話になりますが、`LOCAL`はEmuera内部で「`関数名@LOCAL`」という名前の変数として定義されています。<br/>
+言い換えれば、erabasicのローカル変数は、特定の関数の中でしか参照できないグローバル変数（のようなもの）ということになります。<br/>
+C# でいえば次のようなコードに相当します。<br/>
 ```
 class SampleClass  
 {  
@@ -1204,19 +1270,21 @@ class SampleClass
 </details>
 <!--（関連記事：[[Emueraについての補足#LOCAL変数であっても避けるべきこと]]）  -->
   
+---
+
 ### 式中で使える関数
 erabasicにおいて、値を返す命令の戻り値は`RESULT`を経由して受け取ります。  
 例えば、与えられた数式の絶対値を返す`ABS`という命令を使って、  
 変数`A`の絶対値を`LOCAL`に格納するには次のように記述します。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ABS A  
 LOCAL = RESULT  
 ```
 
 これに対し、`ABS`という名前の「式中で使える関数（以下「式中関数」と書きます）」を使うと、上のスクリプトを次のように書くことができます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 LOCAL = ABS(A)  
 ```
 
@@ -1228,14 +1296,14 @@ LOCAL = ABS(A)
   
 文字列を返す命令でも、同様の書き方ができます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 STRLENS STR:0  
 IF RESULT > A  
 　　SUBSTRING STR:0, A, 1  
 　　LOCALS:0 = %RESULTS:0%  
 ENDIF  
 ```
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 IF STRLENS(STR:0) > A  
 　　LOCALS:0 = %SUBSTRING(STR:0, A, 1)%  
 ENDIF  
@@ -1243,11 +1311,13 @@ ENDIF
 上の2つの例文は、同じ動作をします。  
 式中関数の一覧は[命令・式中関数のページ](../Reference/README.md)で確認できます。  
   
+---
+
 #### 式中関数を自分で定義する  
 式中関数は自分で定義することができます。  
 関数を定義する`@`行の直後に`#FUNCTION`と書き、`RETURN`を`RETURNF`に置換するだけで、その関数は式中関数になります。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ;下の行は @TEST2, ARG と書いてもよいが、慣習的にこう書くことが多い  
 @TEST2(ARG)  
 #FUNCTION  
@@ -1264,7 +1334,7 @@ ENDIF
 
 呼び出すときは次のようにします。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 PRINTFORML {TEST2(0)}  
 PRINTFORML {TEST2(2)}  
 PRINTFORML {TEST2(3)}  
@@ -1276,11 +1346,12 @@ PRINTFORML {TEST2(3)}
 関連ページ：[ユーザー定義の式中関数](../Emuera/user_defined_in_expression_function.md)
 <!--（関連記事：[[Emueraについての補足#文字列とRETURNFに関する面妖な仕様]]）  -->
   
+---
 
 ## ラベルとキー入力  
 主に選択肢による分岐で使用されるのがラベルとキー入力です。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 PRINTFORML 選択してください  
 PRINTFORML [0] 選択肢１  
 PRINTFORML [1] 選択肢２  
@@ -1315,6 +1386,8 @@ ENDIF
 （関連記事：[[ERB編集における代表的なエラー#同じGOTOラベル名は使わない。(INPUT_LOOPに関するバグ)]]）  
 -->
 
+---
+
 ## その他注意点など  
 
 ### キャラの追加と削除  
@@ -1322,7 +1395,7 @@ ENDIF
 [`ADDCHARA`のリファレンスページ](../Reference/ADDCHARA.md)
 [`DELCHARA`のリファレンスページ](../Reference/DELCHARA.md)
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ADDCHARA 1  
 ADDCHARA 5  
 ADDCHARA 9  
@@ -1330,13 +1403,13 @@ ADDCHARA 9
 
 Emueraでは次のように書くことができます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 ADDCHARA 1, 5, 9  
 ```
 
 `ADDCHARA`ではCSVにあるキャラ番号が参照されます。  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 DELCHARA 3  
 DELCHARA 1  
 ```
@@ -1355,11 +1428,13 @@ DELCHARA 1
 前にずれてしまうため、助手になる条件を満たしていないキャラが助手に  
 なってしまうこともあります。  
   
+---
+
 ### グラフ表示  
 `BAR`（`BARL`）を使用することで数値の表示を視覚的に行うことができます。  
 `BAR （数値or変数）,（数値or変数）,（グラフの長さ）`のように記述し  
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 80  
 B = 100  
 BAR A, B, 10  
@@ -1376,12 +1451,14 @@ BAR A, B, 10
 どのくらいの割合かを示す際によく使用されます。  
 `BARL`では表示後に改行されることも覚えておきましょう。  
   
+---
+
 ### 小数の乗算  
 erabasicでは変数などは全て整数で処理されますが、例外として  
 `TIMES`を使用することで小数の計算を行うことができます。  
 [`TIMES`のリファレンスページ](../Reference/TIMES.md)
 
-``` { #language-erb title="MAIN.ERB" }
+``` { #language-erb title="ERB" }
 A = 1000  
 TIMES A, 1.5  
 ```
@@ -1389,6 +1466,8 @@ TIMES A, 1.5
 これで変数`A`は`1000×1.5`の`1500`となります。  
 なお、`TIMES`を使用した結果が小数になっても整数に丸められます。  
   
+---
+
 ### その他の命令  
 [`WAIT`](../Reference/WAIT.md)…入力待ちのみを行います。`RESULT`に値は格納されません。  
 [`QUIT`](../Reference/QUIT.md)…eramakerを終了させます。主にゲームオーバー時などに使用します。  
