@@ -5,9 +5,11 @@ hide:
 
 # BITMAP_CACHE_ENABLE
 
+制作者：JukesBouver99
+
 | 関数名                                             | 引数  | 戻り値 |
 | :------------------------------------------------- | :---- | :----- |
-| ![`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md) | `int` | void   |
+| ![](../assets/images/Iconetc.webp)![`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md) | `int` | void   |
 
 !!! info "API"
 

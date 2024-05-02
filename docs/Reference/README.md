@@ -1,5 +1,17 @@
 ## 命令・式中関数の一覧
 
+---
+
+## 凡例
+
+- ![](../assets/images/Iconeramaker.webp) - eramakerから存在する命令
+- ![](../assets/images/IconEmuera.webp) - Emueraで追加、変更、拡張された命令
+- ![](../assets/images/IconEM.webp) - EM(EvilMask版)で追加、変更、拡張された命令
+- ![](../assets/images/IconEE.webp) - EE(Enter's Edition)で追加、変更、拡張された命令
+- ![](../assets/images/Iconetc.webp) - その他コントリビューターによって追加、変更、拡張された命令
+
+---
+
 ### PRINT 系
 
 | 関数名                                                                                                                                            | 引数                                                         | 戻り値   |
@@ -78,7 +90,7 @@
 | ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.md)        | `int`, `int`, `int` | `string` |
 | ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)                     | `int`               | `void`   |
 | ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md)       | `int`               | `string` |
-| [`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md)       | `int`               | `void` |
+| ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md)       | `int`               | `void` |
 
 
 ### 文字列操作・参照
