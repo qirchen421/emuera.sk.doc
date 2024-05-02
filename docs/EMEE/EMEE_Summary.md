@@ -68,7 +68,7 @@ hide:
 
 	ルートディレクトリに`font`フォルダを作成し、そこに置くことでコンフィグ及び`GSETFONT`で使用可能になります
 
-### ![](../assets/images/IconEE.webp)`.NET 7`に対応
+### ![](../assets/images/Iconetc.webp)`.NET 7`に対応
 !!! summary ""
 
 	CRER氏の協力の元、.NET 7に正式対応しました。感謝

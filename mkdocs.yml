@@ -365,6 +365,10 @@ nav:
           - eramaker/CSV_format.md
           - eramaker/ERB_format.md
           - eramaker/variables.md
+  - 制作マニュアル:
+    - manual/README.md
+    - 一覧:
+        - manual/eratohowiki-ERBmanual.md
 
 plugins:
   - search
