@@ -22,6 +22,8 @@ hide:
 [**最新版:Emuera1824+v21+EMv18+EEv46**](assets/files/Emuera1824+v21+EMv18+EEv46+Rikaichan.zip)
 
 ## 連絡先
-エラー報告、要望などは下記Discordサーバーにてご連絡ください
+エラー報告、要望、編集の相談などは下記Discordサーバーにてご連絡ください
+
+[ドキュメント編集チャンネル](https://discord.com/channels/428432103042973706/1236190714954514452)
 
 <iframe src="https://discord.com/widget?id=428432103042973706&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
