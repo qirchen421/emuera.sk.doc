@@ -369,6 +369,7 @@ nav:
     - manual/README.md
     - 一覧:
         - manual/eratohowiki-ERBmanual.md
+        - manual/eratohowiki-ERB-QandA
         - manual/HowToUseGit.md
 
 plugins:
