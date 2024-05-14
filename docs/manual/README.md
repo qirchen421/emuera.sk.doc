@@ -6,6 +6,8 @@ hide:
 # 製作マニュアル
 era製作において参考になるマニュアルをまとめていく予定
 
-- [eratoho まとめ V3 ERB構文講座](eratohowiki-ERBmanual.md)
-- [ERB開発Q&A](eratohowiki-ERB-QandA.md)
-- [Gitの使い方](HowToUseGit.md)
+- [eratoho まとめ V3 ERB構文講座](eratohowiki-ERBmanual.md)(出典元:eratohoまとめ V3)
+- [ERB開発Q&A](eratohowiki-ERB-QandA.md)(出典元:eratohoまとめ V3)
+- [Gitの使い方](HowToUseGit.md)(出典元:eratohoまとめ V3)
+- [ライセンスについて](WhatIsLicense.md)(出典元:eratohoまとめ V3)
+- [LTOLライセンスについて](LTOL-license.md)(出典元:eratohoまとめ V3)

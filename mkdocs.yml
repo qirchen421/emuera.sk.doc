@@ -371,6 +371,8 @@ nav:
         - manual/eratohowiki-ERBmanual.md
         - manual/eratohowiki-ERB-QandA
         - manual/HowToUseGit.md
+        - manual/WhatIsLicense.md
+        - manual/LTOL-license.md
 
 plugins:
   - search:
