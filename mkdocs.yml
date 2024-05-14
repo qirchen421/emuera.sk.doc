@@ -374,6 +374,7 @@ nav:
         - manual/WhatIsLicense.md
         - manual/LTOL-license.md
         - manual/Emuera-etc.md
+        - manual/modification-manual.md
 
 plugins:
   - search:
