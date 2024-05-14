@@ -1,6 +1,5 @@
 ---
 hide:
-  - navigation
   - toc
 ---
 # 製作マニュアル
