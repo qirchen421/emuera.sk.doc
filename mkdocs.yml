@@ -369,10 +369,11 @@ nav:
     - manual/README.md
     - 一覧:
         - manual/eratohowiki-ERBmanual.md
-        - manual/eratohowiki-ERB-QandA
+        - manual/eratohowiki-ERB-QandA.md
         - manual/HowToUseGit.md
         - manual/WhatIsLicense.md
         - manual/LTOL-license.md
+        - manual/Emuera-etc.md
 
 plugins:
   - search:
