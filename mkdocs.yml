@@ -377,6 +377,7 @@ nav:
         - manual/modification-manual.md
         - manual/modification-QandA.md
         - manual/erawiki-tutorial.md
+        - manual/erawiki-title.md
 
 plugins:
   - search:

@@ -14,3 +14,4 @@ era製作において参考になるマニュアルをまとめていく予定
 - [改造入門](modification-manual.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
 - [システム改造Q&A](erawiki-modification-QandA.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
 - [チュートリアル](erawiki-tutorial.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
+- [タイトル準備編](erawiki-title.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
