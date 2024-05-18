@@ -376,6 +376,7 @@ nav:
         - manual/Emuera-etc.md
         - manual/modification-manual.md
         - manual/modification-QandA.md
+        - manual/erawiki-tutorial.md
 
 plugins:
   - search:

@@ -13,3 +13,4 @@ era製作において参考になるマニュアルをまとめていく予定
 - [LTOLライセンスについて](LTOL-license.md)(出典元:eratohoまとめ V3)
 - [改造入門](modification-manual.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
 - [システム改造Q&A](erawiki-modification-QandA.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
+- [チュートリアル](erawiki-tutorial.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
