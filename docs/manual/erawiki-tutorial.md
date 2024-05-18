@@ -20,9 +20,7 @@
 改変用のバニラeraにEmueraを導入してみようという内容になっている。  
 バニラというのはバリアントの対義語で、eraの元祖であるeramakerのことだ。  
 
-|漠々ト、獏（R18） サークル獏|  
-|:-|
-|http://cbaku.com/|  
+- [漠々ト、獏（R18） サークル獏](http://cbaku.com/)  
 
 著作権者は佐藤敏様だ。バニラは今遊んでも面白い。感謝を申し上げる。  
 
@@ -87,9 +85,9 @@ erakanonを開くと文字化けするかもしれない。
 <!--//（2021/05/11 wiki編集スレでご助言いただいて追記）  -->
 GREPというのは、複数のファイルをまたいで検索できるシステムで、エラー箇所を探すのに役立つ。  
 GREPのやり方についてはこちらで紹介してくれているので読んでみよう。  
-|[システム改造Q&A→基礎知識→GREPのやり方](erawiki-modification-QandA.md#grep)|  
-|:- |
-|https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#grep|  
+
+- [システム改造Q&A→基礎知識→GREPのやり方](erawiki-modification-QandA.md#grep)  
+
 
 ---  
 
@@ -146,13 +144,12 @@ EmueraEM+EEではさらに最新の.NETが要求されます。起動時の誘�
 
 ## Emueraのダウンロード  
 
-|アプリ名|リンク|
-|:-|:-|
-|Emuera - emulator of eramaker ダウンロード|https://ja.osdn.net/projects/emuera/releases/|  
-|EmueraEM+EE|https://evilmask.gitlab.io/emuera.em.doc/assets/files/Emuera1824%2Bv21%2BEMv18%2BEEv46%2BRikaichan.zip|
+- [Emuera - emulator of eramaker ダウンロード](https://ja.osdn.net/projects/emuera/releases/)  
+- [EmueraEM+EE](https://evilmask.gitlab.io/emuera.em.doc/assets/files/Emuera1824%2Bv21%2BEMv18%2BEEv46%2BRikaichan.zip)
 
-Emuera1824.zip(日付: 2019-01-28, サイズ: 253.98 KB)  
-etc1821.zip(日付: 2015-11-04, サイズ: 8.73 KB)  
+>Emuera1824.zip(日付: 2019-01-28, サイズ: 253.98 KB)  
+>etc1821.zip(日付: 2015-11-04, サイズ: 8.73 KB)  
+
 の、左側にある青ボタンをクリックしてダウンロードし、zipを展開してみよう。  
 
 - Emuera1824フォルダ  
@@ -187,15 +184,11 @@ etc1821については後で確かめるとして、eramakerもダウンロー�
 
 ## eramakerのダウンロード  
 
-|漠々ト、獏（R18） サークル獏様|
-|:-|
-|http://cbaku.com/|  
+- [漠々ト、獏（R18） サークル獏様](http://cbaku.com/)  
 
 こちらのカテゴリ 同人ゲームをクリックし、最後尾の辺りに表示される  
 
-|同人ゲーム erakanon(eramaker）|
-|:-|
-|https://cbaku2.sakura.ne.jp/b/2010/12/eramaker/|  
+- [同人ゲーム erakanon(eramaker）](https://cbaku2.sakura.ne.jp/b/2010/12/eramaker/)  
 
 を見てみよう。  
 実にそそられる紹介文を読んだら、  
@@ -256,9 +249,7 @@ Emueraから入ろうとした初心者はその辺りで混乱したと思う�
 ## 遊びながら改変情報を見てみよう  
 再び以下のページを見てみよう。  
 
-|同人ゲーム erakanon(eramaker）|
-|:-|
-|https://cbaku2.sakura.ne.jp/b/2010/12/eramaker/|  
+- [同人ゲーム erakanon(eramaker）](https://cbaku2.sakura.ne.jp/b/2010/12/eramaker/)  
 
 ページを少し下のほうまで見ると  
 
@@ -288,15 +279,11 @@ Emueraから入ろうとした初心者はその辺りで混乱したと思う�
 
 ### eramakerのera basicの構造  
 
-|eramakerのera basicの構造|
-|:-|
-|https://cbaku2.sakura.ne.jp/b/erakanon/eramaerc.html|  
+- [eramakerのera basicの構造](https://cbaku2.sakura.ne.jp/b/erakanon/eramaerc.html)  
 
 erakanonで遊びながら、ここを読むと全体の流れや雰囲気をつかみやすい。  
 
-|EmueraWiki flow|
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/Emuera/system_flow.html|  
+- [EmueraWiki flow](https://evilmask.gitlab.io/emuera.em.doc/Emuera/system_flow.html)  
 
 もっと詳しいことはEmueraのフロー図へ。  
 
@@ -304,9 +291,7 @@ erakanonで遊びながら、ここを読むと全体の流れや雰囲気をつ
 
 ### eramakerのera basic書式  
 
-|eramakerのera basic書式|
-|:-|
-|https://cbaku2.sakura.ne.jp/b/erakanon/eramaerb.html|  
+- [eramakerのera basic書式](https://cbaku2.sakura.ne.jp/b/erakanon/eramaerb.html)  
 
 素人にもわかりやすくなるように書いてくださっている。  
 書き方の基礎がわからない人は読んでみよう。  
@@ -315,9 +300,7 @@ erakanonで遊びながら、ここを読むと全体の流れや雰囲気をつ
 
 ### eramakerのCSV書式  
 
-|eramakerのCSV書式|
-|:-|
-|https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html|  
+- [eramakerのCSV書式](https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)  
 
 CSVは情報まとめのようなもの。  
 ステータスデータ、キャラクターデータなどをこれで指定する。  
@@ -334,17 +317,23 @@ erakanonあるいはeralightのCSVフォルダ内にある、拡張子が`.csv`�
 
 と書いてあり、実際にファイルを開いてみると  
 
->0,従順  
+```
+0,従順  
+```
 
 一行目はこのようになっている。  
 
 CSVにこのように書いておくと、ERBの処理で  
 
->ABL:キャラ番号:0  
+```
+ABL:キャラ番号:0  
+```
 
 を  
 
->ABL:キャラ番号:従順  
+```
+ABL:キャラ番号:従順  
+```
 
 と、書くことができる。  
 
@@ -354,15 +343,11 @@ CSVにこのように書いておくと、ERBの処理で
 
 CSVは主にこういった目的で使うようだ。  
 
-|[システム改造Q&A→基礎知識→マジックナンバーをなくす](erawiki-modification-QandA.md#_6)|  
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#_6|  
+- [システム改造Q&A→基礎知識→マジックナンバーをなくす](erawiki-modification-QandA.md#_6)  
 
 また、Emueraでは指定できるCSVが大量に増えている。そのためここに書かれていることは、  
 
-|[EmueraWiki→Emueraで追加された拡張文法→一般→文字列による配列変数の要素の指定](../Emuera/expression.md#10)|  
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/Emuera/expression.html#_10|  
+- [EmueraWiki→Emueraで追加された拡張文法→一般→文字列による配列変数の要素の指定](../Emuera/expression.md#10)  
 
 と合わせて読みたい。  
 といっても、最初にあまりたくさんの変数名を見ても覚えきれない。  
@@ -370,9 +355,7 @@ CSVは主にこういった目的で使うようだ。
 
 変数そのものも増えているので、書かれている案内通り  
 
-|[Emueraで追加された拡張文法→定数・変数→csv関連](../Emuera/variables.md#csv)|  
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/Emuera/variables.html#csv|  
+- [Emueraで追加された拡張文法→定数・変数→csv関連](../Emuera/variables.md#csv)  
 
 も合わせて確認したいところ。  
 
@@ -391,9 +374,7 @@ CSVにないデータをDIMの配列で自作することもできる。
 箱に数字を入れていき、中身が何であってもこう計算してくれ、と命令する。  
 箱となるのが変数。シールに書いた名前が変数名になる。  
 
-|eramakerの変数リスト|
-|:-|
-|https://cbaku2.sakura.ne.jp/b/erakanon/eramavar.html|  
+- [eramakerの変数リスト](https://cbaku2.sakura.ne.jp/b/erakanon/eramavar.html)  
 
 `A-Z`については現在は非推奨で、Emueraでは`DIM`変数を使うことがおすすめされている。  
 今はバニラ環境で試してみようという趣旨なので試さないが、  
@@ -409,9 +390,7 @@ CSVにないデータをDIMの配列で自作することもできる。
 関数が多いとき、引数として使える`ARG`や`ARGS`を減らすと軽くなるという話もあり  
 そちらは控えめに1で設定されているようだ。  
 
-|[システム改造Q&A→基礎知識→プライベート変数について(A～ZやLOCALではなく#DIMで)](erawiki-modification-QandA.md#azlocaldim)|  
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#azlocaldim|  
+- [システム改造Q&A→基礎知識→プライベート変数について(A～ZやLOCALではなく#DIMで)](erawiki-modification-QandA.md#azlocaldim)  
 
 ---  
 
@@ -424,9 +403,7 @@ ERB側で便利機能として使われている場合は、口上側でその�
 
 ### 応用編を読もう  
 各変数の範囲や内容について一覧のあるeratohoまとめ V3ページへのリンク集をまとめてくれている。  
-|応用編|  
-|:-|
-|https://seesaawiki.jp/eraseries/d/%b1%fe%cd%d1%ca%d4|  
+- [応用編](https://seesaawiki.jp/eraseries/d/%b1%fe%cd%d1%ca%d4)  
 
 『EmueraWIkiのリンクタイトルを見ても、どのページになんの説明が載ってるのかわからん……』という方はここのEmueraの追加仕様一覧から飛ぶとわかりやすいかもしれない。  
 開発者向け技術情報はわかる人向けにeramakerのシステム的特徴を教えてくれている。  
@@ -448,7 +425,7 @@ ERB側で便利機能として使われている場合は、口上側でその�
 改変する前に直しておこう。  
 
 ERBフォルダを開くとたくさんのファイルがある。  
-警告を見ると、INFO.ERBにエラーの原因があるようだ。  
+警告を見ると、`INFO.ERB`にエラーの原因があるようだ。  
 そのファイルをエディタで開いてみよう。  
 
 エディタで行番号を表示していると、  

@@ -33,10 +33,9 @@
 
 ---  
 
-
 ### GameBase.csv  
 
-CSVフォルダ、GameBase.csvを開いてみよう。  
+CSVフォルダ、`GameBase.csv`を開いてみよう。  
 
 ```  
 コード,326136  
@@ -70,6 +69,7 @@ CSVフォルダ、GameBase.csvを開いてみよう。
 >あなたの考えるタイトル 0.11  
 
 画面中央が  
+
 >あなたの考えるタイトル  
 
 に変わったと思う。  
@@ -134,9 +134,7 @@ CSVフォルダ、GameBase.csvを開いてみよう。
 これについてeramakerの説明書には記載がない。  
 Emueraに追加された機能のようだ。  
 
-|EmueraWiki→変数→csv関連→WINDOW_TITLE|  
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/Emuera/variables.html#window_title|  
+- [EmueraWiki→変数→csv関連→WINDOW_TITLE](https://evilmask.gitlab.io/emuera.em.doc/Emuera/variables.html#window_title)  
 
 ```
 初期値はgamebase.csvの"ウィンドウタイトル"に設定された値です。  
@@ -190,8 +188,7 @@ eraバニラやEmueraの製作者様方の著作権については、別途Readm
 著作権について少し触れた。  
 ライセンスについて書いてくれている方がいるので、学んでトラブルを回避しよう。  
 
-|[製作初心者講座→製作に役立つリンク→ライセンスについて](https://evilmask.gitlab.io/emuera.em.doc/manual/WhatIsLicense.html)|  
-|https://evilmask.gitlab.io/emuera.em.doc/manual/WhatIsLicense.html|  
+- [製作初心者講座→製作に役立つリンク→ライセンスについて](https://evilmask.gitlab.io/emuera.em.doc/manual/WhatIsLicense.html)  
 
 ---  
 
@@ -208,12 +205,9 @@ eraバニラやEmueraの製作者様方の著作権については、別途Readm
 とりあえず100000～100000000くらいのかぶりにくそうな数字を置いておけばいい。  
 
 
-|漠々ト、獏 eramaker CSVファイル書式（暫定版）|  
-|:-|
-|https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html|  
+- [漠々ト、獏 eramaker CSVファイル書式（暫定版）](https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)  
 
 を見ると、  
-
 
 >コード,(数値)  
 >ゲームコードを(数値)に設定します。  
@@ -227,8 +221,7 @@ eraバニラやEmueraの製作者様方の著作権については、別途Readm
 それならできるだけ多くの桁を指定し、極力被らない数字にしたい派もいるだろう。  
 桁の限界はいくつだろうか。  
 
-|[EmueraWiki→eramakerとの相違点→gamebase.csv『コード』の読み方](https://evilmask.gitlab.io/emuera.em.doc/Emuera/differences_of_Emuera_and_eramaker.html#gamebasecsv)|  
-|https://evilmask.gitlab.io/emuera.em.doc/Emuera/differences_of_Emuera_and_eramaker.html#gamebasecsv|  
+- [EmueraWiki→eramakerとの相違点→gamebase.csv『コード』の読み方](https://evilmask.gitlab.io/emuera.em.doc/Emuera/differences_of_Emuera_and_eramaker.html#gamebasecsv)  
 
 ここに書かれていることを読むと、  
 eramakerの場合は、桁数が限度を超えると部分的にとって自動指定するそうだ。  
@@ -258,9 +251,7 @@ Emueraの場合は、桁数が限界を超えると0として扱うようだ。
 
 更新するたびに数字をあげることで、どこまで更新されたかわかりやすくする。  
 
-|eramaker CSVファイル書式（暫定版）|  
-|:-|
-|https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html|  
+- [eramaker CSVファイル書式（暫定版）](https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)  
 
 を見ると  
 
@@ -330,9 +321,7 @@ Emueraの場合は、桁数が限界を超えると0として扱うようだ。
 まとめてくれる人がいないと触れられることすらないという状況もありえる。  
 
 バージョン管理システムというものもあり、活用しているかたが多い。  
-|eraシリーズを語るスレ　まとめWiki　V3→システム改造Q&A→その他→バージョン管理システムを使う|  
-|:-|
-|https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#_17|  
+- [eraシリーズを語るスレ　まとめWiki　V3→システム改造Q&A→その他→バージョン管理システムを使う](https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#_17)  
 
 ---  
 
@@ -400,8 +389,7 @@ Emueraの場合は、桁数が限界を超えると0として扱うようだ。
 これらの情報は以下の変数に格納されているため  
 ゲーム内から呼び出して使用することができる。  
 
-|EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→定数・変数|  
-|https://evilmask.gitlab.io/emuera.em.doc/Emuera/variables.html#gamebasecsv|  
+- [EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→定数・変数](https://evilmask.gitlab.io/emuera.em.doc/Emuera/variables.html#gamebasecsv)  
 
 タイトルを自作する場合でも、これらの変数を利用して表示したら、  
 更新時の変更点が`Gamebase.csv`だけで済む、ということになる。  
