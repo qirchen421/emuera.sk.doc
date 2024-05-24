@@ -375,9 +375,10 @@ nav:
         - manual/LTOL-license.md
         - manual/Emuera-etc.md
         - manual/modification-manual.md
-        - manual/modification-QandA.md
+        - manual/erawiki-modification-QandA.md
         - manual/erawiki-tutorial.md
         - manual/erawiki-title.md
+        - manual/erawiki-title2.md
 
 plugins:
   - search:
