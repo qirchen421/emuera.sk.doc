@@ -371,6 +371,7 @@
 | ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`                   | `int` |
 | ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`             | なし  |
 | ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString`             | なし  |
+| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md)        | `functionName`             |       |
 
 ### RETURN 系
 
@@ -511,6 +512,9 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md)           | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.md)                         | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |
 | ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.md)                       | `int`, `int`, `int`                                                                     | `int`    |
+| ![](../assets/images/Iconetc.webp)[`SETBGIMAGE`](./BACKGROUND.md)                      | `string`(, `int`, `int`)                                                                | なし   |
+| ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.md)                   | `string`                                                                                | なし   |
+| ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.md)                    | なし                                                                                    | なし   |
 
 ### サウンド系
 

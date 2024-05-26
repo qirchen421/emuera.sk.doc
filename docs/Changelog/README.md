@@ -133,8 +133,15 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v47"
+	* v46で行った[`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)の修正に不備があったので以前の仕様にロールバック
+	* Neo_Kesha氏による[バックグラウンド操作系命令](../Reference/BACKGROUND.md)追加
+	* Neo_Kesha氏による[CSVエイリアス機能](../EMEE/EMEE_Summary.md#alias)追加
+	* ユケッス(JukesBouver99)氏による[`BITMAP_CACHE_ENABLE`](../Reference/BITMAP_CACHE_ENABLE.md)追加
+	* fairylord(KFCの人)氏による.NET 8対応
+
 === "v46"
-	* [`GETDISPLAYLINE](../Reference/GETDISPLAYLINE.md)の引数が`LINECOUNT`に即した行を返すように修正
+	* [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)の引数が`LINECOUNT`に即した行を返すように修正
 	* [`FLOWINPUT`](../Reference/FLOWINPUT.md)拡張
 	* [`FLOWINPUTS`](../Reference//FLOWINPUT.md)追加
 

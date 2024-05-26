@@ -318,3 +318,33 @@ hide:
 
 	省略可能な第三引数が非0の場合、Emueraからの相対パスで画像を参照します  
 	これによりERBフォルダやCSVフォルダ、独自仕様のフォルダなども使用可能に
+
+### ![](../assets/images/Iconetc.webp)エイリアス(`Alias`)機能追加
+Neo_Kesha氏による追加
+
+!!! summary ""
+
+`Talent`や`Abl`等の変数に複数の識別子を指定可能に  
+拡張子`.als`ファイルで指定します  
+
+!!! info "Talent.csv"
+	```
+	0, Talent1
+	1, Talent2
+	2, Talent3
+	```
+
+!!! info "Talent.als"
+	```
+	1, Talent2Alias
+	0, MyCoolTalent
+	2, Talent3Alias
+	```
+
+!!! info "ERBでの動作"
+    ``` { #language-erbapi }
+	TALENT:0:Talent1 = 15
+	PRINT TALENT:0:MyCoolTalent ; 「15」と表示されます。
+	TALENT:0:MyCoolTalent = 420
+	PRINT TALENT:0:Talent1 ; 「420」と表示されます。
+	```
