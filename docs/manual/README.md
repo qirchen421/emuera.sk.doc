@@ -7,10 +7,10 @@ era製作において参考になるマニュアルをまとめていく予定
 
 ## 初心者向け
 - [改造入門](modification-manual.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
-- バリアント製作マニュアル
-  - [チュートリアル](erawiki-tutorial.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
-  - [タイトル準備編](erawiki-title.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
-  - [タイトル実践編](erawiki-title2.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
+- [バリアント製作/チュートリアル](erawiki-tutorial.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
+- [バリアント製作/タイトル準備編](erawiki-title.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
+- [バリアント製作/タイトル実践編](erawiki-title2.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
+- [バリアント製作/ERB製作実践編](erawiki-ERBmanual.md)(出典元:eraシリーズを語るスレ まとめWiki V3)
 
 ## 中級者向け
 - [eratoho まとめ V3 ERB構文講座](eratohowiki-ERBmanual.md)(出典元:eratohoまとめ V3)
