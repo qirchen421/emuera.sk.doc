@@ -1,6 +1,6 @@
 # バリアント製作/ERB製作実践編  
 
-元となったページ
+元となったページ  
 [eraシリーズを語るスレ まとめWiki V3 ERB製作実践編](https://seesaawiki.jp/eraseries/d/ERB%c0%bd%ba%ee%bc%c2%c1%a9%ca%d4)
 
 ---

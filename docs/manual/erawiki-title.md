@@ -1,6 +1,7 @@
 # バリアント製作/タイトル準備編  
 
-[元となったページ eraシリーズを語るスレ まとめWiki V3 タイトル準備編](https://seesaawiki.jp/eraseries/d/%a5%bf%a5%a4%a5%c8%a5%eb%bd%e0%c8%f7%ca%d4)  
+元となったページ  
+[eraシリーズを語るスレ まとめWiki V3 タイトル準備編](https://seesaawiki.jp/eraseries/d/%a5%bf%a5%a4%a5%c8%a5%eb%bd%e0%c8%f7%ca%d4)  
 
 ---
 
