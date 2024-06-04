@@ -5,13 +5,12 @@
 
 **※現在、当ページ内のOSDNへのリンクは繋がりづらくなっています。**
 
-<!--  
-|~CENTER:チュートリアルページ一覧|  
-|チュートリアル|  
-|[[タイトル準備編]]|  
-|[[タイトル実践編]]|  
-|[[ERB製作実践編]]|  
--->  
+---
+
+- チュートリアル
+- [タイトル準備編](erawiki-title.md)
+- [タイトル実践編](erawiki-title2.md)
+- [ERB製作実践編](erawiki-ERBmanual.md)
 
 ---
 
@@ -57,9 +56,9 @@
 
 ---  
 
-最近使われてそうなテキストエディタは  
+最近使われているテキストエディタは  
 導入が簡単・起動が早い・有志製作の色変え機能があるサクラエディタや  
-日本語化が必要・起動はやや遅い・GREPがはやい・有志製作の関数ジャンプ機能があるVisual Studio Codeだろうか。  
+日本語化が必要・起動はやや遅い・GREPがはやい・有志製作の関数ジャンプ機能があるVisual Studio Codeなどがある。  
 
 デフォルトのエンコードがShift-JISではなくオートエンコード機能がオフの場合  
 erakanonを開くと文字化けするかもしれない。  
@@ -81,22 +80,17 @@ erakanonを開くと文字化けするかもしれない。
 ---  
 
 また、今はサクラエディタにもGREP機能がついてGREPツールは不要になっている。  
-速度には差がある。ripgrepがおすすめらしい。  
+<!--速度には差がある。ripgrepがおすすめらしい。  -->
 <!--//（2021/05/11 wiki編集スレでご助言いただいて追記）  -->
 GREPというのは、複数のファイルをまたいで検索できるシステムで、エラー箇所を探すのに役立つ。  
 GREPのやり方についてはこちらで紹介してくれているので読んでみよう。  
 
 - [システム改造Q&A→基礎知識→GREPのやり方](erawiki-modification-QandA.md#grep)  
 
+**そしてバックアップはとても大事だ。**  
 
----  
-
-そしてバックアップはとても大事だ。  
-
----  
-
-続きは昨今のバリアントだと案内してくれている方法ではキャラを追加できないこともあるが、  
-今回はerakanonとEmueraをまとめてみるテストなので基本的なところを教われると思う。  
+昨今のバリアントだと、後述する方法ではキャラを追加できないこともあるが、  
+今回はerakanonとEmueraをまとめてみるテストなので、基本的な部分は学べる。  
 
 ---  
 
@@ -128,41 +122,46 @@ eraを弄るなら、ERB、ERHとかcsvとか、ファイル形式がわから�
 |.NET Framework 4.5|  
 
 .NET Framework 4.5は、Windowsのアプリを作成するとき、  
-Emueraに使われているプログラミング言語C#のできることを色々追加してくれるらしい。  
-- Windows 11 だと、4.8が普通に入ってるので特段影響はないかと思いますとのこと（Emueraスレより。感謝）  
+Emueraに使われているプログラミング言語C#のできることを色々追加してくれる。  
+
+- Windows 11 だと、4.8が普通に入ってるので特段影響はない  
 - Windows 10 だと、4.6がインストールされている。特に問題なく動く。  
 - Windows 8 や 8.1 だと、4.5がはじめからインストールされている。  
-- Windows Vista や 7 だと、インストールは可能らしい。検索して公式Microsoftダウンロードページを読もう。  
+- Windows Vista や 7 でも、インストールは可能。検索して公式Microsoftダウンロードページを読もう。  
 - Windows XPだと、インストール不可。  
 
 EmueraEM+EEではさらに最新の.NETが要求されます。起動時の誘導に従ってダウンロード&インストールしてください。
 
 問題なければ続きへ。  
 
-
 ---  
 
 ## Emueraのダウンロード  
 
 - [Emuera - emulator of eramaker ダウンロード](https://ja.osdn.net/projects/emuera/releases/)  
-- [EmueraEM+EE](https://evilmask.gitlab.io/emuera.em.doc/assets/files/Emuera1824%2Bv21%2BEMv18%2BEEv46%2BRikaichan.zip)
+- [EmueraEM+EE(トップページからダウンロード)](../README.md)
+
+今回は上段の本家Emueraをダウンロードする。
 
 >Emuera1824.zip(日付: 2019-01-28, サイズ: 253.98 KB)  
 >etc1821.zip(日付: 2015-11-04, サイズ: 8.73 KB)  
 
 の、左側にある青ボタンをクリックしてダウンロードし、zipを展開してみよう。  
 
-- Emuera1824フォルダ  
-  - Emuera_readme.txt  
-  - Emuera1824.exe  
-- etc1821フォルダ  
-  - _Replace.csv  
-  - Chara0あなた.csv  
-  - readme.txt  
-  - SYSTEM_FLOW.ERB  
-  - SYSTEM_FLOW.ERH  
-  - VariableSize.CSV  
-  - VariableSize_0.CSV  
+Emuera1824フォルダ  
+
+- Emuera_readme.txt  
+- Emuera1824.exe  
+
+etc1821フォルダ  
+
+- _Replace.csv  
+- Chara0あなた.csv  
+- readme.txt  
+- SYSTEM_FLOW.ERB  
+- SYSTEM_FLOW.ERH  
+- VariableSize.CSV  
+- VariableSize_0.CSV  
 
 というファイルが入っている。  
 
@@ -177,7 +176,7 @@ eramaker.exeのあるところにEmuera.exeを入れるように書いてある�
 しかし大抵のeraはeramaker.exeが同梱されていない。  
 
 eramakerについて何も知らずEmueraから入ろうとすると、  
-Wikiを読んでも何がなにやら？？？になりがちだ。  
+Wikiを読んでも何がなにやら「？？？」になりがちだ。  
 etc1821については後で確かめるとして、eramakerもダウンロードしてみよう。  
 
 ---  
@@ -197,11 +196,12 @@ etc1821については後で確かめるとして、eramakerもダウンロー�
 
 からerakanonをダウンロードして解凍してみよう。  
 
-- erakanonフォルダ  
-  - eramaker.exe  
-  - erakanor.html  
-  - CSVフォルダ  
-  - ERBフォルダ  
+erakanonフォルダ  
+
+- eramaker.exe  
+- erakanor.html  
+- CSVフォルダ  
+- ERBフォルダ  
 
 が入っている。  
 
@@ -230,11 +230,13 @@ eramaker.exeを閉じ、Emuera1824.exe起動する。
 ちょっと警告が出るが、今は気にしなくていい。  
 今度はマウスで操作できる。  
 
-おそらくEmueraはこの流れで導入することを想定しているため、  
-CSVやERBフォルダの導入やその中身についてEmueraWiki側であまり説明していないのだと思う。  
+<!--
+Emueraはこの流れで導入することを想定しているため、  
+CSVやERBフォルダの導入やその中身についてEmueraWiki側であまり説明していない。  
 （EmueraWikiのフロントページにeramakerへのリンクがあり、  
 　eramakerのことはEmueraWikiにはほとんど書いてないよ、と書かれているのだが  
 　最初はeramakerとEmueraの関係がわからなくて読み飛ばしてしまいがちだろう）  
+-->
 
 次に、eramaker.exeを削除してみよう。  
 再び、Emuera1824.exeを起動する。  
@@ -242,7 +244,7 @@ CSVやERBフォルダの導入やその中身についてEmueraWiki側であま�
 
 Emueraはeramakerのエミュレーター（模倣ソフトウェア）で、  
 『機能が追加され、便利になった代替』として使用することができる。  
-Emueraから入ろうとした初心者はその辺りで混乱したと思うが、これでもう大丈夫だ。  
+Emueraから入ろうとした初心者はeramakerの仕様で混乱したと思うが、これでもう大丈夫だ。  
 
 ---  
 
@@ -258,12 +260,10 @@ Emueraから入ろうとした初心者はその辺りで混乱したと思う�
 という見出しがある。  
 そして改変情報へのリンクがある。  
 
-|ページ名|リンク|
-|:-|:-|
-|eramakerのCSV書式|https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html|  
-|eramakerのera basicの構造|https://cbaku2.sakura.ne.jp/b/erakanon/eramaerc.html|  
-|eramakerのera basic書式|https://cbaku2.sakura.ne.jp/b/erakanon/eramaerb.html|  
-|eramakerの変数リスト|https://cbaku2.sakura.ne.jp/b/erakanon/eramavar.html|  
+- [eramakerのCSV書式](https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)
+- [eramakerのera basicの構造](https://cbaku2.sakura.ne.jp/b/erakanon/eramaerc.html)
+- [eramakerのera basic書式](https://cbaku2.sakura.ne.jp/b/erakanon/eramaerb.html)
+- [eramakerの変数リスト](https://cbaku2.sakura.ne.jp/b/erakanon/eramavar.html)
 
 <!--
 （2021/04/29『eralightの改変の仕方』はリンク切れしているためコメントにスレへの情報を記載）  
@@ -309,9 +309,8 @@ erakanonあるいはeralightのCSVフォルダ内にある、拡張子が`.csv`�
 
 色々な名前のCSVがある。  
 たとえば、`Abl.csv`。  
-『Abl』というのはおそらく『Ability』の略で  
+『Abl』というのは『Ability』の略で  
 キャラの能力ステータスについて設定するファイルだ。  
-
 
 >1列目に能力番号を、2列目に能力名を書きます。  
 
@@ -337,8 +336,8 @@ ABL:キャラ番号:従順
 
 と、書くことができる。  
 
-誰が見ても、よくわからない謎の数字（マジックナンバー、と表現するらしい）より  
-パッと見で何をしているのかがわかりやすくなる（可読性が上がる、と表現するらしい）。  
+誰が見ても、よくわからない謎の数字（マジックナンバー）より  
+パッと見で何をしているのかがわかりやすくなる（可読性が上がる）。  
 もちろん作っている本人も、数字だけで管理するより忘れにくい。  
 
 CSVは主にこういった目的で使うようだ。  
@@ -364,7 +363,7 @@ CSVにないデータをDIMの配列で自作することもできる。
 ---  
 
 ### eramakerの変数リスト  
-変数というのはそのまま、変わる数字と考えていいと思う。  
+変数というのはそのまま、変わる数字と考えていい。  
 
 ゲームはプレイする人によってステータスが変わっていく。  
 作るときは、遊ぶ人がどんなプレイをしてステータスがどうなろうとも、  
@@ -380,7 +379,7 @@ CSVにないデータをDIMの配列で自作することもできる。
 今はバニラ環境で試してみようという趣旨なので試さないが、  
 本当に１から新しいバリアントを作るなら『etc1821』フォルダ内『VariableSize.CSV』を読み、  
 `VariableSize_0.CSV`を`VariableSize.CSV`と名前を変えてCSVフォルダにいれてみよう。  
-（`VariableSize.CSV`は説明用のファイルで、`VariableSize_0.CSV`は実際に使うことを想定したファイルのようだ）  
+（`VariableSize.CSV`は説明用のファイルで、`VariableSize_0.CSV`は実際に使うことを想定したファイル）  
 
 非推奨の変数は最初から`-1`に設定してくれているため、自動的に使えなくなる。  
 試してみれば、バニラのeraを最新化するためにどこを変更したらいいか、わかるかもしれない。  
@@ -388,7 +387,7 @@ CSVにないデータをDIMの配列で自作することもできる。
 
 慣れている方は`LOCAL`,`LOCALS`が使えないことに戸惑うかもしれない。  
 関数が多いとき、引数として使える`ARG`や`ARGS`を減らすと軽くなるという話もあり  
-そちらは控えめに1で設定されているようだ。  
+そちらは控えめに1で設定されている。  
 
 - [システム改造Q&A→基礎知識→プライベート変数について(A～ZやLOCALではなく#DIMで)](erawiki-modification-QandA.md#azlocaldim)  
 
@@ -403,6 +402,7 @@ ERB側で便利機能として使われている場合は、口上側でその�
 
 ### 応用編を読もう  
 各変数の範囲や内容について一覧のあるeratohoまとめ V3ページへのリンク集をまとめてくれている。  
+
 - [応用編](https://seesaawiki.jp/eraseries/d/%b1%fe%cd%d1%ca%d4)  
 
 『EmueraWIkiのリンクタイトルを見ても、どのページになんの説明が載ってるのかわからん……』という方はここのEmueraの追加仕様一覧から飛ぶとわかりやすいかもしれない。  
@@ -425,7 +425,7 @@ ERB側で便利機能として使われている場合は、口上側でその�
 改変する前に直しておこう。  
 
 ERBフォルダを開くとたくさんのファイルがある。  
-警告を見ると、`INFO.ERB`にエラーの原因があるようだ。  
+警告を見ると、`INFO.ERB`にエラーの原因があることが分かる。  
 そのファイルをエディタで開いてみよう。  
 
 エディタで行番号を表示していると、  
@@ -440,7 +440,7 @@ SIF STAIN:MASTER::COUNT & 8
     PRINT <Ａ>  
 ```
 
-ここのMASTERの後の『`:`』が多いらしい。  
+ここのMASTERの後の『`:`』が多いのが原因。  
 
 ``` { #language-erb title="ERB" }
 SIF STAIN:MASTER:COUNT & 2  
