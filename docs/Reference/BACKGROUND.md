@@ -24,9 +24,9 @@ hide:
 	Depthはデフォルトが0で、マイナス値も指定可能です  
 	Opacityは0～255の数値で指定可能です  
 
-	`REMOVEIMAGE`は、`SETBGIMAGE`で設定した背景画像を削除します  
-	`CLEARIMAGE`は全ての背景画像を削除します  
+	`REMOVEBGIMAGE`は、`SETBGIMAGE`で設定した背景画像を削除します  
+	`CLEARBGIMAGE`は全ての背景画像を削除します  
 
 !!! hint "ヒント"
 
-    命令のみ両方対応しています。
+    命令のみ対応しています。
