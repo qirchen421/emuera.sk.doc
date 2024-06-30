@@ -8,6 +8,7 @@
 - ![](../assets/images/IconEmuera.webp) - Emueraで追加、変更、拡張された命令
 - ![](../assets/images/IconEM.webp) - EM(EvilMask版)で追加、変更、拡張された命令
 - ![](../assets/images/IconEE.webp) - EE(Enter's Edition)で追加、変更、拡張された命令
+- ![](../assets/images/Icondotnet.webp) - [Emuera.NET](https://gitlab.com/VVIIlet/emuera)で追加、変更、拡張された命令
 - ![](../assets/images/Iconetc.webp) - その他コントリビューターによって追加、変更、拡張された命令
 
 ---
@@ -42,6 +43,7 @@
 | ![](../assets/images/IconEmuera.webp)[`PRINT_RECT`](./PRINT_RECT.md)                                                                              | `int`                                                        | なし     |
 |                                                                                                                                                   | `int`, `int`, `int`, `int`                                   | なし     |
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                                            | `int`                                                        | なし     |
+| ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINT.md) | `string` | なし   |
 
 ### 表示操作・フォント操作・表示仕様参照
 
@@ -238,6 +240,8 @@
 | ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)       | `string`, `ref` `string[]`(, `int`, `int`)    | `1`      |
 |                                                                            | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`      |
 | ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)                 | `variable`, `int`(, `int`)                    | `string` |
+| ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.md) | `string`(, `int`) | なし   |
+| ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.md) | `string`(, `int`) | なし   |
 
 ### セーブデータ操作
 
@@ -417,6 +421,8 @@
 | ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md)               | `string`(, `int`)                               | `int`           |
 | ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md)               | `string`, `int`                                 | `string`        |
 | ![](../assets/images/IconEM.webp)[`HTML_STRINGLINES`](./HTML_STRINGLINES.md)           | `string`, `int`                                 | `string`        |
+| ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND`](./HTML_PRINT_ISLAND.md)       | `string` | なし   |
+| ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND_CLEAR`](./HTML_PRINT_ISLAND.md) | `string` | なし   |
 
 ### AWAIT 関連
 

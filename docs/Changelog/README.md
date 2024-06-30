@@ -122,7 +122,7 @@ hide:
     * 関数追加：[`EXISTFILE`](../Reference/EXISTFILE.md), [`MAP_CREATE`](../Reference/MAP_MANAGE.md), [`MAP_EXIST`](../Reference/MAP_MANAGE.md), [`MAP_RELEASE`](../Reference/MAP_MANAGE.md), [`MAP_GET`](../Reference/MAP_OPERATION.md), [`MAP_HAS`](../Reference/MAP_OPERATION.md), [`MAP_SET`](../Reference/MAP_OPERATION.md), [`MAP_REMOVE`](../Reference/MAP_OPERATION.md), [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md), [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.md)。
 
 === "v2"
-    
+
     * `FUNCEXIST`を削除しました(EE版の[`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md)を使ってください)
     * 関数名変更：`VAREXIST`→[`EXISTVAR`](../Reference/EXISTVAR.md)(`EXISTFUNCTION`と一致するため)
     * 関数追加：[`XML_DOCUMENT`](../Reference/XML_MANAGE.md), [`XML_RELEASE`](../Reference/XML_MANAGE.md), [`XML_SET`](../Reference/XML_SET.md), [`XML_EXIST`](../Reference/XML_MANAGE.md), [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
@@ -133,6 +133,13 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v48"
+	* VVII氏作の[Emuera.NET](https://gitlab.com/VVIIlet/emuera)のmasterブランチをマージ(2024/06/30現在)
+	* 各動作のQoL上昇に加え、[`VAR`系命令](../Reference/VAR.md)、[`PRINTN`系命令](../Reference/PRINTN.md)、[`HTML_PRINT_ISLAND`命令](../Reference/HTML_PRINT_ISLAND.md)を追加
+	* [`INPUT`](../Reference//INPUT.md)系でミドルクリック（マウスホイールによるクリック）を受け付けるように。`RESULTS:1`に3が入る
+	* HOTKEY関連命令追加
+	* EMEEでのみ動作するコメントアウト記号「`;^;`」を追加
+
 === "v47"
 	* v46で行った[`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)の修正に不備があったので以前の仕様にロールバック
 	* Neo_Kesha氏による[バックグラウンド操作系命令](../Reference/BACKGROUND.md)追加

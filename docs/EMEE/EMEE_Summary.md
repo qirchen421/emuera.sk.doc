@@ -348,3 +348,8 @@ Neo_Kesha氏による追加
 	TALENT:0:MyCoolTalent = 420
 	PRINT TALENT:0:Talent1 ; 「420」と表示されます。
 	```
+
+### ![](../assets/images/IconEE.webp)EMEEでのみ動作する特殊なコメントアウト記号「`;^;`」を追加
+!!! summary ""
+
+	`;^;`から始まる行はeramaker及び他バージョンのEmueraでは通常通りコメントアウトされ、EMEEでのみ実行される
