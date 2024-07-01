@@ -55,3 +55,8 @@ hide:
 	1番目に智子。
 	2番目に琴音。
     ```
+
+### 関連項目
+* [DELCHARA](DELCHARA.md)
+* [ADDVOIDCHARA](ADDVOIDCHARA.md)
+* [ADDCOPYCHARA](ADDCOPYCHARA.md)

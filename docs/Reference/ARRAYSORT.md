@@ -71,3 +71,7 @@ hide:
 	HOGE:8=9 HOGE2:8=8
 	HOGE:9=9 HOGE2:9=9
     ```
+
+### 関連項目
+* [ARRAYMSORT](ARRAYMSORT.md)
+* [ARRAYMSORTEX](ARRAYMSORTEX.md)

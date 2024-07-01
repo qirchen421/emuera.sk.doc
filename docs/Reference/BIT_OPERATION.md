@@ -56,3 +56,7 @@ hide:
 !!! hint "ヒント"
 
     `SETBIT`以外は式中関数対応しています。
+
+### 関連項目
+* [システム改造Q&A>2進数によるビット操作](../manual/erawiki-modification-QandA.md#2stain)
+* [ERB制作実践編>ビット数について](../manual/erawiki-ERBmanual.md#_7)

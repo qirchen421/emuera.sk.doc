@@ -31,3 +31,8 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+* [FORCE_BEGIN](FORCE_BEGIN.md)
+* [FLOWINPUT](FLOWINPUT.md)
+* [CALLEVENT](CALLEVENT.md)

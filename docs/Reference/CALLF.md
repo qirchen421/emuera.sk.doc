@@ -30,3 +30,9 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+* [TRYCALLF](TRYCALLF.md)
+* [TRYCALLFORMF](TRYCALLFORMF.md)
+* [EXISTFUNCTION](EXISTFUNCTION.md)
+* [式中で使える関数](../Emuera/in_expression_function.md)

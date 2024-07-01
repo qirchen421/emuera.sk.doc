@@ -60,3 +60,6 @@ hide:
     > AA == 1,3,2,4
     > BB == 5,1,3,2
     ```
+
+### 関連項目
+* [ARRAYSORT](ARRAYSORT.md)

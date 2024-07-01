@@ -47,3 +47,6 @@ hide:
 	Here is @BBB
 	0
 	```
+
+### 関連項目
+* [EXISTFUNCTION](EXISTFUNCTION.md)
