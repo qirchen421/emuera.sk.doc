@@ -37,3 +37,5 @@ hide:
     erb/!@#$%^%^.txt: 存在しない
 	```
 
+### 関連項目
+- [ENUMFILES](ENUMFILES.md)

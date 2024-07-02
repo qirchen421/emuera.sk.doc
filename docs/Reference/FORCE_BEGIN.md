@@ -50,3 +50,6 @@ hide:
 	@SHOW_SHOP
 	@EVENTTURNEND
 	```
+
+### 関連項目
+- [BEGIN](BEGIN.md)

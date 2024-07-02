@@ -46,3 +46,6 @@ hide:
 	``` title="結果"
 	AAA EEE III
 	```
+
+### 関連項目
+- [ユーザー定義の変数>ERD機能](../Emuera/user_defined_variables.md#erderabasic-define)

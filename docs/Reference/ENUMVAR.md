@@ -72,3 +72,6 @@ hide:
     "Foo"を含んだ変数・定数名の数:4
     Foo1, Foo2, Foo3, MyFoo
     ```
+
+### 関連項目
+- [EXISTVAR](EXISTVAR.md)

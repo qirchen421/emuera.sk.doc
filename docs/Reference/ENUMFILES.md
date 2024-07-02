@@ -64,3 +64,6 @@ hide:
     csv\VariableSize.csv
     csv\Chara\Chara001.csv
     ```
+
+### 関連項目
+- [EXISTFILE](EXISTFILE.md)

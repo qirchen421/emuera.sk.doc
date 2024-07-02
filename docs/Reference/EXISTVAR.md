@@ -57,3 +57,6 @@ hide:
     2 2
     0
     ```
+
+### 関連項目
+- [ENUMVAR](ENUMVAR.md)

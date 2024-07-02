@@ -51,3 +51,6 @@ hide:
 	1
 	0
     ```
+
+### 関連項目
+- [ENUMFUNC](ENUMFUNC.md)

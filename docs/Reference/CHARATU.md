@@ -44,3 +44,6 @@ hide:
 	に
 	ほ
     ```
+
+### 関連項目
+- [SUBSTRING](SUBSTRING.md)

@@ -31,3 +31,6 @@ hide:
 	```
 
 	![](../assets/images/FORCE_QUIT_AND_RESTART.png)
+
+### 関連項目
+- [QUIT_AND_RESTART](QUIT_AND_RESTART.md)

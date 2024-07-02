@@ -68,3 +68,6 @@ hide:
     "Foo"を含んだ関数名の数:7
     PrintFoo, Foo1, Foo2, Foo3, Dummy1Foo, Dummy2Foo, My_Foo_Func
     ```
+
+### 関連項目
+- [EXISTFUNCTION](EXISTFUNCTION.md)

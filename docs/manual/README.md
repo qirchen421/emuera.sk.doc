@@ -22,3 +22,6 @@ era製作において参考になるマニュアルをまとめていく予定
 - [ライセンスについて](WhatIsLicense.md)(出典元:eratohoまとめ V3)
 - [LTOLライセンスについて](LTOL-license.md)(出典元:eratohoまとめ V3)
 - [Gitの使い方](HowToUseGit.md)(出典元:eratohoまとめ V3)
+
+## その他資料
+- [用語集](glossary.md)
