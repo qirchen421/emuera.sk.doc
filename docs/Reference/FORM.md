@@ -52,3 +52,9 @@ hide:
 	AAA
 	CCC
     ```
+
+### 関連項目
+- [CALL](CALL.md)
+- [JUMP](JUMP.md)
+- [GOTO](GOTO.md)
+- [TRYC系命令](TRYC.md)

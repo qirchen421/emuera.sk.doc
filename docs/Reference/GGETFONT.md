@@ -40,3 +40,8 @@ hide:
 	Arial
 	ＭＳ ゴシック
 	```
+
+### 関連項目
+- [GSETFONT](GSETFONT.md)
+- [GGETFONTSIZE](GGETFONTSIZE.md)
+- [GGETFONTSTYLE](GGETFONTSTYLE.md)

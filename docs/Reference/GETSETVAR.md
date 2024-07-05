@@ -57,3 +57,6 @@ hide:
     10 local Banana
     Apple
     ```
+
+### 関連項目
+- [STRFORM](STRFORM.md)

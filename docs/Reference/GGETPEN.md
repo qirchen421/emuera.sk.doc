@@ -34,3 +34,7 @@ hide:
 	``` title="結果"
 	Color:4278255360(ff00ff00) Width:5
 	```
+
+### 関連項目
+- [GSETPEN](GSETPEN.md)
+- [GGETPENWIDTH](GGETPENWIDTH.md)

@@ -36,3 +36,6 @@ hide:
 	現在のメモリ使用量は112MBです
 	ADDVOIDCHARAを10000回実行した後のメモリ使用量は934MBです
 	```
+
+### 関連項目
+- [CLEARMEMORY](CLEARMEMORY.md)

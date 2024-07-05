@@ -36,3 +36,6 @@ hide:
 	``` title="結果"
 	CLEARMEMORYを実行して840MBのメモリを解放しました
 	```
+
+### 関連項目
+- [GETMEMORYUSAGE](GETMEMORYUSAGE.md)

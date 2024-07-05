@@ -43,3 +43,6 @@ hide:
 	Width:281 Height:150
 	Width:300 Height:150
 	```
+
+### 関連項目
+- [GDRAWTEXT](GDRAWTEXT.md)

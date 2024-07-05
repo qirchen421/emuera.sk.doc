@@ -45,3 +45,6 @@ hide:
 	2行目:BBB
 	3行目:CCC
 	```
+
+### 関連項目
+- [HTML_POPPRINTINGSTR](HTML_POPPRINTINGSTR.md)

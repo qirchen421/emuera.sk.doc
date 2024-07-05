@@ -50,3 +50,6 @@ hide:
 	```
 
 	![](../assets/images/GDASHSTYLE.png)
+
+### 関連項目
+- [GDRAWLINE](GDRAWLINE.md)

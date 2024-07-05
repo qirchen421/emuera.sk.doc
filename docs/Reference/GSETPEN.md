@@ -26,3 +26,9 @@ hide:
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
+
+### 関連項目
+- [GDRAWTEXT](GDRAWTEXT.md)
+- [GDRAWLINE](GDRAWLINE.md)
+- [GGETPEN](GGETPEN.md)
+- [GGETPENWIDTH](GGETPENWIDTH.md)

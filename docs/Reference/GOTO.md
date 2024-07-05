@@ -57,3 +57,6 @@ hide:
 	4
 	END
     ```
+
+### 関連項目
+- [GOTOFORM](FORM.md)

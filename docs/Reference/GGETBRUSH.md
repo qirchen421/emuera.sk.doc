@@ -34,3 +34,6 @@ hide:
 	``` title="結果"
 	Color:4279312947(ff112233)
 	```
+
+### 関連項目
+- [GSETBRUSH](GSETBRUSH.md)

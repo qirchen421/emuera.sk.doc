@@ -28,3 +28,9 @@ hide:
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
+
+### 関連項目
+- [GDRAWTEXT](GDRAWTEXT.md)
+- [GGETFONT](GGETFONT.md)
+- [GGETFONTSIZE](GGETFONTSIZE.md)
+- [GGETFONTSTYLE](GGETFONTSTYLE.md)

@@ -43,3 +43,7 @@ hide:
 	```
 
 	![](../assets/images/GDRAWLINE.png)
+
+### 関連項目
+- [GSETPEN](GSETPEN.md)
+- [GDASHSTYLE](GDASHSTYLE.md)

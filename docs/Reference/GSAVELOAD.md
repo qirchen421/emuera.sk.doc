@@ -27,3 +27,7 @@ hide:
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
+
+### 関連項目
+- [GCREATE](GCREATE.md)
+- [GCREATEFROMFILE](GCREATEFROMFILE.md)
