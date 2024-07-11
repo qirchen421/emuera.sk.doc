@@ -49,3 +49,6 @@ hide:
 	RESULT = 8  
 
     ```
+
+### 関連項目
+- [SPLIT](SPLIT.md)

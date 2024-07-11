@@ -48,3 +48,6 @@ hide:
 		WAIT
     ``` 
 	![](../assets/images/HTML_GETPRINTEDSTR.png)
+
+### 関連項目
+- [GETDISPLAULINE](GETDISPLAYLINE.md)

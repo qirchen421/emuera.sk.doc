@@ -32,3 +32,7 @@ hide:
     ``` title="結果"
 	A&amp;B&lt;C&gt;D&apos;E
     ```
+
+### 関連項目
+- [HTML_TOPLAINTEXT](HTML_TOPLAINTEXT.md)
+- [ESCAPE](ESCAPE.md)

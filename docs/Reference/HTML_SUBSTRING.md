@@ -40,3 +40,6 @@ hide:
     <b>D</b>EFG
     ```
     太字は普通より幅広いからです
+
+### 関連項目
+- [SUBSTRING](SUBSTRING.md)

@@ -65,3 +65,6 @@ hide:
 	ELSEIF=TRUE
 	Reached ELSE
     ```
+
+### 関連項目
+- [SELECTCASE](SELECTCASE.md)
