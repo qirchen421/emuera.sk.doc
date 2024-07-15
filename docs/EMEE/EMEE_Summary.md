@@ -115,7 +115,7 @@ hide:
 ### ![](../assets/images/IconEM.webp)`XML`、`MAP`、`DataTable`がセーブデータの中で保存できるように
 !!! summary ""
 
-    CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](./EMEE_Summary.md#xml)、[`MAP`](./EMEE_Summary.md#map)、[`DataTable`](./EMEE_Summary.md#datatable)のIDが設定可能になります
+    CSVフォルダ内の`VarExt*.csv`ファイルで，保存したい[`XML`](../Reference/XML_MANAGE.md)、[`MAP`](../Reference/MAP_MANAGE.md)、[`DataTable`](../Reference/DT_MANAGE.md)のIDが設定可能になります
 
     * [`セーブデータをバイナリ形式で保存する`](../Emuera/config.md#_43)が`YES`の時のみ有効です
     * IDを設定したとしても、メモリにないならセーブデータへ保存しません
