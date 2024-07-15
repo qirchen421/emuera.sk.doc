@@ -11,8 +11,9 @@
     <tr id="UI.MainWindow.File.ReloadFolder"><![CDATA[Reload Folder(&F)]]></tr>
     <tr id="UI.MainWindow.File.ReloadScriptFile"><![CDATA[Reload File(&A)]]></tr>
     <tr id="UI.MainWindow.File.Exit"><![CDATA[Close(&X)]]></tr>
+	<tr id="UI.MainWindow.File.ReloadResource"><![CDATA[Reload Resource Folder(&R)]]></tr>
     <tr id="UI.MainWindow.Debug"><![CDATA[Debug(&D)]]></tr>
-    <tr id="UI.MainWindow.Debug.OpenDebugWindow"><![CDATA[Open Deug widow]]></tr>
+    <tr id="UI.MainWindow.Debug.OpenDebugWindow"><![CDATA[Open Debug widow]]></tr>
     <tr id="UI.MainWindow.Debug.UpdateDebugInfo"><![CDATA[Update Debug Info]]></tr>
     <tr id="UI.MainWindow.Help"><![CDATA[Help(&H)]]></tr>
     <tr id="UI.MainWindow.Help.Config"><![CDATA[Setting(&C)]]></tr>
@@ -25,24 +26,24 @@
     <tr id="UI.MainWindow.ContextMenu.KeyMacroGroup"><![CDATA[Macro Group]]></tr>
     <tr id="UI.MainWindow.ContextMenu.KeyMacroGroup.Group"><![CDATA[Group]]></tr>
     <tr id="UI.MainWindow.MsgBox.InstaceExists"><![CDATA[Another instance has been detected]]></tr>
-    <tr id="UI.MainWindow.MsgBox.MultiInstanceInfo"><![CDATA[Enable "Allow Multiple Instances" config settingrnif you want to launch multiple at once]]></tr>
+    <tr id="UI.MainWindow.MsgBox.MultiInstanceInfo"><![CDATA[Enable "Allow Multiple Instances" config setting if you want to launch multiple instances at once]]></tr>
     <tr id="UI.MainWindow.MsgBox.FolderNotFound"><![CDATA[No Folder]]></tr>
     <tr id="UI.MainWindow.MsgBox.NoCsvFolder"><![CDATA[CSV folder is not found]]></tr>
     <tr id="UI.MainWindow.MsgBox.NoErbFolder"><![CDATA[ERB folder is not found]]></tr>
     <tr id="UI.MainWindow.MsgBox.FailedCreateDebugFolder"><![CDATA[Failed to create Debug folder]]></tr>
     <tr id="UI.MainWindow.MsgBox.ArgPathNotExists"><![CDATA[Passed file folder doesn't exist]]></tr>
-    <tr id="UI.MainWindow.MsgBox.InvalidArg"><![CDATA[nly .ERB files can be dragged and dropped]]></tr>
+    <tr id="UI.MainWindow.MsgBox.InvalidArg"><![CDATA[Only .ERB files can be dragged and dropped]]></tr>
     <tr id="UI.ClipBoardDialog"><![CDATA[ClipBoardDialog]]></tr>
     <tr id="UI.ConfigDialog"><![CDATA[ConfigDialog]]></tr>
     <tr id="UI.ConfigDialog.ChangeWontTakeEffectUntilRestart"><![CDATA[※Changes won't take effect until restart]]></tr>
     <tr id="UI.ConfigDialog.Save"><![CDATA[Save]]></tr>
     <tr id="UI.ConfigDialog.SaveAndRestart"><![CDATA[Save and Restart]]></tr>
     <tr id="UI.ConfigDialog.Cancel"><![CDATA[Cancel]]></tr>
-    <tr id="UI.ConfigDialog.Environment"><![CDATA[Emvironment]]></tr>
+    <tr id="UI.ConfigDialog.Environment"><![CDATA[Environment]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseMouse"><![CDATA[Use mouse]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseMenu"><![CDATA[Show menu]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseDebugCommand"><![CDATA[Allow debug commands]]></tr>
-    <tr id="UI.ConfigDialog.Environment.AllowMultipleInstances"><![CDATA[Allo multiple instances]]></tr>
+    <tr id="UI.ConfigDialog.Environment.AllowMultipleInstances"><![CDATA[Allow multiple instances]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseKeyMacro"><![CDATA[Use keyboard macros]]></tr>
     <tr id="UI.ConfigDialog.Environment.AutoSave"><![CDATA[Make autosave]]></tr>
     <tr id="UI.ConfigDialog.Environment.UseSaveFolder"><![CDATA[Use sav folder for save data]]></tr>
@@ -89,7 +90,7 @@ ERB scripts may not work properly.]]></tr>
     <tr id="UI.ConfigDialog.System.UseReplace"><![CDATA[Use _Replace.csv file]]></tr>
     <tr id="UI.ConfigDialog.System.SearchSubfolder"><![CDATA[Search files in subfolders]]></tr>
     <tr id="UI.ConfigDialog.System.SortFileNames"><![CDATA[Load files in name-order]]></tr>
-    <tr id="UI.ConfigDialog.System.SystemFuncOverride"><![CDATA[Allow to override sstem functions]]></tr>
+    <tr id="UI.ConfigDialog.System.SystemFuncOverride"><![CDATA[Allow to override system functions]]></tr>
     <tr id="UI.ConfigDialog.System.SystemFuncOverrideWarn"><![CDATA[Warn about overridden functions]]></tr>
     <tr id="UI.ConfigDialog.System.DuplicateFuncWarn"><![CDATA[Warn when multiple non-event functions use same name]]></tr>
     <tr id="UI.ConfigDialog.System.WSIncludesFullWidth"><![CDATA[Include full-width space in whitespace]]></tr>
@@ -98,12 +99,13 @@ ERB scripts may not work properly.]]></tr>
     <tr id="UI.ConfigDialog.System2.IgnoreTripleSymbol"><![CDATA[Don't process triple symbols inside FORM]]></tr>
     <tr id="UI.ConfigDialog.System2.SaveInBinary"><![CDATA[Use binary format for save data]]></tr>
     <tr id="UI.ConfigDialog.System2.SaveInUTF8"><![CDATA[Use UTF-8 format for save data (only in non-binary)]]></tr>
+    <tr id="UI.ConfigDialog.System2.FilesInUTF8"><![CDATA[File encoded in UTF-8]]></tr>
     <tr id="UI.ConfigDialog.System2.CompressSave"><![CDATA[Use compression for savedata (only in non-binary)]]></tr>
     <tr id="UI.ConfigDialog.System2.NoAutoCompleteCVar"><![CDATA[Don't autocomplete arguments in character variables]]></tr>
     <tr id="UI.ConfigDialog.System2.DisallowUpdateCheck"><![CDATA[Don't allow UPDATECHECK]]></tr>
     <tr id="UI.ConfigDialog.System2.UseERD"><![CDATA[Use ERD files]]></tr>
     <tr id="UI.ConfigDialog.System2.VarsizeDimConfig"><![CDATA[Imitate ERD to VARSIZE dimension specification]]></tr>
-    <tr id="UI.ConfigDialog.System2.SaveLoadExt"><![CDATA[Usable ectension in LOADTEXT and SAVETEXT]]></tr>
+    <tr id="UI.ConfigDialog.System2.SaveLoadExt"><![CDATA[Usable extension in LOADTEXT and SAVETEXT]]></tr>
     <tr id="UI.ConfigDialog.Compatibility"><![CDATA[Compatibility]]></tr>
     <tr id="UI.ConfigDialog.Compatibility.Warning"><![CDATA[※Many things work differently between Emuera and eramaker,
 As well as between older and newer Emuera versions,
@@ -124,8 +126,9 @@ Please don't change anything if there's no issues.]]></tr>
     <tr id="UI.ConfigDialog.Debug"><![CDATA[Debug]]></tr>
     <tr id="UI.ConfigDialog.Debug.CompatibilityWarn"><![CDATA[Display eramaker compatibility warning]]></tr>
     <tr id="UI.ConfigDialog.Debug.LoadingReport"><![CDATA[Display files that are being loaded at start]]></tr>
+    <tr id="UI.ConfigDialog.Debug.CheckDuplicateIdentifier"><![CDATA[Check duplicate local variables name and ERD identifier]]></tr>
     <tr id="UI.ConfigDialog.Debug.IgnoreUnusedFuncs"><![CDATA[Ignore functions that were not called]]></tr>
-    <tr id="UI.ConfigDialog.Debug.FuncNotFoundWarn"><![CDATA[How to deal with calling non-existin functions]]></tr>
+    <tr id="UI.ConfigDialog.Debug.FuncNotFoundWarn"><![CDATA[How to deal with calling non-existing functions]]></tr>
     <tr id="UI.ConfigDialog.Debug.UnusedFuncWarn"><![CDATA[How to deal with never called functions]]></tr>
     <tr id="UI.ConfigDialog.Debug.PlayerStandard"><![CDATA[Set for users]]></tr>
     <tr id="UI.ConfigDialog.Debug.DeveloperStandard"><![CDATA[Set for developers]]></tr>
@@ -147,7 +150,7 @@ Please don't change anything if there's no issues.]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.IgnoreTags"><![CDATA[Ignore <> tags]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.ReplaceTags"><![CDATA[Replace <> with]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.NewLineOnly"><![CDATA[Show new lines only - Classic Mode]]></tr>
-    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[Clear Clipboard and Buffer when back to title]]></tr>
+    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[Clear Clipboard and Buffer when game screen clears]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.TriggerToUse"><![CDATA[Triggers to Use]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.LClick"><![CDATA[LeftClick - Mouse]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.MClick"><![CDATA[MiddleClick - Mouse]]></tr>
@@ -191,10 +194,10 @@ Settings apply only at start]]></tr>
     <tr id="Error.DoesNotMatchCdflagElements"><![CDATA[The number of elements of CDFLAG does not match the number of elements of CDFLAGNAME 1 and CDFLAGNAME 2", position);]]></tr>
     <tr id="Error.TooManyCdflagElements"><![CDATA[CDFLAG array is too many]]></tr>
     <tr id="Error.DuplicateErdKey"><![CDATA[ERD key "{1}" is already defined at "{0}" variable（File 1 - {2}）（File 2 - {3}）]]></tr>
-    <tr id="Error.DuplicateVariableDefine"><![CDATA[Varriable name {0} is already used]]></tr>
+    <tr id="Error.DuplicateVariableDefine"><![CDATA[Variable name {0} is already used]]></tr>
     <tr id="Error.NotDefinedErdKey"><![CDATA[There is no definition of "{1}" at "{0}"]]></tr>
     <tr id="Error.KeywordsCannotBeEmpty"><![CDATA[Keywords cannot be empty]]></tr>
-    <tr id="Error.InvalidProhibitedVar"><![CDATA[Variable {0} is can not set forbid]]></tr>
+    <tr id="Error.InvalidProhibitedVar"><![CDATA[Variable {0} cannot be set as protected]]></tr>
     <tr id="Error.CanNotSpecifiedByString"><![CDATA[Array variable"{0}"elements cannot be specified as a string]]></tr>
     <tr id="Error.NotDefinedKey"><![CDATA[There is no definition of "{1}" at "{0}"]]></tr>
     <tr id="Error.CannotIndexSpecifiedByString"><![CDATA[Array variable "{0}" at {1}  element cannot be specified as a string"]]></tr>
@@ -215,7 +218,7 @@ Settings apply only at start]]></tr>
     <tr id="Error.UnexpectedMacro"><![CDATA[Unexpected macro name: "{0}"]]></tr>
     <tr id="Error.UseInstructionLikeFunc"><![CDATA[Instruction name "{0}" is used like a function]]></tr>
     <tr id="Error.UseInstructionLikeVar"><![CDATA[Instruction name "{0}" is used like a variable]]></tr>
-    <tr id="Error.CanNotInterpreted"><![CDATA[{0} is can note interpreted]]></tr>
+    <tr id="Error.CanNotInterpreted"><![CDATA[{0} cannot be interpreted]]></tr>
     <tr id="Error.AbnormalFirstOperand"><![CDATA[First \@ operand is abnormal at the ternary operator]]></tr>
     <tr id="Error.EmptyBrace"><![CDATA[Expression inside {{}} is empty]]></tr>
     <tr id="Error.EmptyPer"><![CDATA[Expression inside %% is empty]]></tr>
@@ -283,8 +286,8 @@ Settings apply only at start]]></tr>
     <tr id="Error.FirstArg"><![CDATA[first argument]]></tr>
     <tr id="Error.NotVarFunc"><![CDATA[{0}:{1} is not variable]]></tr>
     <tr id="Error.IsCharaVarFunc"><![CDATA[{0}:{1} is character variable]]></tr>
-    <tr id="Error.Not1DFuncArg"><![CDATA[{0}:The {1} argument is not one-demensional variable]]></tr>
-    <tr id="Error.NotDimVarFunc"><![CDATA[{0}:The {1} argument is not array]]></tr>
+    <tr id="Error.Not1DFuncArg"><![CDATA[{0}:The {1} argument is not a one-dimensional variable]]></tr>
+    <tr id="Error.NotDimVarFunc"><![CDATA[{0}:The {1} argument is not an array]]></tr>
     <tr id="Error.AbnormalArray"><![CDATA[Abnormal array]]></tr>
     <tr id="Error.SetStrToInt"><![CDATA[Attempted to set string to Non-string variable "{0}"]]></tr>
     <tr id="Error.SetIntToStr"><![CDATA[Attempted to set integer to Non-integer variable "{0}"]]></tr>
@@ -425,7 +428,7 @@ Settings apply only at start]]></tr>
     <tr id="Error.CanNotReadVersion"><![CDATA[Processing is terminated due to being unable to read version specification]]></tr>
     <tr id="Error.RequireLaterEmuera"><![CDATA[This game variant operates with ver.{0} which requires later Emuera version]]></tr>
     <tr id="Error.SomethingErrorInGamebase"><![CDATA[An error occurred while reading the GAMEBASE.CSV, loading will be terminated]]></tr>
-    <tr id="Error.Instruction"><![CDATA[Instructon:]]></tr>
+    <tr id="Error.Instruction"><![CDATA[Instruction:]]></tr>
     <tr id="Error.MissingArg"><![CDATA[Missing argument]]></tr>
     <tr id="Error.NotEnoughArguments"><![CDATA[Not enough arguments]]></tr>
     <tr id="Error.TooManyArg"><![CDATA[Too many arguments]]></tr>
@@ -726,7 +729,7 @@ Settings apply only at start]]></tr>
     <tr id="Error.DotrainArgOverTrainnameArray"><![CDATA[DOTRAIN instruction passed a value beyond the number of TRAINNAME arrays]]></tr>
     <tr id="Error.UndefinedFunc"><![CDATA[Undefined function]]></tr>
     <tr id="Error.InvalidBeginArg"><![CDATA[Undefined BEGIN keyword "{0}"]]></tr>
-    <tr id="Error.CalleventBeforeFinishEvent"><![CDATA[CALLEVENT instruction has been used before EVENT has been finisheds]]></tr>
+    <tr id="Error.CalleventBeforeFinishEvent"><![CDATA[CALLEVENT instruction has been used before EVENT has been finished]]></tr>
     <tr id="Error.FuncIsNotFound"><![CDATA[Function "@{0}" is not found]]></tr>
     <tr id="Error.InvalidValue"><![CDATA[Invalid value]]></tr>
     <tr id="Error.ExecutedCom"><![CDATA[＜Executed command：{0}/{1}＞]]></tr>
@@ -988,7 +991,7 @@ The drawing process cannot continue and will be terminated.]]></tr>
     <tr id="MessageBox.ReloadErbAsk"><![CDATA[Try to Load the ERB Files?]]></tr>
     <tr id="MessageBox.ReloadErb"><![CDATA[Load Files]]></tr>
     <tr id="MessageBox.CanNotOpenClipboard"><![CDATA[Unable to open the clipboard because of an unexpected error]]></tr>
-    <tr id="MessageBox.NotAllowChangeSetting"><![CDATA[Some settings couldn\'t be changed due to them being fixed by _fixed.config]]></tr>
+    <tr id="MessageBox.NotAllowChangeSetting"><![CDATA[Some settings couldn't be changed due to them being fixed by _fixed.config]]></tr>
     <tr id="MessageBox.UnableChangeSetting"><![CDATA[Unable To Change Setting]]></tr>
     <tr id="KeyMacro.SetMacroGroup"><![CDATA[Set to macro group {0}]]></tr>
     <tr id="KeyMacro.MacroKeyF"><![CDATA[Macro Key F{0}:]]></tr>
@@ -1029,7 +1032,18 @@ The drawing process cannot continue and will be terminated.]]></tr>
     <tr id="SystemLine.LineFuncName"><![CDATA[Line:{0} Function:{1}]]></tr>
     <tr id="SystemLine.FuncCallStack"><![CDATA[*Function call stack]]></tr>
     <tr id="SystemLine.ReloadingErb"><![CDATA[Reloading ERB files...]]></tr>
-    <tr id="SystemLine.ReloadCompleted"><![CDATA[Reload has been completeds]]></tr>
-    <tr id="SystemLine.LogFileHasBeenCreated"><![CDATA[※※※Log file {0} has been created※※※]]></tr>
+    <tr id="SystemLine.ReloadCompleted"><![CDATA[Reload complete]]></tr>
+    <tr id="SystemLine.LogFileHasBeenCreated"><![CDATA[※※※Log file {0} has been created. Please provide stacktrace or save data with steps to reproduce to help fix it※※※]]></tr>
     <tr id="SystemLine.MinusWontWork"><![CDATA[The minus operation to the Int64 minimum will not take effect]]></tr>
+    
+    <tr id="UI.ConfigDialog.Rikai"><![CDATA[Rikai]]></tr>
+	<tr id="UI.ConfigDialog.Rikai.RikaiEnable"><![CDATA[Enable popup dictionary]]></tr>
+	<tr id="UI.ConfigDialog.Rikai.RikaiFilename"><![CDATA[Dictionary filename]]></tr>
+	<tr id="UI.ConfigDialog.Rikai.RikaiSeparateBox"><![CDATA[Use separate boxes for every dictionary entry]]></tr>
+	<tr id="UI.ConfigDialog.Rikai.RikaiLink"><![CDATA[You can download dictionary files from:]]></tr>
+	<tr id="UI.ConfigDialog.Rikai.OtherEDICT1"><![CDATA[or use any other dict in EDICT1 format]]></tr>
+
+	<tr id="UI.ConfigDialog.DotNet.UseButtonFocusColor"><![CDATA[Change buttons background color when focused]]></tr>
+	<tr id="UI.ConfigDialog.DotNet.UseNewRandom"><![CDATA[Use new faster random algorithms]]></tr>
+	<tr id="UI.ConfigDialog.DotNet.UseVAR"><![CDATA[Use VAR instructions]]></tr>
 </lang>
