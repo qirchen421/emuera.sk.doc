@@ -22,3 +22,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [DELCHARA](DELCHARA.md)
+- [DELALLCHARA](DELALLCHARA.md)

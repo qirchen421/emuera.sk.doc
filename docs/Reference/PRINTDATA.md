@@ -72,3 +72,8 @@ hide:
     ``` title="結果"
     DBDAEACDAE
     ```
+
+### 関連項目
+- [STRDATA](STRDATA.md)
+- [SELECTCASE](SELECTCASE.md)
+- [RAND](RAND.md)

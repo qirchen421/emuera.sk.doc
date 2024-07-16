@@ -23,3 +23,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [SAVEGLOBAL](SAVEGLOBAL.md)
+- [定数・変数>セーブデータ間で共有される変数](../Emuera/variables.md#_8)

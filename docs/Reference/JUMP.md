@@ -49,3 +49,8 @@ hide:
 	Exit BBB
 	Backed SYSTEM_TITLE
     ```
+
+### 関連項目
+- [JUMPFORM](FORM.md)
+- [TRYJUMPFORM](TRYFORM.md)
+- [TRYCJUMP](TRYC.md)

@@ -43,3 +43,6 @@ hide:
 	<TEST1> = 121
 	<TEST2> = 1728
     ```
+
+### 関連項目
+- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.md)

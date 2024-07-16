@@ -64,3 +64,7 @@ hide:
                           GGG|HHH                      |                      III|
 
     ```
+
+### 関連項目
+- [PRINTCPERLINE](PRINTCPERLINE.md)
+- [PRINTCLENGTH](PRINTCLENGTH.md)

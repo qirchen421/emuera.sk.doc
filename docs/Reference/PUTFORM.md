@@ -22,3 +22,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [SAVEDATA](SAVEDATA.md)
+- [フロー図>SAVEGAME](../Emuera/system_flow.md#savegame)

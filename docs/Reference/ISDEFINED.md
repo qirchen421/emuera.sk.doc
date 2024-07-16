@@ -42,3 +42,6 @@ hide:
     1 200
     0
     ```
+
+### 関連項目
+- [関数・プリプロセッサ>特殊なブロックを表す行>\[IF XXX\]](../Emuera/function.md#if-xxxelseif-xxxelseendif)

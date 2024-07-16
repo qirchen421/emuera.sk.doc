@@ -22,3 +22,8 @@ hide:
     命令としてのみ使用可能  
 	最大10個の音声ファイルを同時再生可能  
 	WMPLibを使用しているため、WMPで再生できる形式に対応
+
+### 関連項目
+- [PLAYSOUND](PLAYSOUND.md)
+- [STOPBGM](STOPBGM.md)
+- [SETBGMVOLUME](SETBGMVOLUME.md)
