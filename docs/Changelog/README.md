@@ -133,6 +133,17 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v48fix"
+	* v48で実装したミドルクリックの判定が変だったのを修正
+	* resourcesフォルダ内のCSVが多重ロードされる不具合修正
+	* 各Xml、Map、DataTableが属性に合わせて適切な初期化がされるように（セーブされるデータ→別データロード時に消去、グローバルなデータ→RESETGLOBAL、LOADGLOBAL時に消去）
+	* 私家版v22の変更をマージ
+	* テキストボックスで↑キーでログを遡れないのを修正
+	* [OUTPUTLOG](../Reference/OUTPUTLOG.mdに第二引数追加。非0のときにバージョンインフォを含めない
+	* MogeMoc氏(RainForTW)の修正をマージ。HTML_PRINTで表示した画像がdepthによらずマウスオーバーでsrcbが適用されるように
+	* 番号0のキャラが複数定義されてるときに警告を出すように
+	* 別プロセスでファイルが開かれているときの例外対策を追加
+
 === "v48"
 	* VVII氏作の[Emuera.NET](https://gitlab.com/VVIIlet/emuera)のmasterブランチをマージ(2024/06/30現在)
 	* 各動作のQoL上昇に加え、[`VAR`系命令](../Reference/VAR.md)、[`PRINTN`系命令](../Reference/PRINTN.md)、[`HTML_PRINT_ISLAND`命令](../Reference/HTML_PRINT_ISLAND.md)を追加
