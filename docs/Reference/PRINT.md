@@ -7,15 +7,15 @@ hide:
 
 | 関数名                                                                                                                                            | 引数     | 戻り値 |
 | :------------------------------------------------------------------------------------------------------------------------------------------------ | :------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)(\|K\|D)(\|L\|W)</code>](./PRINT.md) | `string` | なし   |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)(\|K\|D)(\|L\|W\|N)</code>](./PRINT.md) | `string` | なし   |
 
 !!! info "API"
 
     ```  { #language-erbapi }
-    PRINTV(|K|D)(|L|W) integerVariable
-    PRINTS(|K|D)(|L|W) stringVariable
-    PRINTFORM(|K|D)(|L|W) formedString
-    PRINTFORMS(|K|D)(|L|W) string
+    PRINTV(|K|D)(|L|W|N) integerVariable
+    PRINTS(|K|D)(|L|W|N) stringVariable
+    PRINTFORM(|K|D)(|L|W|N) formedString
+    PRINTFORMS(|K|D)(|L|W|N) string
     ```
     PRINT系の基本となる命令です。
 
@@ -38,6 +38,7 @@ hide:
     - なし - `PRINT`のみで改行や`WAIT`は行いません。
     - L - `PRINT`後、改行します。
     - W - `PRINT`後、改行し`WAIT`命令を行います。
+    - ![](../assets/images/Icondotnet.webp)N - `PRINT`後、改行せず`WAIT`命令のみを行います。現状では2つ目の括弧内のキーワードKやDと併用できません。
     - これらの組み合わせにより、例えば`PRINTSDW`であれば、引数として<文字列式>を指定し、ディフォルト色で描画し、`PRINT`後に`WAIT`命令を行うことを意味します。
 
 !!! hint "ヒント"
