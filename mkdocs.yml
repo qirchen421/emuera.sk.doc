@@ -53,6 +53,7 @@ nav:
           - Reference/PRINT_IMG.md
           - Reference/PRINT_RECT.md
           - Reference/PRINT_SPACE.md
+          - Reference/PRINTN.md
       - 表示操作・フォント操作・表示仕様参照:
           - Reference/BAR.md
           - Reference/SETCOLOR.md
@@ -147,6 +148,7 @@ nav:
           - Reference/VARSETEX.md
           - Reference/ARRAYMSORTEX.md
           - Reference/ERDNAME.md
+          - Reference/VAR.md
       - セーブデータ操作:
           - Reference/PUTFORM.md
           - Reference/SAVEDATA.md
@@ -236,6 +238,7 @@ nav:
           - Reference/HTML_STRINGLEN.md
           - Reference/HTML_SUBSTRING.md
           - Reference/HTML_STRINGLINES.md
+          - Reference/HTML_PRINT_ISLAND.md
       - AWAIT関連:
           - Reference/AWAIT.md
           - Reference/GETKEY.md

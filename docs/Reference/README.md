@@ -43,7 +43,7 @@
 | ![](../assets/images/IconEmuera.webp)[`PRINT_RECT`](./PRINT_RECT.md)                                                                              | `int`                                                        | なし     |
 |                                                                                                                                                   | `int`, `int`, `int`, `int`                                   | なし     |
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                                            | `int`                                                        | なし     |
-| ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINT.md) | `string` | なし   |
+| ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINTN.md) | `string` | なし   |
 
 ### 表示操作・フォント操作・表示仕様参照
 
