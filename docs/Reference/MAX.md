@@ -17,14 +17,14 @@ hide:
     ```  { #language-erbapi }
 	int MAX int(, int...)
 	int MIN int(, int...)
-	int LIMIT int, maxValue, minValue
-	int INRANGE int, maxValue, minValue
+	int LIMIT int, minValue, maxValue
+	int INRANGE int, minValue, maxValue
     ```
 	`MAX`は引数の中で最大の数値を返します。
 
 	`MIN`は引数の中で最小の数値を返します。
 
-	第一引数の値を返します。
+	`LIMIT`は第一引数の値を返します。
 	ただし、第一引数が第二引数より小さいなら第二引数の値を、第三引数より大きいなら第三引数を返します。
 	例えば`A`に`X - Y`を代入したいが、代入後の値が`0`以上`100`以下であってほしい場合、通常は以下のように書きます。
 
@@ -36,11 +36,13 @@ hide:
 		A = 100
 	```
 
-	`LIMIT`命令を使うとこれを二行にまとめることができます。
+	`LIMIT`命令を使うとこれを二行もしくは一行にまとめることができます。
 
     ```  { #language-erbapi }
 	LIMIT X - Y, 0, 100
 	A = RESULT
+
+	A = LIMIT(X - Y, 0, 100)
 	```
 
 	`INRANGE`は第一引数の値が第二引数以上かつ第三引数以下であれば`1`を、第一引数が第二引数より小さい、または第三引数より大きいなら`0`を返します。
