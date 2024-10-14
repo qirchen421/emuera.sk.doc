@@ -219,6 +219,8 @@ nav:
           - Reference/TRYCALLF.md
           - Reference/TRYCALLFORMF.md
           - Reference/CALLSHARP.md
+          - Reference/EXISTMETH.md
+          - Reference/GETMETH.md
       - RETURN系:
           - Reference/RETURN.md
       - DEBUG系:

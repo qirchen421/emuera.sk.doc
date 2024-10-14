@@ -133,6 +133,13 @@ hide:
     * 初公開
 
 ## Emuera.EE
+=== "v49"
+	* div内のボタンがマウスオーバー判定されない不具合、srcbが表示されない不具合を修正
+	* JukesBouver99氏によるメモリ最適化
+	* Alex Swift氏によるRikaiDialog処理の修正
+	* resourcesフォルダ内のCSVでスプライトを生成する処理を修正及び調整、それに伴いSPRITEDISPOSEALLも修正
+	* daughter氏のパッチをマージ。[EXISTMETH](../Reference/EXISTMETH.md)、[GETMETH](../Reference/GETMETH.md)、[GETMETHS](../Reference/GETMETH.md)追加
+
 === "v48fix"
 	* v48で実装したミドルクリックの判定が変だったのを修正
 	* resourcesフォルダ内のCSVが多重ロードされる不具合修正
@@ -283,111 +290,86 @@ hide:
 	* [`ERDNAME`](../Reference//ERDNAME.md)追加
 
 === "v23"
-
     * [`ERD`機能](../EMEE/EMEE_Summary.md#erhcsverd)を二次元配列、三次元配列でも使えるように
 
 === "v22"
-
     * 仕様変更：[`ERD`機能](../EMEE/EMEE_Summary.md#erhcsverd)は一つの変数名に対し複数の定義ファイルの中に、同じ識別子が定義されている場合だけ、起動時にエラー吐いて終了する。ひとつの配列に複数の識別子を指定可能になる。
     * [`INPUTANY`](../Reference/INPUTANY.md)追加
 
 === "v21"
-
     * [`GETTEXTBOX`](../Reference/TEXTBOX.md), [`SETTEXTBOX`](../Reference/TEXTBOX.md)追加
 
 === "v20"
-
     * `ERD`読み込みの更に高速化
     * [`DAY`,`TIME`,`MONEY`に`CSV`を適用可能に](../EMEE/EMEE_Summary.md#daytimemoneycsv)
 
 === "v19"
-
     * `ERD`読み込みの高速化
     * デバッグコンソールで`_Rename.csv`を使えるように
 
 === "v18"
-
     * `INPUTMOUSEKEY`で文字列ボタンを扱えるように
     * `VariableSize.csv`で`COUNT`を使用禁止変数に設定できるように
     * キーマクロを`UTF-8`で保存するように
 
 === "v17"
-
     * `ERD`機能のオン/オフ切り替えオプション追加
 
 === "v16"
-
     * `ERD`機能の修正（CSV変数の添字から要素を取得できない不具合）
     * ホットキー機能拡張 `Emuera-Anchor`からの移植
 
 === "v15"
-
     * `ERD`機能の修正（ハードコーディング変数に定義されてない引数を定義した時の例外落ち）
     * `GDRAWTEXT`の修正（`GSETFONT`を使用せずに実行した場合の例外落ち）
 
 === "v14"
-
     * 関数追加：`GETMEMORYUSAGE`, `CLEARMEMORY`
 
 === "v13"
-
     * `ERD`機能追加
 
 === "v12"
-
     * 関数追加：`FORCE_BEGIN`
     * `PLAYSOUND`機能拡張 10チャンネルに対応
 
 === "v11fix"
-
     * `UPDATECHECK`修正
 
 === "v11"
-
     * 関数追加：`GDRAWGWITHROTATE`, `QUIT_AND_RESTART`, `FORCE_QUIT`, `FORCE_QUIT_AND_RESTART`
 
 === "v10"
-
     * 関数追加：`UPDATECHECK`
 
 === "v9"
-
     * WebPに対応
 
 === "v8"
-
     * 関数追加：`TRYCALLF`, `TRYCALLFORMF`
 
 === "v7"
-
     * 関数追加：`GGETTEXTSIZE`
 
 === "v6"
-
     * 関数追加：`EXISTFUNCTION`
 
 === "v5fix"
-
     * `OUTPUTLOG`機能拡張の脆弱性を修正
 
 === "v5"
-
     * `OUTPUTLOG`機能拡張
 
 === "v4"
-
     * 関数追加：`GGETFONT`, `GGETFONTSIZE`
 
 === "v3"
-
     * 関数追加：`GDRAWTEXT`
 
 === "v2"
-
     * `INPUTMOUSEKEY`機能拡張
 
 === "v1"
-
     初公開
     
     * 関数追加：`PLAYSOUND`,`STOPSOUND`,`PLAYBGM`,`STOPBGM`,`EXISTSOUND`,`SETSOUNDVOLUME`,`SETBGMVOLUME`
