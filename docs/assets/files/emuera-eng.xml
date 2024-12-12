@@ -4,6 +4,7 @@
     <tr id="UI.MainWindow.FileFilter"><![CDATA[ERB file]]></tr>
     <tr id="UI.MainWindow.File"><![CDATA[File(&F)]]></tr>
     <tr id="UI.MainWindow.File.Restart"><![CDATA[Restart(&R)]]></tr>
+    <tr id="UI.MainWindow.File.RestartDebug"><![CDATA[Restart in Debug Mode]]></tr>
     <tr id="UI.MainWindow.File.SaveLog"><![CDATA[Save log...(&S)]]></tr>
     <tr id="UI.MainWindow.File.CopyLogToClipboard"><![CDATA[Open Clipboard(&C)]]></tr>
     <tr id="UI.MainWindow.File.BackToTitle"><![CDATA[Return to Title Screen(&T)]]></tr>
@@ -15,6 +16,8 @@
     <tr id="UI.MainWindow.Debug"><![CDATA[Debug(&D)]]></tr>
     <tr id="UI.MainWindow.Debug.OpenDebugWindow"><![CDATA[Open Debug widow]]></tr>
     <tr id="UI.MainWindow.Debug.UpdateDebugInfo"><![CDATA[Update Debug Info]]></tr>
+    <tr id="UI.MainWindow.Tools"><![CDATA[Tools]]></tr>
+    <tr id="UI.MainWindow.Tools.LockWindowWidth"><![CDATA[Lock window width]]></tr>
     <tr id="UI.MainWindow.Help"><![CDATA[Help(&H)]]></tr>
     <tr id="UI.MainWindow.Help.Config"><![CDATA[Setting(&C)]]></tr>
     <tr id="UI.MainWindow.ContextMenu.KeyMacro"><![CDATA[Macro]]></tr>

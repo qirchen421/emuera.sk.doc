@@ -5,6 +5,7 @@
     <tr id="UI.MainWindow.FileFilter"><![CDATA[ERB 文件]]></tr>
     <tr id="UI.MainWindow.File"><![CDATA[文件(&F)]]></tr>
     <tr id="UI.MainWindow.File.Restart"><![CDATA[重启(&R)]]></tr>
+    <tr id="UI.MainWindow.File.RestartDebug"><![CDATA[在调试模式下重新启动]]></tr>
     <tr id="UI.MainWindow.File.SaveLog"><![CDATA[保存日志...(&S)]]></tr>
     <tr id="UI.MainWindow.File.CopyLogToClipboard"><![CDATA[将日志复制到剪贴板(&C)]]></tr>
     <tr id="UI.MainWindow.File.BackToTitle"><![CDATA[返回标题画面(&T)]]></tr>
@@ -15,6 +16,8 @@
     <tr id="UI.MainWindow.Debug"><![CDATA[调试(&D)]]></tr>
     <tr id="UI.MainWindow.Debug.OpenDebugWindow"><![CDATA[打开调试窗口]]></tr>
     <tr id="UI.MainWindow.Debug.UpdateDebugInfo"><![CDATA[更新调试信息]]></tr>
+    <tr id="UI.MainWindow.Tools"><![CDATA[工具]]></tr>
+    <tr id="UI.MainWindow.Tools.LockWindowWidth"><![CDATA[锁定窗口宽度]]></tr>
     <tr id="UI.MainWindow.Help"><![CDATA[帮助(&H)]]></tr>
     <tr id="UI.MainWindow.Help.Config"><![CDATA[设置(&C)]]></tr>
     <tr id="UI.MainWindow.ContextMenu.KeyMacro"><![CDATA[按键宏]]></tr>
@@ -147,7 +150,7 @@ Emuera的历史版本有效的内容变得无效等等现象而设置的。
     <tr id="UI.ConfigDialog.Clipboard.IgnoreTags"><![CDATA[无视文本中的<>标签]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.ReplaceTags"><![CDATA[将标签<>替换为以下文字]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.NewLineOnly"><![CDATA[只复制新行]]></tr>
-    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[返回标题画面的同时清除剪贴板与历史记录]]></tr>
+    <tr id="UI.ConfigDialog.Clipboard.ClearClipboard"><![CDATA[画面清除的同时清除剪贴板与历史记录]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.TriggerToUse"><![CDATA[复制到剪贴板的时机]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.LClick"><![CDATA[鼠标左键单击时]]></tr>
     <tr id="UI.ConfigDialog.Clipboard.MClick"><![CDATA[转动鼠标滚轮时]]></tr>
