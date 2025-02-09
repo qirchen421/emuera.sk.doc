@@ -14,11 +14,11 @@ hide:
 | ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.md)  | なし                     | なし   |
 
 !!! info "API"
-    ```  { #language-erbapi }
+	```  { #language-erbapi }
 	SETBGIMAGE resourceName(, depth, opacity)
 	REMOVEBGIMAGE resourceName
 	CLEARBGIMAGE
-    ```
+	```
 
 	`SETBGIMAGE`は引数で指定した画像をEmueraの背景画像に設定します。Depth(深度)とOpacity(透明度)は省略可能です  
 	Depthはデフォルトが0で、マイナス値も指定可能です  
@@ -27,6 +27,10 @@ hide:
 	`REMOVEBGIMAGE`は、`SETBGIMAGE`で設定した背景画像を削除します  
 	`CLEARBGIMAGE`は全ての背景画像を削除します  
 
+	Emuera コンソール ウィンドウに背景を追加するコマンドのセット。WINAPI はサポートされていません。
+	背景はリソース CSV ファイルで定義する必要があります。背景は透明度とレイヤーをサポートします。
+	背景はアスペクト比を維持しながらコンソール ウィンドウに収まるように動的にサイズ変更されます。
+
 !!! hint "ヒント"
 
-    命令のみ対応しています。
+	命令のみ対応しています。
