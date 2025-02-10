@@ -20,10 +20,6 @@ Added by Neo_Kesha
 	CLEARBGIMAGE
     ```
 
-	Set of commands to add backgrounds to Emuera Console window. WINAPI is not supported.  
-	Backgrounds must be defined in resources CSV file. Backgrounds support Transparency and Layers.  
-	Backgrounds will be resized dynamically to fit in Console windows with aspect ratio preservation  
-
 	SETBGIMAGE sets image of ResourceName to background. Depth and Opacity are optional parameters  
 	ResourceName - name of resuourse defined in CSV at Resource folder  
 	Depth - depth of the image. Used to sort layers. Default to 0. Image of Depth equal to -1 will be infront of image with Depth equal to 0  
@@ -31,3 +27,11 @@ Added by Neo_Kesha
 
 	REMOVEBGIMAGE removes single image from background using ResourceName as a key  
 	CLEARBGIMAGE clears all backgrounds images  
+
+	Set of commands to add backgrounds to Emuera Console window. WINAPI is not supported.  
+	Backgrounds must be defined in resources CSV file. Backgrounds support Transparency and Layers.  
+	Backgrounds will be resized dynamically to fit in Console windows with aspect ratio preservation  
+
+!!! hint "Hint"
+
+	Only works as a command. Can not be used in expressions.
