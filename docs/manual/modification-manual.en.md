@@ -1,7 +1,7 @@
-# Introduction to modification  
+# Introduction to modding  
 
 Original page  
-[era series discussion thread, Summary Wiki V3, Modification Introduction](https://seesaawiki.jp/eraseries/d/%b2%fe%c2%a4%c6%fe%cc%e7)  
+[era series discussion thread, Summary Wiki V3, Introduction to modding](https://seesaawiki.jp/eraseries/d/%b2%fe%c2%a4%c6%fe%cc%e7)  
 
 ---  
 The good thing about era is that anyone can edit it easily.

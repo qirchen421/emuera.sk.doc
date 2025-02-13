@@ -1,7 +1,7 @@
-# バリアント製作/チュートリアル  
+# Variant creation/Tutorial
 
 Original page:  
-[era series discussion thread, Summary Wiki V3, tutorial](https://seesaawiki.jp/eraseries/d/%a5%c1%a5%e5%a1%bc%a5%c8%a5%ea%a5%a2%a5%eb)  
+[era series discussion thread, Summary Wiki V3, Tutorial](https://seesaawiki.jp/eraseries/d/%a5%c1%a5%e5%a1%bc%a5%c8%a5%ea%a5%a2%a5%eb)  
 
 **※Currently, the link to OSDN on this page is difficult to access.**
 
@@ -48,8 +48,8 @@ Realize that code improvements are something you do to make it easier for yourse
 
 ---  
 
-## Read the introduction to mods
-- [Introduction to mods](modification-manual.md)
+## Read the introduction to modding
+- [Introduction to modding](modification-manual.md)
 
 This is a manual for a standard training SLG, and it explains what you need to do to get started.
 First, read "[An easy-to-use text editor](modification-manual.md#_3)", "[A search tool that can use GREP](modification-manual.md#grep)", and "[These are the things you should remember at the beginning](modification-manual.md#_5)".
