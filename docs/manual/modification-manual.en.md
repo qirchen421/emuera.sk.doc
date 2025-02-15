@@ -1,7 +1,7 @@
-# Introduction to modification  
+# Introduction to modding  
 
 Original page  
-[era series discussion thread, Summary Wiki V3, Modification Introduction](https://seesaawiki.jp/eraseries/d/%b2%fe%c2%a4%c6%fe%cc%e7)  
+[era series discussion thread, Summary Wiki V3, Introduction to modding](https://seesaawiki.jp/eraseries/d/%b2%fe%c2%a4%c6%fe%cc%e7)  
 
 ---  
 The good thing about era is that anyone can edit it easily.
@@ -89,144 +89,143 @@ Characters not listed are 100%, or ±0.
 - Flag(フラグ)  
 This is where you write data to be referenced by the script.
 The meaning changes completely depending on the variant,
-
 so try things like increasing her energy by 10 times, increasing her compatibility with you to the highest level,
 making her a `[Virgin]`, adding `[Love]`, removing `[Denial of Pleasure]`, etc. Do whatever you like.
 
 ---
 
-### 新しくキャラクターを追加する  
-この手順はバリアントに大きく依存するため詳しくは解説しません
+### Adding a new character  
+This procedure is highly variant-dependent and will not be explained in detail.
 
-<details><summary>eratoho系においての例</summary>
+<details><summary>Example of how it's done in eratoho.</summary>
 
 ```
-だが、これだけではゲーム内にキャラは追加されない。  
-次に変更するのはItem.csv。開いて下のほうを見ると、キャラ名の付いたアイテムがずらっと並んでいるはず。  
-ここに、今作成したキャラをゲーム内で購入するためのアイテムを追加します。  
-アイテム番号,アイテム名,価格　の形式になっています。  
+First, create a new CharaXXX.csv file. It goes without saying that XXX should not overlap with existing characters, but eramaker can only read XXX from 0 to 99, so keep that in mind.
 
-キャラ番号とアイテム番号には規則性があるので、それをちゃんと守ること。  
-(例：キャラ番号:5→対応するアイテム:55　キャラ番号:6→対応するアイテム:56…)  
+However, this alone will not add the character to the game.
+The next thing to modify is Item.csv. If you open it and look at the bottom, you should see a row of items with character names.
+This is where you add items that will be available to purchase in the game for the character you just created.
+The format is item number, item name, price.
 
-これだけでは終わらない。次はERBフォルダの中を開く。  
-中にSHOP2.ERBがあるかどうかで、この後の作業が変わます。  
+There is a correlation for character numbers and item numbers, so be sure to follow it.
+(Example: Character number: 5 → corresponding item: 55 Character number: 6 → corresponding item: 56...)
 
-○SHOP2.ERBが無い場合  
+This is not the end of it. Next, open the ERB folder.
+There are two options, depending on whether SHOP2.ERB is inside or not.
 
-SYSTEM.ERBを開いて、上の方に  
+1) If there is no SHOP2.ERB:
+
+Open SYSTEM.ERB and near the top you should see the following text:
 >ITEMSALES:51 = 1~~  
 >ITEMSALES:52 = 1~~  
 >ITEMSALES:53 = 1~~  
 >　　　:  
-という記述があるはずなので、そこに  
->ITEMSALES:(さっき追加したアイテムの番号) = 1  
-を書き足す。これで終了だ。  
+Add the following text:
+>ITEMSALES:(Number of item just added) = 1  
+That's it.  
 
-○SHOP2.ERBがある場合（大人数版処理を採用している）  
+2) If there is a SHOP2.ERB (we're dealing with a version with large number of people):
 
-SYSTEM.ERBを開くのは同じだが、探すのは  
+Open SYSTEM.ERB in the same way, but look for the following text:
 >FLAG:1000 = 1000~~  
 >FLAG:1001 = 500~~  
 >FLAG:1002 = 300~~  
 >　　　:  
-のような記述。ここに、  
->FLAG:(キャラ番号+999) = (さっき追加したアイテムの価格)  
-を書き足す。  
+Add the following text:
+>FLAG:(character number + 999) = (price of just added item)
 ```
 
 </details>
 
 ---
 
-### 所持金を増やす  
-ERB内を`MONEY =`で検索等してみると、  
+### Increasing your money  
+If you search for `MONEY =` in the ERB folder, you will find a statement like
 
 ```
 MONEY = 10000
 ```
 
-のような記述があるので、数字を好きな値に書き換えてみましょう  
+, so try changing the number to whatever you want.
 
-多くのバリアントでは`MONEY`に現在の所持金の値が入っています。この`MONEY`のような値の入れ物を**変数**と呼びます。  
-`MONEY = 10000`は「MONEYと10000が等しい」という意味ではなく、
-「変数MONEYに10000という数値を入れる」という処理を表します。   
+In many variants, `MONEY` contains the current amount of money. Value containers like this `MONEY` are called ***variables***.
+`MONEY = 10000` does not mean "MONEY is equal to 10000", but rather "put the number 10000 into the variable MONEY".
 
-また、ファイルを探して見ると、
+Also, if you search the ERB folder, you should be able to find a line that says:
 
 >@EVENTFIRST  
 
-という行があるはずです。このように```@xxx```から始まるスクリプトの塊を**関数**といいます。  
-`@EVENTFIRST`は、[0]最初から始めるを選ぶと呼び出される関数です。  
-多くの場合、ゲームの初期設定やゲームモードの選択をこの関数で行っています 
+A block of script starting with ```@xxx``` like this is called a **function** (or more rarely, a procedure).
+@EVENTFIRST is the function that is called when you select `[0] Start from the beginning`.
+In many cases, this function is used to set up the game and select the game mode.
 
 ---
 
-### 所持金を減らさない  
-上記を応用すれば、何度買い物をしても所持金を減らさず、一定値にし続けることもできます。  
-要は、ゲーム中に何度も呼び出される関数に`MONEY = 10000`と書き込めばいいわけです。  
+### Don't decrease your money
+By applying the above, you can keep your money constant no matter how many times you shop, without it decreasing.
+Basically, you just write `MONEY = 10000` in a function that is called many times during the game.
 
-ここでは、ショップ画面に移動した時に所持金を一定値にする方法を説明します。  
-`SHOP.ERB`(ファイル名はバリアントによる)の最初の方にある`@EVENTSHOP`や`@SHOW_SHOP`が、ショップ画面に移るたびに呼び出される関数。  
-ここの中に`MONEY = 10000`と書けば、ショップ画面になるたびに所持金が`10000`になます。  
-「それだと買い物中にお金が尽きたらどうするんだ」という欲張りな奴は、下のほうにある`@EVENTBUY`関数に書き込めばいい。（バリアントによっては別関数の場合もあり）  
-これはなにかアイテムが買われるたびに呼び出される関数なので、関数の最後で所持金を設定すれば  
-何を買ってもお金が減らなくなります。  
+Here, we will explain how to make your money constant when you move to the shop screen.
+The `@EVENTSHOP` and `@SHOW_SHOP` at the beginning of `SHOP.ERB` (the exact file name may vary) are functions that are called every time you move to the shop screen.
+If you write `MONEY = 10000` in there, your money will be set to `10000` every time you go to the shop screen.
+If you're greedy and wondering, "What if I run out of money while shopping?", you can write it in the `@EVENTBUY` function at the bottom. (Depending on the variant, it may be a different function.)
+This is a function that is called every time an item is purchased, so if you set your money at the end of the function,
+your money will not decrease no matter what you buy.
 
-あるいは、以下のような方法でもできます。  
-ERBフォルダの中に、新しいERBファイルを作る(新規作成→テキストファイル→拡張子ごとリネームでOK)。  
-拡張子が`.ERB`なら名前は自由に設定できます。  
-そしてその中に以下の3行を書き込みます。  
+Alternatively, you can do it the following way.
+Create a new ERB file in the ERB folder (Create new -> Text file -> Rename with extension).
+As long as the extension is `.ERB`, you can set the name freely.
+Then write the following three lines in it:
 
 >@EVENTBUY  
 >#LATER  
 >MONEY = 10000  
 
-「`@EVENTBUY`は`SHOP.ERB`にもうあるじゃん。同じ関数が2個あってもいいの？」**いいんです。**  
-`@EVENTSHOP`や`@EVENTBUY`、さっきの`@EVENTFIRST`等は**イベント関数**と呼ばれる特別な関数で、  
-同じ名前の関数がいくつあっても全部実行されるという特徴があります。  
-なので、あるタイミング(調教開始時、調教コマンド実行時、調教終了時etc.)で  
-数パターンのイベントを起こしたい場合に大変重宝します。一番いい例が**口上**です。  
+"But `@EVENTBUY` is already in `SHOP.ERB`. Can I have two of the same function?" **No problem. **
+`@EVENTSHOP`, `@EVENTBUY`, and the previous `@EVENTFIRST` are special functions called **event functions**,
+and have the characteristic that no matter how many functions with the same name there are, they will all be executed.
+Therefore, it is very useful when you want to trigger several different types of events at a certain timing 
+(when training starts, when a training command is executed, when training ends, etc.). The best example is **dialogues**.
 
-2行目の`#LATER`はイベント関数だけで使える**性質**を設定する行です。  
-`#LATER`の意味は「`@EVENTBUY`が複数ある場合、この`@EVENTBUY`は一番最後に実行する」。  
-他にも最初に実行させる`#PRI`、他の同じイベント関数をもう実行させない`#SINGLE`という性質もあります。  
+The second line, `#LATER`, sets a **property** for that function, it can only be used with event functions.
+`#LATER` means "If there are multiple `@EVENTBUY`s, this `@EVENTBUY` will be executed last."
+There are also other properties, `#PRI`, which executes first, and `#SINGLE`, which prevents other similar event functions from being executed again.
 
 ---
 
-### 体力・気力の減少を半分にする  
-`SOURCE.ERB`(ファイル名はバリアントによる)の最後の方に以下のような部分があります。  
+### Halve the loss of stamina and energy
+The following section is at the end of `SOURCE.ERB` (file name depends on the variant).
 
 ``` { #language-erb title="ERB" }
-;-------------------------------------------------  
-;体力・気力の減少  
-;-------------------------------------------------  
-BASE:0 -= LOSEBASE:0  
-BASE:1 -= LOSEBASE:1  
-;PRINT 体力-  
-;PRINTV LOSEBASE:0  
-;PRINT  気力-  
-;PRINTVL LOSEBASE:1  
+;-------------------------------------------------
+;Loss of stamina and energy
+;-------------------------------------------------
+BASE:0 -= LOSEBASE:0
+BASE:1 -= LOSEBASE:1
+;PRINT stamina-
+;PRINTV LOSEBASE:0
+;PRINT energy-
+;PRINTVL LOSEBASE:1
 ```
 
-`BASE:0`、`BASE:1`はそれぞれ体力、気力を指し、  
-`LOSEBASE:0`、`LOSEBASE:1`はそれぞれ体力減少、気力減少を指します。  
-そこで次のように2行追加してみます。  
+`BASE:0` and `BASE:1` refer to stamina and energy, respectively,
+`LOSEBASE:0` and `LOSEBASE:1` refer to loss of stamina and energy, respectively.
+So let's add two lines like this:
 
 ``` { #language-erb title="ERB" }
-;-------------------------------------------------  
-;体力・気力の減少  
-;-------------------------------------------------  
-LOSEBASE:0 /= 2 ;追加した部分  
-LOSEBASE:1 /= 2 ;追加した部分  
-BASE:0 -= LOSEBASE:0  
-BASE:1 -= LOSEBASE:1  
-;PRINT 体力-  
-;PRINTV LOSEBASE:0  
-;PRINT  気力-  
-;PRINTVL LOSEBASE:1  
+;-------------------------------------------------
+;Loss of stamina and energy
+;-------------------------------------------------
+LOSEBASE:0 /= 2 ;Added part
+LOSEBASE:1 /= 2 ;Added part
+BASE:0 -= LOSEBASE:0
+BASE:1 -= LOSEBASE:1
+;PRINT stamina-
+;PRINTV LOSEBASE:0
+;PRINT energy-
+;PRINTVL LOSEBASE:1
 ```
 
-`/= 2`は2で割るという意味で、以下のようにも書けるがこちらのほうがスマートです。  
+`/= 2` means to divide by 2, and can also be written as follows, but this is more elegant.
 
-> LOSEBASE:0 = LOSEBASE:0 / 2  
+> LOSEBASE:0 = LOSEBASE:0 / 2
