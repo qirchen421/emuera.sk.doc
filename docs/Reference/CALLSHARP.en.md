@@ -36,7 +36,6 @@ Added by Neo_Kesha
 	12. Override Execute method with your code.  
 	13. In the constructor of PluginManifest, add your class to methods list with   
 	```methods.Add(new MyCoolNativeMethod ())```  
-
 	14. Use CALLSHARP MyCoolMethod1() to call your native code from ERB  
 
 	## Arguments
