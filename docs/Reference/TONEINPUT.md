@@ -29,3 +29,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [TINPUT](TINPUT.md)
+- [ONEINPUT](ONEINPUT.md)

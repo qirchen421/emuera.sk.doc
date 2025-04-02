@@ -19,3 +19,6 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [_replace.csv>汚れの初期値](../Emuera/replace.html#_5)

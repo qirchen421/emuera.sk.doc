@@ -62,3 +62,6 @@ hide:
     MAP「MyMap」の存否：1
     MAP「MyMap」の存否：0
     ```
+
+### 関連項目
+- [MAP操作](MAP_OPERATION.md)

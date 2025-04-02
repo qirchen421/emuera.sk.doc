@@ -40,3 +40,7 @@ hide:
 	``` title="結果"
 	Called "TEST" function.
 	```
+
+### 関連項目
+- [CALLF](CALLF.md)
+- [TRYCALLFORMF](TRYCALLFORMF.md)

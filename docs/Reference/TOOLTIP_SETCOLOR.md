@@ -22,3 +22,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [ツールチップ拡張機能](TOOLTIP_EXTENSION.md)
+- [ツールチップ表示操作](TOOLTIP_SET.md)

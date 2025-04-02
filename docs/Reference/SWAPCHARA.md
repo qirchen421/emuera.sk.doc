@@ -37,3 +37,6 @@ hide:
 	NO:1 = 10, NO:2 = 11
 	NO:1 = 11, NO:2 = 10
     ```
+
+### 関連項目
+- [SORTCHARA](SORTCHARA.md)

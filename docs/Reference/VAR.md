@@ -51,3 +51,6 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [関数・プリプロセッサ>#DIM](../Emuera/function.html#dim)

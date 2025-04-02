@@ -76,3 +76,6 @@ hide:
 		5, 7, 3
 		334
     ```
+
+### 関連項目
+- [RESTART](RESTART.md)

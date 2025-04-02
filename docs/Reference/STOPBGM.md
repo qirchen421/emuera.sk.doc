@@ -20,3 +20,6 @@ hide:
 !!! hint "ヒント"
 
     命令としてのみ使用可能
+
+### 関連項目
+- [PLAYBGM](PLAYBGM.md)

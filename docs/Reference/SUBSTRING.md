@@ -46,3 +46,6 @@ hide:
 	<TEST2> = 123
 	<TEST3> = いう
     ```
+
+### 関連項目
+- [STRFIND](STRFIND.md)

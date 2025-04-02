@@ -20,3 +20,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ両方対応しています。
+
+### 関連項目
+- [WAIT](WAIT.md)
+- [ONEINPUT](ONEINPUT.md)

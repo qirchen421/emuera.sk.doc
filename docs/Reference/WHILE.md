@@ -25,3 +25,8 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [REPEAT-REND](REPEAT.md)
+- [FOR-NEXT](FOR.md)
+- [CONTINUE.BREAK](CONTINUE.md)

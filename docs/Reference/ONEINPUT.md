@@ -36,3 +36,4 @@ hide:
     命令のみ対応しています。
 ### 関連項目
 - [INPUT](INPUT.md)
+- [WAITANYKEY](WAITANYKEY.md)

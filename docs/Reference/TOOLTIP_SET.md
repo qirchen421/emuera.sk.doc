@@ -24,3 +24,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [ツールチップ拡張機能](TOOLTIP_EXTENSION.md)
+- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.md)

@@ -50,3 +50,7 @@ hide:
 	Called "TEST1" function.
 	Called "TEST3" function.
 	```
+
+### 関連項目
+- [CALLF](CALLF.md)
+- [TRYCALLF](TRYCALLF.md)

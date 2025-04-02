@@ -20,3 +20,7 @@ hide:
 !!! hint "ヒント"
 
 	命令なので式中関数としては使用できません
+
+### 関連項目
+- [QUIT](QUIT.md)
+- [FORCE_QUIT_AND_RESTART](FORCE_QUIT_AND_RESTART.md)

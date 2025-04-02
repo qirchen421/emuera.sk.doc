@@ -56,3 +56,7 @@ hide:
 	<TEST3> = 4
 	<TEST4> = -1
     ```
+
+### 関連項目
+- [STRCOUNT](STRCOUNT.md)
+- [SUBSTRING](SUBSTRING.md)

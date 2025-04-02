@@ -60,3 +60,4 @@ hide:
 
 ### 関連項目
 - [STRFORM](STRFORM.md)
+- [GETMETH,GETMETHS](GETMETH.md)

@@ -36,3 +36,6 @@ hide:
     ``` title="結果"
 	0 0
     ```
+
+### 関連項目
+- [RESETGLOBAL](RESETGLOBAL.md)

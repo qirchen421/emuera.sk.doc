@@ -36,3 +36,6 @@ hide:
 		PRINTW blue
     ``` 
 	![](../assets/images/SETCOLORBYNAME.png)
+
+### 関連項目
+- [SETCOLOR](SETCOLOR.md)

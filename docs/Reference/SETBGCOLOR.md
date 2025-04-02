@@ -34,3 +34,6 @@ hide:
 !!! hint "ヒント"
 
     命令のみ両方対応しています。
+
+### 関連項目
+- [SETCOLOR](SETCOLOR.md)

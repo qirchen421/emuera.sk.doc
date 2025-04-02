@@ -20,3 +20,7 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [FORCE_QUIT](FORCE_QUIT.md)
+- [QUIT_AND_RESTART](QUIT_AND_RESTART.md)

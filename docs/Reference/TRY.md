@@ -49,3 +49,9 @@ hide:
 	AAA
 	CCC
     ```
+
+### 関連項目
+- [TRY◯◯FORM](TRYFORM.md)
+- [CALL](CALL.md)
+- [JUMP](JUMP.md)
+- [GOTO](GOTO.md)

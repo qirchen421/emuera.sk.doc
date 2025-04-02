@@ -49,3 +49,10 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### 関連項目
+- [TRY系](TRY.md)
+- [TRYC系](TRYC.md)
+- [CALL](CALL.md)
+- [JUMP](JUMP.md)
+- [GOTO](GOTO.md)

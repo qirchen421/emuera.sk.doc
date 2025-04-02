@@ -39,3 +39,4 @@ hide:
 
 ### 関連項目
 * [DOTRAIN](DOTRAIN.md)
+* [STOPCALLTRAIN](STOPCALLTRAIN.md)

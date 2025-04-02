@@ -34,3 +34,6 @@ hide:
     ``` title="結果"
 	0
     ```
+
+### 関連項目
+- [RESETDATA](RESETDATA.md)

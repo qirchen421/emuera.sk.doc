@@ -63,3 +63,7 @@ hide:
     ``` 
 	![](../assets/images/TOOLTIP_EXTENSION1.png)
 	![](../assets/images/TOOLTIP_EXTENSION2.png)
+
+### 関連項目
+- [ツールチップ表示操作](TOOLTIP_SET.md)
+- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.md)

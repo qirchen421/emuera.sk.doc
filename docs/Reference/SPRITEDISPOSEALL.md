@@ -38,3 +38,6 @@ hide:
 	``` title="結果"
 	3
 	```
+
+### 関連項目
+- [SPRITEDISPOSE](./SPRITEDISPOSE.md)

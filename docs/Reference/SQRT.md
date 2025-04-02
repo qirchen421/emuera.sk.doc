@@ -20,3 +20,6 @@ hide:
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
+
+### 関連項目
+- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.md)

@@ -63,3 +63,6 @@ hide:
     「MyMap」のサイズ：2
     「MyMap」のサイズ：0
     ```
+
+### 関連項目
+- [MAP生成](MAP_MANAGE.md)
