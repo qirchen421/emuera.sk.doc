@@ -18,7 +18,9 @@ hide:
 	```
 
 	EraBasicだけでは物足りない場合に、Emuera用のC#プラグインを作成することができます。  
-	プラグインを追加するには、EmueraのインストールフォルダにPluginフォルダを作成し、そこにプラグインのDLLファイルを置きます。  
+	プラグインを追加するには、EmueraのインストールフォルダにPlugins/フォルダを作成し、そこにプラグインのDLLファイルを置きます。  
+
+	Emuera.exe が存在するフォルダーに `pluginsAware.txt` ファイルを追加するというメモも必ず含めてください。そうしないと、起動時にクラッシュが発生します。
 
 	プラグインの作成方法 (簡単な例 [https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample](https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample))  
 	1. Emueraのリポジトリをクローンする https://gitlab.com/EvilMask/emuera.em  
@@ -41,7 +43,7 @@ hide:
 
 	ERBからPluginへ、PluginからERBへ引数を渡すことができます。変数を引数に渡すと、Pluginからその変数の値を変更することができます。  
 	`Execute`メソッドは`PluginMethodParameter`の配列として引数を受け取ります。引数には文字列型か数値型を指定します。  
-	拡張例（[https://gitlab.com/NeoKesha/emuera.em/-/blob/neokesha/feature/plugin-update-testing/PluginDev/](https://gitlab.com/NeoKesha/emuera.em/-/blob/neokesha/feature/plugin-update-testing/PluginDev/) に基づく例）：  
+	拡張例（[https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample](https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample) に基づく例）：  
 
 	```c#
 		public void Execute(PluginMethodParameter[] args)
