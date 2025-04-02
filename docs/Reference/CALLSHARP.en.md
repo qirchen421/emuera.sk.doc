@@ -18,10 +18,13 @@ Added by Neo_Kesha
 	```
 
 	C# Plugins
+	
 	You can write C# Plugins for EmuEra when EraBasic is not enough.  
-	To add Plugin, create Plugin folder at your Emuera installation folder and put DLL file of plugin there.  
+	To add Plugin, create `plugins/` folder at your Emuera installation folder and put DLL file of plugin there.  
+	Make sure to also include a note to add a `pluginsAware.txt` file to the folder where Emuera.exe resides, else there will be a crash on start up.
 
 	How to create Plugins (Simple example at [https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample](https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample))
+	
 	1. Clone\Fork [EmuEra repository](https://gitlab.com/EvilMask/emuera.em)  
 	2. Open project at Visual Studio  
 	3. Add new Project to solution. Make it Class Librarry  
@@ -38,11 +41,12 @@ Added by Neo_Kesha
 	```methods.Add(new MyCoolNativeMethod ())```  
 	14. Use CALLSHARP MyCoolMethod1() to call your native code from ERB  
 
+
 	## Arguments
 
 	You can pass arguments from ERB to Plugin and from Plugin to ERB. If you pass variable as an argument, you will be able to change it's value from Plugin  
 	Execute method recieves arguments as array of PluginMethodParameter. It can either be string, or int.  
-	Extended example (example based on [https://gitlab.com/NeoKesha/emuera.em/-/blob/neokesha/feature/plugin-update-testing/PluginDev/](https://gitlab.com/NeoKesha/emuera.em/-/blob/neokesha/feature/plugin-update-testing/PluginDev/)):  
+	Extended example (example based on [https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample](https://gitlab.com/EvilMask/emuera.em/-/tree/master/EmueraPluginExample)):  
 
 	```c#
        public void Execute(PluginMethodParameter[] args)
