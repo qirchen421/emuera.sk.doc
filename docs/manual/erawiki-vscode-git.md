@@ -43,22 +43,22 @@ gitはいわゆるプロジェクトなので、もちろん管理者が必要�
 というファイルを作成し、VSCodeやテキストエディタで編集する  
 バリアントによって除外するファイルは違うものの、基本は以下のようになる  
 
-- _default.configや_fixed.configを使う場合は必要に応じて除外
-`emuera.config`
+- _default.configや_fixed.configを使う場合は必要に応じて除外  
+`emuera.config`  
 
-- 画像はプレイヤー側で用意してねというスタンスの場合
-`resources/`
+- 画像はプレイヤー側で用意してねというスタンスの場合  
+`resources/`  
 
-- ただしCSVファイルでスプライトを指定している場合
-`!resources/*.csv`
+- ただしCSVファイルでスプライトを指定している場合  
+`!resources/*.csv`  
 
-- 以下は除外したほうがいいもの
-`*.sav`
-`*.log`
-`*.lnk`
-`sav/`
-`debug/`
-`macro.txt`
+- 以下は除外したほうがいいもの  
+`*.sav`  
+`*.log`  
+`*.lnk`  
+`sav/`  
+`debug/`  
+`macro.txt`  
 
 そしてリポジトリ名を入力し、プッシュするファイルを選択すれば
 ![](../assets/images/erawiki-vscode-git/admin_4.png)  
@@ -99,7 +99,7 @@ gitはいわゆるプロジェクトなので、もちろん管理者が必要�
 少し待つと自分のアカウントで、フォーク元と全く同じリポジトリが作成される
 ![](../assets/images/erawiki-vscode-git/cont_3.png)  
 
-VSCodeを開き、gitメニューからリポジトリのクローンを選択し、管理者と同じようにGitHubへのログイン認証を進めていく
+VSCodeを開き、gitメニューからリポジトリのクローンを選択し、管理者と同じようにGitHubへのログイン認証を進めていく  
 ![](../assets/images/erawiki-vscode-git/cont_4.png)  
 
 ![](../assets/images/erawiki-vscode-git/cont_5.png)  
