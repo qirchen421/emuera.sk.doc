@@ -1,31 +1,31 @@
-# Operations  
-## Operators  
-### Unary Operators  
-- `~` ビットごとの否定(ビットごとのNOT) 単項演算子（優先度最大）  
-- `!` 論理否定(NOT) 単項演算子（優先度最大）  
+# Operations
+## Operators
+### Unary Operators
+- `~` ビットごとの否定(ビットごとのNOT) 単項演算子（優先度最大）
+- `!` 論理否定(NOT) 単項演算子（優先度最大）
 
-### Binary Operators  
-- `<<` 左ビットシフト。比較やビット演算より優先度が高く、四則演算より低い。  
-- `>>` 右ビットシフト。比較やビット演算より優先度が高く、四則演算より低い。  
-- `^` ビットごとの排他論理和(ビットごとのXOR) 優先度は&、|と同じ  
-- `^^` ビットによらない排他論理和(ビットによらないXOR) 優先度は&&、||と同じ  
-- `!&` ビットによらない否定論理積(ビットによらないNAND) 優先度は&&、||と同じ  
-- `!|` ビットによらない否定論理和(ビットによらないNOR) 優先度は&&、||と同じ  
+### Binary Operators
+- `<<` 左ビットシフト。比較やビット演算より優先度が高く、四則演算より低い。
+- `>>` 右ビットシフト。比較やビット演算より優先度が高く、四則演算より低い。
+- `^` ビットごとの排他論理和(ビットごとのXOR) 優先度は&、|と同じ
+- `^^` ビットによらない排他論理和(ビットによらないXOR) 優先度は&&、||と同じ
+- `!&` ビットによらない否定論理積(ビットによらないNAND) 優先度は&&、||と同じ
+- `!|` ビットによらない否定論理和(ビットによらないNOR) 優先度は&&、||と同じ
 
-### Ternary Operators  
--  ?～# Regular Ternary Operator - Priority is lower than the other operators above = (judgment and results are processed first)  
-	Format (Numeric) : <Destination Variable of the Assignment> = <Conditional> ? <Assigned value if true> # <Assigned value if false>  
-	Format (String)　: <Destination Variable of the Assignment> = \@<Conditional> ? <Assigned value if true> # <Assigned value if false>\@  
-	It is processed the same way as  
+### Ternary Operators
+-  ?～# Regular Ternary Operator - Priority is lower than the other operators above = (judgment and results are processed first)
+	Format (Numeric) : <Destination Variable of the Assignment> = <Conditional> ? <Assigned value if true> # <Assigned value if false>
+	Format (String)　: <Destination Variable of the Assignment> = \@<Conditional> ? <Assigned value if true> # <Assigned value if false>\@
+	It is processed the same way as
 
-		　　　IF <Conditional>  
-		　　　　　<Destination Variable of the Assignment> = <Assigned value if true>  
-		　　　ELSE  
-		　　　　　<Destination Variable of the Assignment> = <Assigned value if false>  
-		　　　ENDIF  
+		　　　IF <Conditional>
+		　　　　　<Destination Variable of the Assignment> = <Assigned value if true>
+		　　　ELSE
+		　　　　　<Destination Variable of the Assignment> = <Assigned value if false>
+		　　　ENDIF
 
-	Ternary numeric operators can be used in normal calculations by putting them in (), and ternary string operators can be used directly in PRINTFORM instructions.  
-	However, the # cannot be omitted in the ternary operator in the format of \@～\@.  
+	Ternary numeric operators can be used in normal calculations by putting them in (), and ternary string operators can be used directly in PRINTFORM instructions.
+	However, the # cannot be omitted in the ternary operator in the format of \@～\@.
 
 ### 代入演算子
 - `'=` 文字列式を用いた文字列型変数への代入を行う演算子 [詳しくはこちら](expression.md#form_2)
@@ -45,7 +45,7 @@
 |比較演算子         |      |×           |`<`, `>`, `<=`, ``>=`        |
 |                   |      |×           |`==`, `!=`                   |
 |論理演算子         |      |○           |`&`, `|`, `^`                |
-|                   |↓    |×           |`&&`, `!&`, `|?|`, `!|`, `^^`|
+|                   |↓    |×           |`&&`, `!&`, `||`, `!|`, `^^`|
 |三項演算子         |低    |×           |`～?…#＿`                   |
 
 ## 演算の追加
@@ -75,9 +75,9 @@
 
 	IF (ASSI >= 0) && (NO:ASSI == 1)
 		～～～
-	ELSE 
+	ELSE
 		～～～
-	ENDIF 
+	ENDIF
 
 `ASSI`が0以下の場合、`(NO:ASSI == 1)`の結果によらず全体の結果は`0`なので`NO:ASSI`は参照されません。したがってエラーも発生しません。
 評価順は左項が先、右項が後です。

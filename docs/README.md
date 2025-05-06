@@ -19,7 +19,7 @@ hide:
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
 
 ## ダウンロード
-[**最新版:Emuera.NET 1824+v21+EMv18+EEv53**](assets/files/Emuera.NET%201824+v22+EMv18+EEv53+Rikaichan.zip)
+[**最新版:Emuera.NET 1824+v22+EMv18+EEv53**](assets/files/Emuera.NET%201824+v22+EMv18+EEv53+Rikaichan.zip)
 
 ## 連絡先
 エラー報告、要望、編集の相談などは下記Discordサーバーにてご連絡ください
