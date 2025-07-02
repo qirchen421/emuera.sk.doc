@@ -208,7 +208,7 @@
 | ![](../assets/images/IconEmuera.webp)[`CSVRELATION`](./CSV_STATUS.md)      | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CSVJUEL`](./CSV_STATUS.md)          | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CSVEQUIP`](./CSV_STATUS.md)         | `int`, `int`                                  | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CFLAG`](./CSV_STATUS.md)            | `int`, `int`                                  | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVCFLAG`](./CSV_STATUS.md)         | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.md)               | `variable`, `string`                          | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.md)       | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.md)         | `int`, `int`                                  | `int`    |
