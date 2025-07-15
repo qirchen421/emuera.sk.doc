@@ -13,10 +13,10 @@ hide:
 !!! info "API"
 
     ```  { #language-erbapi }
-	string SUBSTRING string, startPosition, endPosition
-	string SUBSTRINGU string, startPosition, endPosition
+	string SUBSTRING string, startPosition, characterCount
+	string SUBSTRINGU string, startPosition, characterCount
     ```
-	指定した文字列式の部分文字列を返します。  
+	指定した文字列式の、第一引数で指定した箇所から第二引数で指定した文字数の部分文字列を返します。  
 	開始位置は文字列の最初が`0`です。元文字列の長さより後を指定した場合、空文字列が返されます。  
 	文字数は`SUBSTRING`の場合、SHIFT-JISでのバイト数で指定します。つまり全角文字を2文字と数えます。`SUBSTRINGU`はUnicodeでカウントするため、全角文字も1文字として数えます  
 	文字数に負の値を指定するか、元文字列の終端より後の位置を指定した場合、開始位置から最後までの文字列を返します。  
