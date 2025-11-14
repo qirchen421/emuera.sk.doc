@@ -22,4 +22,4 @@ hide:
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
 
 ## 下载
-[**最新版本:Emuera.NET 1824+v22+EMv18+EEv53**](assets/files/Emuera.NET%201824+v22+EMv18+EEv53+Rikaichan.zip)
+[**最新版本:Emuera.NET 1824+v24+EMv18+EEv55**](assets/files/Emuera.NET%201824+v24+EMv18+EEv55+Rikaichan.zip)
