@@ -1,77 +1,81 @@
 # Operations
 ## Operators
 ### Unary Operators
-- `~` ビットごとの否定(ビットごとのNOT) 単項演算子（優先度最大）
-- `!` 論理否定(NOT) 単項演算子（優先度最大）
+- `~` Bitwise NOT - Unary operator (highest priority)
+- `!` Logical NOT - Unary operator (highest priority)
 
 ### Binary Operators
-- `<<` 左ビットシフト。比較やビット演算より優先度が高く、四則演算より低い。
-- `>>` 右ビットシフト。比較やビット演算より優先度が高く、四則演算より低い。
-- `^` ビットごとの排他論理和(ビットごとのXOR) 優先度は&、|と同じ
-- `^^` ビットによらない排他論理和(ビットによらないXOR) 優先度は&&、||と同じ
-- `!&` ビットによらない否定論理積(ビットによらないNAND) 優先度は&&、||と同じ
-- `!|` ビットによらない否定論理和(ビットによらないNOR) 優先度は&&、||と同じ
+- `<<` Left bit shift. Higher priority than comparison and bitwise operations, lower than arithmetic operations.
+- `>>` Right bit shift. Higher priority than comparison and bitwise operations, lower than arithmetic operations.
+- `^` Bitwise XOR. Same priority as `&`, `|`.
+- `^^` Logical XOR (non-bitwise). Same priority as `&&`, `||`.
+- `!&` Logical NAND (non-bitwise). Same priority as `&&`, `||`.
+- `!|` Logical NOR (non-bitwise). Same priority as `&&`, `||`.
 
-### Ternary Operators
--  ?～# Regular Ternary Operator - Priority is lower than the other operators above = (judgment and results are processed first)
-	Format (Numeric) : <Destination Variable of the Assignment> = <Conditional> ? <Assigned value if true> # <Assigned value if false>
-	Format (String)　: <Destination Variable of the Assignment> = \@<Conditional> ? <Assigned value if true> # <Assigned value if false>\@
+### Ternary Operator
+- `?～#` Regular ternary operator - Priority is lower than the other operators above (judgment and results are processed first)
+	Format (Numeric): <Destination Variable> = <Condition> ? <Value if true> # <Value if false>
+	Format (String): <Destination Variable> = \@<Condition> ? <Value if true> # <Value if false>\@
+
 	It is processed the same way as
 
-		　　　IF <Conditional>
-		　　　　　<Destination Variable of the Assignment> = <Assigned value if true>
-		　　　ELSE
-		　　　　　<Destination Variable of the Assignment> = <Assigned value if false>
-		　　　ENDIF
+			IF <Condition>
+				<Destination Variable> = <Value if true>
+			ELSE
+				<Destination Variable> = <Value if false>
+			ENDIF
 
-	Ternary numeric operators can be used in normal calculations by putting them in (), and ternary string operators can be used directly in PRINTFORM instructions.
-	However, the # cannot be omitted in the ternary operator in the format of \@～\@.
+	Numeric ternary operators can be used in normal calculations by putting them in (), and string ternary operators can be used directly in PRINTFORM instructions.
+	However, the `#` cannot be omitted in the ternary operator in the format of `\@～\@`.
 
-### 代入演算子
-- `'=` 文字列式を用いた文字列型変数への代入を行う演算子 [詳しくはこちら](expression.md#form_2)
+### Assignment Operator
+- `'=` Operator for assigning to string-type variables using a string expression. [See here for details](expression.md#form_2)
 
-### インクリメント・デクリメント
-- `++` インクリメント
-- `--` デクリメント
-代入文の代わりに使います。他の演算子と組み合わせることはできません。
+### Increment / Decrement
+- `++` Increment
+- `--` Decrement
+Use these instead of assignment statements. They cannot be combined with other operators.
 
-## 暫定的な演算子の優先度表
-|分類               |優先度|代入複合演算 |記号                         |
-|:------------------|:-----|:------------|:----------------------------|
-|否定演算子         |高    |×           |`~`, `!`                     |
-|算術演算子         |↑    |○           |`*`, `/`, `%`                |
-|                   |      |○           |`+`, `-`                     |
-|ビットシフト演算子 |      |○           |`<<`, `>>`                   |
-|比較演算子         |      |×           |`<`, `>`, `<=`, ``>=`        |
-|                   |      |×           |`==`, `!=`                   |
-|論理演算子         |      |○           |`&`, `|`, `^`                |
-|                   |↓    |×           |`&&`, `!&`, `||`, `!|`, `^^`|
-|三項演算子         |低    |×           |`～?…#＿`                   |
+## Provisional Operator Priority Table
 
-## 演算の追加
-- `==` 文字列同士の比較。数値と文字列を比較することはできません。
-- `!=` 文字列同士の比較。
-- `<` 文字列同士の比較。比較は先頭から行われ、異なる文字が見つかった時点で決定されます。
-- `>` 文字列同士の比較。
-- `<=` 文字列同士の比較。
-- `>=` 文字列同士の比較。
-- `+` 文字列同士の連結。数値と文字列を加算・連結することはできません。
-- `*` 文字列と整数の乗算。文字列と文字列を乗算することはできません。
+| Category             | Priority | Compound Assignment | Symbols                         |
+| :------------------- | :------- | :------------------ | :------------------------------ |
+| Negation operators   | High     | ×                   | `~`, `!`                        |
+| Arithmetic operators | ↑        | ○                   | `*`, `/`, `%`                   |
+|                      |          | ○                   | `+`, `-`                        |
+| Bit shift operators  |          | ○                   | `<<`, `>>`                      |
+| Comparison operators |          | ×                   | `<`, `>`, `<=`, `>=`            |
+|                      |          | ×                   | `\=\=`, `!=`                    |
+| Logical operators    |          | ○                   | `&`, `\|`, `^`                  |
+|                      | ↓        | ×                   | `&&`, `!&`, `\|\|`, `!\|`, `^^` |
+| Ternary operator     | Low      | ×                   | `～?…#＿`                       |
 
-	**例**
+(Don't mind the extra backslashes "\" They're needed so the display won't break. You have to remove those backslashes manually if you want to use the operators).
+
+## Additional Operations
+- `==` Comparison between strings. You cannot compare a number and a string.
+- `!=` Comparison between strings.
+- `<` Comparison between strings. Comparison is done from the beginning and determined when a different character is found.
+- `>` Comparison between strings.
+- `<=` Comparison between strings.
+- `>=` Comparison between strings.
+- `+` Concatenation of strings. You cannot add or concatenate a number and a string.
+- `*` Multiplication of a string and an integer. You cannot multiply a string and a string.
+
+	**Example**
 
 		STR:0 = % "あ" * 10 %
 		PRINTFORML STR:0 = "%STR:0%"
 		WAIT
 
-	**結果**
+	**Result**
 
 		STR:0 = "ああああああああああ"
 
-## 論理演算子の短絡評価
-短絡評価とはたとえば`(X && Y)`という式で`X`が`0`である時、`Y`の値によらず演算結果が`0`になることが明らかなので`Y`を評価しない、という評価法です。
-吉里吉里を含む多くの言語では論理演算子を短絡評価します。
-この評価法により以下のような書き方ができます。
+## Short-Circuit Evaluation of Logical Operators
+Short-circuit evaluation means, for example, in the expression `(X && Y)`, when `X` is `0`, `Y` is not evaluated because the result will clearly be `0` regardless of its value.
+Many languages, including KiriKiri, use short-circuit evaluation for logical operators.
+This evaluation method allows you to write code like the following:
 
 	IF (ASSI >= 0) && (NO:ASSI == 1)
 		～～～
@@ -79,9 +83,9 @@
 		～～～
 	ENDIF
 
-`ASSI`が0以下の場合、`(NO:ASSI == 1)`の結果によらず全体の結果は`0`なので`NO:ASSI`は参照されません。したがってエラーも発生しません。
-評価順は左項が先、右項が後です。
+If `ASSI` is 0 or less, the overall result is `0` regardless of the result of `(NO:ASSI == 1)`, so `NO:ASSI` is not referenced. Therefore, no error occurs.
+The evaluation order is left term first, right term second.
 
 	IF (NO:ASSI == 1) && (ASSI >= 0)
 
-このように書くと先に`(NO:ASSI == 1)`を計算しようとするので`ASSI < 0`のときエラーになります。
+If you write it this way, it tries to calculate `(NO:ASSI == 1)` first, so an error occurs when `ASSI < 0`.

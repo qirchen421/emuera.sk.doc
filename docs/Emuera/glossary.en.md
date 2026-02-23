@@ -57,7 +57,7 @@ A line in a file in the ERB folder that is processed before any other instructio
 A line that begins with # or consists of a phrase enclosed in [].  
 Lines that begin with # are divided into attributes and definitions. Please see them for more information.  
 Lines consisting of words or phrases enclosed in [] represent special blocks.  
-See the page here for more information  
+See this page for more information  
 
 ### Property (Preprocessor)  
 A preprocessor that determines the type and behavior of a function with a line beginning with a # specified for the function.  
@@ -75,110 +75,110 @@ In many programming languages they are simply called "functions".
 
 ### Functions in an Expression  
 Abbreviation for a function that can be used in an expression.  
-It has nothing to do with inexpression functions (anonymous functions) or inline functions in programming languages.  
+It has nothing to do with expression functions (anonymous functions) or inline functions in programming languages.  
 
-### 組み込み関数  
-式中関数のうち、Emueraにもともと組み込まれていて@～～文による定義なしで使えるものです。  
-ABS(X)やGETTIME()などのことです。  
-ややこしいですが、上記の関数の定義には該当しません。  
-「式中で使える命令」と考えるとわかりやすいかもしれません。  
+### Built-in Functions  
+Among expression functions, these are functions that are built into Emuera and can be used without defining them with @~~ statements.  
+Examples include `ABS(X)` and `GETTIME()`.  
+This is confusing, but they do not fall under the definition of "function" above.  
+It may be easier to think of them as "instructions that can be used in expressions."  
 
-### ユーザー定義関数  
-ユーザーが定義した関数のことです。  
-ERBスクリプト中で@～～文で名称を定義してCALL命令などで呼び出すもののことです。  
-つまり上記の関数と同じ概念です。  
+### User-Defined Functions  
+Functions defined by the user.  
+These are functions whose names are defined with @~~ statements in ERB scripts and called with the CALL instruction, etc.  
+In other words, they are the same concept as the "functions" above.  
 
-### `#FUNCTION(S)`関数  
-@～～文で名称を定義し、#FUNCTION(S)属性を持つものです。  
-関数かつ式中関数である関数です。  
+### `#FUNCTION(S)` Functions  
+Functions whose names are defined with @~~ statements and have the #FUNCTION(S) attribute.  
+These are functions that are both "functions" and "expression functions."  
 
-## 行・文・式  
-### 行  
-改行コードから次の改行コードまでのことです。  
-プログラミング関連では物理行とも呼ばれます。  
-ややこしいことにエディター関係ではこれを論理行と呼ぶことが多いです。  
+## Lines, Statements, and Expressions  
+### Line  
+The text from one newline code to the next newline code.  
+In programming contexts, this is also called a "physical line."  
+Confusingly, in editor contexts, this is often called a "logical line."  
 
-### 文  
-文あるいは論理行はEmueraにおける1つの処理単位です。  
-多くの文は、命令1つとその引数、あるいは変数と代入演算子と式からなります。  
-ERBでは1行につき1文という鉄則のため、行と文はほぼ同じ意味です。  
-当Wikiでも特に区別しません。  
+### Statement  
+A statement (or logical line) is a single processing unit in Emuera.  
+Most statements consist of one instruction and its arguments, or a variable, an assignment operator, and an expression.  
+In ERB, the rule is one statement per line, so "line" and "statement" mean almost the same thing.  
+This wiki does not distinguish between them.  
 
-### 式  
-変数、定数、式中関数、非代入演算子、括弧とその組み合わせです。  
-代入演算子は代入文の最初の演算子としてのみ使用可能で式中では使えません。  
+### Expression  
+A combination of variables, constants, expression functions, non-assignment operators, and parentheses.  
+Assignment operators can only be used as the first operator in an assignment statement and cannot be used in expressions.  
 
-### 数式  
-式の評価結果（演算結果）が数値になる式です。  
-例えば、A+B、STR == "あいう" などです。  
+### Numeric Expression  
+An expression whose evaluation result (operation result) is a number.  
+For example, `A+B`, `STR == "abc"`, etc.  
 
-### 文字列式  
-式の評価結果（演算結果）が文字列になる式です。  
-例えば、STR + STR:1、"あ" * 10 などです。  
+### String Expression  
+An expression whose evaluation result (operation result) is a string.  
+For example, `STR + STR:1`, `"a" * 10`, etc.  
 
-## 変数  
-### 擬似変数  
-RANDやCHARANUMのように変数のように記述できるが実態は変数ではないものです。  
-内部の動作としては式中関数に近い動きをしています。  
+## Variables  
+### Pseudo-Variables  
+Things that can be written like variables, such as RAND and CHARANUM, but are not actually variables.  
+Internally, they behave similarly to expression functions.  
 
-### 配列変数  
-複数の要素を持つ変数です。  
-配列変数の要素数はVariableSize.csvで変更でき、通常はスクリプト中では増減しませんが、  
-一部ローカル変数については、スクリプト中で配列要素数を指定できます。  
+### Array Variables  
+Variables that have multiple elements.  
+The number of elements in an array variable can be changed with `VariableSize.csv`, and normally does not increase or decrease in scripts,  
+but for some local variables, the number of array elements can be specified in the script.  
 
-### キャラクタ変数  
-キャラクタの状態を記録する変数です。  
-C言語などのchar型変数とは無関係です。  
-その性質上、ADDCHARAやDELCHARAによるキャラの増減に伴い、要素数が増減します。  
-NO:TARGETなど、配列変数と同じ形式で要素を指定するためにeramakerの解説では配列変数の一つと扱われていますが、当Wikiではキャラクタ変数と配列変数とを区別しています。  
+### Character Variables  
+Variables that record the state of characters.  
+They are unrelated to char-type variables in C and other languages.  
+Due to their nature, the number of elements increases or decreases as characters are added or removed via ADDCHARA or DELCHARA.  
+Although they are treated as one type of array variable in eramaker's documentation because elements are specified in the same format as array variables, such as `NO:TARGET`, this wiki distinguishes between character variables and array variables.  
 
-### 二重配列変数  
-キャラクタ変数かつ、配列変数である変数のことです。  
-CFLAG:TARGET:2のように、2つの引数をとります（省略可）。  
-キャラクタ変数なので第一引数はキャラNoを表わします。  
-また、キャラの増減に伴い第一次元の要素数が増減します。  
-第二次元の要素数は!VariableSize.csvでのみ変更でき、スクリプト中では増減しません。  
+### Double Array Variables  
+Variables that are both character variables and array variables.  
+They take two arguments (can be omitted), such as `CFLAG:TARGET:2`.  
+Since they are character variables, the first argument represents the character number.  
+Also, the number of elements in the first dimension increases or decreases as characters are added or removed.  
+The number of elements in the second dimension can only be changed with `VariableSize.csv` and does not increase or decrease in scripts.  
 
-当Wikiではeramakerの仕様の説明を除き、"二重配列"という用語を使用しません。  
-代わりに"キャラクタ変数かつ配列変数"のような呼び方をします。  
+This wiki does not use the term "double array" except when explaining eramaker specifications.  
+Instead, we use terms like "character variable that is also an array variable."  
 
-### 多次元配列変数  
-DITEMYTPEなどの二次元配列変数及びTAなどの三次元配列変数のことです。  
-DA:0:1やTA:1:2:3のように2つまたは3つの引数をとります。  
-多次元配列変数の要素数は!VariableSize.csvでのみ変更でき、スクリプト中で増減しません。  
-また、多次元配列変数の引数は省略できません。  
+### Multidimensional Array Variables  
+These are two-dimensional array variables like `DITEMTYPE` and three-dimensional array variables like `TA`.  
+They take 2 or 3 arguments, such as `DA:0:1` or `TA:1:2:3`.  
+The number of elements in multidimensional array variables can only be changed with `VariableSize.csv` and does not increase or decrease in scripts.  
+Also, arguments to multidimensional array variables cannot be omitted.  
 
-### キャラクタ多次元配列変数  
-キャラクタ変数かつ、多次元配列変数である変数のことです。  
-CFLAG:TARGET:0:2のように、3つの引数をとります（省略不可）。  
-キャラクタ変数なので第一引数はキャラNoを表わします。  
-また、キャラの増減に伴い第一次元の要素数が増減します。  
-第二次元・第三次元の要素数は!VariableSize.csvでのみ変更でき、スクリプト中では増減しません。  
+### Character Multidimensional Array Variables  
+Variables that are both character variables and multidimensional array variables.  
+They take 3 arguments (cannot be omitted), such as `CFLAG:TARGET:0:2`.  
+Since they are character variables, the first argument represents the character number.  
+Also, the number of elements in the first dimension increases or decreases as characters are added or removed.  
+The number of elements in the second and third dimensions can only be changed with `VariableSize.csv` and does not increase or decrease in scripts.  
 
-ver1807現在、この変数に当てはまるものはCDFLAGのみです。  
-詳しくはCDFLAGをご覧ください。  
+As of ver1807, only `CDFLAG` falls into this category.  
+See CDFLAG for details.  
 
-### ローカル変数  
-LOCALやLOCALSやプライベート変数など、関数（関数名）ごとに用意される変数です。  
-プライベート変数については別項を参照してください。  
-プライベート変数以外のLOCALやLOCALSに関しては、実際にはいわゆるローカル変数ではなく、  
-"LOCAL@関数名"や"LOCALS@関数名"という名のpublic staticな変数です。  
-関数を抜けても値は保持され関数の外からでも代入、参照できてしまいます。  
-また、再帰呼び出しのように複数回呼んだ場合にも値が共有されてしまいます。  
+### Local Variables  
+Variables that are prepared for each function (function name), such as LOCAL, LOCALS, and private variables.  
+See the separate section for private variables.  
+LOCAL and LOCALS other than private variables are not actually "local variables" in the usual sense,  
+but are `public static` variables named `LOCAL@function_name` or `LOCALS@function_name`.  
+Values are retained even after exiting the function, and can be assigned and referenced from outside the function.  
+Also, in cases like recursive calls where the function is called multiple times, the values are shared.  
 
-### 広域変数  
-LOCALやLOCALSやプライベート変数などを除くほとんどの変数が属する、すべての関数で値が共有の変数です。  
-一般的なプログラミング言語におけるグローバル変数の概念ともいえます。  
-また、ERH中で#DIMもしくは#DIMSを用いることで広域変数を定義することができます。  
-詳しくはヘッダーファイル（ERH）のページを参照してください。  
+### Global-Scope Variables  
+Variables whose values are shared among all functions, to which most variables except LOCAL, LOCALS, private variables, etc. belong.  
+This is also the concept of global variables in general programming languages.  
+Also, global-scope variables can be defined by using `#DIM` or `#DIMS` in an ERH.  
+See the Header Files (ERH) page for details.  
 
-### グローバル変数  
-異なるセーブデータ間で値を共有することができる変数です。グローバル変数も広域変数に含まれます。  
-通常の変数とはセーブロードや初期化のタイミングが異なります。  
-Emueraのグローバル変数はこれは一般的なプログラミング言語におけるグローバル変数の概念とは無関係です。  
+### Global Variables  
+Variables whose values can be shared between different save data. Global variables are also included in global-scope variables.  
+The timing of save/load and initialization is different from normal variables.  
+Emuera's global variables are unrelated to the concept of global variables in general programming languages.  
 
-### プライベート変数  
-関数（関数名）ごとに#DIMもしくは#DIMSによって定義される変数です。  
-これらもローカル変数でありますので、関数ごとに別個のものです。  
-ただし、同じローカル変数とされているLOCALなどとは異なり、@関数名などを使っての関数の外からの代入、参照はできません。  
-詳しくはユーザー定義の変数のページを参照してください。  
+### Private Variables  
+Variables defined by `#DIM` or `#DIMS` for each function (function name).  
+These are also local variables, so each function has its own separate instance.  
+However, unlike LOCAL which is considered the same local variable, assignment and reference from outside the function using `@function_name` is not possible.  
+See the User-Defined Variables page for details.  
