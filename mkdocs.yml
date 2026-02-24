@@ -418,7 +418,11 @@ plugins:
             変更ログ: Changelog
             開発者向け情報: eramaker basic Information for Developers
             一覧: List
-            製作マニュアル: Production Manual
+            制作マニュアル: Production Manual
+            初心者向け: Beginner Level
+            中級者向け: Intermediate Users
+            現制作者向け: Current Developers
+            その他資料: Other Materials
         - build: true
           default: true
           locale: ja

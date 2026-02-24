@@ -233,91 +233,7 @@ This page contains a list of links to eratoho Matome V3, which contains detailed
 [[Advanced]]
 -->
 
----  
-
-### バージョンってなに？  
-常に上書きしていると失敗したとき元に戻せない。  
-一区切りついたところで保存して、コピーをもとに新しい要素を追加したほうがいい。  
-そうすれば失敗したとき、保存してあるデータに戻しやすい。  
-
-そのバックアップがぐちゃぐちゃにならないように、  
-製作の進行度に応じて付けておく番号がバージョンだ。  
-
-更新するたびに数字をあげることで、どこまで更新されたかわかりやすくする。  
-
-- [eramaker CSVファイル書式（暫定版）](https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)  
-
-を見ると  
-
->画面上は、(数値)を1000で割ったものが表示されます（100なら0.10）  
-
-と説明されている。  
-
-現在、バージョンは  
-
-```
-バージョン,110  
-```
-
-になっている。  
-
-これを  
-
-```
-バージョン,100  
-```
-
-にしてみよう。  
-
-タイトル画面に表示される数字が、0.10になる。  
-
-```
-バージョン,112  
-```
-
-にしてみよう。  
-
-タイトル画面に表示される数字が、0.112になる。  
-
-小数点以下2桁まで表示されるのがデフォルトで、  
-小数点以下3桁目は、指定がなければ省略される。  
-
-とりあえずそれを頭の片隅においた上で、  
-実際どのように管理するかは人それぞれで、  
-自分が管理しやすいように指定しよう。  
-
-例をあげると  
-
-- １桁目がメジャーバージョン  
-（全体に影響するような巨大な更新であったり、セーブデータの互換性を失うときに）  
-
-- 小数点以下１～２桁目がマイナーバージョン  
-（機能などの細々とした追加を行うときに）  
-
-- 小数点以下３桁目が不具合修正  
-
-といった分け方や（たぶんデフォルト設定で想定されている分け方）  
-
-１桁目はメジャーバージョン  
-小数点以下はマイナーバージョン  
-といった分け方や  
-
-１桁目がメジャーバージョン  
-小数点以下１桁目がマイナーバージョン  
-小数点以下２桁目がパッチ  
-小数点以下３桁目が不具合修正  
-といった分け方や  
-
-自動的に割り算される表示を使わないようにして桁数を一万に増やし、  
-`X.XX.XX`と表示して、互換性喪失.要素追加.不具合修正とする  
-といった分け方などがある。  
-
-なんにせよ、パッチ作者は`Gamebase.csv`を弄らないことが多いので、  
-まとめてくれる人がいないと触れられることすらないという状況もありえる。  
-
-バージョン管理システムというものもあり、活用している方が多い。  
-
-- [eraシリーズを語るスレ　まとめWiki　V3→システム改造Q&A→その他→バージョン管理システムを使う](https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#_17)  
+---
 
 ### What is a version?
 If you keep overwriting, you won't be able to restore if you make a mistake.
@@ -329,11 +245,11 @@ the version is a number that is assigned according to the progress of the produc
 
 By increasing the number every time you update, it's easier to see how much has been updated.
 
-- [eramaker CSV file format (provisional)] (https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)
+- [eramaker CSV file format (provisional)](https://cbaku2.sakura.ne.jp/b/erakanon/eramacsv.html)
 
-If you look at
+If you look at it,
 
->The screen shows the value obtained by dividing (the number) by 1000 (100 is 0.10)
+> The screen shows the value obtained by dividing (the number) by 1000 (100 is 0.10)
 
 It explains that.
 
@@ -388,13 +304,6 @@ The digit after the decimal point is the minor version
 The second digit after the decimal point is the patch
 The third digit after the decimal point is the bug fix
 
-There are also ways of dividing like this (probably the way it is divided by default)
-
-The first digit is the major version
-The first digit after the decimal point is the minor version
-The second digit after the decimal point is the patch
-The third digit after the decimal point is the bug fix
-
 There are also ways of dividing like this, where the number of digits is increased to 10,000 without using the display that automatically divides, and
 The display is displayed as `X.XX.XX`, and compatibility is lost. Elements are added. Bug fix
 
@@ -404,7 +313,11 @@ There are also version control systems, and many people use them.
 
 - [Thread about the era series Summary Wiki V3 → System modification Q&A → Other → Using a version control system](https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#_17)
 
----  
+By increasing the number every time you update, it's easier to see how much has been updated.
+
+- [Thread about the era series Summary Wiki V3 → System modification Q&A → Other → Using a version control system](https://evilmask.gitlab.io/emuera.em.doc/manual/erawiki-modification-QandA.html#_17)
+
+---
 
 ### What is the year of production?
 It is the time when it was made.

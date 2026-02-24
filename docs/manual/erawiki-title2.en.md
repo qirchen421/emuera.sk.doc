@@ -1,7 +1,7 @@
 # Variant creation/Title practice
 
 Original page:  
-[era series discussion thread, Summary Wiki V3, Title practice](https://seesaawiki.jp/eraseries/d/%a5%bf%a5%a4%a5%c8%a5%eb%bc%c2%c1%a9%ca%d4)  
+[era series discussion thread, Summary Wiki V3, Title practice](https://seesaawiki.jp/eraseries/d/%a5%bf%a5%a4%a5%c8%a5%eb%bc%c2%c1%a9%ca%d4)
 
 ---
 
@@ -10,243 +10,168 @@ Original page:
 - Title practice
 - [ERB creation practice](erawiki-ERBmanual.md)
 
----  
-
-## `SYSTEM_FLOW.ERB`  
-さて、タイトルを作ろうという見出しにもかかわらず、  
-散々書いてきたのはタイトルを作らない方法だった。  
-うんざりしている人もいるだろう。  
-
-etc1821を開いてみよう。  
-`SYSTEM_FLOW.ERB`というファイルがある。開いてみよう。  
-
-```
-;[ライセンス]パブリックドメイン  
-;本ファイルに係る著作権を放棄する。  
-;本ファイルに係る著作人格権は行使しない。  
-;2015/11/01 MinorShift(Emuera作者)  
-```
-
-と書かれている。  
-ツールの提供や優しいライセンス、wikiの案内だけではなく導入のフォローまでしてくれている。  
-ありがたい。MinorShift様の懐の深さを崇め倒しながら書く。  
-
-下のほうにスクロールしていくと、  
-
-```
-;@SYSTEM_TITLEが定義されていると、標準のタイトル画面の代わりにSYSTEM_TITLEが呼ばれる。  
-@SYSTEM_TITLE  
-```
-
-と書かれている。  
-
-『`;`』というのは、『ここから行末まで』はコメントだから処理として読み込まないでね、  
-と伝えるための印だ。  
-<!--//（2021/05/12 スレでご指摘いただいて表現を修正。感謝）  -->
-つまり『;@SYSTEM_TITLEが定義されていると～』の行は、  
-改変しようとしている人に対して、処理内容を説明してくれるための文章だ。  
-
-もちろん、コメントは自分が忘れないために書くものでもあるが  
-etc 1821フォルダの中身は全体的に教えるために書いてくれていることが伝わってくる。  
-ERBを解読する、という作業の半分は、  
-こうして日本語で残されているコメントをありがたく追っていく作業だ。  
-
-この説明は、  
-ERBフォルダ内にある、ERBファイルのどれでもいい、どこかに  
-
-```
-@SYSTEM_TITLE  
-```
-
-という行があったら、  
-これまでずっと見てきたタイトル画面は表示されなくなって、  
-代わりにこの下に書いた処理が表示されるよ、という意味だ。  
+---
 
 ## `SYSTEM_FLOW.ERB`
-Well, despite the heading about making a title,
-I've written so much about how not to make a title.
-Some of you may be tired of that.
+Despite the heading saying "let's create a title,"  
+what I've written so far was actually about how NOT to create a title.  
+Some of you might be getting tired of this.
 
-Let's open etc1821.
-There is a file called `SYSTEM_FLOW.ERB`. Let's open it.
-
-```
-;[License]Public Domain
-;I waive the copyright of this file.
-;I will not exercise any moral rights to this file.
-;2015/11/01 MinorShift (Emuera creator)
-```
-
-... is what it says.
-Not only does it provide tools, a friendly license, and wiki guides, it also follows up on the introduction.
-I'm grateful. I'm writing this while admiring MinorShift's generosity.
-
-If you scroll down,
+Let's open etc1821.  
+There's a file called `SYSTEM_FLOW.ERB`. Let's open it.
 
 ```
-;If @SYSTEM_TITLE is defined, SYSTEM_TITLE will be called instead of the standard title screen.
-@SYSTEM_TITLE
+;[LICENSE]Public Domain  
+;I relinquish copyright for this file.  
+;I will not exercise moral rights for this file.  
+;2015/11/01 MinorShift (Emuera author)  
 ```
 
-is what's written there.
+It's written here.  
+They not only provide tools, a generous license, and wiki guidance, but they also support introductions.  
+I'm grateful. I'll write while venerating the depth of MinorShift's generosity.
 
-"`;`" is a mark to tell you that "from here to the end of the line" is a comment, so please do not read it as processing.
-<!--// (2021/05/12 I corrected the wording after someone pointed it out in the thread. Thank you) -->
-In other words, the line ``;@SYSTEM_TITLE is defined...'' is a sentence to explain the processing to those who are trying to modify it.
-
-Of course, comments are written so that you don't forget, but the contents of the "etc 1821" folder convey that they were written to teach you as a whole.
-Half of the work of deciphering ERB is gratefully following the comments left in Japanese like this.
-
-This explanation means that if any ERB file in the ERB folder contains a line
+When you scroll down further, you'll find
 
 ```
-@SYSTEM_TITLE
+;If @SYSTEM_TITLE is defined, SYSTEM_TITLE is called instead of the default title screen.  
+@SYSTEM_TITLE  
 ```
 
-,
-the title screen you have seen up until now will no longer be displayed,
-and instead the process written below will be displayed.
+The `;` is a marker that tells the processor "everything from here to the end of the line is a comment, so don't read it as code."  
+In other words, the line "If @SYSTEM_TITLE is defined..." is explanatory text for anyone modifying the code.
 
----  
+Of course, comments are also written so the author won't forget things, but overall, the content in the etc1821 folder feels like it's written to teach.  
+Half the work of deciphering ERB is following these helpful comments left in Japanese.
 
-## 新ファイル作成！  
-では、erakanonフォルダに戻ろう。  
-ERBフォルダ内に  
-『TITLE.ERB』を作ってみよう。  
+This explanation means:  
+If there's a line anywhere in any ERB file in the ERB folder
 
-<!--エンコードの差異は認められるのでこの記述はいらないはず
-このとき注意することは、もしエンコードを設定せず作業しているなら  
-フォルダの中で右クリックして新規作成を選ぶのではなく、  
-ERBフォルダ内にある何かのファイルを開き、名前を変更して保存後、  
-中身を削除して使用し、保存は『何か入力してから』することだ。  
+```
+@SYSTEM_TITLE  
+```
 
-まったくなにも入力していない状態で保存しようとすると、  
-エディタが気を利かせて『削除しますか？』と尋ねてきたり  
-空のファイルを開くとエンコードがデフォルトに設定されたりするので  
-何かは入力してから保存しよう。  
-
-これはエンコードを合わせるために行う。  
-<!--
-//(2021/05/12 wiki編集スレでご指摘いただいて変更＆追記。感謝。  
-//2021/05/17 デフォルトのエンコードリストはエンコードってなに？の項目へ移動整理）  
-もちろん確認して合わせられる人は新規作成しても良い。  
--->
+Then instead of showing the title screen we've been seeing all this time, the processing written below this will be displayed instead.
 
 ---
 
-## エンコードってなに？  
-バリアントによって、エンコードというものが違う可能性がある。  
+## Creating a New File!
+Now, let's return to the erakanon folder.  
+Let's create `TITLE.ERB` inside the ERB folder.
 
-人間にとって文字は文字だが、パソコンは１文字１文字に数字を割り当て、  
-『この数値ってことは、この文字を表示すればいいんだろ？』と判断している。  
+---  
 
-エンコードはその判断基準で、なんの文字にどの数字を割り当てるかだ。  
-動画等のエンコードと区別するためか、文字コードと呼ばれていたりもする。  
+## What is Encoding?
+Different variants may use different encodings.
 
-昔は特に統一されていなかったのでエンコードにはいくつか種類がある。
-違う割り当てで読み込んでもらおうとすると、パソコンが混乱して文字化けする。
+To humans, characters are characters, but computers assign numbers to each character,  
+and determine "this number means I should display this character."
 
-|エディタ|デフォルトのエンコード|変更方法|  
+Encoding is that criterion - which number is assigned to which character.  
+It's also called "character code" to distinguish it from video encoding.
+
+In the past, there was no standardization, so there are several types of encoding.  
+If you try to read with a different assignment, the computer gets confused and garbles the text.
+
+|Editor|Default Encoding|Change Method|
 |-:|:-|:-|
-|Windowsのメモ帳|Win10 201903以降なら<br>BOMなしUTF-8<br>それ以外ならShift-JIS|変更不可能|  
-|秀丸エディタ|Shift-JIS|その他(O)→上級者向け設定をチェック→ファイル~~→エンコード1→新規作成やASCⅡのとき→変更(D)|  
-|サクラエディタ|BOMなしUTF-8|設定→タイプ別設定一覧→基本→設定変更→ウィンドウタブ~~→デフォルトの文字コード|  
-|Visual Studio Code|BOMなしUTF-8|Setting(`Ctrl+,`) のfiles.autoGuessEncoding 項目に<br>チェックを入れる(true)で、オートエンコードが機能|  
-| | |Setting(Ctrl+,) の files.encoding 項目で<br>デフォルトのエンコードを変更|  
-| | |ウィンドウ下部の右側に表示されているUTF-8を選び<br>表示されたアクション一覧からエンコード付きで再度開く<br>推測で出る一番上のJapanease（Shift JIS）を選ぶと一時的に変更|  
+|Windows Notepad|Win10 201903 and later:<br>UTF-8 without BOM<br>Otherwise: Shift-JIS|Cannot change|
+|Hidemaru Editor|Shift-JIS|Other (O) → Check Expert Settings → File~~ → Encoding 1 → When creating new/ASCII → Change (D)|
+|Sakura Editor|UTF-8 without BOM|Settings → Type-specific Settings List → Basic → Settings Change → Window Tab~~ → Default Character Code|
+|Visual Studio Code|UTF-8 without BOM|Set files.autoGuessEncoding to checked (true) in Settings (`Ctrl+,`) for auto-encoding to work|
+| | |Change default encoding in Settings (`Ctrl+,`) files.encoding |
+| | |Select UTF-8 shown at bottom right of window, then select Japanese (Shift JIS) from the appeared action list to change temporarily|
 
-昔メジャーだったのは『Shift_JIS』で、  
-今のeraなら『BOM付きUTF-8』がメジャーになってきている。  
+The major encoding used to be `Shift_JIS`,  
+but now for modern era, `UTF-8 with BOM` is becoming common.
 
-この理由はいくつかあり、まとめwikiで解説してくれているかたがいる。  
+There are several reasons for this, and someone on the wiki explains it.
 
-- [システム改造Q&A→その他→文字コードには出来るだけUTF-8を使ってほしい](erawiki-modification-QandA.md#utf-8)|  
+- [System Modification Q&A → Other → Please use UTF-8 as much as possible for character codes](erawiki-modification-QandA.md#utf-8)
 
-erakanonは製作年を見た通り昔の作品なので『Shift_JIS』だ。  
-エンコードを表示してくれるエディタなら、そう表示されていると思う。  
-だいたいエンコードや改行については一番右下に表示される。  
+As you can see from its creation year, erakanon is an older work and uses `Shift_JIS`.  
+If your editor shows encoding, it should display that.  
+Encoding and line breaks are usually shown in the bottom right corner.
 
-エンコードが混在していると上手く読み込まれず文字化けしたりする。  
-長く改変するなら、全部のファイルをBOM付きUTF-8にしてしまうのがいいと思う。  
+Mixed encodings can cause reading failures and garbled text.  
+If you're going to modify for a long time, I think it's best to convert all files to UTF-8 with BOM.
 
-ひとつひとつ保存しなおすのは大変だ。エンコードの変更ツールなどを使って一気にやりたい。  
-今のところ特に変更していない人は、とりあえずShift_JISで作ってみよう。  
+Saving each one individually is tough. Use encoding change tools to do it all at once.  
+For now, if you haven't changed anything, just create it with Shift_JIS.
 
-<details><summary>今のところ読み飛ばしていい補足</summary>  
+<details><summary>Supplementary info you can skip for now</summary>
 
-他にUTF-8が関わること。EmueraのERHで『#DIM SAVEDATA』を使ってセーブ可能なキャラ型変数や多次元文字列変数を定義するには、<br>
-config『セーブデータをバイナリ形式で保存する』の設定をYESにすることが必須。<br>
-YESにするとセーブデータは自動的にUTF-8で保存される。<br>
+There's another thing involving UTF-8. To define save-enabled character-type variables and multidimensional string variables using `#DIM SAVEDATA` in Emuera's ERH,  
+you must set the config "Save data in binary format" to YES.  
+When set to YES, save data is automatically saved in UTF-8.
 
 </details>
 
 ---  
 
-## `@SYSTEM_TITLE`  
-作成した『TITLE.ERB』がShift-JISになっていることを確かめて、  
+## `@SYSTEM_TITLE`
+Make sure your created `TITLE.ERB` is in Shift-JIS encoding, then
 
 ``` { #language-erb title="ERB" }  
-PRINTL タイトル画面  
+PRINTL Title Screen  
 WAIT  
 ```
 
-と入力してみよう  
+Try inputting this.
 
-起動すると、さっきタイトル画面が表示されたタイミングで、  
-『タイトル画面』  
-という文字が表示され、停止しる。  
+When you start the game, instead of when the title screen was displayed before,  
+the text "Title Screen" will be displayed and the game will pause.
 
 ---  
 
-## emuera.log  
-クリックするとエラーが出る。  
+## emuera.log
+Clicking causes an error.
 
 ``` { #language-erb title="ERB" }  
-関数の終端でエラーが発生しました。  
-予期しないスクリプト終端です。  
-※※※ログファイルを～emuera.logに出力しました  
+An error occurred at the end of a function.  
+Unexpected script end.  
+***Check the log file for details, output to emuera.log  
 ```
 
-この「emuera.log」というのが、eraをいじると長くお付き合いするパートナーだ。  
-一旦ゲームを閉じよう。  
-Emuera1824.exeのあるところに、emuera.logというファイルが生成されている。  
-ここにはどこでどんなエラーが起きたかが保存される。  
+This "emuera.log" will be your long-term partner when modifying era.  
+Close the game for now.  
+A file called emuera.log has been created where Emuera1824.exe is located.  
+This saves what errors occurred and where.
 
-どの程度警告を貰うかはconfigで設定できる。  
-Emuera製作者のひとり、`妊）|дﾟ)の人`様が  
-おすすめの開発者向け設定を公開してくださっている。ありがたい。  
+How many warnings you receive can be set in config.  
+One of the Emuera creators, `妊)|дﾟ)`, has published recommended developer settings. Very helpful.
 
-- [eratohoまとめ V3→Emueraについての補足→開発者のためのEmuera講座](Emuera-etc.md#emuera_1)
+- [eratoho wiki V3 → Emuera Notes → Emuera Tutorial for Developers](Emuera-etc.md#emuera_1)
 
-今はこれらの設定を自動的に行ってくれるワンクリック開発者モードというものもある。  
+There's also a one-click developer mode that automatically applies these settings now.
 
 ---  
 
-## 関数の区切り、境目ってどこ？  
-SYSTEM_FLOW.ERBの続きを見ていこう。  
+## Where are Function Boundaries?
+Let's continue looking at SYSTEM_FLOW.ERB.
 
-『@なんとか』＝関数は、  
-１ファイル内に１つしかないこともあるが、  
-２つ以上ある場合、次の『@なんとか』が始まる前までがひとまとまりだ。  
+`@something` = functions  
+may have only one per file, but  
+when there are two or more, everything up to the next `@something` is one group.
 
-なので、@SYSTEM_TITLEの中身は以下になる。  
-まるごとTITLE.ERBに貼り付けしてみよう。  
+So the contents of @SYSTEM_TITLE are as follows.  
+Try copying everything to TITLE.ERB.
 
 ``` { #language-erb title="ERB" }  
 @SYSTEM_TITLE  
 #DIMS VERSIONNAME  
-;このタイミングでグローバル変数を読んでおけば取りこぼしが無くなる。  
-;GLOBALはRESETDATAやLOADDATAによって初期化・上書きされない。  
-;必要に応じてコメントアウトを解除すること。  
+;At this timing, reading global variables prevents missed data.  
+;GLOBAL is not initialized or overwritten by RESETDATA or LOADDATA.  
+;Uncomment as needed.  
 ;LOADGLOBAL  
 
-;バージョン表記をVERSIONNAMEに作成。  
-;1001なら1.001、1100なら1.10と表示される  
+;Create version notation in VERSIONNAME.  
+;1001 displays as 1.001, 1100 displays as 1.10  
 VERSIONNAME = {GAMEBASE_VERSION / 1000}.%TOSTR(GAMEBASE_VERSION % 1000 / 10,"00")%  
 SIF GAMEBASE_VERSION % 10 != 0  
 	VERSIONNAME += TOSTR(GAMEBASE_VERSION % 10)  
 
-;タイトル表示。  
+;Title display.  
 DRAWLINE   
 
 ALIGNMENT CENTER  
@@ -260,7 +185,7 @@ ALIGNMENT LEFT
 
 DRAWLINE   
 
-;選択肢表示  
+;Choice display  
 $TITLE_SELECT  
 PRINTSL "[0] " + GETCONFIGS("システムメニュー0");  
 PRINTSL "[1] " + GETCONFIGS("システムメニュー1");  
@@ -269,438 +194,384 @@ $TITLE_INPUT
 INPUT  
 IF RESULT == 0  
 	RESETDATA  
-	;ADDDEFCHARAはeramakerの初期化処理を再現するために存在する専用の関数です  
-	;他の場面ではADDCHARAを使用してください  
+	;ADDDEFCHARA exists as a dedicated function to reproduce eramaker's initialization process.  
+	;Use ADDCHARA in other situations.  
 	ADDDEFCHARA  
 	BEGINWORD '= "FIRST"  
 	CALL MAIN_LOOP  
 ELSEIF RESULT == 1  
 	CALL LOADGAME_EX  
 	GOTO TITLE_SELECT  
-	;LOADGAME_EXでLOADを行わずに戻ってきた場合、もう一度選択しなおす。  
+	;If returned from LOADGAME_EX without LOADing, select again.  
 ELSE  
-	REUSELASTLINE 無効な値です  
+	REUSELASTLINE Invalid value  
 	GOTO TITLE_INPUT  
 ENDIF  
 ```
 
 ---  
 
-## DIMってなに？  
-一行目の  
+## What is DIM?
+Let's look at the first line.
 
 ``` { #language-erb title="ERB" }  
 #DIMS VERSIONNAME  
 ```
 
-を見てみよう。  
+This, generally called `DIM`, is called a "user-defined variable."  
+"User" here refers to Emuera users - people who make games with Emuera.  
+(Players are end users)
 
-`DIM`と一般に呼ばれるこれは『ユーザー定義の変数』と呼ばれている。  
-ユーザーとは、Emueraのユーザーのことなので、Emueraでゲームを作る人達のことだ。  
-（プレイヤーはエンドユーザー）  
+In other words, it's a variable that we can define, with any name we like.
 
-つまり、我々が定義していい変数、自分で好きな名前をつけていい変数という意味だ。  
+Japanese can be used too. However, opinions differ on using Japanese in variable names.  
+Those who actively use Japanese names to improve readability.  
+Those who find it confusing when combined with Japanese strings.  
+Those who combine English keywords because grep searches catch the main text when searching.  
+It depends on personal preference.
 
-日本語も使える。ただし変数名に日本語を使うことについて、意見は分かれるようだ。  
-日本語名を積極的に使って可読性をあげよう派。  
-日本語名は日本語文字列と組み合わせるとき混じってわかりにくい派。  
-GREPで検出するとき地の文を検索でひっかけてしまうから英語のキーワードと組み合わせる派等。  
-個人の考えによる。  
-
-DIMは『@なんとか』の次の行に書くという決まりがある。  
-（式中関数の場合は`#FUNCTION`や`#FUNCTIONS`が先に挟まるとか、  
-　広域で使えるようにするERHという専用ファイルもあるが）  
+DIM must be written on the next line after `@something`.  
+(For expression functions, `#FUNCTION` or `#FUNCTIONS` comes first, and there's also ERH, a dedicated file for making variables usable across a wider scope)
 
 ``` { #language-erb title="ERB" }  
-#DIM 好きな名前  
+#DIM 喜欢的名字  
 ```
 
-なら数字を入れられる箱  
+is a box that can hold numbers.
 
 ``` { #language-erb title="ERB" }  
-#DIMS 好きな名前  
+#DIMS 喜欢的名字  
 ```
 
-なら文字列を入れられる箱  
-のようだ。  
+is a box that can hold strings.
 
-（だいたい末尾に`S`がつくと文字列版という意味になる。  
-　`#FUNCTION`,`#FUNCTIONS` とかも同じだ。  
-　文字列を英訳すると`character`,`string`。  
-　.NETや他言語で文字列関連の処理を、StringクラスとかStringオブジェクトとか呼ぶ。  
-　`S`はその略）  
+(Generally, adding `S` at the end means the string version.  
+ `#FUNCTION`, `#FUNCTIONS` are the same.  
+ String translates to "character" or "string".  
+ In .NET and other languages, string-related processing is called String class or String object.  
+ `S` is the abbreviation.)
 
-このように書いて変数を作ることを『変数を宣言する』と表現する。  
+Declaring variables like this is called "declaring a variable."
 
-他にもさまざまなパターンがある。  
+There are various other patterns too.
 
-- [EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→ユーザー定義の変数](../Emuera/user_defined_variables.md)  
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → User-defined Variables](../Emuera/user_defined_variables.md)
 
-中身が何であるかわかりやすく、検索しやすいように名前をつけて可読性を上げよう。  
-複数人が同じ変数を別の用途で使い、意図せず上書きしてしまうことを防止しよう。  
-などの目的で、初めから用意されている「`LOCAL`」「`LOCALS`」「`ARG`」「`ARGS`」  
-「`A`」「`B`」「`C`」などの一文字、二文字の変数の代わりとして使われることが多い。  
+Give variables names that make their contents clear and searchable to improve readability.  
+Prevent multiple people from using the same variable for different purposes and accidentally overwriting.  
+This is why `LOCAL`, `LOCALS`, `ARG`, `ARGS`, `A`, `B`, `C`, and other single/two-character variables are often replaced with user-defined variables.
 
-- [eraシリーズを語るスレ　まとめWiki　V3→システム改造Q&A→基礎知識→プライベート変数について(A～ZやLOCALではなく#DIMで)](erawiki-modification-QandA.md#azlocaldim)  
+- [era series discussion thread wiki V3 → System Modification Q&A → Basics → About Private Variables (A-Z and LOCAL, not #DIM)](erawiki-modification-QandA.md#azlocaldim)
 
-古い処理はわかりにくいから面倒くさい。誰か全部`DIM`に直して欲しい。  
-よくわかる。  
-が、まとめてくれる人に『なんで最新化しないの？』と問うのはやめよう。  
-みんなで遊び散らかして帰った後の部屋を見て『なんで掃除しないの？』と部屋主に問えば、  
-悪鬼羅刹と化すだろう。そういうこともある。  
+Old processing is hard to understand and tedious. I understand someone wants to convert everything to `DIM`.  
+But don't ask those who clean up "why don't you update to the latest?"  
+When everyone plays around and leaves, the room is a mess, asking the host "why don't you clean?" makes you seem like a demon. That happens too.
 
-ここでは  
+Here,
 
 ``` { #language-erb title="ERB" }  
 #DIMS VERSIONNAME  
 ```
 
-となっているので、  
-`VERSIONNAME`と名付けられた、文字列の入る箱を作っている。  
+is used, so a string box named `VERSIONNAME` is being created.
 
 ---  
 
-## グローバル変数ってなに？  
-次の行を見てみよう。  
+## What are Global Variables?
+Let's look at the next line.
 
 ``` { #language-erb title="ERB" }  
-;このタイミングでグローバル変数を読んでおけば取りこぼしが無くなる。  
-;GLOBALはRESETDATAやLOADDATAによって初期化・上書きされない。  
-;必要に応じてコメントアウトを解除すること。  
+;At this timing, reading global variables prevents missed data.  
+;GLOBAL is not initialized or overwritten by RESETDATA or LOADDATA.  
+;Uncomment as needed.  
 ;LOADGLOBAL  
 ```
 
-と書かれている。  
-この行は、グローバル変数を使っていなければ無視していい。  
+This line can be ignored if you're not using global variables.
 
-グローバル変数とはゲーム全体で使う変数だ。  
+Global variables are variables used throughout the game.
 
-ひとくちに全体、といってもイメージが湧きにくいと思う。  
+Even saying "throughout," it's hard to imagine.
 
-例えば、ゲームで遊んで、セーブデータＡを保存する。  
-また新しくはじめて、セーブデータＢを保存する。  
-データＡとＢの中身は干渉しない。  
-これが普通のセーブできる変数だ。  
+For example, you play the game and save Save Data A.  
+You start fresh again and save Save Data B.  
+Data A and B don't interfere with each other.  
+These are normal savable variables.
 
-しかし、ＡＢ両方の情報が同じ場所に保存されることもある。  
-タイトル画面から閲覧できる回想モードや、コンフィグ設定の保存などだ。  
+However, information for both A and B can sometimes be stored in the same place.  
+Like the recall mode accessible from the title screen, or saving config settings.
 
-タイトル画面から閲覧できる回想モードはたいてい、  
-セーブデータに関わらずイベントを見さえすれば回想を閲覧できるようになる。  
-Ａで見たイベント、Ｂで見たイベント、どちらもフラグが立っている。  
-コンフィグ設定も、Ａで保存した設定をＢで読み込んだりできる。  
+The recall mode accessible from the title screen usually allows viewing events regardless of save data - as long as you've seen the event in any save, you can view it in recall.  
+Flags are set for events seen in A and events seen in B.  
+Config settings can also be loaded from A and used in B.
 
-こういう、セーブデータに縛られない  
-ゲーム全体で使う変数のことをグローバル変数という。  
+These are called global variables - variables used across the entire game, not bound to save data.
 
-セーブできる場合はグローバルセーブデータと読んだりもする。  
-グローバルセーブデータはセーブデータとは別に、  
-global.savというファイルで保存される。  
+When savable, it's sometimes called global save data.  
+Global save data is saved separately in a file called global.sav.
 
-|変数名|性質|
+|Variable Name|Property|
 |:-|:-|
-|GLOBAL|SAVEGLOBAL命令によりセーブでき、LOADGLOBAL命令によりロードできる。|  
-|GLOBALS|GLOBALの文字列型版。|  
-|#DIM GLOBAL SAVEDATA 好きな名前|DIM版|  
+|GLOBAL|Savable with SAVEGLOBAL command, loadable with LOADGLOBAL command.|
+|GLOBALS|String version of GLOBAL.|
+|#DIM GLOBAL SAVEDATA 喜欢的名字|DIM version|
 
-などがこれに該当する。  
-
-もしグローバル変数を使っているなら、ここの  
+If you're using global variables, here
 
 ``` { #language-erb title="ERB" }  
 ;LOADGLOBAL  
 ```
 
-のコメントアウト『;』を外して  
+remove the `;` to uncomment
 
 ``` { #language-erb title="ERB" }  
 LOADGLOBAL  
 ```
 
-にして、ここでグローバル変数を読み込んでおくとゲームに反映されるので  
-必要に応じて使ってね、ということだ。  
+so that global variables are loaded here and reflected in the game. Use as needed.
 
 ---  
 
-## バージョンを計算して文字列化  
-次の行を見てみよう。  
+## Calculating and Stringifying Version
+Let's look at the next line.
 
 ``` { #language-erb title="ERB" }  
-;バージョン表記をVERSIONNAMEに作成。  
-;1001なら1.001、1100なら1.10と表示される  
+;Create version notation in VERSIONNAME.  
+;1001 displays as 1.001, 1100 displays as 1.10  
 VERSIONNAME = {GAMEBASE_VERSION / 1000}.%TOSTR(GAMEBASE_VERSION % 1000 / 10,"00")%  
 SIF GAMEBASE_VERSION % 10 != 0  
 	VERSIONNAME += TOSTR(GAMEBASE_VERSION % 10)  
 ```
 
-パッと見て絶望、なんじゃこりゃ。いきなりハードルたっけえわ。と半笑いになる。  
+At first glance, it looks despairing - what is this? The hurdle is too high. You might laugh.
 
-実は、1000で割っているだけだ。era basicの都合で、計算結果に小数点を扱えない。  
+Actually, it's just dividing by 1000. Due to era basic's limitations, decimal results can't be handled.
 
-- [eratohoまとめ V3→開発関連→ERB構文講座2→小数の乗算](eratohowiki-ERBmanual.md#_36)  
+- [eratoho wiki V3 → Development Related → ERB Syntax Tutorial 2 → Decimal Multiplication](eratohowiki-ERBmanual.md#_36)
 
-<!--//（2021/05/12 スレでご指摘いただいて表現の修正と追記。感謝）  -->
-そこでバージョンを表示する際、小数っぽく見えるように  
-数字を文字列として整えて表示する準備をしている。  
+So when displaying the version, to make it look like a decimal,  
+preparations are being made to format the numbers as strings.
 
-なので、ここはこの計算にお任せして見なかったことにしてもいい。  
-理解したい場合、ひとつひとつ見ていこう。  
+So here, you can ignore this and pretend you didn't see it - leave it to this calculation.  
+If you want to understand, let's go through it step by step.
 
-### VERSIONNAME  
-<!--//（2021/05/12 スレでご指摘いただいて修正。感謝）  -->
-これは上のほうで宣言されているユーザー定義の変数だ。  
-『DIMS』で宣言されていたので、文字列を格納できる。  
+### VERSIONNAME
+This is the user-defined variable declared earlier.  
+Since it was declared with `DIMS`, it can hold strings.
 
-右側であれこれ計算しているように見えるが、  
-結果は文字として扱っていることがわかる。  
+It looks like various calculations are being done on the right side, but  
+you can see that the result is being treated as characters.
 
-### GAMEBASE_VERSION  
-前半にでまくったGamebase.csvに関わる情報がついに現れた。  
-『GAMEBASE_VERSION』には、Gamebase.csvで設定した  
-バージョンが格納されている。  
+### GAMEBASE_VERSION
+Information related to Gamebase.csv that appeared earlier has finally arrived.  
+`GAMEBASE_VERSION` contains the version set in Gamebase.csv.
 
-ここで思い出して欲しいのは、バージョンというのは  
-通常『1.01』とか『0.001』とか小数点で表示されているのに、  
-Gamebase.csvには『1001』のように四桁の数値で書いたことだ。  
+Recall that versions are usually displayed like `1.01` or `0.001` with decimals,  
+but in Gamebase.csv, it's written as a four-digit number like `1001`.
 
-バージョン情報らしく見せるには1000で割れば済む。  
-しかし小数点以下の結果はとれない。  
+To make it look like a version, dividing by 1000 works.  
+However, decimal results can't be obtained.
 
-なので、  
-文字列『`.`』の前に、4桁のバージョンを1000で割った数字を置く。  
-文字列『`.`』の後に、4桁のバージョンを1000で割った数字の余りを、更に10で割って、数字を2桁でゼロ埋めして文字列として置く。  
-更に端数があれば、その後ろに文字列として置く。  
+So,  
+before the string `.`, place the four-digit version divided by 1000.  
+After the string `.`, place the remainder of the four-digit version divided by 1000, further divided by 10, as a two-digit zero-padded string.  
+If there's a remainder, place it after that as a string.
 
-すべてをくっつけると、小数っぽく見える文字列になる。  
-ということをしている。  
+When concatenated, it becomes a string that looks like a decimal.
 
-（１桁目がメジャーバージョン  
-　小数点以下１～２桁目がマイナーバージョン  
-　小数点以下３桁目が不具合修正  
-　と分割するイメージだと思う）  
+(Think of it as splitting: first digit is major version,  
+ first to second decimal places are minor version,  
+ third decimal place is bug fix)
 
-こんな大変なことをするくらいならいっそ初めから文字列でいいのでは？  
-という気がしてくるだろうが、そうもいかない。  
+It's tempting to think "why not just make it a string from the beginning if this much work is needed?"
 
-バージョンは数字であって欲しい理由がある。  
-慣れないとちょっとわかりにくいが、  
-同じ数字の『1』でも、パソコンに文字列として扱うように頼めば  
-計算はできない。  
-文字は文字という情報でしかなく、数字だろうと平文だろうと  
-パソコン側に判別する基準がないからだ（判別する関数を作れば別）  
+But there's a reason the version needs to be a number.  
+Even though it's unfamiliar, even though it's the same number `1`, if you ask the computer to treat it as a string, it can't do calculations.  
+Characters are just character information - whether it's a number or plain text, the computer has no way to distinguish (unless you create a function to distinguish)
 
-数字と文字列の違いのひとつは、  
-計算したり、数値の大小を比較したりできるかどうかだ。  
+One difference between numbers and strings is whether you can perform calculations or compare magnitudes.
 
-バージョン0.8以下は互換性がない、と指定したい場合に、  
-0.7はだめ、0.6もだめ…と文字列でひとつひとつ指定したくはない。  
+If you want to specify that versions 0.8 and below have no compatibility,  
+you don't want to specify each one with strings like 0.7 is no good, 0.6 is no good...
 
-Gamebase.csvで『バージョン違い認める？』一か所を指定するだけで、  
-その数字未満を一括不可にできたほうが楽だ。  
-そのためには数字でなくてはならない。  
+Being able to make all numbers below that one value invalid by just specifying "accept version differences?" in one place in Gamebase.csv is easier.  
+For that, it must be a number.
 
-そんなわけで、一見複雑なことをやっているように見えるのは、  
-表示を整えるため苦肉の策のようだ。  
+So, although it looks like complex processing is being done,  
+it seems to be a workaround to format the display.
 
-### `{~~}`ってなに？  
-と、聞けばなんとなくやっていることはわかっても、  
-それを自力で読み解けなければ意味がないと思うかもしれない。  
-知らない記号がいくつか出てきている。  
+### What is `{~~}`?
+You might understand vaguely what's being done, but if you can't decipher it yourself, it doesn't matter.  
+There are several unfamiliar symbols.
 
-『`{~~}`』はFORM文字列とかFORM構文とか書式付文字列とか呼ばれている。  
+`{~~}` is called a FORM string, FORM syntax, or formatted string.
 
-`PRINTFORM`や`CALLFORM`などの命令で使うと変数や変数の計算を展開できる。  
-と表現しても今はわかりにくいかもしれないが、  
-ERBを開いたことがあれば、口上や地の文によく使われる下のような文でおなじみだろう。  
+When used with commands like `PRINTFORM` or `CALLFORM`, it can expand variables and variable calculations.  
+You might not understand this yet if you've never opened an ERB, but you've probably seen it in character dialogue and narration - lines like:
 
 ``` { #language-erb title="ERB" }  
-PRINTFORM 好感度が{CFLAG:TARGET:好感度}になった。  
+PRINTFORM Affection level became {CFLAG:TARGET:好感度}.  
 ```
 
-『`{~~}`』の用途は二つある。  
-ここでは用途その１『変数の中身、あるいは計算式の結果をくれ』という意味で使われている。  
-<!--//(2021/05/12 wiki編集スレでご指摘いただいて修正。感謝）  -->
+`{~~}` has two uses.  
+Here, it's being used for purpose #1: "give me the variable's contents, or the result of a calculation."
 
 ``` { #language-erb title="ERB" }  
 VERSIONNAME = {GAMEBASE_VERSION / 1000}～  
 ```
 
-を見てみよう。  
+`GAMEBASE_VERSION` is being divided by 1000. That's extracting the thousands place.  
+Because it's wrapped in `{}`, the result can be displayed.
 
-`GAMEBASE_VERSION`を1000で割っている。1000の位を取り出している。  
-それが`{}`という記号で挟まれていることによって、結果を表示できる状態になる。  
+If the version specified in Gamebase.csv is `1`, then `GAMEBASE_VERSION` containing it is also `1`.  
+`/` means `÷`, so `1 / 1000 = 0.001`, but era discards decimal places. The result is `0`.
 
-Gamebase.csvで指定されたバージョンが『1』なら、それが格納された`GAMEBASE_VERSION`も『1』だ。  
-『`/`』は『÷』という意味なので『`1 / 1000 = 0.001`』だが、  
-eraは結果から小数点以下の数字を切り捨てる。結果は『`0`』になる。  
+`GAMEBASE_VERSION / 1000` is wrapped in `{}`, and the result `0` is a number, but since the expression following it is a string,  
+by adding, the number is also treated as a string and assigned as a string to `VERSIONNAME`.
 
-`GAMEBASE_VERSION / 1000`を`{}`で挟み、結果『`0`』は数字だが、その後に続く式が文字列なので、  
-加算することで数字も文字列として扱われ、文字列として`VERSIONAME`に代入される。  
+Use #2 of `{~~}`: "line concatenation" is not related here yet, so I'll link to the wiki's explanation.
 
-『`{~~}`』の用途その２『行の連結』は、ここではまだ関係ないので、  
-Wikiの説明されているページを貼っておく。  
-
-- [EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→一般→行の連結](../Emuera/expression.md#_2)  
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → General → Line Concatenation](../Emuera/expression.md#_2)
 
 ---  
 
-### `%~~%`ってなに？  
-『`%~~%`』は『文字列変数の中身、あるいは文字列を使った計算式の結果をくれ』という意味だ。  
+### What is `%~~%`?
+`%~~%` means "give me the contents of a string variable, or the result of a string calculation."
 
-数字ではなく文字列に対して使う。  
-要するに『`{~~}`』用途その１『変数の中身、あるいは計算式の結果をくれ』の文字列版だ。  
-<!--//(2021/05/12 wiki編集スレでご指摘いただいて修正。感謝）  -->
+It's used for strings, not numbers.  
+Essentially, this is the string version of `{~~}` use #1: "give me the variable's contents, or the result of a calculation."
 
 ``` { #language-erb title="ERB" }  
 VERSIONNAME = {GAMEBASE_VERSION / 1000}.%TOSTR(GAMEBASE_VERSION % 1000 / 10,"00")%  
 ```
 
-と書かれている。`{GAMEBASE_VERSION / 1000}`の次にある『`.`』はただの文字列だ。  
+The `.` after `{GAMEBASE_VERSION / 1000}` is just a string.
 
 ``` { #language-erb title="ERB" }  
 %TOSTR(GAMEBASE_VERSION % 1000 / 10,"00")%  
 ```
 
-を見てみよう。『`%%`』に挟まれている。  
-`GAMEBASE_VERSION`は数字なのに、なぜ文字列？　と思うかもしれない。  
+This is wrapped in `%%`.  
+You might wonder why it's a string when `GAMEBASE_VERSION` is a number.
 
 ``` { #language-erb title="ERB" }  
 GAMEBASE_VERSION % 1000 / 10  
 ```
 
-は、1000で割って余りを計算したり、それを更に10で割ったりしている。  
-数字でなくてはできないことだ。  
-そこに『`TOSTR()`』が関わってくる。  
+This calculates the remainder when divided by 1000, then divides that by 10.  
+This is something that can only be done with numbers.  
+That's where `TOSTR()` comes in.
 
 ---  
 
-### `TOSTR()`ってなに？  
-『文字列に変えてくれ』という意味だ。  
+### What is `TOSTR()`?
+This means "convert to string."
 
-`TOSTR()`はEmueraに最初から用意されている、式中で使える関数、というものだ。  
+`TOSTR()` is a function usable in expressions, pre-built into Emuera.
 
-- [EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→式中で使える関数→str TOSTR(int value, str format = "")](../Reference/TOSTR.md)  
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → Functions Usable in Expressions → str TOSTR(int value, str format = "")](../Reference/TOSTR.md)
 
-式中で使える関数には色々便利な機能のものがあるが、大量すぎて覚えるのは難しい。  
+There are many convenient expression functions, but there are too many to memorize.
 
-デフォルトの変数名や`DIM`宣言された変数名ではなく、  
-謎の英単語風のところはだいたい命令だが、命令には`()`がつかない。  
-ついていたら関数だが、`@`や`CALL`のないところに唐突にある場合は式中で使える関数だ。  
-この式中で使える関数の一覧がのっているページで検索してみよう。  
-（この判断が正しいかはともあれ、だいたいこれで探せると思う）  
-[命令・式中関数一覧](../Reference/README.md)
+The mysterious English-looking parts that aren't default variable names or DIM-declared names are mostly commands, and commands don't have `()`.  
+If they have `()`, they're functions, and if they appear abruptly without `@` or `CALL`, they're functions usable in expressions.  
+Search the page listing these expression functions.  
+(Whether this judgment is correct aside, I think you can mostly find things this way)  
+[List of Commands and Expression Functions](../Reference/README.md)
 
-CTRLキーとFキーを同時押しすると、  
-ブラウザのページ内検索ウィンドウが表示される。  
+Press CTRL and F together to open the browser's page search.
 
-検索するとき、`()`の中身まで検索しようとすると見つからない。  
-`()`より前の単語だけ抜き出して検索しよう。  
+When searching, searching for including what's inside `()` won't find it.  
+Search for just the word before `()`.
 
-もしない場合、そのバリアントの内部でgrep検索してみよう。  
-処理が書かれているところを探したいので『@検索したい単語』で検索する。  
-見つけられたら、誰かが自作した式中で使える関数だったということだ。  
+If it's not there, try grep searching in the variant's internal files.  
+You want to find where the processing is written, so search with `@search term`.  
+If found, it was a custom expression function someone created.
 
-- [eraシリーズを語るスレ　まとめWiki　V3→システム改造Q&A→基礎知識→GREPのやり方](erawiki-modification-QandA.md#grep)  
+- [era series discussion thread wiki V3 → System Modification Q&A → Basics → How to GREP](erawiki-modification-QandA.md#grep)
 
-（エディタにVisualStudio Code等を使っていると、関数名や式中関数名をクリックしたら  
-　自動的にそれが記述されているファイルを開く機能を公開してくれてる人がいる）  
+(If using Visual Studio Code or other editors, some people have published features that automatically open the file where a function or expression function name is defined when clicked)
 
-ともあれ、`TOSTR`は数字を文字列に変換する機能だとわかる。  
+In any case, `TOSTR` converts numbers to strings.
 
-数字にカンマをつけたり、ゼロで埋めて桁数をそろえたいときに便利な機能だ。  
+It's convenient for adding commas to numbers or zero-padding to align digit count.
 
-ここでは、  
-`01、02、03…`という風に、数字が1桁でもゼロで埋めて2桁で表示して欲しい  
-という意味で、"`00`"と指定している。  
-（こうやってゼロで埋めることをゼロパディングと読んだりする）  
+Here,  
+it's specified as `"00"` to display numbers like `01, 02, 03...` as two digits with zero-padding even for single digits.  
+(Zero-padding like this is sometimes called zero padding)
 
 ---  
 
-### `SIF`ってなに？  
+### What is `SIF`?
 
 ``` { #language-erb title="ERB" }  
 SIF GAMEBASE_VERSION % 10 != 0  
 	VERSIONNAME += TOSTR(GAMEBASE_VERSION % 10)  
 ```
 
-を見てみよう。  
+`SIF` is a type of conditional branch - a simplified one-line version of `IF～ELSE～ENDIF`.
 
-`SIF`は条件分岐というやつだ。  
-`IF～ELSE～ENDIF`のような条件分岐の簡略化で、一行で行う`IF`文だ。  
+- [eramaker ERB File Format (Provisional) → Variables and Commands → Commands → Conditional Judgment](../eramaker/ERB_format.md#_4)
 
-- [eramaker ERBファイル書式（暫定版）→変数と命令→命令について→条件判断する](../eramaker/ERB_format.md#_4)  
-
-`SIF`は条件式が0でなければ（成立した場合）次の行を実行します。0の場合（成立しない場合）、次の行をスキップします。  
-と書かれている。  
+SIF executes the next line if the conditional expression is not 0 (when true). If 0 (when false), it skips the next line.
 
 ``` { #language-erb title="ERB" }  
 SIF XXXXX  
 ```
 
-の、`XXXXX`のところが条件を書くところだ。  
-その次行が、条件が通ったときに実行する処理だ。  
+The `XXXXX` is where you write the condition.  
+The next line is the processing to execute when the condition passes.
 
 ``` { #language-erb title="ERB" }  
 SIF GAMEBASE_VERSION % 10 != 0  
 ```
 
-の場合  
-`GAMEBASE_VERSION`を10で割った余り（%で余りを計算）が、  
-0でなければ（`!`は否定という意味。`!=`だとイコールの否定、要するに同じではないという意味になる）  
-という意味になる。  
+Here, it means if the remainder when dividing `GAMEBASE_VERSION` by 10 (`%` calculates the remainder)  
+is not 0 (`!` means negation, so `!=` means "not equal to")  
+Dividing by 10 and getting a non-zero means there's a ones digit.  
+The remainder is the ones digit itself.
 
-10で割ってゼロにならないということは、1の位があるということだ。  
-余りは1の位の数そのものになる。  
-
-なので、  
+So,
 
 ``` { #language-erb title="ERB" }  
-SIF GAMEBASE_VERSION % 10 != 0	;1の位があれば  
-	VERSIONNAME += TOSTR(GAMEBASE_VERSION % 10)	;1の位を文字列として追加してくれ  
+SIF GAMEBASE_VERSION % 10 != 0	;if there's a ones digit  
+	VERSIONNAME += TOSTR(GAMEBASE_VERSION % 10)	;add the ones digit as a string  
 ```
 
-という意味になる。  
-
-※`SIF`は処理が増えて行数が増えると`IF`文に書きなおさなくてはならなかったり、  
-　コメントをつけると行がわかりにくくなったり  
-　処理をコメントアウトすると次の行に影響したりすることから、あまり好まない人もいる。  
-　一方で、慣れると作っているときは便利なので多用してしまいがちでもある。個々の考えによる。  
+Note that some people don't like `SIF` because when processing increases and lines get longer, it needs to be rewritten as an `IF` statement, comments make lines hard to read, and commenting out processing affects the next line.  
+On the other hand, once you're used to it, it's convenient and tends to be overused. It depends on individual preference.
 
 ---  
 
-### 補足 `=`と`'=`  
+### Supplement `=` and `'=`
 
 ``` { #language-erb title="ERB" }  
 VARSIONNAME =   
 ```
 
-は、今なら  
+Can now also be written as
 
 ``` { #language-erb title="ERB" }  
 VARSIONNAME '= ""  
 ```
 
-<!--//(2021/05/12 スレでご指摘いただいて修正。感謝)  -->
-と書くこともできる。  
+- [EmueraWiki → Emuera Added Extended Syntax → General → Assignment to String Variables Using String Expressions](../Emuera/expression.md#_9)
 
-- [EmueraWiki→Emueraで追加された拡張文法→一般→文字列式を用いた文字列変数への代入](../Emuera/expression.md#_9)
+This was originally unavailable syntax that became usable as Emuera evolved.  
+It's clearer that it's a string assignment.
 
-これは元は使えなかった書き方で、Emueraが進化して使えるようになった。  
-文字列の代入である、ということがわかりやすい。  
+However, when using this, you need to enclose with `"~~"` like `字符串变量名 '= "啊啊"`  
 
-ただしこれをすると『`文字列変数名 '= "あああ"`』のように`"~~"`で囲う必要がある。  
-
-ちょっと面倒にもなるが、日本語の変数と文字列の日本語が入り乱れているときでも混乱しにくい。  
-また、末尾に空白が入った文字列や空白のみの文字列を代入する場合にパッと見てわかりやすい。  
-<!--//(2021/05/12 スレでご指摘いただいて追記。感謝)  -->
+It can be a bit troublesome, but it's less confusing even when Japanese variables and Japanese strings are mixed.  
+Also, it's easier to see at a glance when assigning strings with trailing spaces or spaces only.
 
 ---  
 
-## メイン部分の表示  
-ようやく次の処理を見てみよう。  
+## Main Display Section
+Let's finally look at the next processing.
 
 ``` { #language-erb title="ERB" }  
-;タイトル表示。  
+;Title display.  
 DRAWLINE   
 
 ALIGNMENT CENTER  
@@ -715,177 +586,162 @@ ALIGNMENT LEFT
 DRAWLINE   
 ```
 
-とある。  
+---
+
+### What is `DRAWLINE`?
+This means "draw a dividing line."  
+Often used for scene changes and creating headings.
+
+- [Reference → `DRAWLINE`](../Reference/DRAWLINE.md)
+
+> DRAWLINE draws a line from the left edge of the screen to the right edge like "----".
 
 ---  
 
-### `DRAWLINE`って？  
-区切り線を引いて欲しいという意味だ。  
-シーン変更、見出し作りなどでよく使う。  
+### `_Replace.csv`
+By default in Emuera, `DRAWLINE` creates a line like `-` connected together.  
+Some might want to change it to a solid line `─` or make it a double line with `=`.  
+How do you change the line displayed when using `DRAWLINE`?
 
-- [リファレンス→`DRAWLINE`](../Reference/DRAWLINE.md)
+- [EmueraWiki → eramaker basic Developer Info → _replace.csv](../Emuera/replace.md)
 
->DRAWLINEを使うと画面の左端から右端まで----と線を引きます。  
-
-と書かれている。  
-
----  
-
-### `_Replace.csv`  
-`DRAWLINE`は、Emueraのデフォルト設定では『`-`』を繋げたような線になっている。  
-これを隙間のない線『`─`』にしたり、  
-あるいは『`=`』にして二重線にしたい人もいると思う。  
-`DRAWLINE`を使ったとき表示される線を変えるにはどうしたらいいのか。  
-
-- [EmueraWiki→eramaker basic 開発者向け情報→_replace.csv](../Emuera/replace.md)
-
-etc1821フォルダ内に_Replace.csvというファイルがある。  
-これをコピーしてerakanonフォルダ内CSVフォルダ内にペーストしてみよう。  
+There's a file called _Replace.csv in the etc1821 folder.  
+Copy this and paste it into the CSV folder in the erakanon folder.
 
 ``` { #language-erb title="ERB" }  
-;DRAWLINEの表示文字  
-;DRAWLINEで表示する文字  
-;DRAWLINE文字 , (半角文字)  
-;DRAWLINE文字 , +  
+;DRAWLINE display character  
+;Character to display for DRAWLINE  
+;DRAWLINE character , (half-width character)  
+;DRAWLINE character , +  
 ```
-
-と書かれている行がある。  
 
 ``` { #language-erb title="ERB" }  
-;DRAWLINE文字 , +  
+;DRAWLINE character , +  
 ```
 
-から  
-『`;`』を消して  
+From here, remove `;`
 
 ``` { #language-erb title="ERB" }  
-DRAWLINE文字 , +  
+DRAWLINE character , +  
 ```
 
-にして保存してみよう。  
+and save.
 
-Emueraを起動すると、それまで  
+When you start Emuera, the part that was
 
 ```
 ------  
 ```
 
-という線だったところが  
+should now be
 
 ```
 ++++++  
 ```
 
-という線になったはずだ。  
-これだけでも若干タイトル画面にオリジナリティが出た気がしてくる。  
+This alone gives a bit more originality to the title screen.
 
-線の種類を使い分けたい人もいるだろう。  
-大見出しと小見出しで線の種類を分けたい、日付変更時だけ太い線を引きたいなど。  
+Some want to use different line types. Wanting different line types for major and minor headings, or thicker lines only for date changes, etc.
 
-``` { #language-erb title="ERB" }  
-CUSTOMDRAWLINE <文字列>  
-```
-
-という命令、  
+There's a command
 
 ``` { #language-erb title="ERB" }  
-DRAWLINEFORM <FORM文字列>  
+CUSTOMDRAWLINE <string>  
 ```
 
-という命令方法がある。  
+and a command method
 
-- [リファレンス→`CUSTOMDRAWLINE`、`DRAWLINEFORM`](../Reference/CUSTOMDRAWLINE.md)
+``` { #language-erb title="ERB" }  
+DRAWLINEFORM <FORM string>  
+```
+
+- [Reference → `CUSTOMDRAWLINE`, `DRAWLINEFORM`](../Reference/CUSTOMDRAWLINE.md)
 
 ``` { #language-erb title="ERB" }  
 CUSTOMDRAWLINE ─  
 ```
 
-のように、その都度線に使いたい記号を指定して書く。  
+Like this, specify the symbol you want to use for the line each time.
 
 ---  
 
-### `ALIGNMENT CENTER`って？  
+### What is `ALIGNMENT CENTER`?
 
-- [リファレンス→`ALIGNMENT`](../Reference/ALIGNMENT.md)
+- [Reference → `ALIGNMENT`](../Reference/ALIGNMENT.md)
 
-`ALIGNMENT` アラインメントとは、並べるとか整列とかいう意味だ。  
-文字を左揃えにしたり、中央揃えにしたり、右揃えにしたりする指定になっている。  
+Alignment means to arrange or align.  
+It specifies left-align, center-align, or right-align text.
 
 ``` { #language-erb title="ERB" }  
-ALIGNMENT RIGHT ;右揃え  
-ALIGNMENT CENTER ;中央揃え  
-ALIGNMENT LEFT ;左揃え  
+ALIGNMENT RIGHT ;right-align  
+ALIGNMENT CENTER ;center-align  
+ALIGNMENT LEFT ;left-align  
 ```
 
-通常は左揃えだが、ここではタイトル画面らしく中央に揃えている。  
+Usually it's left-aligned, but here it's center-aligned to look like a title screen.
 
 ---  
 
-### `PRINTFORML`って？  
-文字列を表示する命令の一種だ。  
+### What is `PRINTFORML`?
+This is a type of command that displays strings.
 
-- [リファレンス→`PRINT`](../Reference/PRINT.md)
+- [Reference → `PRINT`](../Reference/PRINT.md)
 
-いきなり、`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`  
-という謎の記述を見て、頭を抱えた人もいるかもしれない。  
+Suddenly seeing the mysterious description `PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`  
+might make some people's heads hurt.
 
-`PRINT`自体は、文字を表示する命令だ。  
-`PRINT`の後、半角スペースをひとつ空け、文字を書き込もう。  
+`PRINT` itself is a command that displays text.  
+After `PRINT`, add a half-width space and write text.
 
 ``` { #language-erb title="ERB" }  
 PRINT ああああ  
 ```
 
-のように。  
+And then the complex something following `PRINT`. I think you're curious.  
+After `PRINT`, there are three parentheses groups separated.  
+Several alphabetic words or phrases are separated by `|`.
 
-そして`PRINT`の後に続く複雑ななにか。気になると思う。  
-`PRINT`のあと、カッコが3つに別れている。  
-いくつかのアルファベットや単語が『`|`』で区切られている。  
+This means you can use the functions you want by attaching them to `PRINT`.
 
-これは、欲しい機能を`PRINT`にくっつけて使えるよ。という意味だ。  
+Each function separated by `|` within one parenthesis group can only be chosen one, but functions from different parentheses groups can be combined.  
+Where it says `(|`, it means "(none|", so it can be omitted.
 
-この『`|`』で区切られたアルファベットや単語には、それぞれ別の機能が割り当てられている。  
-１カッコ内の機能はひとつしか選べないが、別のカッコの機能とは組み合わせて使える。  
-『`(|`』になっているところは、『(なし|』という意味なので、省略できる。  
-<!--//（2021/05/12 スレにご指摘いただいて変更。感謝）  -->
+As shown, you can choose one from each of the three parentheses groups and use them,  
+like `PRINTV / PRINTS / PRINTFORM / PRINTFORMS / PRINTK / PRINTD / PRINTL / PRINTW`
 
-このように、みっつのカッコから一つだけ選んで使うこともできるし  
-`PRINTV / PRINTS / PRINTFORM / PRINTFORMS / PRINTK / PRINTD / PRINTL / PRINTW`  
+Or choose one from the first and second parentheses groups and attach them,  
+like `PRINTVK / PRINTSK / PRINTFORMK / PRINTFORMSK / PRINTVD / PRINTSD`
 
-このように、ひとつめ、ふたつめのカッコからひとつ、選んでくっつけることもでき  
-`PRINTVK / PRINTSK / PRINTFORMK / PRINTFORMSK / PRINTVD / PRINTSD`  
+Or choose one from the first, second, and third parentheses groups and attach them,  
+like `PRINTVKL / PRINTSKL / PRINTFORMKL / PRINTFORMSKL / PRINTVDL / PRINTSDL`
 
-このように、ひとつめ、ふたつめ、みっつめのカッコからひとつずつ選んでくっつけることもできる  
-`PRINTVKL / PRINTSKL / PRINTFORMKL / PRINTFORMSKL / PRINTVDL / PRINTSDL`  
+Or one from the first and one from the third, etc.
 
-ひとつめのカッコからひとつ、みっつめのカッコからひとつなどもだ。  
+Era often uses string-variable-converted you and character names in dialogue and narration.  
+Therefore, `PRINTFORM` family that can use `{~~}` and `%~~%` are frequently used.
 
-eraは口上や地の文に、文字列変数化されたあなたやキャラの名前を多用することが多い。  
-そのため`{~~}`や`%~~%`を使える`PRINTFORM`系はよく使われる。  
+Also, `PRINTC` family for alignment.  
+`PRINTBUTTON` family displays choices and `INPUT` receives them.  
+`PRINTDATA` family for random text display.
 
-また、配置を整える`PRINTC`系。  
-`PRINTBUTTON`系で選択肢を表示して`INPUT`で受け取る。  
-ランダムテキスト表示に`PRINTDATA`系を使う。  
+And so on - `PRINT` related commands are convenient and basic information.
 
-などなど、`PRINT`関連は便利で基礎的な情報だ。  
-
-ここでは『`PRINTFORML `』なので、  
-『`PRINT`』文字を表示するよ。という命令に加えて、  
-『`FORM`』書式付文字を使うよ。  
-『`L`』改行してねクリックはいらないよ。  
-という機能を組み合わせていることになる。  
+Here it's `PRINTFORML`, so it's combining:  
+`PRINT` - display text.  
+`FORM` - use formatted string.  
+`L` - add newline, no click needed.
 
 ---  
 
-### 各表示  
-前半、Gamebase.csvについて話したが、その情報が格納されている変数が羅列されている。  
+### Individual Displays
+Earlier we talked about Gamebase.csv, and the variables containing that information are listed here.
 
-中身はここに書かれている通りだ。  
+The contents are as written here.
 
-- [EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→定数・変数](../Emuera/variables.md#gamebasecsv)  
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → Constants and Variables](../Emuera/variables.md#gamebasecsv)
 
-こうしてタイトル画面でGamebase.csvの情報を利用することにより、  
-Gamebase.csvだけ修正すれば、タイトル画面を弄らなくても更新できることになる。  
+By using Gamebase.csv information on the title screen like this,  
+you can update the title screen just by modifying Gamebase.csv without touching the title screen itself.
 
 ``` { #language-erb title="ERB" }  
 DRAWLINE   
@@ -902,48 +758,47 @@ ALIGNMENT LEFT
 DRAWLINE   
 ```
 
-Gamebase.csvで整えた情報と、  
-バージョンの数字を文字列化して整えた`VERSIONNAME`、  
-空行が欲しいところに`PRINTL`を使い、  
-中央寄せを左寄せに直し、  
-もう一度区切り線を引いて、  
+Gamebase.csv information formatted,  
+`VERSIONNAME` created by converting the version number to a string,  
+using `PRINTL` where you want blank lines,  
+changing center-align back to left-align,  
+and drawing the dividing line again,
 
-タイトルの表示は終了だ。  
-
----  
-
-### 独自のデザインに  
-文字を左寄せの表示形式に変えたり、欲しい情報を足したり別のところで表示したい情報を消したり、  
-GAMEBASE_TITLEを省いてアスキーアートに変えたり、画像を表示したり、お好みで改変するといいだろう。  
-
-フォントの表示、色変え、特殊な表示など  
-
-- [リファレンス→`PRINT系`](../Reference/PRINT.md)
-- [リファレンス→表示操作・フォント操作・表示仕様参照](../Reference/README.md#_3)
-- [リファレンス→`HTML_PRINT`](../Reference/HTML_PRINT.md)
-
-画像の表示  
-
-- [リファレンス→`PRINT_IMG`](../Reference/PRINT_IMG.md)
-- [リソースファイルについて](../Emuera/resources.md)
-- [リファレンス→`HTML_PRINT`](../Reference/HTML_PRINT.md)
-- [リファレンス→画像処理関連](../Reference/README.md#_14)
-
-また、`WINDOW_TITLE`は代入可能。  
-左上のウィンドウタイトルに何か表示を加えたりしても良いかもしれない。  
-`少女祈祷中...`のローディング表示を_Replace.csvで変更したりもできる。  
+the title display is complete.
 
 ---  
 
-## 選択肢  
-見た目は弄れるようになってきたと思うが、  
-ボタンを表示して選んでもらう、ということができないとゲームにはしにくい。  
+### Customize Design
+You can modify to your taste - change to left-aligned display format, add information you want, remove information you want to show elsewhere,  
+omit GAMEBASE_TITLE and replace with ASCII art, display images, etc.
 
-続きを見ていこう。  
-タイトル画面だからか、_Replace.csvを利用したやや特殊なボタンになっている。  
+For font display, color changes, special displays,
+
+- [Reference → `PRINT` family](../Reference/PRINT.md)
+- [Reference → Display Operations / Font Operations / Display Specifications](../Reference/README.md#_3)
+- [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.md)
+
+For image display,
+
+- [Reference → `PRINT_IMG`](../Reference/PRINT_IMG.md)
+- [About Resource Files](../Emuera/resources.md)
+- [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.md)
+- [Reference → Image Processing Related](../Reference/README.md#_14)
+
+Also, `WINDOW_TITLE` can be assigned.  
+You can add something to display in the window title at the top left.  
+You can also change the "Processing..." loading display in _Replace.csv.
+
+---  
+
+## Choices
+The appearance can probably be modified now, but the game is hard to use if you can't have players select from buttons.
+
+Let's continue.  
+Because it's a title screen, it uses a slightly special button using _Replace.csv.
 
 ``` { #language-erb title="ERB" }  
-;選択肢表示  
+;Choice display  
 $TITLE_SELECT  
 PRINTSL "[0] " + GETCONFIGS("システムメニュー0");  
 PRINTSL "[1] " + GETCONFIGS("システムメニュー1");  
@@ -951,106 +806,97 @@ PRINTSL "[1] " + GETCONFIGS("システムメニュー1");
 
 ---  
 
-### `$TITLE_SELECT`  
+### `$TITLE_SELECT`
 
-ここまでの説明だと
+Based on the explanation so far,
 
 ``` { #language-erb title="ERB" }  
 $TITLE_SELECT  
 ```
 
-というのが見慣れない行だ。  
+is an unfamiliar line.
 
-処理は基本的に上から下へ流れるのだが、  
-行ったり来たりさせたり、同じところをグルグル回らせることもできる。  
+Processing basically flows from top to bottom, but you can make it go back and forth or loop around the same place.
 
-『$好きなラベル名』と書くと、そこに『ラベル』を貼ることができる。  
-本の重要なところに貼っておく付箋や、チャットツールのピンようなものだ。  
-『`GOTO 好きなラベル名`』と同じ関数内の他の場所に書くと、指名したラベルのところへ戻れる。  
+Writing `$label name` lets you place a "label" there.  
+It's like a sticky note placed on important parts of a book, or a pin in a chat tool.  
+Writing `GOTO label name` at another place in the same function lets you return to the labeled location.
 
-ここはロード画面からロードせず戻ってきたとき、  
-もう一度ボタンを表示するための戻り先として貼られているラベルのようだ。  
+It seems to be placed here as a return point to display buttons again when returning from the load screen without loading.
 
-- [システム改造Q&A→基礎知識→関数の中での移動方法（制御構文）](erawiki-modification-QandA.md#_2)
+- [System Modification Q&A → Basics → Movement Methods Within Functions (Control Syntax)](erawiki-modification-QandA.md#_2)
 
-`GOTO`文は可読性を損ないやすいため、入れ子ループから一気に抜け出す場合以外は、  
-できるだけ使わないほうが良いそうだ。`LOOP`文か`WHILE`文で置き換えることを推奨されている。  
-少し難しいかもしれないが理解はできなくてもいいので  
-『スパゲティプログラム』あるいは『スパゲティコード』などで検索してみよう。  
-<!--//（2021/05/12 リンクを貼っていいか迷って検索案内だけ書いてみました。ご指摘感謝）  -->
+`GOTO` statements tend to reduce readability, so it's said to avoid them except for breaking out of nested loops.  
+It's recommended to replace with `LOOP` or `WHILE` statements.  
+It might be a bit difficult, so even if you can't understand it, search for "spaghetti program" or "spaghetti code" to learn more.
 
-ということなので、繰り返し処理の書き方も教わろう。  
+So let's learn how to write loop processing too.
 
-- [リファレンス→ループ・分岐構文](../Reference/README.md#_10)
-- [システム改造Q&A→基礎知識→繰り返し処理の書き方(FORとREPEATの違いと推奨書式)](erawiki-modification-QandA.md#forrepeat)
+- [Reference → Loop/Branch Syntax](../Reference/README.md#_10)
+- [System Modification Q&A → Basics → Loop Processing Writing Methods (FOR and REPEAT Differences and Recommended Syntax)](erawiki-modification-QandA.md#forrepeat)
 
-よくわからない場合は、わかるまでとりあえずそのままお借りしよう。  
+If unclear, for now just borrow it as is until you understand.
 
 ---  
 
-### ボタン  
+### Buttons
 
 ``` { #language-erb title="ERB" }  
 PRINTSL "[0] " + GETCONFIGS("システムメニュー0");  
 PRINTSL "[1] " + GETCONFIGS("システムメニュー1");  
 ```
 
-『`GETCONFIGS()`』を使用した少々変則的なボタンだ。  
+This is a slightly irregular button using `GETCONFIGS()`.
 
-`PRINTSL`は、  
-文字を表示してくれる『`PRINT`』  
-文字列式を表示してくれる『`S`』  
-クリックなしで改行してくれる『`L`』  
-を組み合わせた命令だ。  
+`PRINTSL` is a command combining:  
+`PRINT` - displays text  
+`S` - displays string expression  
+`L` - adds newline without clicking  
 
-文字を`"~~"`で囲み、文字列式に足して表示している。  
+It displays text enclosed in `"~~"` added to the string expression.
 
-そして『`GETCONFIGS()`』という式中で使える関数を使って、  
-_Replace.csvのデータを呼び出している。  
-『`GETCONFIGS()`』は『replace.csvの設定項目を整数または文字列で取得』する。  
+And it uses `GETCONFIGS()`, a function usable in expressions,  
+to call data from _Replace.csv.  
+`GETCONFIGS()` "gets config item values as integers or strings."
 
-_Replace.csvを開いてみると、  
+When you open _Replace.csv,
 
 ``` { #language-erb title="ERB" }  
-;タイトルでのシステムメニュー表示1  
-;起動画面での『[0] 最初からはじめる』の文字列部分  
-;システムメニュー0 , (文字列)  
+;Title screen system menu display 1  
+;String part of '[0] Start from beginning' on startup screen  
+;システムメニュー0 , (string)  
 システムメニュー0 , 最初から調教  
-;タイトルでのシステムメニュー表示2  
-;起動画面での『[1] ロードしてはじめる』の文字列部分  
-;システムメニュー1 , (文字列)  
+;Title screen system menu display 2  
+;String part of '[1] Continue training' on startup screen  
+;システムメニュー1 , (string)  
 システムメニュー1 , 調教の続きを行う  
 ```
 
-と書かれている。  
-
-;が行頭についているところはコメントなので、読み込みされない説明文だ。つまり  
+Lines starting with `;` are comments, so they're explanatory text not read. So
 
 ``` { #language-erb title="ERB" }  
 システムメニュー0 , 最初から調教  
 システムメニュー1 , 調教の続きを行う  
 ```
 
-を置き換えれば、  
-『最初から調教』を『Game Start』に変えたりできるということだ。  
+can be replaced to change "最初から調教" to "Game Start", etc.
 
-`[0]`や`[1]`についてはEmueraWikiの`PRINTBUTTON`命令に書かれていることを読むと  
-ボタン表示について全体的に書かれているので把握しやすいかもしれない。  
+For `[0]` and `[1]`, reading what's written about the `PRINTBUTTON` command in EmueraWiki might give you an overall understanding of button display.
 
-- [リファレンス→`PRINTBUTTON`](../Reference/PRINTBUTTON.md)
+- [Reference → `PRINTBUTTON`](../Reference/PRINTBUTTON.md)
 
 ---  
 
-## 選択結果  
-次を見てみよう。  
+## Selection Result
+Let's look at the next part.
 
 ``` { #language-erb title="ERB" }  
 $TITLE_INPUT  
 INPUT  
 IF RESULT == 0  
 	RESETDATA  
-	;ADDDEFCHARAはeramakerの初期化処理を再現するために存在する専用の関数です  
-	;他の場面ではADDCHARAを使用してください  
+	;ADDDEFCHARA exists as a dedicated function to reproduce eramaker's initialization process.  
+	;Use ADDCHARA in other situations.  
 	ADDDEFCHARA  
 	;BEGINWORD '= "FIRST"  
 	;CALL MAIN_LOOP  
@@ -1058,295 +904,277 @@ IF RESULT == 0
 ELSEIF RESULT == 1  
 	LOADGAME  
 	GOTO TITLE_SELECT  
-	;LOADGAME_EXでLOADを行わずに戻ってきた場合、もう一度選択しなおす。  
+	;If returned from LOADGAME_EX without LOADing, select again.  
 ELSE  
-	REUSELASTLINE 無効な値です  
+	REUSELASTLINE Invalid value  
 	GOTO TITLE_INPUT  
 ENDIF  
 ```
 
 ---  
 
-### `INPUT`  
+### `INPUT`
 
 ``` { #language-erb title="ERB" }  
 INPUT  
 ```
 
-は、入力を待て、という命令だ。  
+This is a command meaning "wait for input."
 
-ボタンを出したら必ずどこかでこれを出す。  
-でないとゲームが勝手に進んでいくのでプレイヤーはボタンを選べない。  
+Once you output buttons, you must have this somewhere.  
+Otherwise the game will proceed on its own and players can't select buttons.
 
-手で入力して0と入力した場合、  
-入力値として0の指定されたボタンをマウスでクリックした場合、  
-どちらも同じように0を入力したとみなされる。  
+If you type 0 manually,  
+or if you click the button with 0 as the specified value with a mouse,  
+both are treated as inputting 0.
 
-なので、マウスでボタンをクリックされる、  
-あるいは、番号を手入力されてエンターキーを押される、  
-どちらかの操作をされるまで、待機せよという命令になる。  
+So it's a command to wait until either the mouse button is clicked,  
+or the number is typed manually and Enter is pressed.
 
-文字列を受け取りたい場合は  
+If you want to receive strings,
 
 ``` { #language-erb title="ERB" }  
 INPUTS  
 ```
 
-という命令もある。  
+There's also this command.
 
 ``` { #language-erb title="ERB" }  
 INPUT 0  
 ```
 
-と書くと、  
-何も入力せずエンターキーをクリックしたとき、0が入力される。  
+Writing this makes 0 the input when Enter is pressed without typing anything.
 
-『エンターキー押しっぱなしにしたら大量の選択肢に全て0を返して流す』  
-といった操作が可能になり、テストプレイ時に便利だ。  
+This allows "if Enter is held down, respond to all many choices with 0 in succession,"  
+which is convenient for test play.
 
-『`$TITLE_INPUT`』は『`$TITLE_SELECT`』と同じラベルだ。  
-無効な値だったとき、もう一度入力待ちするために呼ばれるので  
-`INPUT`の上の行に置かれている。  
+`$TITLE_INPUT` is the same label as `$TITLE_SELECT`.  
+When an invalid value is given, it's placed above `INPUT` to be called to wait for input again.
 
 ---  
 
-### IF  
-これは『IF文』とか『条件式』とか『分岐』とか『条件分岐』とか呼ばれるものだ。  
-「もし～なら、～しろ」と命令をする。  
-ゲームの大半は条件分岐によって作られていると言っても過言ではない。  
+### `IF`
+This is called "IF statement," "conditional expression," "branch," or "conditional branch."  
+It commands "if ~, then do ~."  
+It's not an exaggeration to say most of games are made with conditional branches.
 
-もし好感度が1000をこえたら恋慕をつける。  
-もし所持金が1億円をこえたらゲームをクリアする。  
-などなど。  
+If affection exceeds 1000, add Lover.  
+If money exceeds 100 million, clear the game.  
+And so on.
 
-オープニングで目標を提示する。  
-プレイヤーがボタンを操作したら、結果としてステータス値を変更する。  
-条件を達成したらエンディングを表示する。  
+Display objectives in the opening.  
+When player operates buttons, change status values as a result.  
+Display ending when conditions are met.
 
-という流れがゲームの基本処理だ。  
+This flow is basic game processing.
 
-使い方その１  
+Usage 1:
 
 ``` { #language-erb title="ERB" }  
 IF 条件  
-	条件が成立していたときの内容  
+	Processing when condition is true  
 ENDIF  
 ```
 
-使い方その２  
+Usage 2:
 
 ``` { #language-erb title="ERB" }  
 IF 条件  
-	条件が成立していたときの内容  
+	Processing when condition is true  
 ELSE  
-	条件が成立しなかったときの内容  
+	Processing when condition is false  
 ENDIF  
 ```
 
-使い方その３  
+Usage 3:
 
 ``` { #language-erb title="ERB" }  
-IF 条件その１  
-	条件その１が成立していたときの内容  
-ELSEIF 条件その２  
-	条件その２が成立していたときの内容  
+IF 条件1  
+	Processing when condition1 is true  
+ELSEIF 条件2  
+	Processing when condition2 is true  
 ELSE  
-	条件その１もその２も成立しなかったときの内容  
+	Processing when neither condition1 nor condition2 is true  
 ENDIF  
 ```
 
-`ELSEIF`はいくつでも指定できる。  
+As many `ELSEIF` as you can specify.
 
-ちなみに『`IF 条件`』の次行に、行頭空欄がある。  
-ここはタブキーを押している。  
+By the way, after `IF condition`, there's a blank at the line start.  
+That's pressing the tab key.
 
-`IF`文はマトリョーシカのように、`IF`文の中に更に`IF`文が入ることがある。  
-入れ子構造とか呼ぶのだが、もしこれが全て行頭から始まっていたら大変わかりにくい。  
+IF statements can be nested - an IF statement inside an IF statement.  
+If everything started from the beginning of the line, it would be very hard to read.
 
-そこで`IF`文の中に書く処理は、必ずタブキーを一回押して行頭を下げる。  
-１タブ下げたところにまたIF文を書いたら、その処理はまた１タブ行頭を下げる。  
-といったことをして、入れ子構造をわかりやすくする。  
+So when writing processing inside an IF statement, always press tab once to lower the line start.  
+If you write an IF statement in the one-tab-lowered place, that processing is another one-tab line start lower.  
+And so on to make the nested structure clearer.
 
-（入れ子はいくら形を整えても複雑なので、避けられるなら避けたほうがいい。  
-　また、完全な新バリアントを作るなら半角スペースの利用も考えられる。  
-　大手最新のコーディングルールではタブを使わず半角スペースを使用するよう指定されていたりして、この場合、スペースの数まで用途に応じて具体的に決まっていたりする。  
-　しかし、整合性がとれていないことが一番わかりにくい。  
-　そのためタブが使用されている既存作品をお借りするときはタブを使ったほうが良い）  
+(Nesting gets complicated no matter how well formatted, so it's better avoided if possible.  
+Also, when creating a brand new variant, using half-width spaces can be considered.  
+Some latest coding standards specify using half-width spaces instead of tabs, and in that case, the number of spaces is specifically determined by usage.  
+However, inconsistency is the most confusing thing.  
+Therefore, when borrowing existing works that use tabs, it's better to use tabs)
 
-行頭の位置を周りの文章よりも下げることを『字下げ』とか『インデント』と呼ぶ。  
+Lowering the line start compared to surrounding text is called "indentation" or "indenting."
 
-入れ子の`IF`文が大量かつインデントを揃えていないパッチはときどき、製作仲間を発狂させる。  
-`IF`文を書くときは注意しよう。  
+Patch IF statements with massive nesting and inconsistent indentation sometimes drive collaborators crazy.  
+Be careful when writing IF statements.
 
-見たことのある人もいるかもしれないが、eraの場合は  
-『数百個あるコマンドの数だけ条件分岐がある』になりかねない。  
-これが途中でどこか一つでもずれると、続きが全部ずれてしまうのだ。  
+Some may have seen it - in era, it's possible to have "hundreds of command conditional branches."  
+If even one of these is off, all subsequent lines get shifted.
 
-また『ひとつの変数に対し、中身の数字が1のとき、2のとき、3のとき……』  
-のような条件分岐を行いたい場合は『`SELECTCASE`』文で条件式を略すことがおすすめされる。  
-こちらで紹介してくれている。  
+Also, when you want conditional branches like "for one variable, when the content number is 1, when it's 2, when it's 3..."  
+it's recommended to use `SELECTCASE` to simplify the conditional expression.  
+It's introduced here.
 
-[システム改造Q&A→基礎知識→`IF・ELSEIF`のかたまりは`SELECTCASE`文に出来るかも](erawiki-modification-QandA.md#ifelseselectcase)
+[System Modification Q&A → Basics → IF/ELSEIF Blocks Can Be Converted to SELECTCASE Statements](erawiki-modification-QandA.md#ifelseselectcase)
 
-ちょうど今見ている`INPUT`の`RESULT`分岐などは`SELECTCASE`文にしやすいところだ。  
-試してみてもいいかもしれない。  
+The `INPUT` `RESULT` branch we're looking at right now is a good candidate for a SELECTCASE statement.  
+You might try it.
 
----  
+---
 
-### `RESULT == 0`  
-条件が『`RESULT == 0`』になっている。  
-唐突に出てきた『`RESULT`』は、最初から用意されている変数だ。  
-『`INPUT`』でプレイヤーによって選択されたボタンや手入力の入力値は  
-この『`RESULT`』に自動的に保存される。  
-（`INPUT`に限らず、関数の『`RETURN なんとか`』を受け取ったりもする）  
+### `RESULT == 0`
+The condition is `RESULT == 0`.  
+The suddenly appearing `RESULT` is a pre-built variable.  
+The button selected by the player or manual input via `INPUT`  
+is automatically saved in this `RESULT`.  
+(It also receives `RETURN something` from functions, not just `INPUT`)
 
-この『`RESULT`』は非常によく使われるので中身が入れ替わりやすい。  
-なので受け取ったらすぐ、自前で作った`DIM`変数に保存して  
-そちらを使う癖をつけたほうが良いらしい。  
+This `RESULT` is very commonly used and its contents change frequently.  
+So it's said to be better to immediately save it to a custom `DIM` variable you created  
+and use that instead.
 
-複雑化してる最近のeraでは`RETURN`系は`RESULT`がすぐ迷子になるので  
-`RESULT`で受け取って保存して使うのは不具合の原因にもなりうる。  
-これを`#DIM REF`で定義できる参照型変数で解決できる場面もある。  
-本来はプライベート変数(`LOCAL`変数)は複数の関数では共有できないが、  
-この参照型変数を引数に指定すれば関数内での代入等が呼び出し元の関数に反映される  
+In increasingly complex modern era, `RETURN` types easily lose `RESULT`,  
+and using `RESULT` to receive and save for use can cause bugs.  
+This can sometimes be solved with reference-type variables definable with `#DIM REF`.  
+Although private variables (`LOCAL` variables) can't be shared across multiple functions,  
+assignments in functions using this reference-type variable as an argument are reflected in the calling function.
 
-できるだけ式中関数を使えるときはそちらで、というアドバイスもこちらに紹介されている。  
+Advice to use expression functions whenever possible is introduced here.
 
-- [システム改造Q&A→基礎知識→`RESULT`と式中関数](erawiki-modification-QandA.md#result)
+- [System Modification Q&A → Basics → `RESULT` and Expression Functions](erawiki-modification-QandA.md#result)
 
-EmueraWikiの「式中で使える関数」の項には  
-`RESULT`や`RESULTS`への代入は行われません  
-と書かれているが、例外がある。  
-「`CHKDATA()`」「`CHKCHARADATA()`」「`FIND_CHARADATA()`」がこれにあたる。  
-また、式中関数内なら絶対に`RESULT`が書き換えられないわけでもなく、`RESULT`変数を使用する命令を使えば普通に書き換えられてしまう。  
-`CALL`も使ってない、代入したわけでもない、数行のコードなのに何故かうまく動かない、そんな時は`RESULT`の誤爆を疑ってみよう。  
+EmueraWiki's "Functions Usable in Expressions" section states  
+"Assignment to `RESULT` and `RESULTS` is not performed,"  
+but there are exceptions.  
+`CHKDATA()`, `CHKCHARADATA()`, `FIND_CHARADATA()` fall into this.  
+Also, within expression functions, `RESULT` isn't necessarily always un-writable - it gets overwritten normally if you use commands that use the `RESULT` variable.  
+If you use `CALL` neither, nor assign anything, but several lines of code mysteriously don't work, consider `RESULT` misfire.
 
-ここでは`INPUT`直後の分岐に使われていて、  
-上書きされる心配はなさそうなのでそのまま進める。  
+Here, it's used immediately after `INPUT`,  
+so there's no concern about it being overwritten, so we can proceed.
 
-『`RESULT == 0`』は『INPUTの入力結果が0だったなら』  
-ということなので、  
-『最初から調教する』  
-が選ばれたら、という意味になる。  
+`RESULT == 0` means "if the INPUT result was 0,"  
+so it's the meaning of "if 'Start from Training' is selected."
 
----  
+---
 
-### `RESETDATA`  
-『最初から調教する』が選ばれた場合に行う処理を見ていこう。  
+### `RESETDATA`
+Let's look at the processing when "Start from Training" is selected.
 
 ``` { #language-erb title="ERB" }  
 RESETDATA  
 ```
 
-そのまま、データをリセットして欲しいという命令だ。  
+This is a command meaning "please reset the data."
 
-- [リファレンス→`RESETDATA`](../Reference/RESETDATA.md)
+- [Reference → `RESETDATA`](../Reference/RESETDATA.md)
 
-これを命令しておかないと、すでにゲームで遊んでから  
-『タイトルに戻る』で戻ってきた場合に、  
-他のデータが残ってしまったりする。  
+If you don't issue this command, when returning via "Return to Title" after already playing the game,  
+other data might remain.
 
----  
+---
 
-### `ADDDEFCHARA`  
+### `ADDDEFCHARA`
 
 ``` { #language-erb title="ERB" }  
-;ADDDEFCHARAはeramakerの初期化処理を再現するために存在する専用の関数です  
-;他の場面ではADDCHARAを使用してください  
+;ADDDEFCHARA exists as a dedicated function to reproduce eramaker's initialization process.  
+;Use ADDCHARA in other situations.  
 ```
 
-と書かれている。  
+- [Reference → `ADDDEFCHARA`](../Reference/ADDDEFCHARA.md)
 
-- [リファレンス→`ADDDEFCHARA`](../Reference/ADDDEFCHARA.md)
+This is a command to maintain compatibility with eramaker - it registers all characters with CSV data at once.
 
-eramakerとの互換性を保つための命令だ。CSVの存在するキャラを一気に登録する。  
+Even if you add character data in CSV,  
+the character won't be added unless you load them like this.
 
-CSVにキャラクターデータを追加しても、  
-こうして読み込まなければキャラは追加されない。  
+Some variants may already have settings with `ADDCHARA` from the beginning.  
+There are cases to prepare void characters with `ADDVOIDCHARA` and add settings later to customize characters.
 
-バリアントによっては初めから`ADDCHARA`で設定している場合もある。  
-空のキャラを作る`ADDVOIDCHARA`を用意し、後から設定を足してカスタムキャラにする場合もある。  
+CSV numbers can be set skipping numbers like `1,3,7`, but  
+characters are registered packed together when registered.
 
-CSV番号は`1,3,7`等とばして設定することもできるが、  
-キャラが登録されるときは詰めて登録される。  
+When handling pre-built character data like `CFLAG` and `BASE`,  
+the character number specified is the registration order, not the CSV number.  
+(The CSV number is also called "NO" (meaning Number) in EmueraWiki and such. The latter is sometimes called "registration number")
 
-`CFLAG`とか`BASE`といった、初めから用意されているキャラ用のデータを扱うとき  
-指定するキャラ番号は、CSV番号ではなく、登録された順番のほうになる。  
-（CSV番号のほうはEmueraWikiなどでも「`NO`（Numberの意）」と呼ばれることもある。後者は「登録番号」と呼ばれることもある）  
+---
 
----  
-
-### `BEGINWORD '= "FIRST"`  
-次の行を見てみよう。  
+### `BEGINWORD '= "FIRST"`
+Let's look at the next line.
 
 ``` { #language-erb title="ERB" }  
 BEGINWORD '= "FIRST"  
 CALL MAIN_LOOP  
 ```
 
-今見ている処理は、SYSTEM_FLOW.ERBから抜き出してきたものだ。  
-SYSTEM_FLOW.ERBは、Emueraでの一連の流れを案内してくれるファイルだ。  
+The processing we're looking at now is extracted from SYSTEM_FLOW.ERB.  
+SYSTEM_FLOW.ERB is a file that guides the flow in Emuera.
 
-『`BEGINWORD`』は、処理に必要で作った変数というよりは、  
-案内しやすくするために作ってくれた変数である。  
-『`BEGINWORD`』が宣言されている場所は、『SYSTEM_FLOW.ERH』だ。  
+`BEGINWORD` is more of a variable created to make navigation easier than one needed for processing.  
+The location where `BEGINWORD` is declared is in `SYSTEM_FLOW.ERH`.
 
-拡張子が『.ERH』になっているファイルは、  
-関数内だけではなくあちこちの関数で使いたい`DIM`の宣言を書くファイルだ。  
+Files with extension `.ERH` are files to write `DIM` declarations that are used not only within functions but across various functions.
 
-etc1821フォルダから、SYSTEM_FLOW.ERHをコピーし、  
-erakanonフォルダのERBフォルダにペーストすれば動くようになるが、  
-ここでは行わない。  
+Copy SYSTEM_FLOW.ERB from the etc1821 folder and paste it into the ERB folder in erakanon folder to make it work, but  
+we won't do that here.
 
-今回はフローをたどろうという話ではなく、バニラ環境を作ろうという趣旨なので  
-`BEGIN FIRST`に書き換えてみよう。  
+Since this is about making a vanilla environment, not about tracing flow, let's rewrite to `BEGIN FIRST`.
 
 ``` { #language-erb title="ERB" }  
 BEGINWORD '= "FIRST"  
 CALL MAIN_LOOP  
 ```
 
-を  
+Change to
 
 ``` { #language-erb title="ERB" }  
 BEGIN FIRST  
 ```
 
-にしてみよう。  
+When you start the game and select '[0] Start from Training',  
+the error that occurred after adding `@SYSTEM_TITLE` should disappear and the game should start.
 
-ゲームを起動して、『`[0]最初から調教`』を選んだら、  
-`@SYSTEM_TITLE`をつけ足してから起きていたエラーが消えて  
-ゲームが始まるようになったはずだ。  
+---
 
----  
-
-### `ELSEIF RESULT == 1`  
-次の行を見てみよう。  
+### `ELSEIF RESULT == 1`
+Let's look at the next line.
 
 ``` { #language-erb title="ERB" }  
 ELSEIF RESULT == 1  
 	CALL LOADGAME_EX  
 	GOTO TITLE_SELECT  
-	;LOADGAME_EXでLOADを行わずに戻ってきた場合、もう一度選択しなおす。  
+	;If returned from LOADGAME_EX without LOADing, select again.  
 ```
 
-`ELSEIF RESULT == 1`は、  
-`[1] 調教の続き`を行う  
-が選ばれた場合、という意味になる。  
+`ELSEIF RESULT == 1` means  
+when "[1] Continue Training" is selected.
 
-`CALL XXXX`というのは、関数（@なんとか）を呼び出す命令だ。  
-『`@LOADGAME_EX`』という関数を呼び出して欲しいという意味になる。  
+`CALL XXXX` is a command to call a function (/@something).  
+This means to call the function `@LOADGAME_EX`.
 
-こちらも『SYSTEM_FLOW.ERB』内にある関数の呼び出しなので、  
-『`@LOADGAME_EX`』をお借りしたい場合はコピーしてこよう。  
+This is also a function call from within `SYSTEM_FLOW.ERB`,  
+so if you want to borrow `@LOADGAME_EX`, copy it over.
 
-Emuera本家のetcフォルダ以外に、eraバリアントには  
-CCライセンスで解放してくれている関数がたくさんあり、  
-それらをライセンスごとコピーしてお借りすることで  
-使わせてもらえることが多い。  
-１から作る場合でもありがたくお借りできると思う。  
+In addition to Emuera's official etc folder, era variants have  
+many functions released under CC license, and  
+you can often use them by copying them along with their licenses.  
+Even when creating from scratch, I think you can gratefully borrow them.
 
-バニラデフォルトのシステムをお借りしたい場合は、  
+If you want to borrow the vanilla default system,
 
 ``` { #language-erb title="ERB" }  
 ELSEIF RESULT == 1  
@@ -1354,142 +1182,59 @@ ELSEIF RESULT == 1
 	GOTO TITLE_SELECT  
 ```
 
-と書きかえれば動くようになる。  
+Change to this and it should work.
 
-『`GOTO TITLE_SELECT`』は『`$TITLE_SELECT`』の項でも書いたが  
-ロードせずタイトル画面に戻ってきたとき、再表示するために戻る命令だ。  
+`GOTO TITLE_SELECT`, as mentioned in the `$TITLE_SELECT` section,  
+is a return command to redisplay when returning to the title screen without loading.
 
----  
+---
 
-### `ELSE`  
+### `ELSE`
 
 ``` { #language-erb title="ERB" }  
 ELSE  
-	REUSELASTLINE 無効な値です  
+	REUSELASTLINE Invalid value  
 	GOTO TITLE_INPUT  
 ENDIF  
 ```
 
-`ELSE`はそれ以外、という意味になる。  
-ここでは案内のためにだろうか『`REUSELASTLINE `』という、  
-最終行を指定した書式付き文字列で書き換える命令で  
-無効な値であることを表示してくれている。  
+`ELSE` means "otherwise."  
+Here, perhaps for guidance, it displays that it's an invalid value using `REUSELASTLINE`, a command that rewrites the last line with a formatted string.
 
-- [リファレンス-`REUSELASTLINE`](../Reference/REUSELASTLINE.md)
+- [Reference - `REUSELASTLINE`](../Reference/REUSELASTLINE.md)
 
-手入力を無視したい場合は問答無用で戻してしまってもかまわないと思う。  
-
----  
-
-### `ENDIF`  
-`IF`文は`ENDIF`で終了する。  
-`SIF`文と違って必ず対応する`ENDIF`が必要なので注意。  
-
-`GOTO TITLE_INPUT`は、ロードのときと違ってボタンが生きているので  
-入力待機まで戻るだけのようだ。  
-
----  
-
-## よくある誤りを読もう  
-間違いやすいことを書いてくれている。詰まったときのために目を通してみよう。  
-[よくある誤り](https://seesaawiki.jp/eraseries/d/%a4%e8%a4%af%a4%a2%a4%eb%b8%ed%a4%ea)
-
----  
-
-## おわりに  
-タイトル画面を追加しバニラにつなげるところまで作業した。  
-eramaker側の処理の調べ方、最新化するための非推奨変数の調べ方、  
-Emueraの命令や式中関数の調べ方などを案内できただろうか？  
-
-書いている本人もいまだにわかっていないことがたくさんある。  
-わからないことをどう調べたらいいのか、それを知ることが大事だと思う。  
-慣れたつもりでも盲点は多い。いつまでも初心を失わないようにしたい。  
-
-eraは調教シミュレーターなので、本来RPGやマップや戦略はない。  
-ゲームを作るには、ツールの使い方だけではなく、  
-レベルデザインや経路探索や思考ロジックなどを知る必要があり、eraはそれらを教えてはくれない。  
-バニラやツールも含めて、すべて有志のかたがそれぞれに学んで作り出してくれた機能だ。称えたい。  
-
-あなたが作りたいものを作る足掛かりになることを願う。  
+If you want to ignore manual input, you can just return without question.
 
 ---
 
-Next page → [ERB creation practice](erawiki-ERBmanual.md)
+### `ENDIF`
+IF statements end with `ENDIF`.  
+Unlike SIF statements, corresponding `ENDIF` is always required.
 
-<!--
-----  
-[[▲目次に戻る>#contents]]  
-//  
-//(2021/05/12 カスタムキャラの補足は直接更新修正してくださった方と更新部分がかぶり中途半端な状態になっています。  
-//NOとの連携を忘れると大変なことになると教わり、カスタムキャラはまだ時期尚早かもしれないという話をして  
-//一旦コメントアウトしました。修正改善、更新感謝。  
-//FIND関連の最新化についてアドバイスくださったかたもありがとう。  
-//  
-//***カスタムキャラ絡みの補足  
-//csv番号のないカスタムキャラを作り、削除できるようにしたシステムの場合  
-//キャラを消すと登録されている番号も詰められる。CFLAGなども連動する。  
-//これはカスタムキャラに限らず、CSVの存在するキャラを削除した場合でも番号は詰められる。  
-//  
-//これだとゲームを進めているうちに番号が動いてしまい、  
-//童貞喪失の相手が誰だったか、などを保存しておけない。  
-//  
-//例として、  
-//=||  
-//;ここではCFLAG:0を「初めての相手のIDを記録するもの」とする  
-//;TARGETは「調教対象」の登録番号である  
-//CFLAG:登録番号:0 = TARGET  
-//||=  
-//上記の例文は、「登録番号」のキャラの、初めての相手をTARGETとして記録するものである。  
-//キャラを削除した場合などはCFLAGの登録番号の部分は自動で処理されるため、ここでは気にしなくてもいい。  
-//しかし、TARGETが1だったとして、1番目のキャラ名が「ファース子」、2番目のキャラが「セカン子」だった場合、  
-//ファース子を削除されると番号は勝手に詰められ、セカン子が登録番号1番目のキャラになる  
-//「CFLAG:登録番号:0」は1のまま変わらないため、初めての相手がセカン子に変わってしまう不具合が発生する。  
-//また、「SORTCHARA」というキャラをソートする処理や、「SWAPCHARA」で登録番号を入れ替えた際にも同じ現象が起こる。  
-//  
-//そのため、キャラの参照は、  
-//上の項で示したNO（CSV番号）などを使って、  
-//CFLAG:登録番号:0 = NO:TARGET  
-//などと保存することで不具合を防げる。  
-//  
-//ADDVOIDCHARAを使用したカスタムキャラの場合は全ての情報がまっさらな状態（0もしくは空文字）。NOも例外ではないため、  
-//キャラ作成時に固有のNOを付けておく必要がある。  
-//これが元々NOが0のことが多い「主人公」「あなた」なら問題は無いが、カスタムキャラが数人、もしくは全キャラがカスタムキャラだと、  
-//多くの場面でNO:0が参照され、あらゆる場所に「あなた」が現れる地獄絵図と化す。  
-//少し難しくはなるが、例として、  
-//=||  
-//ADDVOIDCHARA  
-//NO:(CHARANUM-1) = FLAG:カスタムキャラ人数  
-//FLAG:カスタムキャラ人数 += 1  
-//||=  
-//とすることで、固有のNOを割り当てることができる。  
-//例文について詳しくは（今後作成されるであろう）次のページを参照。  
-//  
-//いざ相手のキャラを呼び出して使いたいときは、  
-//=||  
-//FOR ループカウンタ, 0, CHARANUM  
-//	IF CFLAG:0 == NO:ループカウンタ  
-//		呼びたいキャラ = ループカウンタ  
-//		BREAK  
-//	ENDIF  
-//NEXT  
-//||=  
-//のように、ループ文で全キャラのNOをチェックし、一致した番号を検出して処理する  
-//といった仕組みになる。  
-//  
-//これらのカスタムキャラの仕組みについてはこちらで詳しく説明してくれている。  
-//|bgcolor(#F0F0E7):[[システム改造Q&A]]→実践編|  
-//|https://seesaawiki.jp/eraseries/d/%a5%b7%a5%b9%a5%c6%a5%e0%b2%fe%c2%a4Q%26A#content_2|  
-//----  
-//  
-//いざ相手のキャラを呼び出して使いたいときは、  
-//式中で使える関数『FINDELEMENT(CFLAG:ID, キャラのID)』や『FINDCHARA()』を使うと良いようだ。  
-//|bgcolor(#F0F0E7):EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→式中で使える関数→FINDELEMENT|  
-//|https://ja.osdn.net/projects/emuera/wiki/exmeth#h5-int.20FINDELEMENT.20.28var.20array.2C.20.3F.20value.2C.20int.20start.20.3D.200.2C.20int.20end.20.3D.20.E2.80.BB.2C.20int.20flag.29|  
-//|bgcolor(#F0F0E7):EmueraWiki→eramaker basic 開発者向け情報→Emueraで追加された拡張文法→式中で使える関数→FINDCHARA|  
-//|https://ja.osdn.net/projects/emuera/wiki/exmeth#h5-int.20FINDCHARA.28var.20key.2C.20.3F.20value.2C.20int.20start.20.3D.200.2C.20int.20end.20.3D.20.E2.80.BB.29|  
-//@ID_TO_CHARAの実装を、最新版のeraRanceKと  
-//eratohoK ver1.29.3またはera恋姫とで比べてみても良いかもしれないとのこと。  
-//----  
-//[[▲目次に戻る>#contents]]  
-//  
--->
+`GOTO TITLE_INPUT` seems to only return to wait for input since the buttons are alive, unlike for loading.
+
+---
+
+## Let's Read Common Mistakes
+It describes things that are easy to make mistakes on. Read through for when you get stuck.  
+[Common Mistakes](https://seesaawiki.jp/eraseries/d/%a4%e8%a4%af%a4%a2%a4%eb%b8%ed%a4%ea)
+
+---
+
+## Conclusion
+I've worked on adding a title screen and connecting it to vanilla.  
+I hope I've been able to guide you on how to research eramaker-side processing, how to find deprecated variables for updating, how to look up Emuera commands and expression functions, and so on.
+
+The person writing this still has many things they don't understand.  
+I think knowing how to research what you don't understand is what's important.  
+Even when you think you're skilled, there are many blind spots. I want to never lose my beginner's mind.
+
+Since era is a training simulator, there are no RPGs, maps, or strategies by default.  
+To make a games, you need to know not just how to use tools, but also level design, pathfinding, thinking logic, etc. Era doesn't teach those.  
+I want to commend that all of this - vanilla and tools - are features that various volunteers have each learned and created.
+
+I hope this becomes a stepping stone for you to create what you want.
+
+---
+
+Next Page → [ERB Production Practical Edition](erawiki-ERBmanual.md)
