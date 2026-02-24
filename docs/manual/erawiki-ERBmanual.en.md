@@ -1,19 +1,14 @@
----
-hide:
-  - toc
----
-
-# Variant Production / ERB Production Practical Guide
+# Variant Production / ERB Creation Practice
 
 Original page  
-[era series discussion thread wiki V3 ERB Production Practical Guide](https://seesaawiki.jp/eraseries/d/ERB%c0%bd%ba%ee%bc%c2%c1%a9%ca%d4)
+[eera series discussion thread, Summary Wiki V3, ERB creation practice](https://seesaawiki.jp/eraseries/d/ERB%c0%bd%ba%ee%bc%c2%c1%a9%ca%d4)
 
 ---
 
 - [Tutorial](erawiki-tutorial.md)
 - [Title Preparation](erawiki-title.md)
 - [Title Practice](erawiki-title2.md)
-- ERB Production Practical Guide
+- ERB creation practice
 
 ---
 

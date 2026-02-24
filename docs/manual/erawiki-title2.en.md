@@ -1,4 +1,4 @@
-# Variant creation/Title practice
+# Variant Creation/Title Practice
 
 Original page:  
 [era series discussion thread, Summary Wiki V3, Title practice](https://seesaawiki.jp/eraseries/d/%a5%bf%a5%a4%a5%c8%a5%eb%bc%c2%c1%a9%ca%d4)
@@ -6,9 +6,9 @@ Original page:
 ---
 
 - [Tutorial](erawiki-tutorial.md)
-- [Title preparation](erawiki-title.md)
-- Title practice
-- [ERB creation practice](erawiki-ERBmanual.md)
+- [Title Preparation](erawiki-title.md)
+- Title Practice
+- [ERB Creation Practice](erawiki-ERBmanual.md)
 
 ---
 
