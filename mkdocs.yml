@@ -409,7 +409,7 @@ plugins:
           nav_translations:
             EmueraEM+EEの仕様: EmueraEM+EE's Summary
             Emueraの仕様: Emuera's Summary
-            Emueraの追加機能: Extend feat added in Emuera
+            Emueraの追加機能: Extended features added in Emuera
             変数の仕様と一覧: Variable Specifications and List
             eramakerの仕様: eramaker's Summary
             プレイヤー向け情報: Information for end users
@@ -417,6 +417,8 @@ plugins:
             リファレンス: Reference
             変更ログ: Changelog
             開発者向け情報: eramaker basic Information for Developers
+            一覧: List
+            製作マニュアル: Production Manual
         - build: true
           default: true
           locale: ja

@@ -45,12 +45,10 @@ Use these instead of assignment statements. They cannot be combined with other o
 |                      |          | ○                   | `+`, `-`                        |
 | Bit shift operators  |          | ○                   | `<<`, `>>`                      |
 | Comparison operators |          | ×                   | `<`, `>`, `<=`, `>=`            |
-|                      |          | ×                   | `\=\=`, `!=`                    |
-| Logical operators    |          | ○                   | `&`, `\|`, `^`                  |
-|                      | ↓        | ×                   | `&&`, `!&`, `\|\|`, `!\|`, `^^` |
+|                      |          | ×                   | `==`, `!=`                      |
+| Logical operators    |          | ○                   | `&`, `|`, `^`                   |
+|                      | ↓        | ×                   | `&&`, `!&`, `||`, `!|`, `^^`    |
 | Ternary operator     | Low      | ×                   | `～?…#＿`                       |
-
-(Don't mind the extra backslashes "\" They're needed so the display won't break. You have to remove those backslashes manually if you want to use the operators).
 
 ## Additional Operations
 - `==` Comparison between strings. You cannot compare a number and a string.
