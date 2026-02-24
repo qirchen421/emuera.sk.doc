@@ -5,7 +5,7 @@ After starting up and reading the ERB, and after running BEGIN TITLE.
 ![](../assets/images/title.gif)  
 
 If @SYSTEM_TITLE is defined, call it and do nothing else.  
-If BEGIN or LOADDATA instruction is not executed in @SYSTEM_TITLE and RETURN is executed, the next process is not executed it ends in an error.  
+If BEGIN or LOADDATA instruction is not executed in @SYSTEM_TITLE and RETURN is executed, the next process is not executed; it ends in an error.  
 
 If @SYSTEM_TITLE is not defined, the standard title processing is done.  
 Characters such as "![0] Start from the beginning" on the standard title screen can be changed.  
@@ -21,7 +21,7 @@ It is slightly different from the screen called from LOADGAME.
 
 ## FIRST  
 When "![0] Start from the beginning" is selected in the title screen and after BEGIN FIRST is executed.  
-If the BEGIN instruction is not executed in @EVENTFIRST, the next process is not executed it ends in an error.  
+If the BEGIN instruction is not executed in @EVENTFIRST, the next process is not executed; it ends in an error.  
 
 ![](../assets/images/first.gif)  
 
@@ -62,9 +62,9 @@ Emuera's NEXTCOM was implemented to reproduce the behavior of the old code inclu
 For the CALLTRAIN instruction, see the extension instructions.  
 
 Display executable TRAIN commands after a @SHOW_STATUS call.  
-Look up @COM_ABLExx for which TRAINNAME are defined.  
+Look up @COM_ABLExx for which TRAINNAMEs are defined.  
 The search range (MAX_TRAIN in the figure) is up to the range of TRAINNAME specified in VariableSize.csv in Emuera, and up to 2147483647 in eramaker.  
-@If COM_ABLExx is not defined or returns a non-zero value, TRAINNAME is displayed because it is executable.  
+If @COM_ABLExx is not defined or returns a non-zero value, TRAINNAME is displayed because it is executable.  
 If @COM_ABLExx returns 0, TRAINNAME is not displayed because it cannot be executed.  
 It remembers which commands are executable or not at this time. (It doesn't call @COM_ABLExx again at runtime.)  
 
@@ -103,13 +103,13 @@ Unless a BEGIN instruction is made somewhere, it will never leave ABLUP.
 
 ## AFTERTRAIN  
 After BEGIN AFTERTRAIN is executed.  
-If the BEGIN instruction is not executed in @EVENTEND, the next process is not executed it ends in an error.  
+If the BEGIN instruction is not executed in @EVENTEND, the next process is not executed; it ends in an error.  
 
 ![](../assets/images/aftertrain.gif)  
 
 ## TURNEND  
 After BEGIN TURNEND is executed.  
-If the BEGIN instruction is not executed in @EVENTTURNEND, the next process is not executed it ends in an error.  
+If the BEGIN instruction is not executed in @EVENTTURNEND, the next process is not executed; it ends in an error.  
 
 ![](../assets/images/turnend.gif)  
 

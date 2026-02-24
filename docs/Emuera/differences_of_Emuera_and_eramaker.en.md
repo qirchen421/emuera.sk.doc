@@ -67,7 +67,7 @@ Emuera always interprets the omitted argument as 0, so anything inside a blank I
 ### Characters that can be used in function names  
 In eramaker, all characters, including symbols and double-byte characters, can be used.  
 Emuera also allows full-width characters, but not symbols other than _ (underscores).  
-Also, Emuera does not recommend to start the function name with a half-size number.  
+Also, Emuera does not recommend starting the function name with a half-size number.  
 The following script will work with eramaker, but will give an error with Emuera.  
 
 		CALL \.,)(][+-%* 　@&$  
@@ -110,16 +110,16 @@ RETURN in JUMP destination is the same as RETURN in JUMP source function.
 
 		CALL FOOBAR  
 
-		@FOO  
-		PRINTL Functino @FOO  
-		JUMP BAR  
-		@BAR  
-		PRINTL Functino @BAR  
-		RETURN 0  
-		@FOOBAR  
-		PRINTL Functino @FOOBAR  
-		CALL FOO  
-		PRINTW Back to the @FOOBAR function  
+		@FOO
+		PRINTL Function @FOO
+		JUMP BAR
+		@BAR
+		PRINTL Function @BAR
+		RETURN 0
+		@FOOBAR
+		PRINTL Function @FOOBAR
+		CALL FOO
+		PRINTW Back to the @FOOBAR function
 	;Result of the execution  
 	;eramaker(error)  
 	CALLで呼ばれた先からJUMPで関数を呼び出そうとしました  
@@ -140,11 +140,11 @@ When this option is YES, if CALLNAME is not set in chara*.csv or is set to an em
 However, even this option is not completely reproducible.  
 For example, if you add a character in eramaker and read the save data in Emuera, the behavior may be different.  
 
-### Unfolding PRINTFORM and other FORMs  
+### Unrolling PRINTFORM and other FORMs  
 eramaker repeats over and over until there is nothing left to unroll.  
 If there is a self-reference or circular reference, it will freeze.  
 Emuera only unrolls once.  
-An eramaker unfolding would probably look like this  
+An eramaker unrolling would probably look like this  
 
 	str = String to unroll  
 	while(str with {～～} in it)  
@@ -242,7 +242,7 @@ Thus, the practical value is the same as the number of arrays in ABL and TALENT.
 An error occurs in item.csv when referring to ITEM and ITEMSALES in SHOP as well.  
 In Emuera, you cannot specify values outside the range of an array such as ABL.  
 Such lines will be ignored.  
-Instead, you can change the range of the array by using !VariableSize.csv.  
+Instead, you can change the range of the array by using VariableSize.csv.
 
 ### How to read train.csv  
 It's basically the same as any other csv file, but the circumstances are a little different from the others.  
@@ -250,7 +250,7 @@ In eramaker, for example, even if you define "XXX,99999", if @COM99999 is define
 On the other hand, if you define a negative value, such as "YYY,-2", the command will be displayed, but nothing will happen when you select it.  
 
 Emuera does not reproduce this behavior.  
-The range that can be defined is up to the size of the TRAINNAME specified in !VariableSize.csv, otherwise it is ignored.  
+The range that can be defined is up to the size of the TRAINNAME specified in VariableSize.csv, otherwise it is ignored.  
 If the size of TRAINNAME is not changed, the valid range is from 0 to 999.  
 
 ### How to read chara*.csv  

@@ -4,7 +4,7 @@
 	A = B ;Substitute A for B  
 
 You can insert a comment at the end of a line in this way.  
-However, there are some exceptions, and if the argument is a simple string instruction such as the “PRINT” instruction, it will be evaluated as part of the string without commenting  
+However, there are some exceptions, and if the argument is a simple string instruction such as the “PRINT” instruction, it will be evaluated as part of the string without beign treated as a comment  
 
 	PRINT foo;bar  
 
@@ -18,7 +18,7 @@ In this case, "foo;bar" is PRINTed.
 	}  
 
 Will be interpreted as "#DIM CONST HOGE = 1,2,3,4"  
-'{' and '}' lines must not contain any other characters besides white space.  
+'{' and '}' lines must not contain any other characters besides whitespace.  
 One-byte space is added at the position where there is a line feed symbol.  
 In other words, lines cannot be split in the middle of function names and variable names,  
 If you divide PRINT etc., the display character string will include the half-width space that was a line feed  
