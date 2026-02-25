@@ -13,7 +13,7 @@ hide:
 > EmueraEM+EE is a modified version of Emuera based on [Emuera Private Version](https://ux.getuploader.com/ninnohito/).
 
 ### Emuera Private Version
-!!! quote "引用"
+!!! quote "Quote"
 
     Since the original Emuera is no longer being updated, the private modification version will not make any changes other than bug fixes in order to serve as the code base.
 

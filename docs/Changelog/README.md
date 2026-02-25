@@ -133,13 +133,13 @@ hide:
     * 初公開
 
 ## Emuera.EE
-== "v55"
+=== "v55"
 	ONEBINPUT,ONEBINPUTS追加
 	VVII氏のパッチで\.NET 10対応
 	daughterpatch氏によるcsprojの整理
 	ERDで2次元配列変数の文字列型変数に名前を付けたときに参照されない不具合を修正
 
-== "v54"
+=== "v54"
 	動作の安定性を改善
 	SPRITEGETCOLORの返り値が変だったのを修正
 	BINPUTSが常に0を返してしまう問題を修正
