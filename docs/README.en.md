@@ -5,7 +5,7 @@ hide:
 ---
 # Welcome
 
-!!! warning "Untranslated"
+!!! warning "Mostly Translated"
 
     Currently, the document is mostly translated. There might be some bugs and oversight so feel free to contribute to this document. You can access the source code [here](https://gitlab.com/EvilMask/emuera.em.doc) (mainly in Markdown).
 
