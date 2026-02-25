@@ -95,7 +95,7 @@
 | ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md)       | `int`               | `void` |
 
 
-### String manipulation and reference(?)(comparison maybe)
+### String Manipulation and Reference
 
 | Function name                                                       | Arguments                                         | Return   |
 | :------------------------------------------------------------------ | :------------------------------------------------ | :------- |
