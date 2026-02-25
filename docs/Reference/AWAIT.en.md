@@ -5,7 +5,7 @@ hide:
 
 # AWAIT
 
-| 関数名                                                     | 引数 | 戻り値 |
+| Function name                                                     | Arguments | Return |
 | :--------------------------------------------------------- | :--- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`AWAIT`](./AWAIT.md) | `int` | none  |
 

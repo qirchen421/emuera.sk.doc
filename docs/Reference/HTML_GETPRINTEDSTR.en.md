@@ -6,7 +6,7 @@ hide:
 
 # HTML_GETPRINTEDSTR
 
-| 関数名                                                                               | 引数 | 戻り値  |
+| Function name                                                                               | Arguments | Return  |
 | :----------------------------------------------------------------------------------- | :--- | :------ |
 | ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md) | `int`| `string`|
 

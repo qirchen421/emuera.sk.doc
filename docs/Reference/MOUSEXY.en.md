@@ -5,7 +5,7 @@ hide:
 
 # MOUSEX, MOUSEY
 
-| 関数名                                                             | 引数 | 戻り値 |
+| Function name                                                             | Arguments | Return |
 | :----------------------------------------------------------------- | :--- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`MOUSEX`](./MOUSEXY.md)      | none | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`MOUSEY`](./MOUSEXY.md)      | none | `int`  |

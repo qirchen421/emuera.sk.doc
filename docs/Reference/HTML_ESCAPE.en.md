@@ -5,7 +5,7 @@ hide:
 
 # HTML_ESCAPE
 
-| 関数名                                                                 | 引数     | 戻り値  |
+| Function name                                                                 | Arguments     | Return  |
 | :--------------------------------------------------------------------- | :------- | :------ |
 | ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.md) | `string` | `string`|
 

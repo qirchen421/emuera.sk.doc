@@ -5,7 +5,7 @@ hide:
 
 # HTML_STRINGLINES
 
-| 関数名                                                                       | 引数            | 戻り値 |
+| Function name                                                                       | Arguments            | Return |
 | :--------------------------------------------------------------------------- | :-------------- | :----- |
 | ![](../assets/images/IconEM.webp)[`HTML_STRINGLINES`](./HTML_STRINGLINES.md) | `string`, `int` | `int`  |
 

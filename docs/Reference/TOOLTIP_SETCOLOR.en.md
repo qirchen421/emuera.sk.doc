@@ -5,7 +5,7 @@ hide:
 
 # TOOLTIP_SETCOLOR
 
-| 関数名                                                                           | 引数         | 戻り値 |
+| Function name                                                                           | Arguments         | Return |
 | :------------------------------------------------------------------------------- | :----------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETCOLOR`](./TOOLTIP_SETCOLOR.md) | `int`, `int` | none   |
 

@@ -5,10 +5,10 @@ hide:
 
 # RETURN
 
-| 関数名                                                                                              | 引数                   | 戻り値                    |
+| Function name                                                                                              | Arguments                   | Return                    |
 | :-------------------------------------------------------------------------------------------------- | :--------------------- | :------------------------ |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)     | `引数に同じ`              |
-| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `strng`(, `string`,...)| `引数に同じ(数値型に変換)`|
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)     | `same as arguments`              |
+| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `string`(, `string`,...)| `same as arguments (converted to numeric)`|
 
 !!! info "API"
 

@@ -5,7 +5,7 @@ hide:
 
 # TOOLTIP_SETDELAY, TOOLTIP_SETDURATION
 
-| 関数名                                                                         | 引数    | 戻り値 |
+| Function name                                                                         | Arguments    | Return |
 | :----------------------------------------------------------------------------- | :------ | :----- |
 | ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDELAY`](./TOOLTIP_SET.md)    | `int`   | none   |
 | ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDURATION`](./TOOLTIP_SET.md) | `int`   | none   |

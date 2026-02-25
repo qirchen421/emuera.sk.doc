@@ -5,7 +5,7 @@ hide:
 
 # HTML_PRINT
 
-| 関数名                                                               | 引数     | 戻り値 |
+| Function name                                                               | Arguments     | Return |
 | :------------------------------------------------------------------- | :------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`HTML_PRINT`](./HTML_PRINT.md) | `string` | none   |
 

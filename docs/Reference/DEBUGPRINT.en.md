@@ -5,7 +5,7 @@ hide:
 
 # DEBUGPRINT
 
-| 関数名                                                                    | 引数           | 戻り値 |
+| Function name                                                                    | Arguments           | Return |
 | :------------------------------------------------------------------------ | :------------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`DEBUGPRINT`](./DEBUGPRINT.md)      | `string`       | none   |
 | ![](../assets/images/IconEmuera.webp)[`DEBUGPRINTL`](./DEBUGPRINT.md)     | `string`       | none   |

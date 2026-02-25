@@ -5,7 +5,7 @@ hide:
 
 # HTML_PRINT_ISLAND, HTML_PRINT_ISLAND_CLEAR
 
-| 関数名                                                                                   | 引数     | 戻り値 |
+| Function name                                                                                   | Arguments     | Return |
 | :--------------------------------------------------------------------------------------- | :------- | :----- |
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND`](./HTML_PRINT_ISLAND.md)       | `string` | none   |
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND_CLEAR`](./HTML_PRINT_ISLAND.md) | `string` | none   |

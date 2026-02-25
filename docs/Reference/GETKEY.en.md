@@ -5,7 +5,7 @@ hide:
 
 # GETKEY, GETKEYTRIGGERED
 
-| 関数名                                                                | 引数      | 戻り値 |
+| Function name                                                                | Arguments      | Return |
 | :-------------------------------------------------------------------- | :-------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`GETKEY`](./GETKEY.md)          | `keyCode` | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`GETKEYTRIGGERED`](./GETKEY.md) | `keyCode` | `int`  |
@@ -24,7 +24,7 @@ hide:
 	That is, if the key is continuously held down, `GETKEY` returns 1, but `GETKEYTRIGGERED` returns 1 only for the first time and then returns 0.  
 
 	These functions only return 1 when Emuera's window is active; if not active, they return 0 regardless of the key state.  
-	For the correspondence between key code values and actual keys, refer to Microsoft's MSDN documentation for [`GetKeyState()`](https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/nf-winuser-getkeystate).
+	For the correspondence between key code values and actual keys, refer to Microsoft's MSDN documentation for [`GetKeyState()`](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getkeystate).
 
 !!! hint "Hint"
 

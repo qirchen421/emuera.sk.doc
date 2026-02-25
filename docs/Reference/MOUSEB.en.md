@@ -5,7 +5,7 @@ hide:
 
 # MOUSEB
 
-| 関数名                                                   | 引数 | 戻り値   |
+| Function name                                                   | Arguments | Return   |
 | :------------------------------------------------------- | :--- | :------- |
 | ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md) | none | `string` |
 

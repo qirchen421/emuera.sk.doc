@@ -5,7 +5,7 @@ hide:
 
 # TOOLTIP Extension
 
-| 関数名                                                                           | 引数     |
+| Function name                                                                           | Arguments     |
 | :------------------------------------------------------------------------------- | :------- |
 | ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
 | ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
@@ -26,7 +26,7 @@ hide:
 	- `TOOLTIP_CUSTOM`: To use the tooltip extension features below, specify a non-zero value for the argument to turn the feature on. Specifying 0 turns it off and returns to the traditional tooltip display.
 	- `TOOLTIP_SETFONT`: Specifies the font name to be applied within the tooltip.
 	- `TOOLTIP_SETFONTSIZE`: Specifies the font size to be applied within the tooltip.
-	- `TOOLTIP_FORMAT`: Specifies the text format within the tooltip. The argument follows C#'s [`TextFormatFlags`](https://learn.microsoft.com/ja-jp/dotnet/api/system.windows.forms.textformatflags?view=netframework-4.8).
+	- `TOOLTIP_FORMAT`: Specifies the text format within the tooltip. The argument follows C#'s [`TextFormatFlags`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.textformatflags?view=netframework-4.8).
 	- The existing `TOOLTIP_SETCOLOR` from the original version now works. It is applied when tooltip extension is enabled.
 	- Allows using `<br>` tags within tooltips. This works even when tooltip extension is off.
 

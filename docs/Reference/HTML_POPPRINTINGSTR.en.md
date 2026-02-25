@@ -5,7 +5,7 @@ hide:
 
 # HTML_POPPRINTINGSTR
 
-| 関数名                                                                                    | 引数  | 戻り値  |
+| Function name                                                                                    | Arguments  | Return  |
 | :---------------------------------------------------------------------------------------- | :---- | :------ |
 | ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)    | `void`| `string`|
 

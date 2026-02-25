@@ -5,7 +5,7 @@ hide:
 
 # HTML_SUBSTRING
 
-| 関数名                                                                   | 引数            | 戻り値   |
+| Function name                                                                   | Arguments            | Return   |
 | :----------------------------------------------------------------------- | :-------------- | :------- |
 | ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int` | `string` |
 
