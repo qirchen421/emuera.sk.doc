@@ -7,7 +7,7 @@ hide:
 
 Added by Neo_Kesha
 
-| 関数名                                                          | 引数           | 戻り値 |
+| Function name                                                          | Arguments           | Return |
 | :-------------------------------------------------------------- | :------------- | :----- |
 | ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md) | `functionName` |        |
 

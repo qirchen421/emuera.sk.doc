@@ -5,9 +5,9 @@ hide:
 ---
 # Welcome
 
-!!! warning "Untranslated"
+!!! warning "Mostly Translated"
 
-    Currently, the document is mostly untranslated. Feel free to translate and contribute to this document. You can access the source code [here](https://gitlab.com/EvilMask/emuera.em.doc) (mainly in Markdown).
+    Currently, the document is mostly translated. There might be some bugs and oversight so feel free to contribute to this document. You can access the source code [here](https://gitlab.com/EvilMask/emuera.em.doc) (mainly in Markdown).
 
 ## What is EmueraEM+EE?
 > EmueraEM+EE is a modified version of Emuera based on [Emuera Private Version](https://ux.getuploader.com/ninnohito/).

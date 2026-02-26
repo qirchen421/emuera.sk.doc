@@ -45,7 +45,7 @@
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                                            | `int`                                                        | none     |
 | ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINTN.md) | `string` | none   |
 
-### Display operation, font operation, refer to display specifications(?)
+### Display operation, font operation, display specifications
 
 | Function name                                                                  | Arguments           | Return   |
 | :----------------------------------------------------------------------------- | :------------------ | :------- |
@@ -95,7 +95,7 @@
 | ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md)       | `int`               | `void` |
 
 
-### String manipulation and reference(?)(comparison maybe)
+### String Manipulation and Reference
 
 | Function name                                                       | Arguments                                         | Return   |
 | :------------------------------------------------------------------ | :------------------------------------------------ | :------- |

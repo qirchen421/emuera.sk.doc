@@ -423,6 +423,31 @@ plugins:
             中級者向け: Intermediate Users
             現制作者向け: Current Developers
             その他資料: Other Materials
+            # Reference category translations
+            PRINT系: PRINT Related
+            表示操作・フォント操作・表示仕様参照: Display Operation, Font Operation, Display Spec Reference
+            文字列操作・参照: String Manipulation and Reference
+            算術: Arithmetic
+            キャラ操作・参照: Character Operation and Reference
+            変数操作・変数参照・CSV参照: Variable Manipulation, Variable Reference, CSV Reference
+            セーブデータ操作: Save Data Operations
+            日付・時刻取得: Date and Time Retrieval
+            入力・ウェイト: Input/Wait
+            ループ・分岐構文: Loop/Branch Syntax
+            乱数制御: Random Number Control
+            デバッグ補助・システムフロー制御: Debugging Aids and System Flow Control
+            関数系（CALL等）: Functions (CALL, etc.)
+            RETURN系: RETURN Related
+            DEBUG系: DEBUG Related
+            ツールチップ系: Tooltip Related
+            HTML系: HTML Related
+            AWAIT関連: AWAIT Related
+            画像処理関連: Image Processing Related
+            サウンド系: Sound Related
+            XML系: XML Related
+            MAP（連想配列）系: MAP (Associative Array) Related
+            DataTable（データベース）系: DataTable (Database) Related
+            その他: Other
         - build: true
           default: true
           locale: ja
@@ -433,22 +458,46 @@ plugins:
           name: 简体中文
           site_name: Emuera.EM+EE 帮助文档
           nav_translations:
-            DataTable（データベース）系: DataTable（数据库）相关
-            HTML系: HTML 系列
-            MAP（連想配列）系: MAP（映射数组）相关
-            XML系: XML 文件处理相关
-            その他: 其他
-            サウンド系: 音频处理相关
-            ツールチップ系: 提示框处理相关
-            デバッグ補助・システムフロー制御: 调试辅助 / 系统流程控制
+            EmueraEM+EEの仕様: Emuera EM+EE 概要
+            Emueraの仕様: Emuera 概要
+            Emueraの追加機能: Emuera扩展功能
+            変数の仕様と一覧: 变量规格与列表
+            eramakerの仕様: eramaker 概要
+            プレイヤー向け信息: 面向玩家信息
             ホーム: 首页
             リファレンス: 参考手册
-            入力・ウェイト: 输入 / 等待
-            変数操作・変数参照・CSV参照: 变量操作 / 变量引用 / CSV 引用
             変更ログ: 更新日志
-            文字列操作・参照: 字符串操作 / 引用
+            開発者向け情報: 开发者信息
+            一览: 列表
+            制作手册: 制作手册
+            初心者向け: 初级
+            中级者向け: 中级
+            现制作者向け: 现任制作者
+            其他资料: 其他资料
+            PRINT系: PRINT相关
+            表示操作・フォント操作・表示仕様参照: 显示操作、字体操作、显示规格参考
+            文字列操作・参照: 字符串操作与参考
+            算术: 算术
+            キャラ操作・参照: 角色操作与参考
+            変数操作・変数参照・CSV参照: 变量操作、变量参考、CSV参考
+            セーブデータ操作: 保存数据操作
+            日付・時刻取得: 日期与时间获取
+            入力・ウェイト: 输入/等待
+            ループ・分岐構文: 循环/分支语法
+            乱数控制: 随机数控制
+            デバッグ補助・システムフロー制御: 调试辅助与系统流程控制
+            関数系（CALL等）: 函数相关（CALL等）
+            RETURN系: RETURN相关
+            DEBUG系: DEBUG相关
+            ツールチップ系: 工具提示相关
+            HTML系: HTML相关
+            AWAIT関連: AWAIT相关
             画像処理関連: 图像处理相关
-            関数系（CALL等）: 函数系列（CALL 相关）
+            サウンド系: 声音相关
+            XML系: XML相关
+            MAP（連想配列）系: MAP（关联数组）相关
+            DataTable（データベース）系: DataTable（数据库）相关
+            その他: 其他
       reconfigure_material: true
       reconfigure_search: true
   - minify:
