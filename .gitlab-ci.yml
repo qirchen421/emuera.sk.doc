@@ -40,5 +40,7 @@ pages:
     expire_in: 3 hrs
     paths:
       - public
+  tags:
+    - docker  # GitGud 的公共 Runner 通常需要 docker 标签
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
