@@ -1,47 +1,32 @@
-# This file is a template, and might need editing before it works on your project.
-# To contribute improvements to CI/CD templates, please follow the Development guide at:
-# https://docs.gitlab.com/ee/development/cicd/templates.html
-# This specific template is located at:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
-
-# Official language image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/python/tags/
-image: python:latest
-
-# Change pip's cache directory to be inside the project directory since we can
-# only cache local items.
+# 禁用 Runner 内置的 Git 拉取，跳过卡死阶段
 variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-
-# Pip's cache doesn't store the python packages
-# https://pip.pypa.io/en/stable/topics/caching/
-#
-# If you want to also cache the installed packages, you have to install
-# them in a virtualenv and cache it as well.
-cache:
-  paths:
-    - .cache/pip
-    - venv/
-
-before_script:
-  - python --version  # For debugging
-  - pip install virtualenv
-  - pip install mkdocs
-  - pip install mkdocs-material
-  - pip install mkdocs-minify-plugin
-  - pip install mkdocs-static-i18n
-  - virtualenv venv
-  - source venv/bin/activate
-
-variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  GIT_STRATEGY: none
 
 pages:
   stage: deploy
   script:
-    # 确保你本地已经安装了这些 pip 包
+    # 强制关闭任何可能导致卡死的 Git 弹窗
+    - $env:GIT_TERMINAL_PROMPT="0"
+    - $env:GCM_INTERACTIVE="false"
+    
+    # 清理旧的文件夹（防止第二次运行报错）
+    - if (Test-Path repo_src) { Remove-Item -Recurse -Force repo_src }
+    - if (Test-Path public) { Remove-Item -Recurse -Force public }
+    
+    - echo "=== 开始手动拉取代码 ==="
+    # 使用 GitLab 自动提供的临时 Token 进行克隆，绝对不会有权限问题
+    - git clone "https://gitlab-ci-token:$env:CI_JOB_TOKEN@gitgud.io/qrchen/emuera.em.doc.git" repo_src
+    
+    # 进入代码目录
+    - cd repo_src
+    
+    - echo "=== 开始安装依赖 ==="
     - pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-static-i18n mkdocs-material-extensions
-    - mkdocs build -d public
+    
+    - echo "=== 开始构建网页 ==="
+    # 将生成的网页输出到上一层目录的 public 文件夹中
+    - mkdocs build -d ../public
+
   artifacts:
     paths:
       - public
