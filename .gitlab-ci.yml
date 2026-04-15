@@ -33,14 +33,17 @@ before_script:
   - virtualenv venv
   - source venv/bin/activate
 
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
 pages:
+  stage: deploy
   script:
+    # 确保你本地已经安装了这些 pip 包
+    - pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-static-i18n mkdocs-material-extensions
     - mkdocs build -d public
   artifacts:
-    expire_in: 3 hrs
     paths:
       - public
-  tags:
-    - docker  # GitGud 的公共 Runner 通常需要 docker 标签
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
