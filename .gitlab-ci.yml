@@ -7,10 +7,9 @@ pages:
     - if (Test-Path repo_src) { Remove-Item -Recurse -Force repo_src }
     - if (Test-Path public) { Remove-Item -Recurse -Force public }
     
-    - echo "=== 开始手动拉取代码 (使用 SSH) ==="
-    # -c credential.helper= 是彻底禁用 Windows 弹窗的终极命令
-    # git@gitgud.io... 是你之前测试成功的 SSH 路径
-    - git -c credential.helper= clone git@gitgud.io:qrchen/emuera.em.doc.git repo_src
+    - echo "=== 开始手动拉取代码 (使用 SSH 并强制跳过主机检查) ==="
+    - $env:GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
+    - git clone git@gitgud.io:qrchen/emuera.em.doc.git repo_src
     
     - cd repo_src
     
