@@ -15,30 +15,33 @@ hide:
     int ISDEFINED macroName
     ```
 
-    如果存在与 `macroName` 同名的宏定义（`#DEFINE XXX`）则返回 `1`，否则返回 `0`。
+    如果定义了与`macroName`同名的宏(`#DEFINE XXX`)，则返回`1`。如果没有定义，则返回`0`。
 
 !!! hint "提示"
 
-    命令 / 行内函数两种写法均有效。
+    支持指令和表达式内函数两种方式。
 
-!!! example "示例代码"
+!!! example "示例"
 
     ``` { #language-erh title="DEFINE.ERH" }
     #DEFINE 体力 0
-    #DEFINE 精力 1
+    #DEFINE 气力 1
     ```
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE
-        #DIM 角色属性, 2 = 1000, 200
+        #DIM 角色数据, 2 = 1000, 200
 
-        PRINTFORML {ISDEFINED("体力")} {角色属性:体力} ; 此时等效于 {角色属性:0}
-        PRINTFORML {ISDEFINED("精力")} {角色属性:精力} ; 此时等效于 {角色属性:1}
+        PRINTFORML {ISDEFINED("体力")} {角色数据:体力}
+        PRINTFORML {ISDEFINED("气力")} {角色数据:气力}
         PRINTFORML {ISDEFINED("攻击力")}
 
         ONEINPUT
     ```
-    ``` title="输出结果"
+    ``` title="结果"
     1 1000
     1 200
     0
     ```
+
+### 相关项目
+- [函数・预处理器>表示特殊块的行>\[IF XXX\]](../Emuera/function.md#if-xxxelseif-xxxelseendif)

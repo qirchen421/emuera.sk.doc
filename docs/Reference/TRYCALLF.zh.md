@@ -41,3 +41,7 @@ hide:
     ``` title="输出结果"
     已调用 "TEST" 函数
     ```
+
+### 相关项目
+- [CALLF](CALLF.md)
+- [TRYCALLFORMF](TRYCALLFORMF.md)

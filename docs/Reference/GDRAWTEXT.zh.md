@@ -42,3 +42,8 @@ hide:
     ```
 
     ![](../assets/images/GDRAWTEXT.png)
+
+### 相关项目
+- [GSETFONT](GSETFONT.md)
+- [GSETPEN](GSETPEN.md)
+- [GGETTEXTSIZE](GGETTEXTSIZE.md)

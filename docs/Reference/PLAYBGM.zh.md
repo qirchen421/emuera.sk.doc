@@ -22,3 +22,8 @@ hide:
     只能作为命令使用。  
     最多可以同时播放 10 个音频文件。  
     因为使用了 WMPLib 支持库，所以允许使用 Windows Media Player 进行播放。
+
+### 相关项目
+- [PLAYSOUND](PLAYSOUND.md)
+- [STOPBGM](STOPBGM.md)
+- [SETBGMVOLUME](SETBGMVOLUME.md)

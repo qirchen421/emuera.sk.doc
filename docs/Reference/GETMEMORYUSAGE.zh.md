@@ -36,3 +36,6 @@ hide:
     当前的内存使用量为 65 MB
     运行 10000 次 ADDVOIDCHARA 之后的内存使用量为 913 MB
     ```
+
+### 相关项目
+- [CLEARMEMORY](CLEARMEMORY.md)

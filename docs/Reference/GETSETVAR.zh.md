@@ -57,3 +57,7 @@ hide:
     10 local Banana
     temp
     ```
+
+### 相关项目
+- [STRFORM](STRFORM.md)
+- [GETMETH,GETMETHS](GETMETH.md)

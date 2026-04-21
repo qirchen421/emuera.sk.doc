@@ -20,3 +20,7 @@ hide:
 !!! hint "提示"
 
     命令 / 行内函数两种写法均有效。
+
+### 相关项目
+- [PLAYSOUND](PLAYSOUND.md)
+- [PLAYBGM](PLAYBGM.md)
