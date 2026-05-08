@@ -36,3 +36,6 @@ hide:
     ``` title="输出结果"
     CLEARMEMORY 已执行完成，合计释放了 840 MB 的内存
     ```
+
+### 相关项目
+- [GETMEMORYUSAGE](GETMEMORYUSAGE.md)

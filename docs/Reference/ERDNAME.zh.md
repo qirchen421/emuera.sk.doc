@@ -46,3 +46,6 @@ hide:
 	``` title="输出结果"
 	AAA EEE III
 	```
+
+### 相关项目
+- [用户定义变量>ERD功能](../Emuera/user_defined_variables.md#erderabasic-define)

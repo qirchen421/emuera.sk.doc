@@ -40,3 +40,6 @@ hide:
     <b>D</b>EFG
     ```
     因为粗体比常规字体宽。
+
+### 相关项目
+- [SUBSTRING](SUBSTRING.md)

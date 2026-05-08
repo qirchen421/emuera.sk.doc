@@ -20,3 +20,6 @@ hide:
 !!! hint "提示"
 
     只能作为命令使用。
+
+### 相关项目
+- [PLAYSOUND](PLAYSOUND.md)

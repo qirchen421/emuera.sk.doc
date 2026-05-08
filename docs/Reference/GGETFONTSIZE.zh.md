@@ -40,3 +40,8 @@ hide:
     100
     200
     ```
+
+### 相关项目
+- [GSETFONT](GSETFONT.md)
+- [GGETFONT](GGETFONT.md)
+- [GGETFONTSTYLE](GGETFONTSTYLE.md)

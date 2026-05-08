@@ -33,8 +33,6 @@ hide:
         PRINTVL EXISTFUNCTION("TEST3")
         PRINTVL EXISTFUNCTION("SYSTEM_TITLE")
         PRINTVL EXISTFUNCTION("SHOP")
-        PRINTVL EXISTFUNCTION("PRINTVL")
-        PRINTVL EXISTFUNCTION("WAIT")
         WAIT
 
     @TEST1
@@ -52,6 +50,7 @@ hide:
     3
     1
     0
-    0
-    0
     ```
+
+### 相关项目
+- [ENUMFUNC](ENUMFUNC.md)
