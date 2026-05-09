@@ -17,17 +17,32 @@ hide:
 
     Since the original Emuera is no longer being updated, the private modification version will not make any changes other than bug fixes in order to serve as the code base.
 
+### Derivatives
+
+| Version | Features | Rendering Engine |
+|:---|:---|:---|
+| **EM+EE** | Audio, hotkeys, clipboard, TTF/OTF dynamic loading | GDI+ |
+| **Skia (LazyLoading)** | Lazy loading, MAP extensions, SQL/XML, SETIMAGELAYER, VARIADIC | Skia |
+| **DotNet** | SkiaSharp cross-platform, parallel loading, DICT dictionary | SkiaSharp |
+| **m-emuera** | Avalonia UI cross-platform reference implementation | Avalonia |
+
+## Quick Navigation
+
+| What do you want? | Go to |
+|:---|:---|
+| Learn ERABASIC from scratch | [Tutorial](tutorial/index.md) |
+| Look up instruction usage | [Reference](Reference/README.en.md) |
+| Learn EM+EE new features | [EM+EE Feature Overview](EMEE/EMEE_Summary.en.md) |
+| Learn Skia new features | [Skia Feature Overview](Skia/Skia_Summary.md) |
+| Understand the variable system | [Variable Specification](Emuera/variables.md) |
+| Functions and preprocessors | [Functions & Preprocessors](Emuera/function.md) |
+| System flow | [Flowchart](Emuera/system_flow.md) |
+| Cross-version feature comparison | [Version Evolution](tutorial/evolution.md) |
+
 ## Licence
 > This document is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 
 ## Download
-[**Latest Version:Emuera.NET 1824+v24+EMv18+EEv55**](assets/files/Emuera.NET%201824+v24+EMv18+EEv55+Rikaichan.zip)
-
-## Contact
-For error reports, feature requests, or editing discussions, please contact the developers on the Discord server below.
-
-[JP Docs Development](https://discord.com/channels/428432103042973706/1236190714954514452)
-
-<iframe src="https://discord.com/widget?id=428432103042973706&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+[**Latest Version: Emuera_skiaV3_x64**](assets/files/Emuera_skiaV3_x64.zip)

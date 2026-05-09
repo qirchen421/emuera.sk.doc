@@ -217,5 +217,5 @@ $RETRY                         ← 4. $ Goto 标签行
 
 | 你想了解什么 | 前往 |
 |:---|:---|
-| 声明系统详解 | [声明系统](declaration.zh.md) |
+| 声明系统详解 | [声明系统](variable-declaration.zh.md) |
 | 控制流 | [IF](../Reference/IF.md) / [SELECTCASE](../Reference/SELECTCASE.md) / [REPEAT](../Reference/REPEAT.md) |

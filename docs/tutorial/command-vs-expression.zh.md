@@ -1,9 +1,9 @@
 # 命令 vs 表达式 — 两种求值路径的根本差异
 
-!!! info "本节对应知识库"
+!!! info "本节对应手册"
 
-    - [命令与表达式的边界](../../../shared-trae/knowledge/erabasic/command-vs-expression.md) — 源码级完整分析
-    - [语法速查](../../../shared-trae/knowledge/erabasic/syntax-quickref.md) — 命令/表达式语法规则速查
+    - [表达式函数](../Emuera/user_defined_in_expression_function.zh.md) — #FUNCTION/#FUNCTIONS 的完整规格
+    - [CALLF 指令参考](../Reference/CALLF.md) — CALLF 的 API 文档
 
 ---
 
@@ -139,8 +139,7 @@ PRINTVL RESULT          ; 输出 1 ← 意外覆盖！
 
 !!! info "详细分析"
 
-    关于三条指令分发路径（A/B/C）和 RESULT 污染的完整分析，请参阅
-    [命令与表达式的边界（知识库）](../../../shared-trae/knowledge/erabasic/command-vs-expression.md)。
+    关于三条指令分发路径（A/B/C）和 RESULT 污染的完整分析，请参阅本页后续章节。
 
 ---
 
@@ -223,4 +222,3 @@ CALLF SETTER("key", val)
 - [行类型与结构](line-types.zh.md) — 四种行类型的基础知识
 - [表达式函数](../Emuera/user_defined_in_expression_function.zh.md) — #FUNCTION/#FUNCTIONS 的完整规格
 - [CALLF 指令参考](../Reference/CALLF.md) — CALLF 的 API 文档
-- [命令与表达式的边界（知识库）](../../../shared-trae/knowledge/erabasic/command-vs-expression.md) — 源码级完整分析

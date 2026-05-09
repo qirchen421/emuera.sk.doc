@@ -44,4 +44,4 @@ hide:
     ```
 
 ### Related Items
-- [Functions/Preprocessor>Lines representing special blocks>\[IF XXX\]](../Emuera/function.md#if-xxxelseif-xxxelseendif)
+- [Functions/Preprocessor>Lines representing special blocks>\[IF XXX\]](../Emuera/function.en.md#if-xxx)

@@ -682,7 +682,7 @@ Usually it's left-aligned, but here it's center-aligned to look like a title scr
 
 ---  
 
-### What is `PRINTFORML`?
+### What is `PRINTFORML`? {#printforml}
 This is a type of command that displays strings.
 
 - [Reference → `PRINT`](../Reference/PRINT.md)
@@ -1028,7 +1028,7 @@ Also, when you want conditional branches like "for one variable, when the conten
 it's recommended to use `SELECTCASE` to simplify the conditional expression.  
 It's introduced here.
 
-[System Modification Q&A → Basics → IF/ELSEIF Blocks Can Be Converted to SELECTCASE Statements](erawiki-modification-QandA.md#ifelseselectcase)
+[System Modification Q&A → Basics → IF/ELSEIF Blocks Can Be Converted to SELECTCASE Statements](erawiki-modification-QandA.md#ifelseifselectcase)
 
 The `INPUT` `RESULT` branch we're looking at right now is a good candidate for a SELECTCASE statement.  
 You might try it.

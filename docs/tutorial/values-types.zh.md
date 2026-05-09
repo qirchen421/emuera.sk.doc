@@ -211,8 +211,8 @@ ERABASIC 提供了大量内置变量，无需声明即可使用。以下是常�
 | `MONEY` | Int | 金钱 |
 | `DAY` | Int | 经过天数 |
 | `TIME` | Int | 时刻 |
-| `LOCAL` | Int 一维数组 | 函数局部整数变量 |
-| `LOCALS` | Str 一维数组 | 函数局部字符串变量 |
+| `LOCAL` | Int 一维数组 | 函数局部整数变量（⚠过时，新游戏建议 `#DIM` 替代，VariableSize.csv 设 -1 禁用） |
+| `LOCALS` | Str 一维数组 | 函数局部字符串变量（⚠过时，新游戏建议 `#DIMS` 替代，VariableSize.csv 设 -1 禁用） |
 | `LOCALF` | Float 一维数组 | 函数局部浮点变量（Skia 新增） |
 
 > 完整内置变量列表见 [变量规格](../Emuera/variables.zh.md)。
@@ -311,7 +311,7 @@ ABL:"技巧" += 1           ; 字符串索引（如果 abl.csv 中有定义）
 RESULTF = FLOAT_FUNC(5)
 ```
 
-### 显式转换函数（TO 系列）
+### 显式转换函数（TO 系列） { #类型转换函数 }
 
 | 函数 | 功能 | 示例 | 结果 |
 |------|------|------|------|

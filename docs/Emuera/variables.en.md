@@ -42,6 +42,7 @@ Also, if `COUNT` is set as a prohibited variable, `REPEAT` also becomes unusable
 #### LOCALS
 **※This variable is `obsolete`. Please consider using `#DIM` and `#DIMS` instead.**
 **See [User-Defined Variables](user_defined_variables.md) for details.**
+**For new game development, it is recommended to set both `LOCAL` and `LOCALS` element counts to `-1` in `VariableSize.csv` to disable them, forcing migration to `#DIM`/`#DIMS`.**
 
 Local variables.
 `LOCAL` is integer, `LOCALS` is string.
@@ -233,7 +234,7 @@ If you don't use [`SAVEGAME`](../Reference/SAVEGAME.md) and `PUTFORM` (when usin
 
 #### (User-Defined Saveable Global-Scope Variables)
 Variables defined using `#DIM SAVEDATA` or `#DIMS SAVEDATA` in ERH become saveable global-scope variables.
-However, when defining a saveable multi-dimensional global-scope variable using `#DIMS SAVEDATA`, the option [`Save data in binary format`](config.md#_43) must be enabled.
+However, when defining a saveable multi-dimensional global-scope variable using `#DIMS SAVEDATA`, the option [`Save data in binary format`](config.en.md#save-save-data-in-binary-format) must be enabled.
 See [Header Files (ERH)](ERH.md) for details.
 
 ### Multi-Dimensional Array Variables
@@ -413,8 +414,8 @@ In Emuera, assignment is prohibited.
 <!--Skipped proofreading for now-->
 |Variable Name|Type|Array|Assign|Save|Prohibit|Initial Value|Initialization Timing|Remarks|
 |:--|:--|:--|:--|:--|:--|:--|:--|:--|
-|LOCAL|Integer|One-dimensional|○|×|○|-|-|#LOCALSIZE changes element count for each function|
-|LOCALS|String|One-dimensional|○|×|○|-|-|#LOCALSSIZE changes element count for each function|
+|LOCAL|Integer|One-dimensional|○|×|○|-|-|#LOCALSIZE changes element count for each function **⚠obsolete, recommend setting -1 in VariableSize.csv for new games**|
+|LOCALS|String|One-dimensional|○|×|○|-|-|#LOCALSSIZE changes element count for each function **⚠obsolete, recommend setting -1 in VariableSize.csv for new games**|
 |ARG|Integer|One-dimensional|○|×|○|Arbitrary|When function is called※|※Only if set as argument.  Secures elements equal to number defined by arguments for each function|
 |ARGS|String|One-dimensional|○|×|○|Arbitrary|When function is called※|※Only if set as argument.  Secures elements equal to number defined by arguments for each function|
 |(Private)|Arbitrary|Arbitrary|Arbitrary|×|×|Arbitrary|Game start  When function is called※|※Only if set as argument.  Defined by #DIM or #DIMS in function|

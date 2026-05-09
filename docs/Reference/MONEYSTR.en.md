@@ -14,7 +14,7 @@ hide:
     ```  { #language-erbapi }
 	string MONEYSTR
     ```
-	Returns in `RESULTS:0` a string with the [configured money unit](../Emuera/replace.md#_1) appended to the number given as the argument.  
+	Returns in `RESULTS:0` a string with the [configured money unit](../Emuera/replace.en.md#money-unit) appended to the number given as the argument.  
 	Unit prefix/suffix is automatically handled.  
 	The second argument is the conversion format specifier for numeric string conversion, similar to the [`TOSTR`](./TOSTR.md) command.
 

@@ -18,7 +18,7 @@ Unless otherwise noted, the assumption is that it will run on the latest version
 It may not work properly with eramaker or older versions of Emuera.
 
 ## Basic Knowledge
-### About Private Variables (A～Z and LOCAL, not #DIM)
+### About Private Variables (A～Z and LOCAL, not #DIM) { #azlocaldim }
 - Use `#DIM` to declare and use variables only within a function
 - When adding data you want to save, write `#DIM` in an ERH file
 - I can't think of a reason to normally use LOCAL, but I use it in sample code
@@ -66,7 +66,7 @@ To create true local variables in the general sense in Emuera, add `DYNAMIC` whe
 
 ---
 
-### Movement Within Functions (Control Structures)
+### Movement Within Functions (Control Structures) { #_2 }
 
 erabasic programs (and most other programming languages) execute from top to bottom in the order they are written. This is called sequential execution.  
 Like novels or movies, it's fine to proceed in order for things like that, but in games, what happens next changes depending on conditions. Programs that change this order are called control structures.
@@ -120,7 +120,7 @@ If you want to move to just below the beginning instead of the beginning itself,
 
 ---
 
-### Writing Repetition (`FOR` and `REPEAT` Differences and Recommended Style)
+### Writing Repetition (`FOR` and `REPEAT` Differences and Recommended Style) { #forrepeat }
 - Try not to use `REPEAT`
 - Use `FOR` with private variables or local variables
 - `WHILE` and `DO` are for advanced users. Use them when it's difficult to know the loop count in advance
@@ -185,7 +185,7 @@ LOOP 1
 
 ---
 
-### RESULT and Inline Functions
+### RESULT and Inline Functions { #result }
 `RESULT` is a variable used to return function results.  
 `RESULT` is often used immediately after the `INPUT` command, but `RESULT` is overwritten whenever you `CALL` any function.  
 When executing multiple functions and adding up their results, if you don't copy the contents of `RESULT` to a private variable each time, you'll only know the `RESULT` of the last function executed.
@@ -209,7 +209,7 @@ Things that fall under the following conditions are often better made as inline 
 
 ---
 
-### IF/ELSEIF Groups Can Be Changed to SELECTCASE
+### IF/ELSEIF Groups Can Be Changed to SELECTCASE { #ifelseifselectcase }
 <!--;Somehow I feel like I'm missing something  -->
 There are times when you want to create many branches based on a single variable, calculation result, or random number.  
 Depending on input, output different results, or output different results depending on random numbers.  
@@ -345,7 +345,7 @@ Also note that Emuera's case option works for half-width characters but not for 
 
 ---
 
-### Eliminating Magic Numbers
+### Eliminating Magic Numbers { #_6 }
 
 - Numbers you should change:
   - Index numbers for characters, talents, etc. that aren't related to their content
@@ -451,7 +451,7 @@ However, preparing this is tedious, so using one or the other is sufficient. The
 
 ---
 
-### How to Use GREP
+### How to Use GREP { #grep }
 
 When investigating the cause of bugs or researching the mechanisms of parent variants, GREP search is almost essential.  
 GREP functionality is standard in Sakura Editor and VSCode. In Sakura Editor it's Ctrl+G, in VSCode use the search menu in the sidebar.
@@ -666,7 +666,7 @@ When learning other languages, check how "true" and "false" are handled in that 
 
 ---
 
-### Bit Operations Using Binary (`STAIN` Mechanism)
+### Bit Operations Using Binary (`STAIN` Mechanism) { #2stain }
 - Can pack many flags into one variable
 - When you see `&` or `|`, it's probably related to this
 - Use SETBIT・GETBIT if using now
@@ -1030,7 +1030,7 @@ This would be writing a loop from 0 to `CHARANUM-1`, checking one person at a ti
 ---
 
 ## Other Topics
-### Please Use UTF-8 for Character Encoding Whenever Possible
+### Please Use UTF-8 for Character Encoding Whenever Possible { #utf-8 }
 
 SHIFT-JIS is the standard character encoding for Japanese Windows, but it's hardly known overseas at all.  
 Even if they know, once they understand the historical issues, they probably don't want to use it.  

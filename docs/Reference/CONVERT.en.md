@@ -23,4 +23,4 @@ hide:
     Both command and expression function forms are available.
 
 ### Related
-- [Variable Specifications and List>Constant Notation](../Emuera/variables.md#_3)
+- [Variable Specifications and List>Constant Notation](../Emuera/variables.en.md#constant-notation)

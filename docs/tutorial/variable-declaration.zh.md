@@ -572,6 +572,11 @@ CALL PROCESS(1, 10, 20, 30)
 
 `#LOCALSIZE`/`#LOCALSSIZE`/`#LOCALFSIZE` 指定 LOCAL/LOCALS/LOCALF 数组的大小：
 
+!!! warning "LOCAL/LOCALS 已过时"
+
+    `LOCAL` 和 `LOCALS` 是过时的设计，不推荐使用。请使用 `#DIM`/`#DIMS` 声明私有变量替代。
+    对于新游戏开发，建议在 `VariableSize.csv` 中将 `LOCAL` 和 `LOCALS` 的元素数均设为 `-1` 以禁用，强制迁移到 `#DIM`/`#DIMS`。
+
 ```erb
 @MY_FUNC
 #LOCALSIZE 100              ; LOCAL 数组大小为 100
@@ -592,7 +597,7 @@ CALL PROCESS(1, 10, 20, 30)
 | `A` ~ `Z`（26个） | 引擎内置泛用变量 | `L_A`, `L_COUNT` |
 | `DAY`, `MONEY`, `TIME` | 系统状态变量 | `L_DAY`, `L_MONEY` |
 | `TARGET`, `ASSI`, `MASTER` | 角色编号变量 | `L_TARGET` |
-| `LOCAL`, `ARG`, `GLOBAL` | 引擎扩展变量 | `L_LOCAL`, `L_ARG` |
+| `LOCAL`, `ARG`, `GLOBAL` | 引擎扩展变量（LOCAL/LOCALS 已过时） | `L_LOCAL`, `L_ARG`，或使用 `#DIM`/`#DIMS` |
 | `REF`, `OUT` | #DIM 修饰关键字 | `_ref`, `_out`, `L_OUT` |
 | 指令同名 | 如 `PRINTFORM`, `CALL`, `RETURN` | 加前缀 |
 

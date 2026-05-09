@@ -37,7 +37,7 @@ The following two lines mean the same thing:
 	@GET_CFLAG, ARG, ARG:1
 
 Also, you can set default values for arguments.  
-For the syntax regarding default values, see [Argument Specification in User-Defined Functions](./function.md#_2).
+For the syntax regarding default values, see [Argument Specification in User-Defined Functions](./function.en.md#argument-specification-in-user-defined-functions).
 
 ## Restrictions
 

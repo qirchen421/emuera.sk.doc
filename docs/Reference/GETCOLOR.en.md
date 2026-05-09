@@ -23,8 +23,8 @@ hide:
 	int GETFOCUSCOLOR
     ```
 	Each function returns the color code in `RESULT:0`.  
-	`GETCOLOR` returns the currently used text color, `GETDEFCOLOR` returns the text color specified in [config](../Emuera/config.md#_28), `GETBGCOLOR` returns the currently used background color,  
-	`GETDEFBGCOLOR` returns the [default background color](../Emuera/config.md#_27), and `GETFOCUSCOLOR` returns the [text color when a button is selected](../Emuera/config.md#_29).  
+	`GETCOLOR` returns the currently used text color, `GETDEFCOLOR` returns the text color specified in [config](../Emuera/config.en.md#text-color), `GETBGCOLOR` returns the currently used background color,  
+	`GETDEFBGCOLOR` returns the [default background color](../Emuera/config.en.md#background-color), and `GETFOCUSCOLOR` returns the [text color when a button is selected](../Emuera/config.en.md#selected-text-color).  
 	The return value is in hexadecimal format as `0xRRGGBB`.  
 	For example, orange (R,G,B) = (`255, 128, 0`) returns `0xFF8000` (which is `16744448` in decimal).  
 	For color-to-number mapping, you can refer to websites that explain web colors.  

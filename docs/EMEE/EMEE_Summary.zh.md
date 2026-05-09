@@ -100,6 +100,37 @@
     HOGE3D@3.ERD
     ```
     
+### ![](../assets/images/Iconetc.webp)别名（`Alias`）功能追加 {#alias}
+
+Neo_Kesha 氏新增
+
+!!! summary ""
+
+    可以为 `Talent`、`Abl` 等变量指定多个标识符。  
+    通过扩展名 `.als` 文件来指定。
+
+!!! info "Talent.csv"
+    ```
+    0, Talent1
+    1, Talent2
+    2, Talent3
+    ```
+
+!!! info "Talent.als"
+    ```
+    1, Talent2Alias
+    0, MyCoolTalent
+    2, Talent3Alias
+    ```
+
+!!! info "ERB 中的行为"
+    ``` { #language-erbapi }
+    TALENT:0:Talent1 = 15
+    PRINT TALENT:0:MyCoolTalent ; 显示「15」
+    TALENT:0:MyCoolTalent = 420
+    PRINT TALENT:0:Talent1 ; 显示「420」
+    ```
+
 ### ![](../assets/images/IconEE.webp)在 `VariableSize.csv` 中设置禁用 `COUNT` 变量
 !!! summary ""
 
@@ -113,7 +144,7 @@
 ### ![](../assets/images/IconEM.webp)将`XML`、`MAP`、`DataTable` 数据保存进存档文件
 !!! summary ""
 
-    可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](./README.md#xml)、[`MAP`](./README.md#map)、[`DataTable`](./README.md#datatable) 的 ID。
+    可以利用CSV文件夹内的 `VarExt*.csv` 文件来设定需要保存的 [`XML`](../Reference/XML_MANAGE.md)、[`MAP`](../Reference/MAP_MANAGE.md)、[`DataTable`](../Reference/DT_MANAGE.md) 的 ID。
 
     * 该功能只有在「[セーブデータをバイナリ形式で保存する](https://osdn.net/projects/emuera/wiki/config#h5-.E3.82.BB.E3.83.BC.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E5.BD.A2.E5.BC.8F.E3.81.A7.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B)」为 `YES` 时有效
     * 即使设定了 ID，若内存中不存在该数据则不会保存进存档文件。
@@ -179,7 +210,7 @@
             - `radius='lt,rtLb,rb'`：`lt`指定左上、`rtLb`指定右上和左下、`rb`指定右下。`px`、字体大小百分比均有效。
             - `radius='lt,rt,rb,lb'`：`lt`指定左上、`rt`指定右上、`rb`指定右下、`lb`指定左下。`px`、字体大小百分比均有效。
     - 现在图像、`div` 之类的超过行高度的内容即使所在行移出画面也能正常显示了。
-    - `HTML_PRINT` 的 `<img>` 标签添加 `srcm` 属性。与 CBG 系列的按钮映射图像相似。执行 [INPUT 系列命令的扩展模式](./README.md#input)或 `INPUTMOUSEKEY` 命令时，将鼠标正下方的按钮映射图像颜色（RGB部分）赋值到 `RESULT:3`（`INPUTMOUSEKEY` 时赋值到 `RESULT:6`）。
+    - `HTML_PRINT` 的 `<img>` 标签添加 `srcm` 属性。与 CBG 系列的按钮映射图像相似。执行 [INPUT 系列命令的扩展模式](#input)或 `INPUTMOUSEKEY` 命令时，将鼠标正下方的按钮映射图像颜色（RGB部分）赋值到 `RESULT:3`（`INPUTMOUSEKEY` 时赋值到 `RESULT:6`）。
     - `HTML_PRINT` 添加第二参数（整型）。第二参数不为 `0`（默认值）时，不会发生强制换行。
 
 !!! example "示例代码"
@@ -311,186 +342,186 @@
 
 | 函数名                                                                   | 参数              | 返回值   |
 | :----------------------------------------------------------------------- | :---------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`    |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int`   | `string` |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.md) | `string`(, `int`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md) | `string`, `int`   | `string` |
 
 ### 字符串操作 / 引用
 
 | 函数名                                                             | 参数                                              | 返回值 |
 | :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
-| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`  |
+| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](../Reference/REGEXPMATCH.md) | `string`, `string`(, `int`)                       | `int`  |
 |                                                                    | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`  |
 
 ### 变量操作 / 变量引用 / CSV 引用
 
 | 函数名                                                                   | 参数                                          | 返回值   |
 | :----------------------------------------------------------------------- | :-------------------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md)           | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md)             | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md)   | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.md)     | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.md)         | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.md)     | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.md)       | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.md)           | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.md)              | `string`                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md)             | `string`                                      | `string` |
-| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)              | `string`, `any`                               | `1`      |
-| ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`)        | `1`      |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`, `int`)    | `1`      |
+| ![](../assets/images/IconEM.webp)[`ISDEFINED`](../Reference/ISDEFINED.md)           | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`EXISTVAR`](../Reference/EXISTVAR.md)             | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](../Reference/ENUMFUNC.md)   | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](../Reference/ENUMFUNC.md)     | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](../Reference/ENUMFUNC.md)         | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](../Reference/ENUMVAR.md)     | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](../Reference/ENUMVAR.md)       | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](../Reference/ENUMVAR.md)           | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](../Reference/ENUMMACRO.md) | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](../Reference/ENUMMACRO.md)   | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](../Reference/ENUMMACRO.md)       | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`GETVAR`](../Reference/GETSETVAR.md)              | `string`                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`GETVARS`](../Reference/GETSETVAR.md)             | `string`                                      | `string` |
+| ![](../assets/images/IconEM.webp)[`SETVAR`](../Reference/GETSETVAR.md)              | `string`, `any`                               | `1`      |
+| ![](../assets/images/IconEM.webp)[`VARSETEX`](../Reference/VARSETEX.md)             | `string`, `any`(, `int`, `int`, `int`)        | `1`      |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md)     | `string`, `ref` `string[]`(, `int`, `int`)    | `1`      |
 |                                                                          | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`      |
-| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md)               | `variable`, `int`(, `int`)                    | `string` |
+| ![](../assets/images/IconEE.webp)[`ERDNAME`](../Reference/ERDNAME.md)               | `variable`, `int`(, `int`)                    | `string` |
 
 ### 输入 / 等待
 
 | 函数名                                                       | 参数 | 返回值           |
 | :----------------------------------------------------------- | :--- | :--------------- |
-| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | 无   | `int` / `string` |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](../Reference/INPUTANY.md) | 无   | `int` / `string` |
 
 ### 调试辅助 / 系统流程控制
 
 | 函数名                                                                                   | 参数         |
 | :--------------------------------------------------------------------------------------- | :----------- |
-| ![](../assets/images/IconEE.webp)[`QUIT_AND_RESTART`](./QUIT_AND_RESTART.md)             | 无           |
-| ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.md)                         | 无           |
-| ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | 无           |
-| ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier` |
+| ![](../assets/images/IconEE.webp)[`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md)             | 无           |
+| ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](../Reference/FORCE_QUIT.md)                         | 无           |
+| ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](../Reference/FORCE_QUIT_AND_RESTART.md) | 无           |
+| ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](../Reference/FORCE_BEGIN.md)                       | `identifier` |
 
 ### 提示框处理相关
 
 | 函数名                                                                 | 参数           |
 | :------------------------------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](../Reference/TOOLTIP_EXTENSION.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](../Reference/TOOLTIP_EXTENSION.md)     | `string` |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](../Reference/TOOLTIP_EXTENSION.md) | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](../Reference/TOOLTIP_EXTENSION.md)      | `int`    |
 
 ### 函数系列（`CALL` 相关）
 
 | 函数名                                                                 | 参数           |
 | :--------------------------------------------------------------------- | :------------- |
-| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`       |
-| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `string`       |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString` |
+| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md) | `string`       |
+| ![](../assets/images/IconEE.webp)[`TRYCALLF`](../Reference/TRYCALLF.md)           | `string`       |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](../Reference/TRYCALLFORMF.md)   | `formedString` |
 
 ### 图像处理相关
 
 | 函数名                                                                       | 参数                                | 返回值 |
 | :--------------------------------------------------------------------------- | :---------------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)               | `int`, `string`(, `int`, `int`)     | `int`  |
-| ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                 | `int`                               | `int`  |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)         | `int`                               | `int`  |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md)       | `int`                               | `int`  |
-| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md)         | `string`, `string`, `int`(, `int`)  | `int`  |
-| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
-| ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.md)                   | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md)         | `int`                               | `int`    |
-| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md)               | `int`                               | `int`    |
+| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](../Reference/GDRAWTEXT.md)               | `int`, `string`(, `int`, `int`)     | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETFONT`](../Reference/GGETFONT.md)                 | `int`                               | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](../Reference/GGETFONTSIZE.md)         | `int`                               | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](../Reference/GGETFONTSTYLE.md)       | `int`                               | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](../Reference/GGETTEXTSIZE.md)         | `string`, `string`, `int`(, `int`)  | `int`  |
+| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](../Reference/GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETPEN`](../Reference/GGETPEN.md)                   | `int`                               | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md)         | `int`                               | `int`    |
+| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](../Reference/GGETBRUSH.md)               | `int`                               | `int`    |
 
 ### 音频处理相关
 
 | 函数名                                                                   | 参数     | 返回值 |
 | :----------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`PLAYSOUND`](./PLAYSOUND.md)           | `string` | 无     |
-| ![](../assets/images/IconEE.webp)[`STOPSOUND`](./STOPSOUND.md)           | 无       | 无     |
-| ![](../assets/images/IconEE.webp)[`PLAYBGM`](./PLAYBGM.md)               | `string` | 无     |
-| ![](../assets/images/IconEE.webp)[`STOPBGM`](./STOPBGM.md)               | 无       | 无     |
-| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.md)         | `string` | `int`  |
-| ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md) | `int`    | 无     |
-| ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.md)     | `int`    | 无     |
+| ![](../assets/images/IconEE.webp)[`PLAYSOUND`](../Reference/PLAYSOUND.md)           | `string` | 无     |
+| ![](../assets/images/IconEE.webp)[`STOPSOUND`](../Reference/STOPSOUND.md)           | 无       | 无     |
+| ![](../assets/images/IconEE.webp)[`PLAYBGM`](../Reference/PLAYBGM.md)               | `string` | 无     |
+| ![](../assets/images/IconEE.webp)[`STOPBGM`](../Reference/STOPBGM.md)               | 无       | 无     |
+| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](../Reference/EXISTSOUND.md)         | `string` | `int`  |
+| ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](../Reference/SETSOUNDVOLUME.md) | `int`    | 无     |
+| ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](../Reference/SETBGMVOLUME.md)     | `int`    | 无     |
 
 ### XML 文件处理相关
 
 | 函数名                                                                                    | 参数                                                         | 返回值   |
 | :---------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md)                        | `any`, `string`                                              | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)                         | `any`                                                        | `1`      |
-| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)                           | `any`                                                        | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_GET`](./XML_GET.md)                                | `any`, `string`(, `int`, `int`)                              | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](../Reference/XML_MANAGE.md)                        | `any`, `string`                                              | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](../Reference/XML_MANAGE.md)                         | `any`                                                        | `1`      |
+| ![](../assets/images/IconEM.webp)[`XML_EXIST`](../Reference/XML_MANAGE.md)                           | `any`                                                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_GET`](../Reference/XML_GET.md)                                | `any`, `string`(, `int`, `int`)                              | `int`    |
 |                                                                                           | `any`, `string`, `ref` `string[]`(, `int`)                   | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_GET_BYNAME`](./XML_GET.md)                         | `string`, `string`(, `int`, `int`)                           | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_GET_BYNAME`](../Reference/XML_GET.md)                         | `string`, `string`(, `int`, `int`)                           | `int`    |
 |                                                                                           | `string`, `string`, `ref` `string[]`(, `int`)                | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_SET`](./XML_SET.md)                                | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_SET`](../Reference/XML_SET.md)                                | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
 |                                                                                           | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_SET_BYNAME`](./XML_SET.md)                         | `string`, `string`, `string`(, `int`, `int`)                 | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.md)                            | `int`                                                        | `string` |
-| ![](../assets/images/IconEM.webp)[`XML_ADDNODE`](./XML_ADDNODE.md)                        | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_SET_BYNAME`](../Reference/XML_SET.md)                         | `string`, `string`, `string`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](../Reference/XML_TOSTR.md)                            | `int`                                                        | `string` |
+| ![](../assets/images/IconEM.webp)[`XML_ADDNODE`](../Reference/XML_ADDNODE.md)                        | `int`, `string`, `string`(, `int`, `int`)                    | `int`    |
 |                                                                                           | `ref` `string`, `string`, `string`(, `int`, `int`)           | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_ADDNODE_BYNAME`](./XML_ADDNODE.md)                 | `string`, `string`, `string`(, `int`, `int`)                 | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.md)                  | `int`, `string`(, `int`)                                     | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_ADDNODE_BYNAME`](../Reference/XML_ADDNODE.md)                 | `string`, `string`, `string`(, `int`, `int`)                 | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](../Reference/XML_REMOVENODE.md)                  | `int`, `string`(, `int`)                                     | `int`    |
 |                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](./XML_REMOVENODE.md)           | `string`, `string`(, `int`)                                  | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.md)                        | `int`, `string`                                              | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](../Reference/XML_REMOVENODE.md)           | `string`, `string`(, `int`)                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](../Reference/XML_REPLACE.md)                        | `int`, `string`                                              | `int`    |
 |                                                                                           | `int`, `string`, `string`(, `int`)                           | `int`    |
 |                                                                                           | `ref` `string`, `string`, `string`(, `int`)                  | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](./XML_REPLACE.md)                 | `string`, `string`, `string`(, `int`)                        | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE`](./XML_ADDATTRIBUTE.md)              | `int`, `string`, `string`(, `string`, `int`, `int`)          | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](../Reference/XML_REPLACE.md)                 | `string`, `string`, `string`(, `int`)                        | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.md)              | `int`, `string`, `string`(, `string`, `int`, `int`)          | `int`    |
 |                                                                                           | `ref` `string`, `string`, `string`(, `string`, `int`, `int`) | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE_BYNAME`](./XML_ADDATTRIBUTE.md)       | `string`, `string`, `string`(, `string`, `int`, `int`)       | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE`](./XML_REMOVEATTRIBUTE.md)        | `int`, `string`(, `int`)                                     | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_ADDATTRIBUTE_BYNAME`](../Reference/XML_ADDATTRIBUTE.md)       | `string`, `string`, `string`(, `string`, `int`, `int`)       | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md)        | `int`, `string`(, `int`)                                     | `int`    |
 |                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](../Reference/XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)                                  | `int`    |
 
 ### MAP（映射数组）相关
 
 | 函数名                                                                   | 参数                              | 返回值   |
 | :----------------------------------------------------------------------- | :-------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_MANAGE.md)         | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_MANAGE.md)          | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_MANAGE.md)        | `string`                          | `1`      |
-| ![](../assets/images/IconEM.webp)[`MAP_GET`](./MAP_OPERATION.md)         | `string`, `string`                | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_HAS`](./MAP_OPERATION.md)         | `string`, `string`                | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_SET`](./MAP_OPERATION.md)         | `string`, `string`, `string`      | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_REMOVE`](./MAP_OPERATION.md)      | `string`, `string`                | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_SIZE`](./MAP_OPERATION.md)        | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_CLEAR`](./MAP_OPERATION.md)       | `string`                          | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md)       | `string`                          | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](../Reference/MAP_MANAGE.md)         | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](../Reference/MAP_MANAGE.md)          | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](../Reference/MAP_MANAGE.md)        | `string`                          | `1`      |
+| ![](../assets/images/IconEM.webp)[`MAP_GET`](../Reference/MAP_OPERATION.md)         | `string`, `string`                | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_HAS`](../Reference/MAP_OPERATION.md)         | `string`, `string`                | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_SET`](../Reference/MAP_OPERATION.md)         | `string`, `string`, `string`      | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_REMOVE`](../Reference/MAP_OPERATION.md)      | `string`, `string`                | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_SIZE`](../Reference/MAP_OPERATION.md)        | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_CLEAR`](../Reference/MAP_OPERATION.md)       | `string`                          | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md)       | `string`                          | `string` |
 |                                                                          | `string`, `int`                   | `string` |
 |                                                                          | `string`, `ref` `string[]`, `int` | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)   | `string`                          | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md) | `string`, `string`                | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md)   | `string`                          | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.md) | `string`, `string`                | `int`    |
 
 ### DataTable（数据库）相关
 | 函数名                                                                 | 参数                                                          | 返回值   |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------ | :------- |
-| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)         | `string`                                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)          | `string`                                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md)        | `string`                                                      | `1`      |
-| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)          | `string`                                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)         | `string`, `int`                                               | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](./DT_COLUMN.md)     | `string`, `string`(, `any`, `int`)                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](./DT_COLUMN.md)   | `string`, `string`                                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.md)  | `string`, `string`                                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.md)  | `string`                                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | 无       |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_ADD`](./DT_ROW.md)           | `string`([, `string`, `any`] ...)                             | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CREATE`](../Reference/DT_MANAGE.md)         | `string`                                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_EXIST`](../Reference/DT_MANAGE.md)          | `string`                                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](../Reference/DT_MANAGE.md)        | `string`                                                      | `1`      |
+| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](../Reference/DT_MANAGE.md)          | `string`                                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](../Reference/DT_MANAGE.md)         | `string`, `int`                                               | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](../Reference/DT_COLUMN.md)     | `string`, `string`(, `any`, `int`)                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](../Reference/DT_COLUMN.md)   | `string`, `string`                                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](../Reference/DT_COLUMN.md)  | `string`, `string`                                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](../Reference/DT_COLUMN.md)  | `string`                                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | 无       |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_ADD`](../Reference/DT_ROW.md)           | `string`([, `string`, `any`] ...)                             | `int`    |
 |                                                                        | `string`, `ref` `string[]`, `ref` `any[]`, `int`              | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_SET`](./DT_ROW.md)           | `string`, `int`, `string`, `any`([, `string`, `any`] ...)     | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_SET`](../Reference/DT_ROW.md)           | `string`, `int`, `string`, `any`([, `string`, `any`] ...)     | `int`    |
 |                                                                        | `string`, `int`, `ref` `string[]`, `ref` `any[]`, `int`       | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_REMOVE`](./DT_ROW.md)        | `string`, `int`                                               | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_REMOVE`](../Reference/DT_ROW.md)        | `string`, `int`                                               | `int`    |
 |                                                                        | `string`, `ref` `int[]`, `int`                                | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.md)        | `string`                                                      | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.md)         | `string`, `int`, `string`(, `int`)                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.md)        | `string`, `int`, `string`(, `int`)                            | `string` |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.md)      | `string`, `int`, `string`(, `int`)                            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.md)         | `string`, `int`, `string`(, `any`, `int`)                     | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_SELECT`](./DT_SELECT.md)         | `string`(, `string`, `string`, `ref` `int[]`)                 | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.md)   | `string`(, `ref` `string`)                                    | `string` |
-| ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.md) | `string`, `string`, `string`                                  | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](../Reference/DT_ROW.md)        | `string`                                                      | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](../Reference/DT_CELL.md)         | `string`, `int`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](../Reference/DT_CELL.md)        | `string`, `int`, `string`(, `int`)                            | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](../Reference/DT_CELL.md)      | `string`, `int`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](../Reference/DT_CELL.md)         | `string`, `int`, `string`(, `any`, `int`)                     | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_SELECT`](../Reference/DT_SELECT.md)         | `string`(, `string`, `string`, `ref` `int[]`)                 | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_TOXML`](../Reference/DT_SERIALIZATION.md)   | `string`(, `ref` `string`)                                    | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_FROMXML`](../Reference/DT_SERIALIZATION.md) | `string`, `string`, `string`                                  | `int`    |
 
 ### 其他
 
 | 函数名                                                                   | 参数                        | 返回值   |
 | :----------------------------------------------------------------------- | :-------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)           | `string`                    | `int`    |
-| ![](../assets/images/IconEM.webp)[`ENUMFILES`](./ENUMFILES.md)           | `string`(, `string`, `int`) | `int`    |
-| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md)       | 无                          | 无       |
-| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](./GETMEMORYUSAGE.md) | 无                          | `int`    |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md)       | 无                          | `int`    |
-| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](./TEXTBOX.md)            | `string`                    | `1`      |
-| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.md)            | 无                          | `string` |
-| ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.md)           | `int`, `int`, `int`         | `1`      |
-| ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.md)         | 无                          | `1`      |
+| ![](../assets/images/IconEM.webp)[`EXISTFILE`](../Reference/EXISTFILE.md)           | `string`                    | `int`    |
+| ![](../assets/images/IconEM.webp)[`ENUMFILES`](../Reference/ENUMFILES.md)           | `string`(, `string`, `int`) | `int`    |
+| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](../Reference/UPDATECHECK.md)       | 无                          | 无       |
+| ![](../assets/images/IconEE.webp)[`GETMEMORYUSAGE`](../Reference/GETMEMORYUSAGE.md) | 无                          | `int`    |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](../Reference/CLEARMEMORY.md)       | 无                          | `int`    |
+| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](../Reference/TEXTBOX.md)            | `string`                    | `1`      |
+| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](../Reference/TEXTBOX.md)            | 无                          | `string` |
+| ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](../Reference/TEXTBOX.md)           | `int`, `int`, `int`         | `1`      |
+| ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](../Reference/TEXTBOX.md)         | 无                          | `1`      |

@@ -41,7 +41,7 @@
 
     Languages other than English can now be included in macros.
 
-### ![](../assets/images/IconEM.webp)Compressed Save Data
+### ![](../assets/images/IconEM.webp)Compressed Save Data {#_5}
 !!! summary ""
 
     Configurable in the settings screen or `emuera.config`.
@@ -57,7 +57,7 @@
 
     Save data with compression enabled is not compatible with older versions or the original Emuera.exe.
 
-### ![](../assets/images/IconEM.webp)Emuera Icon Specification Feature
+### ![](../assets/images/IconEM.webp)Emuera Icon Specification Feature {#emuera}
 !!! summary ""
 
     Configurable via the config item in `emuera.config`
@@ -67,7 +67,7 @@
 
     Only the title bar and taskbar icons change (`Emuera.exe` icon itself does not change)
 
-### ![](../assets/images/IconEE.webp)Emuera-Anchor Clipboard Functionality Ported
+### ![](../assets/images/IconEE.webp)Emuera-Anchor Clipboard Functionality Ported {#emuera-anchorclipboard}
 !!! summary ""
 
     Added automatic clipboard copying feature for text displayed in Emuera.
@@ -86,7 +86,7 @@
 
 ## Constants & Variables
 
-### ![](../assets/images/IconEE.webp)Variable Arrays Defined in `ERH` Can Have Names Assigned via `CSV`/`ERD` Files
+### ![](../assets/images/IconEE.webp)Variable Arrays Defined in `ERH` Can Have Names Assigned via `CSV`/`ERD` Files {#erhcsverd}
 !!! summary ""
 
     Reads files conforming to variable names defined in `ERH` and assigns names to arrays, just like existing CSV variables.
@@ -123,13 +123,13 @@
     By specifying `COUNT,-1`, you can set COUNT as a restricted variable.
     In this case, a warning appears at startup for `REPEAT` lines, and an error occurs during execution.
 
-### ![](../assets/images/IconEE.webp)CSV Applied to `DAY`, `TIME`, `MONEY`
+### ![](../assets/images/IconEE.webp)CSV Applied to `DAY`, `TIME`, `MONEY` {#daytimemoneycsv}
 !!! summary ""
 
     Names can be assigned via `DAY.csv`, `TIME.csv`, `MONEY.csv` just like other CSV files.
     `DAYNAME`, `TIMENAME`, `MONEYNAME` become available.
 
-### ![](../assets/images/IconEM.webp)`XML`, `MAP`, `DataTable` Can Be Saved in Save Data
+### ![](../assets/images/IconEM.webp)`XML`, `MAP`, `DataTable` Can Be Saved in Save Data {#xmlmapdatatable}
 !!! summary ""
 
     IDs for [`XML`](../Reference/XML_MANAGE.md), [`MAP`](../Reference/MAP_MANAGE.md), and [`DataTable`](../Reference/DT_MANAGE.md) that you want to save can be configured in `VarExt*.csv` files in the CSV folder.
@@ -164,7 +164,7 @@
 
 ## Modified Commands & Functions
 
-### ![](../assets/images/IconEM.webp)`HTML_PRINT` Related Changes
+### ![](../assets/images/IconEM.webp)`HTML_PRINT` Related Changes {#html_print}
 !!! summary ""
 
     - The `<space>` tag in `HTML_PRINT` now accepts negative numbers for the `param` attribute
@@ -197,7 +197,7 @@
             - `radius='lt,rtLb,rb'`: Applies `lt` to top-left, `rtLb` to top-right and bottom-left, `rb` to bottom-right. Both pixels and percentage of font size supported.
             - `radius='lt,rt,rb,lb'`: Applies `lt` to top-left, `rt` to top-right, `rb` to bottom-right, `lb` to bottom-left. Both pixels and percentage of font size supported.
     - Content exceeding line height (such as images and divs) can now be displayed even when the line is off-screen
-    - Added `srcm` attribute to `<img>` tag in `HTML_PRINT`. Similar to CBG button maps. When using [extended INPUT mode](./EMEE_Summary.md#input) or executing `INPUTMOUSEKEY`, the color (RGB part) of the button map image under the mouse cursor is assigned to `RESULT:3` (or `RESULT:6` for `INPUTMOUSEKEY`)
+    - Added `srcm` attribute to `<img>` tag in `HTML_PRINT`. Similar to CBG button maps. When using [extended INPUT mode](#input) or executing `INPUTMOUSEKEY`, the color (RGB part) of the button map image under the mouse cursor is assigned to `RESULT:3` (or `RESULT:6` for `INPUTMOUSEKEY`)
     - Added second argument (integer type) to `HTML_PRINT`. If the second argument is not `0` (default), forced line breaks are disabled
 
 !!! example "Example"
@@ -215,7 +215,7 @@
         ONEINPUT
     ```
 
-### ![](../assets/images/IconEM.webp)`HTML_PRINT` Related Changes to PRINT Commands
+### ![](../assets/images/IconEM.webp)`HTML_PRINT` Related Changes to PRINT Commands {#html_printprint}
 !!! summary ""
 
     - Added arguments to `PRINT_IMG` (optional) and added 3 new formats
@@ -239,7 +239,7 @@
 
         ONEINPUT
     ```
-### ![](../assets/images/IconEM.webp)Mouse Click Support in `INPUT` Family
+### ![](../assets/images/IconEM.webp)Mouse Click Support in `INPUT` Family {#input}
 !!! summary ""
 
     Added second argument to `INPUT`, `INPUTS`, `ONEINPUT`, `ONEINPUTS` (integer type, optional, default is `0`)
@@ -282,7 +282,7 @@
     ``` title="emuera.config"
     Extensions available for LOADTEXT and SAVETEXT:txt,xml,json
     ```
-### ![](../assets/images/IconEM.webp)`REPLACE` Extension
+### ![](../assets/images/IconEM.webp)`REPLACE` Extension {#replace}
 !!! summary ""
 
     If the third argument of `REPLACE` is a string array variable and the fourth argument is non-zero, matching parts from the second argument are replaced sequentially with elements of the string array and the result is returned
@@ -320,14 +320,14 @@
 
     Added optional fourth argument to specify font style using the same 4-bit number as `SETFONT` (1=bold, 2=italic, 4=strikethrough, 8=underline).
 
-### ![](../assets/images/IconEE.webp)`GETNUM` ERD Support
+### ![](../assets/images/IconEE.webp)`GETNUM` ERD Support {#getnumerd}
 !!! summary ""
 
     `GETNUM` now supports ERD and can have an optional third argument
     The third argument specifies the dimension of the multidimensional array, counting from the left as 1, 2, 3 (note: differs from the `VARSIZE` function specification).
     Also added a config option to make dimension specification in the `VARSIZE` function use 1, 2, 3 (same as ERD).
 
-### ![](../assets/images/IconEM.webp)`GCLEAR` Area Specification with Color
+### ![](../assets/images/IconEM.webp)`GCLEAR` Area Specification with Color {#gclear}
 !!! summary ""
 
     Added format 2: can now specify X, Y, width, and height of the area via the third to sixth arguments.
@@ -344,7 +344,7 @@
     If the optional third argument is non-zero, images are referenced via relative path from Emuera.
     This allows using ERB folder, CSV folder, and custom folders.
 
-### ![](../assets/images/Iconetc.webp)Added Alias (`Alias`) Functionality
+### ![](../assets/images/Iconetc.webp)Added Alias (`Alias`) Functionality {#alias}
 !!! summary ""
 
     Added by Neo_Kesha

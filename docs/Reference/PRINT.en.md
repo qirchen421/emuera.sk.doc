@@ -75,4 +75,4 @@ hide:
 ### Related Items
 - [PRINTBUTTON](PRINTBUTTON.md)
 - [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
-- [Extensions added in Emuera>Formatted String (FORM syntax) Extensions](../Emuera/expression.md#form_1)
+- [Extensions added in Emuera>Formatted String (FORM syntax) Extensions](../Emuera/expression.en.md#formatted-string-form-syntax-extension)

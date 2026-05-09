@@ -17,7 +17,7 @@ hide:
     Loads `GLOBAL` and `GLOBALS`. Save destination is `global.sav`.  
     Does not error even if loading fails.  
     Assigns `1` to `RESULT` on success, and `0` on failure.  
-    Like regular save data, files with incorrect [`code` and `version`](../Emuera/variables.md#gamebasecsv) set in `gamebase.csv` cannot be loaded.  
+    Like regular save data, files with incorrect [`code` and `version`](../Emuera/variables.en.md#gamebasecsv-variables) set in `gamebase.csv` cannot be loaded.  
     See the variables section for details on the `GLOBAL` variable.  
 
 
@@ -27,4 +27,4 @@ hide:
 
 ### See Also
 - [SAVEGLOBAL](SAVEGLOBAL.md)
-- [Variables shared between save data](../Emuera/variables.md#_8)
+- [Variables shared between save data](../Emuera/variables.en.md#variables-shared-between-save-data)

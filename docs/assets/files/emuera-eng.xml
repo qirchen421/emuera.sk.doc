@@ -1,6 +1,7 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <lang>
     <name>English</name>
+    <culture>en</culture>
     <tr id="UI.MainWindow.FileFilter"><![CDATA[ERB file]]></tr>
     <tr id="UI.MainWindow.File"><![CDATA[File(&F)]]></tr>
     <tr id="UI.MainWindow.File.Restart"><![CDATA[Restart(&R)]]></tr>
@@ -18,8 +19,10 @@
     <tr id="UI.MainWindow.Debug.UpdateDebugInfo"><![CDATA[Update Debug Info]]></tr>
     <tr id="UI.MainWindow.Tools"><![CDATA[Tools]]></tr>
     <tr id="UI.MainWindow.Tools.LockWindowWidth"><![CDATA[Lock window width]]></tr>
+    <tr id="UI.MainWindow.Tools.CopyToClipboard"><![CDATA[Copy Text to Clipboard]]></tr>
     <tr id="UI.MainWindow.Help"><![CDATA[Help(&H)]]></tr>
     <tr id="UI.MainWindow.Help.Config"><![CDATA[Setting(&C)]]></tr>
+    <tr id="UI.MainWindow.Language"><![CDATA[Language(&L)]]></tr>
     <tr id="UI.MainWindow.ContextMenu.KeyMacro"><![CDATA[Macro]]></tr>
     <tr id="UI.MainWindow.ContextMenu.Cut"><![CDATA[Cut]]></tr>
     <tr id="UI.MainWindow.ContextMenu.Copy"><![CDATA[Copy]]></tr>
@@ -60,6 +63,13 @@
     <tr id="UI.ConfigDialog.Environment.TextEditorCommandline.UserSetting"><![CDATA[User Setting]]></tr>
     <tr id="UI.ConfigDialog.Display"><![CDATA[Display]]></tr>
     <tr id="UI.ConfigDialog.Display.TextDrawingMode"><![CDATA[Drawing Interface]]></tr>
+    <tr id="UI.ConfigDialog.Display.SkiaImageQuality"><![CDATA[Image Scaling Quality]]></tr>
+    <tr id="UI.ConfigDialog.Display.SkiaFontHinting"><![CDATA[Font Hinting]]></tr>
+    <tr id="UI.ConfigDialog.Display.SkiaFontEdging"><![CDATA[Font Edging]]></tr>
+    <tr id="UI.ConfigDialog.Display.RenderingBackend"><![CDATA[Rendering Backend]]></tr>
+    <tr id="UI.ConfigDialog.Display.RenderingBackendAuto"><![CDATA[Auto Detect]]></tr>
+    <tr id="UI.ConfigDialog.Display.RenderingBackendOpenGL"><![CDATA[OpenGL]]></tr>
+    <tr id="UI.ConfigDialog.Display.RenderingBackendCPU"><![CDATA[CPU]]></tr>
     <tr id="UI.ConfigDialog.Display.FPS"><![CDATA[Frames per second]]></tr>
     <tr id="UI.ConfigDialog.Display.PrintCPerLine"><![CDATA[Number of PRINTC per column]]></tr>
     <tr id="UI.ConfigDialog.Display.PrintCLength"><![CDATA[Number of characters in PRINTC]]></tr>
@@ -274,6 +284,7 @@ Settings apply only at start]]></tr>
     <tr id="Error.IncrementConst"><![CDATA[Cannot increment a read-only variable]]></tr>
     <tr id="Error.NumericType"><![CDATA[Numeric type]]></tr>
     <tr id="Error.StringType"><![CDATA[String type]]></tr>
+    <tr id="Error.FloatType"><![CDATA[Floating-point type]]></tr>
     <tr id="Error.UnknownType"><![CDATA[Unknown type]]></tr>
     <tr id="Error.RefType"><![CDATA[Reference type]]></tr>
     <tr id="Error.MultidimType"><![CDATA[Multidimensional type]]></tr>
@@ -297,7 +308,7 @@ Settings apply only at start]]></tr>
     <tr id="Error.InvalidRegexArg"><![CDATA[{0}: The {1} argument regex is invalid: {2}]]></tr>
     <tr id="Error.XmlParseError"><![CDATA[{0}:Interpreted error of "{1}":{2}]]></tr>
     <tr id="Error.XmlXPathParseError"><![CDATA[{0}:Interpreted error of XPath"{1}":{2}]]></tr>
-    <tr id="Error.ReturnTypeDifferentOrNotImpelemnt"><![CDATA[Return type is different or not implemented]]></tr>
+    <tr id="Error.ReturnTypeDifferentOrNotImpelemnt"><![CDATA[Type mismatch: implicit conversion not supported. Use TOINT()/TOSTR()/TOFLOAT() for explicit conversion.]]></tr>
     <tr id="Error.NotImplement"><![CDATA[Unimplemented]]></tr>
     <tr id="Error.EmptyRefFunc"><![CDATA[Attempted to call a function reference ({0}) that doesn't refer to anything]]></tr>
     <tr id="Error.RefFuncHasNotArg"><![CDATA[Attempted to call a function reference ({0}) without any arguments]]></tr>
@@ -348,9 +359,12 @@ Settings apply only at start]]></tr>
     <tr id="Error.AssignToVarOoR"><![CDATA[Attempted to assign beyond the number of elements in array variable "{0}"]]></tr>
     <tr id="Error.MissingVarArg"><![CDATA[Variable "{0}" is missing required arguments]]></tr>
     <tr id="Error.CallStrAsInt"><![CDATA[Non-integer variable "{0}" is called as an integer]]></tr>
+    <tr id="Error.CallFloatAsInt"><![CDATA[Float variable "{0}" is called as an integer]]></tr>
     <tr id="Error.CallIntAsStr"><![CDATA[Non-string variable "{0}" is called as a string]]></tr>
     <tr id="Error.CallNDStrAsInt"><![CDATA[Non-integer array variable "{0}" is called as an integer]]></tr>
     <tr id="Error.CallNDIntAsStr"><![CDATA[Non-string array variable "{0}" is called as a string]]></tr>
+    <tr id="Error.CallNonFloatAsFloat"><![CDATA[Non-float variable "{0}" is called as a float]]></tr>
+    <tr id="Error.CallNonFloatArrayAsFloat"><![CDATA[Non-float array variable "{0}" is called as a float array]]></tr>
     <tr id="Error.GetSize0DVar"><![CDATA[Attempted to get the size of a non-array variable "{0}"]]></tr>
     <tr id="Error.CallCharaVarAsVar"><![CDATA[Character variable "{0}" is called as a non-character variable]]></tr>
     <tr id="Error.CallVarAsCharaVar"><![CDATA[Non-character variable "{0}" is called as a character variable]]></tr>
@@ -907,6 +921,7 @@ Error.AttributeCanNotInterpretNum	<{0}> tag has a {1}" attribute with a value th
     <tr id="Error.IsNotVar"><![CDATA[{0} is not variable]]></tr>
     <tr id="Error.IsNotInt"><![CDATA[{0} is not integer]]></tr>
     <tr id="Error.IsNotStr"><![CDATA[{0} is not string]]></tr>
+    <tr id="Error.IsNotFloat"><![CDATA[{0} is not float]]></tr>
     <tr id="Error.SPCharacterFeatureDisabled"><![CDATA[SP character-related features are not available by default (Turn on "Allow SP Characters" compatibility option)]]></tr>
     <tr id="Error.CharacterIndexOutOfRange"><![CDATA[{0}: The {1} argument ({2}) is out of range of array of character position]]></tr>
     <tr id="Error.NotVariableName"><![CDATA[{0}: The {1} argument ("{2}") is not variable name]]></tr>

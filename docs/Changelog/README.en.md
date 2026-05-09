@@ -39,7 +39,7 @@ hide:
 
 === "v15"
 
-    * Functions added: [`DataTable` system functions](../EMEE/EMEE_Summary.md#datatable).
+    * Functions added: [`DataTable` system functions](../Reference/DT_MANAGE.md).
     * Bug fix: Fixed display issue with input field when font size is not `16`.
     * Bug fix: Fixed issue where alpha channel information in user-specified icons was ignored.
 
@@ -67,7 +67,7 @@ hide:
 
     * Feature extended: Added config feature to [compress and save save data](../EMEE/EMEE_Summary.md#_5).
     * Feature extended: [XML and MAP can be saved in save data](../EMEE/EMEE_Summary.md#xmlmapdatatable).
-    * Specification change: Changed [XML system commands](../EMEE/EMEE_Summary.md#xml) to use string IDs, compatible with older versions.
+    * Specification change: Changed [XML system commands](../Reference/XML_MANAGE.md) to use string IDs, compatible with older versions.
 
 === "v11"
 

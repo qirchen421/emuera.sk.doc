@@ -36,7 +36,7 @@ hide:
 
     !!! warning "注意"
 
-        生成 `DataTable` 之后会自动添加 `id` 列。若需要保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.md#xmlmapdatatable)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        生成 `DataTable` 之后会自动添加 `id` 列。若需要保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

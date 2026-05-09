@@ -30,7 +30,7 @@
 
 === "v15"
 
-    * 新增了 [`DataTable` 系列函数](../EMEE/EMEE_Summary.md#datatable)。
+    * 新增了 [`DataTable` 系列函数](../Reference/DT_MANAGE.md)。
     * 修复了字体大小不为 `16` 时输入栏的显示问题。
     * 修复了用户定义的程序图标的透明通道信息无效的问题。
 
@@ -51,14 +51,14 @@
 
 === "v13"
 
-    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.md#html_print)。
-    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.md#html_printprint)。
+    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.md)。
+    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.md)。
 
 === "v12"
 
     * 新增「[セーブデータを圧縮して保存する](../EMEE/EMEE_Summary.md#_5)」设置项。
     * 新增将 [XML、MAP 数据保存进存档](../EMEE/EMEE_Summary.md#xmlmapdatatable)的功能。
-	* 调整 [XML 系列命令](../EMEE/EMEE_Summary.md#xml)的行为，现在使用字符串作为 ID，兼容旧版本。
+	* 调整 [XML 系列命令](../Reference/XML_MANAGE.md)的行为，现在使用字符串作为 ID，兼容旧版本。
 
 === "v11"
 
@@ -152,7 +152,7 @@
 
 === "v33"
 	* 新增了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 函数。
-	* [`GCREATEFROMFILE`扩展](../Reference//README.md#gcreatefromfileemuera)
+	* [`GCREATEFROMFILE`扩展](../Reference/README.md)
 
 === "v32"
 	* 新增了 [`GDRAWLINE`](../Reference/GDRAWLINE.md) 函数。

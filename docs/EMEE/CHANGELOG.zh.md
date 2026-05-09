@@ -5,6 +5,13 @@
 
 ## Emuera.EM
 
+=== "v18"
+
+    * 新增函数：[`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.md)。
+    * 修复了 [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print)行位置偏移的问题。
+    * 修复了 [`DT_CELL_GETS`](../Reference/DT_CELL.md)在目标为 INT 类型时出错的问题。
+    * 修复了外层 [`<clearbutton>` 标签](../EMEE/EMEE_Summary.md#html_print)对 [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print)内容无效的问题。
+
 === "v17"
 
     * 新增了 [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
@@ -51,12 +58,12 @@
 
 === "v13"
 
-    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.md#html_print)。
-    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.md#html_printprint)。
+    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.md)。
+    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.md)。
 
 === "v12"
 
-    * 新增「[セーブデータを圧縮して保存する](../EMEE/EMEE_Summary.md#_5)」设置项。
+    * 新增「[压缩保存存档数据](../EMEE/EMEE_Summary.md#_5)」设置项。
     * 新增将 [XML、MAP 数据保存进存档](../EMEE/EMEE_Summary.md#xmlmapdatatable)的功能。
 	* 调整 [XML 系列命令](../EMEE/EMEE_Summary.md#xml)的行为，现在使用字符串作为 ID，兼容旧版本。
 
@@ -124,6 +131,122 @@
     初次公开发布。
 
 ## Emuera.EE
+=== "v55"
+	新增 ONEBINPUT、ONEBINPUTS 函数
+	合并 VVII 氏的补丁以支持 .NET 10
+	daughterpatch 氏整理了 csproj 文件
+	修复了 ERD 为二维字符串数组变量命名后无法引用的问题
+
+=== "v54"
+	改善了运行稳定性
+	修复了 SPRITEGETCOLOR 返回值异常的问题
+	修复了 BINPUTS 始终返回 0 的问题
+	合并 VVII 氏的补丁（资源读取失败时输出错误日志、调整 VSCode 插件描述）
+	更新 libwebp 的 dll（CRER 氏）
+	以上两点改善了资源读取的行为
+	修复了 TIMES 在特定地区行为异常的问题
+	合并私家版 v23～v24
+
+=== "v53"
+	修复了 HTML_PRINT 使用大图片时按钮点击判定消失的问题
+	日志输出时现在也会输出 GameBase.csv 中定义的变体名和版本号
+
+=== "v52"
+	因精灵图生成日志出现异常错误而暂时撤回
+	修复了 TINPUT 运行过快导致功能无法正常工作的问题
+	通过删除不必要的引用大幅缩小了 Emuera 本体文件大小
+	ERB 文件夹内，现在优先读取文件夹名含「#」的文件夹。这是为了保持与过去版本的兼容性，普通变体不受影响（感谢 CRER 氏的 bug 修复）
+	合并 CRER 氏的补丁修复了 HTML_SUBSTRING
+
+=== "v51"
+	v50 为空缺版本
+	合并 daughterpatch 氏的补丁修复了 [`SPRITEANNIME`](../Reference/SPRITEANIMECREATE.md)、工具提示以及日志以 UTF-8 BOM 格式保存的问题
+	现在可以在设置中替换行连接时的换行代码（默认为半角空格 1 个）
+	合并 CRER 氏的补丁补充了部分翻译，并将剪贴板功能工具化
+	修复了 CSV 指定的精灵图使用小写字母时无法正常生成的问题
+	设置中开启加载报告时现在也会显示 CSV 精灵图的生成日志
+	修改了重启处理，修复了 [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) 系列命令无法正常工作的问题
+	合并 JukesBouver 氏的补丁使屏幕上的文字换行以最佳字数进行
+
+=== "v49"
+	* 修复了 div 内按钮无法被鼠标悬停检测、srcb 不显示的问题
+	* JukesBouver99 氏的内存优化
+	* Alex Swift 氏的 RikaiDialog 处理修正
+	* 修复并调整了 resources 文件夹内 CSV 生成精灵图的处理，同时修复了 SPRITEDISPOSEALL
+	* 合并 daughter 氏的补丁。新增 [EXISTMETH](../Reference/EXISTMETH.md)、[GETMETH](../Reference/GETMETH.md)、[GETMETHS](../Reference/GETMETH.md)
+
+=== "v48fix"
+	* 修复了 v48 中实现的中键点击判定异常的问题
+	* 修复了 resources 文件夹内的 CSV 被重复加载的问题
+	* 各 Xml、Map、DataTable 现在会根据属性进行正确的初始化（存档数据→加载其他数据时清除；全局数据→RESETGLOBAL/LOADGLOBAL 时清除）
+	* 合并私家版 v22 的变更
+	* 修复了文本框中按 ↑ 键无法回溯日志的问题
+	* [OUTPUTLOG](../Reference/OUTPUTLOG.md) 新增第二参数。非 0 时不包含版本信息
+	* 合并 MogeMoc 氏(RainForTW)的修正。HTML_PRINT 显示的图片现在无论 depth 如何，鼠标悬停时都会应用 srcb
+	* 现在当 0 号角色被重复定义时会发出警告
+	* 添加了文件被其他进程占用时的异常处理
+
+=== "v48"
+	* 合并 VVII 氏制作的 [Emuera.NET](https://gitlab.com/VVIIlet/emuera) 的 master 分支(截至 2024/06/30)
+	* 除了各项操作的 QoL 改善外，新增了 [`VAR` 系列命令](../Reference/VAR.md)、[`PRINTN` 系列命令](../Reference/PRINTN.md)、[`HTML_PRINT_ISLAND` 命令](../Reference/HTML_PRINT_ISLAND.md)
+	* [`INPUT`](../Reference/INPUT.md) 系列现在支持中键点击（鼠标滚轮点击）。`RESULTS:1` 中会填入 3
+	* 新增 HOTKEY 相关命令
+	* 新增仅在 EMEE 中生效的注释符号「`;^;`」
+
+=== "v47"
+	* v46 中对 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 的修正存在问题，回滚到之前的规格
+	* Neo_Kesha 氏新增了[后台操作系列命令](../Reference/BACKGROUND.md)
+	* Neo_Kesha 氏新增了 [`CALLSHARP`](../Reference/CALLSHARP.md)
+	* Neo_Kesha 氏新增了 [CSV 别名功能](../EMEE/EMEE_Summary.md#alias)
+	* ユケッス(JukesBouver99) 氏新增了 [`BITMAP_CACHE_ENABLE`](../Reference/BITMAP_CACHE_ENABLE.md)
+	* fairylord(KFC的人) 氏完成了 .NET 8 适配
+
+=== "v46"
+	* 修正了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 的参数使其返回与 `LINECOUNT` 对应的行
+	* 扩展了 [`FLOWINPUT`](../Reference/FLOWINPUT.md)
+	* 新增了 [`FLOWINPUTS`](../Reference/FLOWINPUT.md)
+
+=== "v45"
+	* 合并 Ignominious.Reverie 氏的补丁，扩展了 NAudio 版功能并提高了稳定性
+	* 修复了未指定字体执行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) 时异常退出的问题
+	* [`GETCONFIG`/`GETCONFIGS`](../Reference/GETCONFIG.md) 现在可以获取 EMEE 扩展的配置项
+
+=== "v44"
+	* [`PLAYSOUND`](../Reference/PLAYSOUND.md) 的第二参数现在可以设置播放次数
+
+=== "v43"
+	* 修复了 [`MOUSEB`](../Reference/MOUSEB.md)、[`UPDATECHECK`](../Reference/UPDATECHECK.md)、[`SPRITEANIMEADDFRAME`](../Reference/SPRITEANIMEADDFRAME.md) 的问题
+	* NAudio 版运行稳定性提升（Ignominious.Reverie、CRER）
+	* 修复了部分配置项的翻译遗漏
+	* 合并 MogeMoc 氏的资源文件读取处理内存优化（RainForTW）
+
+=== "v42"
+	* 微量修正及翻译遗漏等修复。详见 v43 说明
+
+=== "v41fix"
+	* 修复了 webp 库的漏洞（https://nvd.nist.gov/vuln/detail/CVE-2023-4863）
+	* 请替换附带的「libwebp.dll」并新增使用「libsharpyuv.dll」
+
+=== "v41"
+	* 新增 [`TOOLTIP_IMG`](../Reference/TOOLTIP_EXTENSION.md)
+	* 为 Linux 版附带了使用 NAudio 作为音乐播放库的版本（Ignominious.Reverie 氏）
+
+=== "v40"
+	* 修复了各种 bug，以及对 Wine 等环境的优化
+	* 虽非 Emuera 本身的更新，但已将 OSDN（服务器已关闭）上的 Emuera 文档移植到了 EM+EE 的 wiki
+	* https://evilmask.gitlab.io/emuera.em.doc/index.html
+
+=== "v39fix"
+	* 合并 CRER 氏的补丁，现在即使混入不同编码的文件也能正常读取
+	* 新增 `GETDOINGFUNCTION`
+	* 再次修复了 CLEARLINE 与 div 并用时行为异常的 bug，这次应该不会再发生了
+
+=== "v39"
+	* 合并 CRER 氏的补丁解决了 DPI 缩放问题
+	* 修复了 [`ARRAYREMOVE`](../Reference/ARRAYREMOVE.md) 第三参数设为 0 以下时未能清除后续数组元素的问题
+	* 修复了 [`PRINTC` 和 `PRINTLC`](../Reference/PRINT.md) 字符数不一致的问题
+	* 实现了资源 CSV 重新加载功能
+
 === "v38"
 	* 修复了部分字体下GDRAWTEXT及GGETTEXTSIZE的行为不正确的问题。
 	* EXISTFUNCTION是否无视大小写与设置保持一致。
@@ -152,7 +275,7 @@
 
 === "v33"
 	* 新增了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 函数。
-	* [`GCREATEFROMFILE`扩展](../Reference//README.md#gcreatefromfileemuera)
+	* [`GCREATEFROMFILE`扩展](../Reference/README.md)
 
 === "v32"
 	* 新增了 [`GDRAWLINE`](../Reference/GDRAWLINE.md) 函数。

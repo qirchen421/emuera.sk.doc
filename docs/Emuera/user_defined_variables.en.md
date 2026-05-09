@@ -126,3 +126,26 @@ Variables with the same names as function names and preprocessors can be defined
 
 ### Interference from outside the function  
 Unlike LOCAL with LOCAL@HOGE, there is no way to reference or assign a private variable of another function.  
+
+## `ERD (ERabasic Define)` Feature
+A feature added in EM+EE. You can assign identifiers to variables defined in ERH using `*.csv` or `*.ERD` files, just like CSV variables.  
+Below is a quote from the EM+EE Summary:
+
+Variable arrays defined in `ERH` can have names assigned via `CSV`/`ERD` files, the same way as existing `CSV` variables.  
+Files usable in the `CSV` folder follow the conventional `VariableName.csv` format, while files usable in `ERB` use the `VariableName.ERD` format. The file format is the same as CSV variable files. If two or more of these files exist, an error will only occur at startup if the same identifier is defined in multiple files. Different identifiers can map to the same integer.  
+For multi-dimensional array variables, append `@` followed by a dimension number to the file name. Dimensions correspond from left to right as `1`, `2`, `3`.    
+
+**ERH**
+
+    #DIM HOGE, 3
+    #DIM HOGE2D, 3, 3
+    #DIM HOGE3D, 3, 3, 3
+
+**File Structure**
+
+    HOGE.ERD
+    HOGE2D@1.ERD
+    HOGE2D@2.ERD
+    HOGE3D@1.ERD
+    HOGE3D@2.ERD
+    HOGE3D@3.ERD

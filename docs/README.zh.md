@@ -53,12 +53,4 @@ hide:
 
 ## 下载
 
-[**最新版本：Emuera.NET 1824+v24+EMv18+EEv55**](assets/files/Emuera.NET%201824+v24+EMv18+EEv55+Rikaichan.zip)
-
-## 联系方式
-
-有关错误报告、功能请求或编辑讨论，请在下面的 Discord 服务器上联系开发人员。
-
-[JP Docs Development](https://discord.com/channels/428432103042973706/1236190714954514452)
-
-<iframe src="https://discord.com/widget?id=428432103042973706&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+[**最新版本：Emuera_skiaV3_x64**](assets/files/Emuera_skiaV3_x64.zip)

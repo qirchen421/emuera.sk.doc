@@ -274,7 +274,7 @@ EM+EE的功能。设置为`YES`时可支持UTF-8(BOM无)文件
 EM+EE的功能。设置为`YES`时，执行[`UPDATECHECK`](../Reference/UPDATECHECK.md)时不执行处理，`RESULT`会被赋值为`4`
 
 ### 使用ERD功能
-EM+EE的功能。设置为`NO`可禁用[ERD功能](../EMEE/EMEE_Summary.md#erhcsverd)
+EM+EE的功能。设置为`NO`可禁用[ERD功能](../EMEE/EMEE_Summary.md)
 
 ### 将VARSIZE的维度指定与ERD功能对齐
 EM+EE的功能。ERD功能中维度从左至右为`1`, `2`, `3`，而`VARSIZE`中从左至右为`0`, `1`, `2`

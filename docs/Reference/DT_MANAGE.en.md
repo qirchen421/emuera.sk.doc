@@ -35,7 +35,7 @@ hide:
 
     !!! warning "Warning"
 
-        The column `id` is automatically added after the `DataTable` is created. See "[`XML`, `MAP`, `DataTable` Save Function](../EMEE/EMEE_Summary.md#xmlmapdatatable)" to save to save file. They are automatically deleted when "Return to Title Screen" or [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) is called.
+        The column `id` is automatically added after the `DataTable` is created. See "[`XML`, `MAP`, `DataTable` Can Be Saved in Save Data](../EMEE/EMEE_Summary.en.md#xml-map-datatable-can-be-saved-in-save-data)" to save to save file. They are automatically deleted when "Return to Title Screen" or [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) is called.
 
 !!! hint "Hint"
 

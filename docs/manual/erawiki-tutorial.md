@@ -51,7 +51,7 @@
 - [改造入門](modification-manual.md)
 
 スタンダードな調教SLG向けのマニュアルで、はじめの準備として必要なことを書いてくれている。  
-「[使いやすいテキストエディタ](modification-manual.md#_3)」、「[GREPのできる検索ツール](modification-manual.md#grep)」、「[最初にこれだけは肝に銘じよう](modification-manual.md#_5)」、  
+「[使いやすいテキストエディタ](modification-manual.md#_4)」、「[GREPのできる検索ツール](erawiki-modification-QandA.md#grep)」、「[最初にこれだけは肝に銘じよう](modification-manual.md#_5)」、  
 をまずは読もう。  
 
 ---  
@@ -346,7 +346,7 @@ CSVは主にこういった目的で使うようだ。
 
 また、Emueraでは指定できるCSVが大量に増えている。そのためここに書かれていることは、  
 
-- [EmueraWiki→Emueraで追加された拡張文法→一般→文字列による配列変数の要素の指定](../Emuera/expression.md#10)  
+- [EmueraWiki→Emueraで追加された拡張文法→一般→文字列による配列変数の要素の指定](../Emuera/expression.md#string-array-element)  
 
 と合わせて読みたい。  
 といっても、最初にあまりたくさんの変数名を見ても覚えきれない。  

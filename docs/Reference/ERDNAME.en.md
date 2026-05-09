@@ -48,4 +48,4 @@ hide:
 	```
 
 ### Related Items
-- [User-defined Variables>ERD Function](../Emuera/user_defined_variables.md#erderabasic-define)
+- [User-defined Variables>ERD Function](../Emuera/user_defined_variables.en.md#erd-erabasic-define-feature)

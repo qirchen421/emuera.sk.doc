@@ -52,7 +52,7 @@ Realize that code improvements are something you do to make it easier for yourse
 - [Introduction to modding](modification-manual.md)
 
 This is a manual for a standard training SLG, and it explains what you need to do to get started.
-First, read "[An easy-to-use text editor](modification-manual.md#_3)", "[A search tool that can use GREP](modification-manual.md#grep)", and "[These are the things you should remember at the beginning](modification-manual.md#_5)".
+First, read "[An easy-to-use text editor](modification-manual.md#code-editor)", "[A search tool that can use GREP](erawiki-modification-QandA.md#how-to-use-grep)", and "[These are the things you should remember at the beginning](modification-manual.md#lets-modify-it)".
 
 ---  
 
@@ -341,7 +341,7 @@ CSV seems to be mainly used for this purpose.
 
 Also, the number of CSVs that can be specified in Emuera has increased significantly. Therefore, what is written here should be read together with
 
-- [EmueraWiki → Extended syntax added in Emuera → General → Specifying elements of array variables using strings] (../Emuera/expression.md#10)
+- [EmueraWiki → Extended syntax added in Emuera → General → Specifying elements of array variables using strings] (../Emuera/expression.md#string-array-element)
 
 . That said, if you look at too many variable names at first, you won't be able to remember them all.
 
@@ -349,7 +349,7 @@ When you actually use it, you just need to remember where the list is to look up
 
 The number of variables has also increased, so you should also check out the instructions in the document
 
-- [Extended syntax added in Emuera → Constants and variables → CSV related](../Emuera/variables.md#csv)
+- [Extended syntax added in Emuera → Constants and variables → CSV related](../Emuera/variables.md#csv-related)
 
 .
 

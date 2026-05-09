@@ -548,7 +548,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md) | `int`    | 无   |
 | ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.md)     | `int`    | 无   |
 
-### XML 系列
+### XML 系列 { #xmlmapdatatable }
 
 | 函数名                                                                                    | 参数                                                         | 返回值   |
 | :---------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |

@@ -58,5 +58,5 @@ hide:
     除 `SETBIT` 外，其他函数均支持在表达式中使用。
 
 ### 相关项目
-* [系统改造Q&A>二进制位操作](../manual/erawiki-modification-QandA.md#2stain)
+* [系统改造Q&A>二进制位操作](../manual/erawiki-modification-QandA.zh.md)
 * [ERB制作实践篇>关于位数](../manual/erawiki-ERBmanual.md#_7)

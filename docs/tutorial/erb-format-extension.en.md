@@ -274,6 +274,11 @@ RETURNF "Hello, " + NAME + "!"
 
 `#LOCALSIZE`/`#LOCALSSIZE`/`#LOCALFSIZE` specify the size of `LOCAL`/`LOCALS`/`LOCALF` arrays:
 
+!!! warning "LOCAL/LOCALS are obsolete"
+
+    `LOCAL` and `LOCALS` are legacy designs and their use is not recommended. Use `#DIM`/`#DIMS` to declare private variables instead.
+    For new game development, it is recommended to set both `LOCAL` and `LOCALS` element counts to `-1` in `VariableSize.csv` to disable them, forcing migration to `#DIM`/`#DIMS`.
+
 ```erb
 @MY_FUNCTION
 #LOCALSIZE 100        ; LOCAL array size is 100 (default depends on settings)
@@ -380,7 +385,7 @@ SAVESTR:0 = %RESULTS%
 
 | What You Want to Learn | Go To |
 |:---|:---|
-| Assignment statement details | [Assignment Statements](assignment.zh.md) |
-| Event function mechanism | [Event Functions](event-functions.zh.md) |
-| Variables and declarations | [File Types](file-types.zh.md) |
+| Assignment statement details | [Assignment Statements](assignment.en.md) |
+| Event function mechanism | [Event Functions](event-functions.en.md) |
+| Variables and declarations | [File Types](file-types.md) |
 | System flow diagrams | [Flow Diagrams](../Emuera/system_flow.en.md) |

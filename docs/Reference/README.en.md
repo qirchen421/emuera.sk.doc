@@ -548,7 +548,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md) | `int`    | none   |
 | ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.md)     | `int`    | none   |
 
-### XML related
+### XML related { #xmlmapdatatable }
 
 | Function name                                                                             | Arguments                                                    | Return   |
 | :---------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |

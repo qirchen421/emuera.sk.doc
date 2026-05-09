@@ -181,4 +181,4 @@ ERB/
 | 你想了解什么 | 前往 |
 |:---|:---|
 | 行类型与结构 | [行类型](line-types.zh.md) |
-| 变量与声明系统 | [声明系统](declaration.zh.md) |
+| 变量与声明系统 | [声明系统](variable-declaration.zh.md) |

@@ -10,8 +10,8 @@
 
 | 如果你想要... | 请从这里开始 |
 |:---|:---|
-| 了解什么是 era 游戏 | [era 游戏是什么](#era-游戏是什么) |
-| 第一次编写 ERB 脚本 | [第一个 ERB 程序](#第一个-erb-程序) |
+| 了解什么是 era 游戏 | [era 游戏是什么](#era-game) |
+| 第一次编写 ERB 脚本 | [第一个 ERB 程序](#first-erb-program) |
 | 从基础系统学习 | [ERABASIC 简介](intro.zh.md) |
 | 查找某个指令的用法 | [指令参考手册](../Reference/README.md) |
 | 了解 EM+EE 有什么新功能 | [EM+EE 功能概览](../EMEE/EMEE_Summary.zh.md) |
@@ -19,54 +19,68 @@
 
 ---
 
-## 📋 教程构成
+## 📚 学习路径
 
-| 章节 | 内容 | 适合 |
-|:---|:---|:---|
-| [📖 简介](intro.zh.md) | ERABASIC 是什么、Hello World、版本演进 | 初学者 |
-| [🔢 值、类型与变量](values-types.zh.md) | 三类型体系、变量命名、类型转换 | 初学者 |
-| [📝 赋值语句](assignment.zh.md) | 基本赋值、字符串赋值、复合赋值、自增自减、批量赋值 | 初学者 |
-| [🖥️ 基本输出](basic-output.zh.md) | PRINT 系列、参数类型、行为后缀、格式化输出 | 初学者 |
-| [📄 ERB 文件格式扩展](erb-format-extension.zh.md) | 行连接、#DIM/#DIMS、#FUNCTION、事件修饰符、条件编译 | 初学者~中级者 |
-| [🔔 事件函数](event-functions.zh.md) | 事件函数 vs 系统函数、调用机制、#PRI/#LATER/#SINGLE/#ONLY | 初学者~中级者 |
-| [🔤 FORM 语法](form-syntax.zh.md) | 格式化字符串、变量替换、填充对齐、\@三元运算符、三连标识符、转义规则 | 初学者~中级者 |
-| [🔀 条件分支](condition.zh.md) | IF/SIF/SELECTCASE | 初学者 |
-| [🔄 循环](loop.zh.md) | REPEAT/FOR/WHILE/DO、CONTINUE/BREAK | 初学者 |
-| [⏭️ 跳转](jump.zh.md) | GOTO/$标签、GOTO 与循环的交互 | 初学者 |
-| [📞 函数与 CALL](call.zh.md) | @标签、CALL/JUMP、RETURN、参数传递、INPUT | 初学者 |
-| [📦 变量声明系统](variable-declaration.zh.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、函数签名与声明的关系、VARIADIC | 中级者 |
-| [🔤 字符串操作](../Reference/TOSTR.md) | 字符串函数、FORM 语法 | 中级者 |
-| [🖥️ 输入输出](../Reference/PRINT.md) | PRINT/INPUT/WAIT | 初学者 |
-| [🗃️ 数据结构](../Reference/MAP_MANAGE.md) | 数组/MAP/DataTable/XML | 中级者 |
-| [🎨 图形与音频](../Reference/GCREATE.md) | 图形操作/Sprite/HTML/音频 | 中级者~高级者 |
-| [🌐 HTML 标签语法](html-syntax.zh.md) | HTML_PRINT 标签、属性、变体差异 | 中级者~高级者 |
-| [💾 存档与持久化](../Reference/SAVEDATA.md) | 存档/全局变量/角色数据 | 中级者 |
-| [⚡ 命令 vs 表达式](command-vs-expression.zh.md) | 命令语法与表达式语法的边界、RESULT 污染、CALLF | 中级者~高级者 |
-| [🔧 高级主题](../Emuera/debug.zh.md) | 调试、配置、兼容性、反模式 | 高级者 |
-| [🗺️ 版本演进对照](evolution.zh.md) | Emuera→EM+EE→各变体功能对比 | 所有人 |
+!!! info "阅读指南"
+
+    各章内容以前一章为基础。初学者请从第1章开始顺序阅读。有经验的开发者可以按需跳读。
+
+### 第1章：简介
+
+> 理解 ERABASIC 的全貌，运行第一个程序
+
+| 主题 | 内容 |
+|:---|:---|
+| [ERABASIC 是什么](intro.zh.md) | BASIC 变体、行驱动 DSL、era 游戏脚本 |
+| [Hello World](hello-world.zh.md) | 第一个 ERB 程序，PRINT 是你认识的第一个指令 |
+| [文件类型与处理顺序](file-types.zh.md) | ERB/ERH/CSV 三层结构 |
+| [行类型与结构](line-types.zh.md) | @标签行、#预处理行、指令行、$标签行 |
+| [版本演进](evolution.zh.md) | eramaker → Emuera → EM+EE → Skia |
+
+### 第2章：基础语法
+
+> 理解值与变量，学会编写基本的输入输出
+
+| 主题 | 内容 |
+|:---|:---|
+| [值、类型与变量](values-types.zh.md) | Int/Str/Float 三类型、A-Z 保留变量、类型转换 |
+| [赋值语句](assignment.zh.md) | `=` vs `'=`、复合赋值、自增自减、批量赋值 |
+| [基本输出](basic-output.zh.md) | PRINT/PRINTFORM/PRINTSINGLE/PRINTL |
+| [FORM 语法](form-syntax.zh.md) | 格式化字符串、`{变量}`替换、填充对齐、`\@`三元运算符 |
+
+### 第3章：控制流
+
+> 掌握控制程序流程的语法
+
+| 主题 | 内容 |
+|:---|:---|
+| [条件分支](condition.zh.md) | IF/SIF/SELECTCASE |
+| [循环](loop.zh.md) | REPEAT/FOR/WHILE/DO、CONTINUE/BREAK |
+| [跳转](jump.zh.md) | GOTO/$标签、GOTO 与循环的交互 |
+
+### 第4章：函数
+
+> 将程序拆分为函数，实现代码复用
+
+| 主题 | 内容 |
+|:---|:---|
+| [函数与 CALL](call.zh.md) | @标签、CALL/JUMP、RETURN、参数传递、INPUT |
+| [变量声明系统](variable-declaration.zh.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC |
+| [ERB 文件格式扩展](erb-format-extension.zh.md) | 行连接、#DIM/#DIMS、#FUNCTION、条件编译 |
+| [事件函数](event-functions.zh.md) | 事件函数与系统函数、#PRI/#LATER/#SINGLE/#ONLY |
+| [命令 vs 表达式](command-vs-expression.zh.md) | 命令语法与表达式语法的边界、RESULT 污染、CALLF |
+
+### 第5章：HTML 与图形
+
+> 处理富文本显示与图形
+
+| 主题 | 内容 |
+|:---|:---|
+| [HTML 标签语法](html-syntax.zh.md) | HTML_PRINT 标签、属性、变体差异 |
 
 ---
 
-## 📋 指令速查
-
-| 分类 | 常用指令 | 详见 |
-|:---|:---|:---|
-| **输出** | `PRINT` `PRINTL` `PRINTFORM` `PRINTBUTTON` | [PRINT 系列](../Reference/PRINT.md) |
-| **输入** | `INPUT` `ONEINPUT` `TINPUT` `WAIT` | [输入/等待](../Reference/INPUT.md) |
-| **分支** | `IF` `SELECTCASE` `GOTO` | [循环/分支](../Reference/IF.md) |
-| **循环** | `REPEAT` `FOR` `WHILE` `DO` | [循环/分支](../Reference/REPEAT.md) |
-| **函数** | `CALL` `JUMP` `TRYCALL` `CALLF` | [函数系](../Reference/CALL.md) |
-| **变量** | `VARSET` `ARRAYSORT` `SWAP` `CUPCHECK` | [变量操作](../Reference/VARSET.md) |
-| **角色** | `ADDCHARA` `DELCHARA` `GETCHARA` `FINDCHARA` | [角色操作](../Reference/ADDCHARA.md) |
-| **存档** | `SAVEDATA` `LOADDATA` `SAVEGLOBAL` | [存档操作](../Reference/SAVEDATA.md) |
-| **图形** | `GCREATE` `GDRAWG` `SPRITECREATE` | [图像处理](../Reference/GCREATE.md) |
-| **音频** | `PLAYSOUND` `PLAYBGM` `EXISTSOUND` | [声音系](../Reference/PLAYSOUND.md) |
-| **数据结构** | `MAP_CREATE` `DT_CREATE` `XML_DOCUMENT` | [MAP](../Reference/MAP_MANAGE.md) / [DT](../Reference/DT_MANAGE.md) / [XML](../Reference/XML_MANAGE.md) |
-| **系统** | `BEGIN` `THROW` `QUIT` `AWAIT` | [系统流程](../Reference/BEGIN.md) |
-
----
-
-## era 游戏是什么
+## era 游戏是什么 {: #era-game }
 
 era 游戏是一类基于文本的角色扮演/模拟游戏，使用 **ERABASIC** 语言编写脚本。ERABASIC 最初由 eramaker 定义，后经 Emuera 及其变体大幅扩展。现代 ERABASIC 以 Emuera 为基准。
 
@@ -89,7 +103,7 @@ era 游戏是一类基于文本的角色扮演/模拟游戏，使用 **ERABASIC*
 └── sound/              ← 音频资源
 ```
 
-## 第一个 ERB 程序
+## 第一个 ERB 程序 {: #first-erb-program }
 
 在 `ERB/SYSTEM_TITLE.ERB` 中编写你的第一个函数：
 
@@ -110,10 +124,11 @@ era 游戏是一类基于文本的角色扮演/模拟游戏，使用 **ERABASIC*
 
 ---
 
-!!! info "更多资源"
+!!! info "接下来阅读"
 
+    - **从基础系统学习**：[ERABASIC 简介](intro.zh.md)
     - **制作手册**：[初级教程](../manual/modification-manual.zh.md) → [中级教程](../manual/eratohowiki-ERBmanual.zh.md)
     - **完整指令参考**：[Reference](../Reference/README.md)
+    - **Emuera 规格**：[规格概要](../Emuera/README.zh.md)
     - **EM+EE 新功能概览**：[EMEE_Summary](../EMEE/EMEE_Summary.zh.md)
     - **Skia 版功能概览**：[Skia 版功能概览](../Skia/Skia_Summary.zh.md)
-    - **变更日志**：[Changelog](../Changelog/README.zh.md)

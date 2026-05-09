@@ -114,7 +114,7 @@ In Emuera after ver1813, assignment to string variables can be newly performed u
 	;Same as "STR = %TSTR:0%ABC"  
 	STR '= TSTR:0 + "ABC"  
 
-## Specifying Array Variable Elements Using Character Strings  
+## Specifying Array Variable Elements Using Character Strings { #string-array-element }  
 For the following variables, the argument can be called as a character string defined in *.csv.  
 For details on the new variables of Emuera, see [../exvar|Extended Syntax-Constants and Variables Added by Emuera].  
 

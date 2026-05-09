@@ -274,6 +274,11 @@ RETURNF "你好，" + NAME + "！"
 
 `#LOCALSIZE`/`#LOCALSSIZE`/`#LOCALFSIZE` 指定 `LOCAL`/`LOCALS`/`LOCALF` 数组的大小：
 
+!!! warning "LOCAL/LOCALS 已过时"
+
+    `LOCAL` 和 `LOCALS` 是过时的设计，不推荐使用。请使用 `#DIM`/`#DIMS` 声明私有变量替代。
+    对于新游戏开发，建议在 `VariableSize.csv` 中将 `LOCAL` 和 `LOCALS` 的元素数均设为 `-1` 以禁用，强制迁移到 `#DIM`/`#DIMS`。
+
 ```erb
 @MY_FUNCTION
 #LOCALSIZE 100        ; LOCAL 数组大小为 100（默认取决于设置）

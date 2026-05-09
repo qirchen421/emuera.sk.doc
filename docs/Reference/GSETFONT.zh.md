@@ -19,7 +19,7 @@ hide:
 	处理成功时返回非0值。  
 	要获取已设置的字体名称和字体尺寸，请使用[`GGETFONT`](./GGETFONT.md)和[`GGETFONTSIZE`](./GGETFONTSIZE.md)。  
 	EM+EE版本中增加了可选的第四个参数。可以指定字体样式。使用与[`SETFONT`](./SETFONT.md)相同的4位数值来指定。  
-	EM+EE版本中，现在也可以指定[`font`文件夹内的`ttf`、`otf`文件](../EMEE//EMEE_Summary.md#ttfotf)。  
+	EM+EE版本中，现在也可以指定[`font`文件夹内的`ttf`、`otf`文件](../EMEE/EMEE_Summary.md)。  
 	通过`GSETFONT`设置的字体将在以下命令/表达式中函数中使用。
 
     - [`GDRAWTEXT`](./GDRAWTEXT.md)

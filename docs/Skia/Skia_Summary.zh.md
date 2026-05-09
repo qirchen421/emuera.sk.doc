@@ -10,7 +10,7 @@
 
 ---
 
-## 凡例
+## 凡例 { #legend }
 
 - ![](../assets/images/IconSK.webp) - Skia（Skia 版）中追加、变更、扩展的功能
 - ![](../assets/images/IconEM.webp) - EM（EvilMask 版）中追加的功能
@@ -18,22 +18,22 @@
 
 ---
 
-## 目录
+## 目录 { #toc }
 
-- [凡例](#凡例)
-- [目录](#目录)
-- [懒加载机制](#懒加载机制)
-- [MAP 增强函数（9 个新增）](#map-增强函数9-个新增)
-- [SQL 增强（XML 导入/导出）](#sql-增强xml-导入导出)
-- [音频处理 (SoundTouch)](#音频处理-soundtouch)
-- [VARIADIC 可变参数](#variadic-可变参数)
-- [SELECTCASE 编译期跳转表优化](#selectcase-编译期跳转表优化)
-- [DotNet 同步功能](#dotnet-同步功能)
-- [功能对比](#功能对比)
+- [凡例](#legend)
+- [目录](#toc)
+- [懒加载机制](#lazy-loading)
+- [MAP 增强函数（9 个新增）](#map-extended)
+- [SQL 增强（XML 导入/导出）](#sql-extended)
+- [音频处理 (SoundTouch)](#audio-soundtouch)
+- [VARIADIC 可变参数](#variadic)
+- [SELECTCASE 编译期跳转表优化](#selectcase-optimization)
+- [DotNet 同步功能](#dotnet-sync)
+- [功能对比](#feature-comparison)
 
 ---
 
-## ![](../assets/images/IconSK.webp)懒加载机制
+## ![](../assets/images/IconSK.webp)懒加载机制 { #lazy-loading }
 
 !!! summary ""
 
@@ -45,7 +45,7 @@
 
 ---
 
-## ![](../assets/images/IconEM.webp)![](../assets/images/IconSK.webp)MAP 增强函数（9 个新增）
+## ![](../assets/images/IconEM.webp)![](../assets/images/IconSK.webp)MAP 增强函数（9 个新增） { #map-extended }
 
 !!! summary ""
 
@@ -69,7 +69,7 @@
 
 ---
 
-## ![](../assets/images/IconSK.webp)SQL 增强（XML 导入/导出）
+## ![](../assets/images/IconSK.webp)SQL 增强（XML 导入/导出） { #sql-extended }
 
 !!! summary ""
 
@@ -82,7 +82,7 @@
 
 ---
 
-## ![](../assets/images/IconEE.webp)![](../assets/images/IconSK.webp)音频处理 (SoundTouch)
+## ![](../assets/images/IconEE.webp)![](../assets/images/IconSK.webp)音频处理 (SoundTouch) { #audio-soundtouch }
 
 !!! summary ""
 
@@ -94,7 +94,7 @@
 
 ---
 
-## ![](../assets/images/IconSK.webp)VARIADIC 可变参数
+## ![](../assets/images/IconSK.webp)VARIADIC 可变参数 { #variadic }
 
 !!! summary ""
 
@@ -109,7 +109,7 @@
 
 ---
 
-## ![](../assets/images/IconSK.webp)SELECTCASE 编译期跳转表优化
+## ![](../assets/images/IconSK.webp)SELECTCASE 编译期跳转表优化 { #selectcase-optimization }
 
 !!! summary ""
 
@@ -122,7 +122,7 @@
 
 ---
 
-## ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)DotNet 同步功能
+## ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)DotNet 同步功能 { #dotnet-sync }
 
 !!! summary ""
 
@@ -157,7 +157,7 @@
 
 ---
 
-## 功能对比
+## 功能对比 { #feature-comparison }
 
 | 功能 | EM+EE | Skia 版 | 备注 |
 |:---|:---:|:---:|:---|

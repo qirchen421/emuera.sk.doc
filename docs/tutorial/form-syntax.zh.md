@@ -393,7 +393,7 @@ else
     
     如需指定精度，请使用 `TOSTRF` 函数配合 `%` 替换（详见下方"精度与宽度的组合控制"）。
 
-> **TO 系列类型转换函数的完整 API 文档**（TOSTR / TOSTRF / TOINT / TOFLOAT 的参数签名、格式字符串、示例代码），请参阅 [值、类型与变量 — 类型转换函数](values-types.zh.md#类型转换函数)。本节仅讨论与 FORM 语法直接相关的部分。
+> **TO 系列类型转换函数的完整 API 文档**（TOSTR / TOSTRF / TOINT / TOFLOAT 的参数签名、格式字符串、示例代码），请参阅 [值、类型与变量 — 类型转换函数](../Reference/TOSTR.md)。本节仅讨论与 FORM 语法直接相关的部分。
 
 ### 与 FORM 语法的交叉引用
 

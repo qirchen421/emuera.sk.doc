@@ -6,6 +6,25 @@ Emuera 文档项目（MkDocs + mkdocs-i18n 多语言站点），非代码项目�
 
 ---
 
+## 知识库与技能架构
+
+本项目使用三层知识管理架构，skills 和 knowledge 通过符号链接共享：
+
+1. **Skill 层（路由）**：`.trae/skills/` → 符号链接到 `D:\emuera\shared-trae\skills\`
+2. **Knowledge 层（知识库）**：`.trae/knowledge/` → 符号链接到 `D:\emuera\shared-trae\knowledge\`
+3. **Meta 层（方法论）**：`knowledge-builder` skill — 如何积累知识
+
+### 默认技能激活规则
+
+| 技能 | 激活条件 | 说明 |
+|------|---------|------|
+| **doc-building** | 任何涉及文档翻译、创建页面、修复链接、更新导航的操作 | 文档建设路由，包含 mkdocs-i18n 多语言规范 |
+| **erabasic** | 涉及 ERABASIC 语法内容确认、API 签名查阅时 | 确认文档描述的 ERB 语法正确性 |
+| **powershell-git** | 任何涉及终端命令、Git 操作、文件 IO 的操作 | 终端命令避坑，Git 操作规范 |
+| **knowledge-builder** | 发现新洞见、需要持久化知识时 | 元方法论，指导知识积累流程 |
+
+---
+
 ## 多语言版本同步规则
 
 > **所有文档页面存在三语言版本（日语/中文/英语），修改任意语言版时必须同步更新其余两版。**

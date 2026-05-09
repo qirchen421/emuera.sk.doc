@@ -12,7 +12,7 @@ See [this page](HowToUseGit.md) for details.
 ### VSCode (VSC)
 An IDE (Integrated Development Environment) for programming. It's essentially an application.
 Free and feature-rich. Can be made even more convenient by installing extensions.
-See [this page](erawiki-ERBmanual.md#vscode) for detailed installation instructions.
+See [this page](erawiki-ERBmanual.md#vscode-installation-guide) for detailed installation instructions.
 
 ### Uploader
 Also called "loda." A service that lets you upload files so anyone can download them. Of course, also used for distributing free games.

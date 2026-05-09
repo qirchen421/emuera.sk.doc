@@ -22,7 +22,7 @@ hide:
     ```
 	在行中显示指定的图像。  
 	相当于 [`HTML_PRINT` 命令的 `<img>` 标签](../Emuera/HTML_PRINT.md#img)。  
-	EM+EE 中扩展了语法。详情请参阅[摘要](../EMEE/EMEE_Summary.md#html_printprint)。  
+	EM+EE 中扩展了语法。详情请参阅[摘要](../EMEE/EMEE_Summary.md)。  
 
 !!! hint "提示"
 

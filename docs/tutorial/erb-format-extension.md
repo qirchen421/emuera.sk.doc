@@ -274,6 +274,11 @@ RETURNF "こんにちは、" + NAME + "！"
 
 `#LOCALSIZE`/`#LOCALSSIZE`/`#LOCALFSIZE`は`LOCAL`/`LOCALS`/`LOCALF`配列のサイズを指定します：
 
+!!! warning "LOCAL/LOCALS は obsolete"
+
+    `LOCAL` と `LOCALS` は過去の設計であり、使用は推奨されません。`#DIM`/`#DIMS` でプライベート変数を宣言してください。
+    新規ゲーム開発では、`VariableSize.csv` で `LOCAL` と `LOCALS` の要素数をともに `-1` に設定して無効化し、`#DIM`/`#DIMS` への移行を推奨します。
+
 ```erb
 @MY_FUNCTION
 #LOCALSIZE 100        ; LOCAL 配列のサイズを100に（デフォルトは設定に依存）
@@ -380,7 +385,7 @@ SAVESTR:0 = %RESULTS%
 
 | 知りたいこと | 参照 |
 |:---|:---|
-| 代入文の詳細 | [代入文](assignment.zh.md) |
-| イベント関数の仕組み | [イベント関数](event-functions.zh.md) |
-| 変数と宣言 | [ファイルタイプ](file-types.zh.md) |
-| システムフロー図 | [フロー図](../Emuera/system_flow.zh.md) |
+| 代入文の詳細 | [代入文](assignment.md) |
+| イベント関数の仕組み | [イベント関数](event-functions.md) |
+| 変数と宣言 | [ファイルタイプ](file-types.md) |
+| システムフロー図 | [フロー図](../Emuera/system_flow.md) |

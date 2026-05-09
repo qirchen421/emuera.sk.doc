@@ -208,4 +208,4 @@ EM+EE中新增的功能。`<div>`可以在指定区域内显示包围的内容�
 在html解析中，`<!--`和`-->`包围的文字会被忽略  
 
 ## 相关命令·函数  
-请参考[参考资料中的HTML系](../Reference/README.md#html系)项目  
+请参考[参考资料中的HTML系](../Reference/README.md)项目  

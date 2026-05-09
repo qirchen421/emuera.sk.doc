@@ -36,7 +36,7 @@ hide:
     相反地，也可以使用 `DOTRAIN` 来自行实现 `TRAIN` 命令。  
     例如，将 `train.csv` 留空，通过 `@SHOW_USERCOM` 自行显示，并在 `@USERCOM` 中执行 `DOTRAIN`。  
     或者，也可以不将 `train.csv` 留空，而是让所有的 `@COM_ABLE` 都返回 `0`。  
-    除了修改 `@COM_ABLE`，还可以删除所有的 `@COM_ABLE`，并将 [`_replace.csv` 的 `COM_ABLE初始值`](../Emuera/replace.md#com_able) 设置为 `0`。  
+    除了修改 `@COM_ABLE`，还可以删除所有的 `@COM_ABLE`，并将 [`_replace.csv` 的 `COM_ABLE初始值`](../Emuera/replace.zh.md) 设置为 `0`。  
     另外，如果在 [`CALLTRAIN`](./CALLTRAIN.md) 的处理过程中执行了 `DOTRAIN`，则 `CALLTRAIN` 的剩余部分将无效。
 
 !!! hint "提示"

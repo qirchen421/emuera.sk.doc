@@ -51,7 +51,7 @@ vanilla在现在的Emuera中使用了许多已废弃的变量
 - [改造入门](modification-manual.md)
 
 这是标准的调教SLG手册，写明了开始准备需要做的事。
-"【易用的文本编辑器】(modification-manual.md#_3)"、"【能GREP的搜索工具】(modification-manual.md#grep)"、"【首先记住这些】(modification-manual.md#_5)"，
+"【易用的文本编辑器】(modification-manual.md#_4)"、"【能GREP的搜索工具】(erawiki-modification-QandA.md#grep)"、"【首先记住这些】(modification-manual.md#_5)"，
 先读这些。
 
 ---
@@ -345,7 +345,7 @@ CSV主要是这样使用。
 
 另外，Emuera中可指定的CSV大幅增加。所以这里写的内容，
 
-- [EmueraWiki→Emuera新增扩展语法→一般→字符串指定数组变量元素](../Emuera/expression.md#10)
+- [EmueraWiki→Emuera新增扩展语法→一般→字符串指定数组变量元素](../Emuera/expression.md#string-array-element)
 
 要一起读。
 不过，开始时看太多变量名也记不住。

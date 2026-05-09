@@ -548,7 +548,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md) | `int`    | なし   |
 | ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.md)     | `int`    | なし   |
 
-### XML 系
+### XML 系 { #xmlmapdatatable }
 
 | 関数名                                                                                    | 引数                                                         | 戻り値   |
 | :---------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------- |

@@ -21,17 +21,32 @@ hide:
 
     Emuera本家が対応停止状態となっているため、私家改造版はコードのベースとするためにバグ修正以外の変更を行わないものとします
 
+### 派生版
+
+| 版 | 特徴 | レンダリングエンジン |
+|:---|:---|:---|
+| **EM+EE** | オーディオ、ホットキー、クリップボード、TTF/OTF動的読み込み | GDI+ |
+| **Skia版 (LazyLoading)** | 遅延読み込み、MAP拡張、SQL/XML、SETIMAGELAYER、VARIADIC | Skia |
+| **DotNet** | SkiaSharpクロスプラットフォーム、並列読み込み、DICT辞書 | SkiaSharp |
+| **m-emuera** | Avalonia UIクロスプラットフォーム参考実装 | Avalonia |
+
+## クイックナビ
+
+| やりたいこと | 移動先 |
+|:---|:---|
+| ゼロからERABASICを学ぶ | [チュートリアル](tutorial/index.md) |
+| 命令の使い方を調べる | [リファレンス](Reference/README.md) |
+| EM+EEの新機能を知る | [EM+EE機能概要](EMEE/EMEE_Summary.md) |
+| Skia版の新機能を知る | [Skia版機能概要](Skia/Skia_Summary.md) |
+| 変数システムを理解する | [変数仕様](Emuera/variables.md) |
+| 関数とプリプロセッサ | [関数・プリプロセッサ](Emuera/function.md) |
+| システムフロー | [フローチャート](Emuera/system_flow.md) |
+| バージョン間機能比較 | [バージョン進化比較](tutorial/evolution.md) |
+
 ## ライセンス
 > 本ドキュメントは、[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)の利用範囲でご利用ください。
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
 
 ## ダウンロード
-[**最新版:Emuera.NET 1824+v24+EMv18+EEv55**](assets/files/Emuera.NET 1824+v24+EMv18+EEv55+Rikaichan.zip)
-
-## 連絡先
-エラー報告、要望、編集の相談などは下記Discordサーバーにてご連絡ください
-
-[ドキュメント編集チャンネル](https://discord.com/channels/428432103042973706/1236190714954514452)
-
-<iframe src="https://discord.com/widget?id=428432103042973706&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+[**最新版:Emuera_skiaV3_x64**](assets/files/Emuera_skiaV3_x64.zip)

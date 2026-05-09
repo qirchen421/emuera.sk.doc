@@ -14,7 +14,7 @@ hide:
     ```  { #language-erbapi }
 	int PRINTCLENGTH
     ```
-	Returns the value of [`PRINTCの文字数`](../Emuera/config.md#printc_1) from config. This is equivalent to `RESULT = GETCONFIG("PRINTCの文字数")`.
+	Returns the value of [`PRINTC character count`](../Emuera/config.en.md#printc-character-count) from config. This is equivalent to `RESULT = GETCONFIG("PRINTCの文字数")`.
 
 !!! hint "Hint"
 

@@ -826,7 +826,7 @@ ALIGNMENT LEFT ;左对齐
 
 ---  
 
-### `PRINTFORML`是什么？  
+### `PRINTFORML`是什么？ {#printforml}  
 
 显示字符串的指令之一。  
 
@@ -1206,7 +1206,7 @@ ENDIF
 这样的条件分支，推荐用『`SELECTCASE`』语句简化条件式。  
 这里介绍。  
 
-[系统改造Q&A→基础知识→`IF·ELSEIF`组可以转换为`SELECTCASE`语句吗](erawiki-modification-QandA.md#ifelseselectcase)  
+[系统改造Q&A→基础知识→`IF·ELSEIF`组可以转换为`SELECTCASE`语句吗](erawiki-modification-QandA.md#ifelseifselectcase)  
 
 正好现在看的`INPUT`的`RESULT`分支容易转换为`SELECTCASE`语句。  
 可以试试。  

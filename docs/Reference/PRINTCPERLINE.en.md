@@ -14,7 +14,7 @@ hide:
     ```  { #language-erbapi }
 	int PRINTCPERLINE
     ```
-	Returns the number specified by the [config `PRINTCを並べる数`](../Emuera/config.md#printc) in `RESULT:0`. The default is 3.  
+	Returns the number specified by the [config `Number of PRINTC to Arrange`](../Emuera/config.en.md#number-of-printc-to-arrange) in `RESULT:0`. The default is 3.  
 	This is equivalent to `RESULT = GETCONFIG("PRINTCを並べる数")`.
 
 

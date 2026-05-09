@@ -19,8 +19,8 @@ hide:
 
     - 0 - This file can be loaded.
     - 1 - The specified file does not exist.
-    - 2 - The game code is different (data with different `code` value from [gamebase.csv](../Emuera/variables.md#gamebasecsv)).
-    - 3 - The version is different (data with different `version` value from [gamebase.csv](../Emuera/variables.md#gamebasecsv), and is not an accepted version).
+    - 2 - The game code is different (data with different `code` value from [gamebase.csv](../Emuera/variables.en.md#gamebasecsv-variables)).
+    - 3 - The version is different (data with different `version` value from [gamebase.csv](../Emuera/variables.en.md#gamebasecsv-variables), and is not an accepted version).
     - 4 - There is some other problem with the file.
 
     When `RESULT:0` is `0`, `RESULTS:0` contains the save data comment (the string entered via [`PUTFORM`](./PUTFORM.md) in `@SAVEINFO`, or the second argument of [`SAVEDATA`](./SAVEDATA.md)).  

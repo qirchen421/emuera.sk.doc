@@ -16,7 +16,7 @@ hide:
     PRINTFORM(C|L)(|K|D)(|L|W) formedString
     ```
     `PRINTC` family command.
-    Pads the string with half-width spaces to match the character count specified in config [`PRINTC character count`](../Emuera/config.md#printc_1) (default 25) before printing.
+    Pads the string with half-width spaces to match the character count specified in config [`PRINTC character count`](../Emuera/config.en.md#printc-character-count) (default 25) before printing.
     Note that Emuera handles `PRINTC` family commands specially within the button conversion processing of `PRINT`ed strings.
 
     The keyword in the first set of parentheses specifies the argument type.

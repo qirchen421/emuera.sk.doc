@@ -36,7 +36,7 @@ hide:
 	Conversely, you can implement your own `TRAIN` commands using `DOTRAIN`.  
 	For example, leave `train.csv` empty, display your own in `@SHOW_USERCOM`, and perform `DOTRAIN` in `@USERCOM`.  
 	Alternatively, instead of leaving `train.csv` empty, you can make all `@COM_ABLE` return 0.  
-	Another method is to delete all `@COM_ABLE` and set [`COM_ABLE default value` in `_replace.csv`](../Emuera/replace.md#com_able) to 0.  
+	Another method is to delete all `@COM_ABLE` and set [`COM_ABLE default value` in `_replace.csv`](../Emuera/replace.en.md#com_able-default-value) to 0.  
 	Note that if `DOTRAIN` is executed during `CALLTRAIN` processing, the remaining `CALLTRAIN` is invalidated.
 
 !!! hint "Hint"

@@ -313,7 +313,7 @@ L_FLOAT = 10              ; ✅ 整数は自動的に実数に変換
 
 | 知りたいこと | 参照 |
 |:---|:---|
-| 変数の宣言と型 | [ファイルタイプ](file-types.zh.md) |
-| コマンドと式の境界 | [コマンド vs 式](command-vs-expression.zh.md) |
-| ERBファイル形式の拡張 | [ERBファイル形式拡張](erb-format-extension.zh.md) |
+| 変数の宣言と型 | [ファイルタイプ](file-types.md) |
+| コマンドと式の境界 | [コマンド vs 式](command-vs-expression.md) |
+| ERBファイル形式の拡張 | [ERBファイル形式拡張](erb-format-extension.md) |
 | 書式化文字列の詳細 | [PRINT命令](../Reference/PRINT.md) |

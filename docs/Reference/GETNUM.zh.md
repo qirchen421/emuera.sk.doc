@@ -17,7 +17,7 @@ hide:
     从各 CSV 文件中定义的名称获取其对应的数值，并赋值给 `RESULT:0`。  
     例如，如果在 `abl.csv` 中定义了 `2,技巧`，那么执行 `GETNUM ABL, "技巧"` 后，`RESULT:0` 将被赋值为 `2`。  
     如果未定义，则结果为 `-1`。  
-    CSV 文件与变量的对应关系遵循 [「Emuera 新增语法」页面中的「通过字符串指定数组变量元素」](../Emuera/expression.md#_10) 部分。
+    CSV 文件与变量的对应关系遵循 [「Emuera 新增语法」页面中的「通过字符串指定数组变量元素」](../Emuera/expression.md#string-array-element) 部分。
 
 !!! hint "提示"
 

@@ -1141,7 +1141,7 @@ ENDIF
 のような条件分岐を行いたい場合は『`SELECTCASE`』文で条件式を略すことがおすすめされる。  
 こちらで紹介してくれている。  
 
-[システム改造Q&A→基礎知識→`IF・ELSEIF`のかたまりは`SELECTCASE`文に出来るかも](erawiki-modification-QandA.md#ifelseselectcase)
+[システム改造Q&A→基礎知識→`IF・ELSEIF`のかたまりは`SELECTCASE`文に出来るかも](erawiki-modification-QandA.md#ifelseifselectcase)
 
 ちょうど今見ている`INPUT`の`RESULT`分岐などは`SELECTCASE`文にしやすいところだ。  
 試してみてもいいかもしれない。  

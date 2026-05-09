@@ -10,7 +10,7 @@
 
 ---
 
-## 凡例
+## 凡例 { #legend }
 
 - ![](../assets/images/IconSK.webp) - Skia（Skia版）で追加、変更、拡張された機能
 - ![](../assets/images/IconEM.webp) - EM(EvilMask版)で追加された機能
@@ -18,22 +18,22 @@
 
 ---
 
-## 目次
+## 目次 { #toc }
 
-- [凡例](#凡例)
-- [目次](#目次)
-- [遅延読み込み機構](#遅延読み込み機構)
-- [MAP拡張関数（9個追加）](#map拡張関数9個追加)
-- [SQL拡張（XML インポート/エクスポート）](#sql拡張xml-インポートエクスポート)
-- [オーディオ処理 (SoundTouch)](#オーディオ処理-soundtouch)
-- [VARIADIC 可変長引数](#variadic-可変長引数)
-- [SELECTCASE コンパイル時ジャンプテーブル最適化](#selectcase-コンパイル時ジャンプテーブル最適化)
-- [DotNet 同期機能](#dotnet-同期機能)
-- [機能比較](#機能比較)
+- [凡例](#legend)
+- [目次](#toc)
+- [遅延読み込み機構](#lazy-loading)
+- [MAP拡張関数（9個追加）](#map-extended)
+- [SQL拡張（XML インポート/エクスポート）](#sql-extended)
+- [オーディオ処理 (SoundTouch)](#audio-soundtouch)
+- [VARIADIC 可変長引数](#variadic)
+- [SELECTCASE コンパイル時ジャンプテーブル最適化](#selectcase-optimization)
+- [DotNet 同期機能](#dotnet-sync)
+- [機能比較](#feature-comparison)
 
 ---
 
-## ![](../assets/images/IconSK.webp)遅延読み込み機構
+## ![](../assets/images/IconSK.webp)遅延読み込み機構 { #lazy-loading }
 
 !!! summary ""
 
@@ -45,7 +45,7 @@
 
 ---
 
-## ![](../assets/images/IconEM.webp)![](../assets/images/IconSK.webp)MAP拡張関数（9個追加）
+## ![](../assets/images/IconEM.webp)![](../assets/images/IconSK.webp)MAP拡張関数（9個追加） { #map-extended }
 
 !!! summary ""
 
@@ -69,7 +69,7 @@
 
 ---
 
-## ![](../assets/images/IconSK.webp)SQL拡張（XML インポート/エクスポート）
+## ![](../assets/images/IconSK.webp)SQL拡張（XML インポート/エクスポート） { #sql-extended }
 
 !!! summary ""
 
@@ -82,7 +82,7 @@
 
 ---
 
-## ![](../assets/images/IconEE.webp)![](../assets/images/IconSK.webp)オーディオ処理 (SoundTouch)
+## ![](../assets/images/IconEE.webp)![](../assets/images/IconSK.webp)オーディオ処理 (SoundTouch) { #audio-soundtouch }
 
 !!! summary ""
 
@@ -94,7 +94,7 @@
 
 ---
 
-## ![](../assets/images/IconSK.webp)VARIADIC 可変長引数
+## ![](../assets/images/IconSK.webp)VARIADIC 可変長引数 { #variadic }
 
 !!! summary ""
 
@@ -109,7 +109,7 @@
 
 ---
 
-## ![](../assets/images/IconSK.webp)SELECTCASE コンパイル時ジャンプテーブル最適化
+## ![](../assets/images/IconSK.webp)SELECTCASE コンパイル時ジャンプテーブル最適化 { #selectcase-optimization }
 
 !!! summary ""
 
@@ -122,7 +122,7 @@
 
 ---
 
-## ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)DotNet 同期機能
+## ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)DotNet 同期機能 { #dotnet-sync }
 
 !!! summary ""
 
@@ -157,7 +157,7 @@
 
 ---
 
-## 機能比較
+## 機能比較 { #feature-comparison }
 
 | 機能 | EM+EE | Skia版 | 備考 |
 |:---|:---:|:---:|:---|

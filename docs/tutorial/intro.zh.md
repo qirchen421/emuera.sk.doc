@@ -59,7 +59,7 @@ RETURN L_val
     - `REF`/`OUT` 在 `#DIM` 行声明（不是签名）
     - `#FUNCTION` 标记函数类型（不是签名语法）
 
-    详见 [声明系统](declaration.zh.md)。
+    详见 [声明系统](variable-declaration.zh.md)。
 
 ### 三类型体系
 
@@ -104,4 +104,4 @@ eramaker（2005）  →  Emuera（2008-2017）  →  EM+EE（2019-）  →  各�
 | 文件类型与处理顺序 | [文件类型](file-types.zh.md) |
 | 行类型与结构 | [行类型](line-types.zh.md) |
 | 写第一个 ERB 程序 | [Hello World](hello-world.zh.md) |
-| 变量与声明系统 | [声明系统](declaration.zh.md) |
+| 变量与声明系统 | [声明系统](variable-declaration.zh.md) |
