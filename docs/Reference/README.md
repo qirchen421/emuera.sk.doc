@@ -1,4 +1,4 @@
-## 命令・式中関数の一覧
+# 命令・式中関数の一覧
 
 ---
 
@@ -9,6 +9,7 @@
 - ![](../assets/images/IconEM.webp) - EM(EvilMask版)で追加、変更、拡張された命令
 - ![](../assets/images/IconEE.webp) - EE(Enter's Edition)で追加、変更、拡張された命令
 - ![](../assets/images/Icondotnet.webp) - [Emuera.NET](https://gitlab.com/VVIIlet/emuera)で追加、変更、拡張された命令
+- ![](../assets/images/IconSK.webp) - Skia版（LazyLoading）で追加、変更、拡張された命令
 - ![](../assets/images/Iconetc.webp) - その他コントリビューターによって追加、変更、拡張された命令
 
 ---
@@ -152,6 +153,8 @@
 | ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.md)                | `int`, `int`, `int`                          | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SUMARRAY`](./SUMARRAY.md)          | `integerArray`(, `int`, `int`)               | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`MATCH`](./MATCH.md)                | `array`, `any`, `int`, `int`                 | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`MATCHALL`](./MATCHALL.md) | `variable`, `any`(, `int`, `int`, `variable`) | `int` |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`MATCHALLEX`](./MATCHALL.md) | `string`, `any`(, `int`, `int`, `variable`) | `int` |
 | ![](../assets/images/IconEmuera.webp)[`MAXARRAY`](./MAXMINARRAY.md)       | `integerArray`, `int`, `int`                 | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`MINARRAY`](./MAXMINARRAY.md)       | `integerArray`, `int`, `int`                 | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SUMCARRAY`](./CARRAY.md)           | `charaArray`(, `int`, `int`)                 | `int`    |
@@ -210,6 +213,10 @@
 | ![](../assets/images/IconEmuera.webp)[`CSVEQUIP`](./CSV_STATUS.md)         | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CSVCFLAG`](./CSV_STATUS.md)         | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.md)               | `variable`, `string`                          | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYNAME`](./GETCSVNOBY.md)       | `string`                          | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYNICKNAME`](./GETCSVNOBY.md)   | `string`                          | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYCALLNAME`](./GETCSVNOBY.md)   | `string`                          | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYMASTERNAME`](./GETCSVNOBY.md) | `string`                          | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.md)       | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.md)         | `int`, `int`                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`FINDELEMENT`](./FINDELEMENT.md)     | `variable`, `value`(, `int`, `int`, `int`)    | `int`    |
@@ -467,6 +474,10 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md)                       | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md)                           | `int`, `int`                                                                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.md)           | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_DRAW`](./G_POLYGON.md)               | `int`                                                                                   | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_FILL`](./G_POLYGON.md)               | `int`                                                                                   | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.md)          | `int`, `int`, `int`                                                                     | `int`    |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.md)        | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GDRAWG`](./GDRAWG.md)                           | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                    | `int`    |
 |                                                                                        | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `integerVariable` | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.md)           | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |

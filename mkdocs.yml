@@ -35,7 +35,339 @@ markdown_extensions:
   - pymdownx.keys
 nav:
   - ホーム: README.md
-  - EmueraEM+EEの仕様: EMEE/EMEE_Summary.md
+  - チュートリアル:
+      - tutorial/index.md
+      - 基本文法:
+          - Emuera/expression.md
+          - Emuera/operand.md
+          - Emuera/system_flow.md
+          - eramaker/system_flow.md
+          - eramaker/ERB_format.md
+      - 変数:
+          - Emuera/variables.md
+          - Emuera/user_defined_variables.md
+          - Emuera/ERH.md
+          - eramaker/CSV_format.md
+          - eramaker/variables.md
+      - 制御フロー:
+          - Reference/IF.md
+          - Reference/SELECTCASE.md
+          - Reference/REPEAT.md
+          - Reference/CONTINUE.md
+          - Reference/FOR.md
+          - Reference/WHILE.md
+          - Reference/DO.md
+      - 関数:
+          - Emuera/function.md
+          - Emuera/in_expression_function.md
+          - Emuera/user_defined_in_expression_function.md
+          - Reference/CALL.md
+          - Reference/JUMP.md
+          - Reference/GOTO.md
+          - Reference/TRY.md
+          - Reference/FORM.md
+          - Reference/TRYFORM.md
+          - Reference/CALLF.md
+          - Reference/CALLEVENT.md
+          - Reference/RETURN.md
+          - Reference/RESTART.md
+      - 文字列操作:
+          - Reference/TOUPPER.md
+          - Reference/TOSTR.md
+          - Reference/TOINT.md
+          - Reference/STRLEN.md
+          - Reference/SUBSTRING.md
+          - Reference/CHARATU.md
+          - Reference/STRFIND.md
+          - Reference/STRCOUNT.md
+          - Reference/SPLIT.md
+          - Reference/REPLACE.md
+          - Reference/ESCAPE.md
+          - Reference/UNICODE.md
+          - Reference/STRFORM.md
+          - Reference/REGEXPMATCH.md
+      - 入出力:
+          - Reference/PRINT.md
+          - Reference/PRINTSINGLE.md
+          - Reference/PRINTC.md
+          - Reference/PRINTDATA.md
+          - Reference/PRINTBUTTON.md
+          - Reference/PRINTPLAIN.md
+          - Reference/DRAWLINE.md
+          - Reference/CUSTOMDRAWLINE.md
+          - Reference/GETLINESTR.md
+          - Reference/REUSELASTLINE.md
+          - Reference/CLEARLINE.md
+          - Reference/PRINT_STATUS.md
+          - Reference/PRINT_IMG.md
+          - Reference/PRINT_RECT.md
+          - Reference/PRINT_SPACE.md
+          - Reference/PRINTN.md
+          - Reference/INPUT.md
+          - Reference/WAIT.md
+          - Reference/FORCEWAIT.md
+          - Reference/TINPUT.md
+          - Reference/TWAIT.md
+          - Reference/ONEINPUT.md
+          - Reference/TONEINPUT.md
+          - Reference/WAITANYKEY.md
+          - Reference/INPUTMOUSEKEY.md
+          - Reference/INPUTANY.md
+          - Reference/BINPUT.md
+          - Emuera/HTML_PRINT.md
+          - tutorial/html-syntax.md
+      - 算術:
+          - Reference/TIMES.md
+          - Reference/POWER.md
+          - Reference/ABS.md
+          - Reference/SQRT.md
+          - Reference/MATH_EXTENSION.md
+          - Reference/BIT_OPERATION.md
+          - Reference/MAX.md
+          - Reference/SUMARRAY.md
+          - Reference/MATCH.md
+          - Reference/MAXMINARRAY.md
+          - Reference/CARRAY.md
+          - Reference/INRANGEARRAY.md
+          - Reference/GROUPCHECK.md
+          - Reference/CONVERT.md
+          - Reference/RAND.md
+      - 配列・データ構造:
+          - Reference/ARRAYSORT.md
+          - Reference/ARRAYCOPY.md
+          - Reference/ARRAYSHIFT.md
+          - Reference/ARRAYREMOVE.md
+          - Reference/ARRAYMSORT.md
+          - Reference/ARRAYMSORTEX.md
+          - Reference/VARSET.md
+          - Reference/CVARSET.md
+          - Reference/FINDELEMENT.md
+          - Reference/MAP_MANAGE.md
+          - Reference/MAP_OPERATION.md
+          - Reference/MAP_GETKEYS.md
+          - Reference/MAP_SERIALIZATION.md
+          - Reference/DT_MANAGE.md
+          - Reference/DT_COLUMN.md
+          - Reference/DT_ROW.md
+          - Reference/DT_CELL.md
+          - Reference/DT_SELECT.md
+          - Reference/DT_SERIALIZATION.md
+          - Reference/XML_MANAGE.md
+          - Reference/XML_GET.md
+          - Reference/XML_SET.md
+          - Reference/XML_TOSTR.md
+          - Reference/XML_ADDNODE.md
+          - Reference/XML_REMOVENODE.md
+          - Reference/XML_REPLACE.md
+          - Reference/XML_ADDATTRIBUTE.md
+          - Reference/XML_REMOVEATTRIBUTE.md
+      - キャラ操作:
+          - Reference/ADDCHARA.md
+          - Reference/DELCHARA.md
+          - Reference/SWAPCHARA.md
+          - Reference/SORTCHARA.md
+          - Reference/GETCHARA.md
+          - Reference/ADDDEFCHARA.md
+          - Reference/ADDVOIDCHARA.md
+          - Reference/DELALLCHARA.md
+          - Reference/PICKUPCHARA.md
+          - Reference/EXISTCSV.md
+          - Reference/FINDCHARA.md
+          - Reference/COPYCHARA.md
+          - Reference/ADDCOPYCHARA.md
+      - グラフィック・オーディオ:
+          - Reference/GCREATE.md
+          - Reference/GCREATEFROMFILE.md
+          - Reference/GDISPOSE.md
+          - Reference/GCLEAR.md
+          - Reference/GFILLRECTANGLE.md
+          - Reference/GDRAWG.md
+          - Reference/GDRAWGWITHMASK.md
+          - Reference/GDRAWSPRITE.md
+          - Reference/GSETCOLOR.md
+          - Reference/GSETBRUSH.md
+          - Reference/GSETFONT.md
+          - Reference/GSETPEN.md
+          - Reference/GCREATED.md
+          - Reference/GWIDTHHEIGHT.md
+          - Reference/GGETCOLOR.md
+          - Reference/GSAVELOAD.md
+          - Reference/SPRITECREATE.md
+          - Reference/SPRITEANIMECREATE.md
+          - Reference/SPRITEANIMEADDFRAME.md
+          - Reference/SPRITEDISPOSE.md
+          - Reference/SPRITEGETCOLOR.md
+          - Reference/SPRITECREATED.md
+          - Reference/SPRITEWIDTHHEIGHT.md
+          - Reference/SPRITEPOSXY.md
+          - Reference/SPRITESETPOS.md
+          - Reference/SPRITEMOVE.md
+          - Reference/CBGSETG.md
+          - Reference/CBGSETSPRITE.md
+          - Reference/CBGSETBMAPG.md
+          - Reference/CBGSETBUTTONSPRITE.md
+          - Reference/CBGCLEAR.md
+          - Reference/CBGREMOVEMAPB.md
+          - Reference/CBGCLEARBUTTON.md
+          - Reference/CBGREMOVERANGE.md
+          - Reference/SETANIMETIMER.md
+          - Reference/GDRAWTEXT.md
+          - Reference/GGETFONT.md
+          - Reference/GGETFONTSIZE.md
+          - Reference/GGETFONTSTYLE.md
+          - Reference/GGETTEXTSIZE.md
+          - Reference/GDRAWGWITHROTATE.md
+          - Reference/GGETPEN.md
+          - Reference/GGETPENWIDTH.md
+          - Reference/GGETBRUSH.md
+          - Reference/SPRITEDISPOSEALL.md
+          - Reference/GDRAWLINE.md
+          - Reference/GDASHSTYLE.md
+          - Reference/BACKGROUND.md
+          - Reference/PLAYSOUND.md
+          - Reference/STOPSOUND.md
+          - Reference/PLAYBGM.md
+          - Reference/STOPBGM.md
+          - Reference/EXISTSOUND.md
+          - Reference/SETSOUNDVOLUME.md
+          - Reference/SETBGMVOLUME.md
+      - セーブ・永続化:
+          - Reference/SAVEDATA.md
+          - Reference/LOADDATA.md
+          - Reference/DELDATA.md
+          - Reference/CHKDATA.md
+          - Reference/SAVENOS.md
+          - Reference/SAVEGLOBAL.md
+          - Reference/LOADGLOBAL.md
+          - Reference/OUTPUTLOG.md
+          - Reference/SAVECHARA.md
+          - Reference/LOADCHARA.md
+          - Reference/CHKCHARADATA.md
+          - Reference/FIND_CHARADATA.md
+          - Reference/SAVETEXT.md
+          - Reference/LOADTEXT.md
+      - 表示・フォント操作:
+          - Reference/BAR.md
+          - Reference/SETCOLOR.md
+          - Reference/SETBGCOLOR.md
+          - Reference/SETCOLORBYNAME.md
+          - Reference/GETCOLOR.md
+          - Reference/FONT_OPERATION.md
+          - Reference/SETFONT.md
+          - Reference/FORCEKANA.md
+          - Reference/ALIGNMENT.md
+          - Reference/REDRAW.md
+          - Reference/PRINTCPERLINE.md
+          - Reference/PRINTCLENGTH.md
+          - Reference/LINEISEMPTY.md
+          - Reference/BARSTR.md
+          - Reference/MONEYSTR.md
+          - Reference/SKIP_RELATE.md
+          - Reference/COLOR_FROM.md
+          - Reference/SKIPLOG.md
+          - Reference/GETDISPLAYLINE.md
+          - Reference/BITMAP_CACHE_ENABLE.md
+      - ツールチップ・HTML・AWAIT:
+          - Reference/TOOLTIP_SETCOLOR.md
+          - Reference/TOOLTIP_SET.md
+          - Reference/TOOLTIP_EXTENSION.md
+          - Reference/HTML_TAGSPLIT.md
+          - Reference/HTML_POPPRINTINGSTR.md
+          - Reference/HTML_GETPRINTEDSTR.md
+          - Reference/HTML_ESCAPE.md
+          - Reference/HTML_TOPLAINTEXT.md
+          - Reference/HTML_STRINGLEN.md
+          - Reference/HTML_SUBSTRING.md
+          - Reference/HTML_STRINGLINES.md
+          - Reference/HTML_PRINT_ISLAND.md
+          - Reference/AWAIT.md
+          - Reference/GETKEY.md
+          - Reference/MOUSEXY.md
+          - Reference/ISACTIVE.md
+          - Reference/MOUSEB.md
+      - 変数操作・参照:
+          - Reference/UPCHECK.md
+          - Reference/VARSIZE.md
+          - Reference/RESETDATA.md
+          - Reference/RESETGLOBAL.md
+          - Reference/RESET_STAIN.md
+          - Reference/SWAP.md
+          - Reference/CSVNAME.md
+          - Reference/CSV_STATUS.md
+          - Reference/GETNUM.md
+          - Reference/GETPALAMLV.md
+          - Reference/CUPCHECK.md
+          - Reference/ISDEFINED.md
+          - Reference/EXISTVAR.md
+          - Reference/ENUMFUNC.md
+          - Reference/ENUMVAR.md
+          - Reference/ENUMMACRO.md
+          - Reference/GETSETVAR.md
+          - Reference/VARSETEX.md
+          - Reference/ERDNAME.md
+          - Reference/VAR.md
+      - デバッグ・システム:
+          - Reference/DEBUGPRINT.md
+          - Reference/ASSERT.md
+          - Reference/SAVEGAME.md
+          - Reference/BEGIN.md
+          - Reference/QUIT.md
+          - Reference/CALLTRAIN.md
+          - Reference/DOTRAIN.md
+          - Reference/THROW.md
+          - Reference/QUIT_AND_RESTART.md
+          - Reference/FORCE_QUIT.md
+          - Reference/FORCE_QUIT_AND_RESTART.md
+          - Reference/FORCE_BEGIN.md
+          - Reference/FLOWINPUT.md
+          - Reference/RANDOMIZE.md
+          - Reference/CLEARTEXTBOX.md
+          - Reference/STRDATA.md
+          - Reference/STOPCALLTRAIN.md
+          - Reference/GETCONFIG.md
+          - Reference/CLIENTFIELD.md
+          - Reference/EXISTFILE.md
+          - Reference/ENUMFILES.md
+          - Reference/UPDATECHECK.md
+          - Reference/GETMEMORYUSAGE.md
+          - Reference/CLEARMEMORY.md
+          - Reference/TEXTBOX.md
+          - Reference/TRYC.md
+          - Reference/TRYLIST.md
+          - Reference/EXISTFUNCTION.md
+          - Reference/TRYCALLF.md
+          - Reference/TRYCALLFORMF.md
+          - Reference/CALLSHARP.md
+          - Reference/EXISTMETH.md
+          - Reference/GETMETH.md
+          - Reference/PUTFORM.md
+          - Reference/GETTIME.md
+          - Reference/GETMILLISECOND.md
+          - Reference/GETSECOND.md
+      - 設定・互換性:
+          - Emuera/usage.md
+          - Emuera/config.md
+          - Emuera/shortcut.md
+          - Emuera/replace.md
+          - Emuera/config_files.md
+          - Emuera/glossary.md
+          - Emuera/debugCom.md
+          - Emuera/debug.md
+          - Emuera/differences_of_Emuera_and_eramaker.md
+          - Emuera/resources.md
+      - バージョン進化:
+          - tutorial/evolution.md
+  - 仕様概要:
+      - Skia版:
+          - Skia/Skia_Summary.md
+          - 更新日志: Skia/CHANGELOG.md
+      - EM+EE:
+          - EMEE/EMEE_Summary.md
+          - 更新日志: EMEE/CHANGELOG.md
+      - Emuera:
+          - Emuera/README.md
+      - eramaker:
+          - eramaker/README.md
   - リファレンス:
       - Reference/README.md
       - PRINT系:
@@ -340,40 +672,7 @@ nav:
           - Reference/GETMEMORYUSAGE.md
           - Reference/CLEARMEMORY.md
           - Reference/TEXTBOX.md
-  - 変更ログ: Changelog/README.md
   - i18n: i18n/README.md
-  - Emueraの仕様:
-      - Emuera/README.md
-      - プレイヤー向け情報:
-          - Emuera/usage.md
-          - Emuera/config.md
-          - Emuera/shortcut.md
-      - 開発者向け情報:
-          - Emuera/glossary.md
-          - Emuera/debugCom.md
-          - Emuera/debug.md
-          - Emuera/replace.md
-          - Emuera/config_files.md
-          - Emuera/system_flow.md
-          - Emuera/differences_of_Emuera_and_eramaker.md
-          - Emueraの追加機能:
-              - Emuera/expression.md
-              - Emuera/operand.md
-              - Emuera/variables.md
-              - Emuera/user_defined_variables.md
-              - Emuera/function.md
-              - Emuera/in_expression_function.md
-              - Emuera/user_defined_in_expression_function.md
-              - Emuera/ERH.md
-              - Emuera/HTML_PRINT.md
-              - Emuera/resources.md
-  - eramakerの仕様:
-      - eramaker/README.md
-      - 一覧:
-          - eramaker/system_flow.md
-          - eramaker/CSV_format.md
-          - eramaker/ERB_format.md
-          - eramaker/variables.md
   - 制作マニュアル:
     - manual/README.md
     - 初心者向け:
@@ -405,7 +704,7 @@ plugins:
           default: false
           locale: en
           name: English
-          site_name: Emuera.EM+EE Document
+          site_name: Emuera SKIA Document
           nav_translations:
             EmueraEM+EEの仕様: EmueraEM+EE's Summary
             Emueraの仕様: Emuera's Summary
@@ -414,6 +713,26 @@ plugins:
             eramakerの仕様: eramaker's Summary
             プレイヤー向け情報: Information for end users
             ホーム: Home
+            チュートリアル: Tutorial
+            仕様概要: Specifications
+            更新日志: Changelog
+            基本文法: Basic Syntax
+            変数: Variables
+            制御フロー: Control Flow
+            関数: Functions
+            文字列操作: String Operations
+            入出力: Input/Output
+            算術: Arithmetic
+            配列・データ構造: Arrays & Data Structures
+            キャラ操作: Character Operations
+            グラフィック・オーディオ: Graphics & Audio
+            セーブ・永続化: Save & Persistence
+            表示・フォント操作: Display & Font Operations
+            ツールチップ・HTML・AWAIT: Tooltip, HTML & AWAIT
+            変数操作・参照: Variable Operations & Reference
+            デバッグ・システム: Debug & System
+            設定・互換性: Configuration & Compatibility
+            バージョン進化: Version Evolution
             リファレンス: Reference
             変更ログ: Changelog
             開発者向け情報: eramaker basic Information for Developers
@@ -456,7 +775,7 @@ plugins:
           default: false
           locale: zh
           name: 简体中文
-          site_name: Emuera.EM+EE 帮助文档
+          site_name: Emuera SKIA 帮助文档
           nav_translations:
             EmueraEM+EEの仕様: Emuera EM+EE 概要
             Emueraの仕様: Emuera 概要
@@ -465,6 +784,26 @@ plugins:
             eramakerの仕様: eramaker 概要
             プレイヤー向け情報: 面向玩家的信息
             ホーム: 首页
+            チュートリアル: 教程
+            仕様概要: 规格概要
+            更新日志: 更新日志
+            基本文法: 基本语法
+            変数: 变量
+            制御フロー: 控制流
+            関数: 函数
+            文字列操作: 字符串操作
+            入出力: 输入输出
+            算術: 算术
+            配列・データ構造: 数组与数据结构
+            キャラ操作: 角色操作
+            グラフィック・オーディオ: 图形与音频
+            セーブ・永続化: 存档与持久化
+            表示・フォント操作: 显示与字体操作
+            ツールチップ・HTML・AWAIT: 工具提示、HTML与AWAIT
+            変数操作・参照: 变量操作与参考
+            デバッグ・システム: 调试与系统
+            設定・互換性: 配置与兼容性
+            バージョン進化: 版本演进
             リファレンス: 参考手册
             変更ログ: 更新日志
             開発者向け情報: 面向开发者的信息
@@ -506,7 +845,7 @@ plugins:
       minify_css: true
       minify_html: true
       minify_js: true
-site_name: Emuera.EM+EE Document
+site_name: Emuera SKIA Document
 repo_url: https://gitgud.io/qrchen/emuera.em.doc
 site_url: https://qrchen.gitgud.io/emuera.em.doc/
 theme:

@@ -5,28 +5,59 @@ hide:
 ---
 # 欢迎
 
-!!! warning "大部分已翻译"
+!!! tip "新用户？"
 
-    目前，该文档大部分已经过翻译。可能会存在一些错误和疏漏，欢迎为本文档贡献。您可以访问源代码 [这里](https://gitlab.com/EvilMask/emuera.em.doc)（主要为Markdown格式）。
+    📖 **[开始学习 ERABASIC 教程 →](tutorial/index.zh.md)**
 
-## 什么是EmueraEM+EE？
-> EmueraEM+EE是基于[Emuera私有版本](https://ux.getuploader.com/ninnohito/)修改的Emuera版本。
+    从零开始，按 Emuera → EM+EE → 各派生版的演进路线学习 ERABASIC 编程。
 
-### Emuera私有版本
+---
+
+## 什么是 EmueraEM+EE？
+
+> EmueraEM+EE 是基于 [Emuera 私有版本](https://ux.getuploader.com/ninnohito/) 修改的 Emuera 版本。它在 Emuera 基础上扩展了音频、图形、数据结构、HTML 渲染等功能，是现代 ERABASIC 生态中最活跃的分支。
+
+### Emuera 私有版本
+
 !!! quote "引用"
 
-    由于原始的Emuera不再更新，为了作为代码基础，私有修改版除了修复错误外不会做任何更改。
+    由于原始的 Emuera 不再更新，为了作为代码基础，私有修改版除了修复错误外不会做任何更改。
+
+### 派生版本
+
+| 版本 | 特点 | 渲染引擎 |
+|:---|:---|:---|
+| **EM+EE** | 音频、热键、剪贴板、TTF/OTF 动态加载 | GDI+ |
+| **Skia 版 (LazyLoading)** | 懒加载、MAP 增强、SQL/XML、SETIMAGELAYER、VARIADIC | Skia |
+| **DotNet** | SkiaSharp 跨平台、并行加载、DICT 字典 | SkiaSharp |
+| **m-emuera** | Avalonia UI 跨平台参考实现 | Avalonia |
+
+## 快速导航
+
+| 你想做什么？ | 前往 |
+|:---|:---|
+| 从零学习 ERABASIC | [教程](tutorial/index.zh.md) |
+| 查找指令用法 | [指令参考](Reference/README.md) |
+| 了解 EM+EE 新功能 | [EM+EE 功能概览](EMEE/EMEE_Summary.zh.md) |
+| 了解 Skia 版新功能 | [Skia 版功能概览](Skia/Skia_Summary.zh.md) |
+| 了解变量系统 | [变量规格](Emuera/variables.md) |
+| 了解函数与预处理器 | [函数·预处理器](Emuera/function.md) |
+| 了解系统流程 | [流程图](Emuera/system_flow.md) |
+| 版本间功能对比 | [版本进化比较](tutorial/evolution.zh.md) |
 
 ## 许可证
-> 本文档采用[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)许可证授权。
+
+> 本文档采用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可证授权。
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
 
 ## 下载
+
 [**最新版本：Emuera.NET 1824+v24+EMv18+EEv55**](assets/files/Emuera.NET%201824+v24+EMv18+EEv55+Rikaichan.zip)
 
 ## 联系方式
-有关错误报告、功能请求或编辑讨论，请在下面的Discord服务器上联系开发人员。
+
+有关错误报告、功能请求或编辑讨论，请在下面的 Discord 服务器上联系开发人员。
 
 [JP Docs Development](https://discord.com/channels/428432103042973706/1236190714954514452)
 

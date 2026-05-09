@@ -30,9 +30,14 @@ hide:
 !!! hint "提示"
 
     仅指令支持此功能。
+    
+    **为什么需要 CALLF？** ERABASIC 中 `FUNC(args)` 括号语法不能作为独立命令（函数名后必须跟空格/制表符）。
+    而空格语法 `FUNC args` 调用表达式函数会污染 RESULT。CALLF 同时解决了这两个问题。
+    详见教程 [命令 vs 表达式](../tutorial/command-vs-expression.zh.md)。
 
 ### 相关项目
 * [TRYCALLF](TRYCALLF.md)
 * [TRYCALLFORMF](TRYCALLFORMF.md)
 * [EXISTFUNCTION](EXISTFUNCTION.md)
 * [表达式中可用的函数](../Emuera/in_expression_function.md)
+* [命令 vs 表达式（教程）](../tutorial/command-vs-expression.zh.md)

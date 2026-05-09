@@ -1,7 +1,7 @@
 ---
-hide:
-  - navigation
 ---
+
+# EmueraEM+EE 機能概要
 
 ### ![](../assets/images/IconEM.webp)リソースの占有解除
 !!! summary ""

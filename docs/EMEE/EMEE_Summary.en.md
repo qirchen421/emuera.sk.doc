@@ -1,7 +1,7 @@
 ---
-hide:
-  - navigation
 ---
+
+# Emuera EM+EE Features Summary
 
 ### ![](../assets/images/IconEM.webp)Resource Release
 !!! summary ""

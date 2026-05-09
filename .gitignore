@@ -1,5 +1,6 @@
 /public
 /release
+/site
 pyproject.toml
 poetry.lock
 *.ps1

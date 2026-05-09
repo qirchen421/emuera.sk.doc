@@ -5,6 +5,14 @@ hide:
 ---
 # ようこそ
 
+!!! tip "初めての方へ"
+
+    📖 **[ERABASIC チュートリアルを始める →](tutorial/index.md)**
+
+    eramaker → Emuera → EM+EE の歴史的流れに沿って、ゼロから ERABASIC プログラミングを学びましょう。
+
+---
+
 ## EmueraEM+EEとは
 > EmueraEM+EEは、[Emuera私家版](https://ux.getuploader.com/ninnohito/)をベースに改造を施したEmueraです。
 
