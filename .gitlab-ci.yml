@@ -1,24 +1,8 @@
-variables:
-  GIT_STRATEGY: none
-
 pages:
   stage: deploy
   script:
-    - if (Test-Path repo_src) { Remove-Item -Recurse -Force repo_src }
-    - if (Test-Path public) { Remove-Item -Recurse -Force public }
-    
-    - echo "=== 开始手动拉取代码 (使用 SSH 并强制跳过主机检查) ==="
-    - $env:GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
-    - git clone git@gitgud.io:qrchen/emuera.em.doc.git repo_src
-    
-    - cd repo_src
-    
-    - echo "=== 开始安装依赖 ==="
     - pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-static-i18n mkdocs-material-extensions
-    
-    - echo "=== 开始构建网页 ==="
-    - mkdocs build -d ../public
-
+    - mkdocs build -d public
   artifacts:
     paths:
       - public

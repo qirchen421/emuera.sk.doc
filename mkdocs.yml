@@ -37,6 +37,11 @@ nav:
   - ホーム: README.md
   - チュートリアル:
       - tutorial/index.md
+      - 入門ガイド:
+          - tutorial/assignment.md
+          - tutorial/erb-format-extension.md
+          - tutorial/event-functions.md
+          - tutorial/form-syntax.md
       - 基本文法:
           - Emuera/expression.md
           - Emuera/operand.md
@@ -847,7 +852,7 @@ plugins:
       minify_js: true
 site_name: Emuera SKIA Document
 repo_url: https://gitgud.io/qrchen/emuera.em.doc
-site_url: https://qrchen.gitgud.io/emuera.em.doc/
+site_url: https://qrchen.gitgud.site/emuera.em.doc/
 theme:
   name: material
   highlightjs: false
