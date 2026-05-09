@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments         | Return |
 | :------------------------------------------------------------------ | :---------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SAVEDATA`](./SAVEDATA.md) | `int`, `string`  | none   |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVEDATA`](./SAVEDATA.md) | `int`, `string`  | none   |
 
 !!! info "API"
 
@@ -36,6 +36,15 @@ hide:
     You can check if data already exists using the [`CHKDATA`](./CHKDATA.md) command.  
     Unlike the [`SAVEGAME`](./SAVEGAME.md) command, `SAVEDATA` can be called from anywhere in the script.  
 
+!!! info "EM+EE Extension: Save Data Format Enhancement"
+
+    EM+EE extends the `SAVEDATA` save data format, appending EM-specific data after the standard save data:
+
+    - **Map data**: [`MAP`](./MAP.md) dictionaries marked with the `SAVEDATA` keyword
+    - **Xml data**: XML documents marked with the `SAVEDATA` keyword
+    - **DataTable data**: DataTable tables marked with the `SAVEDATA` keyword
+
+    This data is cleared first and then restored from the save file during [`LOADDATA`](./LOADDATA.md), ensuring data consistency when switching between saves.
 
 !!! hint "Hint"
 
@@ -43,3 +52,4 @@ hide:
 
 ### See Also
 - [LOADDATA](LOADDATA.md)
+- [CHKDATA](CHKDATA.md)

@@ -24,11 +24,18 @@
 | 章节 | 内容 | 适合 |
 |:---|:---|:---|
 | [📖 简介](intro.zh.md) | ERABASIC 是什么、Hello World、版本演进 | 初学者 |
-| [📝 基本语法](file-types.zh.md) | 文件类型、行类型、表达式、格式化字符串 | 初学者 |
-| [📦 变量与声明](../Emuera/variables.zh.md) | 变量系统、#DIM、ERH、声明系统 | 初学者 |
-| [🔀 控制流](../Reference/IF.md) | IF/SELECTCASE/REPEAT/FOR/WHILE | 初学者 |
-| [⚙️ 函数](../Emuera/function.zh.md) | 函数定义、事件函数、表达式函数 | 初学者~中级者 |
-| [� 字符串操作](../Reference/TOSTR.md) | 字符串函数、FORM 语法 | 中级者 |
+| [🔢 值、类型与变量](values-types.zh.md) | 三类型体系、变量命名、类型转换 | 初学者 |
+| [📝 赋值语句](assignment.zh.md) | 基本赋值、字符串赋值、复合赋值、自增自减、批量赋值 | 初学者 |
+| [🖥️ 基本输出](basic-output.zh.md) | PRINT 系列、参数类型、行为后缀、格式化输出 | 初学者 |
+| [📄 ERB 文件格式扩展](erb-format-extension.zh.md) | 行连接、#DIM/#DIMS、#FUNCTION、事件修饰符、条件编译 | 初学者~中级者 |
+| [🔔 事件函数](event-functions.zh.md) | 事件函数 vs 系统函数、调用机制、#PRI/#LATER/#SINGLE/#ONLY | 初学者~中级者 |
+| [🔤 FORM 语法](form-syntax.zh.md) | 格式化字符串、变量替换、填充对齐、\@三元运算符、三连标识符、转义规则 | 初学者~中级者 |
+| [🔀 条件分支](condition.zh.md) | IF/SIF/SELECTCASE | 初学者 |
+| [🔄 循环](loop.zh.md) | REPEAT/FOR/WHILE/DO、CONTINUE/BREAK | 初学者 |
+| [⏭️ 跳转](jump.zh.md) | GOTO/$标签、GOTO 与循环的交互 | 初学者 |
+| [📞 函数与 CALL](call.zh.md) | @标签、CALL/JUMP、RETURN、参数传递、INPUT | 初学者 |
+| [📦 变量声明系统](variable-declaration.zh.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、函数签名与声明的关系、VARIADIC | 中级者 |
+| [🔤 字符串操作](../Reference/TOSTR.md) | 字符串函数、FORM 语法 | 中级者 |
 | [🖥️ 输入输出](../Reference/PRINT.md) | PRINT/INPUT/WAIT | 初学者 |
 | [🗃️ 数据结构](../Reference/MAP_MANAGE.md) | 数组/MAP/DataTable/XML | 中级者 |
 | [🎨 图形与音频](../Reference/GCREATE.md) | 图形操作/Sprite/HTML/音频 | 中级者~高级者 |

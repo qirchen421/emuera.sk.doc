@@ -315,24 +315,20 @@ nav:
 
 ### Phase 3：第 2 章 基础语法 — 写指令
 
-- [ ] tutorial/values-types.zh.md — 值、类型与变量
-- [ ] tutorial/assignment.zh.md — 赋值
-- [ ] tutorial/basic-output.zh.md — 基本输出
-- [ ] tutorial/form-syntax.zh.md — 注释与格式化字符串
+- [x] tutorial/values-types.zh.md — 值、类型与变量
+- [x] tutorial/assignment.zh.md — 赋值（补充 #DIMS 初始化语义差异）
+- [x] tutorial/basic-output.zh.md — 基本输出
+- [x] tutorial/form-syntax.zh.md — 注释与格式化字符串（✅ 已完成，需检查交叉引用）
 
 ### Phase 4：第 3 章 流程控制
 
-- [ ] tutorial/condition.zh.md — 条件分支
-- [ ] tutorial/loop.zh.md — 循环
-- [ ] tutorial/jump.zh.md — 跳转
+- [x] tutorial/condition.zh.md — 条件分支
+- [x] tutorial/loop.zh.md — 循环
+- [x] tutorial/jump.zh.md — 跳转
 
 ### Phase 5：第 4 章 自定义函数与 CALL
 
-- [ ] tutorial/at-label.zh.md — @标签
-- [ ] tutorial/call.zh.md — CALL
-- [ ] tutorial/function-params.zh.md — 参数传递
-- [ ] tutorial/return-result.zh.md — 返回值
-- [ ] tutorial/input.zh.md — INPUT 与交互
+- [x] tutorial/call.zh.md — 函数与 CALL（整合了参数传递、返回值、INPUT）
 
 ### Phase 6：第 5 章 变量声明系统
 

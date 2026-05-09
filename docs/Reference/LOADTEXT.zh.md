@@ -20,10 +20,29 @@ hide:
 	如果失败，`RESULTS:0` 将变为空字符串。  
 	也存在同名的表达式中函数，它不操作 `RESULTS:0`，而是将读取结果或空字符串作为返回值返回。
 
-    在 EM+EE 中，如果第一个参数是字符串，则会将第一个参数作为路径来加载文件。路径需指定为相对于 `Emuera.exe` 的相对路径（".." 无效）。此外，只能使用在设置界面或 `Emuera.config` 中 "LOADTEXTとSAVETEXTで使える拡張子" 项目所规定的扩展名（默认为仅 txt）。
+!!! info "EM+EE 扩展：字符串路径重载"
+
+    ```  { #language-erbapi }
+	LOADTEXT filePath
+    ```
+    当第一个参数为**字符串**时，将其作为文件路径加载。这是 EM+EE 新增的参数类型重载，提供更灵活的文件读取能力：
+
+    - 路径为相对于 `Emuera.exe` 的相对路径，`..` 无效
+    - 只能使用由设置界面或 `Emuera.config` 中「LOADTEXTとSAVETEXTで使える拡張子」项目所允许的扩展名（默认为仅 `txt`）
+    - 如果指定的扩展名不在允许列表中，**直接返回空字符串**（不会自动改为 `.txt`，与 SAVETEXT 行为不同）
+    - 使用字符串路径时，**自动检测文件编码**（忽略 `force_UTF8` 参数）
+    - 读取结果中的 `\r` 会被自动移除
 
     ``` title="emuera.config"
     LOADTEXTとSAVETEXTで使える拡張子:txt,xml,json
+    ```
+
+    ```  { #language-erbapi title="示例" }
+    ; 标准用法：按编号从 sav 文件夹加载
+    LOADTEXT 0
+
+    ; EM+EE 扩展：按路径从自定义位置加载
+    LOCALS = %LOADTEXT("plugins/config.json")%
     ```
 
 !!! hint "提示"

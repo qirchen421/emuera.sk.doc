@@ -8,9 +8,9 @@
 
 ### 语法覆盖缺失
 
-- [ ] **赋值语句** — `A = 10`、`LOCALS '= "text"` 基本赋值语法无独立页面。eramaker 的 ERB_format.md 仅覆盖原始格式，Emuera 扩展部分（行连接 `{}`、`#` 预处理顺序等）分散在 expression.md 中。需要新建独立页面或在 expression.md 中补充。
-- [ ] **ERB 文件格式扩展** — eramaker/ERB_format.md 只覆盖了原始格式。Emuera 扩展部分（行连接 `{}`、`#DIM`/`#DIMS` 预处理、`#FUNCTION`/`#FUNCTIONS` 声明）需要独立文档或在现有页面中补充。
-- [ ] **事件函数** — @EVENTFIRST、@EVENTSHOP、@EVENTTRAIN 等事件触发机制无独立文档。function.md 中有部分提及但不完整。
+- [x] **赋值语句** — `A = 10`、`LOCALS '= "text"` 基本赋值语法无独立页面。eramaker 的 ERB_format.md 仅覆盖原始格式，Emuera 扩展部分（行连接 `{}`、`#` 预处理顺序等）分散在 expression.md 中。需要新建独立页面或在 expression.md 中补充。 → 2026-05-10 创建 tutorial/assignment.md / .zh.md / .en.md 三语言版本
+- [x] **ERB 文件格式扩展** — eramaker/ERB_format.md 只覆盖了原始格式。Emuera 扩展部分（行连接 `{}`、`#DIM`/`#DIMS` 预处理、`#FUNCTION`/`#FUNCTIONS` 声明）需要独立文档或在现有页面中补充。 → 2026-05-10 创建 tutorial/erb-format-extension.md / .zh.md / .en.md 三语言版本
+- [x] **事件函数** — @EVENTFIRST、@EVENTSHOP、@EVENTTRAIN 等事件触发机制无独立文档。function.md 中有部分提及但不完整。 → 2026-05-10 创建 tutorial/event-functions.md / .zh.md / .en.md 三语言版本
 - [ ] **角色变量系统** — ABL/TALENT/MARK/EXP/PALAM 等角色二维变量的完整说明，目前分散在 variables.md 中，缺少系统性的独立说明。
 
 ### 教程首页完善

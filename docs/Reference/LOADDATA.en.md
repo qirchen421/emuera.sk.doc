@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`LOADDATA`](./LOADDATA.md) | `int`     | none   |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADDATA`](./LOADDATA.md) | `int`     | none   |
 
 !!! info "API"
 
@@ -19,11 +19,21 @@ hide:
     Always use the [`CHKDATA`](./CHKDATA.md) command to check if loading is possible before executing.  
     Unlike the [`LOADGAME`](./SAVEGAME.md) command, `LOADDATA` can be called from anywhere in the script.  
 
+!!! info "EM+EE Extension: Save Data Format Enhancement"
+
+    EM+EE extends the `LOADDATA` loading behavior, clearing current EM-specific data from memory before loading the standard save data:
+
+    - **Map data**: [`MAP`](./MAP.md) dictionaries marked with the `SAVEDATA` keyword are cleared
+    - **Xml data**: XML documents marked with the `SAVEDATA` keyword are removed
+    - **DataTable data**: DataTable tables marked with the `SAVEDATA` keyword are cleared
+
+    After clearing, the corresponding EM-specific data is restored from the save file, ensuring data consistency when switching between saves.  
+    This means that if the save file does not contain certain EM-specific data, it will not exist after loading (the pre-load values are not preserved).
 
 !!! hint "Hint"
 
     Command only.
 
 ### See Also
-- [LOADDATA](LOADDATA.md)
+- [SAVEDATA](SAVEDATA.md)
 - [CHKDATA](CHKDATA.md)

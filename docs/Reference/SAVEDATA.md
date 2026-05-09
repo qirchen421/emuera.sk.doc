@@ -7,7 +7,7 @@ hide:
 
 | 関数名                                                           | 引数            | 戻り値 |
 | :--------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SAVEDATA`](./SAVEDATA.md) | `int`, `string` | なし   |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVEDATA`](./SAVEDATA.md) | `int`, `string` | なし   |
 
 !!! info "API"
 
@@ -36,9 +36,20 @@ hide:
 	既にデータがあるかどうかは[`CHKDATA`](./CHKDATA.md)命令で調べることができます。  
 	`SAVEDATA`は([`SAVEGAME`](./SAVEGAME.md)命令と違って)スクリプトのどの場所でも呼び出すことができます。  
 
+!!! info "EM+EE拡張：セーブデータ形式拡張"
+
+    EM+EEは`SAVEDATA`のセーブデータ形式を拡張し、標準セーブデータの後にEM独自データを追加保存します：
+
+    - **Mapデータ**：`SAVEDATA`キーワード付きの[`MAP`](./MAP.md)辞書
+    - **Xmlデータ**：`SAVEDATA`キーワード付きのXMLドキュメント
+    - **DataTableデータ**：`SAVEDATA`キーワード付きのDataTableテーブル
+
+    これらのデータは[`LOADDATA`](./LOADDATA.md)でロード時に先にクリアされてからセーブデータから復元され、セーブ切り替え時のデータ一貫性が確保されます。
+
 !!! hint "ヒント"
 
     命令のみ対応しています。
 
 ### 関連項目
 - [LOADDATA](LOADDATA.md)
+- [CHKDATA](CHKDATA.md)
