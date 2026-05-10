@@ -142,3 +142,41 @@ Emuera的`NEXTCOM`是为了重现旧代码动作（包括前述缺陷）而实�
 
 直到`@EVENTLOAD`结束前如果执行了[`BEGIN`](../Reference/BEGIN.md)指令，则转移到那里。
 如果没有执行[`BEGIN`](../Reference/BEGIN.md)指令，则照常转移到`@SHOW_SHOP`。
+
+## 错误处理流程（SK 专属）
+
+### THROW 异常处理
+
+当执行 `THROW` 指令时，引擎会检查是否定义了 `@BEFORE_THROW` 事件函数：
+
+```
+THROW 指令执行
+    │
+    ├─ 检查是否已在 @BEFORE_THROW 中（防止递归）
+    │   ├─ 是 → 直接打印消息并退出
+    │   │
+    │   └─ 否 → 检查是否定义了 @BEFORE_THROW
+    │           ├─ 是 → 延迟抛出，调用 @BEFORE_THROW
+    │           │       → @BEFORE_THROW 结束后抛出异常
+    │           │
+    │           └─ 否 → 直接抛出异常
+```
+
+### 通用错误处理
+
+当发生任何未捕获的错误时（包括运行时错误、脚本错误等），引擎会检查是否定义了 `@BEFORE_ERROR` 事件函数：
+
+```
+错误发生
+    │
+    ├─ 检查是否已在 @BEFORE_ERROR 中（防止递归）
+    │   ├─ 是 → 直接处理错误并退出
+    │   │
+    │   └─ 否 → 检查是否定义了 @BEFORE_ERROR
+    │           ├─ 是 → 延迟处理，调用 @BEFORE_ERROR
+    │           │       → @BEFORE_ERROR 结束后处理错误
+    │           │
+    │           └─ 否 → 直接处理错误
+```
+
+> **SK 专属说明**：`BEFORE_THROW` 和 `BEFORE_ERROR` 事件函数是 Skia 版本新增的功能，允许脚本在异常抛出前进行拦截和处理。原版 Emuera 不支持这些事件。

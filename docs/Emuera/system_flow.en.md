@@ -137,5 +137,43 @@ In Emuera, if @SYSTEM_LOADEND is defined, it executes @SYSTEM_LOADEND.
 If the BEGIN instruction is executed by the end of @SYSTEM_LOADEND, it transitions to there.  
 Otherwise, if @EVENTLOAD is defined, @EVENTLOAD is executed.  
 
-If the BEGIN instruction is executed by the end of @EVENTLOAD, it transitions to there.  
-If the BEGIN instruction is not executed, it transitions to @SHOW_SHOP as usual.  
+If the BEGIN instruction is executed by the end of @EVENTLOAD, it transitions to there.
+If the BEGIN instruction is not executed, it transitions to @SHOW_SHOP as usual.
+
+## Error Handling Flow (SK Exclusive)
+
+### THROW Exception Handling
+
+When the `THROW` instruction is executed, the engine checks if the `@BEFORE_THROW` event function is defined:
+
+```
+THROW instruction execution
+    │
+    ├─ Check if already in @BEFORE_THROW (prevent recursion)
+    │   ├─ Yes → Print message directly and exit
+    │   │
+    │   └─ No → Check if @BEFORE_THROW is defined
+    │           ├─ Yes → Delay throw, call @BEFORE_THROW
+    │           │       → Throw exception after @BEFORE_THROW ends
+    │           │
+    │           └─ No → Throw exception directly
+```
+
+### General Error Handling
+
+When any uncaught error occurs (including runtime errors, script errors, etc.), the engine checks if the `@BEFORE_ERROR` event function is defined:
+
+```
+Error occurs
+    │
+    ├─ Check if already in @BEFORE_ERROR (prevent recursion)
+    │   ├─ Yes → Handle error directly and exit
+    │   │
+    │   └─ No → Check if @BEFORE_ERROR is defined
+    │           ├─ Yes → Delay handling, call @BEFORE_ERROR
+    │           │       → Handle error after @BEFORE_ERROR ends
+    │           │
+    │           └─ No → Handle error directly
+```
+
+> **SK Exclusive**: The `BEFORE_THROW` and `BEFORE_ERROR` event functions are new features added in the Skia version, allowing scripts to intercept and handle exceptions before they are thrown. These events are not available in the original Emuera.  

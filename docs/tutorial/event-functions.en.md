@@ -41,8 +41,11 @@ The engine determines whether a function name is an event function using `Identi
 
 ```
 EVENTFIRST, EVENTTRAIN, EVENTSHOP, EVENTBUY,
-EVENTCOM, EVENTTURNEND, EVENTCOMEND, EVENTEND, EVENTLOAD
+EVENTCOM, EVENTTURNEND, EVENTCOMEND, EVENTEND, EVENTLOAD,
+BEFORE_THROW, BEFORE_ERROR  ← SK only
 ```
+
+> **SK Exclusive**: `BEFORE_THROW` and `BEFORE_ERROR` are event functions added in the Skia version for error handling and exception interception.
 
 System functions are determined using `IdentifierDictionary.IsSystemLabelName()`. The system function name list includes the above event function names plus:
 
@@ -238,6 +241,39 @@ BEGIN SHOP
 @EVENTLOAD
 PRINTW Save data loaded!
 ```
+
+### `@BEFORE_THROW` (SK Exclusive)
+
+**Trigger timing**: Before the `THROW` instruction throws an exception.
+
+**Behavior**: Allows scripts to intercept and handle exceptions before they are thrown. If the `@BEFORE_THROW` event function exists, the exception will be delayed, allowing the script to perform cleanup or recovery operations.
+
+**Note**: If `THROW` is called again inside `@BEFORE_THROW`, recursive calls are blocked and the message is printed directly without triggering the event again.
+
+```erb
+@BEFORE_THROW
+#PRI
+PRINTW Exception detected, attempting recovery...
+; Cleanup or recovery operations can be performed here
+; If the function ends normally, the exception will continue to be thrown
+```
+
+### `@BEFORE_ERROR` (SK Exclusive)
+
+**Trigger timing**: When any error first occurs (including runtime errors, script errors, etc.).
+
+**Behavior**: Called before the error handling process begins, providing a unified error handling hook. Allows scripts to intervene before errors are displayed to the user.
+
+**Note**: If another error occurs inside `@BEFORE_ERROR`, the error handling process proceeds directly without triggering the event again.
+
+```erb
+@BEFORE_ERROR
+#PRI
+PRINTW Error occurred, processing...
+; Error logging or recovery attempts can be performed here
+```
+
+> **SK Exclusive**: `BEFORE_THROW` and `BEFORE_ERROR` are event functions added in the Skia version, providing more powerful error handling capabilities. These events are not available in the original Emuera or other variants.
 
 ---
 

@@ -87,8 +87,20 @@
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中函数 | 从MASTERNAME反查角色编号 | — |
 | ![](../assets/images/Icondotnet.webp) `MATCHALL` | 式中函数 | 数组全量搜索（变量引用） | — |
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中函数 | 数组全量搜索（字符串变量名） | — |
+| ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | — |
+| ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | 事件函数 | 错误发生时首次调用 | — |
 
 ---
+
+### ![](../assets/images/IconSK.webp)错误处理事件（SK 专属）
+!!! summary ""
+
+    新增 `BEFORE_THROW` 和 `BEFORE_ERROR` 两个事件函数，提供脚本级别的错误处理能力。
+
+    - **`BEFORE_THROW`**：在 `THROW` 指令抛出异常前调用，允许脚本拦截和处理异常
+    - **`BEFORE_ERROR`**：在任何错误第一次发生时调用，提供统一的错误处理钩子
+    - 事件函数存在时，异常会被延迟抛出，允许脚本进行清理或恢复操作
+    - 防止递归调用：在事件函数内部再次抛出错误时，会直接处理而不再次触发事件
 
 ### ![](../assets/images/IconSK.webp)SkiaSharp 渲染引擎
 !!! summary ""
@@ -690,3 +702,4 @@
 | 数组全量搜索 | MATCH 仅计数 | MATCHALL/MATCHALLEX | 源自 DotNet，重新设计 |
 | 资源管理 | 无 | ✅ RM_系/LRU缓存 | |
 | 全屏模式 | ❌ | ✅ F11 | 工具栏自动显示 |
+| 错误处理事件 | ❌ | ✅ BEFORE_THROW/BEFORE_ERROR | 脚本级异常拦截 |

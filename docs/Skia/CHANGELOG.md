@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [3.8.0](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-10
+
+### Added
+
+- **BEFORE_THROW / BEFORE_ERROR 事件函数**（SK 专属）
+  - `BEFORE_THROW`：在 `THROW` 指令抛出异常前调用，允许脚本拦截和处理异常
+  - `BEFORE_ERROR`：在任何错误第一次发生时调用，提供错误处理的钩子
+  - 若事件函数存在，异常会被延迟抛出，允许脚本进行清理或恢复操作
+  
 ## [3.7.0](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-10
 
 ### Added

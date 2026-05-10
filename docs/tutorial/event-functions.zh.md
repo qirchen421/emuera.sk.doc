@@ -41,8 +41,11 @@ ERABASIC 中的函数分为三类：
 
 ```
 EVENTFIRST, EVENTTRAIN, EVENTSHOP, EVENTBUY,
-EVENTCOM, EVENTTURNEND, EVENTCOMEND, EVENTEND, EVENTLOAD
+EVENTCOM, EVENTTURNEND, EVENTCOMEND, EVENTEND, EVENTLOAD,
+BEFORE_THROW, BEFORE_ERROR  ← Skia 专属
 ```
+
+> **SK 专属标记**：`BEFORE_THROW` 和 `BEFORE_ERROR` 是 Skia 版本新增的事件函数，用于错误处理和异常拦截。
 
 通过 `IdentifierDictionary.IsSystemLabelName()` 判断是否为系统函数。系统函数名列表包含上述事件函数名以及：
 
@@ -238,6 +241,43 @@ BEGIN SHOP
 @EVENTLOAD
 PRINTW 存档加载完成！
 ```
+
+### `@BEFORE_THROW` （SK 专属）
+
+**触发时机**：执行 `THROW` 指令抛出异常前。
+
+**行为**：允许脚本拦截和处理即将抛出的异常。如果 `@BEFORE_THROW` 事件函数存在，异常会被延迟抛出，允许脚本进行清理或恢复操作。
+
+**参数**：异常消息可通过事件函数内部访问。
+
+**注意**：如果在 `@BEFORE_THROW` 中再次调用 `THROW`，会导致递归调用被阻断，消息直接打印而不再次触发该事件。
+
+```erb
+@BEFORE_THROW
+#PRI
+PRINTW 检测到异常，尝试恢复...
+; 可以在这里执行清理操作或尝试恢复
+; 如果函数正常结束，异常会继续抛出
+```
+
+### `@BEFORE_ERROR` （SK 专属）
+
+**触发时机**：任何错误第一次发生时（包括运行时错误、脚本错误等）。
+
+**行为**：在错误处理流程开始前调用，提供一个统一的错误处理钩子。允许脚本在错误显示给用户之前进行干预。
+
+**参数**：错误信息和异常对象可通过事件函数内部访问。
+
+**注意**：如果在 `@BEFORE_ERROR` 中再次发生错误，会直接进入错误处理流程而不再触发该事件。
+
+```erb
+@BEFORE_ERROR
+#PRI
+PRINTW 发生错误，正在处理...
+; 可以在这里记录错误日志或尝试修复
+```
+
+> **SK 专属说明**：`BEFORE_THROW` 和 `BEFORE_ERROR` 是 Skia 版本新增的事件函数，提供了更强大的错误处理能力。原版 Emuera 和其他变体不支持这些事件。
 
 ---
 
