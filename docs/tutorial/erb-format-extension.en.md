@@ -264,7 +264,9 @@ RETURNF "Hello, " + NAME + "!"
 
 !!! warning "Limitations of `#FUNCTION`/`#FUNCTIONS`"
 
-    - Must be placed immediately after the function label line (`@FunctionName`)
+    - Must be placed after the function label line (`@FunctionName`) and before the first executable statement
+    - Multiple `#` lines can appear in sequence (e.g., `#DIM` → `#FUNCTION`), order does not matter
+    - Empty lines and comment lines (`;`) have no effect on the `#` line sequence
     - Cannot be used with system functions (`@SHOW_SHOP`, etc.) or event functions (`@EVENTFIRST`, etc.)
     - Cannot be used together with `#PRI`/`#LATER`/`#SINGLE`/`#ONLY`
     - Function names cannot start with a digit

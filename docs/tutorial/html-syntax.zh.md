@@ -103,6 +103,36 @@
 |------|------|
 | `notooltip` | `true` 时工具提示也无效化 |
 
+### PRINTBUTTON — 显式按钮创建
+
+除了 `[N]` 自动按钮和 HTML `<button>` 标签，ERABASIC 还提供 `PRINTBUTTON` 指令显式创建按钮：
+
+```erb
+PRINTBUTTON "[0] 是", 0
+PRINTS "     "
+PRINTBUTTON "[1] 否", 1
+INPUT
+```
+
+`PRINTBUTTON` 绕过引擎的自动按钮识别，直接指定按钮的显示文本和值。适用场景：
+
+| 场景 | 自动按钮的问题 | PRINTBUTTON 的解决方案 |
+|------|---------------|----------------------|
+| 一行多按钮拆分错误 | `[0] 是 [1] 否` 可能拆分异常 | 每个按钮独立创建 |
+| 非数字按钮值 | `[abc]` 不会生成按钮 | `PRINTBUTTON "选项", "字符串值"` |
+| 显示文本与值不同 | `[0]` 必须显示数字 | `PRINTBUTTON "是", 0` |
+
+`PRINTBUTTON` 也可以创建字符串按钮，配合 `INPUTS` 使用：
+
+```erb
+PRINTBUTTON "[HogeHoge] ", "HogeHoge"
+PRINTBUTTON "[PugePuge] ", "PugePuge"
+INPUTS
+; 点击 → RESULTS = "HogeHoge" 或 "PugePuge"
+```
+
+> PRINTBUTTON 的完整 API 见 [PRINTBUTTON 参考手册](../Reference/PRINTBUTTON.zh.md)。
+
 ---
 
 ## 图像标签

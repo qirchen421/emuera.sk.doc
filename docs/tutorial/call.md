@@ -305,6 +305,28 @@ CALL SOME_FUNC              ; RESULT が上書きされる
 PRINTFORML 入力値={L_INPUT}  ; 保存した値を使用
 ```
 
+### INPUT とボタンの連動
+
+[Hello World](hello-world.md) で `[N]` ボタンと `INPUT` の組み合わせを既に見ました。ここでは重要な詳細を補足します：
+
+**型の一致**：`INPUT` は整数ボタン（`[0]`、`[1]` 等）のみクリック可能です。`INPUTS` は文字列ボタンのみクリック可能です。型が一致しない場合、ボタンはクリックできません。
+
+```erb
+; INPUT + 整数ボタン（一般的）
+PRINTL [0] 開始
+PRINTL [1] 終了
+INPUT                        ; [0] をクリック → RESULT=0
+
+; INPUTS + 文字列ボタン
+PRINTBUTTON "[HogeHoge] ", "HogeHoge"
+PRINTBUTTON "[PugePuge] ", "PugePuge"
+INPUTS                       ; クリック → RESULTS="HogeHoge"
+```
+
+**ボタンは INPUT 待機中のみ有効**：`PRINTL [0]` はボタンを作成しますが、`INPUT` が実行されて初めてクリック可能になります。それ以前のボタンクリックは無効です。
+
+**古いボタンは無効化**：`INPUT` のたびに、以前のボタンは自動的に無効になります（再クリック不可）。新しいボタンのみ選択可能です。
+
 ---
 
 ## 関数内の変数宣言
@@ -323,9 +345,9 @@ PRINTFORML 入力値={L_INPUT}  ; 保存した値を使用
 RETURN
 ```
 
-!!! warning "#DIM は @ ラベル行の直後に記述必須"
+!!! warning "#DIM は @ ラベル行の後、実行文の前に記述必須"
 
-    `#DIM` 等のプリプロセッサ行は関数の先頭に記述する必要があり、実行可能文の後に記述することはできません。
+    `#DIM` 等のプリプロセッサ行は関数の先頭に記述する必要があり、実行可能文の後に記述することはできません。複数の `#` 行を連続して記述できます。
 
 > 変数宣言の完全な説明は、[値・型・変数](values-types.md) と [変数宣言システム](../Emuera/user_defined_variables.md) を参照。
 
@@ -337,10 +359,11 @@ RETURN
 |------|---------|---------|------|
 | CALL 後に RESULT を使用 | `CALL F` 後に直接 `RESULT` を使用 | 先に `RESULT` を保存 | 後続の操作が RESULT を上書きする可能性 |
 | JUMP の後にコードを書く | `JUMP F` の後にロジック | JUMP の後にコードを書かない | JUMP は戻らない、後ろのコードは実行されない |
-| #DIM の位置が不正 | 実行文の後に `#DIM` | `@` ラベル行の直後に | #DIM はプリプロセッサ行 |
+| #DIM の位置が不正 | 実行文の後に `#DIM` | `@` ラベル行の後に | #DIM はプリプロセッサ行 |
 | RETURNFORM で剰余 | `RETURNFORM A % 100` | `RETURN A % 100` | % は RETURNFORM 内で置換記号 |
 | 関数名の衝突 | 2つの `@MY_FUNC` | 関数名を一意に | プロジェクト内で関数名は重複不可 |
 | RETURN の忘れ | 関数末尾に RETURN なし | `RETURN` を追加 | RETURN なしの場合 RESULT = 0 |
+| INPUT で文字列ボタンを選択 | `INPUT` + `PRINTBUTTON "x", "str"` | `INPUTS` を使用 | INPUT は整数ボタンのみクリック可能 |
 
 ---
 

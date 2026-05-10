@@ -103,6 +103,36 @@
 |------|------|
 | `notooltip` | `true`でツールチップも無効化 |
 
+### PRINTBUTTON — 明示的ボタン作成
+
+`[N]` 自動ボタンや HTML `<button>` タグに加えて、ERABASIC は `PRINTBUTTON` 命令で明示的にボタンを作成できます：
+
+```erb
+PRINTBUTTON "[0] はい", 0
+PRINTS "     "
+PRINTBUTTON "[1] いいえ", 1
+INPUT
+```
+
+`PRINTBUTTON` はエンジンの自動ボタン認識をバイパスし、ボタンの表示テキストと値を直接指定します。適用場面：
+
+| 場面 | 自動ボタンの問題 | PRINTBUTTON の解決策 |
+|------|---------------|----------------------|
+| 1行に複数ボタンで分割エラー | `[0] はい [1] いいえ` の分割が異常 | 各ボタンを独立して作成 |
+| 非数値のボタン値 | `[abc]` はボタンを生成しない | `PRINTBUTTON "選択肢", "文字列値"` |
+| 表示テキストと値を変えたい | `[0]` は数値を表示する必要がある | `PRINTBUTTON "はい", 0` |
+
+`PRINTBUTTON` は文字列ボタンも作成でき、`INPUTS` と組み合わせて使用します：
+
+```erb
+PRINTBUTTON "[HogeHoge] ", "HogeHoge"
+PRINTBUTTON "[PugePuge] ", "PugePuge"
+INPUTS
+; クリック → RESULTS = "HogeHoge" または "PugePuge"
+```
+
+> PRINTBUTTON の完全な API は [PRINTBUTTON リファレンスマニュアル](../Reference/PRINTBUTTON.md) を参照してください。
+
 ---
 
 ## 画像タグ

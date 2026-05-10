@@ -103,6 +103,36 @@ Invalidates button functionality in the enclosed section (`title` and `pos` are 
 |-----------|-------------|
 | `notooltip` | When `true`, tooltip is also invalidated |
 
+### PRINTBUTTON — Explicit Button Creation
+
+In addition to `[N]` auto-buttons and HTML `<button>` tags, ERABASIC provides the `PRINTBUTTON` instruction to explicitly create buttons:
+
+```erb
+PRINTBUTTON "[0] Yes", 0
+PRINTS "     "
+PRINTBUTTON "[1] No", 1
+INPUT
+```
+
+`PRINTBUTTON` bypasses the engine's automatic button recognition and directly specifies the button's display text and value. Use cases:
+
+| Scenario | Auto-button problem | PRINTBUTTON solution |
+|----------|-------------------|---------------------|
+| Multi-button line split errors | `[0] Yes [1] No` may split incorrectly | Each button created independently |
+| Non-numeric button values | `[abc]` does not generate a button | `PRINTBUTTON "Option", "string_value"` |
+| Display text differs from value | `[0]` must display the number | `PRINTBUTTON "Yes", 0` |
+
+`PRINTBUTTON` can also create string buttons for use with `INPUTS`:
+
+```erb
+PRINTBUTTON "[HogeHoge] ", "HogeHoge"
+PRINTBUTTON "[PugePuge] ", "PugePuge"
+INPUTS
+; Click → RESULTS = "HogeHoge" or "PugePuge"
+```
+
+> For the complete PRINTBUTTON API, see the [PRINTBUTTON Reference](../Reference/PRINTBUTTON.en.md).
+
 ---
 
 ## Image Tag

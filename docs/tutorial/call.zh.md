@@ -305,6 +305,28 @@ CALL SOME_FUNC              ; RESULT 被覆盖
 PRINTFORML 输入值={L_INPUT}  ; 使用保存的值
 ```
 
+### INPUT 与按钮的联动
+
+在 [Hello World](hello-world.zh.md) 中你已经见过 `[N]` 按钮与 `INPUT` 的配合。这里补充关键细节：
+
+**类型匹配**：`INPUT` 只能点击整数按钮（`[0]`、`[1]` 等），`INPUTS` 只能点击字符串按钮。类型不匹配时按钮不可点击。
+
+```erb
+; INPUT + 整数按钮（常见）
+PRINTL [0] 开始
+PRINTL [1] 退出
+INPUT                        ; 点击 [0] → RESULT=0
+
+; INPUTS + 字符串按钮
+PRINTBUTTON "[HogeHoge] ", "HogeHoge"
+PRINTBUTTON "[PugePuge] ", "PugePuge"
+INPUTS                       ; 点击 → RESULTS="HogeHoge"
+```
+
+**按钮只在 INPUT 等待时激活**：`PRINTL [0]` 创建了按钮，但只有执行到 `INPUT` 时按钮才变为可点击状态。此前的按钮点击无效。
+
+**旧按钮失效**：每次 `INPUT` 后，之前的按钮自动失效（不可再次点击），只有新的按钮才能被选中。
+
 ---
 
 ## 函数内的变量声明
@@ -323,9 +345,9 @@ PRINTFORML 输入值={L_INPUT}  ; 使用保存的值
 RETURN
 ```
 
-!!! warning "#DIM 必须紧跟 @ 标签行"
+!!! warning "#DIM 必须在 @ 标签行之后、执行语句之前"
 
-    `#DIM` 等预处理行必须写在函数开头，不能写在可执行语句之后。
+    `#DIM` 等预处理行必须写在函数开头，不能写在可执行语句之后。多个 `#` 行可以连续出现。
 
 > 关于变量声明的完整说明，见 [值、类型与变量](values-types.zh.md) 和 [变量声明系统](../Emuera/user_defined_variables.zh.md)。
 
@@ -337,10 +359,11 @@ RETURN
 |------|---------|---------|------|
 | CALL 后用 RESULT | `CALL F` 后直接用 `RESULT` | 先保存 `RESULT` | 后续操作可能覆盖 RESULT |
 | JUMP 后写代码 | `JUMP F` 后写逻辑 | JUMP 后不写代码 | JUMP 不返回，后面代码不执行 |
-| #DIM 位置错误 | 可执行语句后写 `#DIM` | 紧跟 `@` 标签行 | #DIM 是预处理行 |
+| #DIM 位置错误 | 可执行语句后写 `#DIM` | `@` 标签行之后 | #DIM 是预处理行 |
 | RETURNFORM 取模 | `RETURNFORM A % 100` | `RETURN A % 100` | % 在 RETURNFORM 中是替换符 |
 | 函数名冲突 | 两个 `@MY_FUNC` | 函数名唯一 | 项目内函数名不能重复 |
 | 忘记 RETURN | 函数末尾无 RETURN | 加 `RETURN` | 无 RETURN 时 RESULT = 0 |
+| INPUT 选字符串按钮 | `INPUT` + `PRINTBUTTON "x", "str"` | 改用 `INPUTS` | INPUT 只能点击整数按钮 |
 
 ---
 
