@@ -1,6 +1,7 @@
 pages:
   stage: deploy
   script:
+    - $env:Path = "C:\Users\Hasee\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Hasee\AppData\Local\Programs\Python\Python313\;$env:Path"
     - pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-static-i18n mkdocs-material-extensions
     - mkdocs build -d public
   artifacts:
