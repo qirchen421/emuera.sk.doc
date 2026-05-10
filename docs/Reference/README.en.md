@@ -9,7 +9,7 @@
 - ![](../assets/images/IconEM.webp) - Commands added, changed, or extended in EM (EvilMask version)
 - ![](../assets/images/IconEE.webp) - Commands added, changed, or extended in EE (Enterprise Edition)
 - ![](../assets/images/Icondotnet.webp) - Commands added, changed, or extended in [Emuera.NET](https://gitlab.com/VVIIlet/emuera)
-- ![](../assets/images/IconSK.webp) - Commands added, changed, or extended in Skia (LazyLoading)
+- ![](../assets/images/IconSK.webp) - Commands added, changed, or extended in Skia (SkiaSharp)
 - ![](../assets/images/Iconetc.webp) - Commands added, modified, or extended by other contributors
 
 ---

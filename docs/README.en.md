@@ -22,9 +22,8 @@ hide:
 | Version | Features | Rendering Engine |
 |:---|:---|:---|
 | **EM+EE** | Audio, hotkeys, clipboard, TTF/OTF dynamic loading | GDI+ |
-| **Skia (LazyLoading)** | Lazy loading, MAP extensions, SQL/XML, SETIMAGELAYER, VARIADIC | Skia |
+| **Skia** | Lazy loading, MAP extensions, SQL/XML, SETIMAGELAYER, VARIADIC | SkiaSharp |
 | **DotNet** | SkiaSharp cross-platform, parallel loading, DICT dictionary | SkiaSharp |
-| **m-emuera** | Avalonia UI cross-platform reference implementation | Avalonia |
 
 ## Quick Navigation
 

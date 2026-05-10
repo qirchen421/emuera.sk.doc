@@ -28,9 +28,8 @@ hide:
 | 版本 | 特点 | 渲染引擎 |
 |:---|:---|:---|
 | **EM+EE** | 音频、热键、剪贴板、TTF/OTF 动态加载 | GDI+ |
-| **Skia 版 (LazyLoading)** | 懒加载、MAP 增强、SQL/XML、SETIMAGELAYER、VARIADIC | Skia |
+| **Skia** | 懒加载、MAP 增强、SQL/XML、SETIMAGELAYER、VARIADIC | SkiaSharp |
 | **DotNet** | SkiaSharp 跨平台、并行加载、DICT 字典 | SkiaSharp |
-| **m-emuera** | Avalonia UI 跨平台参考实现 | Avalonia |
 
 ## 快速导航
 

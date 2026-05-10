@@ -1,13 +1,13 @@
-extra:
+﻿extra:
   alternate:
     - name: 日本語
-      link: /emuera.sk.doc/
+      link: /emuera.em.doc/
       lang: ja
     - name: English
-      link: /emuera.sk.doc/en/
+      link: /emuera.em.doc/en/
       lang: en
     - name: 简体中文
-      link: /emuera.sk.doc/zh/
+      link: /emuera.em.doc/zh/
       lang: zh
 extra_css:
   - css/eraBasic.min.css
@@ -35,71 +35,7 @@ markdown_extensions:
   - pymdownx.keys
 nav:
   - ホーム: README.md
-  - チュートリアル:
-      - tutorial/index.md
-      - 简介:
-          - tutorial/intro.md
-          - tutorial/hello-world.md
-          - tutorial/file-types.md
-          - tutorial/line-types.md
-          - tutorial/evolution.md
-      - 基礎文法:
-          - tutorial/values-types.md
-          - tutorial/assignment.md
-          - tutorial/basic-output.md
-          - tutorial/form-syntax.md
-      - 制御フロー:
-          - tutorial/condition.md
-          - tutorial/loop.md
-          - tutorial/jump.md
-      - 関数:
-          - tutorial/call.md
-          - tutorial/variable-declaration.md
-          - tutorial/erb-format-extension.md
-          - tutorial/event-functions.md
-          - tutorial/command-vs-expression.md
-      - HTML・グラフィック:
-          - tutorial/html-syntax.md
-  - 仕様概要:
-      - Skia版:
-          - Skia/Skia_Summary.md
-          - 更新日志: Skia/CHANGELOG.md
-      - EM+EE:
-          - EMEE/EMEE_Summary.md
-          - 更新日志: EMEE/CHANGELOG.md
-      - Emuera:
-          - Emuera/README.md
-          - 基本文法:
-              - Emuera/expression.md
-              - Emuera/operand.md
-              - Emuera/system_flow.md
-          - 変数:
-              - Emuera/variables.md
-              - Emuera/user_defined_variables.md
-              - Emuera/ERH.md
-          - 関数:
-              - Emuera/function.md
-              - Emuera/in_expression_function.md
-              - Emuera/user_defined_in_expression_function.md
-          - HTML:
-              - Emuera/HTML_PRINT.md
-          - 設定・互換性:
-              - Emuera/usage.md
-              - Emuera/config.md
-              - Emuera/shortcut.md
-              - Emuera/replace.md
-              - Emuera/config_files.md
-              - Emuera/glossary.md
-              - Emuera/debugCom.md
-              - Emuera/debug.md
-              - Emuera/differences_of_Emuera_and_eramaker.md
-              - Emuera/resources.md
-      - eramaker:
-          - eramaker/README.md
-          - eramaker/system_flow.md
-          - eramaker/ERB_format.md
-          - eramaker/CSV_format.md
-          - eramaker/variables.md
+  - EmueraEM+EEの仕様: EMEE/EMEE_Summary.md
   - リファレンス:
       - Reference/README.md
       - PRINT系:
@@ -165,7 +101,6 @@ nav:
           - Reference/MAX.md
           - Reference/SUMARRAY.md
           - Reference/MATCH.md
-          - Reference/MATCHALL.md
           - Reference/MAXMINARRAY.md
           - Reference/CARRAY.md
           - Reference/INRANGEARRAY.md
@@ -193,7 +128,6 @@ nav:
           - Reference/RESET_STAIN.md
           - Reference/SWAP.md
           - Reference/CSVNAME.md
-          - Reference/GETCSVNOBY.md
           - Reference/CSV_STATUS.md
           - Reference/GETNUM.md
           - Reference/GETPALAMLV.md
@@ -362,7 +296,6 @@ nav:
           - Reference/SPRITEDISPOSEALL.md
           - Reference/GDRAWLINE.md
           - Reference/GDASHSTYLE.md
-          - Reference/G_POLYGON.md
           - Reference/BACKGROUND.md
       - サウンド系:
           - Reference/PLAYSOUND.md
@@ -382,14 +315,7 @@ nav:
           - Reference/XML_REPLACE.md
           - Reference/XML_ADDATTRIBUTE.md
           - Reference/XML_REMOVEATTRIBUTE.md
-      - データベース系:
-          - Reference/SQL_CONNECT.md
-          - Reference/SQL_EXECUTE.md
-          - Reference/SQL_PARAM.md
-          - Reference/SQL_READER.md
-          - Reference/SQL_XML.md
       - MAP（連想配列）系:
-          - Reference/MAP.md
           - Reference/MAP_MANAGE.md
           - Reference/MAP_OPERATION.md
           - Reference/MAP_GETKEYS.md
@@ -414,7 +340,40 @@ nav:
           - Reference/GETMEMORYUSAGE.md
           - Reference/CLEARMEMORY.md
           - Reference/TEXTBOX.md
+  - 変更ログ: Changelog/README.md
   - i18n: i18n/README.md
+  - Emueraの仕様:
+      - Emuera/README.md
+      - プレイヤー向け情報:
+          - Emuera/usage.md
+          - Emuera/config.md
+          - Emuera/shortcut.md
+      - 開発者向け情報:
+          - Emuera/glossary.md
+          - Emuera/debugCom.md
+          - Emuera/debug.md
+          - Emuera/replace.md
+          - Emuera/config_files.md
+          - Emuera/system_flow.md
+          - Emuera/differences_of_Emuera_and_eramaker.md
+          - Emueraの追加機能:
+              - Emuera/expression.md
+              - Emuera/operand.md
+              - Emuera/variables.md
+              - Emuera/user_defined_variables.md
+              - Emuera/function.md
+              - Emuera/in_expression_function.md
+              - Emuera/user_defined_in_expression_function.md
+              - Emuera/ERH.md
+              - Emuera/HTML_PRINT.md
+              - Emuera/resources.md
+  - eramakerの仕様:
+      - eramaker/README.md
+      - 一覧:
+          - eramaker/system_flow.md
+          - eramaker/CSV_format.md
+          - eramaker/ERB_format.md
+          - eramaker/variables.md
   - 制作マニュアル:
     - manual/README.md
     - 初心者向け:
@@ -446,7 +405,7 @@ plugins:
           default: false
           locale: en
           name: English
-          site_name: Emuera SKIA Document
+          site_name: Emuera.EM+EE Document
           nav_translations:
             EmueraEM+EEの仕様: EmueraEM+EE's Summary
             Emueraの仕様: Emuera's Summary
@@ -455,26 +414,6 @@ plugins:
             eramakerの仕様: eramaker's Summary
             プレイヤー向け情報: Information for end users
             ホーム: Home
-            チュートリアル: Tutorial
-            仕様概要: Specifications
-            更新日志: Changelog
-            基本文法: Basic Syntax
-            変数: Variables
-            制御フロー: Control Flow
-            関数: Functions
-            文字列操作: String Operations
-            入出力: Input/Output
-            算術: Arithmetic
-            配列・データ構造: Arrays & Data Structures
-            キャラ操作: Character Operations
-            グラフィック・オーディオ: Graphics & Audio
-            セーブ・永続化: Save & Persistence
-            表示・フォント操作: Display & Font Operations
-            ツールチップ・HTML・AWAIT: Tooltip, HTML & AWAIT
-            変数操作・参照: Variable Operations & Reference
-            デバッグ・システム: Debug & System
-            設定・互換性: Configuration & Compatibility
-            バージョン進化: Version Evolution
             リファレンス: Reference
             変更ログ: Changelog
             開発者向け情報: eramaker basic Information for Developers
@@ -484,48 +423,6 @@ plugins:
             中級者向け: Intermediate Users
             現制作者向け: Current Developers
             その他資料: Other Materials
-            基礎文法: Basic Syntax
-            HTML・グラフィック: HTML & Graphics
-            ERABASIC チュートリアル: ERABASIC Tutorial
-            代入文: Assignment Statements
-            ERBファイル形式拡張: ERB File Format Extensions
-            イベント関数: Event Functions
-            FORM構文（書式付文字列）: FORM Syntax (Formatted Strings)
-            値・型・変数: Values, Types & Variables
-            基本出力: Basic Output
-            関数とCALL: Functions & CALL
-            条件分岐: Conditional Branches
-            ループ: Loops
-            ジャンプ: Jumps
-            コマンド vs 式: Command vs Expression
-            変数宣言システム: Variable Declaration System
-            HTML タグ構文リファレンス: HTML Tag Syntax Reference
-            バージョン進化比較: Version Evolution Comparison
-            ファイルタイプと処理順序: File Types and Processing Order
-            行タイプと構造: Line Types and Structure
-            Skia版: Skia Edition
-            Emueraで追加された記法: Syntax Added in Emuera
-            演算: Operations
-            フロー図: Flowchart
-            ユーザー定義の変数: User-Defined Variables
-            ヘッダーファイル: Header Files
-            関数・プリプロセッサ: Functions & Preprocessors
-            式中で使える関数: Expression Functions
-            ユーザー定義の式中関数: User-Defined Expression Functions
-            eramakerのシステム関数・フロー: eramaker System Functions & Flow
-            eramakerのERB書式: eramaker ERB Format
-            eramakerのCSV書式: eramaker CSV Format
-            eramakerの変数リスト: eramaker Variable List
-            Emueraの使用方法: How to Use Emuera
-            動作設定(emuera.config): Configuration Settings (emuera.config)
-            ショートカットキー: Shortcut Keys
-            コンフィグ設定の強制: Forcing Config Settings
-            用語集: Glossary
-            デバッグコマンド: Debug Commands
-            デバッグモード: Debug Mode
-            eramakerとの相違点: Differences with eramaker
-            リソースファイル: Resource Files
-            HTML_PRINT関連: HTML_PRINT Related
             # Reference category translations
             PRINT系: PRINT Related
             表示操作・フォント操作・表示仕様参照: Display Operation, Font Operation, Display Spec Reference
@@ -559,7 +456,7 @@ plugins:
           default: false
           locale: zh
           name: 简体中文
-          site_name: Emuera SKIA 帮助文档
+          site_name: Emuera.EM+EE 帮助文档
           nav_translations:
             EmueraEM+EEの仕様: Emuera EM+EE 概要
             Emueraの仕様: Emuera 概要
@@ -568,27 +465,6 @@ plugins:
             eramakerの仕様: eramaker 概要
             プレイヤー向け情報: 面向玩家的信息
             ホーム: 首页
-            チュートリアル: 教程
-            仕様概要: 规格概要
-            更新日志: 更新日志
-            基礎文法: 基础语法
-            基本文法: 基本语法
-            変数: 变量
-            制御フロー: 控制流
-            関数: 函数
-            文字列操作: 字符串操作
-            入出力: 输入输出
-            算術: 算术
-            配列・データ構造: 数组与数据结构
-            キャラ操作: 角色操作
-            グラフィック・オーディオ: 图形与音频
-            セーブ・永続化: 存档与持久化
-            表示・フォント操作: 显示与字体操作
-            ツールチップ・HTML・AWAIT: 工具提示、HTML与AWAIT
-            変数操作・参照: 变量操作与参考
-            デバッグ・システム: 调试与系统
-            設定・互換性: 配置与兼容性
-            バージョン進化: 版本演进
             リファレンス: 参考手册
             変更ログ: 更新日志
             開発者向け情報: 面向开发者的信息
@@ -598,47 +474,6 @@ plugins:
             中級者向け: 中级
             現制作者向け: 现任制作者
             その他資料: 其他资料
-            HTML・グラフィック: HTML与图形
-            ERABASIC チュートリアル: ERABASIC 教程
-            代入文: 赋值语句
-            ERBファイル形式拡張: ERB 文件格式扩展
-            イベント関数: 事件函数
-            FORM構文（書式付文字列）: FORM 语法（格式化字符串）
-            値・型・変数: 值、类型与变量
-            基本出力: 基本输出
-            関数とCALL: 函数与 CALL
-            条件分岐: 条件分支
-            ループ: 循环
-            ジャンプ: 跳转
-            コマンド vs 式: 命令 vs 表达式
-            変数宣言システム: 变量声明系统
-            HTML タグ構文リファレンス: HTML 标签语法参考
-            バージョン進化比較: 版本演进对照
-            ファイルタイプと処理順序: 文件类型与处理顺序
-            行タイプと構造: 行类型与结构
-            Skia版: Skia版
-            Emueraで追加された記法: Emuera中新增的语法
-            演算: 运算
-            フロー図: 流程图
-            ユーザー定義の変数: 用户定义的变量
-            ヘッダーファイル: 头文件
-            関数・プリプロセッサ: 函数·预处理器
-            式中で使える関数: 表达式中可使用的函数
-            ユーザー定義の式中関数: 用户定义的表达式函数
-            eramakerのシステム関数・フロー: eramaker系统函数与流程
-            eramakerのERB書式: eramaker的ERB格式
-            eramakerのCSV書式: eramaker的CSV格式
-            eramakerの変数リスト: eramaker的变量列表
-            Emueraの使用方法: Emuera使用方法
-            動作設定(emuera.config): 运行设置(emuera.config)
-            ショートカットキー: 快捷键
-            コンフィグ設定の強制: 配置设置的强制设定
-            用語集: 术语表
-            デバッグコマンド: 调试命令
-            デバッグモード: 调试模式
-            eramakerとの相違点: 与eramaker的差异点
-            リソースファイル: 资源文件
-            HTML_PRINT関連: HTML_PRINT相关
             PRINT系: PRINT相关
             表示操作・フォント操作・表示仕様参照: 显示操作、字体操作、显示规格参考
             文字列操作・参照: 字符串操作与参考
@@ -671,15 +506,14 @@ plugins:
       minify_css: true
       minify_html: true
       minify_js: true
-site_name: Emuera SKIA Document
+site_name: Emuera.EM+EE Document
 repo_url: https://gitgud.io/qrchen/emuera.em.doc
-site_url: https://qrchen.gitgud.site/emuera.em.doc/
+site_url: https://qrchen.gitgud.io/emuera.em.doc/
 theme:
   name: material
   highlightjs: false
   features:
     - navigation.tracking
-    - toc.follow
     - navigation.tabs
     - navigation.top
     - navigation.indexes

@@ -9,7 +9,7 @@
     | *(无)* | Emuera 原版即支持 |
     | **EM+EE** | EM+EE 追加 |
     | **DotNet** | EmueraDotNet 追加 |
-    | **Skia** | Skia变体（LazyLoading版）追加 |
+    | **Skia** | Skia 变体追加 |
 
 ---
 

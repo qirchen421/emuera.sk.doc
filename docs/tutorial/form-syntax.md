@@ -359,7 +359,7 @@ STR:0 '= RESULTS:0 + "世界"   ; ✅ 文字列結合
 
 ## Skia変体の浮動小数点拡張
 
-Skia変体（LazyLoading）は`EraType.Float`浮動小数点型を導入し、FORM構文と型変換関数を拡張した。
+Skia変体は`EraType.Float`浮動小数点型を導入し、FORM構文と型変換関数を拡張した。
 
 ### `{}`中の浮動小数点埋め込み
 

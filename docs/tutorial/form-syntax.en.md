@@ -361,7 +361,7 @@ Source location: `UserDefinedVariable.cs`. Initialization values are parsed via 
 
 ## Skia Variant Floating-Point Extensions
 
-The Skia variant (LazyLoading) introduces the `EraType.Float` floating-point type and extends FORM syntax and type conversion functions accordingly.
+The Skia variant introduces `EraType.Float` floating-point type and extends FORM syntax and type conversion functions accordingly.
 
 ### Floating-Point Interpolation in `{}`
 

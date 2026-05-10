@@ -9,7 +9,7 @@
 - ![](../assets/images/IconEM.webp) - EM（EvilMask 版）中追加、变更、扩展的命令
 - ![](../assets/images/IconEE.webp) - EE（Enter's Edition）中追加、变更、扩展的命令
 - ![](../assets/images/Icondotnet.webp) - [Emuera.NET](https://gitlab.com/VVIIlet/emuera) 中追加、变更、扩展的命令
-- ![](../assets/images/IconSK.webp) - Skia版（LazyLoading）中追加、变更、扩展的命令
+- ![](../assets/images/IconSK.webp) - Skia（SkiaSharp版）中追加、变更、扩展的命令
 - ![](../assets/images/Iconetc.webp) - 其他贡献者追加、变更、扩展的命令
 
 ---

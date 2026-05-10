@@ -361,7 +361,7 @@ STR:0 '= RESULTS:0 + "世界"   ; ✅ 字符串拼接
 
 ## Skia 变体的浮点数扩展
 
-Skia 变体（LazyLoading）引入了 `EraType.Float` 浮点类型，并相应扩展了 FORM 语法和类型转换函数。
+Skia 变体引入了 `EraType.Float` 浮点类型，并相应扩展了 FORM 语法和类型转换函数。
 
 ### `{}` 中的浮点数插值
 

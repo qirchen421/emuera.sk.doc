@@ -26,9 +26,8 @@ hide:
 | 版 | 特徴 | レンダリングエンジン |
 |:---|:---|:---|
 | **EM+EE** | オーディオ、ホットキー、クリップボード、TTF/OTF動的読み込み | GDI+ |
-| **Skia版 (LazyLoading)** | 遅延読み込み、MAP拡張、SQL/XML、SETIMAGELAYER、VARIADIC | Skia |
+| **Skia** | 遅延読み込み、MAP拡張、SQL/XML、SETIMAGELAYER、VARIADIC | SkiaSharp |
 | **DotNet** | SkiaSharpクロスプラットフォーム、並列読み込み、DICT辞書 | SkiaSharp |
-| **m-emuera** | Avalonia UIクロスプラットフォーム参考実装 | Avalonia |
 
 ## クイックナビ
 

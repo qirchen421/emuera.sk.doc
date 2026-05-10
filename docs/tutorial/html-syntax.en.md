@@ -9,7 +9,7 @@
     | *(none)* | Supported since original Emuera |
     | **EM+EE** | Added in EM+EE |
     | **DotNet** | Added in EmueraDotNet |
-    | **Skia** | Added in Skia variant (LazyLoading version) |
+    | **Skia** | Added in Skia variant |
 
 ---
 
