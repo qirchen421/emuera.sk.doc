@@ -77,7 +77,7 @@
 |:---|:---|
 | [状态机流程](system-flow.zh.md) | TITLE→FIRST→SHOP→TRAIN 循环、BEGIN 指令、两状态模型 |
 | [事件函数](event-functions.zh.md) | @EVENTFIRST/@EVENTSHOP/@EVENTLOAD、#PRI/#LATER、BEFORE_THROW/BEFORE_ERROR |
-| [角色变量](../Emuera/variables.zh.md) | 角色编号系统（MASTER/TARGET/ASSI）、角色变量（CFLAG/TALENT/ABL）、角色管理指令 |
+| [角色变量](character-variables.zh.md) | 角色编号系统（MASTER/TARGET/ASSI/PLAYER）、角色变量（CFLAG/TALENT/ABL）、角色管理指令 |
 
 ### 第6章：HTML 与图形
 

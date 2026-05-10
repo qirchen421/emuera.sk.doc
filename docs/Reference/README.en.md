@@ -157,6 +157,10 @@
 | ![](../assets/images/IconSK.webp)[`FLOOR`](./MATH_EXTENSION.md)            | `int`/`float`                                | `int`/`float` |
 | ![](../assets/images/IconSK.webp)[`CEIL`](./MATH_EXTENSION.md)             | `int`/`float`                                | `int`/`float` |
 | ![](../assets/images/IconSK.webp)[`ROUND`](./MATH_EXTENSION.md)            | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_ADD`](./UNCHECKED.md)   | `int`, `int`                                 | `int`    |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_SUB`](./UNCHECKED.md)   | `int`, `int`                                 | `int`    |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_MUL`](./UNCHECKED.md)   | `int`, `int`                                 | `int`    |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_NEG`](./UNCHECKED.md)   | `int`                                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)       | `int`, `int`                                 | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)       | `integerVariable`, `int`(, `int`...)         | none     |
 | ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)     | `integarVariable`, `int`(, `int`...)         | none     |

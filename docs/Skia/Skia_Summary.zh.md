@@ -56,6 +56,10 @@
 | ![](../assets/images/IconSK.webp) `FLOOR` | 式中函数 | 向下取整 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
 | ![](../assets/images/IconSK.webp) `CEIL` | 式中函数 | 向上取整 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
 | ![](../assets/images/IconSK.webp) `ROUND` | 式中函数 | 四舍五入 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_ADD` | 式中函数 | 加法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_SUB` | 式中函数 | 减法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_MUL` | 式中函数 | 乘法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_NEG` | 式中函数 | 取反回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
 | ![](../assets/images/IconSK.webp) `HTML_PRINTC` | 命令 | 右对齐输出HTML字符串 | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `HTML_PRINTLC` | 命令 | 左对齐输出HTML字符串（带行宽计算） | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `SPRITECREATEFROMFILE` | 式中函数 | 从图像文件直接创建Sprite | [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.md) |
@@ -221,6 +225,21 @@
 !!! summary ""
 
     溢出保护。防止静态溢出，确保运算结果不超过类型范围。
+
+!!! info "API"
+
+    Skia 版中，普通算术运算符（`+`、`-`、`*`、一元 `-`）由 `SafeArithmetic` 提供溢出保护。溢出时输出警告，并将结果钳位到 `Long.MaxValue` 或 `Long.MinValue`。
+
+    对于需要回环溢出（wrap-around）行为的场景（如哈希计算），提供了 UNCHECKED 系列式中函数：
+
+    | 函数 | 对应运算 | 说明 |
+    |:---|:---|:---|
+    | `UNCHECKED_ADD(a, b)` | `a + b` | 加法回环溢出 |
+    | `UNCHECKED_SUB(a, b)` | `a - b` | 减法回环溢出 |
+    | `UNCHECKED_MUL(a, b)` | `a * b` | 乘法回环溢出 |
+    | `UNCHECKED_NEG(a)` | `-a` | 取反回环溢出 |
+
+    详情参阅 [UNCHECKED](../Reference/UNCHECKED.md)。
 
 ---
 
@@ -635,7 +654,7 @@
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)`MATCHALL` / `MATCHALLEX` 全量搜索
 !!! summary ""
 
-    数组全量搜索。从 DotNet 版的指令形式重新设计为式函数。不污染 RESULT。
+    数组全量搜索。从 DotNet 版的指令形式重新设计为表达式函数。不污染 RESULT。
 
 !!! info "API"
 

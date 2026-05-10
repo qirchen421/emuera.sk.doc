@@ -56,6 +56,10 @@
 | ![](../assets/images/IconSK.webp) `FLOOR` | 式中関数 | 切り下げ | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
 | ![](../assets/images/IconSK.webp) `CEIL` | 式中関数 | 切り上げ | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
 | ![](../assets/images/IconSK.webp) `ROUND` | 式中関数 | 四捨五入 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_ADD` | 式中関数 | 加算ラップアラウンド | [UNCHECKED](../Reference/UNCHECKED.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_SUB` | 式中関数 | 減算ラップアラウンド | [UNCHECKED](../Reference/UNCHECKED.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_MUL` | 式中関数 | 乗算ラップアラウンド | [UNCHECKED](../Reference/UNCHECKED.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_NEG` | 式中関数 | 符号反転ラップアラウンド | [UNCHECKED](../Reference/UNCHECKED.md) |
 | ![](../assets/images/IconSK.webp) `HTML_PRINTC` | 命令 | HTML文字列を右寄せ出力 | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `HTML_PRINTLC` | 命令 | HTML文字列を左寄せ出力（行幅計算付き） | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `SPRITECREATEFROMFILE` | 式中関数 | 画像ファイルから直接スプライト作成 | [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.md) |
@@ -221,6 +225,21 @@
 !!! summary ""
 
     オーバーフロー保護。静的オーバーフローを防止し、演算結果が型の範囲を超えないようにする。
+
+!!! info "API"
+
+    Skia版では、通常の算術演算子（`+`、`-`、`*`、単項`-`）が`SafeArithmetic`によりオーバーフロー保護されています。オーバーフロー時は警告を出力し、`Long.MaxValue`または`Long.MinValue`にクランプされます。
+
+    ラップアラウンド（折り返し）動作が必要な場面（ハッシュ計算など）のために、UNCHECKED系式中関数を提供します：
+
+    | 関数 | 対応演算 | 説明 |
+    |:---|:---|:---|
+    | `UNCHECKED_ADD(a, b)` | `a + b` | 加算のラップアラウンド |
+    | `UNCHECKED_SUB(a, b)` | `a - b` | 減算のラップアラウンド |
+    | `UNCHECKED_MUL(a, b)` | `a * b` | 乗算のラップアラウンド |
+    | `UNCHECKED_NEG(a)` | `-a` | 符号反転のラップアラウンド |
+
+    詳細は[UNCHECKED](../Reference/UNCHECKED.md)を参照してください。
 
 ---
 
@@ -635,7 +654,7 @@
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)`MATCHALL` / `MATCHALLEX` 全量検索
 !!! summary ""
 
-    配列の全量検索。DotNet版の指令形式から式関数に再設計。RESULTを汚染しない。
+    配列の全量検索。DotNet版の指令形式から式中関数に再設計。RESULTを汚染しない。
 
 !!! info "API"
 

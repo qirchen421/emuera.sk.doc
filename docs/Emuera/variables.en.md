@@ -358,7 +358,7 @@ In Emuera, assignment is prohibited.
 |MASTER       |Integer|One-dimensional|○    |○   |○       |-|-|-|
 |TARGET       |Integer|One-dimensional|○    |○   |×       |:0 = 1|-|-|
 |ASSI         |Integer|One-dimensional|○    |○   |○       |:0 = -1|-|-|
-|PLAYER       |Integer|One-dimensional|○    |○   |○       |-|-|-|
+|PLAYER       |Integer|One-dimensional|○    |○   |○       |:0 = 0|-|-|
 |ASSIPLAY     |Integer|One-dimensional|○    |○   |○       |:0 = 0|BEGIN TRAIN|-|
 |SELECTCOM    |Integer|One-dimensional|○    |○   |×       |-|-|-|
 |PREVCOM      |Integer|One-dimensional|○    |○   |○       |:0 = -1|BEGIN TRAIN|-|

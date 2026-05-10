@@ -63,7 +63,7 @@ nav:
       - エンジン特性:
           - tutorial/system-flow.md
           - tutorial/event-functions.md
-          - Emuera/variables.md
+          - tutorial/character-variables.md
       - HTML・グラフィック:
           - tutorial/html-syntax.md
   - 仕様概要:

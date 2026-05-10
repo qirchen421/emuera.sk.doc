@@ -73,7 +73,7 @@
 ├── 第5章：引擎特性 — 引擎内置运行时机制
 │   ├── system-flow.zh.md        ✅ 已完成（两状态模型、BEGIN、各状态流程）
 │   ├── event-functions.zh.md    ✅ 已完成（含 BEFORE_THROW/BEFORE_ERROR）
-│   └── 角色变量                 → Emuera/variables.zh.md（规格页，暂用）
+│   └── character-variables.zh.md ✅ 已完成（角色编号、角色变量分类、管理指令）
 │
 └── 第6章：HTML与图形 — 富文本与渲染
     └── html-syntax.zh.md        ✅ 已完成
@@ -108,6 +108,7 @@
 | event-functions | ✅ | ✅ | ✅ |
 | command-vs-expression | ✅ | ✅ | ❌ |
 | system-flow | ✅ | ✅ | ✅ |
+| character-variables | ✅ | ✅ | ✅ |
 | html-syntax | ✅ | ✅ | ✅ |
 
 ### 2.2 引擎特性章节引用的规格页
@@ -135,10 +136,10 @@
 - [x] Skia_Summary.md（日文版）补充条目和段落
 - [x] event-functions 三语言版添加显式锚点
 
-### Phase 3：第5章引擎特性 — 教程页补全 🔄 进行中
+### Phase 3：第5章引擎特性 — 教程页补全 ✅ 已完成
 
 - [x] **system-flow 教程页** `tutorial/system-flow.zh.md` + `.md` + `.en.md`：三语言版已创建，教程首页和 mkdocs.yml 已更新指向新教程页
-- [ ] **character-variables 教程页** `tutorial/character-variables.zh.md`：当前链接 Emuera/variables 规格页，需独立教程页覆盖角色编号、角色变量分类、角色管理指令
+- [x] **character-variables 教程页** `tutorial/character-variables.zh.md` + `.md` + `.en.md`：三语言版已创建，教程首页和 mkdocs.yml 已更新
 - [ ] **system_flow.md（日文版）补充 BEFORE_THROW/BEFORE_ERROR 流程段落**：中文版和英文版已有
 - [ ] **system_flow 三语言版添加反向链接**：从流程图事件节点链接到 event-functions 教程页
 

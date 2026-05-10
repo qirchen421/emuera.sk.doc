@@ -77,7 +77,7 @@
 |:---|:---|
 | [ステートマシンフロー](system-flow.md) | TITLE→FIRST→SHOP→TRAINサイクル、BEGIN命令、二状態モデル |
 | [イベント関数](event-functions.md) | @EVENTFIRST/@EVENTSHOP/@EVENTLOAD、#PRI/#LATER、BEFORE_THROW/BEFORE_ERROR |
-| [キャラクター変数](../Emuera/variables.md) | キャラ番号システム（MASTER/TARGET/ASSI）、キャラ変数（CFLAG/TALENT/ABL）、キャラ管理命令 |
+| [キャラ変数](character-variables.md) | キャラ番号システム（MASTER/TARGET/ASSI/PLAYER）、キャラ変数（CFLAG/TALENT/ABL）、キャラ管理命令 |
 
 ### 第6章：HTML・グラフィック
 
