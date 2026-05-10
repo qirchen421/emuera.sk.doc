@@ -67,8 +67,8 @@ PRINT 系列指令根据参数类型分为五种变体，每种对参数的解�
 | `PRINT` | 简单字符串 | 原样输出，不做替换 | `PRINT 你好` |
 | `PRINTV` | 整数表达式 | 求值后输出 | `PRINTV A + B` |
 | `PRINTS` | 字符串表达式 | 求值后输出 | `PRINTS NAME:TARGET` |
-| `PRINTFORM` | 格式化字符串 | FORM 语法，支持插值 | `PRINTFORM 你好，{NAME}！` |
-| `PRINTFORMS` | 格式化字符串表达式 | 先求值为字符串，再按 FORM 解析 | `PRINTFORMS @"你好，{NAME}！"` |
+| `PRINTFORM` | 格式化字符串 | FORM 语法，支持插值 | `PRINTFORM 你好，%NAME%！` |
+| `PRINTFORMS` | 格式化字符串表达式 | 先求值为字符串，再按 FORM 解析 | `PRINTFORMS @"你好，%NAME%！"` |
 
 ### PRINT — 简单字符串
 
@@ -76,7 +76,7 @@ PRINT 系列指令根据参数类型分为五种变体，每种对参数的解�
 
 ```erb
 PRINT 你好，世界          ; → 你好，世界
-PRINT {NAME}              ; → {NAME}（花括号是字面文本！）
+PRINT %NAME%              ; → %NAME%（百分号是字面文本！）
 PRINT %RESULTS%           ; → %RESULTS%（百分号是字面文本！）
 ```
 
@@ -123,7 +123,7 @@ PRINTS "Hello"            ; → Hello
 
 ```erb
 #DIM L_MONEY = 500
-PRINTFORM 你好，{NAME:TARGET}！       ; → 你好，艾莉娜！
+PRINTFORM 你好，%NAME:TARGET%！       ; → 你好，艾莉娜！
 PRINTFORM 金钱：{L_MONEY}元            ; → 金钱：500元
 PRINTFORM %NAME:TARGET%的冒险          ; → 艾莉娜的冒险
 ```
@@ -143,7 +143,7 @@ PRINTFORM %NAME:TARGET%的冒险          ; → 艾莉娜的冒险
 `PRINTFORMS` 先将参数作为字符串表达式求值，再对结果做 FORM 解析：
 
 ```erb
-#DIMS L_FMT '= "你好，{NAME:TARGET}！"
+#DIMS L_FMT '= "你好，%NAME:TARGET%！"
 PRINTFORMS L_FMT           ; → 你好，艾莉娜！（先求值 L_FMT，再 FORM 解析）
 PRINTFORMS @"%L_FMT%"      ; 等价写法
 ```
@@ -172,7 +172,7 @@ PRINTFORMS @"%L_FMT%"      ; 等价写法
 
 ```erb
 ; PRINTFORM + L = PRINTFORML
-PRINTFORML 你好，{NAME:TARGET}！
+PRINTFORML 你好，%NAME:TARGET%！
 
 ; PRINTS + W = PRINTSW
 PRINTSW "按任意键继续..."
@@ -246,6 +246,18 @@ PRINTL 这是红色
 PRINTDL 这是默认颜色（忽略 SETCOLOR）
 ```
 
+### TEXT_BGC_ON / TEXT_BGC_OFF — 文本背景色（SK 专属）
+
+Skia 版提供 `TEXT_BGC_ON` / `TEXT_BGC_OFF` 为整行设置背景色：
+
+```erb
+TEXT_BGC_ON 255, 0, 0, 30       ; 红色背景，30% 不透明度
+PRINTL 这行有红色背景
+TEXT_BGC_OFF                     ; 关闭背景色
+```
+
+详见 [TEXT_BGC 参考手册](../Reference/TEXT_BGC.zh.md)。
+
 ---
 
 ## 其他输出指令
@@ -282,7 +294,7 @@ ENDDATA
 `PRINTPLAIN` 不做 FORM 解析，原样输出字符串（包括 `{` 和 `%`）：
 
 ```erb
-PRINTPLAIN {NAME}           ; → {NAME}（不插值）
+PRINTPLAIN %NAME%           ; → %NAME%（不插值）
 ```
 
 ---
@@ -310,7 +322,7 @@ PRINTPLAIN {NAME}           ; → {NAME}（不插值）
 
 | 陷阱 | 错误写法 | 正确写法 | 原因 |
 |------|---------|---------|------|
-| PRINT 期望变量替换 | `PRINT {NAME}` | `PRINTFORM {NAME}` | PRINT 不做 FORM 插值 |
+| PRINT 期望变量替换 | `PRINT %NAME%` | `PRINTFORM %NAME%` | PRINT 不做 FORM 插值 |
 | PRINTV 输出字符串 | `PRINTV "hello"` | `PRINTS "hello"` | PRINTV 是整数表达式 |
 | PRINTS 不加引号 | `PRINTS hello` | `PRINTS "hello"` | 不加引号会被当作变量名 |
 | 忘记换行 | `PRINT 你好` | `PRINTL 你好` | PRINT 不换行，内容会粘在一起 |

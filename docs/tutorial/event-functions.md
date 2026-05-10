@@ -41,8 +41,11 @@ ERABASICの関数は3つのカテゴリに分かれます：
 
 ```
 EVENTFIRST, EVENTTRAIN, EVENTSHOP, EVENTBUY,
-EVENTCOM, EVENTTURNEND, EVENTCOMEND, EVENTEND, EVENTLOAD
+EVENTCOM, EVENTTURNEND, EVENTCOMEND, EVENTEND, EVENTLOAD,
+BEFORE_THROW, BEFORE_ERROR  ← SK専用
 ```
+
+> **SK専用**：`BEFORE_THROW` と `BEFORE_ERROR` は Skia版で追加されたイベント関数で、エラー処理と例外インターセプトに使用されます。
 
 `IdentifierDictionary.IsSystemLabelName()` でシステム関数かどうかを判定します。システム関数名リストには上記のイベント関数名に加えて以下が含まれます：
 
@@ -238,6 +241,39 @@ BEGIN SHOP
 @EVENTLOAD
 PRINTW セーブデータのロード完了！
 ```
+
+### `@BEFORE_THROW` （SK専用）
+
+**呼び出しタイミング**：`THROW` 命令で例外がスローされる前。
+
+**動作**：スクリプトがスローされる例外をインターセプト・処理することを許可します。`@BEFORE_THROW` イベント関数が存在する場合、例外のスローが遅延され、スクリプトはクリーンアップやリカバリ操作を行うことができます。
+
+**注意**：`@BEFORE_THROW` 内で再び `THROW` を呼び出した場合、再帰呼び出しはブロックされ、メッセージは直接出力されてイベントは再トリガーされません。
+
+```erb
+@BEFORE_THROW
+#PRI
+PRINTW 例外を検出、リカバリを試みます...
+; ここでクリーンアップ操作やリカバリを試行可能
+; 関数が正常終了した場合、例外は継続してスローされます
+```
+
+### `@BEFORE_ERROR` （SK専用）
+
+**呼び出しタイミング**：何らかのエラーが最初に発生した時（ランタイムエラー、スクリプトエラー等を含む）。
+
+**動作**：エラー処理フローが開始される前に呼び出され、統一的なエラー処理フックを提供します。エラーがユーザーに表示される前にスクリプトが介入することを許可します。
+
+**注意**：`@BEFORE_ERROR` 内で再びエラーが発生した場合、イベントは再トリガーされず、直接エラー処理フローに入ります。
+
+```erb
+@BEFORE_ERROR
+#PRI
+PRINTW エラーが発生しました、処理中...
+; ここでエラーログの記録や修復を試行可能
+```
+
+> **SK専用**：`BEFORE_THROW` と `BEFORE_ERROR` は Skia版で追加されたイベント関数で、より強力なエラー処理機能を提供します。これらのイベントは原版 Emuera や他の派生版では利用できません。
 
 ---
 

@@ -29,7 +29,7 @@
 	However, the `#` cannot be omitted in the ternary operator in the format of `\@～\@`.
 
 ### Assignment Operator
-- `'=` Operator for assigning to string-type variables using a string expression. [See here for details](expression.md#form_2)
+- `'=` Operator for assigning to string-type variables using a string expression. [See here for details](expression.en.md#assignment-to-string-variable-using-form-syntax)
 
 ### Increment / Decrement
 - `++` Increment

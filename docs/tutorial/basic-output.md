@@ -67,8 +67,8 @@ PRINT系命令は引数タイプによって5種類の派生があり、それ�
 | `PRINT` | 単純文字列 | そのまま出力、置換なし | `PRINT こんにちは` |
 | `PRINTV` | 整数式 | 評価後に出力 | `PRINTV A + B` |
 | `PRINTS` | 文字列式 | 評価後に出力 | `PRINTS NAME:TARGET` |
-| `PRINTFORM` | フォーマット文字列 | FORM構文、補間サポート | `PRINTFORM こんにちは、{NAME}！` |
-| `PRINTFORMS` | フォーマット文字列式 | 先に文字列式として評価し、その後FORMとして解析 | `PRINTFORMS @"こんにちは、{NAME}！"` |
+| `PRINTFORM` | フォーマット文字列 | FORM構文、補間サポート | `PRINTFORM こんにちは、%NAME%！` |
+| `PRINTFORMS` | フォーマット文字列式 | 先に文字列式として評価し、その後FORMとして解析 | `PRINTFORMS @"こんにちは、%NAME%！"` |
 
 ### PRINT — 単純文字列
 
@@ -76,7 +76,7 @@ PRINT系命令は引数タイプによって5種類の派生があり、それ�
 
 ```erb
 PRINT こんにちは、世界          ; → こんにちは、世界
-PRINT {NAME}              ; → {NAME}（波括弧はリテラル！）
+PRINT %NAME%              ; → %NAME%（パーセントはリテラル！）
 PRINT %RESULTS%           ; → %RESULTS%（パーセントはリテラル！）
 ```
 
@@ -123,7 +123,7 @@ PRINTS "Hello"            ; → Hello
 
 ```erb
 #DIM L_MONEY = 500
-PRINTFORM こんにちは、{NAME:TARGET}！       ; → こんにちは、エリナ！
+PRINTFORM こんにちは、%NAME:TARGET%！       ; → こんにちは、エリナ！
 PRINTFORM 所持金：{L_MONEY}円            ; → 所持金：500円
 PRINTFORM %NAME:TARGET%の冒険          ; → エリナの冒険
 ```
@@ -143,7 +143,7 @@ PRINTFORM %NAME:TARGET%の冒険          ; → エリナの冒険
 `PRINTFORMS` は引数を文字列式として評価した後、結果をFORMとして解析します：
 
 ```erb
-#DIMS L_FMT '= "こんにちは、{NAME:TARGET}！"
+#DIMS L_FMT '= "こんにちは、%NAME:TARGET%！"
 PRINTFORMS L_FMT           ; → こんにちは、エリナ！（先に L_FMT を評価し、FORMとして解析）
 PRINTFORMS @"%L_FMT%"      ; 等価な書き方
 ```
@@ -172,7 +172,7 @@ PRINTFORMS @"%L_FMT%"      ; 等価な書き方
 
 ```erb
 ; PRINTFORM + L = PRINTFORML
-PRINTFORML こんにちは、{NAME:TARGET}！
+PRINTFORML こんにちは、%NAME:TARGET%！
 
 ; PRINTS + W = PRINTSW
 PRINTSW "何かキーを押してください..."
@@ -246,6 +246,18 @@ PRINTL これは赤
 PRINTDL これはデフォルト色（SETCOLORを無視）
 ```
 
+### TEXT_BGC_ON / TEXT_BGC_OFF — テキスト背景色（SK専用）
+
+Skia版では `TEXT_BGC_ON` / `TEXT_BGC_OFF` で行全体の背景色を設定できます：
+
+```erb
+TEXT_BGC_ON 255, 0, 0, 30       ; 赤背景、30%不透明度
+PRINTL この行には赤い背景色がつきます
+TEXT_BGC_OFF                     ; 背景色をオフ
+```
+
+詳細は [TEXT_BGC リファレンス](../Reference/TEXT_BGC.md) を参照してください。
+
 ---
 
 ## その他の出力命令
@@ -282,7 +294,7 @@ ENDDATA
 `PRINTPLAIN` はFORM解析を行わず、文字列をそのまま出力します（`{` や `%` も含む）：
 
 ```erb
-PRINTPLAIN {NAME}           ; → {NAME}（補間なし）
+PRINTPLAIN %NAME%           ; → %NAME%（補間なし）
 ```
 
 ---
@@ -310,7 +322,7 @@ PRINTPLAIN {NAME}           ; → {NAME}（補間なし）
 
 | 落とし穴 | 間違い | 正しい | 理由 |
 |------|---------|---------|------|
-| PRINT で変数置換を期待 | `PRINT {NAME}` | `PRINTFORM {NAME}` | PRINT はFORM補間を行わない |
+| PRINT で変数置換を期待 | `PRINT %NAME%` | `PRINTFORM %NAME%` | PRINT はFORM補間を行わない |
 | PRINTV で文字列出力 | `PRINTV "hello"` | `PRINTS "hello"` | PRINTV は整数式 |
 | PRINTS に引用符なし | `PRINTS hello` | `PRINTS "hello"` | 引用符がないと変数名として扱われる |
 | 改行の忘れ | `PRINT こんにちは` | `PRINTL こんにちは` | PRINT は改行しない、内容が連結される |

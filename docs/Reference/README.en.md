@@ -94,6 +94,9 @@
 | ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)                     | `int`               | `void`   |
 | ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md)       | `int`               | `string` |
 | ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md)       | `int`               | `void` |
+| ![](../assets/images/IconSK.webp)[`TEXT_BGC_ON`](./TEXT_BGC.md) | `int`, `int`, `int`, `int` | `void` |
+| ![](../assets/images/IconSK.webp)[`TEXT_BGC_OFF`](./TEXT_BGC.md) | none | `void` |
+| ![](../assets/images/IconSK.webp)[`STRICT_FONT_FALLBACK`](./STRICT_FONT_FALLBACK.md) | `int` | `void` |
 
 
 ### String Manipulation and Reference
@@ -444,8 +447,8 @@
 | Function name                                                                            | Arguments                                       | Return          |
 | :--------------------------------------------------------------------------------------- | :---------------------------------------------- | :-------------- |
 | ![](../assets/images/IconEmuera.webp)[`HTML_PRINT`](./HTML_PRINT.md)                     | `string`                                        | none            |
-| ![](../assets/images/IconSK.webp)[`HTML_PRINTC`](./HTML_PRINTC.md)                   | `string`                                        | none            |
-| ![](../assets/images/IconSK.webp)[`HTML_PRINTLC`](./HTML_PRINTC.md)                  | `string`                                        | none            |
+| ![](../assets/images/IconSK.webp)[`HTML_PRINTC`](./HTML_PRINTC.md)                   | `string`{, `int`}                               | none            |
+| ![](../assets/images/IconSK.webp)[`HTML_PRINTLC`](./HTML_PRINTC.md)                  | `string`{, `int`}                               | none            |
 | ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md)               | `string`(, `integerVariable`, `stringVariable`) | `int`, `string` |
 | ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)   | none                                            | `string`        |
 | ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md)     | `int`                                           | `string`        |
@@ -546,6 +549,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEmuera.webp)[`CBGCLEARBUTTON`](./CBGCLEARBUTTON.md)           | none                                                                                    | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CBGREMOVERANGE`](./CBGREMOVERANGE.md)           | `int`, `int`                                                                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)             | `int`                                                                                   | none     |
+| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)             | none                                                                                    | `int`    |
 | ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)                         | `int`, `string`(, `int`, `int`)                                                         | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                           | `int`                                                                                   | `string` |
 | ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)                   | `int`                                                                                   | `int`    |

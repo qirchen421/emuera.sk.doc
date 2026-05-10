@@ -46,7 +46,7 @@
 
     Configurable in the settings screen or `emuera.config`.
 
-    * Only valid when [`Save save data in binary format`](../Emuera/config.md#_43) is set to `YES`.
+    * Only valid when [`Save save data in binary format`](../Emuera/config.en.md#save-save-data-in-binary-format) is set to `YES`.
 
 !!! example "Example"
     ``` title="emuera.config"
@@ -134,7 +134,7 @@
 
     IDs for [`XML`](../Reference/XML_MANAGE.md), [`MAP`](../Reference/MAP_MANAGE.md), and [`DataTable`](../Reference/DT_MANAGE.md) that you want to save can be configured in `VarExt*.csv` files in the CSV folder.
 
-    * Only valid when [`Save save data in binary format`](../Emuera/config.md#_43) is set to `YES`.
+    * Only valid when [`Save save data in binary format`](../Emuera/config.en.md#save-save-data-in-binary-format) is set to `YES`.
     * Even if IDs are set, data not in memory will not be saved to save data.
     * If saved data contains IDs not configured in CSV, they are discarded.
     * Save data is compatible with older versions and the original Emuera.exe.

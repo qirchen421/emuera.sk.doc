@@ -56,7 +56,7 @@
     ENDIF
 
 @GREET(ARGS:0)
-    PRINTFORM ようこそ、{ARGS:0}！
+    PRINTFORM ようこそ、%ARGS:0%！
     PRINTL 冒険が始まりました。
 RETURN
 ```
@@ -67,7 +67,7 @@ RETURN
 |----|------|
 | `CALL GREET("勇者")` | 関数 `GREET` を呼び出し、文字列引数 `"勇者"` を渡す |
 | `@GREET(ARGS:0)` | 関数ラベル行。`ARGS:0` は組み込み文字列引数変数 |
-| `PRINTFORM ようこそ、{ARGS:0}！` | フォーマット出力。`{ARGS:0}` が引数値に置換される |
+| `PRINTFORM ようこそ、%ARGS:0%！` | フォーマット出力。`%ARGS:0%` が引数値に置換される |
 | `RETURN` | 関数から戻る |
 
 ---

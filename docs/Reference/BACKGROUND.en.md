@@ -32,6 +32,18 @@ Added by Neo_Kesha
 	Backgrounds must be defined in resources CSV file. Backgrounds support Transparency and Layers.  
 	Backgrounds will be resized dynamically to fit in Console windows with aspect ratio preservation  
 
-!!! hint "Hint"
+!!! note "Parameter Parsing Note"
 
-	Only works as a command. Can not be used in expressions.
+	The `resourceName` parameter parsing differs by version:
+
+	| Version | Parsing method | Variable argument behavior |
+	|:---|:---|:---|
+	| emuera.em | `FORM_STR_ANY` | ❌ Variable name treated as literal string, silent failure |
+	| lazyloading variant | Typed string expression | ✅ Correctly reads variable value |
+
+	**Example**:
+	```erb
+	#DIMS temp_name
+	temp_name = "my_bg_1"
+	SETBGIMAGE temp_name  ; works in lazyloading, silent failure in emuera.em
+	```

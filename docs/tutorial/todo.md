@@ -230,7 +230,7 @@
 | 页面 | 内容来源 | 状态 |
 |------|---------|------|
 | `tutorial/two-state-model.zh.md` — 两状态模型 | 新写（运行态 vs 等待 INPUT） | ⬜ 待创建 |
-| `tutorial/event-functions.zh.md` — 内置事件函数 | Emuera/function.md + system_flow.md | ⬜ 待创建 |
+| `tutorial/event-functions.zh.md` — 内置事件函数 | Emuera/function.md + system_flow.md | ✅ 已完成 |
 | `tutorial/runtime.zh.md` — 运行时机制 | runtime-flow.md（ConvertArg→SetTransporter→IntoFunction） | ⬜ 待创建 |
 
 ### 2.8 第 8 章：命令与表达式的边界（进阶）
@@ -347,7 +347,7 @@ nav:
 ### Phase 8：第 7 章 引擎流程
 
 - [ ] tutorial/two-state-model.zh.md — 两状态模型
-- [ ] tutorial/event-functions.zh.md — 内置事件函数
+- [x] tutorial/event-functions.zh.md — 内置事件函数
 - [ ] tutorial/runtime.zh.md — 运行时机制
 
 ### Phase 9：第 8 章 命令与表达式的边界（进阶）

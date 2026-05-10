@@ -3,16 +3,18 @@ hide:
   - toc
 ---
 
-# SETANIMETIMER
+# SETANIMETIMER / GETANIMETIMER
 
-| Function name                                                    | Arguments | Return |
-| :-------------------------------------------------------------- | :-------- | :----- |
+| Function name                                                        | Arguments | Return |
+| :------------------------------------------------------------------- | :-------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md) | `int`     | none   |
+| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md) | none      | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	SETANIMETIMER time
+	int GETANIMETIMER
     ```
 	Specifies the redraw interval in milliseconds for animated sprites.  
 	Normally, Emuera does not redraw during input waits such as [`INPUT`](./INPUT.md).  
@@ -25,9 +27,11 @@ hide:
 	This command is independent of the "Frames per second" setting in config.  
 	Also, it is not affected by the redraw suppression effect of the [`REDRAW`](./REDRAW.md) command.
 
+	**GETANIMETIMER**: Returns the current animation timer value in milliseconds. Supports both command and expression function forms.
+
 !!! hint "Hint"
 
-    Command only (not available as expression function).
+    `SETANIMETIMER` is command only. `GETANIMETIMER` supports both command and expression function forms.
 
 ### Related Items
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)

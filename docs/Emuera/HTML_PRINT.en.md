@@ -213,4 +213,4 @@ During HTML interpretation, characters enclosed by `<!--` and `-->` are ignored.
 
 ## Related Commands and Functions
 
-See the [HTML-related section in Reference](../Reference/README.md#html-related).
+See the [HTML-related section in Reference](../Reference/README.en.md#html-related).

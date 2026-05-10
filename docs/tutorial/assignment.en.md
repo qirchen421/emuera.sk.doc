@@ -14,7 +14,7 @@ Assignment statements are one of the most fundamental operations in ERABASIC —
 | Assignment Form | Syntax | Applicable Types | Description |
 |----------------|--------|-----------------|-------------|
 | Basic assignment | `X = 10` | Integer/Float | Most common form |
-| String FORM assignment | `S = Hello {NAME}` | String | Supports `{variable}` interpolation |
+| String FORM assignment | `S = Hello %NAME%` | String | Supports `%variable%` string substitution, `{variable}` numeric interpolation |
 | String expression assignment | `S '= "Hello"` | String | Expression evaluation, no interpolation |
 | Compound assignment | `X += 5` | Integer/Float/String | Arithmetic + assignment |
 | Increment/Decrement | `X ++` / `X --` | Integer/Float | Prefix or postfix |
@@ -87,7 +87,7 @@ When assigning with `=`, the right side is parsed as FORM syntax — `{variable}
 
 ```erb
 NAME:0 = Elina
-STR:0 = Hello, {NAME:0}!          ; → "Hello, Elina!"
+STR:0 = Hello, %NAME:0%!          ; → "Hello, Elina!"
 STR:1 = Money: {MONEY}G            ; → "Money: 500G"
 STR:2 = %NAME:0%'s Adventure       ; → "Elina's Adventure"
 ```
@@ -100,7 +100,7 @@ When assigning with `'= `, the right side is parsed as a **string expression** �
 
 ```erb
 STR:0 '= "Hello"                   ; → "Hello" (literal)
-STR:1 '= "Hello {NAME:0}"          ; → "Hello {NAME:0}" (no interpolation! braces are literal text)
+STR:1 '= "Hello %NAME:0%"          ; → "Hello %NAME:0%" (no interpolation! percent signs are literal text)
 STR:2 '= NAME:0 + "'s Adventure"   ; → "Elina's Adventure" (string concatenation)
 STR:3 '= TSTR:0 + "Continue"       ; → variable value + "Continue"
 ```

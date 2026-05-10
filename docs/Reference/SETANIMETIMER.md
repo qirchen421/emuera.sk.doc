@@ -3,16 +3,18 @@ hide:
   - toc
 ---
 
-# SETANIMETIMER
+# SETANIMETIMER / GETANIMETIMER
 
-| 関数名                                                                     | 引数  | 戻り値 |
-| :------------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md) | `int` | なし   |
+| 関数名                                                                         | 引数  | 戻り値 |
+| :----------------------------------------------------------------------------- | :---- | :----- |
+| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)     | `int` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)     | なし  | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	SETANIMETIMER time
+	int GETANIMETIMER
     ```
 	アニメーションスプライト用にミリ秒単位で再描画間隔を指定します。  
 	Emueraは通常は[`INPUT`](./INPUT.md)等の入力待ち中に再描画を行いません。  
@@ -25,9 +27,11 @@ hide:
 	この命令はコンフィグの`フレーム毎秒`の項目とは無関係です。  
 	また、[`REDRAW`](./REDRAW.md)命令による再描画抑止の効果を受けません。  
 
+	**GETANIMETIMER**：現在のアニメーションタイマーの値（ミリ秒）を返します。命令・式中関数の両方に対応しています。
+
 !!! hint "ヒント"
 
-    命令のみ対応しています。
+    `SETANIMETIMER`は命令のみ対応。`GETANIMETIMER`は命令・式中関数の両方に対応しています。
 
 ### 関連項目
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)

@@ -28,7 +28,7 @@ hide:
 
 	`GETFONT` returns the name of the currently used font in `RESULTS:0`.  
 	This is the same name specified by the `SETFONT` command.  
-	If `SETFONT` has not been called, it returns the name of the [default font specified in emuera.config](../Emuera/config.md#_31).
+	If `SETFONT` has not been called, it returns the name of the [default font specified in emuera.config](../Emuera/config.en.md#font-name).
 
 	Each is an EM+EE addition, and fonts in the `font` folder (ttf, otf) in the same directory as Emuera are also available.
 

@@ -22,7 +22,7 @@ hide:
     ```
 	Displays the specified image in the line.
 	Corresponds to the `<img>` tag of the [`HTML_PRINT` command](../Emuera/HTML_PRINT.md#img).
-	Syntax extended in EM+EE. See [Summary](../EMEE/EMEE_Summary.en.md#html_print-related-changes) for details.
+	Syntax extended in EM+EE. See [Summary](../EMEE/EMEE_Summary.en.md#html_print) for details.
 
 !!! hint "Hint"
 

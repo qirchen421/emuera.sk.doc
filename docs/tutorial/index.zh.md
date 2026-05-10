@@ -76,7 +76,7 @@
 
 | 主题 | 内容 |
 |:---|:---|
-| [角色编号系统](../Emuera/variables.zh.md#角色编号系统说明) | 角色注册编号 vs 角色编号、MASTER/TARGET/ASSI、NO |
+| [角色编号系统](../Emuera/variables.zh.md#角色编号系统说明) | 角色注册编号 vs 角色编号、MASTER/TARGET/ASSI |
 | [角色变量操作](../Emuera/variables.zh.md) | 角色变量分类、访问方式、常用角色变量 |
 | [角色管理指令](../Reference/ADDCHARA.zh.md) | ADDCHARA/DELCHARA/COPYCHARA/SWAPCHARA 等 |
 

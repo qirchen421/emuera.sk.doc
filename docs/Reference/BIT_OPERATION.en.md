@@ -58,5 +58,5 @@ hide:
     Expression function forms are available for all except `SETBIT`.
 
 ### Related
-* [System Modification Q&A>Binary Bit Operations](../manual/erawiki-modification-QandA.en.md#bit-operations-using-binary-stain-mechanism)
+* [System Modification Q&A>Binary Bit Operations](../manual/erawiki-modification-QandA.en.md#2stain)
 * [ERB Creation Practice>About Bit Numbers](../manual/erawiki-ERBmanual.en.md#about-bit-numbers)

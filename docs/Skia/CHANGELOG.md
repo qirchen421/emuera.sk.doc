@@ -14,6 +14,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - `BEFORE_THROW`：在 `THROW` 指令抛出异常前调用，允许脚本拦截和处理异常
   - `BEFORE_ERROR`：在任何错误第一次发生时调用，提供错误处理的钩子
   - 若事件函数存在，异常会被延迟抛出，允许脚本进行清理或恢复操作
+- **TEXT_BGC_ON / TEXT_BGC_OFF 文本背景色控制**（SK 专属）
+  - `TEXT_BGC_ON R, G, B, Alpha%`：为后续所有行设置整行背景色（Alpha 为 0～100 不透明度）
+  - `TEXT_BGC_OFF`：清除背景色，恢复透明
+  - 背景以行全宽 × 行高的矩形绘制，仅当行内存在实际文本时才绘制
+- **STRICT_FONT_FALLBACK 严格字体回退模式**（SK 专属）
+  - `STRICT_FONT_FALLBACK value`：设为 1 启用严格模式，不存在字形的字符显示为 □（tofu）而非回退字体
+  - 设为 0 恢复默认回退行为
   
 ## [3.7.0](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-10
 
@@ -146,7 +153,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - **ColorMatrix 解析代码重复**：提取到 `ColorMatrixHelper`，ConsoleImagePart 和 Instraction.Child 共用
 - **ArgumentBuilder 手动 LexicalAnalyzer 解析导致参数丢失**：改用 popTerms 标准方法
-- **SETBGIMAGE 只解析单参数**：新增 SpSetBgImageArgument，完整参数解析
+- **SETBGIMAGE 参数解析方式修复**：`FORM_STR_ANY` → `SP_SETBGIMAGE`，修复变量参数被当作字面量字符串的 bug（depth/opacity 自上游已有）
 - **ClientBackGroundImage 缺少 width/height**：添加字段，OnPaint 中使用缩放尺寸
 - **FollowScroll 使用绝对 scrollY 导致图片在视口外**：存储 initialScrollY，改用滚动增量
 - **SETIMAGELAYER 坐标系与 CBGSETSPRITE 不一致**：改为左下原点坐标系
@@ -291,7 +298,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **DIV 渲染性能优化**：命中测试 O(1) 定位 + Y轴预剔除
 - **ToolTip 防遮挡**：屏幕边缘自动翻转
 - **图像资源管理重构**：SharedBitmapCache 全局位图池 + ConstImage 轻量外壳
-- **SPRITEANIMEFRAME**：动画精灵帧数查询
 - **STRICT\_FONT\_FALLBACK**：严格字体回退模式
 - **SETANIMETIMER**：动画帧间隔控制
 - **BITMAP\_CACHE\_ENABLE**：位图缓存开关

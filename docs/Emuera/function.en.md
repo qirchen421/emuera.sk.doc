@@ -122,7 +122,7 @@ If the function is called without omitting, the passed values are assigned to `A
 ### Pass by Reference for Arguments
 
 From ver 1.810, pass by reference for arguments became possible by making a reference type variable a formal parameter.  
-See the [Reference Type Variables](user_defined_variables.md#_6) section for how to define reference type variables.
+See the [Reference Type Variables](user_defined_variables.en.md#reference-type-variables) section for how to define reference type variables.
 
 **<xxx.ERB>**
 

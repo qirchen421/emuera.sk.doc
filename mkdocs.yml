@@ -35,7 +35,6 @@ markdown_extensions:
   - pymdownx.keys
 exclude_docs: |
   /tutorial/todo.md
-  /Reference/EVAL.zh.md
 
 nav:
   - ホーム: README.md
@@ -144,6 +143,8 @@ nav:
           - Reference/SKIPLOG.md
           - Reference/GETDISPLAYLINE.md
           - Reference/BITMAP_CACHE_ENABLE.md
+          - Reference/TEXT_BGC.md
+          - Reference/STRICT_FONT_FALLBACK.md
       - 文字列操作・参照:
           - Reference/TOUPPER.md
           - Reference/TOSTR.md
@@ -159,6 +160,7 @@ nav:
           - Reference/UNICODE.md
           - Reference/STRFORM.md
           - Reference/REGEXPMATCH.md
+          - Reference/EVAL.md
       - 算術:
           - Reference/TIMES.md
           - Reference/POWER.md
@@ -175,6 +177,7 @@ nav:
           - Reference/INRANGEARRAY.md
           - Reference/GROUPCHECK.md
           - Reference/CONVERT.md
+          - Reference/BITARRAY.md
       - キャラ操作・参照:
           - Reference/ADDCHARA.md
           - Reference/DELCHARA.md
@@ -292,6 +295,7 @@ nav:
           - Reference/CALLSHARP.md
           - Reference/EXISTMETH.md
           - Reference/GETMETH.md
+          - Reference/CALLSTR.md
       - RETURN系:
           - Reference/RETURN.md
       - DEBUG系:
@@ -312,6 +316,7 @@ nav:
           - Reference/HTML_SUBSTRING.md
           - Reference/HTML_STRINGLINES.md
           - Reference/HTML_PRINT_ISLAND.md
+          - Reference/HTML_PRINTC.md
       - AWAIT関連:
           - Reference/AWAIT.md
           - Reference/GETKEY.md
@@ -368,6 +373,11 @@ nav:
           - Reference/GDASHSTYLE.md
           - Reference/G_POLYGON.md
           - Reference/BACKGROUND.md
+          - Reference/CLEARIMAGELAYER.md
+          - Reference/EXISTSIMAGELAYER.md
+          - Reference/SETIMAGELAYER.md
+          - Reference/SKIA_RENDER.md
+          - Reference/SPRITECREATEFROMFILE.md
       - サウンド系:
           - Reference/PLAYSOUND.md
           - Reference/STOPSOUND.md
@@ -398,6 +408,7 @@ nav:
           - Reference/MAP_OPERATION.md
           - Reference/MAP_GETKEYS.md
           - Reference/MAP_SERIALIZATION.md
+          - Reference/MAP_ENHANCED.md
       - DataTable（データベース）系:
           - Reference/DT_MANAGE.md
           - Reference/DT_COLUMN.md

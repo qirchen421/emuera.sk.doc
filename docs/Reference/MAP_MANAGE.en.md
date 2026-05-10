@@ -27,7 +27,7 @@ hide:
 
     !!! warning "Warning"
 
-        See "[`XML`, `MAP`, `DataTable` Can Be Saved in Save Data](../EMEE/EMEE_Summary.en.md#xml-map-datatable-can-be-saved-in-save-data)" to save created `MAP` to save file. They are automatically deleted when "Return to Title Screen" or [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) is called.
+        See "[`XML`, `MAP`, `DataTable` Can Be Saved in Save Data](../EMEE/EMEE_Summary.en.md#xmlmapdatatable)" to save created `MAP` to save file. They are automatically deleted when "Return to Title Screen" or [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) is called.
 
 !!! hint "Hint"
 

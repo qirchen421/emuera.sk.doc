@@ -56,7 +56,7 @@
     ENDIF
 
 @GREET(ARGS:0)
-    PRINTFORM 欢迎，{ARGS:0}！
+    PRINTFORM 欢迎，%ARGS:0%！
     PRINTL 你的冒险开始了。
 RETURN
 ```
@@ -67,7 +67,7 @@ RETURN
 |----|------|
 | `CALL GREET("勇者")` | 调用函数 `GREET`，传入字符串参数 `"勇者"` |
 | `@GREET(ARGS:0)` | 函数标签行，`ARGS:0` 是内置字符串参数变量 |
-| `PRINTFORM 欢迎，{ARGS:0}！` | 格式化输出，`{ARGS:0}` 被替换为参数值 |
+| `PRINTFORM 欢迎，%ARGS:0%！` | 格式化输出，`%ARGS:0%` 被替换为参数值 |
 | `RETURN` | 函数返回 |
 
 ---

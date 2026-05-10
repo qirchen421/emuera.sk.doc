@@ -25,7 +25,7 @@ hide:
     ```
 
 	Can be used like the example above. `JUMPFORM` and `CALLFORM` can accept arguments. See the [function argument specification](../Emuera/function.en.md#argument-specification-in-user-defined-functions) section for details.  
-	Note: For entering loop/branch syntax directly via `GOTOFORM`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.md#_8), and the [TRYC system](./TRYC.md).
+	Note: For entering loop/branch syntax directly via `GOTOFORM`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax), and the [TRYC system](./TRYC.md).
 
 !!! hint "Hint"
 

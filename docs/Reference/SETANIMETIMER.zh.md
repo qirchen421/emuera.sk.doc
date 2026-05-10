@@ -3,16 +3,18 @@ hide:
   - toc
 ---
 
-# SETANIMETIMER
+# SETANIMETIMER / GETANIMETIMER
 
-| 函数名                                                                     | 参数  | 返回值 |
-| :------------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md) | `int` | 无     |
+| 函数名                                                                         | 参数  | 返回值 |
+| :----------------------------------------------------------------------------- | :---- | :----- |
+| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)     | `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)     | 无    | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	SETANIMETIMER time
+	int GETANIMETIMER
     ```
 	为动画精灵指定以毫秒为单位的重绘间隔。  
 	Emuera 通常不会在 [`INPUT`](./INPUT.md) 等输入等待期间进行重绘。  
@@ -25,9 +27,11 @@ hide:
 	此命令与配置中的 `每秒帧数` 设置无关。  
 	同时，它不受 [`REDRAW`](./REDRAW.md) 命令的重绘抑制效果影响。  
 
+	**GETANIMETIMER**：返回当前动画计时器的值（毫秒）。支持命令和表达式函数两种形式。
+
 !!! hint "提示"
 
-    仅支持命令。
+    `SETANIMETIMER` 仅支持命令。`GETANIMETIMER` 支持命令和表达式函数两种形式。
 
 ### 相关项目
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
