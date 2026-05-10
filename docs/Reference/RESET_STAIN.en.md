@@ -14,11 +14,11 @@ hide:
     ```  { #language-erbapi }
 	RESET_STAIN charaID
     ```
-	Command to initialize the `STAIN` of the character specified by the first argument. The initial value is the same as the value assigned when [`BEGIN TRAIN` is called, and can be specified in [`_replace.csv>Initial stain value`](../Emuera/replace.md#_5).
+	Command to initialize the `STAIN` of the character specified by the first argument. The initial value is the same as the value assigned when [`BEGIN TRAIN` is called, and can be specified in [`_replace.csv>Initial stain value`](../Emuera/replace.en.md#stain-initial-value).
 
 !!! hint "Hint"
 
     Command only.
 
 ### Related Items
-- [_replace.csv>Initial stain value](../Emuera/replace.md#_5)
+- [_replace.csv>Initial stain value](../Emuera/replace.en.md#stain-initial-value)

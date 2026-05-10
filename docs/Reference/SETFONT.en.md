@@ -22,7 +22,7 @@ hide:
 	If installed, 1 is returned in `RESULT:0`; if not installed, 0 is returned.
 
 	`SETFONT` command uses the specified font name for subsequent string display.  
-	If the argument is omitted or an empty string is specified, it returns to the [default font specified in emuera.config](../Emuera/config.md#_31).  
+	If the argument is omitted or an empty string is specified, it returns to the [default font specified in emuera.config](../Emuera/config.en.md#font-name).  
 	If the specified font is not installed, `Microsoft Sans Serif` is used instead.  
 	When specifying a font that may not be installed, refer to `CHKFONT` before `SETFONT`.
 

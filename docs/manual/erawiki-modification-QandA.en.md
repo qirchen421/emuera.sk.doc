@@ -710,7 +710,7 @@ In Emuera, the rightmost digit in binary is bit 0, counting up to bit 1, bit 2..
 You can extract each digit with calculations similar to decimal, but bit masks are normally used because they're faster and more concise. In Emuera, the `&` operator is `AND`, and the `|` operator is `OR`.  
 [About Stains (lower part of page)](../eramaker/variables.md)  
 [Mask (Information Engineering)](http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%82%AF_%28%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%29)  
-[eratoho Summary V3 - ERB Syntax Lecture 3](../manual/eratohowiki-ERBmanual.md#_38)
+[eratoho Summary V3 - ERB Syntax Lecture 3](../manual/eratohowiki-ERBmanual.en.md#branching)
 
 By the way, about the difference between `&&` and `&`: `&` is `AND` on the numbers as-is, while `&&` is `AND` after converting both sides to 1 (true) or 0 (false).  
 `A && B` is the same as `(A != 0)&(B != 0)`.  

@@ -141,7 +141,7 @@ This saves what errors occurred and where.
 How many warnings you receive can be set in config.  
 One of the Emuera creators, `妊)|дﾟ)`, has published recommended developer settings. Very helpful.
 
-- [eratoho wiki V3 → Emuera Notes → Emuera Tutorial for Developers](Emuera-etc.md#emuera_1)
+- [eratoho wiki V3 → Emuera Notes → Emuera Tutorial for Developers](Emuera-etc.en.md#emuera-tutorial-for-developers)
 
 There's also a one-click developer mode that automatically applies these settings now.
 
@@ -347,7 +347,7 @@ At first glance, it looks despairing - what is this? The hurdle is too high. You
 
 Actually, it's just dividing by 1000. Due to era basic's limitations, decimal results can't be handled.
 
-- [eratoho wiki V3 → Development Related → ERB Syntax Tutorial 2 → Decimal Multiplication](eratohowiki-ERBmanual.md#_36)
+- [eratoho wiki V3 → Development Related → ERB Syntax Tutorial 2 → Decimal Multiplication](eratohowiki-ERBmanual.en.md#branching-and-iteration)
 
 So when displaying the version, to make it look like a decimal,  
 preparations are being made to format the numbers as strings.
@@ -431,7 +431,7 @@ by adding, the number is also treated as a string and assigned as a string to `V
 
 Use #2 of `{~~}`: "line concatenation" is not related here yet, so I'll link to the wiki's explanation.
 
-- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → General → Line Concatenation](../Emuera/expression.md#_2)
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → General → Line Concatenation](../Emuera/expression.en.md#concatenate-rows)
 
 ---  
 
@@ -511,7 +511,7 @@ SIF GAMEBASE_VERSION % 10 != 0
 
 `SIF` is a type of conditional branch - a simplified one-line version of `IF～ELSE～ENDIF`.
 
-- [eramaker ERB File Format (Provisional) → Variables and Commands → Commands → Conditional Judgment](../eramaker/ERB_format.md#_4)
+- [eramaker ERB File Format (Provisional) → Variables and Commands → Commands → Conditional Judgment](../eramaker/ERB_format.en.md#variables-and-instructions)
 
 SIF executes the next line if the conditional expression is not 0 (when true). If 0 (when false), it skips the next line.
 
@@ -555,7 +555,7 @@ Can now also be written as
 VARSIONNAME '= ""  
 ```
 
-- [EmueraWiki → Emuera Added Extended Syntax → General → Assignment to String Variables Using String Expressions](../Emuera/expression.md#_9)
+- [EmueraWiki → Emuera Added Extended Syntax → General → Assignment to String Variables Using String Expressions](../Emuera/expression.en.md#string-array-element)
 
 This was originally unavailable syntax that became usable as Emuera evolved.  
 It's clearer that it's a string assignment.
@@ -738,7 +738,7 @@ Earlier we talked about Gamebase.csv, and the variables containing that informat
 
 The contents are as written here.
 
-- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → Constants and Variables](../Emuera/variables.md#gamebasecsv)
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → Constants and Variables](../Emuera/variables.en.md#gamebasecsv-variables)
 
 By using Gamebase.csv information on the title screen like this,  
 you can update the title screen just by modifying Gamebase.csv without touching the title screen itself.
@@ -775,7 +775,7 @@ omit GAMEBASE_TITLE and replace with ASCII art, display images, etc.
 For font display, color changes, special displays,
 
 - [Reference → `PRINT` family](../Reference/PRINT.md)
-- [Reference → Display Operations / Font Operations / Display Specifications](../Reference/README.md#_3)
+- [Reference → Display Operations / Font Operations / Display Specifications](../Reference/README.en.md#print-related)
 - [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.md)
 
 For image display,
@@ -783,7 +783,7 @@ For image display,
 - [Reference → `PRINT_IMG`](../Reference/PRINT_IMG.md)
 - [About Resource Files](../Emuera/resources.md)
 - [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.md)
-- [Reference → Image Processing Related](../Reference/README.md#_14)
+- [Reference → Image Processing Related](../Reference/README.en.md#image-processing-related)
 
 Also, `WINDOW_TITLE` can be assigned.  
 You can add something to display in the window title at the top left.  
@@ -832,7 +832,7 @@ It might be a bit difficult, so even if you can't understand it, search for "spa
 
 So let's learn how to write loop processing too.
 
-- [Reference → Loop/Branch Syntax](../Reference/README.md#_10)
+- [Reference → Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax)
 - [System Modification Q&A → Basics → Loop Processing Writing Methods (FOR and REPEAT Differences and Recommended Syntax)](erawiki-modification-QandA.md#forrepeat)
 
 If unclear, for now just borrow it as is until you understand.

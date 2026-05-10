@@ -18,7 +18,7 @@ hide:
     ```
 	Drawing control command.  
 	Specifying `0` for the argument causes drawing to occur only when user input is required.  
-	Specifying `1` for the argument causes normal drawing at the timing specified by [config `frames per second`](../Emuera/config.md#_16).  
+	Specifying `1` for the argument causes normal drawing at the timing specified by [config `frames per second`](../Emuera/config.en.md#frames-per-second).  
 	Adding `2` to the argument (such as `REDRAW 2` or `REDRAW 3`) has the above effects plus forces drawing immediately when the `REDRAW` command is executed.  
 	The current `REDRAW` state (`0` or `1`) can be obtained with `CURRENTREDRAW`.
 

@@ -19,8 +19,8 @@ hide:
 	TRYGOTOFORM formedString
     ```
 	Same as [`JUMP`](./JUMP.md), [`CALL`](./CALL.md), and [`GOTO`](./GOTO.md), but allows specifying function names in the same format as [`PRINTFORM`](./PRINT.md), and does not throw an error even if the function does not exist.  
-	`TRYJUMPFORM` and `TRYCALLFORM` can accept arguments. See the [function argument specification](../Emuera//function.md#_2) section for details.  
-	Note: For entering loop/branch syntax directly via `TRYGOTOFORM`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.md#_8), and the [TRYC system](./TRYC.md).
+	`TRYJUMPFORM` and `TRYCALLFORM` can accept arguments. See the [function argument specification](../Emuera/function.en.md#argument-specification-in-user-defined-functions) section for details.  
+	Note: For entering loop/branch syntax directly via `TRYGOTOFORM`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax), and the [TRYC system](./TRYC.md).
 
 !!! hint "Hint"
 

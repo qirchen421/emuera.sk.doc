@@ -16,7 +16,7 @@ Emuera (基准线 — 现代 ERABASIC 的实际起点)
        ├─ EM 扩展：资源释放、WebP、压缩存档、图标指定...
        └─ EE 扩展：音频、热键、剪贴板、TTF/OTF 动态加载...
             │
-            ├─ LazyLoading (Skia版)
+            ├─ Skia (SkiaSharp版)
             │    ├─ 懒加载机制
             │    ├─ 插件系统
             │    ├─ MAP 增强函数 (9个新增，共21函数)
@@ -43,7 +43,7 @@ Emuera (基准线 — 现代 ERABASIC 的实际起点)
 
 ### 基础功能
 
-| 功能领域 | Emuera | EM+EE | LazyLoading | DotNet |
+| 功能领域 | Emuera | EM+EE | Skia | DotNet |
 |:---|:---:|:---:|:---:|:---:|
 | 基本变量 | ✅ | ✅ | ✅ | ✅ |
 | 用户定义变量 | ✅ #DIM/#DIMS | ✅ | ✅ VARIADIC | ✅ |
@@ -54,7 +54,7 @@ Emuera (基准线 — 现代 ERABASIC 的实际起点)
 
 ### 扩展功能
 
-| 功能领域 | Emuera | EM+EE | LazyLoading | DotNet |
+| 功能领域 | Emuera | EM+EE | Skia | DotNet |
 |:---|:---:|:---:|:---:|:---:|
 | Graphics 绘图 | ✅ | ✅ | ✅ | ✅ G_POLYGON |
 | MAP 关联数组 | — | ✅ 12函数 | ✅ 21函数 | — 6函数(DICT) |

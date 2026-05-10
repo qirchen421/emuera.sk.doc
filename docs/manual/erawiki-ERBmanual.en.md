@@ -74,7 +74,7 @@ There are also variables like `ITEMNAME` (item names) and `TRAINNAME` (command n
 `CFLAG` is often written as `CFLAG:XX` and looks similar to `FLAG:XX`, but it's a two-dimensional array variable called a character variable.  
 Which variables are character variables is listed in the EmueraWiki variable list.
 
-- [Constants and Variables - Provisional Specification](../Emuera/variables.md#_21)
+- [Constants and Variables - Provisional Specification](../Emuera/variables.en.md#csv-related)
 
 For one-dimensional arrays like `FLAG`, `FLAG:XX` represents boxes arranged horizontally. For two-dimensional arrays like `CFLAG`, they're boxes arranged vertically as well.  
 For `CFLAG:3:2`, the 3 represents the column and 2 represents the position from the front (technically counting from 0, so it's the 3rd from the front in the 4th column).  
@@ -188,7 +188,7 @@ In ERB files, there are lines starting with "@" like `@XXX`.
 
 The official "About Functions" from eramaker is easy to understand:
 
-- [eramaker era basic format](../eramaker/ERB_format.md#_4)
+- [eramaker era basic format](../eramaker/ERB_format.en.md#variables-and-instructions)
 
 >Writing a program from start to finish continuously makes it hard to understand.  
 >"Functions" are used to divide parts into pieces and make it clearer.

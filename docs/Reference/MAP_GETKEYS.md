@@ -3,11 +3,14 @@ hide:
   - toc
 ---
 
-# MAP_GETKEYS
+# MAP_GETKEYS / MAP_VALUES
 
 | 関数名                                                             | 引数                              | 戻り値   |
 | :----------------------------------------------------------------- | :-------------------------------- | :------- |
 | ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md) | `string`                          | `string` |
+|                                                                    | `string`, `int`                   | `string` |
+|                                                                    | `string`, `ref` `string[]`, `int` | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_VALUES`](./MAP_GETKEYS.md)  | `string`                          | `string` |
 |                                                                    | `string`, `int`                   | `string` |
 |                                                                    | `string`, `ref` `string[]`, `int` | `string` |
 
@@ -17,13 +20,19 @@ hide:
     1. string MAP_GETKEYS, mapName
     2. string MAP_GETKEYS, mapName, doOutput
     3. string MAP_GETKEYS, mapName, ref outputArray, doOutput
+    4. string MAP_VALUES, mapName
+    5. string MAP_VALUES, mapName, doOutput
+    6. string MAP_VALUES, mapName, ref outputArray, doOutput
     ```
 
-    `MAP`（連想配列，[`Dictionary<string,string>`](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）に保存されたキーを出力する関数です。
+    `MAP`（連想配列，[`Dictionary<string,string>`](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）に保存されたキーまたは値を出力する関数です。
+
+    - `MAP_GETKEYS`：`MAP`のすべてのキーを出力します。
+    - `MAP_VALUES`：Skia（SkiaSharp版）で追加。`MAP`のすべての値を出力します。`MAP_GETKEYS`と対称的な動作をします。
 
     1. "キー1,キー2,キー3,..."のような形の文字列を返します，`MAP`自体が存在しない場合も，空文字列を返します。例外は発生しないので、必要があれば[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
-    2. `doOutput`が`0`ではない場合，`RESULTS`にキーを順次代入し、`RESULTS:0`を返します。例外は発生しないので、必要があれば[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
-    2. `doOutput`が`0`ではない場合，`outputArray`にキーを順次代入し、空文字列を返します。例外は発生しないので、必要があれば[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
+    2. `doOutput`が`0`ではない場合，`RESULTS`にキー（または値）を順次代入し、`RESULTS:0`を返します。例外は発生しないので、必要があれば[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
+    3. `doOutput`が`0`ではない場合，`outputArray`にキー（または値）を順次代入し、空文字列を返します。例外は発生しないので、必要があれば[`MAP_EXIST`](./MAP_MANAGE.md)を使ってください。
     
 !!! hint "ヒント"
 

@@ -16,7 +16,7 @@ Emuera (ベースライン — 現代ERABASICの事実上の起点)
        ├─ EM拡張：リソース解放、WebP、圧縮セーブ、アイコン指定...
        └─ EE拡張：オーディオ、ホットキー、クリップボード、TTF/OTF動的読み込み...
             │
-            ├─ LazyLoading (Skia版)
+            ├─ Skia (SkiaSharp版)
             │    ├─ 遅延読み込み機構
             │    ├─ プラグインシステム
             │    ├─ MAP拡張関数 (9個追加、計21関数)
@@ -43,7 +43,7 @@ Emuera (ベースライン — 現代ERABASICの事実上の起点)
 
 ### 基本機能
 
-| 機能領域 | Emuera | EM+EE | LazyLoading | DotNet |
+| 機能領域 | Emuera | EM+EE | Skia | DotNet |
 |:---|:---:|:---:|:---:|:---:|
 | 基本変数 | ✅ | ✅ | ✅ | ✅ |
 | ユーザー定義変数 | ✅ #DIM/#DIMS | ✅ | ✅ VARIADIC | ✅ |
@@ -54,7 +54,7 @@ Emuera (ベースライン — 現代ERABASICの事実上の起点)
 
 ### 拡張機能
 
-| 機能領域 | Emuera | EM+EE | LazyLoading | DotNet |
+| 機能領域 | Emuera | EM+EE | Skia | DotNet |
 |:---|:---:|:---:|:---:|:---:|
 | Graphics描画 | ✅ | ✅ | ✅ | ✅ G_POLYGON |
 | MAP連想配列 | — | ✅ 12関数 | ✅ 21関数 | — 6関数(DICT) |

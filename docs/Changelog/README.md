@@ -277,7 +277,7 @@
 
 === "v33"
 	* [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)追加
-	* [`GCREATEFROMFILE`拡張](../Reference//README.md#gcreatefromfileemuera)
+	* [`GCREATEFROMFILE`拡張](../Reference/GCREATEFROMFILE.md)
 
 === "v32"
 	* [`GDRAWLINE`](../Reference/GDRAWLINE.md)追加

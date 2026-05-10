@@ -1,7 +1,9 @@
 # Release page
 
-| [日本語](https://evilmask.gitlab.io/emuera.em.doc/) | [English](https://evilmask.gitlab.io/emuera.em.doc/en/) | [简体中文](https://evilmask.gitlab.io/emuera.em.doc/zh/) |
-| :-------------------------------------------------: | :-----------------------------------------------------: | :------------------------------------------------------: |
+> **Emuera-SKIA 帮助手册** — 基于 [emuera.em.doc](https://gitlab.com/EvilMask/emuera.em.doc) 派生的 SkiaSharp 版本文档。
+
+| [日本語](https://emuera-sk-doc-705c3d.gitgud.site/index.html) | [English](https://emuera-sk-doc-705c3d.gitgud.site/en/index.html) | [简体中文](https://emuera-sk-doc-705c3d.gitgud.site/zh/index.html) |
+| :-------------------------------------------------------------: | :-----------------------------------------------------------------: | :------------------------------------------------------------------: |
 
 # Contribute guide
 
@@ -49,5 +51,5 @@
     ``` bash
     mkdocs serve
     ```
-5. Preview in the browser. (The default URL should be http://127.0.0.1:8000/emuera.em.doc/)
+5. Preview in the browser. (The default URL should be http://127.0.0.1:8000/)
 

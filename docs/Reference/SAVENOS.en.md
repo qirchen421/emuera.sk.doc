@@ -14,7 +14,7 @@ hide:
     ```  { #language-erbapi }
 	int SAVENOS variable
     ```
-    As a command, retrieves the number specified in the config [`Save data count per page`](../Emuera/config.md#_10) and assigns it to the specified numeric variable. The default is `20`.  
+    As a command, retrieves the number specified in the config [`Save data count per page`](../Emuera/config.en.md#number-of-save-data-to-display) and assigns it to the specified numeric variable. The default is `20`.  
     Numeric variable cannot be omitted.
 
     As an expression function, returns the number specified in the config `Save data count per page`. The default is 20.  

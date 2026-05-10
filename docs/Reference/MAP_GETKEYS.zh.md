@@ -3,11 +3,14 @@ hide:
   - toc
 ---
 
-# MAP_GETKEYS
+# MAP_GETKEYS / MAP_VALUES
 
 | 函数名                                                             | 参数                              | 返回值   |
 | :----------------------------------------------------------------- | :-------------------------------- | :------- |
 | ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md) | `string`                          | `string` |
+|                                                                    | `string`, `int`                   | `string` |
+|                                                                    | `string`, `ref` `string[]`, `int` | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_VALUES`](./MAP_GETKEYS.md)  | `string`                          | `string` |
 |                                                                    | `string`, `int`                   | `string` |
 |                                                                    | `string`, `ref` `string[]`, `int` | `string` |
 
@@ -17,14 +20,19 @@ hide:
     1. string MAP_GETKEYS, mapName
     2. string MAP_GETKEYS, mapName, doOutput
     3. string MAP_GETKEYS, mapName, ref outputArray, doOutput
+    4. string MAP_VALUES, mapName
+    5. string MAP_VALUES, mapName, doOutput
+    6. string MAP_VALUES, mapName, ref outputArray, doOutput
     ```
 
-    输出 `MAP`（键值对映射数组，或称「字典」，[`Dictionary<string,string>`](https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）中保存的键名（key）。  
-    不会抛出异常，如有需要请使用 [`MAP_EXIST`](./MAP_MANAGE.md) 提前进行检查。
+    输出 `MAP`（键值对映射数组，或称「字典」，[`Dictionary<string,string>`](https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）中保存的键名（key）或值（value）。
 
-    1. 返回形如 `键名1,键名2,键名3,...` 的字符串。如果指定的 `MAP` 不存在，则返回空字符串。
-    2. 参数 `doOutput` 为 `0` 以外的数值时，将获取到的键名依次保存到 `RESULTS`，返回 `RESULTS:0`；并将获取到的 `MAP` 大小（包含的键值对数量）保存到 `RESULT`。
-    2. 参数 `doOutput` 为 `0` 以外的数值时，将获取到的键名依次保存到字符串数组 `outputArray`，返回空字符串。
+    - `MAP_GETKEYS`：输出 `MAP` 的所有键名。
+    - `MAP_VALUES`：Skia（SkiaSharp版）新增。输出 `MAP` 的所有值。与 `MAP_GETKEYS` 对称。
+
+    1. 返回形如 `键名1,键名2,键名3,...` 的字符串。如果指定的 `MAP` 不存在，则返回空字符串。不会抛出异常，如有需要请使用 [`MAP_EXIST`](./MAP_MANAGE.md) 提前进行检查。
+    2. 参数 `doOutput` 为 `0` 以外的数值时，将获取到的键名（或值）依次保存到 `RESULTS`，返回 `RESULTS:0`；并将获取到的 `MAP` 大小保存到 `RESULT`。
+    3. 参数 `doOutput` 为 `0` 以外的数值时，将获取到的键名（或值）依次保存到字符串数组 `outputArray`，返回空字符串。
 
 !!! hint "提示"
 

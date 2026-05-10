@@ -24,7 +24,7 @@ hide:
     ```
 	A syntax to specify multiple functions (labels) and call only the first one found.  
 	No statements other than the above syntax can be written within `TRYLIST～ENDFUNC`.  
-	Note: For entering loop/branch syntax directly via `TRYGOTOLIST`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.md#_8), and the [TRYC system](./TRYC.md).  
+	Note: For entering loop/branch syntax directly via `TRYGOTOLIST`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax), and the [TRYC system](./TRYC.md).  
 	Used as follows:
 
     ```  { #language-erbapi }

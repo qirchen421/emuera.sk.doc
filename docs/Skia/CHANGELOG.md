@@ -277,6 +277,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **渲染控制 API**：SET\_TEXT\_DRAWING\_MODE / GET\_TEXT\_DRAWING\_MODE / SET\_SKIA\_QUALITY / GET\_SKIA\_QUALITY
 - **HTML\_PRINT font 渲染属性扩展**：render/edging/hinting
 - **全屏功能 (F11)**：覆盖开始菜单，鼠标移到顶部自动显示工具栏
+- **SPRITECREATEFROMFILE**：从图像文件直接创建 Sprite，无需 GCREATE 中转
 - **BitArray 功能**
 - **DIV 渲染性能优化**：命中测试 O(1) 定位 + Y轴预剔除
 - **ToolTip 防遮挡**：屏幕边缘自动翻转
@@ -346,6 +347,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **EXISTFUNCTION**：支持 Lazyloading 包含且未运行的函数检测
 - **.als 文件**：序号 10 后的字符串指针读取修复
 - **SPRITECREATE**：支持 8/10 参数写法，与 CSV 能力对齐
+- **GCREATEFROMFILE isRelative 参数**：第三参数非 0 时从当前工作目录解析相对路径
 
 ***
 

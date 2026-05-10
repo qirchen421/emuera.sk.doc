@@ -52,7 +52,7 @@ Realize that code improvements are something you do to make it easier for yourse
 - [Introduction to modding](modification-manual.md)
 
 This is a manual for a standard training SLG, and it explains what you need to do to get started.
-First, read "[An easy-to-use text editor](modification-manual.md#code-editor)", "[A search tool that can use GREP](erawiki-modification-QandA.md#how-to-use-grep)", and "[These are the things you should remember at the beginning](modification-manual.md#lets-modify-it)".
+First, read "[An easy-to-use text editor](modification-manual.md#code-editor)", "[A search tool that can use GREP](erawiki-modification-QandA.en.md#grep)", and "[These are the things you should remember at the beginning](modification-manual.md#lets-modify-it)".
 
 ---  
 

@@ -36,7 +36,7 @@
 
 === "v15"
 
-    * 関数追加：[`DataTable`系関数](../EMEE/EMEE_Summary.md#datatable)を追加。
+    * 関数追加：[`DataTable`系関数](../EMEE/EMEE_Summary.md#xmlmapdatatable)を追加。
     * バグ修正：フォントサイズが`16`以外の時入力欄の表示不具合を修正。
     * バグ修正：ユーザー指定アイコンのアルファチャンネル情報が無効の不具合を修正。
 
@@ -64,7 +64,7 @@
 
     * 機能拡張：「[セーブデータを圧縮して保存する](../EMEE/EMEE_Summary.md#_5)」コンフィグ機能追加。
     * 機能拡張：[XML、MAPがセーブデータの中で保存](../EMEE/EMEE_Summary.md#xmlmapdatatable)可能。
-    * 仕様変更：[XML系の命令](../EMEE/EMEE_Summary.md#xml)の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり。
+    * 仕様変更：[XML系の命令](../EMEE/EMEE_Summary.md#xmlmapdatatable)の仕様を変更し、文字列のIDを使うようにした，古いバージョンとの互換性あり。
 
 === "v11"
 
@@ -277,7 +277,7 @@
 
 === "v33"
 	* [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)追加
-	* [`GCREATEFROMFILE`拡張](../Reference//README.md#gcreatefromfileemuera)
+	* [`GCREATEFROMFILE`拡張](../Reference/GCREATEFROMFILE.md)
 
 === "v32"
 	* [`GDRAWLINE`](../Reference/GDRAWLINE.md)追加

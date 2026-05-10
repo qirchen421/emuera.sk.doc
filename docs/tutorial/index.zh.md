@@ -70,7 +70,17 @@
 | [事件函数](event-functions.zh.md) | 事件函数与系统函数、#PRI/#LATER/#SINGLE/#ONLY |
 | [命令 vs 表达式](command-vs-expression.zh.md) | 命令语法与表达式语法的边界、RESULT 污染、CALLF |
 
-### 第5章：HTML 与图形
+### 第5章：角色系统
+
+> 理解角色数据结构和操作
+
+| 主题 | 内容 |
+|:---|:---|
+| [角色编号系统](../Emuera/variables.zh.md#角色编号系统说明) | 角色注册编号 vs 角色编号、MASTER/TARGET/ASSI、NO |
+| [角色变量操作](../Emuera/variables.zh.md) | 角色变量分类、访问方式、常用角色变量 |
+| [角色管理指令](../Reference/ADDCHARA.zh.md) | ADDCHARA/DELCHARA/COPYCHARA/SWAPCHARA 等 |
+
+### 第6章：HTML 与图形
 
 > 处理富文本显示与图形
 

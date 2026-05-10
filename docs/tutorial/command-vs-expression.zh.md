@@ -172,7 +172,7 @@ CALLF SETTER("key", val)
 | **写入 RESULT？** | ✅ 无条件写入 | ❌ 不写入 |
 | **可在表达式中使用？** | ✅ 天然支持 | ✅ 加 `METHOD_SAFE` flag |
 
-**实例**：`SETANIMETIMER` 在 LazyLoading 中注册为 `SETANIMETIMER_Instruction`，不写入 RESULT，同时加了 `METHOD_SAFE` flag 仍可在表达式中使用。
+**实例**：`SETANIMETIMER` 在 Skia 版中注册为 `SETANIMETIMER_Instruction`，不写入 RESULT，同时加了 `METHOD_SAFE` flag 仍可在表达式中使用。
 
 ---
 

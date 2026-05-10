@@ -126,6 +126,8 @@
 | ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.md)      | `int`                                             | `string` |
 | ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.md)  | `string`                                          | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.md)      | `string`                                          | `string` |
+| ![](../assets/images/IconSK.webp)[`EVAL`](./EVAL.md)            | `string`(, `int`)                                 | `int`    |
+| ![](../assets/images/IconSK.webp)[`EVALS`](./EVAL.md)           | `string`(, `string`)                              | `string` |
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
@@ -143,10 +145,23 @@
 | ![](../assets/images/IconEmuera.webp)[`LOG`](./MATH_EXTENSION.md)         | `int`                                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`LOG10`](./MATH_EXTENSION.md)       | `int`                                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`EXPOMENT`](./MATH_EXTENSION.md)    | `int`                                        | `int`    |
+| ![](../assets/images/IconSK.webp)[`SIN`](./MATH_EXTENSION.md)              | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`COS`](./MATH_EXTENSION.md)              | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`TAN`](./MATH_EXTENSION.md)              | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`ASIN`](./MATH_EXTENSION.md)             | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`ACOS`](./MATH_EXTENSION.md)             | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`ATAN`](./MATH_EXTENSION.md)             | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`FLOOR`](./MATH_EXTENSION.md)            | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`CEIL`](./MATH_EXTENSION.md)             | `int`/`float`                                | `int`/`float` |
+| ![](../assets/images/IconSK.webp)[`ROUND`](./MATH_EXTENSION.md)            | `int`/`float`                                | `int`/`float` |
 | ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)       | `int`, `int`                                 | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)       | `integerVariable`, `int`(, `int`...)         | なし     |
 | ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)     | `integarVariable`, `int`(, `int`...)         | なし     |
 | ![](../assets/images/IconEmuera.webp)[`INVERTBIT`](./BIT_OPERATION.md)    | `integarVariable`, `int`(, `int`...)         | なし     |
+| ![](../assets/images/IconSK.webp)[`BITSET`](./BITARRAY.md)           | `ref int[]`, `int`(, `int`, `int`)           | `int`    |
+| ![](../assets/images/IconSK.webp)[`BITGET`](./BITARRAY.md)           | `ref int[]`, `int`                           | `int`    |
+| ![](../assets/images/IconSK.webp)[`BITTOGGLE`](./BITARRAY.md)        | `ref int[]`, `int`                           | `int`    |
+| ![](../assets/images/IconSK.webp)[`BITINDEXOFFIRST`](./BITARRAY.md)  | `ref int[]`(, `int`)                         | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.md)                    | `int`(, `int`...)                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.md)                    | `int`(, `int`...)                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.md)                  | `int`, `int`, `int`                          | `int`    |
@@ -386,6 +401,12 @@
 | ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.md)        | `functionName`             | `int` |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.md)            | `string`(, `int`, `argument`...)   | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.md)           | `string`(, `string`, `argument`...)| `string`  |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.md)           | `stringVariable`             | なし  |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.md)           | `stringVariable`             | なし  |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.md)        | `stringVariable`             | なし  |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.md)        | `stringVariable`             | なし  |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable`             | なし  |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable`             | なし  |
 
 ### RETURN 系
 
@@ -423,6 +444,8 @@
 | 関数名                                                                                   | 引数                                            | 戻り値          |
 | :--------------------------------------------------------------------------------------- | :---------------------------------------------- | :-------------- |
 | ![](../assets/images/IconEmuera.webp)[`HTML_PRINT`](./HTML_PRINT.md)                     | `string`                                        | なし            |
+| ![](../assets/images/IconSK.webp)[`HTML_PRINTC`](./HTML_PRINTC.md)                   | `string`                                        | なし            |
+| ![](../assets/images/IconSK.webp)[`HTML_PRINTLC`](./HTML_PRINTC.md)                  | `string`                                        | なし            |
 | ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md)               | `string`(, `integerVariable`, `stringVariable`) | `int`, `string` |
 | ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)   | なし                                            | `string`        |
 | ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md)     | `int`                                           | `string`        |
@@ -470,7 +493,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | 関数名                                                                                 | 引数                                                                                    | 戻り値   |
 | :------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- | :------- |
 | ![](../assets/images/IconEmuera.webp)[`GCREATE`](./GCREATE.md)                         | `int`, `int`, `int`                                                                     | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md)         | `int`, `string`                                                                         | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md)         | `int`, `string`(, `int`)                                                                | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md)                       | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md)                           | `int`, `int`                                                                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.md)           | `int`, `int`, `int`, `int`, `int`                                                       | `int`    |
@@ -497,7 +520,10 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEmuera.webp)[`GLOAD`](./GSAVELOAD.md)                         | `int`, `int`                                                                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SPRITECREATE`](./SPRITECREATE.md)               | `string`, `int`                                                                         | `int`    |
 |                                                                                        | `string`, `int`, `int`, `int`, `int`, `int`                                             | `int`    |
+|                                                                                        | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                               | `int`    |
+|                                                                                        | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                 | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SPRITEANIMECREATE`](./SPRITEANIMECREATE.md)     | `string`, `int`, `int`                                                                  | `int`    |
+| ![](../assets/images/IconSK.webp)[`SPRITECREATEFROMFILE`](./SPRITECREATEFROMFILE.md) | `string`, `string`(, `int`, `int`, `int`, `int`)                                      | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SPRITEANIMEADDFRAME`](./SPRITEANIMEADDFRAME.md) | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SPRITEDISPOSE`](./SPRITEDISPOSE.md)             | `string`                                                                                | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SPRITEGETCOLOR`](./SPRITEGETCOLOR.md)           | `string`, `int`, `int`                                                                  | `int`    |
@@ -511,7 +537,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEmuera.webp)[`SPRITESETPOS`](./SPRITESETPOS.md)               | `string`, `int`, `int`                                                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SPRITEMOVE`](./SPRITEMOVE.md)                   | `string`, `int`, `int`                                                                  | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CBGSETG`](./CBGSETG.md)                         | `int`, `int`, `int`, `int`                                                              | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CBGSETSPRITE`](./CBGSETSPRITE.md)               | `string`, `int`, `int`, `int`                                                           | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETSPRITE`](./CBGSETSPRITE.md)               | `string`, `int`, `int`, `int`(, `int`, `int`, `int`, `var`) | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CBGSETBMAPG`](./CBGSETBMAPG.md)                 | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CBGSETBUTTONSPRITE`](./CBGSETBUTTONSPRITE.md)   | `int`, `string`, `string`, `int`, `int`, `zDepth`                                       | `int`    |
 |                                                                                        | `int`, `string`, `string`, `int`, `int`, `zDepth`, `string`                             | `int`    |
@@ -535,6 +561,14 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/Iconetc.webp)[`SETBGIMAGE`](./BACKGROUND.md)                      | `string`(, `int`, `int`)                                                                | なし     |
 | ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.md)                   | `string`                                                                                | なし     |
 | ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.md)                    | なし                                                                                    | なし     |
+| ![](../assets/images/IconSK.webp)[`SETIMAGELAYER`](./SETIMAGELAYER.md)               | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`, `int`                           | なし     |
+| ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER`](./CLEARIMAGELAYER.md)           | `int`                                                                                   | なし     |
+| ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER_ALL`](./CLEARIMAGELAYER.md)       | なし                                                                                    | なし     |
+| ![](../assets/images/IconSK.webp)[`EXISTSIMAGELAYER`](./EXISTSIMAGELAYER.md)      | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconSK.webp)[`SET_TEXT_DRAWING_MODE`](./SKIA_RENDER.md)          | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconSK.webp)[`GET_TEXT_DRAWING_MODE`](./SKIA_RENDER.md)          | なし                                                                                    | `int`    |
+| ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`(, `int`, `int`)                                                                   | `int`    |
+| ![](../assets/images/IconSK.webp)[`GET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`                                                                                   | `int`    |
 
 ### サウンド系
 
@@ -596,8 +630,16 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md)       | `string`                          | `string` |
 |                                                                          | `string`, `int`                   | `string` |
 |                                                                          | `string`, `ref` `string[]`, `int` | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_VALUES`](./MAP_GETKEYS.md)        | `string`                          | `string` |
+|                                                                          | `string`, `int`                   | `string` |
+|                                                                          | `string`, `ref` `string[]`, `int` | `string` |
 | ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)   | `string`                          | `string` |
 | ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md) | `string`, `string`                | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_TOSTRING`](./MAP_SERIALIZATION.md)      | `string`(, `string`, `string`)  | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_FROMSTRING`](./MAP_SERIALIZATION.md)    | `string`, `string`(, `string`, `string`) | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_MERGE`](./MAP_ENHANCED.md)             | `string`, `string`                | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.md)          | `string`, `string`, `string`      | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.md)           | `string`, `string`, `string`      | `string` |
 
 ### DataTable（データベース）系
 

@@ -32,7 +32,7 @@ hide:
 	If the function exists, it calls the function and executes the lines after TRYC; if it does not exist, it executes the lines after CATCH.  
 	Grammatically, this is similar to [`IF～ELSE～ENDIF`](./IF.md) (the difference is that if the function exists, you may omit the processing).  
 	Therefore, if entering the `TRYC～CATCH～ENDCATCH` block directly via [`GOTO`](./GOTO.md) or similar commands, execution proceeds normally up to just before `CATCH` and `ENDCATCH`, then jumps to the line after `ENDCATCH`, similar to [`IF～ELSEIF～ELSE～ENDIF`](./IF.md).  
-	Also, for entering loop/branch syntax directly via `TRYCGOTO` or `TRYCGOTOFORM`, see [`TRYGOTO`](./TRY.md) and [Loop/Branch Syntax](../Reference/README.md#_8).
+	Also, for entering loop/branch syntax directly via `TRYCGOTO` or `TRYCGOTOFORM`, see [`TRYGOTO`](./TRY.md) and [Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax).
 
     ```  { #language-erbapi }
 		TRYCCALL UNKNOWN_FUNC ;Function that does not exist

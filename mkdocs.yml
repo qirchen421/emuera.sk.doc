@@ -33,6 +33,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.keys
+exclude_docs: |
+  /tutorial/todo.md
+  /Reference/EVAL.zh.md
+
 nav:
   - ホーム: README.md
   - チュートリアル:
@@ -435,6 +439,8 @@ nav:
         - manual/erawiki-vscode-git.md
     - その他資料:
         - manual/glossary.md
+  - Changelog:
+      - Changelog/README.md
 
 plugins:
   - search:

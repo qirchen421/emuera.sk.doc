@@ -5,22 +5,28 @@ hide:
 
 # MAP 序列化相关函数
 
-| 函数名                                                                   | 参数               | 返回值   |
-| :----------------------------------------------------------------------- | :----------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)   | `string`           | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md) | `string`, `string` | `int`    |
+| 函数名                                                                         | 参数                            | 返回值   |
+| :----------------------------------------------------------------------------- | :------------------------------ | :------- |
+| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)         | `string`                        | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md)       | `string`, `string`              | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_TOSTRING`](./MAP_SERIALIZATION.md)      | `string`(, `string`, `string`)  | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_FROMSTRING`](./MAP_SERIALIZATION.md)    | `string`, `string`(, `string`, `string`) | `int`    |
 
 !!! info "API"
 
     ```  { #language-erbapi }
     1. string MAP_TOXML, mapName
     2. int MAP_FROMXML, mapName, xmlMap
+    3. string MAP_TOSTRING, mapName{, sep, kvSep}
+    4. int MAP_FROMSTRING, mapName, data{, sep, kvSep}
     ```
 
-    将 `MAP`（键值对映射数组，或称「字典」，[`Dictionary<string,string>`](https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）与 `XML`互相转换的函数。想把 `MAP` 的内容保存到文件（数据持久化）的时候可以使用。
+    将 `MAP`（键值对映射数组，或称「字典」，[`Dictionary<string,string>`](https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8)）与 `XML` 或字符串互相转换的函数。想把 `MAP` 的内容保存到文件（数据持久化）的时候可以使用。
 
     - `MAP_TOXML`：将名为 `mapName` 的 `MAP` 转换为 `XML`，返回转换后的 XML 文本。
     - `MAP_FROMXML`：解析对应格式的 `XML` 并将内容读取到名为 `mapName` 的 `MAP` 中。
+    - `MAP_TOSTRING`：Skia（SkiaSharp版）新增。将名为 `mapName` 的 `MAP` 序列化为 `key=value` 格式的字符串。`sep` 为条目分隔符（默认 `","`），`kvSep` 为键值分隔符（默认 `"="`）。例如：`"k1=v1,k2=v2,k3=v3"`。
+    - `MAP_FROMSTRING`：Skia（SkiaSharp版）新增。将 `MAP_TOSTRING` 序列化的字符串反序列化到 `MAP` 中。`sep` 和 `kvSep` 含义与 `MAP_TOSTRING` 相同。按第一个 `kvSep` 分割键和值，空条目或无 `kvSep` 的条目会被跳过。
 
     `XML` 必须为如下格式：
     ``` xml

@@ -280,7 +280,7 @@ hide:
 
 === "v33"
 	* Added [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)
-	* [`GCREATEFROMFILE` extension](../Reference/README.md#gcreatefromfileemuera)
+	* [`GCREATEFROMFILE` extension](../Reference/GCREATEFROMFILE.md)
 
 === "v32"
 	* Added [`GDRAWLINE`](../Reference/GDRAWLINE.md)
