@@ -59,16 +59,14 @@
 | ![](../assets/images/IconSK.webp) `HTML_PRINTC` | 命令 | 右对齐输出HTML字符串 | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `HTML_PRINTLC` | 命令 | 左对齐输出HTML字符串（带行宽计算） | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `SPRITECREATEFROMFILE` | 式中函数 | 从图像文件直接创建Sprite | [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.md) |
-| ![](../assets/images/IconSK.webp) `SETANIMETIMER` | 命令 | 设置动画帧间隔 | [SETANIMETIMER](../Reference/SETANIMETIMER.md) |
-| ![](../assets/images/IconSK.webp) `GETANIMETIMER` | 式中函数 | 获取动画帧计时器 | [SETANIMETIMER](../Reference/SETANIMETIMER.md) |
 | ![](../assets/images/IconSK.webp) `SET_TEXT_DRAWING_MODE` | 命令 | 设置文本渲染管线 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
 | ![](../assets/images/IconSK.webp) `GET_TEXT_DRAWING_MODE` | 式中函数 | 获取文本渲染管线 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
 | ![](../assets/images/IconSK.webp) `SET_SKIA_QUALITY` | 命令 | 设置渲染品质 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
 | ![](../assets/images/IconSK.webp) `GET_SKIA_QUALITY` | 式中函数 | 获取渲染品质 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_DRAW` | 命令 | 绘制多边形轮廓 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_FILL` | 命令 | 填充多边形 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_POINT_ADD` | 命令 | 添加多边形顶点 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_POINT_CLEAR` | 命令 | 清除所有顶点 | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_DRAW` | 命令 | 绘制多边形轮廓 | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_FILL` | 命令 | 填充多边形 | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_ADD` | 命令 | 添加多边形顶点 | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_CLEAR` | 命令 | 清除所有顶点 | [G_POLYGON](../Reference/G_POLYGON.md) |
 | ![](../assets/images/IconSK.webp) `TEXT_BGC_ON` | 命令 | 启用文本背景色显示 | [TEXT_BGC](../Reference/TEXT_BGC.md) |
 | ![](../assets/images/IconSK.webp) `TEXT_BGC_OFF` | 命令 | 禁用文本背景色显示 | [TEXT_BGC](../Reference/TEXT_BGC.md) |
 | ![](../assets/images/IconSK.webp) `SQL_ESCAPE` | 式中函数 | 字符串SQL转义 | [SQL_PARAM](../Reference/SQL_PARAM.md) |
@@ -77,8 +75,7 @@
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_LONG` | 式中函数 | 参数化查询执行（标量long） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_STRING` | 式中函数 | 参数化查询执行（标量string） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_FLOAT` | 式中函数 | 参数化查询执行（标量float） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利函数：在sav/sql/下创建DB连接 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
-| ![](../assets/images/IconSK.webp) `BITMAP_CACHE_ENABLE` | 命令 | 位图缓存的启用/禁用 | [BITMAP_CACHE_ENABLE](../Reference/BITMAP_CACHE_ENABLE.md) |
+| ![](../assets/images/Icondotnet.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利函数：在sav/sql/下创建DB连接 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
 | ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 严格字体回退模式 | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中函数 | 从NAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中函数 | 从NICKNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
@@ -86,12 +83,12 @@
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中函数 | 从MASTERNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
 | ![](../assets/images/Icondotnet.webp) `MATCHALL` | 式中函数 | 数组全量搜索（变量引用） | [MATCHALL](../Reference/MATCHALL.md) |
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中函数 | 数组全量搜索（字符串变量名） | [MATCHALL](../Reference/MATCHALL.md) |
-| ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | — |
-| ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | 事件函数 | 错误发生时首次调用 | — |
+| ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | [事件函数](../tutorial/event-functions.zh.md#before_throw) |
+| ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | 事件函数 | 错误发生时首次调用 | [事件函数](../tutorial/event-functions.zh.md#before_error) |
 
 ---
 
-### ![](../assets/images/IconSK.webp)错误处理事件（SK 专属）
+### ![](../assets/images/IconSK.webp)错误处理事件
 !!! summary ""
 
     新增 `BEFORE_THROW` 和 `BEFORE_ERROR` 两个事件函数，提供脚本级别的错误处理能力。
@@ -203,30 +200,17 @@
     REND
     ```
 
-### ![](../assets/images/IconSK.webp)引用参数（#REF/#REFS/OUT）
+### ![](../assets/images/IconSK.webp)引用参数（REF/OUT）
 !!! summary ""
 
-    支持函数参数的引用传递和输出参数。
+    扩展 EM+EE 的数组引用（`#DIM REF`），新增标量引用和 OUT 参数。
 
-!!! info "API"
+    - 标量引用：`#REF X` / `#REFS X` / `#REFF X` — 引用传递单个元素（EM+EE 仅支持数组整体引用）
+    - OUT 参数：`#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — 可省略的标量引用（省略时写入丢弃）
 
-    ``` { #language-erbapi }
-    @FUNC_NAME(L_val, L_str)
-    #DIM L_val
-    #DIMS L_str
-    #REF L_val
-    #REFS L_str
-    ```
+!!! warning "注意"
 
-    ``` { #language-erbapi }
-    @FUNC_NAME(L_out, L_out_str)
-    #DIM OUT L_out
-    #DIMS OUT L_out_str
-    ```
-
-    - `#REF L_val` / `#REFS L_str`：标量引用传递（Dimension=0）。需先用 `#DIM`/`#DIMS` 声明变量，再通过 `#REF`/`#REFS` 将其作为引用参数传递
-    - `#DIM OUT L_out` / `#DIMS OUT L_out_str`：可省略的输出参数。省略时写入被黑洞化（NullRefTerm），不会报错
-    - 支持 OUT + VARIADIC 组合、嵌套调用、CALLFORM/TRYCALL
+    详细说明请参阅[变量声明教程](../tutorial/variable-declaration.zh.md#ref)。
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> 稀疏数组存储
 !!! summary ""
@@ -297,48 +281,7 @@
 ### ![](../assets/images/IconSK.webp)`SETBGIMAGE` 参数解析修复
 !!! summary ""
 
-    **这不是新增参数**。`depth` 和 `opacity` 参数在 emuera.em 上游早已存在。
-    本次修复的是**参数解析方式**：从 `FORM_STR_ANY` 改为类型化的 `SP_SETBGIMAGE`。
-    这修复了变量参数被当作字面量字符串的 bug。
-
-!!! info "API"
-
-    | 参数 | 类型 | 可省略 | 默认值 | 说明 |
-    |:---|:---|:---:|:---:|:---|
-    | `resourceName` | `string` | ❌ | — | 资源名（CSV 中定义） |
-    | `depth` | `int` | ✅ | `0` | 图层深度。值越小越靠前绘制，负值可将背景放到前景前 |
-    | `opacity` | `int` | ✅ | `255` | 不透明度。范围 0～255，0=完全透明，255=完全不透明 |
-
-!!! example "用法示例"
-
-    ```erb
-    ; 基础用法：设置背景图（100% 不透明度）
-    SETBGIMAGE "背景_1"
-
-    ; 设置半透明背景
-    SETBGIMAGE "背景_1", 0, 128   ; 50% 透明度
-
-    ; 前景背景：depth=-1 在 depth=0 之前绘制
-    SETBGIMAGE "背景_天空", -1
-    SETBGIMAGE "背景_前景", 0
-    ```
-
-!!! example "变量参数的差别"
-
-    旧版 `FORM_STR_ANY` 与新版 `SP_SETBGIMAGE` 的处理差异：
-
-    ```erb
-    #DIMS temp_name
-    temp_name = "小帽_笑_3"
-    SETBGIMAGE temp_name
-    ```
-
-    | 版本 | 处理方式 | 结果 |
-    |:---|:---|:---|
-    | emuera.em | `FORM_STR_ANY` 解析 `temp_name` 为字面量 `"temp_name "` → 查找名为该名字的索引 | ❌ 静默失败 |
-    | lazyloading 变体 | 类型化 `SP_SETBGIMAGE` 读取变量值 `"小帽_笑_3"` → 查找资源 `"小帽_笑_3"` | ✅ 正常工作 |
-
-    **根本原因**：`FORM_STR_ANY` 把参数当作 FORM 字符串解析，变量名被当作字面量字符串。直觉上 `SETBGIMAGE temp_name` 应该传递变量值，但旧版实际传递了字面量 `"temp_name "`。
+    `resourceName` 参数的解析方式从 `FORM_STR_ANY` 改为类型化字符串表达式。修复了变量参数被当作字面量字符串的 bug。详见 [BACKGROUND](../Reference/BACKGROUND.zh.md)。
 
 ### ![](../assets/images/IconSK.webp)`HTML_PRINT` 的 `display` 属性（DotNet 同步）
 !!! summary ""
@@ -383,6 +326,68 @@
 !!! summary ""
 
     `EXISTVAR` 新增第二参数。第二参数为非 0 时，除了确认变量名存在外，还确认存储单元是否存在。
+
+### ![](../assets/images/IconSK.webp)`SETANIMETIMER` 的命令化·`GETANIMETIMER` 的新增
+!!! summary ""
+
+    EM+EE 中 `SETANIMETIMER` 作为式中函数（`FunctionMethod`）实现，总是返回 `1`。Skia 版将其重构为命令（`AInstruction`），不再有返回值。同时新增了 `GETANIMETIMER` 式中函数，用于获取当前计时器值。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    SETANIMETIMER time
+    int GETANIMETIMER
+    ```
+
+    | 项目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `SETANIMETIMER` | 式中函数（返回值: 总是`1`） | 命令（无返回值） |
+    | `GETANIMETIMER` | ❌ 不存在 | ✅ 式中函数（返回当前计时器值） |
+
+!!! warning "注意"
+
+    EM+EE 中 `SETANIMETIMER` 可以作为式中函数调用，但 Skia 版仅支持命令语法。如果 EM+EE 的 ERB 中使用了 `RESULT = SETANIMETIMER(100)` 这样的写法，在 Skia 版中会编译报错。
+
+### ![](../assets/images/Iconetc.webp)`BITMAP_CACHE_ENABLE` 的命令化
+!!! summary ""
+
+    EM+EE 中 `BITMAP_CACHE_ENABLE` 作为式中函数（`FunctionMethod`）实现。Skia 版将其重构为命令（`AInstruction`），不再有返回值。功能本身无变化。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    BITMAP_CACHE_ENABLE flag
+    ```
+
+    | 项目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `BITMAP_CACHE_ENABLE` | 式中函数（有返回值） | 命令（无返回值） |
+
+!!! warning "注意"
+
+    EM+EE 中 `BITMAP_CACHE_ENABLE` 可以作为式中函数调用，但 Skia 版仅支持命令语法。
+
+### ![](../assets/images/Icondotnet.webp)`SQL_CONNECTION_OPEN` 的安全强化
+!!! summary ""
+
+    DotNet 版新增的便捷函数 `SQL_CONNECTION_OPEN` 已移植到 Skia 版，但修复了 DotNet 版的路径穿越漏洞和 PRAGMA 设置问题。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    SQL_CONNECTION_OPEN name
+    ```
+
+    | 项目 | DotNet版 | Skia版 |
+    |:---|:---|:---|
+    | PRAGMA设置 | `journal_mode = OFF; synchronous = OFF` | `journal_mode = WAL; synchronous = NORMAL` |
+    | 崩溃安全性 | ❌ 数据库有损坏风险 | ✅ 崩溃时数据库安全 |
+    | `name`路径验证 | ❌ 无（路径穿越漏洞） | ✅ 验证非法字符和`..` |
+    | DB存储位置 | `sav/temp_db/` | `sav/sql/` |
+
+!!! warning "注意"
+
+    `name` 参数会进行非法字符和 `..` 验证，防止 ERB 脚本突破 `sav/sql/` 目录。DotNet 版中 `SQL_CONNECTION_OPEN "../../etc/exploit"` 这样的调用是可能的，但 Skia 版会抛出 `CodeEE`。
 
 ---
 
@@ -560,10 +565,10 @@
     int SPRITECREATEFROMFILE spriteName, filePath{, x, y, width, height}
     ```
 
-### ![](../assets/images/IconSK.webp)`G_POLYGON` 系 — 多边形绘制
+### ![](../assets/images/Icondotnet.webp)`G_POLYGON` 系 — 多边形绘制
 !!! summary ""
 
-    进行多边形的描边和填充。仅 SkiaSharp 模式可用（GDI 模式下抛出 CodeEE）。
+    从 DotNet 版移植。进行多边形的描边和填充。仅 SkiaSharp 模式可用（GDI 模式下抛出 CodeEE）。
 
 !!! info "API"
 
@@ -603,32 +608,6 @@
     ```
 
     - `@0`, `@1`, ... 占位符实现安全查询执行
-
-### ![](../assets/images/IconSK.webp)`SQL_CONNECTION_OPEN` — 便利 DB 连接函数
-!!! summary ""
-
-    在 `sav/sql/` 目录下自动创建 SQLite 数据库连接。同名连接已存在时自动关闭并重建。
-
-!!! info "API"
-
-    ``` { #language-erbapi }
-    SQL_CONNECTION_OPEN name
-    ```
-
-!!! warning "注意"
-
-    `name` 参数会进行非法字符和 `..` 验证。防止 ERB 脚本突破 `sav/sql/` 目录。
-
-### ![](../assets/images/IconSK.webp)`BITMAP_CACHE_ENABLE` — 位图缓存控制
-!!! summary ""
-
-    切换位图缓存的启用/禁用。
-
-!!! info "API"
-
-    ``` { #language-erbapi }
-    BITMAP_CACHE_ENABLE flag
-    ```
 
 ### ![](../assets/images/IconSK.webp)`STRICT_FONT_FALLBACK` — 严格字体回退
 !!! summary ""
@@ -710,11 +689,11 @@
 | 文件→Sprite | ❌ | ✅ SPRITECREATEFROMFILE | 无需GCREATE |
 | 图像图层 | 仅CBG | ✅ SETIMAGELAYER系 | depth/透明度/颜色矩阵 |
 | 渲染控制 | ❌ | ✅ ANIMETIMER/TEXT_DRAWING_MODE/SKIA_QUALITY | |
-| 多边形绘制 | ❌ | ✅ G_POLYGON系 | 仅SkiaSharp模式 |
+| 多边形绘制 | ❌ | ✅ G_POLYGON系 | 从DotNet版移植·仅SkiaSharp模式 |
 | 文字装饰线 | ❌ | ✅ 下划线/删除线 | FONTSTYLE扩展 |
 | 文本背景色控制 | ❌ | ✅ TEXT_BGC_ON/OFF | |
 | 渲染后端 | ❌ | ✅ Auto/OpenGL/CPU | |
-| 引用参数 | ❌ | ✅ #REF/#REFS/OUT | |
+| 引用参数 | 仅数组 | ✅ 标量+OUT | #REF/#REFF/OUT新增 |
 | CBGSETSPRITE扩展 | 基础 | ✅ 缩放/透明度/CM | |
 | SPRITECREATE扩展 | 基础 | ✅ 偏移/目标尺寸 | |
 | 图像翻转 | ❌ | ✅ 负尺寸翻转 | |

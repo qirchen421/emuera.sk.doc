@@ -447,8 +447,7 @@
 | 函数名                                                                                   | 参数                                            | 返回值          |
 | :--------------------------------------------------------------------------------------- | :---------------------------------------------- | :-------------- |
 | ![](../assets/images/IconEmuera.webp)[`HTML_PRINT`](./HTML_PRINT.md)                     | `string`                                        | 无            |
-| ![](../assets/images/IconSK.webp)[`HTML_PRINTC`](./HTML_PRINTC.md)                   | `string`{, `int`}                               | 无            |
-| ![](../assets/images/IconSK.webp)[`HTML_PRINTLC`](./HTML_PRINTC.md)                  | `string`{, `int`}                               | 无            |
+| ![](../assets/images/IconSK.webp)[<code>HTML_PRINT(C\|LC)</code>](./HTML_PRINTC.md)                 | `string`{, `int`}                               | 无            |
 | ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md)               | `string`(, `integerVariable`, `stringVariable`) | `int`, `string` |
 | ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)   | 无                                            | `string`        |
 | ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md)     | `int`                                           | `string`        |
@@ -549,7 +548,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconEmuera.webp)[`CBGCLEARBUTTON`](./CBGCLEARBUTTON.md)           | 无                                                                                    | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CBGREMOVERANGE`](./CBGREMOVERANGE.md)           | `int`, `int`                                                                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)             | `int`                                                                                   | 无     |
-| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)             | 无                                                                                    | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)             | 无                                                                                    | `int`    |
 | ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)                         | `int`, `string`(, `int`, `int`)                                                         | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                           | `int`                                                                                   | `string` |
 | ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)                   | `int`                                                                                   | `int`    |

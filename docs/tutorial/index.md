@@ -67,10 +67,19 @@
 | [関数とCALL](call.md) | @ラベル、CALL/JUMP、RETURN、引数渡し、INPUT |
 | [変数宣言システム](variable-declaration.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC |
 | [ERBファイル形式拡張](erb-format-extension.md) | 行連結、#DIM/#DIMS、#FUNCTION、条件付きコンパイル |
-| [イベント関数](event-functions.md) | イベント関数とシステム関数、#PRI/#LATER/#SINGLE/#ONLY |
 | [コマンド vs 式](command-vs-expression.md) | コマンド構文と式構文の境界、RESULT汚染、CALLF |
 
-### 第5章：HTML・グラフィック
+### 第5章：エンジン特性
+
+> エンジンに内蔵されたランタイム特性——ステートマシン、イベントフック、キャラクターデータシステム。これらは言語構文ではなく、エンジンがあらかじめ用意したスケジューリング機構である。
+
+| トピック | 内容 |
+|:---|:---|
+| [ステートマシンフロー](system-flow.md) | TITLE→FIRST→SHOP→TRAINサイクル、BEGIN命令、二状態モデル |
+| [イベント関数](event-functions.md) | @EVENTFIRST/@EVENTSHOP/@EVENTLOAD、#PRI/#LATER、BEFORE_THROW/BEFORE_ERROR |
+| [キャラクター変数](../Emuera/variables.md) | キャラ番号システム（MASTER/TARGET/ASSI）、キャラ変数（CFLAG/TALENT/ABL）、キャラ管理命令 |
+
+### 第6章：HTML・グラフィック
 
 > リッチな表示とグラフィックを扱う
 

@@ -7,10 +7,10 @@ hide:
 
 | Function Name                                                                  | Parameters          | Returns |
 | :----------------------------------------------------------------------------- | :------------------ | :------ |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_DRAW`](./G_POLYGON.md)        | `int`               | `int`   |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_FILL`](./G_POLYGON.md)        | `int`               | `int`   |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.md)   | `int`, `int`, `int` | `int`   |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.md) | `int`               | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_DRAW`](./G_POLYGON.md)        | `int`               | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_FILL`](./G_POLYGON.md)        | `int`               | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.md)   | `int`, `int`, `int` | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.md) | `int`               | `int`   |
 
 !!! info "API"
 

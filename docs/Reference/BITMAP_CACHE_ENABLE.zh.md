@@ -25,3 +25,14 @@ hide:
 !!! hint "提示"
 
     该功能同时支持指令和表达式函数两种形式。
+
+!!! skia "Skia版的变更"
+
+    | 项目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `BITMAP_CACHE_ENABLE` | 式中函数（有返回值） | 命令（无返回值） |
+
+    EM+EE 中作为式中函数实现，Skia 版重构为命令。功能本身无变化。
+
+### 相关项目
+- [Skia版规格变更一览](../Skia/Skia_Summary.zh.md#changed-commands)

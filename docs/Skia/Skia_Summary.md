@@ -59,16 +59,14 @@
 | ![](../assets/images/IconSK.webp) `HTML_PRINTC` | 命令 | HTML文字列を右寄せ出力 | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `HTML_PRINTLC` | 命令 | HTML文字列を左寄せ出力（行幅計算付き） | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
 | ![](../assets/images/IconSK.webp) `SPRITECREATEFROMFILE` | 式中関数 | 画像ファイルから直接スプライト作成 | [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.md) |
-| ![](../assets/images/IconSK.webp) `SETANIMETIMER` | 命令 | アニメーションフレーム間隔の設定 | [SETANIMETIMER](../Reference/SETANIMETIMER.md) |
-| ![](../assets/images/IconSK.webp) `GETANIMETIMER` | 式中関数 | アニメーションフレームタイマーの取得 | [SETANIMETIMER](../Reference/SETANIMETIMER.md) |
 | ![](../assets/images/IconSK.webp) `SET_TEXT_DRAWING_MODE` | 命令 | テキスト描画パイプラインの設定 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
 | ![](../assets/images/IconSK.webp) `GET_TEXT_DRAWING_MODE` | 式中関数 | テキスト描画パイプラインの取得 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
 | ![](../assets/images/IconSK.webp) `SET_SKIA_QUALITY` | 命令 | レンダリング品質の設定 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
 | ![](../assets/images/IconSK.webp) `GET_SKIA_QUALITY` | 式中関数 | レンダリング品質の取得 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_DRAW` | 命令 | 多角形の輪郭を描画 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_FILL` | 命令 | 多角形を塗りつぶし | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_POINT_ADD` | 命令 | 多角形の頂点を追加 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `G_POLYGON_POINT_CLEAR` | 命令 | 多角形の全頂点をクリア | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_DRAW` | 命令 | 多角形の輪郭を描画 | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_FILL` | 命令 | 多角形を塗りつぶし | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_ADD` | 命令 | 多角形の頂点を追加 | [G_POLYGON](../Reference/G_POLYGON.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_CLEAR` | 命令 | 多角形の全頂点をクリア | [G_POLYGON](../Reference/G_POLYGON.md) |
 | ![](../assets/images/IconSK.webp) `TEXT_BGC_ON` | 命令 | テキスト背景色表示を有効化 | [TEXT_BGC](../Reference/TEXT_BGC.md) |
 | ![](../assets/images/IconSK.webp) `TEXT_BGC_OFF` | 命令 | テキスト背景色表示を無効化 | [TEXT_BGC](../Reference/TEXT_BGC.md) |
 | ![](../assets/images/IconSK.webp) `SQL_ESCAPE` | 式中関数 | 文字列のSQLエスケープ | [SQL_PARAM](../Reference/SQL_PARAM.md) |
@@ -77,8 +75,7 @@
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_LONG` | 式中関数 | パラメータ化クエリ実行（スカラーlong） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_STRING` | 式中関数 | パラメータ化クエリ実行（スカラーstring） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_FLOAT` | 式中関数 | パラメータ化クエリ実行（スカラーfloat） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利関数：sav/sql/下にDB接続を作成 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
-| ![](../assets/images/IconSK.webp) `BITMAP_CACHE_ENABLE` | 命令 | ビットマップキャッシュの有効/無効 | [BITMAP_CACHE_ENABLE](../Reference/BITMAP_CACHE_ENABLE.md) |
+| ![](../assets/images/Icondotnet.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利関数：sav/sql/下にDB接続を作成 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
 | ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 厳格フォントフォールバックモード | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中関数 | NAMEからキャラ番号を逆査 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中関数 | NICKNAMEからキャラ番号を逆査 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
@@ -86,8 +83,20 @@
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中関数 | MASTERNAMEからキャラ番号を逆査 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
 | ![](../assets/images/Icondotnet.webp) `MATCHALL` | 式中関数 | 配列の全量検索（変数参照） | [MATCHALL](../Reference/MATCHALL.md) |
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中関数 | 配列の全量検索（文字列変数名） | [MATCHALL](../Reference/MATCHALL.md) |
+| ![](../assets/images/IconSK.webp) `BEFORE_THROW` | イベント関数 | THROW スロー前に呼び出し | [イベント関数](../tutorial/event-functions.md#before_throw) |
+| ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | イベント関数 | エラー発生時に初回呼び出し | [イベント関数](../tutorial/event-functions.md#before_error) |
 
 ---
+
+### ![](../assets/images/IconSK.webp)エラー処理イベント（SK専用）
+!!! summary ""
+
+    `BEFORE_THROW` と `BEFORE_ERROR` の2つのイベント関数を追加し、スクリプトレベルのエラー処理能力を提供する。
+
+    - **`BEFORE_THROW`**：`THROW` 命令で例外がスローされる前に呼び出し、スクリプトによる例外のインターセプトと処理を許可
+    - **`BEFORE_ERROR`**：任意のエラーが最初に発生した時に呼び出し、統一的なエラー処理フックを提供
+    - イベント関数が存在する場合、例外のスローが遅延され、スクリプトはクリーンアップやリカバリ操作を行うことが可能
+    - 再帰呼び出し防止：イベント関数内で再度エラーが発生した場合、イベントは再トリガーされず直接処理される
 
 ### ![](../assets/images/IconSK.webp)SkiaSharpレンダリングエンジン { #skia-sharp }
 !!! summary ""
@@ -191,30 +200,17 @@
     REND
     ```
 
-### ![](../assets/images/IconSK.webp)参照パラメータ（#REF/#REFS/OUT）
+### ![](../assets/images/IconSK.webp)参照パラメータ（REF/OUT）
 !!! summary ""
 
-    関数引数の参照渡しと出力パラメータをサポート。
+    EM+EEの配列参照（`#DIM REF`）を拡張し、スカラー参照とOUT パラメータを追加。
 
-!!! info "API"
+    - スカラー参照：`#REF X` / `#REFS X` / `#REFF X` — 単一要素の参照渡し（EM+EEは配列全体のみ）
+    - OUT パラメータ：`#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — 省略可能なスカラー参照（省略時は書き込み破棄）
 
-    ``` { #language-erbapi }
-    @FUNC_NAME(L_val, L_str)
-    #DIM L_val
-    #DIMS L_str
-    #REF L_val
-    #REFS L_str
-    ```
+!!! warning "注意"
 
-    ``` { #language-erbapi }
-    @FUNC_NAME(L_out, L_out_str)
-    #DIM OUT L_out
-    #DIMS OUT L_out_str
-    ```
-
-    - `#REF L_val` / `#REFS L_str`：スカラー参照渡し（Dimension=0）。先に `#DIM`/`#DIMS` で変数を宣言してから、`#REF`/`#REFS` で参照パラメータとして渡す必要がある
-    - `#DIM OUT L_out` / `#DIMS OUT L_out_str`：省略可能な出力パラメータ。省略時は書き込みが黑洞化（NullRefTerm）され、エラーにならない
-    - OUT + VARIADIC の組み合わせ、ネスト呼び出し、CALLFORM/TRYCALL対応
+    詳細は[変数宣言チュートリアル](../tutorial/variable-declaration.md#ref)を参照。
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> 疎配列ストレージ
 !!! summary ""
@@ -285,48 +281,7 @@
 ### ![](../assets/images/IconSK.webp)`SETBGIMAGE` パラメータ解析の修正
 !!! summary ""
 
-    **これは新規パラメータではない**。`depth` と `opacity` パラメータは emuera.em 上流ですべての実装早就に存在していた。
-    本修正は**パラメータ解析方式**：`FORM_STR_ANY` から型付きの `SP_SETBGIMAGE` に変更したもの。
-    変数引数がリテラル文字列として扱われるバグを修正した。
-
-!!! info "API"
-
-    | パラメータ | 型 | 省略可 | デフォルト | 説明 |
-    |:---|:---|:---:|:---:|:---|
-    | `resourceName` | `string` | ❌ | — | リソース名（CSV で定義） |
-    | `depth` | `int` | ✅ | `0` | レイヤーの深度。値が小さいほど前に描画される。負数を指定すると背景を前景の前に配置可能 |
-    | `opacity` | `int` | ✅ | `255` | 不透明度。範囲 0～255、0=完全透明、255=完全不透明 |
-
-!!! example "用例"
-
-    ```erb
-    ; 基本用法：背景画像を設定（100% 不透明度）
-    SETBGIMAGE "背景_1"
-
-    ; 半透明背景を設定
-    SETBGIMAGE "背景_1", 0, 128   ; 50% 透明度
-
-    ; 前景背景：depth=-1 は depth=0 より前に描画
-    SETBGIMAGE "背景_天空", -1
-    SETBGIMAGE "背景_前景", 0
-    ```
-
-!!! example "変数引数の違い"
-
-    旧 `FORM_STR_ANY` と新 `SP_SETBGIMAGE` の処理の違い：
-
-    ```erb
-    #DIMS temp_name
-    temp_name = "小帽_笑_3"
-    SETBGIMAGE temp_name
-    ```
-
-    | バージョン | 処理方式 | 結果 |
-    |:---|:---|:---|
-    | emuera.em | `FORM_STR_ANY` が `temp_name` をリテラル `"temp_name "` として解析 → その名前のインデックスを検索 | ❌ 黙って失敗 |
-    | lazyloading 版 | 型付き `SP_SETBGIMAGE` が変数値を読み取り `"小帽_笑_3"` → リソース `"小帽_笑_3"` を検索 | ✅ 正常工作 |
-
-    **根本原因**：`FORM_STR_ANY` は引数を FORM 文字列として解析するため、変数名がリテラル文字列として扱われてしまう。`| SetBGImage temp_name` が変数値を渡す直感に反している。
+    `resourceName` パラメータの解析方式を `FORM_STR_ANY` から型付き文字列式に変更。変数引数がリテラル文字列として扱われるバグを修正。詳細は[BACKGROUND](../Reference/BACKGROUND.md)を参照。
 
 ### ![](../assets/images/IconSK.webp)`HTML_PRINT`の`display`属性（DotNet同期）
 !!! summary ""
@@ -371,6 +326,68 @@
 !!! summary ""
 
     `EXISTVAR`に第二引数を追加。第二引数が非0の場合、変数名の存在に加えてストレージセルの存在も確認する。
+
+### ![](../assets/images/IconSK.webp)`SETANIMETIMER`の命令化・`GETANIMETIMER`の追加
+!!! summary ""
+
+    EM+EEでは`SETANIMETIMER`は式中関数（`FunctionMethod`）として実装され、常に`1`を返す仕様でした。Skia版では命令（`AInstruction`）に再実装し、戻り値を持たない純粋な命令に変更しました。また、現在のタイマー値を取得する`GETANIMETIMER`式中関数を新規追加しました。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    SETANIMETIMER time
+    int GETANIMETIMER
+    ```
+
+    | 項目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `SETANIMETIMER` | 式中関数（戻り値: 常に`1`） | 命令（戻り値なし） |
+    | `GETANIMETIMER` | ❌ 存在しない | ✅ 式中関数（現在のタイマー値を返す） |
+
+!!! warning "注意"
+
+    EM+EEでは`SETANIMETIMER`を式中関数として呼び出すことができましたが、Skia版では命令のみ対応です。EM+EEのERBで`RESULT = SETANIMETIMER(100)`のような使い方をしている場合、Skia版ではコンパイルエラーになります。
+
+### ![](../assets/images/Iconetc.webp)`BITMAP_CACHE_ENABLE`の命令化
+!!! summary ""
+
+    EM+EEでは`BITMAP_CACHE_ENABLE`は式中関数（`FunctionMethod`）として実装されていました。Skia版では命令（`AInstruction`）に再実装し、戻り値を持たない純粋な命令に変更しました。機能自体に変更はありません。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    BITMAP_CACHE_ENABLE flag
+    ```
+
+    | 項目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `BITMAP_CACHE_ENABLE` | 式中関数（戻り値あり） | 命令（戻り値なし） |
+
+!!! warning "注意"
+
+    EM+EEでは`BITMAP_CACHE_ENABLE`を式中関数として呼び出すことができましたが、Skia版では命令のみ対応です。
+
+### ![](../assets/images/Icondotnet.webp)`SQL_CONNECTION_OPEN`のセキュリティ強化
+!!! summary ""
+
+    DotNet版で追加された便利関数`SQL_CONNECTION_OPEN`をSkia版に移植しましたが、DotNet版のパストラバーサル脆弱性とPRAGMA設定の問題を修正しています。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    SQL_CONNECTION_OPEN name
+    ```
+
+    | 項目 | DotNet版 | Skia版 |
+    |:---|:---|:---|
+    | PRAGMA設定 | `journal_mode = OFF; synchronous = OFF` | `journal_mode = WAL; synchronous = NORMAL` |
+    | クラッシュ安全性 | ❌ データベース破損リスクあり | ✅ クラッシュ時もデータベース安全 |
+    | `name`パス検証 | ❌ なし（パストラバーサル脆弱性） | ✅ 不正文字・`..`を検証 |
+    | DB保存先 | `sav/temp_db/` | `sav/sql/` |
+
+!!! warning "注意"
+
+    `name`パラメータには不正文字と`..`の検証が行われる。ERBスクリプトが`sav/sql/`ディレクトリを突破することを防止する。DotNet版のERBで`SQL_CONNECTION_OPEN "../../etc/exploit"`のような呼び出しが可能だったが、Skia版では`CodeEE`が投げられる。
 
 ---
 
@@ -548,10 +565,10 @@
     int SPRITECREATEFROMFILE spriteName, filePath{, x, y, width, height}
     ```
 
-### ![](../assets/images/IconSK.webp)`G_POLYGON`系 — 多角形描画
+### ![](../assets/images/Icondotnet.webp)`G_POLYGON`系 — 多角形描画
 !!! summary ""
 
-    多角形の描画・塗りつぶしを行う。SkiaSharpモードでのみ利用可能（GDIモードではCodeEE）。
+    DotNet版からの移植。多角形の描画・塗りつぶしを行う。SkiaSharpモードでのみ利用可能（GDIモードではCodeEE）。
 
 !!! info "API"
 
@@ -591,32 +608,6 @@
     ```
 
     - `@0`, `@1`, ... プレースホルダによる安全なクエリ実行
-
-### ![](../assets/images/IconSK.webp)`SQL_CONNECTION_OPEN` — 便利DB接続関数
-!!! summary ""
-
-    `sav/sql/` ディレクトリ下にSQLiteデータベース接続を自動作成。同名接続が存在する場合は自動的に閉じて再構築する。
-
-!!! info "API"
-
-    ``` { #language-erbapi }
-    SQL_CONNECTION_OPEN name
-    ```
-
-!!! warning "注意"
-
-    `name`パラメータには不正文字と`..`の検証が行われる。ERBスクリプトが`sav/sql/`ディレクトリを突破することを防止する。
-
-### ![](../assets/images/IconSK.webp)`BITMAP_CACHE_ENABLE` — ビットマップキャッシュ制御
-!!! summary ""
-
-    ビットマップキャッシュの有効/無効を切り替える。
-
-!!! info "API"
-
-    ``` { #language-erbapi }
-    BITMAP_CACHE_ENABLE flag
-    ```
 
 ### ![](../assets/images/IconSK.webp)`STRICT_FONT_FALLBACK` — 厳格フォントフォールバック
 !!! summary ""
@@ -698,11 +689,11 @@
 | ファイル→スプライト | ❌ | ✅ SPRITECREATEFROMFILE | GCREATE不要 |
 | 画像レイヤー | CBGのみ | ✅ SETIMAGELAYER系 | depth/透明度/カラーマトリクス |
 | レンダリング制御 | ❌ | ✅ ANIMETIMER/TEXT_DRAWING_MODE/SKIA_QUALITY | |
-| 多角形描画 | ❌ | ✅ G_POLYGON系 | SkiaSharpモード限定 |
+| 多角形描画 | ❌ | ✅ G_POLYGON系 | DotNet版から移植・SkiaSharpモード限定 |
 | 文字装飾線 | ❌ | ✅ 下線/取り消し線 | FONTSTYLE拡張 |
 | テキスト背景色制御 | ❌ | ✅ TEXT_BGC_ON/OFF | |
 | レンダリングバックエンド | ❌ | ✅ Auto/OpenGL/CPU | |
-| 参照パラメータ | ❌ | ✅ #REF/#REFS/OUT | |
+| 参照パラメータ | 配列のみ | ✅ スカラー+OUT | #REF/#REFF/OUT追加 |
 | CBGSETSPRITE拡張 | 基本 | ✅ 縮尺/透明度/CM | |
 | SPRITECREATE拡張 | 基本 | ✅ オフセット/ターゲットサイズ | |
 | 画像反転 | ❌ | ✅ 負サイズで反転 | |

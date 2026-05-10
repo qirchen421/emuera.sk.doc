@@ -59,8 +59,11 @@ nav:
           - tutorial/call.md
           - tutorial/variable-declaration.md
           - tutorial/erb-format-extension.md
-          - tutorial/event-functions.md
           - tutorial/command-vs-expression.md
+      - エンジン特性:
+          - tutorial/system-flow.md
+          - tutorial/event-functions.md
+          - Emuera/variables.md
       - HTML・グラフィック:
           - tutorial/html-syntax.md
   - 仕様概要:
@@ -450,8 +453,6 @@ nav:
         - manual/erawiki-vscode-git.md
     - その他資料:
         - manual/glossary.md
-  - Changelog:
-      - Changelog/README.md
 
 plugins:
   - search:

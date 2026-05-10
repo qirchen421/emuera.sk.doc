@@ -25,3 +25,14 @@ hide:
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
+
+!!! skia "Skia版の変更点"
+
+    | 項目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `BITMAP_CACHE_ENABLE` | 式中関数（戻り値あり） | 命令（戻り値なし） |
+
+    EM+EEでは式中関数として実装されていましたが、Skia版では命令に再実装されました。機能自体に変更はありません。
+
+### 関連項目
+- [Skia版仕様変更一覧](../Skia/Skia_Summary.md#changed-commands)

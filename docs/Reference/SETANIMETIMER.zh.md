@@ -8,7 +8,7 @@ hide:
 | 函数名                                                                         | 参数  | 返回值 |
 | :----------------------------------------------------------------------------- | :---- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)     | `int` | 无     |
-| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)     | 无    | `int`  |
+| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)     | 无    | `int`  |
 
 !!! info "API"
 
@@ -33,5 +33,15 @@ hide:
 
     `SETANIMETIMER` 仅支持命令。`GETANIMETIMER` 支持命令和表达式函数两种形式。
 
+!!! skia "Skia版的变更"
+
+    | 项目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `SETANIMETIMER` | 式中函数（返回值: 总是`1`） | 命令（无返回值） |
+    | `GETANIMETIMER` | ❌ 不存在 | ✅ 式中函数（返回当前计时器值） |
+
+    EM+EE 中 `SETANIMETIMER` 作为式中函数实现，可以使用 `RESULT = SETANIMETIMER(100)` 的方式调用。Skia 版将其重构为命令，因此这种写法会编译报错。
+
 ### 相关项目
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
+- [Skia版规格变更一览](../Skia/Skia_Summary.zh.md#changed-commands)

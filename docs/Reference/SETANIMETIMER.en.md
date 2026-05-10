@@ -8,7 +8,7 @@ hide:
 | Function name                                                        | Arguments | Return |
 | :------------------------------------------------------------------- | :-------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md) | `int`     | none   |
-| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md) | none      | `int`  |
+| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.md) | none      | `int`  |
 
 !!! info "API"
 
@@ -33,5 +33,15 @@ hide:
 
     `SETANIMETIMER` is command only. `GETANIMETIMER` supports both command and expression function forms.
 
-### Related Items
+!!! skia "Skia Edition Changes"
+
+    | Item | EM+EE | Skia Edition |
+    |:---|:---|:---|
+    | `SETANIMETIMER` | Expression function (returns: always `1`) | Command (no return value) |
+    | `GETANIMETIMER` | ❌ Does not exist | ✅ Expression function (returns current timer value) |
+
+    In EM+EE, `SETANIMETIMER` was implemented as an expression function, allowing calls like `RESULT = SETANIMETIMER(100)`. In the Skia edition, it has been reimplemented as a command, so such usage will cause a compilation error.
+
+### See Also
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
+- [Skia Edition Specification Changes](../Skia/Skia_Summary.md#changed-commands)

@@ -242,7 +242,7 @@ BEGIN SHOP
 PRINTW Save data loaded!
 ```
 
-### `@BEFORE_THROW` (SK Exclusive)
+### `@BEFORE_THROW` (SK Exclusive) { #before_throw }
 
 **Trigger timing**: Before the `THROW` instruction throws an exception.
 
@@ -258,7 +258,7 @@ PRINTW Exception detected, attempting recovery...
 ; If the function ends normally, the exception will continue to be thrown
 ```
 
-### `@BEFORE_ERROR` (SK Exclusive)
+### `@BEFORE_ERROR` (SK Exclusive) { #before_error }
 
 **Trigger timing**: When any error first occurs (including runtime errors, script errors, etc.).
 

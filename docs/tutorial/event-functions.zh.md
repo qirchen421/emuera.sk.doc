@@ -242,7 +242,7 @@ BEGIN SHOP
 PRINTW 存档加载完成！
 ```
 
-### `@BEFORE_THROW` （SK 专属）
+### `@BEFORE_THROW` （SK 专属） { #before_throw }
 
 **触发时机**：执行 `THROW` 指令抛出异常前。
 
@@ -260,7 +260,7 @@ PRINTW 检测到异常，尝试恢复...
 ; 如果函数正常结束，异常会继续抛出
 ```
 
-### `@BEFORE_ERROR` （SK 专属）
+### `@BEFORE_ERROR` （SK 专属） { #before_error }
 
 **触发时机**：任何错误第一次发生时（包括运行时错误、脚本错误等）。
 

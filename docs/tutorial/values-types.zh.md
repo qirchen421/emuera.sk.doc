@@ -289,7 +289,7 @@ ABL:"技巧" += 1           ; 字符串索引（如果 abl.csv 中有定义）
 
 ---
 
-## 变量的本质：没有标量，只有数组
+## 数组的本质：没有标量，只有数组
 
 ERABASIC 中没有真正的标量（scalar）变量——**所有变量都是数组**。这是理解 ERABASIC 变量系统的关键。
 
@@ -335,8 +335,8 @@ FLAG:(L_IDX:2)
 角色数组（如 `CFLAG`、`TALENT`、`EXP` 等）的第一维默认填入 `TARGET`，可以省略。这造成了一个隐蔽的陷阱：
 
 ```erb
-#DIM L_VAR = 5 ,4, 10
-; ❌ 语义错误：意图是 CFLAG:TARGET:(L_VAR:2)
+#DIM L_VAR = 5
+; ❌ 语义错误：意图是 CFLAG:TARGET:L_VAR:0
 CFLAG:L_VAR:2
 
 ; 实际解析过程：
@@ -345,8 +345,8 @@ CFLAG:L_VAR:2
 ; 3. 但 L_VAR 本身是数组，L_VAR 会展开为 L_VAR:0
 ; 4. 最终：CFLAG:TARGET:(L_VAR:0):2  → 错误的维度结构
 
-; ✅ 正确：显式写出角色编号或者用括号包裹下标表达式
-CFLAG:(L_VAR:2)
+; ✅ 正确：显式写出角色编号
+CFLAG:TARGET:L_VAR
 ```
 
 虽然 `CFLAG:L_VAR:2` 可以通过语法检查，但它的解析路径完全不是开发者期望的。始终显式写出角色数组的第一维（如 `CFLAG:TARGET:`）可以避免此类陷阱。
@@ -355,7 +355,7 @@ CFLAG:(L_VAR:2)
 
 ```erb
 ; ❌ 语义错误：TALNET 是二维数组，TALENT 是变量名
-TALNET:TALENT:5（本想写 TALNET:TARGET:5）
+TALNET:TALENT:5
 
 ; 实际解析：
 ; 1. TALNET 是二维数组 → 需要两个索引
@@ -364,7 +364,7 @@ TALNET:TALENT:5（本想写 TALNET:TARGET:5）
 ; 4. 语法正确，但语义上绝对不是开发者想要的效果
 ```
 
-`TALNET:TALENT:5` 是**语义错误但语法有效**的典型案例。引擎不会报错，但实际访问的是 `TALNET:(TALENT:TARGET:0):5` —— 将 `TALENT` 变量本身的值作为 TALNET 的第一维下标来使用。
+`TALNET:TALENT:5` 是**语法有效但语义错误**的典型案例。引擎不会报错，但实际访问的是 `TALNET:(TALENT:TARGET:0):5` —— 将 `TALENT` 变量本身的值作为 TALNET 的第一维下标来使用。
 
 ### 规则总结
 

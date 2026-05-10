@@ -447,8 +447,7 @@
 | 関数名                                                                                   | 引数                                            | 戻り値          |
 | :--------------------------------------------------------------------------------------- | :---------------------------------------------- | :-------------- |
 | ![](../assets/images/IconEmuera.webp)[`HTML_PRINT`](./HTML_PRINT.md)                     | `string`                                        | なし            |
-| ![](../assets/images/IconSK.webp)[`HTML_PRINTC`](./HTML_PRINTC.md)                   | `string`{, `int`}                               | なし            |
-| ![](../assets/images/IconSK.webp)[`HTML_PRINTLC`](./HTML_PRINTC.md)                  | `string`{, `int`}                               | なし            |
+| ![](../assets/images/IconSK.webp)[<code>HTML_PRINT(C\|LC)</code>](./HTML_PRINTC.md)                 | `string`{, `int`}                               | なし            |
 | ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md)               | `string`(, `integerVariable`, `stringVariable`) | `int`, `string` |
 | ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)   | なし                                            | `string`        |
 | ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md)     | `int`                                           | `string`        |
@@ -549,7 +548,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEmuera.webp)[`CBGCLEARBUTTON`](./CBGCLEARBUTTON.md)           | なし                                                                                    | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CBGREMOVERANGE`](./CBGREMOVERANGE.md)           | `int`, `int`                                                                            | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)             | `int`                                                                                   | なし     |
-| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)             | なし                                                                                    | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)             | なし                                                                                    | `int`    |
 | ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md)                         | `int`, `string`(, `int`, `int`)                                                         | `int`    |
 | ![](../assets/images/IconEE.webp)[`GGETFONT`](./GGETFONT.md)                           | `int`                                                                                   | `string` |
 | ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md)                   | `int`                                                                                   | `int`    |

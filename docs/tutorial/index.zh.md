@@ -67,18 +67,17 @@
 | [函数与 CALL](call.zh.md) | @标签、CALL/JUMP、RETURN、参数传递、INPUT |
 | [变量声明系统](variable-declaration.zh.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC |
 | [ERB 文件格式扩展](erb-format-extension.zh.md) | 行连接、#DIM/#DIMS、#FUNCTION、条件编译 |
-| [事件函数](event-functions.zh.md) | 事件函数与系统函数、#PRI/#LATER/#SINGLE/#ONLY |
 | [命令 vs 表达式](command-vs-expression.zh.md) | 命令语法与表达式语法的边界、RESULT 污染、CALLF |
 
-### 第5章：角色系统
+### 第5章：引擎特性
 
-> 理解角色数据结构和操作
+> 理解引擎内置的运行时特性——状态机、事件钩子、角色数据系统。这些不是语言语法，而是引擎为你预设好的调度机制。
 
 | 主题 | 内容 |
 |:---|:---|
-| [角色编号系统](../Emuera/variables.zh.md#角色编号系统说明) | 角色注册编号 vs 角色编号、MASTER/TARGET/ASSI |
-| [角色变量操作](../Emuera/variables.zh.md) | 角色变量分类、访问方式、常用角色变量 |
-| [角色管理指令](../Reference/ADDCHARA.zh.md) | ADDCHARA/DELCHARA/COPYCHARA/SWAPCHARA 等 |
+| [状态机流程](system-flow.zh.md) | TITLE→FIRST→SHOP→TRAIN 循环、BEGIN 指令、两状态模型 |
+| [事件函数](event-functions.zh.md) | @EVENTFIRST/@EVENTSHOP/@EVENTLOAD、#PRI/#LATER、BEFORE_THROW/BEFORE_ERROR |
+| [角色变量](../Emuera/variables.zh.md) | 角色编号系统（MASTER/TARGET/ASSI）、角色变量（CFLAG/TALENT/ABL）、角色管理指令 |
 
 ### 第6章：HTML 与图形
 

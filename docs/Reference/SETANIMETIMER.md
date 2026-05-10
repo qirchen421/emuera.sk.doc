@@ -8,7 +8,7 @@ hide:
 | 関数名                                                                         | 引数  | 戻り値 |
 | :----------------------------------------------------------------------------- | :---- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md)     | `int` | なし   |
-| ![](../assets/images/IconEmuera.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)     | なし  | `int`  |
+| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.md)     | なし  | `int`  |
 
 !!! info "API"
 
@@ -33,5 +33,15 @@ hide:
 
     `SETANIMETIMER`は命令のみ対応。`GETANIMETIMER`は命令・式中関数の両方に対応しています。
 
+!!! skia "Skia版の変更点"
+
+    | 項目 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | `SETANIMETIMER` | 式中関数（戻り値: 常に`1`） | 命令（戻り値なし） |
+    | `GETANIMETIMER` | ❌ 存在しない | ✅ 式中関数（現在のタイマー値を返す） |
+
+    EM+EEでは`SETANIMETIMER`は式中関数として実装されており、`RESULT = SETANIMETIMER(100)`のように呼び出すことができました。Skia版では命令に再実装されたため、このような使い方はコンパイルエラーになります。
+
 ### 関連項目
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
+- [Skia版仕様変更一覧](../Skia/Skia_Summary.md#changed-commands)
