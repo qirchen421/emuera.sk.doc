@@ -80,6 +80,25 @@ hide:
 	String expressions can also be used as arguments to `SELECTCASE`.  
 	When a string is specified in `SELECTCASE`, the `CASE` conditions must also be string expressions.
 
+!!! info "Skia Extension: Jump Table Optimization"
+
+    ![](../assets/images/IconSK.webp) Skia introduces **Jump Table** compile-time optimization for `SELECTCASE`. Eligible `CASE` conditions are built into a hash table (`Dictionary`), achieving **O(1) runtime lookup** and significantly improving execution efficiency for multi-branch scenarios.
+
+    **Eligibility Conditions**
+
+    Jump table optimization is applied only when all of the following conditions are met:
+
+    - All `CASE` condition expressions in `SELECTCASE` are **direct values** (i.e., no `TO` or `IS` expressions are used)
+    - All `CASE` values are **compile-time constants** (e.g., literals like `1`, `"hello"`, etc., not variables)
+    - `CASEELSE` can still be used as a default branch as normal
+
+    Jump table optimization is disabled and falls back to traditional linear scanning when:
+
+    - Any `CASE` contains a `TO` expression (range match) or an `IS` expression (conditional match)
+    - Any `CASE` value contains a non-constant expression (e.g., a variable)
+
+    Supports three data types: integer, string, and floating-point.
+
 !!! hint "Hint"
 
     Commands only.

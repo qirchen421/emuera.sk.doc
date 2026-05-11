@@ -84,7 +84,7 @@ hide:
 
 !!! info "Skia 扩展：跳转表优化"
 
-    ![](../assets/images/Icondotnet.webp) Skia 对 `SELECTCASE` 引入了**跳转表（Jump Table）**编译期优化，将符合条件的 `CASE` 条件构建为哈希表（`Dictionary`），实现 **O(1) 运行时查找**，大幅提升多分支场景下的执行效率。
+    ![](../assets/images/IconSK.webp) Skia 对 `SELECTCASE` 引入了**跳转表（Jump Table）**编译期优化，将符合条件的 `CASE` 条件构建为哈希表（`Dictionary`），实现 **O(1) 运行时查找**，大幅提升多分支场景下的执行效率。
 
     **适用条件**
 

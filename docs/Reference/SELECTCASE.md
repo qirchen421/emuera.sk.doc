@@ -84,7 +84,7 @@ hide:
 
 !!! info "Skia 拡張：ジャンプテーブル最適化"
 
-    ![](../assets/images/Icondotnet.webp) Skia は `SELECTCASE` に**ジャンプテーブル（Jump Table）**コンパイル時最適化を導入しました。条件を満たす `CASE` 条件をハッシュテーブル（`Dictionary`）として構築し、**O(1) ランタイム検索**を実現します。
+    ![](../assets/images/IconSK.webp) Skia は `SELECTCASE` に**ジャンプテーブル（Jump Table）**コンパイル時最適化を導入しました。条件を満たす `CASE` 条件をハッシュテーブル（`Dictionary`）として構築し、**O(1) ランタイム検索**を実現します。
 
     **適用条件**
 
