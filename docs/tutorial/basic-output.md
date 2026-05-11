@@ -65,10 +65,10 @@ PRINT系命令は引数タイプによって5種類の派生があり、それ�
 | 命令 | 引数タイプ | 引数の解析方法 | 例 |
 |------|---------|------------|------|
 | `PRINT` | 単純文字列 | そのまま出力、置換なし | `PRINT こんにちは` |
-| `PRINTV` | 整数式 | 評価後に出力 | `PRINTV A + B` |
+| `PRINTV` | 式リスト（各引数が独立して評価） | 整数→数値、文字列→テキスト、自動結合 | `PRINTV A + B, "点"` |
 | `PRINTS` | 文字列式 | 評価後に出力 | `PRINTS NAME:TARGET` |
 | `PRINTFORM` | フォーマット文字列 | FORM構文、補間サポート | `PRINTFORM こんにちは、%NAME%！` |
-| `PRINTFORMS` | フォーマット文字列式 | 先に文字列式として評価し、その後FORMとして解析 | `PRINTFORMS @"こんにちは、%NAME%！"` |
+| `PRINTFORMS` | フォーマット文字列式 | 先に文字列式として評価し、その後FORMとして解析 | `PRINTFORMS L_TEMPLATE` |
 
 ### PRINT — 単純文字列
 
@@ -84,27 +84,33 @@ PRINT %RESULTS%           ; → %RESULTS%（パーセントはリテラル！）
 
     `PRINT` の後ろのテキストは純粋なテキストであり、`{変数}` や `%変数%` は置換されません。変数置換が必要な場合は `PRINTFORM` を使用してください。
 
-### PRINTV — 整数式
+### PRINTV — 式（整数・文字列）
 
-`PRINTV` は後ろの内容を**整数式**として評価し、結果を出力します：
+`PRINTV` は後ろの内容を**式**として評価し、結果を出力します。各引数は独立して評価され、**整数式は数値として、文字列式はテキストとして出力されます**：
 
 ```erb
 #DIM L_VAL = 42
 PRINTV L_VAL              ; → 42
 PRINTV L_VAL * 2          ; → 84
 PRINTV 10 + 20            ; → 30
+
+#DIMS L_NAME = "エリナ"
+PRINTV L_NAME             ; → エリナ（文字列変数）
+PRINTV L_NAME + "の冒険"  ; → エリナの冒険（文字列式）
 ```
 
-`PRINTV` はスペースやカンマで区切って複数の式を受け取り、出力時に結合します：
+`PRINTV` はカンマで区切って複数の式を受け取り、出力時に結合します。各引数の型は異なっていても構いません：
 
 ```erb
-PRINTV L_VAL "点"         ; → 42点（整数と文字列式の結合）
+PRINTV L_VAL, "点"        ; → 42点（整数 + 文字列）
+PRINTV L_VAL, "点", L_NAME ; → 42点エリナ（整数 + 文字列 + 文字列変数）
 ```
 
 !!! tip "PRINTV の引数は式であり、FORM文字列ではない"
 
     `PRINTV` は `SP_PRINTV_ArgumentBuilder` を使用し、引数を式リストとして解析します。
-    整数式は数値として、文字列式はテキストとして出力されます。
+    各引数が独立して評価され、整数式は数値として、文字列式はテキストとして出力されます。
+    そのため `PRINTV` は整数と文字列を混在させることができ、型を统一する必要はありません。
 
 ### PRINTS — 文字列式
 
@@ -140,12 +146,16 @@ PRINTFORM %NAME:TARGET%の冒険          ; → エリナの冒険
 
 ### PRINTFORMS — フォーマット文字列式
 
-`PRINTFORMS` は引数を文字列式として評価した後、結果をFORMとして解析します：
+`PRINTFORMS` は引数を文字列式として評価した後、その結果文字列をFORMとして解析します——つまり、式を使って動的にFORM構文文字列を組み立てられます（HTML文字列の拼接と同様）：
 
 ```erb
-#DIMS L_FMT '= "こんにちは、%NAME:TARGET%！"
-PRINTFORMS L_FMT           ; → こんにちは、エリナ！（先に L_FMT を評価し、FORMとして解析）
-PRINTFORMS @"%L_FMT%"      ; 等価な書き方
+; %...% の中の変数名も動的に組み立て可能
+#DIMS L_VARNAME = "NAME:TARGET"
+#DIMS L_TEMPLATE
+L_TEMPLATE '= "こんにちは、%" + L_VARNAME + "%！"
+; L_TEMPLATE の評価結果 → "こんにちは、%NAME:TARGET%！"
+
+PRINTFORMS L_TEMPLATE      ; 先に L_TEMPLATE を評価し、結果をFORM解析 → こんにちは、エリナ！
 ```
 
 `PRINTFORMS` と `PRINTFORM` の違い：
@@ -289,13 +299,42 @@ ENDDATA
 ; いずれかの果物をランダムに出力
 ```
 
-### PRINTPLAIN — そのまま出力
+### PRINTPLAIN — ボタンを生成しない出力
 
-`PRINTPLAIN` はFORM解析を行わず、文字列をそのまま出力します（`{` や `%` も含む）：
+`PRINTPLAIN` の `PLAIN` 修飾の意味は**ボタンを生成しない**ことです——テキスト中の `[数値]` がクリック可能なボタンに変換されることはありません。
+
+`PLAIN` と `FORM` は**直交**した修飾次元であり、自由に組み合わせることができます：
+
+| 次元 | 制御内容 | 選択肢 |
+|------|---------|-------|
+| `FORM` | `%変数%`/`{式}` 補間の有無 | 有 = 補間する（`FORM_STR` 引数型）/ 無 = 補間しない（`STR` 引数型） |
+| `PLAIN` | `[数値]` のボタン変換の有無 | 有 = ボタンを生成しない / 無 = 通常通りボタンを生成 |
+
+具体的な組み合わせ：
+
+| 命令 | 引数型 | FORM 補間 | ボタン生成 |
+|------|--------|:---------:|:----------:|
+| `PRINT` | `STR` | ❌ | ✅ |
+| `PRINTFORM` | `FORM_STR` | ✅ | ✅ |
+| `PRINTPLAIN` | `STR_NULLABLE` | ❌ | ❌ |
+| `PRINTPLAINFORM` | `FORM_STR_NULLABLE` | ✅ | ❌ |
+
+`PRINTPLAIN` は `STR_NULLABLE` 引数型（`PRINT` と同様に FORM 補間なし）を使用し、さらに `PLAIN` 修飾でボタンを生成しません：
 
 ```erb
-PRINTPLAIN %NAME%           ; → %NAME%（補間なし）
+PRINTPLAIN %NAME%           ; → %NAME%（STR_NULLABLE、FORM 補間なし；PLAIN、ボタン生成なし）
+PRINTPLAINFORM %NAME%       ; → エリナ（FORM_STR_NULLABLE、FORM 補間あり；PLAIN、ボタン生成なし）
 ```
+
+これは `INPUT` ブロッキング時に大きな意味を持ちます——`[0]` や `[100]` が単なるテキストとして表示され、ユーザーはクリックで入力できず、手動で値を入力する必要があります：
+
+```erb
+PRINT [0] クリック可        ; → クリック可能ボタン、クリックで 0 が入力される
+PRINTPLAIN [0] クリック不可  ; → 単なるテキスト、手動入力が必要
+INPUT
+```
+
+詳細は [出力内のボタン——PRINTPLAIN](#prinTPLAIN--ボタンを生成しない出力) および [PRINTPLAIN リファレンス](../Reference/PRINTPLAIN.md) を参照。
 
 ---
 
@@ -352,6 +391,10 @@ INPUT
 PRINTPLAIN [0] これはボタンではない    ; そのまま出力、クリック不可
 ```
 
+**実質的な違い**：`INPUT` ブロッキング時、`PRINT [0] クリック` で生成されたボタンはクリック可能で `0` を自動的に `INPUT` に渡します。一方、`PRINTPLAIN [0] クリック不可` の `[0]` は単なるテキスト——ユーザーは手動で `0` を入力しなければ `INPUT` に受け付けられません。詳しくは「その他の出力命令」の [PRINTPLAIN — ボタンを生成しない出力](#prinTPLAIN--ボタンを生成しない出力) を参照。
+
+`PRINTPLAINFORM` 版も同様です：`PRINTPLAINFORM 価格は {PRICE} 円、選択は [1] 購入` の `[1]` もボタン化**されません**。`PRINTPLAINFORM` は同時に FORM 補間を行います（`{PRICE}` が数値に展開されます）。
+
 ---
 
 ## よくある落とし穴
@@ -364,6 +407,7 @@ PRINTPLAIN [0] これはボタンではない    ; そのまま出力、クリ�
 | 改行の忘れ | `PRINT こんにちは` | `PRINTL こんにちは` | PRINT は改行しない、内容が連結される |
 | FORM内の浮動小数点精度 | `PRINTFORM {PI}` | `PRINTFORM {TOSTRF(PI,"F2")}` | `{}` は浮動小数点の精度制御がない |
 | `[abc]` をボタンにしたい | `PRINTL [abc] 選択肢` | `PRINTL [0] 選択肢` | `[整数]` のみボタンを生成する |
+| `PRINTPLAIN` でボタンを期待 | `PRINTPLAIN [0] はい [1] いいえ\nINPUT` | `PRINT [0] はい [1] いいえ\nINPUT` | `PRINTPLAIN` はボタンを生成しない、手動入力が必要 |
 
 ---
 

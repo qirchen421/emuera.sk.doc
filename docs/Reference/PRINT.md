@@ -12,7 +12,7 @@ hide:
 !!! info "API"
 
     ```  { #language-erbapi }
-    PRINTV(|K|D)(|L|W|N) integerVariable
+    PRINTV(|K|D)(|L|W|N) expression[, expression, ...]
     PRINTS(|K|D)(|L|W|N) stringVariable
     PRINTFORM(|K|D)(|L|W|N) formedString
     PRINTFORMS(|K|D)(|L|W|N) string
@@ -22,7 +22,7 @@ hide:
     ![](../assets/images/Iconeramaker.webp)1つ目の括弧内のキーワードは引数タイプを指定します。
 
     - なし - (<文字列>)
-    - V - (<数式> <数式> ,<数式> ……)
+    - V - (<式> [, <式> ……]) — 各引数が独立して評価され、整数式は数値、文字列式はテキストとして出力
     - S - <文字列式>
     - FORM - (<書式付文字列>)
     - FORMS - <書式付文字列式>
@@ -76,3 +76,4 @@ hide:
 - [PRINTBUTTON](PRINTBUTTON.md)
 - [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
 - [Emueraで追加された記法>書式付き文字列（FORM構文）拡張](../Emuera/expression.md#form_1)
+

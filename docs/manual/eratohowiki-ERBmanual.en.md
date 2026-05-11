@@ -2157,3 +2157,4 @@ Therefore, if you want to write dialogue for virginity loss, use `EXP:0(V Experi
 Note that this method is for pure virgins and won't work for regenerated virgins.
 If you really want to make a branch for regenerated virgins, at the start of training, check if a virgin exists, assign an appropriate value to some CFLAG, and judge by whether V experience is that number + 1.
 For other scenarios like commands that cause virginity loss during development, you can normally use TALENT:0 as a branch condition.
+

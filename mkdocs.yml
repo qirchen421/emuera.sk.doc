@@ -181,6 +181,7 @@ nav:
           - Reference/GROUPCHECK.md
           - Reference/CONVERT.md
           - Reference/BITARRAY.md
+          - Reference/UNCHECKED.md
       - キャラ操作・参照:
           - Reference/ADDCHARA.md
           - Reference/DELCHARA.md
@@ -517,12 +518,14 @@ plugins:
             ジャンプ: Jumps
             コマンド vs 式: Command vs Expression
             変数宣言システム: Variable Declaration System
+            エンジン特性: Engine Features
             HTML タグ構文リファレンス: HTML Tag Syntax Reference
             バージョン進化比較: Version Evolution Comparison
             ファイルタイプと処理順序: File Types and Processing Order
             行タイプと構造: Line Types and Structure
             Skia版: Skia Edition
             Emueraで追加された記法: Syntax Added in Emuera
+            変更ログ: Change Log
             演算: Operations
             フロー図: Flowchart
             ユーザー定義の変数: User-Defined Variables
@@ -630,12 +633,14 @@ plugins:
             ジャンプ: 跳转
             コマンド vs 式: 命令 vs 表达式
             変数宣言システム: 变量声明系统
+            エンジン特性: 引擎特性
             HTML タグ構文リファレンス: HTML 标签语法参考
             バージョン進化比較: 版本演进对照
             ファイルタイプと処理順序: 文件类型与处理顺序
             行タイプと構造: 行类型与结构
             Skia版: Skia版
             Emueraで追加された記法: Emuera中新增的语法
+            変更ログ: 更新日志
             演算: 运算
             フロー図: 流程图
             ユーザー定義の変数: 用户定义的变量

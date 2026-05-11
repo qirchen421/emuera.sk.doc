@@ -7,12 +7,12 @@ hide:
 
 | Function name                                                                                                         | Arguments | Return   |
 | :--------------------------------------------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTSINGLE(|V|S|FORM|FORMS)(|K|D)</code>](./PRINTSINGLE.md) | `string`  | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTSINGLE(\|V\|S\|FORM\|FORMS)(\|K\|D)</code>](./PRINTSINGLE.md) | `string`  | none     |
 
 !!! info "API"
 
     ```  { #language-erbapi }
-    PRINTSINGLEV(|K|D) integerVariable
+    PRINTSINGLEV(|K|D) expression[, expression, ...]
     PRINTSINGLES(|K|D) stringVariable
     PRINTSINGLEFORM(|K|D) formedString
     PRINTSINGLEFORMS(|K|D) string

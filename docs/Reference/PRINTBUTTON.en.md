@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                     | Arguments    | Return   |
 | :------------------------------------------------------------------------------------------------ | :----------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTBUTTON(|C|LC)</code>](./PRINTBUTTON.md) | `string`, `any` | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTBUTTON(\|C\|LC)</code>](./PRINTBUTTON.md) | `string`, `any` | none     |
 
 !!! info "API"
 

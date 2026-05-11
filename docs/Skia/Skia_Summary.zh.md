@@ -173,10 +173,19 @@
     - 整数与浮点数的自动类型转换
     - 角色浮点数变量：CharacterData 中 dataFloat/dataFloatArray/dataFloatArray2D
     - 存档双精度支持
+    - 浮点数类型转换函数：`TOSTRF`（浮点→字符串）、`TOFLOAT`（字符串→浮点）、`TOINT` 扩展（浮点→整数截断）
 
 !!! warning "注意"
 
     Float 型仅在 Skia 版中可用。EM+EE 和原版 Emuera 的 ERB 脚本中会导致编译错误。
+
+!!! info "API"
+
+    | 函数 | 参数 | 返回值 | 说明 |
+    |------|------|--------|------|
+    | ![](../assets/images/IconSK.webp) `TOSTRF` | `float`, `option` | `string` | 浮点→字符串；`option` 为 C# 格式字符串（如 `"F2"`、`"E"`） |
+    | ![](../assets/images/IconSK.webp) `TOFLOAT` | `string` | `float` | 字符串→浮点；解析失败返回 0.0 |
+    | ![](../assets/images/IconSK.webp) `TOINT`（扩展） | `float` | `int` | 浮点→整数，直接截断（非四舍五入） |
 
 ### ![](../assets/images/IconSK.webp)VARIADIC 可变长参数
 !!! summary ""

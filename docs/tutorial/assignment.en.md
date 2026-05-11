@@ -289,7 +289,7 @@ L_INT = 42                ; ✅ Integer assignment
 L_INT = 3.14              ; ⚠️ Float assigned to integer, truncated to 3
 L_STR = Hello             ; ✅ FORM syntax
 L_STR '= "Hello"          ; ✅ String expression
-L_STR = 42                ; ❌ Cannot assign integer to string variable
+L_STR = 42                ; ✅ FORM syntax: "42" (number treated as string literal)
 L_FLOAT = 3.14            ; ✅ Float assignment
 L_FLOAT = 10              ; ✅ Integer automatically converts to float
 ```

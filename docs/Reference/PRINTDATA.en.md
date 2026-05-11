@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                        | Arguments     | Return   |
 | :---------------------------------------------------------------------------------------------------- | :------------ | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTDATA(|K|D)(|L|W)</code>](./PRINTDATA.md) | none          | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTDATA(\|K\|D)(\|L\|W)</code>](./PRINTDATA.md) | none          | none     |
 | ![](../assets/images/IconEmuera.webp)[`DATA`](./PRINTDATA.md)                                        | `string`      | none     |
 | ![](../assets/images/IconEmuera.webp)[`DATAFORM`](./PRINTDATA.md)                                     | `formedString` | none     |
 | ![](../assets/images/IconEmuera.webp)[`DATALIST`](./PRINTDATA.md)                                    | none          | none     |

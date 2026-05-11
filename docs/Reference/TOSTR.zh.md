@@ -8,8 +8,9 @@ hide:
 | 函数名                                                     | 参数            | 返回值   |
 | :--------------------------------------------------------- | :-------------- | :------- |
 | ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.md) | `int`, `option` | `string` |
+| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md) | `float`, `option` | `string` |
 
-!!! info "API"
+!!! info "API — TOSTR"
 
     ```  { #language-erbapi }
 	string TOSTR int, option
@@ -19,6 +20,35 @@ hide:
 	第二个参数可以省略，省略时，其行为与 [`PRINTFORM`](./PRINT.md) 的 `{}` 内相同，即简单地转换为字符串。  
 	此函数内部调用 C# 的 [`Int64.ToString() 函数`](https://learn.microsoft.com/ja-jp/dotnet/api/system.int64.tostring)，可以使用与 C# 相同的格式指定。如果第二个参数不合适，将发生错误。  
 	简单的格式指定示例，请参考同名的可在表达式中使用的函数。格式指定的详细信息，请参考讲解 C# 数值格式字符串的网站。  
+
+!!! info "API — TOSTRF" 
+
+    ![](../assets/images/IconSK.webp) Skia 新增
+
+    ```  { #language-erbapi }
+	string TOSTRF float, option
+    ```
+	将浮点数转换为字符串的命令。
+	第一个参数指定要转换的浮点数，第二个参数以字符串形式指定转换格式。  
+	第二个参数可以省略，省略时直接转换为字符串。  
+	此函数内部调用 C# 的 [`Double.ToString() 函数`](https://learn.microsoft.com/ja-jp/dotnet/api/system.double.tostring)，可以使用与 C# 相同的格式指定。如果第二个参数不合适，将发生错误。  
+
+	常用格式：
+
+	| 格式 | 示例 | 结果 | 说明 |
+	|------|------|------|------|
+	| `"F2"` | `TOSTRF(3.14, "F2")` | `"3.14"` | 固定小数点，2 位 |
+	| `"F4"` | `TOSTRF(3.14, "F4")` | `"3.1400"` | 固定小数点，4 位 |
+	| `"E"` | `TOSTRF(3.14, "E")` | `"3.140000E+000"` | 科学计数法 |
+	| `"G4"` | `TOSTRF(3.14, "G4")` | `"3.14"` | 通用格式，4 位有效数字 |
+	| `"0.00"` | `TOSTRF(3.14, "0.00")` | `"3.14"` | 自定义数字格式 |
+
+	精度+宽度填充需配合 FORM `%...%` 语法：
+
+	``` { #language-erb }
+	PRINTFORML %TOSTRF(PI, "F2"),10%      ; → "      3.14"（右对齐）
+	PRINTFORML %TOSTRF(PI, "F2"),10,LEFT% ; → "3.14      "（左对齐）
+	```
 
 !!! hint "提示"
 
@@ -52,4 +82,5 @@ hide:
     ```
 
 ### 相关项目
-- [TOINT](TOINT.md)
+- [TOINT](TOINT.zh.md)
+- [TOFLOAT](TOFLOAT.zh.md)

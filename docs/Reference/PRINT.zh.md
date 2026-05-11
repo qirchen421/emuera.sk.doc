@@ -12,7 +12,7 @@ hide:
 !!! info "API"
 
     ```  { #language-erbapi }
-    PRINTV(|K|D)(|L|W|N) integerVariable
+    PRINTV(|K|D)(|L|W|N) expression[, expression, ...]
     PRINTS(|K|D)(|L|W|N) stringVariable
     PRINTFORM(|K|D)(|L|W|N) formedString
     PRINTFORMS(|K|D)(|L|W|N) string
@@ -22,7 +22,7 @@ hide:
     ![](../assets/images/Iconeramaker.webp)第一个括号内的关键字指定参数类型。
 
     - 无 - (<字符串>)
-    - V - (<表达式> <表达式> ,<表达式> ……)
+    - V - (<表达式> [, <表达式> ……]) — 每个参数独立求值，整数表达式输出数值，字符串表达式输出文本
     - S - <字符串表达式>
     - FORM - (<格式化字符串>)
     - FORMS - <格式化字符串表达式>

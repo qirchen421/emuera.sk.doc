@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                        | Arguments | Return   |
 | :---------------------------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINT(|FORM)(C|LC)(|K|D)</code>](./PRINTC.md) | `string`  | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINT(\|FORM)(C\|LC)(\|K\|D)</code>](./PRINTC.md) | `string`  | none     |
 
 !!! info "API"
 

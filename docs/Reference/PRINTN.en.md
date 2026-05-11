@@ -7,13 +7,13 @@ hide:
 
 | Function name                                                                                                                                            | Arguments | Return   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(|V|S|FORM|FORMS)N</code>](./PRINT.md) | `string`  | none     |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINT.md) | `string`  | none     |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	PRINTN string
-    PRINTVN integerVariable
+    PRINTVN expression[, expression, ...]
     PRINTSN stringVariable
     PRINTFORMN formedString
     PRINTFORMSN string

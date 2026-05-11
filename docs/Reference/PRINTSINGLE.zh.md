@@ -12,7 +12,7 @@ hide:
 !!! info "API"
 
     ```  { #language-erbapi }
-    PRINTSINGLEV(|K|D) integerVariable
+    PRINTSINGLEV(|K|D) expression[, expression, ...]
     PRINTSINGLES(|K|D) stringVariable
     PRINTSINGLEFORM(|K|D) formedString
     PRINTSINGLEFORMS(|K|D) string

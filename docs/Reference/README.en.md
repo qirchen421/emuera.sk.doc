@@ -108,7 +108,9 @@
 | ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.md)       | `string`                                          | `string` |
 | ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.md)       | `string`                                          | `string` |
 | ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.md)          | `int`, `option`                                   | `string` |
+| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md)          | `float`, `option`                                   | `string` |
 | ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)          | `string`                                          | `int`    |
+| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.md)          | `string`                                          | `float`    |
 | ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md)      | `string`                                          | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`STRLEN`](./STRLEN.md)        | `string`                                          | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`STRLENS`](./STRLEN.md)       | `string`                                          | `int`    |
@@ -446,7 +448,7 @@
 | ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`        |
 | ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`        |
 
-### HTML related
+### HTML related { #html-related }
 
 | Function name                                                                            | Arguments                                       | Return          |
 | :--------------------------------------------------------------------------------------- | :---------------------------------------------- | :-------------- |
@@ -729,3 +731,4 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.md)              | none                        | `string` |
 | ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.md)             | `int`, `int`, `int`         | `1`      |
 | ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.md)           | none                        | `1`      |
+

@@ -173,10 +173,19 @@
     - 整数と浮動小数点の自動キャスト
     - キャラクター浮動小数点変数：CharacterData中 dataFloat/dataFloatArray/dataFloatArray2D
     - アーカイブ双精度サポート
+    - 浮動小数点型変換関数：`TOSTRF`（浮動小数点→文字列）、`TOFLOAT`（文字列→浮動小数点）、`TOINT` 拡張（浮動小数点→整数切り捨て）
 
 !!! warning "注意"
 
     Float型はSkia版でのみ利用可能。EM+EEや原版EmueraのERBスクリプトではコンパイルエラーになる。
+
+!!! info "API"
+
+    | 関数 | 引数 | 戻り値 | 説明 |
+    |------|------|--------|------|
+    | ![](../assets/images/IconSK.webp) `TOSTRF` | `float`, `option` | `string` | 浮動小数点→文字列；`option` はC#書式指定文字列（例：`"F2"`、`"E"`） |
+    | ![](../assets/images/IconSK.webp) `TOFLOAT` | `string` | `float` | 文字列→浮動小数点；解析失敗時は0.0を返す |
+    | ![](../assets/images/IconSK.webp) `TOINT`（拡張） | `float` | `int` | 浮動小数点→整数、直接切り捨て（丸めなし） |
 
 ### ![](../assets/images/IconSK.webp)VARIADIC 可変長引数
 !!! summary ""

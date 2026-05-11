@@ -13,7 +13,7 @@ hide:
 
     ```  { #language-erbapi }
     PRINTN string
-    PRINTVN integerVariable
+    PRINTVN expression[, expression, ...]
     PRINTSN stringVariable
     PRINTFORMN formedString
     PRINTFORMSN string

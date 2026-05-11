@@ -227,7 +227,7 @@ ERABASIC 提供了大量内置变量，无需声明即可使用。以下是常�
 | `TIME` | Int | 时刻 |
 | `LOCAL` | Int 一维数组 | 函数局部整数变量（⚠过时，新游戏建议 `#DIM` 替代，VariableSize.csv 设 -1 禁用） |
 | `LOCALS` | Str 一维数组 | 函数局部字符串变量（⚠过时，新游戏建议 `#DIMS` 替代，VariableSize.csv 设 -1 禁用） |
-| `LOCALF` | Float 一维数组 | 函数局部浮点变量（Skia 新增） |
+| `LOCALF` | Float 一维数组 | 函数局部浮点变量（⚠过时，新游戏建议 `#DIMF` 替代，VariableSize.csv 设 -1 禁用） |
 
 > 完整内置变量列表见 [变量规格](../Emuera/variables.zh.md)。
 
