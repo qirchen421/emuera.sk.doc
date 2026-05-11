@@ -436,45 +436,6 @@ else
 
     **原理**：`%expr,width,LEFT%` 的 `FormatPercent` 接受任何字符串表达式作为第一个参数，因此 `TOSTRF(PI, "F2")` 的返回值可以直接作为 `%...%` 的输入，同时享受填充和对齐功能。`FormatPercent` 还会正确处理全角字符宽度（通过 `LangManager.GetStrlenLang`），而 `FormatCurlyBrace` 的填充不考虑全角。
 
-!!! warning "现有机制的不足与改进方向"
-
-    当前 `{}` 语法**不支持格式字符串参数**，这是浮点数格式化的主要缺口：
-
-    | 语法 | 参数 | 缺失能力 |
-    |------|------|---------|
-    `{expr}` | 表达式 | — |
-    `{expr,width}` | 表达式 + 填充宽度 | — |
-    `{expr,width,LEFT}` | + 对齐方向 | — |
-    `{expr,width,LEFT,format}` | + 格式字符串 | ❌ **不支持** |
-
-    **可行的改进方案**：
-
-    1. **扩展 `TOSTRF` 参数**（推荐，改动最小）：
-       ```erb
-       TOSTRF(float_value, format, width, align)
-       ; 例：TOSTRF(PI, "F2", 10, "LEFT") → "3.14      "
-       ```
-       - 优点：无需修改词法分析器，仅扩展函数参数
-       - 缺点：与 `TOSTR` 的参数模式不一致（TOSTR 的格式是第 2 参数）
-
-    2. **扩展 `{}` 语法支持格式字符串**：
-       ```erb
-       {PI,10,LEFT,"F2"}  ; 或 {PI:"F2",10}
-       ```
-       - 优点：语法更直观，与 C# 内插字符串类似
-       - 缺点：需要修改 `LexicalAnalyzer.AnalyseFormattedString` 和 `FormatCurlyBrace`，影响面大
-
-    3. **新增 `FORMATF` 函数**（类似 `STRFORM` 但面向浮点）：
-       ```erb
-       FORMATF("{0:F2}", PI)  ; → "3.14"
-       ```
-       - 优点：通用性强，可复用 C# 格式化
-       - 缺点：与现有 `STRFORM` 功能重叠
-
-    **当前推荐**：方案 1（扩展 `TOSTRF`），因为改动最小且与现有 `TOSTRF` + `%...%` 的 workaround 兼容。
-
-    > **TO 系列函数完整文档**：[值、类型与变量 — 类型转换函数](values-types.zh.md#类型转换函数)
-
 ---
 
 ## 三连标识符展开

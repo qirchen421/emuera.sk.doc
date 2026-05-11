@@ -53,23 +53,23 @@ hide:
     ```  { #language-erbapi }
 	SELECTCASE X  
 		CASE 1  
-			PRINTL Xは1です。  
+			PRINTL X是1。  
 		CASE 2,3  
-			PRINTL Xは1ではありません。  
-			PRINTL Xは2か3です。  
+			PRINTL X不是1。  
+			PRINTL X是2或3。  
 		CASE 10 TO 20  
-			PRINTL Xは1でも2でも3でもありません。  
-			PRINTL Xは10以上20以下です。  
+			PRINTL X不是1、2、3中的任何一个。  
+			PRINTL X在10到20之间。  
 		CASE IS <= 30  
-			PRINTL Xは1, 2, 3, 10以上20以下のどれでもありません。  
-			PRINTL Xは30以下です。  
+			PRINTL X不是1、2、3，也不在10到20之间。  
+			PRINTL X小于等于30。  
 		CASE 40, 5 * 10 TO 6 * 10, IS >= 10 * 10  
-			PRINTL Xは30以下ではありません。  
-			PRINTL Xは40, 50以上60以下, 100以上のいずれかです。  
+			PRINTL X大于30。  
+			PRINTL X是40、50到60之间、或100以上的值。  
 		CASEELSE  
-			PRINTL Xは30以下, 40, 50以上60以下, 100以上のいずれにも該当しません。  
+			PRINTL X不满足以上任何条件。  
 	ENDSELECT  
-	```
+    ```
 
 	请注意，`IS` 和 `TO` 必须按照 `IS <运算符> <表达式>` 或 `<表达式> TO <表达式>` 的形式使用。  
 	例如，不能写成 `30 < IS` 或 `(10 TO 20) || (30 TO 40)`。  
@@ -81,6 +81,25 @@ hide:
   
 	也可以将字符串表达式用作 `SELECTCASE` 的参数。  
 	如果在 `SELECTCASE` 中指定了字符串，则 `CASE` 的条件表达式也必须是字符串表达式。  
+
+!!! info "Skia 扩展：跳转表优化"
+
+    ![](../assets/images/Icondotnet.webp) Skia 对 `SELECTCASE` 引入了**跳转表（Jump Table）**编译期优化，将符合条件的 `CASE` 条件构建为哈希表（`Dictionary`），实现 **O(1) 运行时查找**，大幅提升多分支场景下的执行效率。
+
+    **适用条件**
+
+    跳转表优化仅在以下条件全部满足时生效：
+
+    - `SELECTCASE` 的所有 `CASE` 条件表达式均为**直接值**（即不使用 `TO` 或 `IS` 表达式）
+    - 所有 `CASE` 值均为**编译期常量**（例如字面量 `1`、`"hello"` 等，而非变量）
+    - `CASEELSE` 语句仍可作为默认分支正常使用
+
+    以下情况下跳转表优化不生效，回退到传统的线性扫描：
+
+    - 任一 `CASE` 包含 `TO` 表达式（范围匹配）或 `IS` 表达式（条件匹配）
+    - 任一 `CASE` 值包含非常量表达式（如变量）
+
+    支持整数、字符串、浮点数三种数据类型。
 
 !!! hint "提示"
 

@@ -6,11 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [3.8.1](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-11
+
+### Fixed
+
+- **SELECTCASE 跳转表现在支持可折叠常量的表达式函数**
+  - `TryBuild()` 中当 `LeftTerm.IsConst` 为 `false` 时尝试调用 `Restructure(null)` 折叠表达式
+  - 纯函数（如 `ABS(3)`、`SIN(0)`、`TOINT("123")` 等 `CanRestructure=true` 的函数）可被折叠为 `SingleTerm`，参与跳转表 O(1) 查找
+  - 有副作用或依赖运行时状态的函数（如 `RAND()`、`RESULT`、`GETTIME` 等 `CanRestructure=false`）不受影响，自动回退到线性扫描
+  - try-catch 包裹 `Restructure` 调用，折叠失败时安全回退到线性扫描
+- **SELECTCASE 跳转表重复值处理策略（FIFO）**
+  - 重复的 CASE 值保留第一个出现的分枝，后续重复项触发 warning 后跳过
+  - 此行为与线性扫描的 fallthrough 语义一致，且不影响跳转表的确定性
+- **TOSTRF 第二参数现在可省略**
+  - 修复了 `argumentTypeArray` 导致强制校验参数个数、第二参数无法省略的问题
+  - 改用 `argumentTypeArrayEx` + `OmitStart = 1`，允许 `TOSTRF(value)` 单参数调用
+  - 扩展 `ArgType` 枚举增加 `Float` 类型，完善浮点参数类型支持
+
 ## [3.8.0](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-10
 
 ### Added
 
-- **BEFORE_THROW / BEFORE_ERROR 事件函数**（SK 专属）
+- **BEFORE_THROW / BEFORE_ERROR 事件函数**
   - `BEFORE_THROW`：在 `THROW` 指令抛出异常前调用，允许脚本拦截和处理异常
   - `BEFORE_ERROR`：在任何错误第一次发生时调用，提供错误处理的钩子
   - 若事件函数存在，异常会被延迟抛出，允许脚本进行清理或恢复操作

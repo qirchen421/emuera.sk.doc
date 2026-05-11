@@ -144,7 +144,10 @@
 
     - `SelectCaseJumpTable` 核心类：编译时跳转表构建
     - 支持整数、字符串、浮点数三种键类型
-    - case 数量较少时自动回退到线性扫描
+    - 支持逗号分隔的 CASE 常量列表（`CASE 1, 2, 3`）
+    - 支持可折叠常量的纯函数表达式（如 `CASE ABS(3)`、`CASE TOINT("123")`）
+    - 重复值处理采用 FIFO 策略：保留第一个出现的分枝，后续重复项触发 warning 后跳过
+    - 不可优化的 CASE（含 TO/IS/非常量/副作用函数等）自动回退到线性扫描
     - 与现有 FALLTHROUGH 语义兼容
 
 ### ![](../assets/images/IconSK.webp)图像资源管理重构
