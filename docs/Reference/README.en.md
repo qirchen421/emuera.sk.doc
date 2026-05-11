@@ -108,7 +108,7 @@
 | ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.md)       | `string`                                          | `string` |
 | ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.md)       | `string`                                          | `string` |
 | ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.md)          | `int`, `option`                                   | `string` |
-| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md)          | `float`, `option`                                   | `string` |
+| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md)          | `float`{, `option`}                                | `string` |
 | ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)          | `string`                                          | `int`    |
 | ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.md)          | `string`                                          | `float`    |
 | ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md)      | `string`                                          | `int`    |
@@ -590,6 +590,11 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.md)         | `string` | `int`  |
 | ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md) | `int`    | none   |
 | ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.md)     | `int`    | none   |
+| ![](../assets/images/IconSK.webp)[`SOUNDCONTROL`](./SOUNDCONTROL.md)     | `int`, `int`{, `int`, `int`} | `int`  |
+| ![](../assets/images/IconSK.webp)[`BGMCONTROL`](./SOUNDCONTROL.md)       | `int`{, `int`, `int`} | `int`  |
+| ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.md) | `int`{, `int`} | `int`  |
+| ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.md)   | {`int`}  | `int`  |
+| ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.md)     | none     | `int`  |
 
 ### XML related { #xmlmapdatatable }
 

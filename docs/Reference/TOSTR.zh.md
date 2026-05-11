@@ -8,7 +8,7 @@ hide:
 | 函数名                                                     | 参数            | 返回值   |
 | :--------------------------------------------------------- | :-------------- | :------- |
 | ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.md) | `int`, `option` | `string` |
-| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md) | `float`, `option` | `string` |
+| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md) | `float`{, `option`} | `string` |
 
 !!! info "API — TOSTR"
 

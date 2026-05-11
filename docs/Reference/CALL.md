@@ -52,3 +52,13 @@ hide:
 - [CALLFORM](FORM.md)
 - [TRYCALLFORM](TRYFORM.md)
 - [EXISTFUNCTION](EXISTFUNCTION.md)
+- [CALLSTR](CALLSTR.md)
+
+### ![](../assets/images/IconSK.webp)Skia版の変更点
+
+!!! info "パラメータ安全性最適化"
+
+    Skia版では、原版の関数呼び出しにおけるパラメータ処理の安全性を以下の点で改善しています：
+
+    - **多余パラメータの静默破棄**：原版では呼び出し時の引数が関数定義のパラメータ数を超えるとエラーになりますが、Skia版では余分な引数を静かに無視します。これにより、[CALLSTR](CALLSTR.md)系の実行時解析との整合性が保たれます。
+    - **TRY系の安全網**：原版では`ConvertArg`が失敗した場合、`TRYCALL`等でもクラッシュしますが、Skia版では`isTry`フラグにより`CATCH`句に安全にジャンプします。

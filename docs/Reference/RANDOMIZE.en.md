@@ -65,3 +65,9 @@ hide:
 !!! hint "Hint"
 
     Commands only.
+
+### ![](../assets/images/IconSK.webp)Skia Version Changes
+
+!!! info "Decoupling from New Random Algorithm"
+
+    In the original version, when `UseNewRandom=true`, `INITRAND`/`DUMPRAND` output a warning and skip. The Skia version removes this check, so `INITRAND`/`DUMPRAND` always operate on the MTRandom state without affecting `GetNextRand`.

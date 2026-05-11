@@ -52,3 +52,13 @@ hide:
 - [CALLFORM](FORM.md)
 - [TRYCALLFORM](TRYFORM.md)
 - [EXISTFUNCTION](EXISTFUNCTION.md)
+- [CALLSTR](CALLSTR.zh.md)
+
+### ![](../assets/images/IconSK.webp)Skia 版变更
+
+!!! info "参数安全性优化"
+
+    Skia 版对原版函数调用中的参数处理安全性进行了以下改善：
+
+    - **多余参数静默丢弃**：原版中调用时的参数超过函数定义的参数数量会报错，Skia 版则静默忽略多余参数。这与 [CALLSTR](CALLSTR.zh.md) 系的运行时解析行为保持一致。
+    - **TRY 系安全网**：原版中 `ConvertArg` 失败时，`TRYCALL` 等也会崩溃，Skia 版通过 `isTry` 标志安全跳转到 `CATCH` 句。

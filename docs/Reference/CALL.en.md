@@ -52,3 +52,13 @@ hide:
 - [CALLFORM](FORM.md)
 - [TRYCALLFORM](TRYFORM.md)
 - [EXISTFUNCTION](EXISTFUNCTION.md)
+- [CALLSTR](CALLSTR.en.md)
+
+### ![](../assets/images/IconSK.webp)Skia Version Changes
+
+!!! info "Parameter Safety Optimization"
+
+    The Skia version improves the safety of parameter handling in function calls:
+
+    - **Silent discarding of extra parameters**: In the original version, passing more arguments than the function definition's parameter count causes an error. The Skia version silently ignores extra arguments, maintaining consistency with the [CALLSTR](CALLSTR.en.md) series runtime parsing behavior.
+    - **TRY series safety net**: In the original version, `ConvertArg` failure causes a crash even in `TRYCALL`. The Skia version uses the `isTry` flag to safely jump to the `CATCH` clause.

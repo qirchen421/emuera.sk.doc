@@ -80,6 +80,11 @@
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_STRING` | 式中関数 | パラメータ化クエリ実行（スカラーstring） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_FLOAT` | 式中関数 | パラメータ化クエリ実行（スカラーfloat） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/Icondotnet.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利関数：sav/sql/下にDB接続を作成 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_MAP_XML` | 命令 | XMLからMAPをSQLにインポート | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_DT_XML` | 命令 | XMLからDataTableをSQLにインポート | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_EXPORT_MAP_XML` | 命令 | SQLからMAPをXMLにエクスポート | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_EXPORT_DT_XML` | 命令 | SQLからDataTableをXMLにエクスポート | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_XML_CUSTOM` | 命令 | カスタムXMLインポート | [SQL_XML](../Reference/SQL_XML.md) |
 | ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 厳格フォントフォールバックモード | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中関数 | NAMEからキャラ番号を逆査 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中関数 | NICKNAMEからキャラ番号を逆査 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
@@ -101,6 +106,16 @@
     - **`BEFORE_ERROR`**：任意のエラーが最初に発生した時に呼び出し、統一的なエラー処理フックを提供
     - イベント関数が存在する場合、例外のスローが遅延され、スクリプトはクリーンアップやリカバリ操作を行うことが可能
     - 再帰呼び出し防止：イベント関数内で再度エラーが発生した場合、イベントは再トリガーされず直接処理される
+
+### ![](../assets/images/IconSK.webp)関数呼び出しパラメータ安全性最適化
+!!! summary ""
+
+    原版の関数呼び出し体系の三層安全性欠陥を系統的に修正。
+
+    - **ConvertArg 多余パラメータ静默破棄**：原版では引数過多でエラー、Skia版は循環で自然に無視（CALLSTR系の実行時解析と整合）
+    - **TRYCALL 安全網**：原版では `ConvertArg` 失敗時に `TRYCALL` もクラッシュ、Skia版は `isTry` フラグで `JumpToEndCatch`（`CALLS_Instruction` と整合）
+    - **CALLSTR 実行時関数反射**：関数名+パラメータの実行時文字列解析をサポート、`CALLFORM` は関数名のみ実行時構築でパラメータ指定不可の制限を突破
+    - 詳細は [CALL](../Reference/CALL.md)、[TRYCALL](../Reference/TRY.md)、[CALLSTR](../Reference/CALLSTR.md) を参照
 
 ### ![](../assets/images/IconSK.webp)SkiaSharpレンダリングエンジン { #skia-sharp }
 !!! summary ""
@@ -155,8 +170,10 @@
 
     画像リソース管理を全面的に再設計。
 
-    - **SharedBitmapCache**：グローバルビットマッププール + ConstImage軽量シェル
+    - **SharedBitmapCache**：グローバルビットマッププール（max 200）+ ConstImage軽量シェル（filepathのみ記録、SKBitmapを保持しない）
+    - **AnimSpriteCache**：アニメーション精霊LRUキャッシュ（max 6）、超過時Evictでフレームデータ解放、再アクセス時に再デコード
     - **SpriteAnime最適化**：同一ファイルの重複デコードによるメモリ爆発を修正
+    - **遅延読み込みインデックス**：CSVプリロードはSQLite :memory: インデックスのみ構築、画像データは0バイト、初回レンダリング時にデコード
     - **DIV レンダリング最適化**：ヒットテストO(1)定位 + Y軸プレフィルタリング
     - **ToolTip防遮蔽**：画面端で自動反転
 
@@ -186,7 +203,7 @@
 
     | 関数 | 引数 | 戻り値 | 説明 |
     |------|------|--------|------|
-    | ![](../assets/images/IconSK.webp) `TOSTRF` | `float`, `option` | `string` | 浮動小数点→文字列；`option` はC#書式指定文字列（例：`"F2"`、`"E"`） |
+    | ![](../assets/images/IconSK.webp) `TOSTRF` | `float`{, `option`} | `string` | 浮動小数点→文字列；`option` はC#書式指定文字列（例：`"F2"`、`"E"`）、省略時はデフォルト書式 |
     | ![](../assets/images/IconSK.webp) `TOFLOAT` | `string` | `float` | 文字列→浮動小数点；解析失敗時は0.0を返す |
     | ![](../assets/images/IconSK.webp) `TOINT`（拡張） | `float` | `int` | 浮動小数点→整数、直接切り捨て（丸めなし） |
 
@@ -227,6 +244,16 @@
 !!! warning "注意"
 
     詳細は[変数宣言チュートリアル](../tutorial/variable-declaration.md#ref)を参照。
+
+### ![](../assets/images/IconSK.webp)ExecutionContext スタック式関数コンテキスト
+!!! summary ""
+
+    各関数呼び出しで独立した `ExecutionContext` を作成し、LOCAL/ARG 系変数の再帰上書き汚染を修正。
+
+    - 上游（emuera.em）では関数名→配列のグローバル辞書により、同名関数の再帰呼び出し時に変数が互相上書きされる問題があった
+    - Skia版では `ExecutionContext` スタックにより、各呼び出しが独立した `LocalIntegers`/`LocalStrings`/`ArgIntegers`/`ArgStrings` 配列を持つ
+    - `IntoFunction()` で PushContext、`Return()` で PopContext + Dispose
+    - `#DIM DYNAMIC` 変数の ScopeIn/ScopeOut 管理に加えて、ExecutionContext が追加の隔離層を提供
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> 疎配列ストレージ
 !!! summary ""
@@ -333,6 +360,15 @@
     - Underline = `8`：下線
     - Strikeout = `4`：取り消し線
 
+### ![](../assets/images/IconSK.webp)`HTML_PRINT`の`<font>`タグ`size`属性
+!!! summary ""
+
+    `<font>`タグに`size`属性を追加し、フォントサイズ（ピクセル単位）の指定をサポート。
+
+    - `size='24'` または `size='24px'`：ピクセル単位でフォントサイズを指定
+    - 入れ子の`<font>`タグで外側のフォントサイズ設定を継承
+    - 詳細は[HTML_PRINT](../Emuera/HTML_PRINT.md#font)を参照
+
 !!! example "例"
 
     ``` { #language-erb }
@@ -357,6 +393,15 @@
 !!! summary ""
 
     `EXISTVAR`に第二引数を追加。第二引数が非0の場合、変数名の存在に加えてストレージセルの存在も確認する。
+
+### ![](../assets/images/IconSK.webp)`INITRAND`/`DUMPRAND`の新乱数アルゴリズムとの分離
+!!! summary ""
+
+    `UseNewRandom`のチェックを削除し、`INITRAND`/`DUMPRAND`が常にMTRandomの状態を操作するように変更。
+
+    - 原版では `UseNewRandom=true` の場合、`INITRAND`/`DUMPRAND` は警告を出力してスキップ
+    - Skia版では直接 `InitRanddata()`/`DumpRanddata()` を呼び出し、`GetNextRand` に影響しない
+    - 旧スクリプトの `DUMPRAND`/`RANDOMIZE`/`INITRAND` を用いたセーブハックが引き続き利用可能
 
 ### ![](../assets/images/IconSK.webp)`SETANIMETIMER`の命令化・`GETANIMETIMER`の追加
 !!! summary ""
@@ -694,13 +739,15 @@
 
 | 修正 | 説明 |
 |:---|:---|
-| TOINT 境界修正 | 不正な入力は0を返し、クラッシュしない |
-| METHOD_Instruction Float ブランチ | Float関数を命令として使用した場合、RESULTFに書き込む |
+| TOINT 境界フォールバック | [TOINT 拡張](#variables)のFloat引数受け入れ時の保護的フォールバック：不正入力はクラッシュせず0を返す |
+| METHOD_Instruction Float ブランチ | [Float型](#variables)の整合修正：原版はInteger/StringのみでFloat関数を命令呼び出し時の結果が消失；Skia版はFloat→RESULTF分岐を追加 |
 | MainWindow null チェック | エンジン未初期化時の操作でクラッシュしない |
 | PrintStringBuffer 空チェック | 空出力行で範囲外アクセスしない |
 | SKPaint using リソース解放 | 漏れていた`using var`を補完 |
 | ColorMatrix GDI+→SkiaSharp修正 | 列優先→行優先レイアウト、平移分量\*255f |
 | OpenGL コンテキスト喪失クラッシュ | 双グラボ/仮想マシン環境で自動降格 |
+| DIV ボタンヒットテストフォールバック | [DIV レンダリング最適化](#skia-sharp)の境界保護：O(1)定位は等高行を前提とし、複数行でインデックスマッピングが崩れた場合、線形走査へフォールバックしてクリック可用性を確保 |
+| SQL_CONNECTION_OPEN 安全修正 | [セキュリティ強化](#changed-commands)の安定性次元：パストラバーサル阻断・接続漏洩修正・PRAGMA OFF→WALによるクラッシュ破損防止 |
 
 ---
 

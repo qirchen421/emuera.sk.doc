@@ -63,9 +63,9 @@ This effect is a display line break, so even with multiple `<br>`s, it counts as
 
 ### `font`
 
-	<font face='~' color='~' bcolor='~'>text</font>
+	<font face='~' color='~' bcolor='~' size='~'>text</font>
 
-Changes the font, display color, and button selection display color for the enclosed text.  
+Changes the font, display color, button selection display color, and font size for the enclosed text.  
 This tag can be nested.
 
 - face attribute
@@ -81,6 +81,10 @@ This tag can be nested.
 
 - bcolor attribute
 	Specifies the button selection display color.
+
+- size attribute ![](../assets/images/IconSK.webp)
+	Specifies the font size in pixels. Use `size='24'` or `size='24px'` format.  
+	Nested `<font>` tags inherit the outer font size setting.
 
 ### `b`, `i`, `u`, `s`
 

@@ -76,3 +76,11 @@ hide:
 - [CALLFORM](FORM.en.md)
 - [TRYCALL](TRY.en.md)
 - [TRYC Series](TRYC.en.md)
+
+### ![](../assets/images/IconSK.webp)Design Comparison with CALLFORM
+
+!!! info "Significance of Runtime Parameter Reflection"
+
+    `CALLFORM` can only construct the function name at runtime, while arguments are fixed at compile time. This is an asymmetric design where "the function name is dynamic but arguments are static," which is not truly dynamic invocation.
+
+    The `CALLSTR` series allows specifying both function name and arguments via runtime strings, achieving complete runtime function reflection. To complement this design, the Skia version also adds silent discarding of extra parameters in `ConvertArg` and a TRY series safety net.

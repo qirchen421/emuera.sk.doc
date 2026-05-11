@@ -80,6 +80,11 @@
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_STRING` | 式中函数 | 参数化查询执行（标量string） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_FLOAT` | 式中函数 | 参数化查询执行（标量float） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
 | ![](../assets/images/Icondotnet.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利函数：在sav/sql/下创建DB连接 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_MAP_XML` | 命令 | 从 XML 导入 MAP 到 SQL | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_DT_XML` | 命令 | 从 XML 导入 DataTable 到 SQL | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_EXPORT_MAP_XML` | 命令 | 从 SQL 导出 MAP 为 XML | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_EXPORT_DT_XML` | 命令 | 从 SQL 导出 DataTable 为 XML | [SQL_XML](../Reference/SQL_XML.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_XML_CUSTOM` | 命令 | 自定义 XML 导入 | [SQL_XML](../Reference/SQL_XML.md) |
 | ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 严格字体回退模式 | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中函数 | 从NAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
 | ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中函数 | 从NICKNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
@@ -102,7 +107,17 @@
     - 事件函数存在时，异常会被延迟抛出，允许脚本进行清理或恢复操作
     - 防止递归调用：在事件函数内部再次抛出错误时，会直接处理而不再次触发事件
 
-### ![](../assets/images/IconSK.webp)SkiaSharp 渲染引擎
+### ![](../assets/images/IconSK.webp)函数调用参数安全性优化
+!!! summary ""
+
+    对原版函数调用体系的三层安全性缺陷进行系统性修复。
+
+    - **ConvertArg 多余参数静默丢弃**：原版中参数过多时报错，Skia 版通过循环自然忽略（与 CALLSTR 系的运行时解析行为对齐）
+    - **TRYCALL 安全网**：原版中 `ConvertArg` 失败时 `TRYCALL` 也会崩溃，Skia 版通过 `isTry` 标志跳转到 `JumpToEndCatch`（与 `CALLS_Instruction` 对齐）
+    - **CALLSTR 运行时函数反射**：支持函数名+参数的运行时字符串解析，突破 `CALLFORM` 只能运行时构造函数名而无法指定参数的限制
+    - 详细说明请参阅 [CALL](../Reference/CALL.zh.md)、[TRYCALL](../Reference/TRY.zh.md)、[CALLSTR](../Reference/CALLSTR.zh.md)
+
+### ![](../assets/images/IconSK.webp)SkiaSharp 渲染引擎 { #skia-sharp }
 !!! summary ""
 
     采用 SkiaSharp 替代 GDI+ 作为渲染引擎。提供跨平台支持、GPU 高速渲染。
@@ -155,8 +170,10 @@
 
     全面重新设计图像资源管理。
 
-    - **SharedBitmapCache**：全局位图池 + ConstImage 轻量外壳
+    - **SharedBitmapCache**：全局位图池（max 200）+ ConstImage 轻量外壳（仅记录 filepath，不持有 SKBitmap）
+    - **AnimSpriteCache**：动画精灵 LRU 缓存（max 6），超出时 Evict 释放帧数据，再次访问时重新解码
     - **SpriteAnime 优化**：修复同一文件重复解码导致的内存爆炸
+    - **懒加载索引**：CSV 预加载仅建立 SQLite :memory: 索引，图片数据 0 字节，首次渲染时才解码
     - **DIV 渲染优化**：命中测试 O(1) 定位 + Y 轴预过滤
     - **ToolTip 防遮挡**：屏幕边缘自动反转
 
@@ -186,7 +203,7 @@
 
     | 函数 | 参数 | 返回值 | 说明 |
     |------|------|--------|------|
-    | ![](../assets/images/IconSK.webp) `TOSTRF` | `float`, `option` | `string` | 浮点→字符串；`option` 为 C# 格式字符串（如 `"F2"`、`"E"`） |
+    | ![](../assets/images/IconSK.webp) `TOSTRF` | `float`{, `option`} | `string` | 浮点→字符串；`option` 为 C# 格式字符串（如 `"F2"`、`"E"`），省略时使用默认格式 |
     | ![](../assets/images/IconSK.webp) `TOFLOAT` | `string` | `float` | 字符串→浮点；解析失败返回 0.0 |
     | ![](../assets/images/IconSK.webp) `TOINT`（扩展） | `float` | `int` | 浮点→整数，直接截断（非四舍五入） |
 
@@ -227,6 +244,16 @@
 !!! warning "注意"
 
     详细说明请参阅[变量声明教程](../tutorial/variable-declaration.zh.md#ref)。
+
+### ![](../assets/images/IconSK.webp)ExecutionContext 栈式函数上下文
+!!! summary ""
+
+    每次函数调用创建独立的 `ExecutionContext`，修复 LOCAL/ARG 系变量递归覆写污染。
+
+    - 上游（emuera.em）使用函数名→数组的全局字典，同名函数递归调用时变量互相覆写
+    - Skia 版通过 `ExecutionContext` 栈，每次调用拥有独立的 `LocalIntegers`/`LocalStrings`/`ArgIntegers`/`ArgStrings` 数组
+    - `IntoFunction()` 时 PushContext，`Return()` 时 PopContext + Dispose
+    - 在 `#DIM DYNAMIC` 变量的 ScopeIn/ScopeOut 管理之外，ExecutionContext 提供额外的隔离层
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> 稀疏数组存储
 !!! summary ""
@@ -344,6 +371,15 @@
     PRINTL 下划线+删除线
     ```
 
+### ![](../assets/images/IconSK.webp)`HTML_PRINT` 的 `<font>` 标签 `size` 属性
+!!! summary ""
+
+    `<font>` 标签新增 `size` 属性，支持指定字体大小（像素单位）。
+
+    - `size='24'` 或 `size='24px'`：以像素为单位指定字体大小
+    - 嵌套 `<font>` 标签时继承外层字体大小设置
+    - 详细说明请参阅 [HTML_PRINT](../Emuera/HTML_PRINT.zh.md#font)
+
 ### ![](../assets/images/IconSK.webp)图像翻转逻辑（DotNet 同步）
 !!! summary ""
 
@@ -357,6 +393,15 @@
 !!! summary ""
 
     `EXISTVAR` 新增第二参数。第二参数为非 0 时，除了确认变量名存在外，还确认存储单元是否存在。
+
+### ![](../assets/images/IconSK.webp)`INITRAND`/`DUMPRAND` 与新随机数算法解耦
+!!! summary ""
+
+    移除 `UseNewRandom` 检查，`INITRAND`/`DUMPRAND` 始终操作 MTRandom 状态。
+
+    - 原版中 `UseNewRandom=true` 时，`INITRAND`/`DUMPRAND` 输出警告并跳过
+    - Skia 版直接调用 `InitRanddata()`/`DumpRanddata()`，不影响 `GetNextRand`
+    - 旧脚本中使用 `DUMPRAND`/`RANDOMIZE`/`INITRAND` 的存档 hack 可继续使用
 
 ### ![](../assets/images/IconSK.webp)`SETANIMETIMER` 的命令化·`GETANIMETIMER` 的新增
 !!! summary ""
@@ -694,13 +739,15 @@
 
 | 修复 | 说明 |
 |:---|:---|
-| TOINT 边界修正 | 非法输入返回 0，不会崩溃 |
-| METHOD_Instruction Float 分支 | Float 函数作为命令使用时写入 RESULTF |
+| TOINT 边界回退 | [TOINT 扩展](#variables)接受 Float 参数时的保护性回退：非法输入返回 0 而非崩溃 |
+| METHOD_Instruction Float 分支 | [Float 类型](#variables)的配套修复：原版仅 Integer/String 两分支，Float 函数作命令调用时结果丢失；Skia 新增 Float→RESULTF 分支 |
 | MainWindow null 检查 | 引擎未初始化时的操作不会崩溃 |
 | PrintStringBuffer 空检查 | 空输出行不会越界访问 |
 | SKPaint using 资源释放 | 补充遗漏的 `using var` |
 | ColorMatrix GDI+→SkiaSharp 修正 | 列优先→行优先布局，平移分量\*255f |
 | OpenGL 上下文丢失崩溃 | 双显卡/虚拟机环境下自动降级 |
+| DIV 按钮命中测试回退 | [DIV 渲染优化](#skia-sharp)的边界保护：O(1) 定位以等高行为前提，多行内容破坏索引映射，回退到线性遍历确保点击仍可用 |
+| SQL_CONNECTION_OPEN 安全修复 | [安全强化](#changed-commands)的稳定性维度：路径穿越阻断、连接泄露修复、PRAGMA OFF→WAL 防崩溃损坏 |
 
 ---
 

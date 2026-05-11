@@ -65,3 +65,9 @@ hide:
 !!! hint "提示"
 
     仅支持命令。
+
+### ![](../assets/images/IconSK.webp)Skia 版变更
+
+!!! info "与新随机数算法解耦"
+
+    原版中 `UseNewRandom=true` 时，`INITRAND`/`DUMPRAND` 会输出警告并跳过。Skia 版移除了此检查，`INITRAND`/`DUMPRAND` 始终操作 MTRandom 状态，不影响 `GetNextRand`。

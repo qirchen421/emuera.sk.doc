@@ -38,7 +38,6 @@ exclude_docs: |
 
 nav:
   - ホーム: README.md
-  - 変更ログ: Changelog/README.md
   - チュートリアル:
       - tutorial/index.md
       - 简介:
@@ -391,6 +390,7 @@ nav:
           - Reference/EXISTSOUND.md
           - Reference/SETSOUNDVOLUME.md
           - Reference/SETBGMVOLUME.md
+          - Reference/SOUNDCONTROL.md
       - XML系:
           - Reference/XML_MANAGE.md
           - Reference/XML_GET.md

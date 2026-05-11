@@ -76,3 +76,11 @@ hide:
 - [CALLFORM](FORM.zh.md)
 - [TRYCALL](TRY.zh.md)
 - [TRYC系](TRYC.zh.md)
+
+### ![](../assets/images/IconSK.webp)与 CALLFORM 的设计比较
+
+!!! info "运行时参数反射的意义"
+
+    `CALLFORM` 只能在运行时构造函数名，参数在编译时固定。这是一种"函数名动态但参数静态"的非对称设计，并非真正意义上的动态调用。
+
+    `CALLSTR` 系列可以在运行时字符串中同时指定函数名和参数，实现完整的运行时函数反射。为配合此设计，Skia 版还新增了 `ConvertArg` 多余参数静默丢弃和 TRY 系安全网。

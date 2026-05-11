@@ -65,3 +65,9 @@ hide:
 !!! hint "ヒント"
 
     命令のみ対応しています。
+
+### ![](../assets/images/IconSK.webp)Skia版の変更点
+
+!!! info "新乱数アルゴリズムとの分離"
+
+    原版では `UseNewRandom=true` の場合、`INITRAND`/`DUMPRAND` は警告を出力してスキップされます。Skia版ではこのチェックを削除し、`INITRAND`/`DUMPRAND` が常に MTRandom の状態を操作するように変更しました。`GetNextRand` には影響しません。
