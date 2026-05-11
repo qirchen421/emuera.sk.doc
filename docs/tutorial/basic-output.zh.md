@@ -182,7 +182,7 @@ PRINTFORMS L_TEMPLATE      ; 先求值 L_TEMPLATE，再 FORM 解析 → 你好�
 | 无   | 不换行，不等待               | `PRINT 你好`  |
 | `L` | 输出后换行                 | `PRINTL 你好` |
 | `W` | 输出后换行并等待玩家按键          | `PRINTW 你好` |
-| `N` | 不换行但等待玩家按键（Emuera 新增） | `PRINTN 你好` |
+| `N` | 不换行但等待玩家按键（DotNet 新增） | `PRINTN 你好` |
 
 ### 组合示例
 
@@ -203,13 +203,41 @@ PRINTVL A + B
 `PRINTW` = `PRINTL` + `WAIT`。`WAIT` 单独使用时也会等待玩家按键，但不会输出任何文本。
 ```
 
+### PRINTN — 不换行但等待按键
+
+```erb
+PRINTN 按任意键继续...
+PRINTL 继续后的文本
+; 按键前显示：按任意键继续...
+; 按键后显示：按任意键继续...继续后的文本（同一行）
+```
+
+`PRINTN` = `PRINT` + `N`（No line end）。与 `PRINTW` 不同——`PRINTW` 输出后换行并等待按键；`PRINTN` 输出后等待按键，但**结束行时标记为"未结束"**，后续输出会水平接在当前行末尾，而不是另起一行。
+
+!!! tip "PRINTN 的典型用途"
+
+    PRINTN 适合需要行内等待的场景，例如逐步展开的文本演出、需要玩家确认后才显示后续内容的对话行等。
+
+    ```erb
+    ; 错误：用 PRINT + WAIT 模拟行内等待
+    PRINT 请稍候...
+    WAIT
+    ; → WAIT 前的内容在 buffer 中不可见，按键后才被冲到屏幕并强制换行
+
+    ; 正确：用 PRINTN 实现行内等待
+    PRINTN 请稍候...
+    ; → 文本立即显示，等待按键，后续内容同行追加
+    ```
+
+> `PRINTN` 是 DotNet 新增的行为后缀，由emuera.EM引入支持。
+
 ***
 
 ## 输出数值
 
-### PRINTVL — 输出整数并换行
+### PRINTVL — 输出表达式并换行
 
-`PRINTVL` 是 `PRINTV` + `L` 的组合，输出整数表达式的值并换行：
+`PRINTVL` 是 `PRINTV` + `L` 的组合，输出表达式的值并换行（整数表达式→数值，字符串表达式→文本）：
 
 ```erb
 #DIM L_VAL = 42
@@ -353,8 +381,9 @@ INPUT
 | `PRINT 文本`        | 简单字符串       | ❌    | —                     |
 | `PRINTL 文本`       | 简单字符串       | ✅    | `PRINT` + 换行          |
 | `PRINTW 文本`       | 简单字符串       | ✅+等待 | `PRINTL` + `WAIT`     |
-| `PRINTV 表达式`      | 整数表达式       | ❌    | —                     |
-| `PRINTVL 表达式`     | 整数表达式       | ✅    | `PRINTV` + 换行         |
+| `PRINTN 文本`       | 简单字符串       | ❌（行合并） | `PRINT` + 入屏 + `WAIT` + 行合并 |
+| `PRINTV 表达式`      | 表达式（整数·字符串） | ❌    | —                     |
+| `PRINTVL 表达式`     | 表达式（整数·字符串） | ✅    | `PRINTV` + 换行         |
 | `PRINTS 表达式`      | 字符串表达式      | ❌    | —                     |
 | `PRINTSL 表达式`     | 字符串表达式      | ✅    | `PRINTS` + 换行         |
 | `PRINTFORM 格式串`   | FORM 字符串    | ❌    | —                     |
@@ -412,7 +441,6 @@ PRINTPLAIN [0] 这不是按钮    ; 原样输出，不可点击
 | 陷阱            | 错误写法              | 正确写法                          | 原因                |
 | ------------- | ----------------- | ----------------------------- | ----------------- |
 | PRINT 期望变量替换  | `PRINT %NAME%`    | `PRINTFORM %NAME%`            | PRINT 不做 FORM 插值  |
-| PRINTV 输出字符串  | `PRINTV "hello"`  | `PRINTS "hello"`              | PRINTV 是整数表达式     |
 | PRINTS 不加引号   | `PRINTS hello`    | `PRINTS "hello"`              | 不加引号会被当作变量名       |
 | 忘记换行          | `PRINT 你好`        | `PRINTL 你好`                   | PRINT 不换行，内容会粘在一起 |
 | FORM 中浮点精度    | `PRINTFORM {PI}`  | `PRINTFORM {TOSTRF(PI,"F2")}` | `{}` 对浮点无精度控制     |
