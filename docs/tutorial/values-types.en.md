@@ -168,7 +168,7 @@ RETURN
         PRINTL Start
     ```
 
-> See [Line Types & Structure](line-types.en.md) and [ERB File Format Extension](erb-format-extension.en.md) for details.
+> See [Line Types & Structure](line-types.md) and [ERB File Format Extension](erb-format-extension.en.md) for details.
 
 ### Array Access
 
@@ -317,6 +317,6 @@ L_MSG '= "PI is " + TOSTRF(L_PI, "F4")   ; Expression syntax, concatenation
 |:---|:---|
 | Complete assignment syntax | [Assignment Statements](assignment.en.md) |
 | Format string details | [FORM Syntax](form-syntax.en.md) |
-| Variable declaration system (CONST/DYNAMIC/REF/OUT, etc.) | [Variable Declaration System](variable-declaration.en.md) |
+| Variable declaration system (CONST/DYNAMIC/REF/OUT, etc.) | [Variable Declaration System](variable-declaration.md) |
 | Complete list of built-in variables | [Variable Specifications](../Emuera/variables.en.md) |
 | Operators and expressions | [Operations](../Emuera/operand.en.md) |

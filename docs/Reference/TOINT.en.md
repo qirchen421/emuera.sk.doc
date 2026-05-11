@@ -3,12 +3,13 @@ hide:
   - toc
 ---
 
-# TOINT, ISNUMERIC
+# TOINT, ISNUMERIC, TOFLOAT
 
 | Function name                                                     | Arguments | Return |
 | :--------------------------------------------------------------- | :-------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)       | `string`  | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md)   | `string`  | `int`  |
+| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.md)      | `string`  | `float`  |
 
 !!! info "API"
 
@@ -54,6 +55,36 @@ hide:
 	Variable HOGES can be converted to numeric type (123)
 	Variable HOGES cannot be converted to numeric type (一二三)
 	Variable HOGES cannot be converted to numeric type (１２３)
+    ```
+
+!!! info "API — TOFLOAT"
+
+    ![](../assets/images/IconSK.webp) Skia addition
+
+    ```  { #language-erbapi }
+	float TOFLOAT string
+    ```
+	Converts a string to a floating-point number.
+	Interprets the argument string as a floating-point number and assigns or returns the result to `RESULTF:0`.
+	If the argument cannot be interpreted as a number, `0.0` is assigned or returned.
+
+!!! hint "Hint"
+
+    Supported as both command and expression function.
+
+!!! example "Example"
+
+    ``` { #language-erb title="MAIN.ERB" }
+    @SYSTEM_TITLE
+		#DIMF L_F
+		L_F = TOFLOAT("3.14")          ; → 3.14
+		L_F = TOFLOAT("-1.5e2")        ; → -150.0
+		L_F = TOFLOAT("abc")           ; → 0.0 (parse failure)
+		PRINTFORML {L_F}
+		WAIT
+    ```
+    ``` title="Result"
+	0.0
     ```
 
 ### See Also

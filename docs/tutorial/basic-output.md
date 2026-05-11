@@ -327,7 +327,7 @@ ENDDATA
 ; いずれかの果物をランダムに出力
 ```
 
-### PRINTPLAIN — ボタンを生成しない出力
+### PRINTPLAIN — ボタンを生成しない出力 { #prinTPLAIN-overview }
 
 `PRINTPLAIN` の `PLAIN` 修飾の意味は**ボタンを生成しない**ことです——テキスト中の `[数値]` がクリック可能なボタンに変換されることはありません。
 
@@ -362,7 +362,7 @@ PRINTPLAIN [0] クリック不可  ; → 単なるテキスト、手動入力が
 INPUT
 ```
 
-詳細は [出力内のボタン——PRINTPLAIN](#prinTPLAIN--ボタンを生成しない出力) および [PRINTPLAIN リファレンス](../Reference/PRINTPLAIN.md) を参照。
+詳細は [出力内のボタン——PRINTPLAIN](#prinTPLAIN) および [PRINTPLAIN リファレンス](../Reference/PRINTPLAIN.md) を参照。
 
 ---
 
@@ -412,7 +412,7 @@ INPUT
 
     1行の `[N]` と説明文の配置が不規則な場合、自動分割が期待通りにならないことがあります。この場合は `PRINTBUTTON` で明示的にボタンを作成してください（[HTMLタグ構文](html-syntax.md) 参照）。
 
-### PRINTPLAIN — ボタンを生成しない出力
+### PRINTPLAIN — ボタンを生成しない出力 { #prinTPLAIN }
 
 `PRINTPLAIN` はテキストを出力しますが、**ボタンを生成しません**。テキストに `[0]` が含まれていても：
 
@@ -420,7 +420,7 @@ INPUT
 PRINTPLAIN [0] これはボタンではない    ; そのまま出力、クリック不可
 ```
 
-**実質的な違い**：`INPUT` ブロッキング時、`PRINT [0] クリック` で生成されたボタンはクリック可能で `0` を自動的に `INPUT` に渡します。一方、`PRINTPLAIN [0] クリック不可` の `[0]` は単なるテキスト——ユーザーは手動で `0` を入力しなければ `INPUT` に受け付けられません。詳しくは「その他の出力命令」の [PRINTPLAIN — ボタンを生成しない出力](#prinTPLAIN--ボタンを生成しない出力) を参照。
+**実質的な違い**：`INPUT` ブロッキング時、`PRINT [0] クリック` で生成されたボタンはクリック可能で `0` を自動的に `INPUT` に渡します。一方、`PRINTPLAIN [0] クリック不可` の `[0]` は単なるテキスト——ユーザーは手動で `0` を入力しなければ `INPUT` に受け付けられません。詳しくは「その他の出力命令」の [PRINTPLAIN — ボタンを生成しない出力](#prinTPLAIN-overview) を参照。
 
 `PRINTPLAINFORM` 版も同様です：`PRINTPLAINFORM 価格は {PRICE} 円、選択は [1] 購入` の `[1]` もボタン化**されません**。`PRINTPLAINFORM` は同時に FORM 補間を行います（`{PRICE}` が数値に展開されます）。
 

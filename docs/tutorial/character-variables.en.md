@@ -367,6 +367,6 @@ This differs from most character variables — other character variables use an 
 |:---|:---|
 | Event functions in detail | [Event Functions](event-functions.en.md) |
 | State machine flow | [State Machine Flow](system-flow.en.md) |
-| Variable declaration system | [Variable Declaration System](variable-declaration.en.md) |
+| Variable declaration system | [Variable Declaration System](variable-declaration.md) |
 | Complete variable specifications | [Variable Specifications](../Emuera/variables.en.md) |
 | User-defined variables | [User-Defined Variables](../Emuera/user_defined_variables.en.md) |

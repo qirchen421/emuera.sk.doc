@@ -333,7 +333,7 @@ ENDDATA
 ; 随机输出其中一种水果
 ```
 
-### PRINTPLAIN — 不生成按钮的输出
+### PRINTPLAIN — 不生成按钮的输出 { #prinTPLAIN-overview }
 
 `PRINTPLAIN` 的 `PLAIN` 修饰语义是**不生成按钮**——文本中的 `[数值]` 不会被转换为可点击的交互按钮。
 
@@ -368,7 +368,7 @@ PRINTPLAIN [0] 不能点我    ; → 纯文本，不可点击，必须手动输�
 INPUT
 ```
 
-详细机制见 [输出中的按钮——PRINTPLAIN](#prinTPLAIN--不生成按钮的输出) 和 [PRINTPLAIN 参考手册](../Reference/PRINTPLAIN.zh.md)。
+详细机制见 [输出中的按钮——PRINTPLAIN](#prinTPLAIN) 和 [PRINTPLAIN 参考手册](../Reference/PRINTPLAIN.zh.md)。
 
 ***
 
@@ -420,7 +420,7 @@ INPUT
 当一行中 `[N]` 和说明文字的排列不规则时，自动拆分可能不符合预期。此时应使用 `PRINTBUTTON` 显式创建按钮（见 [HTML 标签语法](html-syntax.zh.md)）。
 ```
 
-### PRINTPLAIN — 不生成按钮的输出
+### PRINTPLAIN — 不生成按钮的输出 { #prinTPLAIN }
 
 `PRINTPLAIN` 输出文本但**不生成按钮**，即使文本包含 `[0]`：
 
@@ -428,7 +428,7 @@ INPUT
 PRINTPLAIN [0] 这不是按钮    ; 原样输出，不可点击
 ```
 
-**关键区别**：在 `INPUT` 阻塞场景下，`PRINT [0] 点击` 生成的按钮可点击并自动传递 `0` 给 `INPUT`；而 `PRINTPLAIN [0] 不可点击` 中的 `[0]` 只是普通文本——用户必须手动输入 `0` 才能被 `INPUT` 接收。详解见 "其他输出指令" 一节的 [PRINTPLAIN — 不生成按钮的输出](#prinTPLAIN--不生成按钮的输出)。
+**关键区别**：在 `INPUT` 阻塞场景下，`PRINT [0] 点击` 生成的按钮可点击并自动传递 `0` 给 `INPUT`；而 `PRINTPLAIN [0] 不可点击` 中的 `[0]` 只是普通文本——用户必须手动输入 `0` 才能被 `INPUT` 接收。详解见 "其他输出指令" 一节的 [PRINTPLAIN — 不生成按钮的输出](#prinTPLAIN-overview)。
 
 `PRINTPLAINFORM` 版同理：`PRINTPLAINFORM 价格为 {PRICE} 元，选择 [1] 购买` 中的 `[1]` 也**不会**生成按钮。`PRINTPLAINFORM` 同时会做 FORM 插值（`{PRICE}` 会被展开为数值）。
 

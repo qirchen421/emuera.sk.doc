@@ -3,12 +3,13 @@ hide:
   - toc
 ---
 
-# TOINT, ISNUMERIC
+# TOINT, ISNUMERIC, TOFLOAT
 
 | 関数名                                                         | 引数     | 戻り値 |
 | :------------------------------------------------------------- | :------- | :----- |
 | ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)     | `string` | `int`  |
 | ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md) | `string` | `int`  |
+| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.md)      | `string` | `float`  |
 
 !!! info "API"
 
@@ -54,6 +55,36 @@ hide:
 	変数HOGESは数値型に変換可能です(123)
 	変数HOGESは数値型に変換できません(一二三)
 	変数HOGESは数値型に変換できません(１２３)
+    ```
+
+!!! info "API — TOFLOAT"
+
+    ![](../assets/images/IconSK.webp) Skia 追加
+
+    ```  { #language-erbapi }
+	float TOFLOAT string
+    ```
+	文字列を浮動小数点数に変換します。
+	引数文字列を浮動小数点数として解釈し、結果を`RESULTF:0`に代入もしくは返します。
+	引数を数値として解釈できない場合、`0.0`が代入もしくは返されます。
+
+!!! hint "ヒント"
+
+    命令、式中関数両方対応しています。
+
+!!! example "例"
+
+    ``` { #language-erb title="MAIN.ERB" }
+    @SYSTEM_TITLE
+		#DIMF L_F
+		L_F = TOFLOAT("3.14")          ; → 3.14
+		L_F = TOFLOAT("-1.5e2")        ; → -150.0
+		L_F = TOFLOAT("abc")           ; → 0.0（解析失敗）
+		PRINTFORML {L_F}
+		WAIT
+    ```
+    ``` title="結果"
+	0.0
     ```
 
 ### 関連項目

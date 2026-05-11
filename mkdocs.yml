@@ -38,6 +38,7 @@ exclude_docs: |
 
 nav:
   - ホーム: README.md
+  - 変更ログ: Changelog/README.md
   - チュートリアル:
       - tutorial/index.md
       - 简介:

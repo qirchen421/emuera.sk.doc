@@ -84,4 +84,3 @@ hide:
 
 ### 関連項目
 - [TOINT](TOINT.md)
-- [TOFLOAT](TOFLOAT.md)
