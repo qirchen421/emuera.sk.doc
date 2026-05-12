@@ -411,6 +411,8 @@ RETURN
 | RETURNFORM で剰余 | `RETURNFORM A % 100` | `RETURN A % 100` | % は RETURNFORM 内で置換記号 |
 | 関数名の衝突 | 2つの `@MY_FUNC` | 関数名を一意に | プロジェクト内で関数名は重複不可 |
 | RETURN の忘れ | 関数末尾に RETURN なし | `RETURN` を追加 | RETURN なしの場合 RESULT = 0 |
+| 手動で RESULT を設定後に RETURN | `RESULT = 999` 後に `RETURN 1` | 手動で RESULT を設定しない | RETURN は必ず RESULT を上書きする |
+| JUMP は RESULT を設定しないと思い込む | JUMP 後に RESULT が変わらないと思う | JUMP 先の RETURN は通常通り RESULT を設定 | JUMP はスタックフレームを置換するだけで RESULT 設定に影響しない |
 | INPUT で文字列ボタンを選択 | `INPUT` + `PRINTBUTTON "x", "str"` | `INPUTS` を使用 | INPUT は整数ボタンのみクリック可能 |
 
 ---

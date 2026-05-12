@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | none   |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | `void`¹ |
 
 !!! info "API"
 
@@ -17,6 +17,8 @@ hide:
 	Calls a function defined with a string starting with `@`  
 	When the function reaches its end or executes [`RETURN`](./RETURN.md), the function ends  
 	Unlike [`CALL`](./CALL.md), it does not push the function onto the runtime stack, so when the destination function ends, it does not return. Therefore, if there is no call stack, it may result in an error termination
+
+¹ `void` means the instruction itself does not return a value, but [`RETURN`](./RETURN.md) in the JUMP destination function still sets `RESULT`. See "JUMP and RESULT" below for details.
 
 
 !!! hint "Hint"

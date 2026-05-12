@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数             | 返回值 |
 | :--------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | `void`¹ |
 
 !!! info "API"
 
@@ -17,6 +17,8 @@ hide:
     以 `@` 开头的字符串定义的函数  
     当到达函数末端或执行 [`RETURN`](./RETURN.md) 时，结束函数  
     与 [`CALL`](./CALL.md) 的区别在于，执行时不会将函数压入栈，因此即使跳转到的函数结束也不会返回。所以，如果没有调用栈，可能会导致错误终止  
+
+    ¹ `void` 表示指令本身不返回值，但 JUMP 目标函数中的 [`RETURN`](./RETURN.md) 仍会设置 `RESULT`。详见下方「JUMP 与 RESULT 的关系」。
 
 !!! hint "提示"
 

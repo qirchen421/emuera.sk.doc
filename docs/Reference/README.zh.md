@@ -12,6 +12,8 @@
 - ![](../assets/images/IconSK.webp) - Skia（SkiaSharp版）中追加、变更、扩展的命令
 - ![](../assets/images/Iconetc.webp) - 其他贡献者追加、变更、扩展的命令
 
+**返回值标注说明**：`void`¹ 表示指令本身不返回值，但被调用函数中的 [`RETURN`](./RETURN.md) 会设置 `RESULT`；函数末尾隐式 `RESULT:0 = 0`。`无` 表示指令不返回值且不影响 `RESULT`。
+
 ---
 
 ### PRINT 系列
@@ -374,39 +376,39 @@
 
 | 函数名 | 参数 | 返回值 |
 | :----- | :--- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)             | `functionName`             | 无  |
-| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md)             | `functionName`             | 无  |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md)             | `functionName`             | `void`¹  |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md)             | `functionName`             | `void`¹  |
 | ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md)             | `labelName`                | 无  |
 | ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md)       | 无                       | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALL`](./TRY.md)             | `functionName`(, `any`...) | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMP`](./TRY.md)             | `functionName`(, `any`...) | 无  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALL`](./TRY.md)             | `functionName`(, `any`...) | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMP`](./TRY.md)             | `functionName`(, `any`...) | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRY.md)             | `labelName`                | 无  |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md)           | `functionName`(, `any`...) | 无  |
-| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md)           | `functionName`(, `any`...) | 无  |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md)           | `functionName`(, `any`...) | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md)           | `functionName`(, `any`...) | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`GOTOFORM`](./FORM.md)           | `labelName`                | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.md)     | `formedString`(, `any`...) | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.md)     | `formedString`(, `any`...) | 无  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.md)     | `formedString`(, `any`...) | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.md)     | `formedString`(, `any`...) | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTOFORM`](./TRYFORM.md)     | `formedString`             | 无  |
-| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)             | `functionName`             | 无  |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md)         | `formedString`             | 无  |
-| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md)     | `functionName`             | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCCALL`](./TRYC.md)           | `functionName`(, `any`...) | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCJUMP`](./TRYC.md)           | `functionName`(, `any`...) | 无  |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)             | `functionName`             | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md)         | `formedString`             | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md)     | `functionName`             | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALL`](./TRYC.md)           | `functionName`(, `any`...) | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCJUMP`](./TRYC.md)           | `functionName`(, `any`...) | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRYC.md)            | `labelName`                | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md)       | `functionName`(, `any`...) | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md)       | `functionName`(, `any`...) | 无  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md)       | `functionName`(, `any`...) | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md)       | `functionName`(, `any`...) | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`TRYCGOTOFORM`](./TRYC.md)       | `labelName`                | 无  |
 | ![](../assets/images/IconEmuera.webp)[`CATCH`](./TRYC.md)              | 无                       | 无  |
 | ![](../assets/images/IconEmuera.webp)[`ENDCATCH`](./TRYC.md)           | 无                       | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md)     | 无                       | 无  |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md)     | 无                       | 无  |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md)     | 无                       | `void`¹  |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md)     | 无                       | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.md)     | 无                       | 无  |
-| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)            | `functionName`(, `any`...) | 无  |
+| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)            | `functionName`(, `any`...) | `void`¹  |
 | ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.md)         | 无                       | 无  |
 | ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string`                   | `int` |
-| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`             | 无  |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString`             | 无  |
-| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md)        | `functionName`             |       |
+| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md)           | `functionName`             | `void`¹  |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md)   | `formedString`             | `void`¹  |
+| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md)        | `functionName`             | `void`¹  |
 | ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.md)        | `functionName`             | `int` |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.md)            | `string`(, `int`, `argument`...)   | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.md)           | `string`(, `string`, `argument`...)| `string`  |

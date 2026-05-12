@@ -46,36 +46,36 @@
 ```
 教程首页 (tutorial/index.zh.md / index.md)
 │
-├── 第1章：简介 — 理解全貌，运行第一个程序
+├── 第1章：简介 🔴 必读 — 理解全貌，运行第一个程序
 │   ├── intro.zh.md              ✅ 已完成
 │   ├── hello-world.zh.md        ✅ 已完成
 │   ├── file-types.zh.md         ✅ 已完成
 │   ├── line-types.zh.md         ✅ 已完成
 │   └── evolution.zh.md          ✅ 已完成
 │
-├── 第2章：基础语法 — 值与变量，基本输入输出
+├── 第2章：基础语法 🔴 必读 — 值与变量，基本输入输出
 │   ├── values-types.zh.md       ✅ 已完成
 │   ├── assignment.zh.md         ✅ 已完成
 │   ├── basic-output.zh.md       ✅ 已完成
 │   └── form-syntax.zh.md        ✅ 已完成
 │
-├── 第3章：控制流 — 条件、循环、跳转
+├── 第3章：控制流 🔴 必读 — 条件、循环、跳转
 │   ├── condition.zh.md          ✅ 已完成
 │   ├── loop.zh.md               ✅ 已完成
 │   └── jump.zh.md               ✅ 已完成
 │
-├── 第4章：函数 — 拆分代码，声明数据
-│   ├── call.zh.md               ✅ 已完成（含参数传递、返回值、INPUT）
+├── 第4章：函数 🔴 必读 — 拆分代码，声明数据
+│   ├── call.zh.md               ✅ 已完成（含参数传递、返回值、INPUT、RETURN/RETURNF 对比）
 │   ├── variable-declaration.zh.md ✅ 已完成（含 #DIM/作用域/REF·OUT/VARIADIC）
 │   ├── erb-format-extension.zh.md ✅ 已完成
 │   └── command-vs-expression.zh.md ✅ 已完成
 │
-├── 第5章：引擎特性 — 引擎内置运行时机制
+├── 第5章：引擎特性 🟡 推荐 — 引擎内置运行时机制
 │   ├── system-flow.zh.md        ✅ 已完成（两状态模型、BEGIN、各状态流程）
 │   ├── event-functions.zh.md    ✅ 已完成（含 BEFORE_THROW/BEFORE_ERROR）
-│   └── character-variables.zh.md ✅ 已完成（角色编号、角色变量分类、管理指令）
+│   └── character-variables.zh.md ✅ 已完成（角色编号、角色变量分类、管理指令、CSV 定义、自定义变量）
 │
-└── 第6章：HTML与图形 — 富文本与渲染
+└── 第6章：HTML与图形 🟢 选读 — 富文本与渲染
     └── html-syntax.zh.md        ✅ 已完成
 ```
 
@@ -138,10 +138,15 @@
 
 ### Phase 3：第5章引擎特性 — 教程页补全 ✅ 已完成
 
-- [x] **system-flow 教程页** `tutorial/system-flow.zh.md` + `.md` + `.en.md`：三语言版已创建，教程首页和 mkdocs.yml 已更新指向新教程页
-- [x] **character-variables 教程页** `tutorial/character-variables.zh.md` + `.md` + `.en.md`：三语言版已创建，教程首页和 mkdocs.yml 已更新
+- [x] **system-flow 教程页** `tutorial/system-flow.zh.md` + `.md` + `.en.md`：三语言版已创建
+- [x] **character-variables 教程页** `tutorial/character-variables.zh.md` + `.md` + `.en.md`：三语言版已创建
 - [ ] **system_flow.md（日文版）补充 BEFORE_THROW/BEFORE_ERROR 流程段落**：中文版和英文版已有
 - [ ] **system_flow 三语言版添加反向链接**：从流程图事件节点链接到 event-functions 教程页
+
+### Phase 3.5：教程首页引导性内容 ✅ 已完成
+
+- [x] **index.zh.md** — 添加必读/推荐/选读标记、前置知识、本章要点
+- [x] **index.md** — 同步日文版引导性内容
 
 ### Phase 4：多语言同步 ⬜ 待执行
 
@@ -186,15 +191,25 @@ eramaker 仅在"版本演进"章节中作为历史参考提及，教程以 Emuer
 - 语言语法：IF/REPEAT/CALL/#DIM — 开发者主动编写的结构
 - 引擎特性：状态机/事件函数/角色变量 — 引擎预设的调度机制，开发者只需挂载钩子
 
+### 4.5 教程首页引导体系
+
+采用三级标记系统：
+- 🔴 必读：核心章节，不掌握则无法编写正常脚本（第1–4章）
+- 🟡 推荐：实用章节，掌握后可显著提升开发效率（第5章）
+- 🟢 选读：进阶章节，按需学习（第6章）
+
+每个章节标注**前置知识**和**本章要点**，帮助非顺序读者快速定位。
+
 ---
 
 ## 5. 变更日志
 
 | 日期 | 变更 |
 |------|------|
-| 2026-05-09 | 初始版本：10章架构、Phase 1–5 完成 |
+| 2026-05-12 | 教程首页添加引导性内容：必读/推荐/选读标记、前置知识、本章要点（index.zh.md + index.md）；角色变量系统确认完成（三语言版）；整理 TODO 结构 |
 | 2026-05-11 | 重构为6章架构：新增第5章「引擎特性」，事件函数从第4章移出，角色系统合并；修复 BEFORE_THROW/BEFORE_ERROR 链接和锚点；mkdocs.yml 新增エンジン特性导航组 |
+| 2026-05-09 | 初始版本：10章架构、Phase 1–5 完成 |
 
 ---
 
-> **最后更新**：2026-05-11
+> **最后更新**：2026-05-12

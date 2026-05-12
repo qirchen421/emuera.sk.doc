@@ -411,6 +411,8 @@ RETURN
 | RETURNFORM 取模 | `RETURNFORM A % 100` | `RETURN A % 100` | % 在 RETURNFORM 中是替换符 |
 | 函数名冲突 | 两个 `@MY_FUNC` | 函数名唯一 | 项目内函数名不能重复 |
 | 忘记 RETURN | 函数末尾无 RETURN | 加 `RETURN` | 无 RETURN 时 RESULT = 0 |
+| 手动设 RESULT 后 RETURN | `RESULT = 999` 后 `RETURN 1` | 不要手动设 RESULT | RETURN 必定覆盖 RESULT |
+| 误以为 JUMP 不设 RESULT | 以为 JUMP 后 RESULT 不变 | JUMP 目标的 RETURN 正常设 RESULT | JUMP 替换栈帧但不影响 RESULT 设置 |
 | INPUT 选字符串按钮 | `INPUT` + `PRINTBUTTON "x", "str"` | 改用 `INPUTS` | INPUT 只能点击整数按钮 |
 
 ---

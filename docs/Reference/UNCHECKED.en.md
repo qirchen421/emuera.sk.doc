@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# UNCHECKED Series — Wrap-around Overflow Arithmetic
+# UNCHECKED Arithmetic
 
 | Function name                                                            | Arguments    | Return |
 | :----------------------------------------------------------------------- | :----------- | :----- |

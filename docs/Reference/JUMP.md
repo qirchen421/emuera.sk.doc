@@ -7,7 +7,7 @@ hide:
 
 | 関数名                                                     | 引数             | 戻り値 |
 | :--------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | なし   |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | `void`¹ |
 
 !!! info "API"
 
@@ -17,6 +17,8 @@ hide:
 	`@`から始まる文字列で定義された関数を呼び出す  
 	関数の終端に達するか[`RETURN`](./RETURN.md)が行われると、関数を終了する  
 	[`CALL`](./CALL.md)との違いは、実行時に関数をスタックしないため、遷移先の関数が終了しても戻ってこない。そのため、呼び出しスタックが無い場合はエラー終了の恐れがある  
+
+	¹ `void`は命令自体が値を返さないことを示しますが、JUMP先の関数で[`RETURN`](./RETURN.md)が実行されると`RESULT`が設定されます。詳細は下記「JUMPとRESULTの関係」を参照してください。
 
 
 !!! hint "ヒント"
