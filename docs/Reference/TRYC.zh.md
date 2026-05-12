@@ -7,11 +7,11 @@ hide:
 
 | 函数名                                                           | 参数                       | 返回值 |
 | :--------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TRYCCALL`](./TRYC.md)     | `functionName`(, `any`...) | 无     |
-| ![](../assets/images/IconEmuera.webp)[`TRYCJUMP`](./TRYC.md)     | `functionName`(, `any`...) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALL`](./TRYC.md)     | `functionName`(, `any`...) | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYCJUMP`](./TRYC.md)     | `functionName`(, `any`...) | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTO`](./TRYC.md)      | `labelName`                | 无     |
-| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md) | `functionName`(, `any`...) | 无     |
-| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md) | `functionName`(, `any`...) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md) | `functionName`(, `any`...) | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYCCALLFORM`](./TRYC.md) | `functionName`(, `any`...) | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`TRYCGOTOFORM`](./TRYC.md) | `labelName`                | 无     |
 | ![](../assets/images/IconEmuera.webp)[`CATCH`](./TRYC.md)        | 无                         | 无     |
 | ![](../assets/images/IconEmuera.webp)[`ENDCATCH`](./TRYC.md)     | 无                         | 无     |

@@ -14,6 +14,9 @@ The core of era games is **characters** — each character has its own attribute
 
 The key difference between character variables and regular variables: the first dimension index of a character variable is the **character registration number**, and each character has its own independent set of data.
 
+!!! note "eramaker Compatibility"
+    Basic information variables (`NAME`/`CALLNAME`/`NO`), numeric character variables (`BASE`/`ABL`/`TALENT`/`EXP`/`MARK`/`CFLAG`/`PALAM`/`SOURCE`), and character management instructions (`ADDCHARA`/`DELCHARA`) have existed since eramaker. `CSTR`/`CDFLAG`/`TCVAR`, CSV reading functions (`CSVABL` etc.), `VariableSize.csv`, and custom character variables (`#DIM CHARADATA`) are Emuera extensions.
+
 ```erb
 ; Regular variable: one-dimensional index
 FLAG:10 = 1
@@ -303,6 +306,128 @@ Each character variable has a corresponding CSV name file that defines the names
 PRINTFORML %BASENAME:0%: {BASE:TARGET:0}
 ; Output: HP: 1000
 ```
+
+### CSV → Variable Complete Mapping
+
+The relationship between CSV files, name variables, data variables, CharaXX.csv keywords, and CSV reading functions:
+
+#### Character Variable System
+
+| CSV Name File | Name Variable | Data Variable | CharaXX.csv Keyword | CSV Reading Function |
+|:--|:--|:--|:--|:--|
+| `abl.csv` | `ABLNAME` | `ABL` | `能力` | `CSVABL()` |
+| `talent.csv` | `TALENTNAME` | `TALENT` | `素質` | `CSVTALENT()` |
+| `exp.csv` | `EXPNAME` | `EXP` | `経験` | `CSVEXP()` |
+| `mark.csv` | `MARKNAME` | `MARK` | `刻印` | `CSVMARK()` |
+| `base.csv` | `BASENAME` | `BASE` / `MAXBASE` | `基礎` | `CSVBASE()` |
+| `palam.csv` | `PALAMNAME` | `PALAM` / `JUEL` / `GOTJUEL` | — | — |
+| `cflag.csv` | `CFLAGNAME` | `CFLAG` | `フラグ` | `CSVCFLAG()` |
+| `cstr.csv` | `CSTRNAME` | `CSTR` | `CSTR` | `CSVCSTR()` |
+| `source.csv` | `SOURCENAME` | `SOURCE` | — | — |
+| `ex.csv` | `EXNAME` | `EX` / `NOWEX` | — | — |
+| `equip.csv` | `EQUIPNAME` | `EQUIP` | — | — |
+| `tequip.csv` | `TEQUIPNAME` | `TEQUIP` | — | — |
+| `relation.csv` | — | `RELATION` | `相性` | `CSVRELATION()` |
+| `juel.csv` | — | `JUEL` | `珠` | `CSVJUEL()` |
+| `equip.csv` | — | `EQUIP` | `装着物` | `CSVEQUIP()` |
+| `stain.csv` | `STAINNAME` | `STAIN` | — | — |
+| `tcvar.csv` | `TCVARNAME` | `TCVAR` | — | — |
+| `cdflag1.csv` | `CDFLAGNAME1` | `CDFLAG` (2nd index) | — | — |
+| `cdflag2.csv` | `CDFLAGNAME2` | `CDFLAG` (3rd index) | — | — |
+
+#### Non-Character Variable System
+
+| CSV Name File | Name Variable | Data Variable | Notes |
+|:--|:--|:--|:--|
+| `flag.csv` | `FLAGNAME` | `FLAG` | |
+| `tflag.csv` | `TFLAGNAME` | `TFLAG` | |
+| `train.csv` | `TRAINNAME` | — | Command name definitions |
+| `item.csv` | `ITEMNAME` / `ITEMPRICE` | `ITEM` / `ITEMSALES` | 3rd column is price |
+| `strname.csv` | `STRNAME` | — | Name definitions for STR |
+| `str.csv` | — | `STR` | **Direct value assignment** (not names) |
+| `tstr.csv` | `TSTRNAME` | `TSTR` | |
+| `savestr.csv` | `SAVESTRNAME` | `SAVESTR` | |
+| `global.csv` | `GLOBALNAME` | `GLOBAL` | |
+| `globals.csv` | `GLOBALSNAME` | `GLOBALS` | |
+
+> **Note the difference between `str.csv` and `strname.csv`**: `str.csv` assigns values directly to the `STR` variable, while `strname.csv` defines `STRNAME` (index names). Their purposes are completely different.
+
+### CSV to Variable Conversion Example
+
+Data defined in CharaXX.csv is automatically assigned to corresponding variables when `ADDCHARA` is executed.
+
+```csv
+; CSV/Chara5.csv
+番号,5
+名前,Hakurei Reimu
+呼び名,Reimu
+基礎,0,2000
+基礎,1,1000
+素質,0,1
+素質,3,1
+能力,0,5
+能力,2,3
+経験,1,100
+フラグ,0,1
+CSTR,0,Test character
+```
+
+```erb
+; Variable state after ADDCHARA (registration number = 1)
+; NO:1 = 5
+; NAME:1 = "Hakurei Reimu"
+; CALLNAME:1 = "Reimu"
+; BASE:1:0 = 2000,  BASE:1:1 = 1000
+; TALENT:1:0 = 1,   TALENT:1:3 = 1
+; ABL:1:0 = 5,      ABL:1:2 = 3
+; EXP:1:1 = 100
+; CFLAG:1:0 = 1
+; CSTR:1:0 = "Test character"
+```
+
+### Name-Based Index Access
+
+When name variables are defined, you can access data by name instead of numeric index.
+
+```erb
+; The following are equivalent
+ABL:TARGET:0
+ABL:TARGET:OBEDIENCE        ; When ABLNAME:0 = "OBEDIENCE"
+
+; Name access can also be achieved with GETNUM
+#DIM idx
+idx = GETNUM(ABL, "OBEDIENCE")    ; idx = 0
+ABL:TARGET:idx = 10
+```
+
+### CSV Reading Functions
+
+Functions that read CSV definition values directly without requiring `ADDCHARA`. The first argument is the **character number** (not the registration number).
+
+```erb
+; Read CSV data for character number 5 directly (no ADDCHARA needed)
+PRINTFORML Ability 0 = {CSVABL(5, 0)}
+PRINTFORML Trait 3 = {CSVTALENT(5, 3)}
+PRINTFORML Base 0 = {CSVBASE(5, 0)}
+PRINTFORML CFLAG 0 = {CSVCFLAG(5, 0)}
+PRINTFORML CSTR 0 = %CSVCSTR(5, 0)%
+```
+
+> **CSV reading functions vs variable access**: `CSVABL(5, 0)` reads the CSV definition value for character number 5. `ABL:TARGET:0` reads the current runtime value for registration number TARGET. Use CSV reading functions for referencing initial values, and variable access for runtime values.
+
+### VariableSize.csv for Array Size Modification
+
+In Emuera, you can change the number of elements for each variable using `CSV/VariableSize.csv`.
+
+```csv
+; CSV/VariableSize.csv
+ABL,100
+TALENT,1000
+CFLAG,10000
+STR,20000
+```
+
+In eramaker, each variable had a fixed upper limit (e.g., ABL max 99, TALENT max 99). In Emuera, these limits can be extended via `VariableSize.csv`. However, the element count of name variables like `ABLNAME` cannot be changed (they automatically follow the number of lines in the CSV file).
 
 ---
 

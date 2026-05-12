@@ -7,10 +7,10 @@ hide:
 
 | Function name | Arguments | Return |
 | :----------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | none                       | none   |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | none                       | none   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | none                       | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | none                       | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.md) | none                       | none   |
-| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | none   |
+| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.md)     | none                       | none   |
 
 !!! info "API"

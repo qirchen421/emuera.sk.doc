@@ -7,7 +7,7 @@ hide:
 
 | 関数名                                                               | 引数     | 戻り値 |
 | :------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md) | `string` | `void`¹ |
 
 !!! info "API"
 

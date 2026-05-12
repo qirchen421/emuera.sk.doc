@@ -62,6 +62,50 @@ In all CSV files,
 
 Please refer to the help of your spreadsheet software for the setting method.  
 
+## CSV → Variable Mapping
+
+Each CSV file defines the index names (name variables) or initial values (data variables) for corresponding variables.
+
+### Character Variable CSV Files
+
+| CSV File | Name Variable | Data Variable | CharaXX.csv Keyword | Notes |
+|:--|:--|:--|:--|:--|
+| `abl.csv` | `ABLNAME` | `ABL` | `能力` | |
+| `talent.csv` | `TALENTNAME` | `TALENT` | `素質` | |
+| `exp.csv` | `EXPNAME` | `EXP` | `経験` | |
+| `mark.csv` | `MARKNAME` | `MARK` | `刻印` | |
+| `base.csv` | `BASENAME` | `BASE` / `MAXBASE` | `基礎` | |
+| `palam.csv` | `PALAMNAME` | `PALAM` / `JUEL` / `GOTJUEL` | — | |
+| `cflag.csv` | `CFLAGNAME` | `CFLAG` | `フラグ` | |
+| `cstr.csv` | `CSTRNAME` | `CSTR` | `CSTR` | |
+| `source.csv` | `SOURCENAME` | `SOURCE` | — | |
+| `ex.csv` | `EXNAME` | `EX` / `NOWEX` | — | |
+| `equip.csv` | `EQUIPNAME` | `EQUIP` | `装着物` | |
+| `tequip.csv` | `TEQUIPNAME` | `TEQUIP` | — | |
+| `relation.csv` | — | `RELATION` | `相性` | |
+| `juel.csv` | — | `JUEL` | `珠` | |
+| `stain.csv` | `STAINNAME` | `STAIN` | — | |
+| `tcvar.csv` | `TCVARNAME` | `TCVAR` | — | |
+
+### Non-Character Variable CSV Files
+
+| CSV File | Name Variable | Data Variable | Notes |
+|:--|:--|:--|:--|
+| `flag.csv` | `FLAGNAME` | `FLAG` | |
+| `tflag.csv` | `TFLAGNAME` | `TFLAG` | |
+| `train.csv` | `TRAINNAME` | — | Command name definitions |
+| `item.csv` | `ITEMNAME` / `ITEMPRICE` | `ITEM` / `ITEMSALES` | 3rd column is price |
+| `strname.csv` | `STRNAME` | — | Name definitions for STR |
+| `str.csv` | — | `STR` | **Direct value assignment** (not names) |
+| `tstr.csv` | `TSTRNAME` | `TSTR` | |
+| `savestr.csv` | `SAVESTRNAME` | `SAVESTR` | |
+| `global.csv` | `GLOBALNAME` | `GLOBAL` | |
+| `globals.csv` | `GLOBALSNAME` | `GLOBALS` | |
+
+> **Note the difference between `str.csv` and `strname.csv`**: `str.csv` assigns values directly to the `STR` variable, while `strname.csv` defines `STRNAME` (index names). Their purposes are completely different.
+
+> For complete mapping and variable access details, see [Character Variables](../tutorial/character-variables.en.md).
+
 ## Format for each file  
 ### Format for GameBase.csv  
 Write instructions in the first column and data in the second and subsequent columns.  

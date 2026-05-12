@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :----------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | none   |
+| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

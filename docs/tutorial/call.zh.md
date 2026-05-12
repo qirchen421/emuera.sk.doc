@@ -23,6 +23,9 @@ ERABASIC 程序由**函数**组成。每个函数以 `@` 标签开头，可以�
 | `RETURN` | 从函数返回，设置 RESULT |
 | `RETURNF` | 从表达式函数返回值 |
 
+!!! note "eramaker 兼容性"
+    `@标签`/`CALL`/`JUMP`/`RETURN` 是 eramaker 就存在的功能。`RETURNF`、`TRYCALL`/`TRYJUMP`、`#FUNCTION`/`#FUNCTIONS` 等是 Emuera 的扩展功能。
+
 ---
 
 ## @标签 — 定义函数
@@ -214,14 +217,15 @@ RETURN
 | 命令式（默认） | `RETURN` | ✅ 覆盖 | 隐式 `RESULT:0 = 0` |
 | 表达式式（`#FUNCTION`） | `RETURNF` | ❌ 不覆盖 | 不修改 |
 
-### RETURNFORM — FORM 语法返回
+### RETURNFORM — FORM 语法动态求值返回
 
-`RETURNFORM` 使用 FORM 语法解析返回值：
+`RETURNFORM` 是 `RETURN` 的动态求值变体。它先通过 FORM 语法展开字符串，再将展开结果**作为整数表达式重新解析求值**，最终写入 `RESULT`。
 
 ```erb
 @MY_FUNC
     #DIMS L_EXPR '= "A * 10"
     RETURNFORM %L_EXPR%
+; 执行过程：FORM 展开 → "A * 10" → 词法分析+整数表达式求值 → 写入 RESULT
 ; 等价于 RETURN A * 10
 ```
 
@@ -229,6 +233,17 @@ RETURN
 
     `RETURNFORM` 中 `%` 是 FORM 语法的字符串替换符，不是取模运算符。
     `RETURNFORM A % 100` 会被解析为 `A ` + 变量 `100` 的值，而不是 `A mod 100`。
+
+!!! info "RETURNFORM 返回整数，不返回字符串"
+
+    `RETURNFORM` 的求值分两阶段：
+    
+    1. **FORM 展开**：将 `%变量%` 和 `{表达式}` 替换为实际值，得到一个字符串
+    2. **二次解析**：将展开后的字符串当作**整数表达式**重新词法分析并求值
+    
+    最终结果写入 `RESULT`（整数数组）。不存在 `RETURNSFORM` 指令——如需返回字符串，请用 `RESULTS = ...` 赋值后 `RETURN`。
+    
+    这意味着 RETURNFORM 本质上是一种**受限的动态求值**机制：参数在编译期以 FORM 字符串形式存在，运行时先展开再解析为整数表达式。现代 ERABASIC 提供了更通用的 `EVAL`/`EVALS`/`EVALF` 表达式函数来实现完整的动态求值。
 
 ---
 

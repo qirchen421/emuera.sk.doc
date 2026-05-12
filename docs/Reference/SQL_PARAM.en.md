@@ -61,7 +61,7 @@ hide:
         REPEAT 100
             SIF !SQL_READER_READ(LOCAL)
                 BREAK
-            PRINTFORML {SQL_READER_GET_STRING(LOCAL, 0)}: {SQL_READER_GET_LONG(LOCAL, 1)} years old
+            PRINTFORML %SQL_READER_GET_STRING(LOCAL, 0)%: {SQL_READER_GET_LONG(LOCAL, 1)} years old
         REND
         SQL_READER_CLOSE LOCAL
 

@@ -7,7 +7,7 @@ hide:
 
 | 関数名                                                             | 引数           | 戻り値 |
 | :----------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

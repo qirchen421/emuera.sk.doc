@@ -75,3 +75,4 @@ hide:
 
 ### 相关项
 - [CALLSTR系](CALLSTR.zh.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — EVAL/EVALS 属于第四代"通用动态求值"

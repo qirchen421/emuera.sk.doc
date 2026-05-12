@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void` |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

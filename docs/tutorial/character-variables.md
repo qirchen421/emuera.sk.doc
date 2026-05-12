@@ -14,6 +14,9 @@ era ゲームの核心は**キャラクター**である。各キャラクター
 
 キャラ変数と通常変数の重要な違い：キャラ変数の第一次元インデックスは**キャラ登録番号**であり、各キャラクターが独立したデータを持つ。
 
+!!! note "eramaker互換性"
+    基本情報変数（`NAME`/`CALLNAME`/`NO`）、数値型キャラ変数（`BASE`/`ABL`/`TALENT`/`EXP`/`MARK`/`CFLAG`/`PALAM`/`SOURCE`）、キャラ管理命令（`ADDCHARA`/`DELCHARA`）はeramakerから存在する機能です。`CSTR`/`CDFLAG`/`TCVAR`、CSV読取関数（`CSVABL`等）、`VariableSize.csv`、カスタムキャラ変数（`#DIM CHARADATA`）はEmueraの拡張機能です。
+
 ```erb
 ; 通常変数：一次元インデックス
 FLAG:10 = 1
@@ -303,6 +306,128 @@ PRINTFORML 現在のキャラ数：{CHARANUM}
 PRINTFORML %BASENAME:0%：{BASE:TARGET:0}
 ; 出力：体力：1000
 ```
+
+### CSV → 変数の完全マッピング
+
+CSV ファイル、名称変数、データ変数、CharaXX.csv キーワード、CSV読取関数の関係を一覧にする。
+
+#### キャラ変数系
+
+| CSV 名前ファイル | 名称変数 | データ変数 | CharaXX.csv キーワード | CSV読取関数 |
+|:--|:--|:--|:--|:--|
+| `abl.csv` | `ABLNAME` | `ABL` | `能力` | `CSVABL()` |
+| `talent.csv` | `TALENTNAME` | `TALENT` | `素質` | `CSVTALENT()` |
+| `exp.csv` | `EXPNAME` | `EXP` | `経験` | `CSVEXP()` |
+| `mark.csv` | `MARKNAME` | `MARK` | `刻印` | `CSVMARK()` |
+| `base.csv` | `BASENAME` | `BASE` / `MAXBASE` | `基礎` | `CSVBASE()` |
+| `palam.csv` | `PALAMNAME` | `PALAM` / `JUEL` / `GOTJUEL` | — | — |
+| `cflag.csv` | `CFLAGNAME` | `CFLAG` | `フラグ` | `CSVCFLAG()` |
+| `cstr.csv` | `CSTRNAME` | `CSTR` | `CSTR` | `CSVCSTR()` |
+| `source.csv` | `SOURCENAME` | `SOURCE` | — | — |
+| `ex.csv` | `EXNAME` | `EX` / `NOWEX` | — | — |
+| `equip.csv` | `EQUIPNAME` | `EQUIP` | — | — |
+| `tequip.csv` | `TEQUIPNAME` | `TEQUIP` | — | — |
+| `relation.csv` | — | `RELATION` | `相性` | `CSVRELATION()` |
+| `juel.csv` | — | `JUEL` | `珠` | `CSVJUEL()` |
+| `equip.csv` | — | `EQUIP` | `装着物` | `CSVEQUIP()` |
+| `stain.csv` | `STAINNAME` | `STAIN` | — | — |
+| `tcvar.csv` | `TCVARNAME` | `TCVAR` | — | — |
+| `cdflag1.csv` | `CDFLAGNAME1` | `CDFLAG`（第2インデックス） | — | — |
+| `cdflag2.csv` | `CDFLAGNAME2` | `CDFLAG`（第3インデックス） | — | — |
+
+#### 非キャラ変数系
+
+| CSV 名前ファイル | 名称変数 | データ変数 | 備考 |
+|:--|:--|:--|:--|
+| `flag.csv` | `FLAGNAME` | `FLAG` | |
+| `tflag.csv` | `TFLAGNAME` | `TFLAG` | |
+| `train.csv` | `TRAINNAME` | — | コマンド名定義 |
+| `item.csv` | `ITEMNAME` / `ITEMPRICE` | `ITEM` / `ITEMSALES` | 3列目が価格 |
+| `strname.csv` | `STRNAME` | — | STR の名前定義 |
+| `str.csv` | — | `STR` | **値の直接代入**（名前ではない） |
+| `tstr.csv` | `TSTRNAME` | `TSTR` | |
+| `savestr.csv` | `SAVESTRNAME` | `SAVESTR` | |
+| `global.csv` | `GLOBALNAME` | `GLOBAL` | |
+| `globals.csv` | `GLOBALSNAME` | `GLOBALS` | |
+
+> **`str.csv` と `strname.csv` の違いに注意**：`str.csv` は変数 `STR` に値を直接代入するファイル、`strname.csv` は `STRNAME`（インデックスの名前）を定義するファイル。役割が全く異なる。
+
+### CSV から変数への変換例
+
+CharaXX.csv で定義したデータは、`ADDCHARA` 実行時に対応する変数に自動的に代入される。
+
+```csv
+; CSV/Chara5.csv
+番号,5
+名前,博麗霊夢
+呼び名,霊夢
+基礎,0,2000
+基礎,1,1000
+素質,0,1
+素質,3,1
+能力,0,5
+能力,2,3
+経験,1,100
+フラグ,0,1
+CSTR,0,テスト用キャラ
+```
+
+```erb
+; ADDCHARA 実行後の変数状態（登録番号 = 1 の場合）
+; NO:1 = 5
+; NAME:1 = "博麗霊夢"
+; CALLNAME:1 = "霊夢"
+; BASE:1:0 = 2000,  BASE:1:1 = 1000
+; TALENT:1:0 = 1,   TALENT:1:3 = 1
+; ABL:1:0 = 5,      ABL:1:2 = 3
+; EXP:1:1 = 100
+; CFLAG:1:0 = 1
+; CSTR:1:0 = "テスト用キャラ"
+```
+
+### 名称によるインデックスアクセス
+
+名称変数が定義されている場合、数値インデックスの代わりに名前でアクセスできる。
+
+```erb
+; 以下はすべて等価
+ABL:TARGET:0
+ABL:TARGET:従順        ; ABLNAME:0 = "従順" の場合
+
+; 名前アクセスは GETNUM でも実現可能
+#DIM idx
+idx = GETNUM(ABL, "従順")    ; idx = 0
+ABL:TARGET:idx = 10
+```
+
+### CSV読取関数
+
+`ADDCHARA` せずに CSV の定義値を直接読み取る関数群。第一引数は**キャラ番号**（登録番号ではない）。
+
+```erb
+; キャラ番号5のCSVデータを直接読み取る（ADDCHARA 不要）
+PRINTFORML 能力0 = {CSVABL(5, 0)}
+PRINTFORML 素質3 = {CSVTALENT(5, 3)}
+PRINTFORML 基礎0 = {CSVBASE(5, 0)}
+PRINTFORML CFLAG0 = {CSVCFLAG(5, 0)}
+PRINTFORML CSTR0 = %CSVCSTR(5, 0)%
+```
+
+> **CSV読取関数と変数アクセスの違い**：`CSVABL(5, 0)` はキャラ番号5のCSV定義値を読み取る。`ABL:TARGET:0` は登録番号TARGETの現在の実行時値を読み取る。CSV読取関数は初期値の参照に使い、実行時の値は変数アクセスを使う。
+
+### VariableSize.csv による配列サイズ変更
+
+Emuera では `CSV/VariableSize.csv` で各変数の要素数を変更できる。
+
+```csv
+; CSV/VariableSize.csv
+ABL,100
+TALENT,1000
+CFLAG,10000
+STR,20000
+```
+
+eramaker では各変数に固定の上限があった（例：ABL は最大99、TALENT は最大99）。Emuera では `VariableSize.csv` でこれらを拡張できる。ただし、`ABLNAME` などの名称変数の要素数は変更不可（CSV ファイルの行数に自動的に追従する）。
 
 ---
 

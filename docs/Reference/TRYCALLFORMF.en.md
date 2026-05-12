@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md) | `string` | `void`¹ |
 
 !!! info "API"
 

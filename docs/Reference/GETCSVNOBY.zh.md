@@ -54,3 +54,4 @@ hide:
 ### 相关项目
 - [CSVNAME系](CSVNAME.zh.md) — 从编号查名字（逆操作）
 - [FINDCHARA](FINDCHARA.md) — 从已添加角色中查找
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETCSVNOBY* 属于 DotNet 扩展"角色名→编号反查"

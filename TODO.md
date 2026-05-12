@@ -18,17 +18,12 @@
 
 ### 版本概要页改进
 
-- [ ] **Reference 首页说明增强** — 已添加基本信息，可以补充：按版本筛选说明、功能数量统计、与教程的导航关系图
-- [ ] **eramaker 概要页** — eramaker/README.md 内容较薄，可以补充与 Emuera 的差异要点
+- [x] **Reference 首页说明增强** — 已添加教程↔Reference 对应关系表（三语言版）
+- ~~**eramaker 概要页** — eramaker/README.md 内容较薄，可以补充与 Emuera 的差异要点~~ → 放弃：eramaker 差异已在各教程页的 eramaker 互換性注记中覆盖，无需单独概要页
 
 ### 导航优化
 
 - [ ] **教程与 Reference 的交叉链接** — 在教程各子节页面顶部添加"本节对应 Reference 分类：XXX"的提示
-
-### DotNet 变体
-
-- [ ] **DotNet 变体概要页** — 类似 Skia_Summary.md，为 EmueraDotNet 创建 DotNet/DotNet_Summary.md（SQLite、SkiaSharp、并行加载、G_POLYGON、多语言 resx 等）
-- [ ] **DotNet_Summary.zh.md**
 
 ### 多语言同步
 
@@ -43,9 +38,9 @@
 
 ### 文档质量
 
-- [ ] **CSV 定义与角色变量映射** — CSV 如何映射到角色变量（NAME→NAME:0、ABL→ABL:0:2 等），无完整说明
-- [ ] **STR/TALENT 等 CSV 定义** — CSV 文件的完整字段说明
-- [ ] **eramaker 语法覆盖** — eramaker 已有但 Emuera 未变更的语法，确保教程中有标注
+- [x] **CSV 定义与角色变量映射** — character-variables 三语言版和 CSV_format 三语言版已补充完整映射表
+- [x] **STR/TALENT 等 CSV 定义** — CSV_format 三语言版已补充 CSV→名称变量映射关系
+- [x] **eramaker 语法覆盖** — 6 个核心教程页（condition/loop/call/basic-output/assignment/character-variables）三语言版已添加 eramaker 互換性注记
 
 ### 进阶内容
 
@@ -64,6 +59,11 @@
 
 ### 2026-05-12
 
+- [x] **SQL_READER_GET_STRING FORM 语法修复** — 9 个文件（三语言版）将 `{SQL_READER_GET_STRING(...)}` 修正为 `%SQL_READER_GET_STRING(...)%`
+- [x] **函数手册页返回值标注统一** — 33 个文件（11 函数 × 3 语言）统一为 `void`¹
+- [x] **CSV→变量映射补充** — character-variables 和 CSV_format 三语言版添加完整映射表
+- [x] **eramaker 语法覆盖标注** — 6 个核心教程页三语言版添加 eramaker 互換性注记
+- [x] **Reference 首页说明增强** — README 三语言版添加教程↔Reference 对应关系表
 - [x] **角色变量系统** — 创建 tutorial/character-variables.md / .zh.md / .en.md 三语言版，系统性独立说明 ABL/TALENT/MARK/EXP/PALAM 等角色二维变量
 - [x] **教程首页引导性内容** — tutorial/index.md 和 index.zh.md 补充必读/推荐/选读标记、前置知识、本章要点
 - [x] **CALL/JUMP 系列返回值标注统一** — README 三语言版统一为 `void`¹，添加返回值标注说明

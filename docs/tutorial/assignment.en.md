@@ -20,6 +20,9 @@ Assignment statements are one of the most fundamental operations in ERABASIC —
 | Increment/Decrement | `X ++` / `X --` | Integer/Float | Prefix or postfix |
 | Batch assignment | `A:10 = 1,2,3` | Array | Consecutive element assignment |
 
+!!! note "eramaker Compatibility"
+    Basic assignment (`=`), compound assignment (`+=`/`-=`/`*=`/`/=`/`%=`), and string FORM assignment have existed since eramaker. Increment/decrement (`++`/`--`), string expression assignment (`'=`), and batch assignment are Emuera extensions.
+
 ---
 
 ## How the Parser Identifies Assignment Statements

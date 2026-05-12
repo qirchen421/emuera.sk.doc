@@ -45,3 +45,4 @@ hide:
 
 ### 相关项目
 - [函数・预处理器>表示特殊块的行>\[IF XXX\]](../Emuera/function.md#if-xxxelseif-xxxelseendif)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ISDEFINED 属于第三代"变量存在检查"

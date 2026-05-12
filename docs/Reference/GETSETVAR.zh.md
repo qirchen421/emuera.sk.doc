@@ -61,3 +61,4 @@ hide:
 ### 相关项目
 - [STRFORM](STRFORM.md)
 - [GETMETH,GETMETHS](GETMETH.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETVAR/GETVARS/SETVAR 属于第三代"变量反射"

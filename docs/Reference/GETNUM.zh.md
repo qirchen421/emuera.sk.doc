@@ -25,3 +25,4 @@ hide:
 
 ### 相关项目
 - [CSV 状态相关](CSV_STATUS.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETNUM 属于第二代"名称反查"反射

@@ -23,6 +23,9 @@ ERABASICプログラムは**関数**で構成されます。各関数は `@` ラ
 | `RETURN` | 関数から戻り、RESULT を設定 |
 | `RETURNF` | 式関数から値を返す |
 
+!!! note "eramaker互換性"
+    `@ラベル`/`CALL`/`JUMP`/`RETURN` はeramakerから存在する機能です。`RETURNF`、`TRYCALL`/`TRYJUMP`、`#FUNCTION`/`#FUNCTIONS` などはEmueraの拡張機能です。
+
 ---
 
 ## @ラベル — 関数の定義
@@ -214,14 +217,15 @@ RETURN
 | 命令型（デフォルト） | `RETURN` | ✅ 上書き | 暗黙的に `RESULT:0 = 0` |
 | 式型（`#FUNCTION`） | `RETURNF` | ❌ 上書きしない | 変更なし |
 
-### RETURNFORM — FORM構文による戻り値
+### RETURNFORM — FORM構文による動的評価戻り値
 
-`RETURNFORM` はFORM構文で戻り値を解析します：
+`RETURNFORM` は `RETURN` の動的評価変種です。FORM構文で文字列を展開した後、展開結果を**整数式として再解析・評価**し、`RESULT` に書き込みます。
 
 ```erb
 @MY_FUNC
     #DIMS L_EXPR '= "A * 10"
     RETURNFORM %L_EXPR%
+; 実行過程：FORM展開 → "A * 10" → 字句解析+整数式評価 → RESULTに書き込み
 ; RETURN A * 10 と等価
 ```
 
@@ -229,6 +233,17 @@ RETURN
 
     `RETURNFORM` 内の `%` はFORM構文の文字列置換記号であり、剰余演算子ではありません。
     `RETURNFORM A % 100` は `A ` + 変数 `100` の値として解析され、`A mod 100` ではありません。
+
+!!! info "RETURNFORM は整数を返し、文字列は返さない"
+
+    `RETURNFORM` の評価は2段階で行われます：
+    
+    1. **FORM展開**：`%変数%` や `{式}` を実際の値に置換し、文字列を得る
+    2. **再解析**：展開後の文字列を**整数式**として字句解析・評価する
+    
+    最終結果は `RESULT`（整数配列）に書き込まれます。`RETURNSFORM` 命令は存在しません——文字列を返す必要がある場合は、`RESULTS = ...` で代入後に `RETURN` を使用してください。
+    
+    つまり RETURNFORM は本質的に**制限付きの動的評価**機構です：パラメータはコンパイル時にFORM文字列として存在し、実行時に展開→整数式として再解析されます。現代のERABASICでは、より汎用的な `EVAL`/`EVALS`/`EVALF` 式関数が完全な動的評価を提供しています。
 
 ---
 

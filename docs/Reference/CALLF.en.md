@@ -7,8 +7,8 @@ hide:
 
 | Function name | Arguments | Return |
 | :------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | none   |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | none   |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | `void`¹ |
 
 !!! info "API"
 

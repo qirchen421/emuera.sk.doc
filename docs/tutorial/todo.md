@@ -89,27 +89,35 @@
 
 | 页面 | 日文 .md | 中文 .zh.md | 英文 .en.md |
 |------|:--------:|:-----------:|:-----------:|
-| index | ✅ | ✅ | ❌ |
-| intro | ✅ | ✅ | ❌ |
-| hello-world | ✅ | ✅ | ❌ |
-| file-types | ✅ | ✅ | ❌ |
-| line-types | ✅ | ✅ | ❌ |
-| evolution | ✅ | ✅ | ❌ |
-| values-types | ✅ | ✅ | ❌ |
+| index | ✅ | ✅ | ✅ |
+| intro | ✅ | ✅ | ✅ |
+| hello-world | ✅ | ✅ | ✅ |
+| file-types | ✅ | ✅ | ✅ |
+| line-types | ✅ | ✅ | ✅ |
+| evolution | ✅ | ✅ | ✅ |
+| values-types | ✅ | ✅ | ✅ |
 | assignment | ✅ | ✅ | ✅ |
-| basic-output | ✅ | ✅ | ❌ |
+| basic-output | ✅ | ✅ | ✅ |
 | form-syntax | ✅ | ✅ | ✅ |
-| condition | ✅ | ✅ | ❌ |
-| loop | ✅ | ✅ | ❌ |
-| jump | ✅ | ✅ | ❌ |
-| call | ✅ | ✅ | ❌ |
-| variable-declaration | ✅ | ✅ | ❌ |
+| condition | ✅ | ✅ | ✅ |
+| loop | ✅ | ✅ | ✅ |
+| jump | ✅ | ✅ | ✅ |
+| call | ✅ | ✅ | ✅ |
+| variable-declaration | ✅ | ✅ | ✅ |
 | erb-format-extension | ✅ | ✅ | ✅ |
 | event-functions | ✅ | ✅ | ✅ |
-| command-vs-expression | ✅ | ✅ | ❌ |
+| command-vs-expression | ✅ | ✅ | ✅ |
 | system-flow | ✅ | ✅ | ✅ |
 | character-variables | ✅ | ✅ | ✅ |
 | html-syntax | ✅ | ✅ | ✅ |
+
+### 2.1b 高级教程页面（第6章）
+
+| 页面 | 日文 .md | 中文 .zh.md | 英文 .en.md | 备注 |
+|------|:--------:|:-----------:|:-----------:|------|
+| dynamic-reflection | ❌ | ✅ | ❌ | 动态解析与反射演进：RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名 |
+| runtime-mechanics | ❌ | ❌ | ❌ | 运行时机制：ConvertArg→SetTransporter→IntoFunction |
+| anti-patterns | ❌ | ❌ | ❌ | 反模式与常见错误 |
 
 ### 2.2 引擎特性章节引用的规格页
 
@@ -148,19 +156,26 @@
 - [x] **index.zh.md** — 添加必读/推荐/选读标记、前置知识、本章要点
 - [x] **index.md** — 同步日文版引导性内容
 
-### Phase 4：多语言同步 ⬜ 待执行
+### Phase 4：多语言同步 ✅ 已完成
 
-- [ ] 创建 index.en.md（英文版教程首页）
-- [ ] 补全缺失的 .en.md 文件（见 §2.1 表格中 ❌ 项）
+- [x] 创建 index.en.md（英文版教程首页）
+- [x] 补全缺失的 .en.md 文件（见 §2.1 表格中 ❌ 项）— 12 个页面已翻译
 - [ ] 三语言交叉引用链接一致性检查
 
-### Phase 5：进阶内容 ⬜ 待执行
+### Phase 5：进阶内容（第6章高级教程）⬜ 待执行
 
 > 以下内容需要从源码中提取洞见，优先级较低。
 
-- [ ] tutorial/runtime.zh.md — 运行时机制（ConvertArg→SetTransporter→IntoFunction）
-- [ ] tutorial/anti-patterns.zh.md — 反模式与常见错误
-- [ ] METHOD_SAFE / 常量折叠 / RESULT 污染 等进阶主题
+- [ ] **tutorial/dynamic-reflection.zh.md** — 动态解析与反射演进
+  - [ ] 6.1 早期动态求值：RETURNFORM（FORM展开→二次整数解析，仅限整数返回值）
+  - [ ] 6.2 通用动态求值：EVAL/EVALS/EVALF（Skia新增，支持三种类型+默认值+异常安全）
+  - [ ] 6.3 函数名反射：CALLFORM（FORM构造函数名→编译期无法确定跳转目标）
+  - [ ] 6.4 函数名+参数反射：CALLSTR（运行时解析完整调用语句，函数名+参数同时动态）
+  - [ ] 6.5 变量名反射：GETVAR/ISVAR/GETNUM/GETPALAM/GETTALENT 等（从固定getter到字符串→变量Token映射）
+  - [ ] 6.6 CSV别名与多对一映射：ALS修复（原版一对一→Skia多对一，同一编号可有多个名称）
+  - [ ] 6.7 反射能力演进总表：从静态编译到运行时动态的逐步解放
+- [ ] **tutorial/runtime-mechanics.zh.md** — 运行时机制（ConvertArg→SetTransporter→IntoFunction）
+- [ ] **tutorial/anti-patterns.zh.md** — 反模式与常见错误
 
 ### Phase 6：mkdocs.yml 导航更新 ⬜ 待执行
 
@@ -206,6 +221,8 @@ eramaker 仅在"版本演进"章节中作为历史参考提及，教程以 Emuer
 
 | 日期 | 变更 |
 |------|------|
+| 2026-05-12 | 新增第6章高级教程规划：dynamic-reflection（中文版已创建）、runtime-mechanics、anti-patterns；修复 RETURNFORM 文档（三语言版）：明确两阶段求值机制和整数返回限制；新增 §2.1b 高级教程页面进度表 |
+| 2026-05-12 | Phase 4 多语言同步完成：补全 12 个缺失的 .en.md 文件（index/intro/hello-world/file-types/line-types/evolution/values-types/basic-output/condition/loop/jump/call/command-vs-expression）；修正 values-types 和 variable-declaration 的 .en.md 状态（此前已存在但误标为 ❌） |
 | 2026-05-12 | 教程首页添加引导性内容：必读/推荐/选读标记、前置知识、本章要点（index.zh.md + index.md）；角色变量系统确认完成（三语言版）；整理 TODO 结构 |
 | 2026-05-11 | 重构为6章架构：新增第5章「引擎特性」，事件函数从第4章移出，角色系统合并；修复 BEFORE_THROW/BEFORE_ERROR 链接和锚点；mkdocs.yml 新增エンジン特性导航组 |
 | 2026-05-09 | 初始版本：10章架构、Phase 1–5 完成 |

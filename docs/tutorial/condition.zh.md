@@ -17,6 +17,9 @@ ERABASIC 提供三种条件分支结构：
 | `SIF` | 单行条件 | 只控制下一行是否执行 |
 | `SELECTCASE` | 按值分支 | 类似 switch，按一个值匹配多种情况 |
 
+!!! note "eramaker 兼容性"
+    `IF`/`ELSEIF`/`ELSE`/`ENDIF` 和 `SIF` 是 eramaker 就存在的功能。`SELECTCASE` 是 Emuera 的扩展功能。
+
 ---
 
 ## IF ~ ENDIF

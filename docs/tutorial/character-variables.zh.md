@@ -14,6 +14,9 @@ era 游戏的核心是**角色**——每个角色有自己的属性、状态、
 
 角色变量与普通变量的关键区别：角色变量的第一维索引是**角色注册编号**，每个角色拥有独立的一组数据。
 
+!!! note "eramaker 兼容性"
+    基础信息变量（`NAME`/`CALLNAME`/`NO`）、数值型角色变量（`BASE`/`ABL`/`TALENT`/`EXP`/`MARK`/`CFLAG`/`PALAM`/`SOURCE`）、角色管理指令（`ADDCHARA`/`DELCHARA`）是 eramaker 就存在的功能。`CSTR`/`CDFLAG`/`TCVAR`、CSV 读取函数（`CSVABL` 等）、`VariableSize.csv`、自定义角色变量（`#DIM CHARADATA`）是 Emuera 的扩展功能。
+
 ```erb
 ; 普通变量：一维索引
 FLAG:10 = 1
@@ -303,6 +306,128 @@ PRINTFORML 当前角色数：{CHARANUM}
 PRINTFORML %BASENAME:0%：{BASE:TARGET:0}
 ; 输出：体力：1000
 ```
+
+### CSV → 变量的完整映射
+
+CSV 文件、名称变量、数据变量、CharaXX.csv 关键字、CSV读取函数的关系一览。
+
+#### 角色变量系
+
+| CSV 名称文件 | 名称变量 | 数据变量 | CharaXX.csv 关键字 | CSV读取函数 |
+|:--|:--|:--|:--|:--|
+| `abl.csv` | `ABLNAME` | `ABL` | `能力` | `CSVABL()` |
+| `talent.csv` | `TALENTNAME` | `TALENT` | `素質` | `CSVTALENT()` |
+| `exp.csv` | `EXPNAME` | `EXP` | `経験` | `CSVEXP()` |
+| `mark.csv` | `MARKNAME` | `MARK` | `刻印` | `CSVMARK()` |
+| `base.csv` | `BASENAME` | `BASE` / `MAXBASE` | `基礎` | `CSVBASE()` |
+| `palam.csv` | `PALAMNAME` | `PALAM` / `JUEL` / `GOTJUEL` | — | — |
+| `cflag.csv` | `CFLAGNAME` | `CFLAG` | `フラグ` | `CSVCFLAG()` |
+| `cstr.csv` | `CSTRNAME` | `CSTR` | `CSTR` | `CSVCSTR()` |
+| `source.csv` | `SOURCENAME` | `SOURCE` | — | — |
+| `ex.csv` | `EXNAME` | `EX` / `NOWEX` | — | — |
+| `equip.csv` | `EQUIPNAME` | `EQUIP` | — | — |
+| `tequip.csv` | `TEQUIPNAME` | `TEQUIP` | — | — |
+| `relation.csv` | — | `RELATION` | `相性` | `CSVRELATION()` |
+| `juel.csv` | — | `JUEL` | `珠` | `CSVJUEL()` |
+| `equip.csv` | — | `EQUIP` | `装着物` | `CSVEQUIP()` |
+| `stain.csv` | `STAINNAME` | `STAIN` | — | — |
+| `tcvar.csv` | `TCVARNAME` | `TCVAR` | — | — |
+| `cdflag1.csv` | `CDFLAGNAME1` | `CDFLAG`（第2索引） | — | — |
+| `cdflag2.csv` | `CDFLAGNAME2` | `CDFLAG`（第3索引） | — | — |
+
+#### 非角色变量系
+
+| CSV 名称文件 | 名称变量 | 数据变量 | 备注 |
+|:--|:--|:--|:--|
+| `flag.csv` | `FLAGNAME` | `FLAG` | |
+| `tflag.csv` | `TFLAGNAME` | `TFLAG` | |
+| `train.csv` | `TRAINNAME` | — | 命令名定义 |
+| `item.csv` | `ITEMNAME` / `ITEMPRICE` | `ITEM` / `ITEMSALES` | 第3列为价格 |
+| `strname.csv` | `STRNAME` | — | STR 的名称定义 |
+| `str.csv` | — | `STR` | **值的直接赋值**（非名称） |
+| `tstr.csv` | `TSTRNAME` | `TSTR` | |
+| `savestr.csv` | `SAVESTRNAME` | `SAVESTR` | |
+| `global.csv` | `GLOBALNAME` | `GLOBAL` | |
+| `globals.csv` | `GLOBALSNAME` | `GLOBALS` | |
+
+> **注意 `str.csv` 与 `strname.csv` 的区别**：`str.csv` 是向变量 `STR` 直接赋值的文件，`strname.csv` 是定义 `STRNAME`（索引名称）的文件。两者的作用完全不同。
+
+### CSV 到变量的转换示例
+
+CharaXX.csv 中定义的数据，在 `ADDCHARA` 执行时自动赋值到对应的变量。
+
+```csv
+; CSV/Chara5.csv
+番号,5
+名前,博丽灵梦
+呼び名,灵梦
+基礎,0,2000
+基礎,1,1000
+素質,0,1
+素質,3,1
+能力,0,5
+能力,2,3
+経験,1,100
+フラグ,0,1
+CSTR,0,测试用角色
+```
+
+```erb
+; ADDCHARA 执行后的变量状态（注册编号 = 1 时）
+; NO:1 = 5
+; NAME:1 = "博丽灵梦"
+; CALLNAME:1 = "灵梦"
+; BASE:1:0 = 2000,  BASE:1:1 = 1000
+; TALENT:1:0 = 1,   TALENT:1:3 = 1
+; ABL:1:0 = 5,      ABL:1:2 = 3
+; EXP:1:1 = 100
+; CFLAG:1:0 = 1
+; CSTR:1:0 = "测试用角色"
+```
+
+### 通过名称进行索引访问
+
+当名称变量已定义时，可以用名称代替数值索引来访问。
+
+```erb
+; 以下写法完全等价
+ABL:TARGET:0
+ABL:TARGET:従順        ; 当 ABLNAME:0 = "従順" 时
+
+; 名称访问也可以通过 GETNUM 实现
+#DIM idx
+idx = GETNUM(ABL, "従順")    ; idx = 0
+ABL:TARGET:idx = 10
+```
+
+### CSV 读取函数
+
+无需 `ADDCHARA` 即可直接读取 CSV 定义值的函数群。第一参数是**角色编号**（不是注册编号）。
+
+```erb
+; 直接读取角色编号5的CSV数据（无需 ADDCHARA）
+PRINTFORML 能力0 = {CSVABL(5, 0)}
+PRINTFORML 素质3 = {CSVTALENT(5, 3)}
+PRINTFORML 基础0 = {CSVBASE(5, 0)}
+PRINTFORML CFLAG0 = {CSVCFLAG(5, 0)}
+PRINTFORML CSTR0 = %CSVCSTR(5, 0)%
+```
+
+> **CSV 读取函数与变量访问的区别**：`CSVABL(5, 0)` 读取角色编号5的 CSV 定义值。`ABL:TARGET:0` 读取注册编号 TARGET 的当前运行时值。CSV 读取函数用于引用初始值，运行时值用变量访问。
+
+### VariableSize.csv 修改数组大小
+
+Emuera 中可以通过 `CSV/VariableSize.csv` 修改各变量的元素数量。
+
+```csv
+; CSV/VariableSize.csv
+ABL,100
+TALENT,1000
+CFLAG,10000
+STR,20000
+```
+
+eramaker 中各变量有固定上限（如 ABL 最多99、TALENT 最多99）。Emuera 中可通过 `VariableSize.csv` 扩展这些限制。但 `ABLNAME` 等名称变量的元素数不可修改（自动跟随 CSV 文件的行数）。
 
 ---
 

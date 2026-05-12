@@ -67,3 +67,8 @@ hide:
     函数名包含"Foo"的函数数量:7
     PrintFoo, Foo1, Foo2, Foo3, Dummy1Foo, Dummy2Foo, My_Foo_Func
     ```
+
+### 相关项目
+- [ENUMVAR系](ENUMVAR.md) — 变量名枚举
+- [ENUMMACRO系](ENUMMACRO.md) — 宏名枚举
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ENUMFUNC* 属于第三代"函数名枚举"

@@ -55,6 +55,50 @@ CSVファイルには、以下のようなものがあります。
 		2,"技巧"
 設定方法はお使いの表計算ソフトのヘルプを参照してください。
 
+## CSV → 変数のマッピング
+
+各CSVファイルは、対応する変数のインデックス名（名称変数）や初期値（データ変数）を定義する。
+
+### キャラ変数系CSV
+
+| CSVファイル | 名称変数 | データ変数 | CharaXX.csvキーワード | 備考 |
+|:--|:--|:--|:--|:--|
+| `abl.csv` | `ABLNAME` | `ABL` | `能力` | |
+| `talent.csv` | `TALENTNAME` | `TALENT` | `素質` | |
+| `exp.csv` | `EXPNAME` | `EXP` | `経験` | |
+| `mark.csv` | `MARKNAME` | `MARK` | `刻印` | |
+| `base.csv` | `BASENAME` | `BASE` / `MAXBASE` | `基礎` | |
+| `palam.csv` | `PALAMNAME` | `PALAM` / `JUEL` / `GOTJUEL` | — | |
+| `cflag.csv` | `CFLAGNAME` | `CFLAG` | `フラグ` | |
+| `cstr.csv` | `CSTRNAME` | `CSTR` | `CSTR` | |
+| `source.csv` | `SOURCENAME` | `SOURCE` | — | |
+| `ex.csv` | `EXNAME` | `EX` / `NOWEX` | — | |
+| `equip.csv` | `EQUIPNAME` | `EQUIP` | `装着物` | |
+| `tequip.csv` | `TEQUIPNAME` | `TEQUIP` | — | |
+| `relation.csv` | — | `RELATION` | `相性` | |
+| `juel.csv` | — | `JUEL` | `珠` | |
+| `stain.csv` | `STAINNAME` | `STAIN` | — | |
+| `tcvar.csv` | `TCVARNAME` | `TCVAR` | — | |
+
+### 非キャラ変数系CSV
+
+| CSVファイル | 名称変数 | データ変数 | 備考 |
+|:--|:--|:--|:--|
+| `flag.csv` | `FLAGNAME` | `FLAG` | |
+| `tflag.csv` | `TFLAGNAME` | `TFLAG` | |
+| `train.csv` | `TRAINNAME` | — | コマンド名定義 |
+| `item.csv` | `ITEMNAME` / `ITEMPRICE` | `ITEM` / `ITEMSALES` | 3列目が価格 |
+| `strname.csv` | `STRNAME` | — | STRの名前定義 |
+| `str.csv` | — | `STR` | **値の直接代入**（名前ではない） |
+| `tstr.csv` | `TSTRNAME` | `TSTR` | |
+| `savestr.csv` | `SAVESTRNAME` | `SAVESTR` | |
+| `global.csv` | `GLOBALNAME` | `GLOBAL` | |
+| `globals.csv` | `GLOBALSNAME` | `GLOBALS` | |
+
+> **`str.csv`と`strname.csv`の違いに注意**：`str.csv`は変数`STR`に値を直接代入するファイル、`strname.csv`は`STRNAME`（インデックスの名前）を定義するファイル。役割が全く異なる。
+
+> 完全なマッピングと変数アクセスの詳細は[キャラ変数](../tutorial/character-variables.md)を参照。
+
 ## 各ファイルの書式
 
 ### `GameBase.csv`の書式

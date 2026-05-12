@@ -71,6 +71,50 @@ CSV文件包括以下几种。
 
 关于设定方法，请参阅您使用的表格软件帮助。
 
+## CSV → 变量映射
+
+各CSV文件定义了对应变量的索引名称（名称变量）或初始值（数据变量）。
+
+### 角色变量系CSV
+
+| CSV文件 | 名称变量 | 数据变量 | CharaXX.csv关键字 | 备注 |
+|:--|:--|:--|:--|:--|
+| `abl.csv` | `ABLNAME` | `ABL` | `能力` | |
+| `talent.csv` | `TALENTNAME` | `TALENT` | `素質` | |
+| `exp.csv` | `EXPNAME` | `EXP` | `経験` | |
+| `mark.csv` | `MARKNAME` | `MARK` | `刻印` | |
+| `base.csv` | `BASENAME` | `BASE` / `MAXBASE` | `基礎` | |
+| `palam.csv` | `PALAMNAME` | `PALAM` / `JUEL` / `GOTJUEL` | — | |
+| `cflag.csv` | `CFLAGNAME` | `CFLAG` | `フラグ` | |
+| `cstr.csv` | `CSTRNAME` | `CSTR` | `CSTR` | |
+| `source.csv` | `SOURCENAME` | `SOURCE` | — | |
+| `ex.csv` | `EXNAME` | `EX` / `NOWEX` | — | |
+| `equip.csv` | `EQUIPNAME` | `EQUIP` | `装着物` | |
+| `tequip.csv` | `TEQUIPNAME` | `TEQUIP` | — | |
+| `relation.csv` | — | `RELATION` | `相性` | |
+| `juel.csv` | — | `JUEL` | `珠` | |
+| `stain.csv` | `STAINNAME` | `STAIN` | — | |
+| `tcvar.csv` | `TCVARNAME` | `TCVAR` | — | |
+
+### 非角色变量系CSV
+
+| CSV文件 | 名称变量 | 数据变量 | 备注 |
+|:--|:--|:--|:--|
+| `flag.csv` | `FLAGNAME` | `FLAG` | |
+| `tflag.csv` | `TFLAGNAME` | `TFLAG` | |
+| `train.csv` | `TRAINNAME` | — | 命令名定义 |
+| `item.csv` | `ITEMNAME` / `ITEMPRICE` | `ITEM` / `ITEMSALES` | 第3列为价格 |
+| `strname.csv` | `STRNAME` | — | STR的名称定义 |
+| `str.csv` | — | `STR` | **值的直接赋值**（非名称） |
+| `tstr.csv` | `TSTRNAME` | `TSTR` | |
+| `savestr.csv` | `SAVESTRNAME` | `SAVESTR` | |
+| `global.csv` | `GLOBALNAME` | `GLOBAL` | |
+| `globals.csv` | `GLOBALSNAME` | `GLOBALS` | |
+
+> **注意 `str.csv` 与 `strname.csv` 的区别**：`str.csv` 是向变量 `STR` 直接赋值的文件，`strname.csv` 是定义 `STRNAME`（索引名称）的文件。两者的作用完全不同。
+
+> 完整的映射和变量访问详情请参阅[角色变量](../tutorial/character-variables.zh.md)。
+
 ## 各文件的格式
 
 ### `GameBase.csv`的格式

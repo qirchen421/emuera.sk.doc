@@ -23,6 +23,9 @@ ERABASICは4種類のループ構造を提供します：
 
 すべてのループで `CONTINUE`（次の反復にスキップ）と `BREAK`（ループを抜ける）が使用できます。
 
+!!! note "eramaker互換性"
+    `REPEAT`/`REND` と `CONTINUE`/`BREAK` はeramakerから存在する機能です。`FOR`/`NEXT`、`WHILE`/`WEND`、`DO`/`LOOP` はEmueraの拡張機能です。
+
 ---
 
 ## REPEAT ~ REND — 固定回数ループ

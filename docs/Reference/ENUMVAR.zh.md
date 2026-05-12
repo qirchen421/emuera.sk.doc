@@ -71,3 +71,9 @@ hide:
     包含"Foo"的变量/常量数量:4
     Foo1, Foo2, Foo3, MyFoo
     ```
+
+### 相关项目
+- [ENUMFUNC系](ENUMFUNC.md) — 函数名枚举
+- [ENUMMACRO系](ENUMMACRO.md) — 宏名枚举
+- [EXISTVAR](EXISTVAR.md) — 变量存在检查
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ENUMVAR* 属于第三代"变量名枚举"

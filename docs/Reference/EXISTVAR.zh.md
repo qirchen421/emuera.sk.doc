@@ -60,3 +60,4 @@ hide:
 
 ### 相关项目
 - [ENUMVAR](ENUMVAR.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — EXISTVAR 属于第三代"变量存在检查"

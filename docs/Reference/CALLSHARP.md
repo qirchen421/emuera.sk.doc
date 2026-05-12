@@ -9,7 +9,7 @@ hide:
 
 | 関数名                                                          | 引数           | 戻り値 |
 | :-------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md) | `functionName` | `void` |
+| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

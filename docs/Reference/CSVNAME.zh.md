@@ -45,3 +45,5 @@ hide:
 
 ### 相关项目
 - [CSV状态获取类](CSV_STATUS.md)
+- [GETCSVNOBY系](GETCSVNOBY.zh.md) — 从名字查编号（逆操作）
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — CSVNAME 属于第一代"固定映射"

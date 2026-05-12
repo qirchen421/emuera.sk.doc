@@ -14,6 +14,23 @@
 
 **返回值标注说明**：`void`¹ 表示指令本身不返回值，但被调用函数中的 [`RETURN`](./RETURN.md) 会设置 `RESULT`；函数末尾隐式 `RESULT:0 = 0`。`无` 表示指令不返回值且不影响 `RESULT`。
 
+## 与教程的对应
+
+各分类的详细讲解和使用示例，请参阅教程对应章节。
+
+| Reference 分类 | 教程章节 |
+|:--|:--|
+| PRINT 系列 / 显示操作・字体操作 | [基本输出](../tutorial/basic-output.zh.md) |
+| 字符串操作・引用 | [FORM 语法](../tutorial/form-syntax.zh.md) |
+| 算术 | [赋值语句](../tutorial/assignment.zh.md) |
+| 角色操作・引用 / 变量操作・CSV 引用 | [角色变量](../tutorial/character-variables.zh.md) / [变量声明](../tutorial/variable-declaration.zh.md) |
+| 循环・分支结构 | [条件分支](../tutorial/condition.zh.md) / [循环](../tutorial/loop.zh.md) |
+| 函数系（CALL 等）/ RETURN 系列 | [函数与 CALL](../tutorial/call.zh.md) / [跳转](../tutorial/jump.zh.md) |
+| 输入・等待 | [函数与 CALL](../tutorial/call.zh.md)（INPUT 节） |
+| HTML 系列 | [HTML 标签语法](../tutorial/html-syntax.zh.md) |
+| 图像处理 / 音频系列 | [ERB 文件格式扩展](../tutorial/erb-format-extension.zh.md) |
+| 存档数据操作 | [ERB 文件格式扩展](../tutorial/erb-format-extension.zh.md)（存档数据节） |
+
 ---
 
 ### PRINT 系列

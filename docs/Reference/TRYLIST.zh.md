@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                             | 参数                       | 返回值 |
 | :----------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | 无                       | 无   |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | 无                       | 无   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | 无                       | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | 无                       | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.md) | 无                       | 无   |
-| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | 无   |
+| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.md)     | 无                       | 无   |
 
 !!! info "API"

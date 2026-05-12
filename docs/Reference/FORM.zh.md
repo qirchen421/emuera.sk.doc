@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                       | 参数                       | 返回值 |
 | :----------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md) | `functionName`(, `any`...) | 无     |
-| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md) | `functionName`(, `any`...) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORM`](./FORM.md) | `functionName`(, `any`...) | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`JUMPFORM`](./FORM.md) | `functionName`(, `any`...) | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`GOTOFORM`](./FORM.md) | `labelName`                | 无     |
 
 !!! info "API"
@@ -58,3 +58,4 @@ hide:
 - [JUMP](JUMP.md)
 - [GOTO](GOTO.md)
 - [TRYC系命令](TRYC.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — CALLFORM 属于第二代"函数名反射"

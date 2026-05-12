@@ -7,10 +7,10 @@ hide:
 
 | 関数名                                                             | 引数                       | 戻り値 |
 | :----------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | なし                       | なし   |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | なし                       | なし   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | なし                       | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | なし                       | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.md) | なし                       | なし   |
-| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | なし   |
+| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | `void`¹ |
 | ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.md)     | なし                       | なし   |
 
 !!! info "API"

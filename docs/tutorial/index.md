@@ -111,6 +111,8 @@
 
 eraゲームは、テキストベースのロールプレイング/シミュレーションゲームの一種で、**ERABASIC**言語でスクリプトを記述します。ERABASICは元々eramakerで定義され、その後Emueraとその派生版によって大幅に拡張されました。現代のERABASICはEmueraをベースラインとしています。
 
+詳しくは「[第1章：简介](intro.md)」を参照してください。
+
 eraゲームの典型的なファイル構造：
 
 ```
@@ -131,6 +133,8 @@ eraゲームの典型的なファイル構造：
 ```
 
 ## 最初のERBプログラム {: #first-erb-program }
+
+詳しくは「[Hello World](hello-world.md)」を参照してください。
 
 `ERB/SYSTEM_TITLE.ERB`に最初の関数を書いてみましょう：
 

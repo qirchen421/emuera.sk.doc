@@ -22,6 +22,9 @@ PRINT(引数タイプ)(修飾)(動作サフィックス)
 | **修飾** | K / D | K=強制かな変換、D=SETCOLORを無視 |
 | **動作サフィックス** | なし / L / W / N | 改行の有無、入力待ちの有無 |
 
+!!! note "eramaker互換性"
+    `PRINT`/`PRINTL`/`PRINTW`/`PRINTV`/`PRINTVL`/`PRINTS`/`PRINTSL`/`PRINTFORM`/`PRINTFORML`/`PRINTFORMW` はeramakerから存在する機能です。`PRINTK`/`PRINTD`/`PRINTDATA`系/`PRINTSINGLE`系などはEmueraの拡張機能です。
+
 ---
 
 ## 最も基本的な出力

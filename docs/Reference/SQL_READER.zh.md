@@ -58,7 +58,7 @@ hide:
         REPEAT 100
             SIF !SQL_READER_READ(LOCAL)
                 BREAK
-            PRINTFORM {SQL_READER_GET_STRING(LOCAL, 0)}: 
+            PRINTFORM %SQL_READER_GET_STRING(LOCAL, 0)%: 
             SIF SQL_READER_ISNULL(LOCAL, 1)
                 PRINT NULL
             SIF !SQL_READER_ISNULL(LOCAL, 1)

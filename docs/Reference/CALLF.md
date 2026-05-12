@@ -7,8 +7,8 @@ hide:
 
 | 関数名                                                         | 引数           | 戻り値 |
 | :------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | なし   |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | なし   |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | `void`¹ |
 
 !!! info "API"
 

@@ -105,3 +105,4 @@ hide:
 
 ### 相关项目
 - [RESTART](RESTART.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — RETURNFORM 属于第二代"FORM 动态求值"

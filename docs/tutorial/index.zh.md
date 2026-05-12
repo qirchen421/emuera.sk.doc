@@ -111,6 +111,8 @@
 
 era 游戏是一类基于文本的角色扮演/模拟游戏，使用 **ERABASIC** 语言编写脚本。ERABASIC 最初由 eramaker 定义，后经 Emuera 及其变体大幅扩展。现代 ERABASIC 以 Emuera 为基准。
 
+详情请参见「[第1章：ERABASIC 简介](intro.zh.md)」。
+
 一个 era 游戏的典型文件结构：
 
 ```
@@ -131,6 +133,8 @@ era 游戏是一类基于文本的角色扮演/模拟游戏，使用 **ERABASIC*
 ```
 
 ## 第一个 ERB 程序 {: #first-erb-program }
+
+详情请参见「[第2章：Hello World](hello-world.zh.md)」。
 
 在 `ERB/SYSTEM_TITLE.ERB` 中编写你的第一个函数：
 

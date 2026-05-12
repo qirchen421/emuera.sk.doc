@@ -49,3 +49,4 @@ hide:
 
 ### 相关项目
 - [用户定义变量>ERD功能](../Emuera/user_defined_variables.md#erderabasic-define)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ERDNAME 属于 EE 扩展"编号→名称反查"

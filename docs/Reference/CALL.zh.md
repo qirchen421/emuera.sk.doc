@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数           | 返回值 |
 | :--------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void` |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

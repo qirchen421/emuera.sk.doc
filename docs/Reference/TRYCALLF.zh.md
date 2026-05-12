@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数     | 返回值 |
 | :----------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`TRYCALLF`](./TRYCALLF.md) | `string` | `void`¹ |
 
 !!! info "API"
 

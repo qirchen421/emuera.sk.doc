@@ -7,7 +7,7 @@ hide:
 
 | 関数名                                                     | 引数           | 戻り値 |
 | :--------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void` |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

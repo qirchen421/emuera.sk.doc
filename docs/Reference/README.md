@@ -14,6 +14,23 @@
 
 **戻り値の表記について**：`void`¹は命令自体は値を返さないが、呼び出された関数内の[`RETURN`](./RETURN.md)が`RESULT`を設定することを示します。関数末尾では暗黙的に`RESULT:0 = 0`となります。`なし`は命令が値を返さず、`RESULT`にも影響しないことを示します。
 
+## チュートリアルとの対応
+
+各分類の詳細な解説・使用例は、チュートリアルの対応章を参照してください。
+
+| Reference 分類 | チュートリアル章 |
+|:--|:--|
+| PRINT 系 / 表示操作・フォント操作 | [基本出力](../tutorial/basic-output.md) |
+| 文字列操作・参照 | [FORM構文](../tutorial/form-syntax.md) |
+| 算術 | [代入文](../tutorial/assignment.md) |
+| キャラ操作・参照 / 変数操作・CSV 参照 | [キャラ変数](../tutorial/character-variables.md) / [変数宣言](../tutorial/variable-declaration.md) |
+| ループ・分岐構文 | [条件分岐](../tutorial/condition.md) / [ループ](../tutorial/loop.md) |
+| 関数系（CALL 等）/ RETURN 系 | [関数とCALL](../tutorial/call.md) / [ジャンプ](../tutorial/jump.md) |
+| 入力・ウェイト | [関数とCALL](../tutorial/call.md)（INPUT 節） |
+| HTML 系 | [HTMLタグ構文](../tutorial/html-syntax.md) |
+| 画像処理 / サウンド系 | [ERBファイル形式拡張](../tutorial/erb-format-extension.md) |
+| セーブデータ操作 | [ERBファイル形式拡張](../tutorial/erb-format-extension.md)（セーブデータ節） |
+
 ---
 
 ### PRINT 系

@@ -17,6 +17,9 @@ ERABASICは3種類の条件分岐構造を提供します：
 | `SIF` | 1行条件 | 次の1行のみ実行を制御 |
 | `SELECTCASE` | 値による分岐 | switchに似た、1つの値で複数のケースにマッチ |
 
+!!! note "eramaker互換性"
+    `IF`/`ELSEIF`/`ELSE`/`ENDIF` と `SIF` はeramakerから存在する機能です。`SELECTCASE` はEmueraの拡張機能です。
+
 ---
 
 ## IF ~ ENDIF

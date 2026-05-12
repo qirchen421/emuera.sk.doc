@@ -33,3 +33,7 @@
 !!! hint "提示"
 
     该功能同时支持命令形式和函数形式。
+
+### 相关项目
+- [GETCHARA](GETCHARA.md) — 按模板编号查找角色
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — FINDCHARA 属于第一代"固定映射"

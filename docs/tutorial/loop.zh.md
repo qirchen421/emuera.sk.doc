@@ -23,6 +23,9 @@ ERABASIC 提供四种循环结构：
 
 所有循环都可以用 `CONTINUE`（跳到下一次迭代）和 `BREAK`（跳出循环）控制。
 
+!!! note "eramaker 兼容性"
+    `REPEAT`/`REND` 和 `CONTINUE`/`BREAK` 是 eramaker 就存在的功能。`FOR`/`NEXT`、`WHILE`/`WEND`、`DO`/`LOOP` 是 Emuera 的扩展功能。
+
 ---
 
 ## REPEAT ~ REND — 固定次数循环

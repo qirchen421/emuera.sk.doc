@@ -78,6 +78,7 @@ hide:
 - [CALLFORM](FORM.zh.md)
 - [TRYCALL](TRY.zh.md)
 - [TRYC系](TRYC.zh.md)
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — CALLSTR 属于第四代"函数名+参数全动态反射"
 
 ### ![](../assets/images/IconSK.webp)与 CALLFORM 的设计比较
 

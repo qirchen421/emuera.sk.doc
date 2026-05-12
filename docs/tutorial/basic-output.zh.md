@@ -22,6 +22,9 @@ PRINT(参数类型)(修饰)(行为后缀)
 | **修饰**   | K / D                    | K=强制假名转换，D=忽略 SETCOLOR |
 | **行为后缀** | 无 / L / W / N            | 是否换行、是否等待输入            |
 
+!!! note "eramaker 兼容性"
+    `PRINT`/`PRINTL`/`PRINTW`/`PRINTV`/`PRINTVL`/`PRINTS`/`PRINTSL`/`PRINTFORM`/`PRINTFORML`/`PRINTFORMW` 是 eramaker 就存在的功能。`PRINTK`/`PRINTD`/`PRINTDATA` 系列/`PRINTSINGLE` 系列等是 Emuera 的扩展功能。
+
 ***
 
 ## 最基本的输出

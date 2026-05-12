@@ -14,6 +14,23 @@
 
 **Return value notation**: `void`¹ means the instruction itself does not return a value, but [`RETURN`](./RETURN.md) in the called function sets `RESULT`; at the function end, `RESULT:0 = 0` is implicitly set. `none` means the instruction does not return a value and does not affect `RESULT`.
 
+## Tutorial Cross-Reference
+
+For detailed explanations and usage examples of each category, see the corresponding tutorial chapter.
+
+| Reference Category | Tutorial Chapter |
+|:--|:--|
+| PRINT related / Display & font operations | [Basic Output](../tutorial/basic-output.en.md) |
+| String manipulation & reference | [FORM Syntax](../tutorial/form-syntax.en.md) |
+| Arithmetics | [Assignment Statements](../tutorial/assignment.en.md) |
+| Character operations & reference / Variable & CSV reference | [Character Variables](../tutorial/character-variables.en.md) / [Variable Declaration](../tutorial/variable-declaration.en.md) |
+| Loop & branching | [Conditional Branching](../tutorial/condition.en.md) / [Loops](../tutorial/loop.en.md) |
+| Function (CALL etc.) / RETURN related | [Functions & CALL](../tutorial/call.en.md) / [Jumps](../tutorial/jump.en.md) |
+| Input & wait | [Functions & CALL](../tutorial/call.en.md) (INPUT section) |
+| HTML related | [HTML Tag Syntax](../tutorial/html-syntax.en.md) |
+| Image processing / Sound related | [ERB File Format Extensions](../tutorial/erb-format-extension.en.md) |
+| Save data operations | [ERB File Format Extensions](../tutorial/erb-format-extension.en.md) (Save data section) |
+
 ---
 
 ### PRINT related

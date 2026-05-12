@@ -22,3 +22,6 @@ hide:
 !!! hint "提示"
 
     该函数既可作为指令使用，也可在表达式中作为函数使用。
+
+### 相关项目
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETPALAMLV/GETEXPLV 属于第一代"数值→等级查询"

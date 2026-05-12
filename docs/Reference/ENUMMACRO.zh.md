@@ -68,3 +68,9 @@ hide:
     宏名包含"Foo"的宏命令数量:5
     Foo2, Foo3, MyFoo, YourFoo, AFooInTheMiddle
     ```
+
+### 相关项目
+- [ENUMFUNC系](ENUMFUNC.md) — 函数名枚举
+- [ENUMVAR系](ENUMVAR.md) — 变量名枚举
+- [ISDEFINED](ISDEFINED.md) — 宏定义检查
+- [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ENUMMACRO* 属于第三代"宏名枚举"
