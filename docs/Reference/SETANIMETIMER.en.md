@@ -43,5 +43,6 @@ hide:
     In EM+EE, `SETANIMETIMER` was implemented as an expression function, allowing calls like `RESULT = SETANIMETIMER(100)`. In the Skia edition, it has been reimplemented as a command, so such usage will cause a compilation error.
 
 ### See Also
+- [Command vs Expression — The Fundamental Difference Between Two Evaluation Paths](../tutorial/command-vs-expression.en.md) — RESULT pollution issue and why expression functions were reimplemented as commands
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
 - [Skia Edition Specification Changes](../Skia/Skia_Summary.md#changed-commands)

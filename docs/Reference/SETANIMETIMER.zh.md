@@ -43,5 +43,6 @@ hide:
     EM+EE 中 `SETANIMETIMER` 作为式中函数实现，可以使用 `RESULT = SETANIMETIMER(100)` 的方式调用。Skia 版将其重构为命令，因此这种写法会编译报错。
 
 ### 相关项目
+- [命令 vs 表达式 — 两种求值路径的根本差异](../tutorial/command-vs-expression.zh.md) — RESULT 污染问题与式中函数重构为命令的原因
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
 - [Skia版规格变更一览](../Skia/Skia_Summary.zh.md#changed-commands)

@@ -7,12 +7,12 @@ hide:
 
 | Function Name                                                            | Arguments        | Return Value |
 | :----------------------------------------------------------------------- | :--------------- | :----------- |
-| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.en.md)        | `stringVariable` | None         |
-| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.en.md)        | `stringVariable` | None         |
-| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.en.md)     | `stringVariable` | None         |
-| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.en.md)     | `stringVariable` | None         |
-| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.en.md)    | `stringVariable` | None         |
-| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.en.md)    | `stringVariable` | None         |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.en.md)        | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.en.md)        | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.en.md)     | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.en.md)     | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.en.md)    | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.en.md)    | `stringVariable` | `void` |
 
 !!! info "API"
 
@@ -26,6 +26,8 @@ hide:
     ```
 
     Similar to `CALL`, `JUMP`, and their `TRY` variants, but allows specifying the **complete function call line** (including function name and arguments) via a **string expression**.
+
+    When the called function executes [`RETURN`](./RETURN.en.md), `RESULT` is set to its argument; when the function reaches its end, `RESULT` is set to `0`. This behavior is identical to [`CALL`](./CALL.en.md).
 
     Difference from `CALLFORM`: `CALLFORM` requires the argument structure to be fixed at compile time, while the CALLSTR series parses the entire string at runtime. This allows dynamically changing the number or type of arguments passed to a function.
 

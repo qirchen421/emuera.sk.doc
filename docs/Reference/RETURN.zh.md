@@ -49,6 +49,33 @@ hide:
 
     仅支持指令。
 
+!!! warning "RESULT 的覆盖与函数末尾的隐式赋值"
+
+    `RETURN` **必定**覆盖 `RESULT`。即使在函数中手动给 `RESULT` 赋值，`RETURN` 执行时也会被覆盖。
+    
+    此外，当函数到达末尾（没有执行 `RETURN`）时，`RESULT:0` 会被隐式赋值为 `0`。
+
+    ``` { #language-erb }
+    @MY_FUNC
+        RESULT = 999
+        RETURN 1
+        ; 调用方的 RESULT 是 1 而非 999
+    
+    @MY_FUNC2
+        RESULT = 999
+        ; 无 RETURN → 函数末尾 RESULT:0 = 0
+    ```
+
+    但是，声明了 [`#FUNCTION`](../Emuera/function.md) 的表达式函数使用 `RETURNF`，`RETURNF` **不会覆盖 RESULT**。函数末尾也不会对 `RESULT` 进行隐式赋值。
+
+    ``` { #language-erb }
+    @MY_EXPR_FUNC
+        #FUNCTION
+        RESULT = 999
+        RETURNF 1
+        ; 调用方的 RESULT 仍为 999（RETURNF 不覆盖 RESULT）
+    ```
+
 !!! example "示例" 
     
     ``` { #language-erb title="MAIN.ERB" }

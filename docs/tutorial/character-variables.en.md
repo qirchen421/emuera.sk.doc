@@ -99,7 +99,7 @@ DELCHARA 1        ; Delete registration number 1
 ```erb
 REPEAT CHARANUM
     ; COUNT is the current character's registration number (0 ~ CHARANUM-1)
-    PRINTFORML RegNo={COUNT}, CharNo={NO:COUNT}, Name={NAME:COUNT}
+    PRINTFORML RegNo={COUNT}, CharNo={NO:COUNT}, Name=%NAME:COUNT%
 REND
 ```
 

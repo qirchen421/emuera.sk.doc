@@ -250,12 +250,12 @@ PRINTFORML HP：{L_HP,5}/{L_MAXHP,5}    ; → HP：   80/  100
 
 ### 浮動小数点数の出力（Skia派生版）
 
-浮動小数点数は `{}` 内でデフォルトの `ToString()` フォーマットで出力されます。精度を制御するには `TOSTRF` 関数を使用します：
+浮動小数点数は `{}` 内でデフォルトの `ToString()` フォーマットで出力されますが、`{}` には精度制御がありません。精度を指定するには、`TOSTRF` 関数で浮動小数点を文字列に変換し、`%` 置換で出力します（`TOSTRF` は文字列を返すため、`{}` ではなく `%...%` を使用します）：
 
 ```erb
 #DIMF L_PI = 3.14159265
-PRINTFORML 円周率：{L_PI}              ; → 円周率：3.14159265
-PRINTFORML 円周率：{TOSTRF(L_PI, "F2")} ; → 円周率：3.14
+PRINTFORML 円周率：{L_PI}                ; → 円周率：3.14159265（{} デフォルト形式、精度制御なし）
+PRINTFORML 円周率：%TOSTRF(L_PI, "F2")%   ; → 円周率：3.14（%...% 文字列置換 + TOSTRF 精度制御）
 ```
 
 ---
@@ -433,7 +433,7 @@ PRINTPLAIN [0] これはボタンではない    ; そのまま出力、クリ�
 | PRINT で変数置換を期待 | `PRINT %NAME%` | `PRINTFORM %NAME%` | PRINT はFORM補間を行わない |
 | PRINTS に引用符なし | `PRINTS hello` | `PRINTS "hello"` | 引用符がないと変数名として扱われる |
 | 改行の忘れ | `PRINT こんにちは` | `PRINTL こんにちは` | PRINT は改行しない、内容が連結される |
-| FORM内の浮動小数点精度 | `PRINTFORM {PI}` | `PRINTFORM {TOSTRF(PI,"F2")}` | `{}` は浮動小数点の精度制御がない |
+| FORM内の浮動小数点精度 | `PRINTFORM {PI}` | `PRINTFORM %TOSTRF(PI,"F2")%` | `{}` は浮動小数点の精度制御がない；TOSTRFは文字列を返すため `%...%` を使用 |
 | `[abc]` をボタンにしたい | `PRINTL [abc] 選択肢` | `PRINTL [0] 選択肢` | `[整数]` のみボタンを生成する |
 | `PRINTPLAIN` でボタンを期待 | `PRINTPLAIN [0] はい [1] いいえ\nINPUT` | `PRINT [0] はい [1] いいえ\nINPUT` | `PRINTPLAIN` はボタンを生成しない、手動入力が必要 |
 

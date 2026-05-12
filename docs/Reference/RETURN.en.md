@@ -49,6 +49,33 @@ hide:
 
     Only commands are supported.
 
+!!! warning "RESULT Overwrite and Implicit Assignment at Function End"
+
+    `RETURN` **always** overwrites `RESULT`. Even if you manually assign a value to `RESULT` within the function, it will be lost when `RETURN` is executed.
+    
+    Additionally, when a function reaches its end (no `RETURN` was executed), `RESULT:0` is implicitly assigned `0`.
+
+    ``` { #language-erb }
+    @MY_FUNC
+        RESULT = 999
+        RETURN 1
+        ; Caller's RESULT is 1, not 999
+    
+    @MY_FUNC2
+        RESULT = 999
+        ; No RETURN → at function end, RESULT:0 = 0
+    ```
+
+    However, expression functions declared with [`#FUNCTION`](../Emuera/function.md) use `RETURNF`, which **does not overwrite RESULT**. The implicit assignment at the function end is also skipped.
+
+    ``` { #language-erb }
+    @MY_EXPR_FUNC
+        #FUNCTION
+        RESULT = 999
+        RETURNF 1
+        ; Caller's RESULT remains 999 (RETURNF does not overwrite RESULT)
+    ```
+
 
 !!! example "Example" 
  

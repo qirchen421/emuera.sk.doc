@@ -203,6 +203,31 @@ RETURN
 RETURN
 ```
 
+!!! danger "原版引擎的 ARG 递归陷阱"
+
+    上面的 `BAD_RECURSE` 示例中，即使给 `L_SUM` 加了 `DYNAMIC`，在**原版引擎（emuera.em / EM+EE）中递归仍然会出错**——因为 `ARG:0` 在原版引擎中按函数名存储，同一函数递归时所有层级共享同一份 ARG 数组，不是独立副本。
+
+    ```erb
+    ; 原版引擎中，ARG:0 在递归时也会被覆盖！
+    @STILL_BAD_RECURSE(ARG:0)
+    #DIM DYNAMIC L_SUM       ; ← L_SUM 有独立副本了
+        L_SUM += ARG:0
+        IF ARG:0 > 0
+            CALL STILL_BAD_RECURSE(ARG:0 - 1)  ; ← 但 ARG:0 被递归覆盖了！
+        ENDIF
+        ; 此处 ARG:0 的值已经不是传入的值，而是最内层递归的值
+    RETURN
+    ```
+
+    **根因**：原版引擎通过 `VariableLocal` 字典按函数名（subKey）管理 LOCAL/ARG，不同函数拥有独立的数组，但**同一函数递归时 subKey 相同，所有层级共享同一份 ARG/LOCAL 数组**。`DYNAMIC` 只解决了 `#DIM` 声明的私有变量，**不保护 ARG/LOCAL 等内置变量**。
+
+    **Skia 版修复**：引入 `ExecutionContext` 栈，每次函数调用拥有独立的 `ArgIntegers`/`ArgStrings`/`LocalIntegers`/`LocalStrings` 数组，从根本上解决了递归时 ARG/LOCAL 的覆写问题。详见 [Skia 版规格变更 — ExecutionContext 栈式函数上下文](../Skia/Skia_Summary.zh.md#executioncontext)。
+
+    | 引擎 | ARG:0 递归行为 | L_SUM (DYNAMIC) 递归行为 |
+    |------|---------------|------------------------|
+    | 原版（emuera.em / EM+EE） | ❌ 所有层级共享，递归覆盖 | ✅ 独立副本 |
+    | Skia 版 | ✅ 独立副本（ExecutionContext 隔离） | ✅ 独立副本 |
+
 !!! warning "DYNAMIC 与 RESTART"
 
     `RESTART` 指令是"回到函数开头"，**不会**重置 DYNAMIC 变量。只有函数返回+重新调用才会重置。
@@ -641,8 +666,8 @@ CALL PROCESS(1, 10, 20, 30)
 
 | 错误理解 | 正确理解 |
 |---------|---------|
-| "LOCAL 是真正的局部变量" | LOCAL 在所有函数间共享同一数组，跨函数调用不重置 |
-| "私有变量 = 局部变量" | 私有变量是函数级注册，LOCAL 是内置共享 |
+| "LOCAL 是真正的局部变量" | LOCAL 按函数名存储，不同函数有独立数组，但同函数递归时共享同一数组（原版引擎） |
+| "私有变量 = 局部变量" | 私有变量是函数级注册，LOCAL 是按函数名存储的内置变量 |
 | "私有变量在函数返回后消失" | 非 DYNAMIC 的私有变量数据保留 |
 | "DYNAMIC 变量和 LOCAL 一样" | DYNAMIC 是调用时分配返回时释放，LOCAL 不释放 |
 | "签名中写 L_val 就声明了它" | 签名只是引用，必须用 `#DIM` 声明 |

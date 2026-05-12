@@ -131,11 +131,22 @@ SETTER "key", val
 RESULT = 42
 PRINTVL RESULT          ; 输出 42
 
-SETTER "key", val       ; 作为命令调用 → RESULT = 1（被污染！）
+SETANIMETIMER 30        ; 作为命令调用 → RESULT = 1（被污染！）
 PRINTVL RESULT          ; 输出 1 ← 意外覆盖！
+
+BITMAP_CACHE_ENABLE 1   ; 同样 → RESULT 被覆盖！
 ```
 
 而旧式纯命令（如 `SETFONT`、`SETCOLOR`）走 `doNormalFunction` 路径，**不写入 RESULT**。
+
+!!! info "受影响的实际函数"
+
+    以下函数在 EM+EE 中作为式中函数实现，以命令语法调用时会污染 RESULT：
+
+    - [SETANIMETIMER](../Reference/SETANIMETIMER.zh.md) — 设置动画重绘间隔，EM+EE 中返回值总是 `1`（无意义）
+    - [BITMAP_CACHE_ENABLE](../Reference/BITMAP_CACHE_ENABLE.zh.md) — 启用位图缓存加速绘制，EM+EE 中有返回值（无意义）
+
+    Skia 版将两者重构为纯命令，从根本上消除了 RESULT 污染问题。
 
 !!! info "详细分析"
 
@@ -172,7 +183,7 @@ CALLF SETTER("key", val)
 | **写入 RESULT？** | ✅ 无条件写入 | ❌ 不写入 |
 | **可在表达式中使用？** | ✅ 天然支持 | ✅ 加 `METHOD_SAFE` flag |
 
-**实例**：`SETANIMETIMER` 在 Skia 版中注册为 `SETANIMETIMER_Instruction`，不写入 RESULT，同时加了 `METHOD_SAFE` flag 仍可在表达式中使用。
+**实例**：`SETANIMETIMER` 在 Skia 版中注册为 `SETANIMETIMER_Instruction`，不写入 RESULT，同时加了 `METHOD_SAFE` flag 仍可在表达式中使用。`BITMAP_CACHE_ENABLE` 同理，从式中函数重构为纯命令。
 
 ---
 

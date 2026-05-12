@@ -256,12 +256,12 @@ PRINTFORML HP：{L_HP,5}/{L_MAXHP,5}    ; → HP：   80/  100
 
 ### 输出浮点数（Skia 变体）
 
-浮点数在 `{}` 中默认使用 `ToString()` 格式输出。如需控制精度，使用 `TOSTRF` 函数：
+浮点数在 `{}` 中默认使用 `ToString()` 格式输出，但 `{}` 不支持精度控制。如需指定精度，须用 `TOSTRF` 函数将浮点转为字符串，再通过 `%` 替换输出（`TOSTRF` 返回字符串，必须用 `%...%` 而非 `{}`）：
 
 ```erb
 #DIMF L_PI = 3.14159265
-PRINTFORML 圆周率：{L_PI}              ; → 圆周率：3.14159265
-PRINTFORML 圆周率：{TOSTRF(L_PI, "F2")} ; → 圆周率：3.14
+PRINTFORML 圆周率：{L_PI}                ; → 圆周率：3.14159265（{} 默认格式，无精度控制）
+PRINTFORML 圆周率：%TOSTRF(L_PI, "F2")%   ; → 圆周率：3.14（%...% 字符串替换 + TOSTRF 精度控制）
 ```
 
 ***
@@ -441,7 +441,7 @@ PRINTPLAIN [0] 这不是按钮    ; 原样输出，不可点击
 | PRINT 期望变量替换  | `PRINT %NAME%`    | `PRINTFORM %NAME%`            | PRINT 不做 FORM 插值  |
 | PRINTS 不加引号   | `PRINTS hello`    | `PRINTS "hello"`              | 不加引号会被当作变量名       |
 | 忘记换行          | `PRINT 你好`        | `PRINTL 你好`                   | PRINT 不换行，内容会粘在一起 |
-| FORM 中浮点精度    | `PRINTFORM {PI}`  | `PRINTFORM {TOSTRF(PI,"F2")}` | `{}` 对浮点无精度控制     |
+| FORM 中浮点精度    | `PRINTFORM {PI}`  | `PRINTFORM %TOSTRF(PI,"F2")%` | `{}` 对浮点无精度控制；TOSTRF 返回字符串，须用 `%...%` |
 | `[abc]` 期望变按钮 | `PRINTL [abc] 选项` | `PRINTL [0] 选项` | 只有 `[整数]` 才生成按钮 |
 | `PRINTPLAIN` 期望有按钮 | `PRINTPLAIN [0] 确定 [1] 取消\nINPUT` | `PRINT [0] 确定 [1] 取消\nINPUT` | `PRINTPLAIN` 不生成按钮，用户必须手动输入 |
 

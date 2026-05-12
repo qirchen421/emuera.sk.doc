@@ -202,6 +202,31 @@ RETURN
 RETURN
 ```
 
+!!! danger "オリジナルエンジンのARG再帰トラップ"
+
+    上記の `BAD_RECURSE` の例で、`L_SUM` に `DYNAMIC` を追加しても、**オリジナルエンジン（emuera.em / EM+EE）では再帰でエラーが発生する** — なぜなら `ARG:0` はオリジナルエンジンで関数名ごとに格納され、同じ関数の再帰呼び出し時にすべてのレベルが同じ ARG 配列を共有するため、独立したコピーではないからです。
+
+    ```erb
+    ; オリジナルエンジンでは、ARG:0 も再帰時に上書きされる！
+    @STILL_BAD_RECURSE(ARG:0)
+    #DIM DYNAMIC L_SUM       ; ← L_SUM は独立したコピーを持つようになった
+        L_SUM += ARG:0
+        IF ARG:0 > 0
+            CALL STILL_BAD_RECURSE(ARG:0 - 1)  ; ← しかし ARG:0 は上書きされる！
+        ENDIF
+        ; ここでの ARG:0 は渡された値ではなく、最内層の再帰の値になっている
+    RETURN
+    ```
+
+    **根本原因**：オリジナルエンジンは `VariableLocal` 辞書で関数名（subKey）ごとに LOCAL/ARG を管理しており、異なる関数は独立した配列を持つが、**同じ関数の再帰呼び出し時は subKey が同じため、すべてのレベルが同じ ARG/LOCAL 配列を共有する**。`DYNAMIC` は `#DIM` で宣言されたプライベート変数の問題のみを解決し、**ARG/LOCAL などの組み込み変数は保護しない**。
+
+    **Skia版の修正**：`ExecutionContext` スタックを導入し、各関数呼び出しが独立した `ArgIntegers`/`ArgStrings`/`LocalIntegers`/`LocalStrings` 配列を持つことで、再帰時の ARG/LOCAL 上書き問題を根本的に解決。詳細は [Skia版仕様変更 — ExecutionContext スタック式関数コンテキスト](../Skia/Skia_Summary.md#executioncontext) を参照。
+
+    | エンジン | ARG:0 再帰時の動作 | L_SUM (DYNAMIC) 再帰時の動作 |
+    |---------|-------------------|---------------------------|
+    | オリジナル（emuera.em / EM+EE） | ❌ 全レベルで共有、上書きされる | ✅ 独立したコピー |
+    | Skia版 | ✅ 独立したコピー（ExecutionContext による隔離） | ✅ 独立したコピー |
+
 !!! warning "DYNAMIC と RESTART"
 
     `RESTART` 命令は「関数の先頭に戻る」だけで、DYNAMIC変数は**リセットしません**。関数が戻って再度呼び出された場合にのみリセットされます。

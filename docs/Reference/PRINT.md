@@ -73,6 +73,7 @@ hide:
     ![](../assets/images/PRINT.png)
 
 ### 関連項目
+- [基本出力](../tutorial/basic-output.md) — PRINT系チュートリアル：引数タイプ、動作サフィックス、出力色、ボタン
 - [PRINTBUTTON](PRINTBUTTON.md)
 - [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
 - [Emueraで追加された記法>書式付き文字列（FORM構文）拡張](../Emuera/expression.md#form_1)

@@ -482,11 +482,11 @@ L_INT = TOINT(-2.9)            ; → -2（向零截断）
 ```erb
 ; 在 PRINTFORM 中插入浮点值（Skia 变体）
 #DIMF L_PI = 3.14159265
-PRINTFORML 圆周率：{TOSTRF(L_PI, "F2")}    ; → "圆周率：3.14"
+PRINTFORML 圆周率：%TOSTRF(L_PI, "F2")%    ; → "圆周率：3.14"（TOSTRF 返回字符串，用 %...% 而非 {}）
 
 ; 在字符串赋值中拼接
 #DIMS L_MSG
-L_MSG = 圆周率是{TOSTRF(L_PI, "F4")}       ; FORM 语法，{...} 插值
+L_MSG = 圆周率是%TOSTRF(L_PI, "F4")%       ; FORM 语法，%...% 字符串替换
 L_MSG '= "圆周率是" + TOSTRF(L_PI, "F4")   ; 表达式语法，拼接
 ```
 

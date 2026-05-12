@@ -282,11 +282,11 @@ L_INT = TOINT(-2.9)            ; → -2（ゼロ方向への切り捨て）
 ```erb
 ; PRINTFORM で浮動小数点数値を挿入（Skiaバリアント）
 #DIMF L_PI = 3.14159265
-PRINTFORML 円周率：{TOSTRF(L_PI, "F2")}    ; → "円周率：3.14"
+PRINTFORML 円周率：%TOSTRF(L_PI, "F2")%    ; → "円周率：3.14"（TOSTRFは文字列を返すため、{}ではなく%...%を使用）
 
 ; 文字列代入で連結
 #DIMS L_MSG
-L_MSG = 円周率は{TOSTRF(L_PI, "F4")}       ; FORM構文、{...} で補間
+L_MSG = 円周率は%TOSTRF(L_PI, "F4")%       ; FORM構文、%...% 文字列置換
 L_MSG '= "円周率は" + TOSTRF(L_PI, "F4")   ; 式構文、連結
 ```
 

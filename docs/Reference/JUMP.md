@@ -23,6 +23,25 @@ hide:
 
     命令のみ対応しています。
 
+!!! info "JUMPとRESULTの関係"
+
+    JUMP先の関数で[`RETURN`](./RETURN.md)が実行された場合、`RESULT`は通常通り設定されます。JUMPはスタックフレームを置換するだけで、`RETURN`の`RESULT`設定動作には影響しません。
+
+    JUMP先の関数が終了すると、`Return()`は`IsJump`フラグを検出して**再帰的にスタックを巻き戻し**、最初の非JUMP呼び出し元（[`CALL`](./CALL.md)等）まで戻ります。JUMP連鎖（A→JUMP B→JUMP C→RETURN）でも、RESULTは正しく設定されます。
+
+    ``` { #language-erb }
+    @SYSTEM_TITLE
+        CALL AAA
+        PRINTVL RESULT    ; 42（BBB の RETURN 42 が設定）
+
+    @AAA
+        JUMP BBB          ; AAA を BBB に置き換え
+        PRINTL 不可达     ; 実行されない
+
+    @BBB
+        RETURN 42         ; RESULT = 42、再帰的に SYSTEM_TITLE まで戻る
+    ```
+
 
 !!! example "例" 
     

@@ -43,5 +43,6 @@ hide:
     EM+EEでは`SETANIMETIMER`は式中関数として実装されており、`RESULT = SETANIMETIMER(100)`のように呼び出すことができました。Skia版では命令に再実装されたため、このような使い方はコンパイルエラーになります。
 
 ### 関連項目
+- [コマンド vs 式 — 2つの評価パスの根本的な違い](../tutorial/command-vs-expression.md) — RESULT汚染問題と式中関数を命令に再実装した理由
 - [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
 - [Skia版仕様変更一覧](../Skia/Skia_Summary.md#changed-commands)

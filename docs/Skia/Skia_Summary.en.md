@@ -250,10 +250,11 @@
 
     Creates an independent `ExecutionContext` for each function call, fixing LOCAL/ARG variable recursive overwrite pollution.
 
-    - Upstream (emuera.em) used a function-name→array global dictionary, causing variables to overwrite each other during recursive calls of the same function
+    - Upstream (emuera.em) managed ARG/LOCAL through a `VariableLocal` dictionary keyed by function name (subKey). Different functions had independent arrays, but when the same function was called recursively, the subKey was identical, so all levels shared the same array and overwrote each other
     - Skia version uses an `ExecutionContext` stack, where each call has independent `LocalIntegers`/`LocalStrings`/`ArgIntegers`/`ArgStrings` arrays
     - PushContext in `IntoFunction()`, PopContext + Dispose in `Return()`
     - In addition to `#DIM DYNAMIC` variable ScopeIn/ScopeOut management, ExecutionContext provides an additional isolation layer
+    - **Key distinction**: `DYNAMIC` only protects `#DIM`-declared private variables, not built-in variables like ARG/LOCAL. In the original engine, even with `#DIM DYNAMIC`, ARG:0 is still overwritten during recursion. ExecutionContext fundamentally resolves this issue. See [Variable Declaration Tutorial — Original Engine ARG Recursion Trap](../tutorial/variable-declaration.en.md#arg)
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> Sparse Array Storage
 !!! summary ""
@@ -508,7 +509,7 @@
 ### ![](../assets/images/IconSK.webp)`CALLSTR` Series — Dynamic Function Calls
 !!! summary ""
 
-    Calls a function name stored in a string variable. Function names can be switched dynamically.
+    Calls a function name stored in a string variable. Function names can be switched dynamically. When the called function executes `RETURN`, `RESULT` is set to its argument; when it reaches the end, `RESULT` is set to `0` (same as `CALL`).
 
 !!! info "API"
 

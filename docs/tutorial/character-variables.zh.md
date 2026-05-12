@@ -99,7 +99,7 @@ DELCHARA 1        ; 删除注册编号1的角色
 ```erb
 REPEAT CHARANUM
     ; COUNT 为当前角色的注册编号（0 ~ CHARANUM-1）
-    PRINTFORML 注册编号={COUNT}, 角色编号={NO:COUNT}, 名字={NAME:COUNT}
+    PRINTFORML 注册编号={COUNT}, 角色编号={NO:COUNT}, 名字=%NAME:COUNT%
 REND
 ```
 

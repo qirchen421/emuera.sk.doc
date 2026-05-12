@@ -23,6 +23,25 @@ hide:
 
     Only available as a statement.
 
+!!! info "JUMP and RESULT"
+
+    When [`RETURN`](./RETURN.md) is executed in a JUMP destination function, `RESULT` is set normally. JUMP only replaces the stack frame and does not affect `RETURN`'s `RESULT` assignment behavior.
+
+    When the JUMP destination function ends, `Return()` detects the `IsJump` flag and **recursively unwinds the stack** back to the first non-JUMP caller (e.g., [`CALL`](./CALL.md)). Even in a JUMP chain (A→JUMP B→JUMP C→RETURN), RESULT is correctly set.
+
+    ``` { #language-erb }
+    @SYSTEM_TITLE
+        CALL AAA
+        PRINTVL RESULT    ; 42 (BBB's RETURN 42 sets RESULT)
+
+    @AAA
+        JUMP BBB          ; Replaces AAA with BBB
+        PRINTL Unreachable ; Never executed
+
+    @BBB
+        RETURN 42         ; RESULT = 42, recursively unwinds to SYSTEM_TITLE
+    ```
+
 
 !!! example "Example" 
     

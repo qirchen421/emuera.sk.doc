@@ -284,11 +284,11 @@ Conversion functions are especially useful when you need to insert non-integer v
 ```erb
 ; Insert float value in PRINTFORM (Skia variant)
 #DIMF L_PI = 3.14159265
-PRINTFORML PI: {TOSTRF(L_PI, "F2")}    ; → "PI: 3.14"
+PRINTFORML PI: %TOSTRF(L_PI, "F2")%    ; → "PI: 3.14" (TOSTRF returns string, use %...% not {})
 
 ; Concatenate in string assignment
 #DIMS L_MSG
-L_MSG = PI is {TOSTRF(L_PI, "F4")}       ; FORM syntax, {...} interpolation
+L_MSG = PI is %TOSTRF(L_PI, "F4")%       ; FORM syntax, %...% string interpolation
 L_MSG '= "PI is " + TOSTRF(L_PI, "F4")   ; Expression syntax, concatenation
 ```
 

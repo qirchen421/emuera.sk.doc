@@ -410,12 +410,12 @@
 | ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.md)        | `functionName`             | `int` |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.md)            | `string`(, `int`, `argument`...)   | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.md)           | `string`(, `string`, `argument`...)| `string`  |
-| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.md)           | `stringVariable`             | none  |
-| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.md)           | `stringVariable`             | none  |
-| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.md)        | `stringVariable`             | none  |
-| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.md)        | `stringVariable`             | none  |
-| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable`             | none  |
-| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable`             | none  |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.md)           | `stringVariable`             | `void`  |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.md)           | `stringVariable`             | `void`  |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.md)        | `stringVariable`             | `void`  |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.md)        | `stringVariable`             | `void`  |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 
 ### RETURN related
 

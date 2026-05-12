@@ -184,6 +184,36 @@ RETURN
 ; 関数終了時 RESULT = 0
 ```
 
+### RETURN は必ず RESULT を上書きする
+
+`RETURN` は**必ず**`RESULT`を上書きします。関数内で手動で`RESULT`に値を代入しても、`RETURN`実行時に失われます：
+
+```erb
+@MY_FUNC
+    RESULT = 999
+    RETURN 1
+    ; 呼び出し元の RESULT は 999 ではなく 1
+```
+
+関数末尾でも暗黙的に上書きされます——`RETURN`がない場合、`RESULT:0`は`0`になります。
+
+### RETURNF は RESULT を上書きしない
+
+`#FUNCTION`宣言された式中関数は`RETURNF`で値を返します。`RETURNF`は**RESULTを上書きしません**。関数末尾でも暗黙的な代入は行われません：
+
+```erb
+@MY_EXPR_FUNC
+#FUNCTION
+    RESULT = 999
+    RETURNF 1
+    ; 呼び出し元の RESULT は 999 のまま（RETURNF は RESULT を上書きしない）
+```
+
+| 関数タイプ | 戻りキーワード | RESULT を上書き | 関数末尾の RESULT |
+|---------|-----------|:---:|:---:|
+| 命令型（デフォルト） | `RETURN` | ✅ 上書き | 暗黙的に `RESULT:0 = 0` |
+| 式型（`#FUNCTION`） | `RETURNF` | ❌ 上書きしない | 変更なし |
+
 ### RETURNFORM — FORM構文による戻り値
 
 `RETURNFORM` はFORM構文で戻り値を解析します：
@@ -236,6 +266,24 @@ RETURN
 !!! warning "JUMP のコールスタックリスク"
 
     `JUMP` はコールスタックにプッシュしません。呼び出しチェーンで全て `JUMP` を使用すると、最終的に `RETURN` 時に戻り先が見つからず、エラーになる可能性があります。
+
+### JUMP と RESULT
+
+JUMP先の関数で`RETURN`が実行された場合、`RESULT`は通常通り設定されます。JUMPはスタックフレームを置換するだけで、`RETURN`の`RESULT`設定動作には影響しません。
+
+JUMP先の関数が終了すると、エンジンは`IsJump`フラグを検出して**再帰的にスタックを巻き戻し**、最初の非JUMP呼び出し元（`CALL`等）まで戻ります。JUMP連鎖でもRESULTは正しく設定されます：
+
+```erb
+@SYSTEM_TITLE
+    CALL AAA
+    PRINTVL RESULT    ; 42
+
+@AAA
+    JUMP BBB          ; AAA を BBB に置き換え
+
+@BBB
+    RETURN 42         ; RESULT = 42、再帰的に SYSTEM_TITLE まで戻る
+```
 
 ---
 

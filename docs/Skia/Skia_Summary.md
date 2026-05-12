@@ -250,10 +250,11 @@
 
     各関数呼び出しで独立した `ExecutionContext` を作成し、LOCAL/ARG 系変数の再帰上書き汚染を修正。
 
-    - 上游（emuera.em）では関数名→配列のグローバル辞書により、同名関数の再帰呼び出し時に変数が互相上書きされる問題があった
+    - 上游（emuera.em）では `VariableLocal` 辞書で関数名（subKey）ごとに ARG/LOCAL を管理しており、異なる関数は独立した配列を持つが、同じ関数の再帰呼び出し時は subKey が同じため、すべてのレベルが同じ配列を共有し互相上書きされる問題があった
     - Skia版では `ExecutionContext` スタックにより、各呼び出しが独立した `LocalIntegers`/`LocalStrings`/`ArgIntegers`/`ArgStrings` 配列を持つ
     - `IntoFunction()` で PushContext、`Return()` で PopContext + Dispose
     - `#DIM DYNAMIC` 変数の ScopeIn/ScopeOut 管理に加えて、ExecutionContext が追加の隔離層を提供
+    - **重要な違い**：`DYNAMIC` は `#DIM` で宣言されたプライベート変数のみを保護し、ARG/LOCAL などの組み込み変数は保護しない。オリジナルエンジンでは `#DIM DYNAMIC` を使用しても、再帰時に ARG:0 は上書きされる。ExecutionContext はこの問題を根本的に解決する。詳細は [変数宣言チュートリアル — オリジナルエンジンのARG再帰トラップ](../tutorial/variable-declaration.md#arg)
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> 疎配列ストレージ
 !!! summary ""
@@ -508,7 +509,7 @@
 ### ![](../assets/images/IconSK.webp)`CALLSTR`系 — 動的関数呼び出し
 !!! summary ""
 
-    文字列変数に格納された関数名を呼び出す。関数名を動的に切り替えることが可能。
+    文字列変数に格納された関数名を呼び出す。関数名を動的に切り替えることが可能。呼び出した関数で`RETURN`が実行された場合は`RESULT`にその引数が、終端に達した場合は`RESULT`に`0`が入る（`CALL`と同じ）。
 
 !!! info "API"
 

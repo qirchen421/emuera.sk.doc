@@ -73,6 +73,7 @@ hide:
     ![](../assets/images/PRINT.png)
 
 ### 相关项目
+- [基本输出](../tutorial/basic-output.zh.md) — PRINT 系列教程：参数类型、行为后缀、输出颜色、按钮
 - [PRINTBUTTON](PRINTBUTTON.md)
 - [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
 - [Emuera新增语法>格式化字符串（FORM语法）扩展](../Emuera/expression.md#form_1)

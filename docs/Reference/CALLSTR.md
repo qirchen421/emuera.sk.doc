@@ -7,12 +7,12 @@ hide:
 
 | 関数名                                                                   | 引数             | 戻り値 |
 | :----------------------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.md)           | `stringVariable` | なし   |
-| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.md)           | `stringVariable` | なし   |
-| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.md)        | `stringVariable` | なし   |
-| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.md)        | `stringVariable` | なし   |
-| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable` | なし   |
-| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable` | なし   |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.md)           | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.md)           | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.md)        | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.md)        | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable` | `void` |
 
 !!! info "API"
 
@@ -26,6 +26,8 @@ hide:
     ```
 
     `CALL`、`JUMP`およびその`TRY`系と同様ですが、**文字列式**で**関数呼び出し行全体**（関数名と引数を含む）を指定できます。
+
+    呼び出した関数で[`RETURN`](./RETURN.md)が実行された場合は`RESULT`にその引数が、関数の終端に達した場合は`RESULT`に`0`が入る点は[`CALL`](./CALL.md)と同じです。
 
     `CALLFORM`との違い：`CALLFORM`はコンパイル時に引数構造が固定されるのに対し、CALLSTR系は実行時に文字列全体を解析します。これにより、関数に渡す引数の数や型を実行時に動的に変更できます。
 

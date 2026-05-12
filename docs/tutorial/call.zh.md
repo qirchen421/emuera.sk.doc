@@ -184,6 +184,36 @@ RETURN
 ; 函数结束时 RESULT = 0
 ```
 
+### RETURN 必定覆盖 RESULT
+
+`RETURN` **必定**覆盖 `RESULT`。即使在函数中手动给 `RESULT` 赋值，`RETURN` 执行时也会被覆盖：
+
+```erb
+@MY_FUNC
+    RESULT = 999
+    RETURN 1
+    ; 调用方的 RESULT 是 1 而非 999
+```
+
+函数末尾也会隐式覆盖——没有 `RETURN` 时，`RESULT:0` 被设为 `0`。
+
+### RETURNF 不覆盖 RESULT
+
+`#FUNCTION` 声明的表达式函数使用 `RETURNF` 返回值。`RETURNF` **不会覆盖 RESULT**，函数末尾也不会隐式赋值：
+
+```erb
+@MY_EXPR_FUNC
+#FUNCTION
+    RESULT = 999
+    RETURNF 1
+    ; 调用方的 RESULT 仍为 999（RETURNF 不触碰 RESULT）
+```
+
+| 函数类型 | 返回关键字 | 是否覆盖 RESULT | 函数末尾 RESULT |
+|---------|-----------|:---:|:---:|
+| 命令式（默认） | `RETURN` | ✅ 覆盖 | 隐式 `RESULT:0 = 0` |
+| 表达式式（`#FUNCTION`） | `RETURNF` | ❌ 不覆盖 | 不修改 |
+
 ### RETURNFORM — FORM 语法返回
 
 `RETURNFORM` 使用 FORM 语法解析返回值：
@@ -236,6 +266,24 @@ RETURN
 !!! warning "JUMP 的调用栈风险"
 
     `JUMP` 不压入调用栈。如果调用链中全部使用 `JUMP`，最终 `RETURN` 时可能找不到返回目标，导致错误。
+
+### JUMP 与 RESULT
+
+JUMP 目标函数中的 `RETURN` 会正常设置 `RESULT`。JUMP 只是替换栈帧，不影响 `RETURN` 设置 `RESULT` 的行为。
+
+当 JUMP 目标函数结束时，引擎会检测到 `IsJump` 标志，**递归地回退栈帧**，直到回到最初的非 JUMP 调用方（如 `CALL`）。JUMP 链也能正确传递 RESULT：
+
+```erb
+@SYSTEM_TITLE
+    CALL AAA
+    PRINTVL RESULT    ; 42
+
+@AAA
+    JUMP BBB          ; AAA 被 BBB 替换
+
+@BBB
+    RETURN 42         ; RESULT = 42，递归回退到 SYSTEM_TITLE
+```
 
 ---
 

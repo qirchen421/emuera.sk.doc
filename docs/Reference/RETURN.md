@@ -49,6 +49,33 @@ hide:
 
     命令のみ対応しています。
 
+!!! warning "RESULTの上書きと関数末尾の暗黙的代入"
+
+    `RETURN`は**必ず**`RESULT`を上書きします。関数内で手動で`RESULT`に値を代入しても、`RETURN`実行時に失われます。
+    
+    また、関数の終端に達した場合（`RETURN`が実行されなかった場合）、`RESULT:0`に暗黙的に`0`が代入されます。
+
+    ``` { #language-erb }
+    @MY_FUNC
+        RESULT = 999
+        RETURN 1
+        ; 呼び出し元の RESULT は 999 ではなく 1
+    
+    @MY_FUNC2
+        RESULT = 999
+        ; RETURN なし → 関数終端で RESULT:0 = 0 になる
+    ```
+
+    ただし、[`#FUNCTION`](../Emuera/function.md)宣言された式中関数では`RETURNF`を使用し、`RETURNF`は`RESULT`を**上書きしません**。また関数末尾でも`RESULT`への暗黙的代入は行われません。
+
+    ``` { #language-erb }
+    @MY_EXPR_FUNC
+        #FUNCTION
+        RESULT = 999
+        RETURNF 1
+        ; 呼び出し元の RESULT は 999 のまま（RETURNF は RESULT を上書きしない）
+    ```
+
 
 !!! example "例" 
     

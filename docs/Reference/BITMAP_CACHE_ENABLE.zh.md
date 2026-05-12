@@ -35,4 +35,5 @@ hide:
     EM+EE 中作为式中函数实现，Skia 版重构为命令。功能本身无变化。
 
 ### 相关项目
+- [命令 vs 表达式 — 两种求值路径的根本差异](../tutorial/command-vs-expression.zh.md) — RESULT 污染问题与式中函数重构为命令的原因
 - [Skia版规格变更一览](../Skia/Skia_Summary.zh.md#changed-commands)

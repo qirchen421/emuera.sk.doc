@@ -7,12 +7,12 @@ hide:
 
 | 函数名                                                                   | 参数             | 返回值 |
 | :----------------------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.zh.md)           | `stringVariable` | 无   |
-| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.zh.md)           | `stringVariable` | 无   |
-| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.zh.md)        | `stringVariable` | 无   |
-| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.zh.md)        | `stringVariable` | 无   |
-| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.zh.md)       | `stringVariable` | 无   |
-| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.zh.md)       | `stringVariable` | 无   |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.zh.md)           | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.zh.md)           | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.zh.md)        | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.zh.md)        | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.zh.md)       | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.zh.md)       | `stringVariable` | `void` |
 
 !!! info "API"
 
@@ -26,6 +26,8 @@ hide:
     ```
 
     与 `CALL`、`JUMP` 及其 `TRY` 系统类似，但允许通过一个**字符串表达式**来指定**完整的函数调用行**（包括函数名和参数）。
+
+    被调用函数中执行了 [`RETURN`](./RETURN.zh.md) 时，`RESULT` 会被设为其参数值；函数到达末尾时，`RESULT` 会被设为 `0`。此行为与 [`CALL`](./CALL.zh.md) 完全一致。
 
     与 `CALLFORM` 的区别在于：`CALLFORM` 的参数结构在编译时必须固定，而 `CALLSTR` 系列是在运行时解析整个字符串。这意味着可以动态地改变传递给函数的参数数量或类型。
 

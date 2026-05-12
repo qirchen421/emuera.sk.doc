@@ -35,4 +35,5 @@ Author: JukesBouver99
     In EM+EE, this was implemented as an expression function. In the Skia edition, it has been reimplemented as a command. The functionality itself is unchanged.
 
 ### See Also
+- [Command vs Expression — The Fundamental Difference Between Two Evaluation Paths](../tutorial/command-vs-expression.en.md) — RESULT pollution issue and why expression functions were reimplemented as commands
 - [Skia Edition Specification Changes](../Skia/Skia_Summary.md#changed-commands)

@@ -73,6 +73,7 @@ hide:
     ![](../assets/images/PRINT.png)
 
 ### Related Items
+- [Basic Output](../tutorial/basic-output.md) — PRINT family tutorial: argument types, behavior suffixes, output colors, buttons
 - [PRINTBUTTON](PRINTBUTTON.md)
 - [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
 - [Extensions added in Emuera>Formatted String (FORM syntax) Extensions](../Emuera/expression.en.md#formatted-string-form-syntax-extension)

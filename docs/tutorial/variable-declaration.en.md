@@ -203,6 +203,31 @@ RETURN
 RETURN
 ```
 
+!!! danger "Original Engine ARG Recursion Trap"
+
+    In the `BAD_RECURSE` example above, even adding `DYNAMIC` to `L_SUM` **still causes recursion errors in the original engine (emuera.em / EM+EE)** — because `ARG:0` in the original engine is stored per function name, so when the same function is called recursively, all levels share the same ARG array rather than having independent copies.
+
+    ```erb
+    ; In the original engine, ARG:0 is also overwritten during recursion!
+    @STILL_BAD_RECURSE(ARG:0)
+    #DIM DYNAMIC L_SUM       ; ← L_SUM now has independent copies
+        L_SUM += ARG:0
+        IF ARG:0 > 0
+            CALL STILL_BAD_RECURSE(ARG:0 - 1)  ; ← But ARG:0 gets overwritten!
+        ENDIF
+        ; ARG:0 here is no longer the passed-in value, but the innermost recursion's value
+    RETURN
+    ```
+
+    **Root cause**: The original engine manages LOCAL/ARG through a `VariableLocal` dictionary keyed by function name (subKey). Different functions have independent arrays, but **when the same function is called recursively, the subKey is identical, so all levels share the same ARG/LOCAL array**. `DYNAMIC` only solves the problem for `#DIM`-declared private variables — **it does not protect built-in variables like ARG/LOCAL**.
+
+    **Skia version fix**: Introduces an `ExecutionContext` stack, where each function call has independent `ArgIntegers`/`ArgStrings`/`LocalIntegers`/`LocalStrings` arrays, fundamentally resolving the ARG/LOCAL overwrite problem during recursion. See [Skia Version Specification Changes — ExecutionContext Stack-based Function Context](../Skia/Skia_Summary.en.md#executioncontext).
+
+    | Engine | ARG:0 Recursion Behavior | L_SUM (DYNAMIC) Recursion Behavior |
+    |--------|-------------------------|-----------------------------------|
+    | Original (emuera.em / EM+EE) | ❌ Shared across all levels, overwritten | ✅ Independent copy |
+    | Skia version | ✅ Independent copy (ExecutionContext isolation) | ✅ Independent copy |
+
 !!! warning "DYNAMIC and RESTART"
 
     The `RESTART` instruction jumps back to the function start and does **not** reset DYNAMIC variables. Only returning from and re-entering the function resets them.
@@ -641,8 +666,8 @@ CALL PROCESS(1, 10, 20, 30)
 
 | Misconception | Correct understanding |
 |--------------|----------------------|
-| "LOCAL is a true local variable" | LOCAL shares the same array across all functions; not reset across function calls |
-| "Private variable = local variable" | Private variables are function-level registrations; LOCAL is built-in and shared |
+| "LOCAL is a true local variable" | LOCAL is stored per function name; different functions have independent arrays, but recursive calls to the same function share the same array (original engine) |
+| "Private variable = local variable" | Private variables are function-level registrations; LOCAL is a built-in variable stored per function name |
 | "Private variables disappear after function return" | Non-DYNAMIC private variables retain their data |
 | "DYNAMIC variables are the same as LOCAL" | DYNAMIC is allocated on call and released on return; LOCAL is never released |
 | "Writing L_val in the signature declares it" | The signature is only a reference; must use `#DIM` to declare |

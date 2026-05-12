@@ -250,10 +250,11 @@
 
     每次函数调用创建独立的 `ExecutionContext`，修复 LOCAL/ARG 系变量递归覆写污染。
 
-    - 上游（emuera.em）使用函数名→数组的全局字典，同名函数递归调用时变量互相覆写
+    - 上游（emuera.em）通过 `VariableLocal` 字典按函数名（subKey）存储 ARG/LOCAL，不同函数拥有独立数组，但同一函数递归时 subKey 相同，所有层级共享同一份数组导致互相覆写
     - Skia 版通过 `ExecutionContext` 栈，每次调用拥有独立的 `LocalIntegers`/`LocalStrings`/`ArgIntegers`/`ArgStrings` 数组
     - `IntoFunction()` 时 PushContext，`Return()` 时 PopContext + Dispose
     - 在 `#DIM DYNAMIC` 变量的 ScopeIn/ScopeOut 管理之外，ExecutionContext 提供额外的隔离层
+    - **关键区别**：`DYNAMIC` 只保护 `#DIM` 声明的私有变量，不保护 ARG/LOCAL 等内置变量。原版引擎中即使使用 `#DIM DYNAMIC`，递归时 ARG:0 仍会被覆盖。ExecutionContext 从根本上解决了此问题。详见 [变量声明教程 — 原版引擎的 ARG 递归陷阱](../tutorial/variable-declaration.zh.md#arg)
 
 ### ![](../assets/images/IconSK.webp)SparseArray\<T> 稀疏数组存储
 !!! summary ""
@@ -508,7 +509,7 @@
 ### ![](../assets/images/IconSK.webp)`CALLSTR` 系 — 动态函数调用
 !!! summary ""
 
-    调用存储在字符串变量中的函数名。可动态切换函数名。
+    调用存储在字符串变量中的函数名。可动态切换函数名。被调用函数执行 `RETURN` 时设置 `RESULT`，到达末尾时 `RESULT` 设为 `0`，与 `CALL` 行为一致。
 
 !!! info "API"
 

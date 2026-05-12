@@ -99,7 +99,7 @@ DELCHARA 1        ; 登録番号1のキャラを削除
 ```erb
 REPEAT CHARANUM
     ; COUNT は現在のキャラの登録番号（0 ~ CHARANUM-1）
-    PRINTFORML 登録番号={COUNT}, キャラ番号={NO:COUNT}, 名前={NAME:COUNT}
+    PRINTFORML 登録番号={COUNT}, キャラ番号={NO:COUNT}, 名前=%NAME:COUNT%
 REND
 ```
 
