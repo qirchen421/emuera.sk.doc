@@ -21,8 +21,8 @@ eramaker 时代，查询函数都是**单向固定映射**：已知编号，查�
 
 ```erb
 ; CSV 系列查询：已知角色模板编号，查询模板中的值
-S = CSVNAME(0)              ; 模板 0 的 NAME
-S = CSVCALLNAME(0)          ; 模板 0 的 CALLNAME
+S '= CSVNAME(0)             ; 模板 0 的 NAME
+S '= CSVCALLNAME(0)         ; 模板 0 的 CALLNAME
 X = CSVBASE(0, 2)           ; 模板 0 的 BASE:2
 X = CSVTALENT(0, 5)         ; 模板 0 的 TALENT:5
 
@@ -104,8 +104,8 @@ X = GETVAR("COUNT:" + TSTR:0)  ; 动态构造变量名+索引
 X = GETVAR(L_VAR_NAME, 0)      ; 变量不存在时返回默认值 0
 
 ; GETVARS — 通过字符串名读取字符串变量
-S = GETVARS("NAME:TARGET")     ; 等价于 S = NAME:TARGET
-S = GETVARS(L_VAR_NAME, "")    ; 变量不存在时返回默认值 ""
+S '= GETVARS("NAME:TARGET")    ; 等价于 S '= NAME:TARGET
+S '= GETVARS(L_VAR_NAME, "")   ; 变量不存在时返回默认值 ""
 
 ; SETVAR — 通过字符串名写入变量
 SETVAR "MONEY", 1000           ; 等价于 MONEY = 1000
@@ -136,8 +136,8 @@ EE 扩展引入了 `ERDNAME`，实现了 `GETNUM` 的反向操作——已知编
 
 ```erb
 ; ERDNAME — 通过编号查找名称
-S = ERDNAME(PALAM, 2)       ; 返回 PALAM:2 的名称（如"理由"）
-S = ERDNAME(TALENT, 5)      ; 返回 TALENT:5 的名称（如"害羞"）
+S '= ERDNAME(PALAM, 2)       ; 返回 PALAM:2 的名称（如"理由"）
+S '= ERDNAME(TALENT, 5)      ; 返回 TALENT:5 的名称（如"害羞"）
 ```
 
 **函数参考**：[ERDNAME](../Reference/ERDNAME.zh.md)
@@ -170,8 +170,8 @@ X = EVAL("A * 10")              ; 等价于 X = A * 10
 X = EVAL(L_EXPR, 0)             ; 解析失败返回默认值 0
 
 ; EVALS — 字符串动态求值
-S = EVALS("NAME:TARGET")        ; 等价于 S = NAME:TARGET
-S = EVALS(L_STR_EXPR, "")       ; 解析失败返回默认值 ""
+S '= EVALS("NAME:TARGET")        ; 等价于 S '= NAME:TARGET
+S '= EVALS(L_STR_EXPR, "")       ; 解析失败返回默认值 ""
 
 ; EVALF — 浮点动态求值
 F = EVALF("3.14 * 2")           ; 浮点表达式求值

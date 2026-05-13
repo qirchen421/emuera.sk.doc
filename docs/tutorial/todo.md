@@ -115,7 +115,7 @@
 
 | 页面 | 日文 .md | 中文 .zh.md | 英文 .en.md | 备注 |
 |------|:--------:|:-----------:|:-----------:|------|
-| dynamic-reflection | ❌ | ✅ | ❌ | 动态解析与反射演进：RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名 |
+| dynamic-reflection | ✅ | ✅ | ✅ | 动态解析与反射演进：RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名（含字符串赋值 `'=` 修复） |
 | runtime-mechanics | ❌ | ❌ | ❌ | 运行时机制：ConvertArg→SetTransporter→IntoFunction |
 | anti-patterns | ❌ | ❌ | ❌ | 反模式与常见错误 |
 
@@ -162,26 +162,25 @@
 - [x] 补全缺失的 .en.md 文件（见 §2.1 表格中 ❌ 项）— 12 个页面已翻译
 - [ ] 三语言交叉引用链接一致性检查
 
-### Phase 5：进阶内容（第6章高级教程）⬜ 待执行
+### Phase 5：进阶内容（第6章高级教程）🟡 部分完成
 
 > 以下内容需要从源码中提取洞见，优先级较低。
 
-- [ ] **tutorial/dynamic-reflection.zh.md** — 动态解析与反射演进
-  - [ ] 6.1 早期动态求值：RETURNFORM（FORM展开→二次整数解析，仅限整数返回值）
-  - [ ] 6.2 通用动态求值：EVAL/EVALS/EVALF（Skia新增，支持三种类型+默认值+异常安全）
-  - [ ] 6.3 函数名反射：CALLFORM（FORM构造函数名→编译期无法确定跳转目标）
-  - [ ] 6.4 函数名+参数反射：CALLSTR（运行时解析完整调用语句，函数名+参数同时动态）
-  - [ ] 6.5 变量名反射：GETVAR/ISVAR/GETNUM/GETPALAM/GETTALENT 等（从固定getter到字符串→变量Token映射）
-  - [ ] 6.6 CSV别名与多对一映射：ALS修复（原版一对一→Skia多对一，同一编号可有多个名称）
-  - [ ] 6.7 反射能力演进总表：从静态编译到运行时动态的逐步解放
+- [x] **tutorial/dynamic-reflection** — 动态解析与反射演进（三语言版全部完成并注册到导航）
+  - [x] 6.1 第一代固定映射：CSVNAME/GETCHARA/GETPALAMLV
+  - [x] 6.2 第二代名称反查：GETNUM/RETURNFORM/CALLFORM
+  - [x] 6.3 第三代变量反射：EXISTVAR/GETVAR/GETVARS/SETVAR/ENUM*/ERDNAME/GETCSVNOBY*
+  - [x] 6.4 第四代通用求值：EVAL/EVALS/EVALF/CALLSTR/ALS修复
+  - [x] 6.5 反射能力演进总表：从静态编译到运行时动态的逐步解放
+  - [x] 字符串赋值 `'=` 语法审查与修复（含 EVAL 参考页三语言同步修正）
 - [ ] **tutorial/runtime-mechanics.zh.md** — 运行时机制（ConvertArg→SetTransporter→IntoFunction）
 - [ ] **tutorial/anti-patterns.zh.md** — 反模式与常见错误
 
-### Phase 6：mkdocs.yml 导航更新 ⬜ 待执行
+### Phase 6：mkdocs.yml 导航更新 🟡 部分完成
 
-- [ ] 新建教程页加入导航
+- [x] 新建教程页加入导航（dynamic-reflection.md 已添加到「関数」章节）
 - [ ] 调整教程子目录结构
-- [ ] 确保三语言同步
+- [x] 确保三语言同步（dynamic-reflection 三语言版本导航注册一致）
 
 ---
 

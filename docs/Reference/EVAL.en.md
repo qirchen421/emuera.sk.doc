@@ -38,7 +38,7 @@ hide:
     Expression syntax:
     ```
     LOCAL = EVAL("LOCAL + 10")
-    RESULTS:0 = EVALS("\"string result\"")
+    RESULTS:0 '= EVALS("\"string result\"")
     ```
 
     Variables within the expression are bound to the **context of the currently executing function**.

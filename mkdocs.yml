@@ -60,6 +60,7 @@ nav:
           - tutorial/variable-declaration.md
           - tutorial/erb-format-extension.md
           - tutorial/command-vs-expression.md
+          - tutorial/dynamic-reflection.md
       - エンジン特性:
           - tutorial/system-flow.md
           - tutorial/event-functions.md
