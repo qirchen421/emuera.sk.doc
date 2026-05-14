@@ -2,6 +2,7 @@
 
 !!! info "本節の対応マニュアル"
 
+    - **Reference 分類**: [セーブデータ操作](../Reference/README.md#save-data) / [画像処理関連](../Reference/README.md#image) / [サウンド系](../Reference/README.md#sound)
     - [eramakerのERB書式](../eramaker/ERB_format.md) — 元のERB形式（歴史参考）
     - [Emueraの拡張書式](../Emuera/expression.md) — 行連結・特殊コメント行
     - [Emueraの拡張書式 - 関数](../Emuera/function.md) — `#FUNCTION`/`#FUNCTIONS` 宣言

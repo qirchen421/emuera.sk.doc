@@ -33,7 +33,7 @@
 
 ---
 
-### PRINT 系列
+### PRINT 系列 { #print }
 
 | 函数名                                                                                                                                            | 参数                                                         | 返回值   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------- | :------- |
@@ -65,7 +65,7 @@
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                                            | `int`                                                        | 无     |
 | ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINTN.md) | `string` | 无   |
 
-### 显示操作・字体操作・显示规格参照
+### 显示操作・字体操作・显示规格参照 { #display-font }
 
 | 函数名                                                                         | 参数                | 返回值   |
 | :----------------------------------------------------------------------------- | :------------------ | :------- |
@@ -118,7 +118,7 @@
 | ![](../assets/images/IconSK.webp)[`STRICT_FONT_FALLBACK`](./STRICT_FONT_FALLBACK.md) | `int` | `void` |
 
 
-### 字符串操作・引用
+### 字符串操作・引用 { #string-operations }
 
 | 函数名                                                              | 参数                                              | 返回值   |
 | :------------------------------------------------------------------ | :------------------------------------------------ | :------- |
@@ -155,7 +155,7 @@
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
-### 算术
+### 算术 { #arithmetic }
 
 | 函数名                                                                    | 参数                                         | 返回值   |
 | :------------------------------------------------------------------------ | :------------------------------------------- | :------- |
@@ -211,7 +211,7 @@
 | ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.md)        | `any`, `any`...                              | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.md)            | `int`, `int`                                 | `string` |
 
-### 角色操作・引用
+### 角色操作・引用 { #character-operations }
 
 | 函数名                                                                                                  | 参数                                   | 返回值 |
 | :------------------------------------------------------------------------------------------------------ | :------------------------------------- | :----- |
@@ -230,7 +230,7 @@
 | ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.md)                                      | `int`, `int`                           | 无   |
 | ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.md)                                | `int`                                  | 无   |
 
-### 变量操作・变量引用・CSV引用
+### 变量操作・变量引用・CSV引用 { #variable-operations }
 
 | 函数名                                                                     | 参数                                          | 返回值   |
 | :------------------------------------------------------------------------- | :-------------------------------------------- | :------- |
@@ -293,7 +293,7 @@
 | ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.md) | `string`(, `int`) | 无   |
 | ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.md) | `string`(, `int`) | 无   |
 
-### 存档操作
+### 存档操作 { #save-data }
 
 | 函数名                                                                                              | 参数                                  | 返回值   |
 | :-------------------------------------------------------------------------------------------------- | :------------------------------------ | :------- |
@@ -313,7 +313,7 @@
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.md)   | `string`, `int`(, `int`, `int`)       | `int`    |
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.md)   | `int`(, `int`, `int`)                 | `string` |
 
-### 日期・时间获取
+### 日期・时间获取 { #datetime }
 
 | 函数名                                                                       | 参数 | 返回值          |
 | :--------------------------------------------------------------------------- | :--- | :-------------- |
@@ -323,7 +323,7 @@
 | ![](../assets/images/IconEmuera.webp)[`GETMILLISECOND`](./GETMILLISECOND.md) | 无 | `int`           |
 | ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md)           | 无 | `int`           |
 
-### 输入・等待
+### 输入・等待 { #input-wait }
 
 | 函数名                                                                     | 参数                                      | 返回值           |
 | :------------------------------------------------------------------------- | :---------------------------------------- | :--------------- |
@@ -344,7 +344,7 @@
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                     | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
 
-### 循环・分支语法
+### 循环・分支语法 { #flow-control }
 
 | 函数名                                                                      | 参数                                     | 返回值 |
 | :-------------------------------------------------------------------------- | :--------------------------------------- | :----- |
@@ -364,7 +364,7 @@
 | ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)          | 无                                     | 无   |
 | ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)         | 无                                     | 无   |
 
-### 随机数控制
+### 随机数控制 { #random }
 
 | 函数名                                                             | 参数  | 返回值 |
 | :----------------------------------------------------------------- | :---- | :----- |
@@ -372,7 +372,7 @@
 | ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.md)  | 无  | 无   |
 | ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.md)  | 无  | 无   |
 
-### 调试辅助・系统流程控制
+### 调试辅助・系统流程控制 { #debug-system-flow }
 
 | 函数名                                                                                   | 参数                  |
 | :--------------------------------------------------------------------------------------- | :-------------------- |
@@ -389,7 +389,7 @@
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)                           | `int`(, `int`, `int`) |
 
-### 函数系列（CALL 等）
+### 函数系列（CALL 等） { #function-call }
 
 | 函数名 | 参数 | 返回值 |
 | :----- | :--- | :----- |
@@ -436,7 +436,7 @@
 | ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 | ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 
-### RETURN 系列
+### RETURN 系列 { #return }
 
 | 函数名                                                                                              | 参数                     | 返回值                     |
 | :-------------------------------------------------------------------------------------------------- | :----------------------  | :------------------------- |
@@ -444,7 +444,7 @@
 | ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `string`(, `string`,...) | `与参数相同（转换为数值型）` |
 | ![](../assets/images/IconEmuera.webp)[`RETURNF`](../Emuera/user_defined_in_expression_function.md)  | `any`                    | `与参数相同`               |
 
-### DEBUG 系列
+### DEBUG 系列 { #debug }
 
 | 函数名                                                                    | 参数           | 返回值 |
 | :------------------------------------------------------------------------ | :------------- | :----- |
@@ -455,7 +455,7 @@
 | ![](../assets/images/IconEmuera.webp)[`DEBUGCLEAR`](./DEBUGPRINT.md)      | 无           | 无   |
 | ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md)              | `int`          | 无   |
 
-### 提示框系列
+### 提示框系列 { #tooltip }
 
 | 函数名                                                                           | 参数         |
 | :------------------------------------------------------------------------------- | :----------- |
@@ -484,7 +484,7 @@
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND`](./HTML_PRINT_ISLAND.md)       | `string`                                        | 无            |
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND_CLEAR`](./HTML_PRINT_ISLAND.md) | `string`                                        | 无            |
 
-### AWAIT 相关
+### AWAIT 相关 { #await }
 
 | 函数名                                                                | 参数      | 返回值   |
 | :-------------------------------------------------------------------- | :-------- | :------- |
@@ -496,7 +496,7 @@
 | ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.md)      | 无      | `int`    |
 | ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md)              | 无      | `string` |
 
-### 图像处理相关
+### 图像处理相关 { #image }
 
 <details>
 <summary>关于图像处理相关命令</summary>
@@ -598,7 +598,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`(, `int`, `int`)                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`GET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`                                                                                   | `int`    |
 
-### 音频系列
+### 音频系列 { #sound }
 
 | 函数名                                                                   | 参数     | 返回值 |
 | :----------------------------------------------------------------------- | :------- | :----- |
@@ -647,7 +647,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 |                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)                                  | `int`    |
 
-### MAP（映射数组）系列
+### MAP（映射数组）系列 { #map }
 
 | 函数名                                                                   | 参数                              | 返回值   |
 | :----------------------------------------------------------------------- | :-------------------------------- | :------- |
@@ -674,7 +674,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.md)          | `string`, `string`, `string`      | `int`    |
 | ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.md)           | `string`, `string`, `string`      | `string` |
 
-### DataTable（数据库）系列
+### DataTable（数据库）系列 { #datatable }
 
 | 函数名                                                                 | 参数                                                          | 返回值   |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------ | :------- |
@@ -704,7 +704,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.md)   | `string`(, `ref` `string`)                                    | `string` |
 | ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.md) | `string`, `string`, `string`                                  | `int`    |
 
-### SQL（数据库）系列
+### SQL（数据库）系列 { #sql }
 
 | 函数名 | 参数 | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
@@ -734,7 +734,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
 | ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.md) | `string`, `string`, `string`, `string`, `string` | `int` |
 
-### 其他
+### 其他 { #misc }
 
 | 函数名                                                                     | 参数                        | 返回值   |
 | :------------------------------------------------------------------------- | :-------------------------- | :------- |

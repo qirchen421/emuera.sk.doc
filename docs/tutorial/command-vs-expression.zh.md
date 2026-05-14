@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [函数系列（CALL 等）](../Reference/README.zh.md#function-call)
     - [表达式函数](../Emuera/user_defined_in_expression_function.zh.md) — #FUNCTION/#FUNCTIONS 的完整规格
     - [CALLF 指令参考](../Reference/CALLF.md) — CALLF 的 API 文档
 

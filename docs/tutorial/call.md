@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [関数系（CALL 等）](../Reference/README.md#function-call) / [RETURN 系](../Reference/README.md#return) / [入力・ウェイト](../Reference/README.md#input-wait)
     - [CALL](../Reference/CALL.md) — CALL命令APIリファレンス
     - [JUMP](../Reference/JUMP.md) — JUMP命令APIリファレンス
     - [RETURN](../Reference/RETURN.md) — RETURN命令APIリファレンス

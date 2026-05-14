@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [循环・分支语法](../Reference/README.zh.md#flow-control)
     - [GOTO](../Reference/GOTO.zh.md) — GOTO 指令 API 参考
     - [GOTOFORM](../Reference/FORM.zh.md) — GOTOFORM 指令 API 参考
     - [CONTINUE / BREAK](../Reference/CONTINUE.zh.md) — 循环控制 API 参考

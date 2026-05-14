@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [循环・分支语法](../Reference/README.zh.md#flow-control)
     - [IF / SIF](../Reference/IF.zh.md) — IF/ELSEIF/ELSE/ENDIF 和 SIF 的 API 参考
     - [SELECTCASE](../Reference/SELECTCASE.zh.md) — SELECTCASE 的 API 参考
 

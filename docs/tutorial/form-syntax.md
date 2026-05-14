@@ -2,6 +2,7 @@
 
 !!! info "本節の対応マニュアル"
 
+    - **Reference 分類**: [文字列操作・参照](../Reference/README.md#string-operations)
     - [Emueraで追加された記法 > 書式付文字列（FORM構文）拡張](../Emuera/expression.md) — 公式マニュアルのFORM構文説明
     - [PRINT系](../Reference/PRINT.md) — FORM構文を使用する出力命令
     - [STRFORM](../Reference/STRFORM.md) — 実行時FORM展開関数

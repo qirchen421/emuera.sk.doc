@@ -105,6 +105,18 @@
 |:---|:---|
 | [HTML Tag Syntax](html-syntax.en.md) | HTML_PRINT tags, attributes, variant differences |
 
+### Chapter 7: Advanced Topics 🟢 Optional
+
+> Dynamic analysis, runtime mechanics, anti-patterns — aiming for deep understanding of ERABASIC
+
+**Prerequisites**: Chapter 4 "Functions" ｜ **Key points**: Three-stage pipeline, REF variable lifecycle, avoiding common mistakes
+
+| Topic | Content |
+|:---|:---|
+| [Dynamic Analysis & Reflection](dynamic-reflection.en.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→variable reflection→ALS aliases |
+| [Runtime Mechanics](runtime-mechanics.en.md) | ConvertArg→SetTransporter→IntoFunction, REF variable lifecycle |
+| [Anti-Patterns & Common Mistakes](anti-patterns.en.md) | Scope misunderstandings, FORM misuse, REF/OUT confusion, HTML output errors |
+
 ---
 
 ## What is an era game {: #era-game }

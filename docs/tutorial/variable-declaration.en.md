@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Reference"
 
+    - **Reference Category**: [Variable manipulation, CSV reference](../Reference/README.en.md#variable-operations)
     - [User-Defined Variables](../Emuera/user_defined_variables.en.md) — #DIM declaration specification
     - [Header Files ERH](../Emuera/ERH.en.md) — Global variable declarations
     - [Function Definition](../Emuera/function.en.md) — Function parameters and pass-by-reference

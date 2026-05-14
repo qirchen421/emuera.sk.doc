@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [ループ・分岐構文](../Reference/README.md#flow-control)
     - [GOTO](../Reference/GOTO.md) — GOTO命令APIリファレンス
     - [GOTOFORM](../Reference/FORM.md) — GOTOFORM命令APIリファレンス
     - [CONTINUE / BREAK](../Reference/CONTINUE.md) — ループ制御APIリファレンス

@@ -60,13 +60,16 @@ nav:
           - tutorial/variable-declaration.md
           - tutorial/erb-format-extension.md
           - tutorial/command-vs-expression.md
-          - tutorial/dynamic-reflection.md
       - エンジン特性:
           - tutorial/system-flow.md
           - tutorial/event-functions.md
           - tutorial/character-variables.md
       - HTML・グラフィック:
           - tutorial/html-syntax.md
+      - 高度なトピック:
+          - tutorial/dynamic-reflection.md
+          - tutorial/runtime-mechanics.md
+          - tutorial/anti-patterns.md
   - 仕様概要:
       - Skia版:
           - Skia/Skia_Summary.md

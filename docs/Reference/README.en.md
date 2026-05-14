@@ -33,7 +33,7 @@ For detailed explanations and usage examples of each category, see the correspon
 
 ---
 
-### PRINT related
+### PRINT related { #print }
 
 | Function name                                                                                                                                     | Arguments                                                    | Return   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------- | :------- |
@@ -65,7 +65,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                                            | `int`                                                        | none     |
 | ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINTN.md) | `string` | none   |
 
-### Display operation, font operation, display specifications
+### Display operation, font operation, display specifications { #display-font }
 
 | Function name                                                                  | Arguments           | Return   |
 | :----------------------------------------------------------------------------- | :------------------ | :------- |
@@ -118,7 +118,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconSK.webp)[`STRICT_FONT_FALLBACK`](./STRICT_FONT_FALLBACK.md) | `int` | `void` |
 
 
-### String Manipulation and Reference
+### String Manipulation and Reference { #string-operations }
 
 | Function name                                                       | Arguments                                         | Return   |
 | :------------------------------------------------------------------ | :------------------------------------------------ | :------- |
@@ -155,7 +155,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
-### Arithmetics
+### Arithmetics { #arithmetic }
 
 | Function name                                                             | Arguments                                    | Return   |
 | :------------------------------------------------------------------------ | :------------------------------------------- | :------- |
@@ -211,7 +211,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.md)        | `any`, `any`...                              | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.md)            | `int`, `int`                                 | `string` |
 
-### Character operation/reference
+### Character operation/reference { #character-operations }
 
 | Function name                                                                                           | Arguments                              | Return |
 | :------------------------------------------------------------------------------------------------------ | :------------------------------------- | :----- |
@@ -230,7 +230,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.md)                                      | `int`, `int`                           | none   |
 | ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.md)                                | `int`                                  | none   |
 
-### Variable manipulation, variable reference, CSV reference
+### Variable manipulation, variable reference, CSV reference { #variable-operations }
 
 | Function name                                                              | Arguments                                     | Return   |
 | :------------------------------------------------------------------------- | :-------------------------------------------- | :------- |
@@ -293,7 +293,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.md) | `string`(, `int`) | none   |
 | ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.md) | `string`(, `int`) | none   |
 
-### Save data operations
+### Save data operations { #save-data }
 
 | Function name                                                                                       | Arguments                             | Return   |
 | :-------------------------------------------------------------------------------------------------- | :------------------------------------ | :------- |
@@ -313,7 +313,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.md)   | `string`, `int`(, `int`, `int`)       | `int`    |
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.md)   | `int`(, `int`, `int`)                 | `string` |
 
-### Get date and time
+### Get date and time { #datetime }
 
 | Function name                                                                | Arguments | Return          |
 | :--------------------------------------------------------------------------- | :--- | :-------------- |
@@ -323,7 +323,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`GETMILLISECOND`](./GETMILLISECOND.md) | none | `int`           |
 | ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md)           | none | `int`           |
 
-### Input/Wait
+### Input/Wait { #input-wait }
 
 | Function name                                                              | Arguments                                 | Return           |
 | :------------------------------------------------------------------------- | :---------------------------------------- | :--------------- |
@@ -344,7 +344,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                     | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
 
-### Loop/branch syntax
+### Loop/branch syntax { #flow-control }
 
 | Function name                                                               | Arguments                                | Return |
 | :-------------------------------------------------------------------------- | :--------------------------------------- | :----- |
@@ -364,7 +364,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)          | none                                     | none   |
 | ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)         | none                                     | none   |
 
-### Random Number Control
+### Random Number Control { #random }
 
 | Function name                                                      | Arguments  | Return |
 | :----------------------------------------------------------------- | :---- | :----- |
@@ -372,7 +372,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.md)  | none  | none   |
 | ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.md)  | none  | none   |
 
-### Debugging aids and system flow control
+### Debugging aids and system flow control { #debug-system-flow }
 
 | Function name                                                                            | Arguments             |
 | :--------------------------------------------------------------------------------------- | :-------------------- |
@@ -389,7 +389,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)                           | `int`(, `int`, `int`) |
 
-### Functions (CALL, etc.)
+### Functions (CALL, etc.) { #function-call }
 
 | Function name                                                          | Arguments                  | Return |
 | :--------------------------------------------------------------------- | :------------------------- | :---- |
@@ -436,7 +436,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 | ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 
-### RETURN related
+### RETURN related { #return }
 
 | Function name                                                                                       | Arguments               | Return                     |
 | :-------------------------------------------------------------------------------------------------- | :---------------------- | :------------------------- |
@@ -444,7 +444,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `string`(, `string`,...) | `Same as arguments (converted to numeric type)` |
 | ![](../assets/images/IconEmuera.webp)[`RETURNF`](../Emuera/user_defined_in_expression_function.md)  | `any`                   | `Same as arguments`               |
 
-### DEBUG related
+### DEBUG related { #debug }
 
 | Function name                                                             | Arguments      | Return |
 | :------------------------------------------------------------------------ | :------------- | :----- |
@@ -455,7 +455,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`DEBUGCLEAR`](./DEBUGPRINT.md)      | none           | none   |
 | ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md)              | `int`          | none   |
 
-### Tooltip related
+### Tooltip related { #tooltip }
 
 | Function name                                                                    | Arguments    |
 | :------------------------------------------------------------------------------- | :----------- |
@@ -484,7 +484,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND`](./HTML_PRINT_ISLAND.md)       | `string`                                        | none            |
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND_CLEAR`](./HTML_PRINT_ISLAND.md) | `string`                                        | none            |
 
-### AWAIT related
+### AWAIT related { #await }
 
 | Function name                                                         | Arguments | Return   |
 | :-------------------------------------------------------------------- | :-------- | :------- |
@@ -496,7 +496,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.md)      | none      | `int`    |
 | ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md)              | none      | `string` |
 
-### Image processing related
+### Image processing related { #image }
 
 <details>
 <summary>About image processing related commands</summary>
@@ -598,7 +598,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`(, `int`, `int`)                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`GET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`                                                                                   | `int`    |
 
-### Sound related
+### Sound related { #sound }
 
 | Function name                                                            | Arguments| Return |
 | :----------------------------------------------------------------------- | :------- | :----- |
@@ -647,7 +647,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 |                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)                                  | `int`    |
 
-### MAP (associative array) related
+### MAP (associative array) related { #map }
 
 | Function name                                                            | Arguments                         | Return   |
 | :----------------------------------------------------------------------- | :-------------------------------- | :------- |
@@ -674,7 +674,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.md)          | `string`, `string`, `string`      | `int`    |
 | ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.md)           | `string`, `string`, `string`      | `string` |
 
-### DataTable （database） related
+### DataTable （database） related { #datatable }
 
 | Function name                                                          | Arguments                                                     | Return   |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------ | :------- |
@@ -704,7 +704,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.md)   | `string`(, `ref` `string`)                                    | `string` |
 | ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.md) | `string`, `string`, `string`                                  | `int`    |
 
-### SQL (Database) related
+### SQL (Database) related { #sql }
 
 | Function name | Arguments | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
@@ -734,7 +734,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
 | ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.md) | `string`, `string`, `string`, `string`, `string` | `int` |
 
-### Others
+### Others { #misc }
 
 | Function name                                                              | Arguments                   | Return   |
 | :------------------------------------------------------------------------- | :-------------------------- | :------- |

@@ -2,6 +2,7 @@
 
 !!! info "本節の対応マニュアル"
 
+    - **Reference 分類**: [デバッグ補助・システムフロー制御](../Reference/README.md#debug-system-flow)
     - [Emuera フロー図](../Emuera/system_flow.md) — システムフローとイベントの呼び出しタイミング
     - [Emueraの拡張書式 - 関数](../Emuera/function.md) — 関数定義と呼び出し
     - [ERBファイル形式拡張](erb-format-extension.md) — `#PRI`/`#LATER`/`#SINGLE`/`#ONLY` 修飾子

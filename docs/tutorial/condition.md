@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [ループ・分岐構文](../Reference/README.md#flow-control)
     - [IF / SIF](../Reference/IF.md) — IF/ELSEIF/ELSE/ENDIF と SIF のAPIリファレンス
     - [SELECTCASE](../Reference/SELECTCASE.md) — SELECTCASE のAPIリファレンス
 

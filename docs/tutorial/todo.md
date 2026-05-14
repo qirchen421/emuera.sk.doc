@@ -111,19 +111,19 @@
 | character-variables | ✅ | ✅ | ✅ |
 | html-syntax | ✅ | ✅ | ✅ |
 
-### 2.1b 高级教程页面（第6章）
+### 2.1b 高级教程页面（第7章）
 
 | 页面 | 日文 .md | 中文 .zh.md | 英文 .en.md | 备注 |
 |------|:--------:|:-----------:|:-----------:|------|
 | dynamic-reflection | ✅ | ✅ | ✅ | 动态解析与反射演进：RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名（含字符串赋值 `'=` 修复） |
-| runtime-mechanics | ❌ | ❌ | ❌ | 运行时机制：ConvertArg→SetTransporter→IntoFunction |
-| anti-patterns | ❌ | ❌ | ❌ | 反模式与常见错误 |
+| runtime-mechanics | ✅ | ✅ | ✅ | 运行时机制：ConvertArg→SetTransporter→IntoFunction |
+| anti-patterns | ✅ | ✅ | ✅ | 反模式与常见错误 |
 
 ### 2.2 引擎特性章节引用的规格页
 
 | 页面 | 日文 .md | 中文 .zh.md | 英文 .en.md | 备注 |
 |------|:--------:|:-----------:|:-----------:|------|
-| Emuera/system_flow | ✅ | ✅ | ✅ | 日文版缺 BEFORE_THROW/BEFORE_ERROR 段落 |
+| Emuera/system_flow | ✅ | ✅ | ✅ | 三语言版已补充 BEFORE_THROW/BEFORE_ERROR 段落及反向链接 |
 | Emuera/variables | ✅ | ✅ | ❌ | — |
 
 ---
@@ -148,8 +148,8 @@
 
 - [x] **system-flow 教程页** `tutorial/system-flow.zh.md` + `.md` + `.en.md`：三语言版已创建
 - [x] **character-variables 教程页** `tutorial/character-variables.zh.md` + `.md` + `.en.md`：三语言版已创建
-- [ ] **system_flow.md（日文版）补充 BEFORE_THROW/BEFORE_ERROR 流程段落**：中文版和英文版已有
-- [ ] **system_flow 三语言版添加反向链接**：从流程图事件节点链接到 event-functions 教程页
+- [x] **system_flow.md（日文版）补充 BEFORE_THROW/BEFORE_ERROR 流程段落**：三语言版已补充
+- [x] **system_flow 三语言版添加反向链接**：已在 TITLE 章节和 BEFORE_THROW/BEFORE_ERROR 段落添加指向 event-functions 教程页的链接
 
 ### Phase 3.5：教程首页引导性内容 ✅ 已完成
 
@@ -173,14 +173,14 @@
   - [x] 6.4 第四代通用求值：EVAL/EVALS/EVALF/CALLSTR/ALS修复
   - [x] 6.5 反射能力演进总表：从静态编译到运行时动态的逐步解放
   - [x] 字符串赋值 `'=` 语法审查与修复（含 EVAL 参考页三语言同步修正）
-- [ ] **tutorial/runtime-mechanics.zh.md** — 运行时机制（ConvertArg→SetTransporter→IntoFunction）
-- [ ] **tutorial/anti-patterns.zh.md** — 反模式与常见错误
+- [x] **tutorial/runtime-mechanics.zh.md** — 运行时机制（ConvertArg→SetTransporter→IntoFunction）
+- [x] **tutorial/anti-patterns.zh.md** — 反模式与常见错误
 
-### Phase 6：mkdocs.yml 导航更新 🟡 部分完成
+### Phase 6：mkdocs.yml 导航更新 ✅ 完成
 
-- [x] 新建教程页加入导航（dynamic-reflection.md 已添加到「関数」章节）
-- [ ] 调整教程子目录结构
-- [x] 确保三语言同步（dynamic-reflection 三语言版本导航注册一致）
+- [x] 新建教程页加入导航（dynamic-reflection/runtime-mechanics/anti-patterns 已添加到「高度なトピック」章节）
+- [x] dynamic-reflection 从「関数」移至「高度なトピック」
+- [x] 确保三语言同步（三语言版本导航注册一致）
 
 ---
 
@@ -220,6 +220,7 @@ eramaker 仅在"版本演进"章节中作为历史参考提及，教程以 Emuer
 
 | 日期 | 变更 |
 |------|------|
+| 2026-05-15 | 完成第7章高级主题三语言版：runtime-mechanics（运行时机制：ConvertArg→SetTransporter→IntoFunction、REF变量生命周期）、anti-patterns（反模式与常见错误：作用域误解、FORM误用、REF/OUT混淆、HTML输出错误）；dynamic-reflection 从第4章「関数」移至第7章「高度なトピック」；mkdocs.yml 导航更新 |
 | 2026-05-12 | 新增第6章高级教程规划：dynamic-reflection（中文版已创建）、runtime-mechanics、anti-patterns；修复 RETURNFORM 文档（三语言版）：明确两阶段求值机制和整数返回限制；新增 §2.1b 高级教程页面进度表 |
 | 2026-05-12 | Phase 4 多语言同步完成：补全 12 个缺失的 .en.md 文件（index/intro/hello-world/file-types/line-types/evolution/values-types/basic-output/condition/loop/jump/call/command-vs-expression）；修正 values-types 和 variable-declaration 的 .en.md 状态（此前已存在但误标为 ❌） |
 | 2026-05-12 | 教程首页添加引导性内容：必读/推荐/选读标记、前置知识、本章要点（index.zh.md + index.md）；角色变量系统确认完成（三语言版）；整理 TODO 结构 |

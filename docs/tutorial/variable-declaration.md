@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [変数操作・CSV 参照](../Reference/README.md#variable-operations)
     - [ユーザー定義変数](../Emuera/user_defined_variables.md) — #DIM 宣言仕様
     - [ヘッダーファイル ERH](../Emuera/ERH.md) — グローバル変数宣言
     - [関数定義](../Emuera/function.md) — 関数引数と参照渡し

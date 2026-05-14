@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Arithmetics](../Reference/README.en.md#arithmetic)
     - [Emuera Extended Syntax](../Emuera/expression.en.md) — FORM syntax assignment, string expression assignment
     - [eramaker ERB Format](../eramaker/ERB_format.en.md) — Basic assignment syntax (historical reference)
 

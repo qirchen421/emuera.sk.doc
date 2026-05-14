@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [字符串操作・引用](../Reference/README.zh.md#string-operations)
     - [Emuera 新增语法 > 书式付文字列（FORM構文）拡張](../Emuera/expression.zh.md) — 官方手册中的 FORM 语法说明
     - [PRINT 系](../Reference/PRINT.zh.md) — 使用 FORM 语法的输出指令
     - [STRFORM](../Reference/STRFORM.zh.md) — 运行时 FORM 展开函数

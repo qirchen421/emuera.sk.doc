@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [调试辅助・系统流程控制](../Reference/README.zh.md#debug-system-flow)
     - [流程图](../Emuera/system_flow.zh.md) — 各状态的完整流程图与细节
     - [事件函数](event-functions.zh.md) — 引擎在各状态自动调用的事件钩子
     - [BEGIN 指令](../Reference/BEGIN.zh.md) — 状态跳转指令 API 参考

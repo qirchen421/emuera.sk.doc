@@ -7,6 +7,8 @@
 ## TITLE
 启动并读取erb结束后，以及执行`BEGIN TITLE`后。
 
+> 各事件函数的详细说明请参阅[事件函数](../tutorial/event-functions.zh.md)。
+
 ![](../assets/images/title.gif)
 
 如果定义了`@SYSTEM_TITLE`则调用它，其他什么也不做。
@@ -180,3 +182,4 @@ THROW 指令执行
 ```
 
 > **SK 专属说明**：`BEFORE_THROW` 和 `BEFORE_ERROR` 事件函数是 Skia 版本新增的功能，允许脚本在异常抛出前进行拦截和处理。原版 Emuera 不支持这些事件。
+> 详见[事件函数 — BEFORE_THROW / BEFORE_ERROR](../tutorial/event-functions.zh.md#before_throw)。

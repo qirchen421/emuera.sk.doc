@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [キャラ操作・参照](../Reference/README.md#character-operations) / [変数操作・CSV 参照](../Reference/README.md#variable-operations)
     - [変数の仕様と一覧](../Emuera/variables.md) — 全変数の完全な仕様
     - [ユーザー定義変数](../Emuera/user_defined_variables.md) — #DIM 宣言仕様
     - [ヘッダファイル（ERH）](../Emuera/ERH.md) — グローバル変数宣言

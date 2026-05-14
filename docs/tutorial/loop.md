@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [ループ・分岐構文](../Reference/README.md#flow-control)
     - [REPEAT ~ REND](../Reference/REPEAT.md) — カウントループAPIリファレンス
     - [FOR ~ NEXT](../Reference/FOR.md) — 汎用カウントループAPIリファレンス
     - [WHILE ~ WEND](../Reference/WHILE.md) — 前置条件ループAPIリファレンス

@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual"
 
+    - **Reference Category**: [Character operation/reference](../Reference/README.en.md#character-operations) / [Variable manipulation, CSV reference](../Reference/README.en.md#variable-operations)
     - [Variable Specifications and List](../Emuera/variables.en.md) — Complete specifications for all variables
     - [User-Defined Variables](../Emuera/user_defined_variables.en.md) — #DIM declaration specifications
     - [Header Files (ERH)](../Emuera/ERH.en.md) — Global variable declarations

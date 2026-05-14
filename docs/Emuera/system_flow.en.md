@@ -2,6 +2,8 @@
 ## TITLE  
 After starting up and reading the ERB, and after running BEGIN TITLE.  
 
+> For details on each event function, see [Event Functions](../tutorial/event-functions.en.md).
+
 ![](../assets/images/title.gif)  
 
 If @SYSTEM_TITLE is defined, call it and do nothing else.  
@@ -176,4 +178,5 @@ Error occurs
     │           └─ No → Handle error directly
 ```
 
-> **SK Exclusive**: The `BEFORE_THROW` and `BEFORE_ERROR` event functions are new features added in the Skia version, allowing scripts to intercept and handle exceptions before they are thrown. These events are not available in the original Emuera.  
+> **SK Exclusive**: The `BEFORE_THROW` and `BEFORE_ERROR` event functions are new features added in the Skia version, allowing scripts to intercept and handle exceptions before they are thrown. These events are not available in the original Emuera.
+> See [Event Functions — BEFORE_THROW / BEFORE_ERROR](../tutorial/event-functions.en.md#before_throw).

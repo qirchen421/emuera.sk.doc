@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [循环・分支语法](../Reference/README.zh.md#flow-control)
     - [REPEAT ~ REND](../Reference/REPEAT.zh.md) — 计数循环 API 参考
     - [FOR ~ NEXT](../Reference/FOR.zh.md) — 通用计数循环 API 参考
     - [WHILE ~ WEND](../Reference/WHILE.zh.md) — 前置条件循环 API 参考

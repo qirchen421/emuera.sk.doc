@@ -33,7 +33,7 @@
 
 ---
 
-### PRINT 系
+### PRINT 系 { #print }
 
 | 関数名                                                                                                                                            | 引数                                                         | 戻り値   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------- | :------- |
@@ -65,7 +65,7 @@
 | ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md)                                                                            | `int`                                                        | なし     |
 | ![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)N</code>](./PRINTN.md) | `string` | なし   |
 
-### 表示操作・フォント操作・表示仕様参照
+### 表示操作・フォント操作・表示仕様参照 { #display-font }
 
 | 関数名                                                                         | 引数                | 戻り値   |
 | :----------------------------------------------------------------------------- | :------------------ | :------- |
@@ -118,7 +118,7 @@
 | ![](../assets/images/IconSK.webp)[`STRICT_FONT_FALLBACK`](./STRICT_FONT_FALLBACK.md) | `int` | `void` |
 
 
-### 文字列操作・参照
+### 文字列操作・参照 { #string-operations }
 
 | 関数名                                                              | 引数                                              | 戻り値   |
 | :------------------------------------------------------------------ | :------------------------------------------------ | :------- |
@@ -155,7 +155,7 @@
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
-### 算術
+### 算術 { #arithmetic }
 
 | 関数名                                                                    | 引数                                         | 戻り値   |
 | :------------------------------------------------------------------------ | :------------------------------------------- | :------- |
@@ -211,7 +211,7 @@
 | ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.md)        | `any`, `any`...                              | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.md)            | `int`, `int`                                 | `string` |
 
-### キャラ操作・参照
+### キャラ操作・参照 { #character-operations }
 
 | 関数名                                                                                                  | 引数                                   | 戻り値 |
 | :------------------------------------------------------------------------------------------------------ | :------------------------------------- | :----- |
@@ -230,7 +230,7 @@
 | ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.md)                                      | `int`, `int`                           | なし   |
 | ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.md)                                | `int`                                  | なし   |
 
-### 変数操作・変数参照・CSV 参照
+### 変数操作・変数参照・CSV 参照 { #variable-operations }
 
 | 関数名                                                                     | 引数                                          | 戻り値   |
 | :------------------------------------------------------------------------- | :-------------------------------------------- | :------- |
@@ -293,7 +293,7 @@
 | ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.md) | `string`(, `int`) | なし   |
 | ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.md) | `string`(, `int`) | なし   |
 
-### セーブデータ操作
+### セーブデータ操作 { #save-data }
 
 | 関数名                                                                                              | 引数                                  | 戻り値   |
 | :-------------------------------------------------------------------------------------------------- | :------------------------------------ | :------- |
@@ -313,7 +313,7 @@
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.md)   | `string`, `int`(, `int`, `int`)       | `int`    |
 | ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.md)   | `int`(, `int`, `int`)                 | `string` |
 
-### 日付・時刻取得
+### 日付・時刻取得 { #datetime }
 
 | 関数名                                                                       | 引数 | 戻り値          |
 | :--------------------------------------------------------------------------- | :--- | :-------------- |
@@ -323,7 +323,7 @@
 | ![](../assets/images/IconEmuera.webp)[`GETMILLISECOND`](./GETMILLISECOND.md) | なし | `int`           |
 | ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md)           | なし | `int`           |
 
-### 入力・ウェイト
+### 入力・ウェイト { #input-wait }
 
 | 関数名                                                                     | 引数                                      | 戻り値           |
 | :------------------------------------------------------------------------- | :---------------------------------------- | :--------------- |
@@ -344,7 +344,7 @@
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                     | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
 
-### ループ・分岐構文
+### ループ・分岐構文 { #flow-control }
 
 | 関数名                                                                      | 引数                                     | 戻り値 |
 | :-------------------------------------------------------------------------- | :--------------------------------------- | :----- |
@@ -364,7 +364,7 @@
 | ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)          | なし                                     | なし   |
 | ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)         | なし                                     | なし   |
 
-### 乱数制御
+### 乱数制御 { #random }
 
 | 関数名                                                             | 引数  | 戻り値 |
 | :----------------------------------------------------------------- | :---- | :----- |
@@ -372,7 +372,7 @@
 | ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.md)  | なし  | なし   |
 | ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.md)  | なし  | なし   |
 
-### デバッグ補助・システムフロー制御
+### デバッグ補助・システムフロー制御 { #debug-system-flow }
 
 | 関数名                                                                                   | 引数                  |
 | :--------------------------------------------------------------------------------------- | :-------------------- |
@@ -389,7 +389,7 @@
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)                           | `int`(, `int`, `int`) |
 
-### 関数系（CALL 等）
+### 関数系（CALL 等） { #function-call }
 
 | 関数名 | 引数 | 戻り値 |
 | :----- | :--- | :----- |
@@ -436,7 +436,7 @@
 | ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 | ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.md)       | `stringVariable`             | `void`  |
 
-### RETURN 系
+### RETURN 系 { #return }
 
 | 関数名                                                                                              | 引数                     | 戻り値                     |
 | :-------------------------------------------------------------------------------------------------- | :----------------------  | :------------------------- |
@@ -444,7 +444,7 @@
 | ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `string`(, `string`,...) | `引数に同じ(数値型に変換)` |
 | ![](../assets/images/IconEmuera.webp)[`RETURNF`](../Emuera/user_defined_in_expression_function.md)  | `any`                    | `引数に同じ`               |
 
-### DEBUG 系
+### DEBUG 系 { #debug }
 
 | 関数名                                                                    | 引数           | 戻り値 |
 | :------------------------------------------------------------------------ | :------------- | :----- |
@@ -455,7 +455,7 @@
 | ![](../assets/images/IconEmuera.webp)[`DEBUGCLEAR`](./DEBUGPRINT.md)      | なし           | なし   |
 | ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md)              | `int`          | なし   |
 
-### ツールチップ系
+### ツールチップ系 { #tooltip }
 
 | 関数名                                                                           | 引数         |
 | :------------------------------------------------------------------------------- | :----------- |
@@ -484,7 +484,7 @@
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND`](./HTML_PRINT_ISLAND.md)       | `string`                                        | なし            |
 | ![](../assets/images/Icondotnet.webp)[`HTML_PRINT_ISLAND_CLEAR`](./HTML_PRINT_ISLAND.md) | `string`                                        | なし            |
 
-### AWAIT 関連
+### AWAIT 関連 { #await }
 
 | 関数名                                                                | 引数      | 戻り値   |
 | :-------------------------------------------------------------------- | :-------- | :------- |
@@ -496,7 +496,7 @@
 | ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.md)      | なし      | `int`    |
 | ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md)              | なし      | `string` |
 
-### 画像処理関連
+### 画像処理関連 { #image }
 
 <details>
 <summary>画像処理関連命令について</summary>
@@ -598,7 +598,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`(, `int`, `int`)                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`GET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`                                                                                   | `int`    |
 
-### サウンド系
+### サウンド系 { #sound }
 
 | 関数名                                                                   | 引数     | 戻り値 |
 | :----------------------------------------------------------------------- | :------- | :----- |
@@ -647,7 +647,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 |                                                                                           | `ref` `string`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)                                  | `int`    |
 
-### MAP（連想配列）系
+### MAP（連想配列）系 { #map }
 
 | 関数名                                                                   | 引数                              | 戻り値   |
 | :----------------------------------------------------------------------- | :-------------------------------- | :------- |
@@ -674,7 +674,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.md)          | `string`, `string`, `string`      | `int`    |
 | ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.md)           | `string`, `string`, `string`      | `string` |
 
-### DataTable（データベース）系
+### DataTable（データベース）系 { #datatable }
 
 | 関数名                                                                 | 引数                                                          | 戻り値   |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------ | :------- |
@@ -704,7 +704,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.md)   | `string`(, `ref` `string`)                                    | `string` |
 | ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.md) | `string`, `string`, `string`                                  | `int`    |
 
-### SQL（データベース）系
+### SQL（データベース）系 { #sql }
 
 | 関数名 | 引数 | 戻り値 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
@@ -734,7 +734,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
 | ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.md) | `string`, `string`, `string`, `string`, `string` | `int` |
 
-### その他
+### その他 { #misc }
 
 | 関数名                                                                     | 引数                        | 戻り値   |
 | :------------------------------------------------------------------------- | :-------------------------- | :------- |

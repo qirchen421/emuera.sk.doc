@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual"
 
+    - **Reference Category**: [Debugging aids and system flow control](../Reference/README.en.md#debug-system-flow)
     - [Flow Diagrams](../Emuera/system_flow.en.md) — Complete flow diagrams and details for each state
     - [Event Functions](event-functions.en.md) — Event hooks automatically called by the engine at each state
     - [BEGIN Instruction](../Reference/BEGIN.en.md) — State transition instruction API reference

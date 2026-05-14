@@ -2,6 +2,7 @@
 
 !!! info "Prerequisites"
 
+    - **Reference Category**: [Variable manipulation, CSV reference](../Reference/README.en.md#variable-operations) / [String Manipulation and Reference](../Reference/README.en.md#string-operations)
     - [Functions and CALL](call.en.md) — Function call mechanism, RETURN/RETURNF
     - [FORM Syntax](form-syntax.en.md) — `%variable%` and `{expression}` expansion rules
     - [Commands vs Expressions](command-vs-expression.en.md) — Two evaluation paths

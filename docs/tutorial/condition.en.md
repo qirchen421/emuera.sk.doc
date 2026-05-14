@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Loop/branch syntax](../Reference/README.en.md#flow-control)
     - [IF / SIF](../Reference/IF.en.md) — API reference for IF/ELSEIF/ELSE/ENDIF and SIF
     - [SELECTCASE](../Reference/SELECTCASE.en.md) — API reference for SELECTCASE
 

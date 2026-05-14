@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [变量操作・CSV 引用](../Reference/README.zh.md#variable-operations)
     - [用户定义变量](../Emuera/user_defined_variables.zh.md) — #DIM 声明规格
     - [头文件 ERH](../Emuera/ERH.zh.md) — 全局变量声明
     - [函数定义](../Emuera/function.zh.md) — 函数参数与引用传递

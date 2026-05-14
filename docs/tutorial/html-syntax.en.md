@@ -2,6 +2,8 @@
 
 !!! info "Variant Differences"
 
+    - **Reference Category**: [HTML related](../Reference/README.en.md#html-related) / [Image processing related](../Reference/README.en.md#image)
+
     This page provides an integrated explanation of Emuera's HTML tag syntax. Variant tags are appended to each attribute to indicate which variant added it.
 
     | Tag | Variant |

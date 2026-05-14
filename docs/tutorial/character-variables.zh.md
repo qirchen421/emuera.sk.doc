@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [角色操作・引用](../Reference/README.zh.md#character-operations) / [变量操作・CSV 引用](../Reference/README.zh.md#variable-operations)
     - [变量规格与一览](../Emuera/variables.zh.md) — 所有变量的完整规格
     - [用户定义变量](../Emuera/user_defined_variables.zh.md) — #DIM 声明规格
     - [头文件（ERH）](../Emuera/ERH.zh.md) — 全局变量声明

@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [PRINT 系列](../Reference/README.zh.md#print) / [显示操作・字体操作](../Reference/README.zh.md#display-font)
     - [PRINT 系列](../Reference/PRINT.zh.md) — PRINT 指令完整 API 参考
     - [PRINTSINGLE 系列](../Reference/PRINTSINGLE.zh.md) — 单行输出指令
     - [PRINTDATA 系列](../Reference/PRINTDATA.zh.md) — 数据输出指令

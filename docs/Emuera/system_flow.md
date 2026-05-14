@@ -7,6 +7,8 @@
 ## TITLE  
 起動してerbを読み終えた後、および`BEGIN TITLE`実行後。  
 
+> 各イベント関数の詳細は[イベント関数](../tutorial/event-functions.md)を参照。
+
 ![](../assets/images/title.gif)
 
 `@SYSTEM_TITLE`が定義されていればそれを呼び出し、他には何もしない。  
@@ -142,3 +144,42 @@ Emueraでは、`@SYSTEM_LOADEND`が定義されていれば`@SYSTEM_LOADEND`を�
 
 `@EVENTLOAD`終了までに[`BEGIN`](../Reference/BEGIN.md)命令が行われれば、そちらへ遷移する。  
 [`BEGIN`](../Reference/BEGIN.md)命令が行われなければ通常通り`@SHOW_SHOP`に遷移する。  
+
+## エラー処理フロー（SK専用）
+
+### THROW 例外処理
+
+`THROW` 命令が実行されると、`@BEFORE_THROW` イベント関数が定義されているかを確認する：
+
+```
+THROW 命令実行
+    │
+    ├─ 既に @BEFORE_THROW 内か？（再帰防止）
+    │   ├─ はい → メッセージを直接出力して終了
+    │   │
+    │   └─ いいえ → @BEFORE_THROW が定義されているか？
+    │           ├─ はい → スローを遅延、@BEFORE_THROW を呼び出す
+    │           │       → @BEFORE_THROW 終了後に例外をスロー
+    │           │
+    │           └─ いいえ → 直接例外をスロー
+```
+
+### 汎用エラー処理
+
+捕捉されないエラーが発生した場合（ランタイムエラー、スクリプトエラー等を含む）、`@BEFORE_ERROR` イベント関数が定義されているかを確認する：
+
+```
+エラー発生
+    │
+    ├─ 既に @BEFORE_ERROR 内か？（再帰防止）
+    │   ├─ はい → 直接エラー処理して終了
+    │   │
+    │   └─ いいえ → @BEFORE_ERROR が定義されているか？
+    │           ├─ はい → 処理を遅延、@BEFORE_ERROR を呼び出す
+    │           │       → @BEFORE_ERROR 終了後にエラー処理
+    │           │
+    │           └─ いいえ → 直接エラー処理
+```
+
+> **SK専用**：`BEFORE_THROW` と `BEFORE_ERROR` イベント関数は Skia版で追加された機能で、スクリプトが例外のスロー前にインターセプト・処理することを可能にする。これらのイベントは原版 Emuera では利用できない。
+> 詳細は[イベント関数 — BEFORE_THROW / BEFORE_ERROR](../tutorial/event-functions.md#before_throw)を参照。

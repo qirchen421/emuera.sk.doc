@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [PRINT 系](../Reference/README.md#print) / [表示操作・フォント操作](../Reference/README.md#display-font)
     - [PRINT系](../Reference/PRINT.md) — PRINT命令の完全APIリファレンス
     - [PRINTSINGLE系](../Reference/PRINTSINGLE.md) — 単行出力命令
     - [PRINTDATA系](../Reference/PRINTDATA.md) — データ出力命令

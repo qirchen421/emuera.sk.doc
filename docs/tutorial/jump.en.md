@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Loop/branch syntax](../Reference/README.en.md#flow-control)
     - [GOTO](../Reference/GOTO.en.md) — GOTO instruction API reference
     - [GOTOFORM](../Reference/FORM.en.md) — GOTOFORM instruction API reference
     - [CONTINUE / BREAK](../Reference/CONTINUE.en.md) — Loop control API reference

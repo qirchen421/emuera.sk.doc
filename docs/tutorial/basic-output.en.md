@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [PRINT related](../Reference/README.en.md#print) / [Display & Font](../Reference/README.en.md#display-font)
     - [PRINT Series](../Reference/PRINT.en.md) — Complete API reference for PRINT instructions
     - [PRINTSINGLE Series](../Reference/PRINTSINGLE.en.md) — Single-line output instructions
     - [PRINTDATA Series](../Reference/PRINTDATA.en.md) — Data output instructions

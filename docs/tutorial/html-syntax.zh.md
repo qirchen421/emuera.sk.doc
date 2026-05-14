@@ -2,6 +2,8 @@
 
 !!! info "变体差异"
 
+    - **Reference 分类**: [HTML 系列](../Reference/README.zh.md#html-related) / [图像处理相关](../Reference/README.zh.md#image)
+
     本页面整合讲解 Emuera 的 HTML 标签语法。各属性末尾标注变体标签，标明该属性由哪个变体追加。
 
     | 标签 | 变体 |

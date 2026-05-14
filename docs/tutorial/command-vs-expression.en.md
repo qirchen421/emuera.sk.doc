@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Functions (CALL, etc.)](../Reference/README.en.md#function-call)
     - [Expression Functions](../Emuera/user_defined_in_expression_function.en.md) — Complete specification for #FUNCTION/#FUNCTIONS
     - [CALLF Instruction Reference](../Reference/CALLF.md) — CALLF API documentation
 

@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Debugging aids and system flow control](../Reference/README.en.md#debug-system-flow)
     - [Emuera System Flow](../Emuera/system_flow.en.md) — System flow and event trigger timing
     - [Emuera Extended Syntax - Functions](../Emuera/function.en.md) — Function definition and invocation
     - [ERB File Format Extensions](erb-format-extension.en.md) — `#PRI`/`#LATER`/`#SINGLE`/`#ONLY` modifiers

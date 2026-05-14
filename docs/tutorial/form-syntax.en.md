@@ -2,6 +2,7 @@
 
 !!! info "Related Manual Sections"
 
+    - **Reference Category**: [String Manipulation and Reference](../Reference/README.en.md#string-operations)
     - [Emuera Extended Syntax > Formatted String (FORM Syntax) Extensions](../Emuera/expression.en.md) — Official manual's FORM syntax description
     - [PRINT Series](../Reference/PRINT.en.md) — Output commands using FORM syntax
     - [STRFORM](../Reference/STRFORM.en.md) — Runtime FORM expansion function

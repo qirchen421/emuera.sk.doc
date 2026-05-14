@@ -2,6 +2,7 @@
 
 !!! info "本節対応マニュアル"
 
+    - **Reference 分類**: [デバッグ補助・システムフロー制御](../Reference/README.md#debug-system-flow)
     - [フロー図](../Emuera/system_flow.md) — 各状態の完全なフロー図と詳細
     - [イベント関数](event-functions.md) — エンジンが各状態で自動呼出するイベントフック
     - [BEGIN命令](../Reference/BEGIN.md) — 状態遷移命令 API リファレンス

@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [函数系列（CALL 等）](../Reference/README.zh.md#function-call) / [RETURN 系列](../Reference/README.zh.md#return) / [输入・等待](../Reference/README.zh.md#input-wait)
     - [CALL](../Reference/CALL.zh.md) — CALL 指令 API 参考
     - [JUMP](../Reference/JUMP.zh.md) — JUMP 指令 API 参考
     - [RETURN](../Reference/RETURN.zh.md) — RETURN 指令 API 参考

@@ -23,14 +23,14 @@
 
 ### 导航优化
 
-- [ ] **教程与 Reference 的交叉链接** — 在教程各子节页面顶部添加"本节对应 Reference 分类：XXX"的提示
+- [x] **教程与 Reference 的交叉链接** — 教程各子节页面顶部已添加"本节对应 Reference 分类：XXX"提示（三语言版 14 页 × 3 = 42 文件），Reference README 分类标题已添加显式锚点
 
 ### 多语言同步
 
 - [ ] **创建 index.en.md** — 英文版教程首页
 - [ ] **补全缺失的 .en.md 文件** — 见 tutorial/todo.md §2.1 表格中 ❌ 项
-- [ ] **system_flow.md（日文版）补充 BEFORE_THROW/BEFORE_ERROR 流程段落** — 中文版和英文版已有
-- [ ] **system_flow 三语言版添加反向链接** — 从流程图事件节点链接到 event-functions 教程页
+- [x] **system_flow.md（日文版）补充 BEFORE_THROW/BEFORE_ERROR 流程段落** — 已补充，与中文版和英文版一致
+- [x] **system_flow 三语言版添加反向链接** — 已在 TITLE 章节和 BEFORE_THROW/BEFORE_ERROR 段落添加指向 event-functions 教程页的链接
 
 ---
 

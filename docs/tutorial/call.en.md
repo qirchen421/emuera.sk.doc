@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Functions (CALL, etc.)](../Reference/README.en.md#function-call) / [RETURN related](../Reference/README.en.md#return) / [Input/Wait](../Reference/README.en.md#input-wait)
     - [CALL](../Reference/CALL.en.md) — CALL instruction API reference
     - [JUMP](../Reference/JUMP.en.md) — JUMP instruction API reference
     - [RETURN](../Reference/RETURN.en.md) — RETURN instruction API reference

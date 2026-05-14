@@ -2,6 +2,7 @@
 
 !!! info "本节对应手册"
 
+    - **Reference 分类**: [调试辅助・系统流程控制](../Reference/README.zh.md#debug-system-flow)
     - [Emuera 流程图](../Emuera/system_flow.zh.md) — 系统流程与事件触发时机
     - [Emuera 扩展语法 - 函数](../Emuera/function.zh.md) — 函数定义与调用
     - [ERB 文件格式扩展](erb-format-extension.zh.md) — `#PRI`/`#LATER`/`#SINGLE`/`#ONLY` 修饰符

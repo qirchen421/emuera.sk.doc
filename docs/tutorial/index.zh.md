@@ -105,6 +105,18 @@
 |:---|:---|
 | [HTML 标签语法](html-syntax.zh.md) | HTML_PRINT 标签、属性、变体差异 |
 
+### 第7章：高级主题 🟢 选读
+
+> 动态解析、运行时机制、反模式——深入理解 ERABASIC
+
+**前置知识**：第4章「函数」｜**本章要点**：三阶段流水线、REF 变量生命周期、常见错误规避
+
+| 主题 | 内容 |
+|:---|:---|
+| [动态解析与反射](dynamic-reflection.zh.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名 |
+| [运行时机制](runtime-mechanics.zh.md) | ConvertArg→SetTransporter→IntoFunction、REF变量生命周期 |
+| [反模式与常见错误](anti-patterns.zh.md) | 作用域误解、FORM误用、REF/OUT混淆、HTML输出错误 |
+
 ---
 
 ## era 游戏是什么 {: #era-game }

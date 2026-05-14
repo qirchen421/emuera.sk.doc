@@ -2,6 +2,7 @@
 
 !!! info "前提知識"
 
+    - **Reference 分類**: [変数操作・CSV 参照](../Reference/README.md#variable-operations) / [文字列操作・参照](../Reference/README.md#string-operations)
     - [関数とCALL](call.md) — 関数呼び出し機構、RETURN/RETURNF
     - [FORM構文](form-syntax.md) — `%変数%`、`{式}` 展開ルール
     - [命令 vs 式](command-vs-expression.md) — 二つの評価パス

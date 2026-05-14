@@ -2,6 +2,7 @@
 
 !!! info "前置知识"
 
+    - **Reference 分类**: [变量操作・CSV 引用](../Reference/README.zh.md#variable-operations) / [字符串操作・引用](../Reference/README.zh.md#string-operations)
     - [函数与 CALL](call.zh.md) — 函数调用机制、RETURN/RETURNF
     - [FORM 语法](form-syntax.zh.md) — `%变量%`、`{表达式}` 展开规则
     - [命令 vs 表达式](command-vs-expression.zh.md) — 两条求值路径

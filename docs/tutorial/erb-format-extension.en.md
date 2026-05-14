@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Save data operations](../Reference/README.en.md#save-data) / [Image processing related](../Reference/README.en.md#image) / [Sound related](../Reference/README.en.md#sound)
     - [eramaker ERB Format](../eramaker/ERB_format.en.md) — Original ERB format (historical reference)
     - [Emuera Extended Syntax](../Emuera/expression.en.md) — Line continuation, special comment lines
     - [Emuera Extended Syntax - Functions](../Emuera/function.en.md) — `#FUNCTION`/`#FUNCTIONS` declarations

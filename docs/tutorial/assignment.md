@@ -2,6 +2,7 @@
 
 !!! info "本節の対応マニュアル"
 
+    - **Reference 分類**: [算術](../Reference/README.md#arithmetic)
     - [Emueraの拡張書式](../Emuera/expression.md) — FORM構文代入・文字列式代入
     - [eramakerのERB書式](../eramaker/ERB_format.md) — 基本代入構文（歴史参考）
 

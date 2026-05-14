@@ -2,6 +2,7 @@
 
 !!! info "Corresponding Manual Sections"
 
+    - **Reference Category**: [Loop/branch syntax](../Reference/README.en.md#flow-control)
     - [REPEAT ~ REND](../Reference/REPEAT.en.md) — Counted loop API reference
     - [FOR ~ NEXT](../Reference/FOR.en.md) — General counted loop API reference
     - [WHILE ~ WEND](../Reference/WHILE.en.md) — Pre-condition loop API reference

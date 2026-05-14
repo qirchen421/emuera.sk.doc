@@ -2,6 +2,8 @@
 
 !!! info "変体による差異"
 
+    - **Reference 分類**: [HTML 系](../Reference/README.md#html-related) / [画像処理関連](../Reference/README.md#image)
+
     このページでは、EmueraのHTMLタグ構文を統合的に解説します。各属性の末尾に変体タグを付記し、どの変体で追加されたかを明示します。
 
     | タグ | 変体 |
