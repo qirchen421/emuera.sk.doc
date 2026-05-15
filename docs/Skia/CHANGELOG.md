@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [3.8.2](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-15
+
+### Fixed
+
+- **OperatorCode.opDictionary 丢失 `/`, `%`, `==` 三个条目**（上游缺陷修复）
+  - 上游 emuera.em 的 `opDictionary` 集合初始化器中遗漏了 `Div`(`/`)、`Mod`(`%`)、`Equal`(`==`) 三个运算符的反向映射
+  - 导致 `ToOperatorString()` 对这三个运算符返回空字符串，影响错误消息的可读性（如"无法将运算符 应用于整数类型"）
+  - 运算符本身的计算不受影响（`/`、`%`、`==` 在表达式中正常工作），仅影响错误提示
+  - XEmuera-1 使用 `.Add()` 静态构造函数初始化，条目完整，不受此缺陷影响
+
+***
+
 ## [3.8.1](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-11
 
 ### Fixed

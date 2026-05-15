@@ -749,6 +749,7 @@
 | OpenGL 上下文丢失崩溃 | 双显卡/虚拟机环境下自动降级 |
 | DIV 按钮命中测试回退 | [DIV 渲染优化](#skia-sharp)的边界保护：O(1) 定位以等高行为前提，多行内容破坏索引映射，回退到线性遍历确保点击仍可用 |
 | SQL_CONNECTION_OPEN 安全修复 | [安全强化](#changed-commands)的稳定性维度：路径穿越阻断、连接泄露修复、PRAGMA OFF→WAL 防崩溃损坏 |
+| opDictionary 运算符反查修复 | 上游 emuera.em 的 `opDictionary` 集合初始化器遗漏 `/`, `%`, `==` 三个条目，`ToOperatorString()` 返回空字符串导致错误消息不完整；运算符本身计算不受影响 |
 
 ---
 
