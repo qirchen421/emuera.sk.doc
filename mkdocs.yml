@@ -263,6 +263,7 @@ nav:
           - Reference/INPUTMOUSEKEY.md
           - Reference/INPUTANY.md
           - Reference/BINPUT.md
+          - Reference/BREAKBUTTON.md
       - ループ・分岐構文:
           - Reference/IF.md
           - Reference/REPEAT.md

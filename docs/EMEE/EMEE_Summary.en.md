@@ -380,3 +380,10 @@
 !!! summary ""
 
     Lines starting with `;^;` are commented out as usual in eramaker and other versions of Emuera, but are executed only in EMEE.
+
+### ![](../assets/images/IconEE.webp)`BREAKBUTTON` Command Added
+!!! summary ""
+
+    Forces immediate update of button state on the screen.  
+    Normally, buttonization is performed automatically every frame, but this command allows immediate button state updates.  
+    See [`BREAKBUTTON`](../Reference/BREAKBUTTON.md) for details.

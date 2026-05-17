@@ -353,3 +353,10 @@ Neo_Kesha氏による追加
 !!! summary ""
 
 	`;^;`から始まる行はeramaker及び他バージョンのEmueraでは通常通りコメントアウトされ、EMEEでのみ実行される
+
+### ![](../assets/images/IconEE.webp)`BREAKBUTTON`命令追加
+!!! summary ""
+
+	画面のボタン化を強制的に更新します。  
+	通常、ボタン化はフレームごとに自動的に行われますが、この命令を使用することで即時にボタン化を更新することができます。  
+	詳しくは[`BREAKBUTTON`](../Reference/BREAKBUTTON.md)を参照してください。

@@ -343,6 +343,7 @@
 | ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md)               | 无                                      | `int` / `string` |
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                     | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
+| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.md)         | 无                                      | 无               |
 
 ### 循环・分支语法 { #flow-control }
 

@@ -343,6 +343,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md)               | none                                      | `int` / `string` |
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                     | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
+| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.md)         | none                                      | none             |
 
 ### Loop/branch syntax { #flow-control }
 

@@ -343,6 +343,7 @@
 | ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md)               | なし                                      | `int` / `string` |
 | ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)                   | (`int`, `int`, `int`)                     | `int`            |
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
+| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.md)         | なし                                      | なし             |
 
 ### ループ・分岐構文 { #flow-control }
 
