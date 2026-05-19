@@ -40,6 +40,21 @@ Emuera 文档项目（MkDocs + mkdocs-i18n 多语言站点），非代码项目�
 
 流程：确认语言版本 → 检查其他语言版本是否存在 → **同时修改所有版本**
 
+## Changelog 同步规则
+
+> 上游 `Changelog/README.md` 已被移动到子栏目 `EMEE/CHANGELOG.md`。
+> **当前权威位置为 `EMEE/CHANGELOG.*`**。上游更新时需同步。
+
+| 文件 | 作用 | 同步方向 |
+|------|------|---------|
+| `Changelog/README.*` | 上游旧位置（可能不再更新） | 接收上游后 → 同步到 EMEE |
+| `EMEE/CHANGELOG.*` | **当前权威位置**，MkDocs 实际访问 | 主编辑位置 |
+
+同步流程：
+1. 上游 `Changelog/README.en.md` 更新 → 翻译后更新 `Changelog/README.md` + `README.zh.md`
+2. 将更新同步到 `EMEE/CHANGELOG.md` + `CHANGELOG.en.md` + `CHANGELOG.zh.md`
+3. 三语言必须全部同步
+
 ## Git 分支策略
 
 | 分支 | 用途 | CI |

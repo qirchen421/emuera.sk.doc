@@ -134,41 +134,41 @@ hide:
 
 ## Emuera.EE
 === "v55"
-	Added ONEBINPUT, ONEBINPUTS
-	VVII's patch for .NET 10 support
-	csproj organization by daughterpatch
-	Fixed bug where 2D array variables with string type names in ERD were not referenced
+	* Added ONEBINPUT, ONEBINPUTS
+	* VVII's patch for .NET 10 support
+	* csproj organization by daughterpatch
+	* Fixed bug where 2D array variables with string type names in ERD were not referenced
 
 === "v54"
-	Improved operational stability
-	Fixed return value of SPRITEGETCOLOR
-	Fixed issue where BINPUTS always returns 0
-	Merged VVII's patch (output error log on resource loading failure, adjusted plugin description for VSCode)
-	Updated libwebp dll (CRER)
-	Improved resource loading behavior via above two points
-	Fixed TIMES behavior issue in certain regions
-	Merged Private v23-24
+	* Improved operational stability
+	* Fixed return value of SPRITEGETCOLOR
+	* Fixed issue where BINPUTS always returns 0
+	* Merged VVII's patch (output error log on resource loading failure, adjusted plugin description for VSCode)
+	* Updated libwebp dll (CRER)
+	* Improved resource loading behavior via above two points
+	* Fixed TIMES behavior issue in certain regions
+	* Merged Private v23-24
 
 === "v53"
-	Fixed button hit detection disappearing when using large images with HTML_PRINT
-	Now outputs variant name and version defined in GameBase.csv when outputting logs
+	* Fixed button hit detection disappearing when using large images with HTML_PRINT
+	* Now outputs variant name and version defined in GameBase.csv when outputting logs
 
 === "v52"
-	Withdrawn sprite generation log exception error
-	Fixed TINPUT being too fast to function properly
-	Significantly reduced Emuera main file size by removing unnecessary references
-	ERB folders now prioritize folders with "#" in the name (no effect on normal variants, for maintaining compatibility with past versions)
-	Fixed HTML_SUBSTRING with CRER's patch
+	* Withdrawn sprite generation log exception error
+	* Fixed TINPUT being too fast to function properly
+	* Significantly reduced Emuera main file size by removing unnecessary references
+	* ERB folders now prioritize folders with "#" in the name (no effect on normal variants, for maintaining compatibility with past versions)
+	* Fixed HTML_SUBSTRING with CRER's patch
 
 === "v51"
 	v50 is skipped
-	Fixed [`SPRITEANIME`](../Reference/SPRITEANIMECREATE.md) with daughterpatch's patch, fixed tooltips, logs now saved with UTF-8 BOM
-	Can replace line break codes when joining lines from options (default is one half-width space)
-	Completed some translations with CRER's patch, clipboard feature made into tool
-	Fixed issue where sprites specified in CSV using lowercase letters were not generated properly
-	CSV sprite generation logs now displayed when showing load report in config
-	Fixed [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) system commands not working due to restart process change
-	Fixed line wrapping to optimal character count with JukesBouver's patch
+	* Fixed [`SPRITEANIME`](../Reference/SPRITEANIMECREATE.md) with daughterpatch's patch, fixed tooltips, logs now saved with UTF-8 BOM
+	* Can replace line break codes when joining lines from options (default is one half-width space)
+	* Completed some translations with CRER's patch, clipboard feature made into tool
+	* Fixed issue where sprites specified in CSV using lowercase letters were not generated properly
+	* CSV sprite generation logs now displayed when showing load report in config
+	* Fixed [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) system commands not working due to restart process change
+	* Fixed line wrapping to optimal character count with JukesBouver's patch
 
 === "v49"
 	* Fixed button mouseover detection not working in div, srcb not displaying

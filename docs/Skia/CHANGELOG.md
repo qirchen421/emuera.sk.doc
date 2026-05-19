@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [3.8.3](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-17
+
+### Added
+
+- **BREAKBUTTON 指令**（源自 ee+em/master）
+  - `BREAKBUTTON` — 强制中断当前按钮等待，立即刷新显示
+  - 调用 `EmueraConsole.forceUpdateGeneration()` 实现
+  - 可选参数，用于需要强制刷新 UI 的场景
+- **调试模式下错误时不关闭窗口**（源自 ee+em/master，CRER 氏补丁）
+  - `ConsoleState.Error` 状态下若 `Program.DebugMode` 为 true 则直接返回，不执行关闭流程
+
+### Changed
+
+- **.gitignore 合并优化**：融合 ee+em/master 的组织方式与 feature/xamarin 的通配符覆盖（`**/bin/*`、`**/obj/*`、`**/artifacts/**`、`*.user`、`*.suo`）
+
+***
+
 ## [3.8.2](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-15
 
 ### Fixed

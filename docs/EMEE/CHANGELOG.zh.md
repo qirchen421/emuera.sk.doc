@@ -132,41 +132,41 @@
 
 ## Emuera.EE
 === "v55"
-	新增 ONEBINPUT、ONEBINPUTS 函数
-	合并 VVII 氏的补丁以支持 .NET 10
-	daughterpatch 氏整理了 csproj 文件
-	修复了 ERD 为二维字符串数组变量命名后无法引用的问题
+	* 新增 ONEBINPUT、ONEBINPUTS 函数
+	* 合并 VVII 氏的补丁以支持 .NET 10
+	* daughterpatch 氏整理了 csproj 文件
+	* 修复了 ERD 为二维字符串数组变量命名后无法引用的问题
 
 === "v54"
-	改善了运行稳定性
-	修复了 SPRITEGETCOLOR 返回值异常的问题
-	修复了 BINPUTS 始终返回 0 的问题
-	合并 VVII 氏的补丁（资源读取失败时输出错误日志、调整 VSCode 插件描述）
-	更新 libwebp 的 dll（CRER 氏）
-	以上两点改善了资源读取的行为
-	修复了 TIMES 在特定地区行为异常的问题
-	合并私家版 v23～v24
+	* 改善了运行稳定性
+	* 修复了 SPRITEGETCOLOR 返回值异常的问题
+	* 修复了 BINPUTS 始终返回 0 的问题
+	* 合并 VVII 氏的补丁（资源读取失败时输出错误日志、调整 VSCode 插件描述）
+	* 更新 libwebp 的 dll（CRER 氏）
+	* 以上两点改善了资源读取的行为
+	* 修复了 TIMES 在特定地区行为异常的问题
+	* 合并私家版 v23～v24
 
 === "v53"
-	修复了 HTML_PRINT 使用大图片时按钮点击判定消失的问题
-	日志输出时现在也会输出 GameBase.csv 中定义的变体名和版本号
+	* 修复了 HTML_PRINT 使用大图片时按钮点击判定消失的问题
+	* 日志输出时现在也会输出 GameBase.csv 中定义的变体名和版本号
 
 === "v52"
-	因精灵图生成日志出现异常错误而暂时撤回
-	修复了 TINPUT 运行过快导致功能无法正常工作的问题
-	通过删除不必要的引用大幅缩小了 Emuera 本体文件大小
-	ERB 文件夹内，现在优先读取文件夹名含「#」的文件夹。这是为了保持与过去版本的兼容性，普通变体不受影响（感谢 CRER 氏的 bug 修复）
-	合并 CRER 氏的补丁修复了 HTML_SUBSTRING
+	* 因精灵图生成日志出现异常错误而暂时撤回
+	* 修复了 TINPUT 运行过快导致功能无法正常工作的问题
+	* 通过删除不必要的引用大幅缩小了 Emuera 本体文件大小
+	* ERB 文件夹内，现在优先读取文件夹名含「#」的文件夹。这是为了保持与过去版本的兼容性，普通变体不受影响（感谢 CRER 氏的 bug 修复）
+	* 合并 CRER 氏的补丁修复了 HTML_SUBSTRING
 
 === "v51"
 	v50 为空缺版本
-	合并 daughterpatch 氏的补丁修复了 [`SPRITEANNIME`](../Reference/SPRITEANIMECREATE.md)、工具提示以及日志以 UTF-8 BOM 格式保存的问题
-	现在可以在设置中替换行连接时的换行代码（默认为半角空格 1 个）
-	合并 CRER 氏的补丁补充了部分翻译，并将剪贴板功能工具化
-	修复了 CSV 指定的精灵图使用小写字母时无法正常生成的问题
-	设置中开启加载报告时现在也会显示 CSV 精灵图的生成日志
-	修改了重启处理，修复了 [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) 系列命令无法正常工作的问题
-	合并 JukesBouver 氏的补丁使屏幕上的文字换行以最佳字数进行
+	* 合并 daughterpatch 氏的补丁修复了 [`SPRITEANNIME`](../Reference/SPRITEANIMECREATE.md)、工具提示以及日志以 UTF-8 BOM 格式保存的问题
+	* 现在可以在设置中替换行连接时的换行代码（默认为半角空格 1 个）
+	* 合并 CRER 氏的补丁补充了部分翻译，并将剪贴板功能工具化
+	* 修复了 CSV 指定的精灵图使用小写字母时无法正常生成的问题
+	* 设置中开启加载报告时现在也会显示 CSV 精灵图的生成日志
+	* 修改了重启处理，修复了 [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) 系列命令无法正常工作的问题
+	* 合并 JukesBouver 氏的补丁使屏幕上的文字换行以最佳字数进行
 
 === "v49"
 	* 修复了 div 内按钮无法被鼠标悬停检测、srcb 不显示的问题
