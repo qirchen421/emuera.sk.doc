@@ -31,8 +31,11 @@ Emuera (Baseline — the practical starting point of modern ERABASIC)
             │    ├─ G_POLYGON polygon drawing
             │    └─ Multi-language resx
             │
-            └─ m-emuera (Cross-platform reference)
-                 └─ Avalonia UI + Rendering refactoring
+            └─ Emuera-SkiaX (Android port)
+                 ├─ Skia core + Xamarin framework
+                 ├─ Touch optimization + virtual gamepad
+                 ├─ Gallery view + floating toolbar
+                 └─ Glyph fallback + lazy loading adaptation
 ```
 
 > 💡 eramaker is the origin of ERABASIC, but its features are severely outdated. Emuera fixed all its known bugs and significantly extended the syntax, making it the practical baseline for modern ERABASIC.

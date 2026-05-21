@@ -13,6 +13,10 @@ hide:
 
 ---
 
+## Emuera Skia版とは
+
+> Emuera Skia版は、EmueraEM+EEをベースに、レンダリングエンジンをGDI+からSkiaSharpに置き換えた派生版です。EM+EEの全機能を維持し、Emuera-SkiaX（Android移植）というサブバージョンを派生させました。
+
 ## EmueraEM+EEとは
 > EmueraEM+EEは、[Emuera私家版](https://ux.getuploader.com/ninnohito/)をベースに改造を施したEmueraです。
 
@@ -28,6 +32,7 @@ hide:
 | **EM+EE** | オーディオ、ホットキー、クリップボード、TTF/OTF動的読み込み | GDI+ |
 | **Skia** | 遅延読み込み、MAP拡張、SQL/XML、SETIMAGELAYER、VARIADIC | SkiaSharp |
 | **DotNet** | SkiaSharpクロスプラットフォーム、並列読み込み、DICT辞書 | SkiaSharp |
+| **Emuera-SkiaX** | Skiaコア + Xamarin Android移植、タッチ最適化、バーチャルパッド、ギャラリービュー | SkiaSharp |
 
 ## クイックナビ
 

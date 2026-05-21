@@ -13,9 +13,13 @@ hide:
 
 ---
 
+## 什么是 Emuera Skia 版？
+
+> Emuera Skia 版是以 EmueraEM+EE 为基础、将渲染引擎从 GDI+ 替换为 SkiaSharp 的派生版本。保留 EM+EE 全部功能。衍生出Emuera-SkiaX（Android 移植）子版本。
+
 ## 什么是 EmueraEM+EE？
 
-> EmueraEM+EE 是基于 [Emuera 私有版本](https://ux.getuploader.com/ninnohito/) 修改的 Emuera 版本。它在 Emuera 基础上扩展了音频、图形、数据结构、HTML 渲染等功能，是现代 ERABASIC 生态中最活跃的分支。
+> EmueraEM+EE 是基于 [Emuera 私有版本](https://ux.getuploader.com/ninnohito/) 修改的 Emuera 版本。
 
 ### Emuera 私有版本
 
@@ -30,6 +34,7 @@ hide:
 | **EM+EE** | 音频、热键、剪贴板、TTF/OTF 动态加载 | GDI+ |
 | **Skia** | 懒加载、MAP 增强、SQL/XML、SETIMAGELAYER、VARIADIC | SkiaSharp |
 | **DotNet** | SkiaSharp 跨平台、并行加载、DICT 字典 | SkiaSharp |
+| **Emuera-SkiaX** | Skia 内核 + Xamarin Android 移植，触屏优化、虚拟手柄、画廊视图 | SkiaSharp |
 
 ## 快速导航
 

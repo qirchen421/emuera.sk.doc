@@ -31,8 +31,11 @@ Emuera (基准线 — 现代 ERABASIC 的实际起点)
             │    ├─ G_POLYGON 多边形绘制
             │    └─ 多语言 resx
             │
-            └─ m-emuera (跨平台参考)
-                 └─ Avalonia UI + 渲染重构
+            └─ Emuera-SkiaX (Android 移植)
+                 ├─ Skia 内核 + Xamarin 框架
+                 ├─ 触屏优化 + 虚拟手柄
+                 ├─ 画廊视图 + 悬浮工具栏
+                 └─ 字形回退 + 懒加载适配
 ```
 
 > 💡 eramaker 是 ERABASIC 的起源，但功能已严重落后。Emuera 修复了其所有已知 bug 并大幅扩展了语法，是现代 ERABASIC 的实际基准。

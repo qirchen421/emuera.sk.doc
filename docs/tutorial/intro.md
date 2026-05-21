@@ -79,7 +79,7 @@ ERABASICの進化ルート：
 
 ```
 eramaker（2005）  →  Emuera（2008-2017）  →  EM+EE（2019-）  →  各派生版
-  原始定義              大幅拡張              機能強化            Skia / DotNet / m-emuera
+  原始定義              大幅拡張              機能強化            Skia / DotNet / Emuera-SkiaX
 ```
 
 | バージョン | 特徴 |
@@ -89,7 +89,7 @@ eramaker（2005）  →  Emuera（2008-2017）  →  EM+EE（2019-）  →  各�
 | **EM+EE** | オーディオ、ホットキー、クリップボード、TTF/OTF動的ロード |
 | **Skia版** | レイジーロード、MAP強化、SQL/XML、SETIMAGELAYER |
 | **DotNet** | SkiaSharpクロスプラットフォーム、並列ロード、DICT辞書 |
-| **m-emuera** | Avalonia UIクロスプラットフォーム参考実装 |
+| **Emuera-SkiaX** | Skiaコア + Xamarin Android移植、タッチ最適化、バーチャルパッド、ギャラリービュー |
 
 !!! tip "本チュートリアルはEmueraをベースラインとする"
 

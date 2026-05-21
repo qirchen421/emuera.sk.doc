@@ -79,7 +79,7 @@ ERABASIC's evolution path:
 
 ```
 eramaker (2005)  →  Emuera (2008-2017)  →  EM+EE (2019-)  →  Various derivatives
-  Original definition       Major extension         Feature enhancement       Skia / DotNet / m-emuera
+  Original definition       Major extension         Feature enhancement       Skia / DotNet / Emuera-SkiaX
 ```
 
 | Version | Characteristics |
@@ -89,7 +89,7 @@ eramaker (2005)  →  Emuera (2008-2017)  →  EM+EE (2019-)  →  Various deriv
 | **EM+EE** | Audio, hotkeys, clipboard, TTF/OTF dynamic loading |
 | **Skia** | Lazy loading, MAP enhancements, SQL/XML, SETIMAGELAYER |
 | **DotNet** | SkiaSharp cross-platform, parallel loading, DICT dictionary |
-| **m-emuera** | Avalonia UI cross-platform reference implementation |
+| **Emuera-SkiaX** | Skia core + Xamarin Android port, touch optimization, virtual gamepad, gallery view |
 
 !!! tip "This tutorial uses Emuera as the baseline"
 

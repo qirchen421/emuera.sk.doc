@@ -9,6 +9,12 @@ hide:
 
     Currently, the document is mostly translated. There might be some bugs and oversight so feel free to contribute to this document. You can access the source code [here](https://gitlab.com/EvilMask/emuera.em.doc) (mainly in Markdown).
 
+---
+
+## What is Emuera Skia?
+
+> Emuera Skia is a derivative based on EmueraEM+EE that replaces the rendering engine from GDI+ to SkiaSharp. It retains all EM+EE features and has spawned the Emuera-SkiaX (Android port) sub-version.
+
 ## What is EmueraEM+EE?
 > EmueraEM+EE is a modified version of Emuera based on [Emuera Private Version](https://ux.getuploader.com/ninnohito/).
 
@@ -24,6 +30,7 @@ hide:
 | **EM+EE** | Audio, hotkeys, clipboard, TTF/OTF dynamic loading | GDI+ |
 | **Skia** | Lazy loading, MAP extensions, SQL/XML, SETIMAGELAYER, VARIADIC | SkiaSharp |
 | **DotNet** | SkiaSharp cross-platform, parallel loading, DICT dictionary | SkiaSharp |
+| **Emuera-SkiaX** | Skia core + Xamarin Android port, touch optimization, virtual gamepad, gallery view | SkiaSharp |
 
 ## Quick Navigation
 

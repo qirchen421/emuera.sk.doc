@@ -79,7 +79,7 @@ ERABASIC 的演进路线：
 
 ```
 eramaker（2005）  →  Emuera（2008-2017）  →  EM+EE（2019-）  →  各派生版
-  原始定义              大幅扩展              功能增强            Skia / DotNet / m-emuera
+  原始定义              大幅扩展              功能增强            Skia / DotNet / Emuera-SkiaX
 ```
 
 | 版本 | 特点 |
@@ -89,7 +89,7 @@ eramaker（2005）  →  Emuera（2008-2017）  →  EM+EE（2019-）  →  各�
 | **EM+EE** | 音频、热键、剪贴板、TTF/OTF 动态加载 |
 | **Skia 版** | 懒加载、MAP 增强、SQL/XML、SETIMAGELAYER |
 | **DotNet** | SkiaSharp 跨平台、并行加载、DICT 字典 |
-| **m-emuera** | Avalonia UI 跨平台参考实现 |
+| **Emuera-SkiaX** | Skia 内核 + Xamarin Android 移植，触屏优化、虚拟手柄、画廊视图 |
 
 !!! tip "本教程以 Emuera 为基准线"
 
