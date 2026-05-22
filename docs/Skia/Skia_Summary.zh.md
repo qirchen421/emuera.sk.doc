@@ -25,73 +25,73 @@
 
 | 函数 | 类型 | 说明 | 详情 |
 |:---|:---|:---|:---|
-| ![](../assets/images/IconSK.webp) `SETIMAGELAYER` | 命令 | 独立图像图层的设置/更新 | [SETIMAGELAYER](../Reference/SETIMAGELAYER.md) |
-| ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER` | 命令 | 删除指定深度的图层 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.md) |
-| ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER_ALL` | 命令 | 删除全部图层 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.md) |
-| ![](../assets/images/IconSK.webp) `EXISTSIMAGELAYER` | 式中函数 | 确认图层是否存在 | [EXISTSIMAGELAYER](../Reference/EXISTSIMAGELAYER.md) |
-| ![](../assets/images/IconSK.webp) `CALLSTR` | 命令 | 调用字符串变量中的函数 | [CALLSTR](../Reference/CALLSTR.md) |
-| ![](../assets/images/IconSK.webp) `JUMPSTR` | 命令 | 跳转到字符串变量中的函数 | [CALLSTR](../Reference/CALLSTR.md) |
-| ![](../assets/images/IconSK.webp) `TRYCALLSTR` | 命令 | 带存在检查的CALLSTR | [CALLSTR](../Reference/CALLSTR.md) |
-| ![](../assets/images/IconSK.webp) `TRYJUMPSTR` | 命令 | 带存在检查的JUMPSTR | [CALLSTR](../Reference/CALLSTR.md) |
-| ![](../assets/images/IconSK.webp) `TRYCCALLSTR` | 命令 | 带存在检查的CALLSTR（带CATCH） | [CALLSTR](../Reference/CALLSTR.md) |
-| ![](../assets/images/IconSK.webp) `TRYCJUMPSTR` | 命令 | 带存在检查的JUMPSTR（带CATCH） | [CALLSTR](../Reference/CALLSTR.md) |
-| ![](../assets/images/IconSK.webp) `EVAL` | 式中函数 | 将字符串表达式作为整数求值 | [EVAL](../Reference/EVAL.md) |
-| ![](../assets/images/IconSK.webp) `EVALS` | 式中函数 | 将字符串表达式作为字符串求值 | [EVAL](../Reference/EVAL.md) |
-| ![](../assets/images/IconSK.webp) `BITSET` | 式中函数 | 设置指定位 | [BITARRAY](../Reference/BITARRAY.md) |
-| ![](../assets/images/IconSK.webp) `BITGET` | 式中函数 | 获取指定位的值 | [BITARRAY](../Reference/BITARRAY.md) |
-| ![](../assets/images/IconSK.webp) `BITTOGGLE` | 式中函数 | 翻转指定位 | [BITARRAY](../Reference/BITARRAY.md) |
-| ![](../assets/images/IconSK.webp) `BITINDEXOFFIRST` | 式中函数 | 首个设置/清除位的索引 | [BITARRAY](../Reference/BITARRAY.md) |
-| ![](../assets/images/IconSK.webp) `MAP_VALUES` | 式中函数 | 以逗号分隔字符串获取全部值 | [MAP_GETKEYS](../Reference/MAP_GETKEYS.md) |
-| ![](../assets/images/IconSK.webp) `MAP_TOSTRING` | 式中函数 | 将Map序列化为key=value格式 | [MAP_SERIALIZATION](../Reference/MAP_SERIALIZATION.md) |
-| ![](../assets/images/IconSK.webp) `MAP_FROMSTRING` | 式中函数 | 从key=value格式反序列化Map | [MAP_SERIALIZATION](../Reference/MAP_SERIALIZATION.md) |
-| ![](../assets/images/IconSK.webp) `MAP_MERGE` | 式中函数 | 合并其他Map的内容 | [MAP_ENHANCED](../Reference/MAP_ENHANCED.md) |
-| ![](../assets/images/IconSK.webp) `MAP_REMOVEIF` | 式中函数 | 删除符合条件的键 | [MAP_ENHANCED](../Reference/MAP_ENHANCED.md) |
-| ![](../assets/images/IconSK.webp) `MAP_FINDKEY` | 式中函数 | 搜索与值匹配的键 | [MAP_ENHANCED](../Reference/MAP_ENHANCED.md) |
-| ![](../assets/images/IconSK.webp) `SIN` | 式中函数 | 正弦（弧度） | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `COS` | 式中函数 | 余弦（弧度） | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `TAN` | 式中函数 | 正切（弧度） | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `ASIN` | 式中函数 | 反正弦 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `ACOS` | 式中函数 | 反余弦 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `ATAN` | 式中函数 | 反正切 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `FLOOR` | 式中函数 | 向下取整 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `CEIL` | 式中函数 | 向上取整 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `ROUND` | 式中函数 | 四舍五入 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.md) |
-| ![](../assets/images/IconSK.webp) `UNCHECKED_ADD` | 式中函数 | 加法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
-| ![](../assets/images/IconSK.webp) `UNCHECKED_SUB` | 式中函数 | 减法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
-| ![](../assets/images/IconSK.webp) `UNCHECKED_MUL` | 式中函数 | 乘法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
-| ![](../assets/images/IconSK.webp) `UNCHECKED_NEG` | 式中函数 | 取反回环溢出 | [UNCHECKED](../Reference/UNCHECKED.md) |
-| ![](../assets/images/IconSK.webp) `HTML_PRINTC` | 命令 | 右对齐输出HTML字符串 | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
-| ![](../assets/images/IconSK.webp) `HTML_PRINTLC` | 命令 | 左对齐输出HTML字符串（带行宽计算） | [HTML_PRINTC](../Reference/HTML_PRINTC.md) |
-| ![](../assets/images/IconSK.webp) `SPRITECREATEFROMFILE` | 式中函数 | 从图像文件直接创建Sprite | [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.md) |
-| ![](../assets/images/IconSK.webp) `SET_TEXT_DRAWING_MODE` | 命令 | 设置文本渲染管线 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
-| ![](../assets/images/IconSK.webp) `GET_TEXT_DRAWING_MODE` | 式中函数 | 获取文本渲染管线 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
-| ![](../assets/images/IconSK.webp) `SET_SKIA_QUALITY` | 命令 | 设置渲染品质 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
-| ![](../assets/images/IconSK.webp) `GET_SKIA_QUALITY` | 式中函数 | 获取渲染品质 | [SKIA_RENDER](../Reference/SKIA_RENDER.md) |
-| ![](../assets/images/Icondotnet.webp) `G_POLYGON_DRAW` | 命令 | 绘制多边形轮廓 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/Icondotnet.webp) `G_POLYGON_FILL` | 命令 | 填充多边形 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_ADD` | 命令 | 添加多边形顶点 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_CLEAR` | 命令 | 清除所有顶点 | [G_POLYGON](../Reference/G_POLYGON.md) |
-| ![](../assets/images/IconSK.webp) `TEXT_BGC_ON` | 命令 | 启用文本背景色显示 | [TEXT_BGC](../Reference/TEXT_BGC.md) |
-| ![](../assets/images/IconSK.webp) `TEXT_BGC_OFF` | 命令 | 禁用文本背景色显示 | [TEXT_BGC](../Reference/TEXT_BGC.md) |
-| ![](../assets/images/IconSK.webp) `SQL_ESCAPE` | 式中函数 | 字符串SQL转义 | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_NONQUERY` | 命令 | 参数化查询执行（非查询） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_READER` | 命令 | 参数化查询执行（读取器） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_LONG` | 式中函数 | 参数化查询执行（标量long） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_STRING` | 式中函数 | 参数化查询执行（标量string） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_FLOAT` | 式中函数 | 参数化查询执行（标量float） | [SQL_PARAM](../Reference/SQL_PARAM.md) |
-| ![](../assets/images/Icondotnet.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利函数：在sav/sql/下创建DB连接 | [SQL_CONNECT](../Reference/SQL_CONNECT.md) |
-| ![](../assets/images/IconSK.webp) `SQL_IMPORT_MAP_XML` | 命令 | 从 XML 导入 MAP 到 SQL | [SQL_XML](../Reference/SQL_XML.md) |
-| ![](../assets/images/IconSK.webp) `SQL_IMPORT_DT_XML` | 命令 | 从 XML 导入 DataTable 到 SQL | [SQL_XML](../Reference/SQL_XML.md) |
-| ![](../assets/images/IconSK.webp) `SQL_EXPORT_MAP_XML` | 命令 | 从 SQL 导出 MAP 为 XML | [SQL_XML](../Reference/SQL_XML.md) |
-| ![](../assets/images/IconSK.webp) `SQL_EXPORT_DT_XML` | 命令 | 从 SQL 导出 DataTable 为 XML | [SQL_XML](../Reference/SQL_XML.md) |
-| ![](../assets/images/IconSK.webp) `SQL_IMPORT_XML_CUSTOM` | 命令 | 自定义 XML 导入 | [SQL_XML](../Reference/SQL_XML.md) |
-| ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 严格字体回退模式 | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中函数 | 从NAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中函数 | 从NICKNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYCALLNAME` | 式中函数 | 从CALLNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中函数 | 从MASTERNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.md) |
-| ![](../assets/images/Icondotnet.webp) `MATCHALL` | 式中函数 | 数组全量搜索（变量引用） | [MATCHALL](../Reference/MATCHALL.md) |
-| ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中函数 | 数组全量搜索（字符串变量名） | [MATCHALL](../Reference/MATCHALL.md) |
+| ![](../assets/images/IconSK.webp) `SETIMAGELAYER` | 命令 | 独立图像图层的设置/更新 | [SETIMAGELAYER](../Reference/SETIMAGELAYER.zh.md) |
+| ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER` | 命令 | 删除指定深度的图层 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.zh.md) |
+| ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER_ALL` | 命令 | 删除全部图层 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.zh.md) |
+| ![](../assets/images/IconSK.webp) `EXISTSIMAGELAYER` | 式中函数 | 确认图层是否存在 | [EXISTSIMAGELAYER](../Reference/EXISTSIMAGELAYER.zh.md) |
+| ![](../assets/images/IconSK.webp) `CALLSTR` | 命令 | 调用字符串变量中的函数 | [CALLSTR](../Reference/CALLSTR.zh.md) |
+| ![](../assets/images/IconSK.webp) `JUMPSTR` | 命令 | 跳转到字符串变量中的函数 | [CALLSTR](../Reference/CALLSTR.zh.md) |
+| ![](../assets/images/IconSK.webp) `TRYCALLSTR` | 命令 | 带存在检查的CALLSTR | [CALLSTR](../Reference/CALLSTR.zh.md) |
+| ![](../assets/images/IconSK.webp) `TRYJUMPSTR` | 命令 | 带存在检查的JUMPSTR | [CALLSTR](../Reference/CALLSTR.zh.md) |
+| ![](../assets/images/IconSK.webp) `TRYCCALLSTR` | 命令 | 带存在检查的CALLSTR（带CATCH） | [CALLSTR](../Reference/CALLSTR.zh.md) |
+| ![](../assets/images/IconSK.webp) `TRYCJUMPSTR` | 命令 | 带存在检查的JUMPSTR（带CATCH） | [CALLSTR](../Reference/CALLSTR.zh.md) |
+| ![](../assets/images/IconSK.webp) `EVAL` | 式中函数 | 将字符串表达式作为整数求值 | [EVAL](../Reference/EVAL.zh.md) |
+| ![](../assets/images/IconSK.webp) `EVALS` | 式中函数 | 将字符串表达式作为字符串求值 | [EVAL](../Reference/EVAL.zh.md) |
+| ![](../assets/images/IconSK.webp) `BITSET` | 式中函数 | 设置指定位 | [BITARRAY](../Reference/BITARRAY.zh.md) |
+| ![](../assets/images/IconSK.webp) `BITGET` | 式中函数 | 获取指定位的值 | [BITARRAY](../Reference/BITARRAY.zh.md) |
+| ![](../assets/images/IconSK.webp) `BITTOGGLE` | 式中函数 | 翻转指定位 | [BITARRAY](../Reference/BITARRAY.zh.md) |
+| ![](../assets/images/IconSK.webp) `BITINDEXOFFIRST` | 式中函数 | 首个设置/清除位的索引 | [BITARRAY](../Reference/BITARRAY.zh.md) |
+| ![](../assets/images/IconSK.webp) `MAP_VALUES` | 式中函数 | 以逗号分隔字符串获取全部值 | [MAP_GETKEYS](../Reference/MAP_GETKEYS.zh.md) |
+| ![](../assets/images/IconSK.webp) `MAP_TOSTRING` | 式中函数 | 将Map序列化为key=value格式 | [MAP_SERIALIZATION](../Reference/MAP_SERIALIZATION.zh.md) |
+| ![](../assets/images/IconSK.webp) `MAP_FROMSTRING` | 式中函数 | 从key=value格式反序列化Map | [MAP_SERIALIZATION](../Reference/MAP_SERIALIZATION.zh.md) |
+| ![](../assets/images/IconSK.webp) `MAP_MERGE` | 式中函数 | 合并其他Map的内容 | [MAP_ENHANCED](../Reference/MAP_ENHANCED.zh.md) |
+| ![](../assets/images/IconSK.webp) `MAP_REMOVEIF` | 式中函数 | 删除符合条件的键 | [MAP_ENHANCED](../Reference/MAP_ENHANCED.zh.md) |
+| ![](../assets/images/IconSK.webp) `MAP_FINDKEY` | 式中函数 | 搜索与值匹配的键 | [MAP_ENHANCED](../Reference/MAP_ENHANCED.zh.md) |
+| ![](../assets/images/IconSK.webp) `SIN` | 式中函数 | 正弦（弧度） | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `COS` | 式中函数 | 余弦（弧度） | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `TAN` | 式中函数 | 正切（弧度） | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `ASIN` | 式中函数 | 反正弦 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `ACOS` | 式中函数 | 反余弦 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `ATAN` | 式中函数 | 反正切 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `FLOOR` | 式中函数 | 向下取整 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `CEIL` | 式中函数 | 向上取整 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `ROUND` | 式中函数 | 四舍五入 | [MATH_EXTENSION](../Reference/MATH_EXTENSION.zh.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_ADD` | 式中函数 | 加法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.zh.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_SUB` | 式中函数 | 减法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.zh.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_MUL` | 式中函数 | 乘法回环溢出 | [UNCHECKED](../Reference/UNCHECKED.zh.md) |
+| ![](../assets/images/IconSK.webp) `UNCHECKED_NEG` | 式中函数 | 取反回环溢出 | [UNCHECKED](../Reference/UNCHECKED.zh.md) |
+| ![](../assets/images/IconSK.webp) `HTML_PRINTC` | 命令 | 右对齐输出HTML字符串 | [HTML_PRINTC](../Reference/HTML_PRINTC.zh.md) |
+| ![](../assets/images/IconSK.webp) `HTML_PRINTLC` | 命令 | 左对齐输出HTML字符串（带行宽计算） | [HTML_PRINTC](../Reference/HTML_PRINTC.zh.md) |
+| ![](../assets/images/IconSK.webp) `SPRITECREATEFROMFILE` | 式中函数 | 从图像文件直接创建Sprite | [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.zh.md) |
+| ![](../assets/images/IconSK.webp) `SET_TEXT_DRAWING_MODE` | 命令 | 设置文本渲染管线 | [SKIA_RENDER](../Reference/SKIA_RENDER.zh.md) |
+| ![](../assets/images/IconSK.webp) `GET_TEXT_DRAWING_MODE` | 式中函数 | 获取文本渲染管线 | [SKIA_RENDER](../Reference/SKIA_RENDER.zh.md) |
+| ![](../assets/images/IconSK.webp) `SET_SKIA_QUALITY` | 命令 | 设置渲染品质 | [SKIA_RENDER](../Reference/SKIA_RENDER.zh.md) |
+| ![](../assets/images/IconSK.webp) `GET_SKIA_QUALITY` | 式中函数 | 获取渲染品质 | [SKIA_RENDER](../Reference/SKIA_RENDER.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_DRAW` | 命令 | 绘制多边形轮廓 | [G_POLYGON](../Reference/G_POLYGON.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_FILL` | 命令 | 填充多边形 | [G_POLYGON](../Reference/G_POLYGON.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_ADD` | 命令 | 添加多边形顶点 | [G_POLYGON](../Reference/G_POLYGON.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `G_POLYGON_POINT_CLEAR` | 命令 | 清除所有顶点 | [G_POLYGON](../Reference/G_POLYGON.zh.md) |
+| ![](../assets/images/IconSK.webp) `TEXT_BGC_ON` | 命令 | 启用文本背景色显示 | [TEXT_BGC](../Reference/TEXT_BGC.zh.md) |
+| ![](../assets/images/IconSK.webp) `TEXT_BGC_OFF` | 命令 | 禁用文本背景色显示 | [TEXT_BGC](../Reference/TEXT_BGC.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_ESCAPE` | 式中函数 | 字符串SQL转义 | [SQL_PARAM](../Reference/SQL_PARAM.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_NONQUERY` | 命令 | 参数化查询执行（非查询） | [SQL_PARAM](../Reference/SQL_PARAM.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_READER` | 命令 | 参数化查询执行（读取器） | [SQL_PARAM](../Reference/SQL_PARAM.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_LONG` | 式中函数 | 参数化查询执行（标量long） | [SQL_PARAM](../Reference/SQL_PARAM.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_STRING` | 式中函数 | 参数化查询执行（标量string） | [SQL_PARAM](../Reference/SQL_PARAM.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_P_EXECUTE_SCALAR_FLOAT` | 式中函数 | 参数化查询执行（标量float） | [SQL_PARAM](../Reference/SQL_PARAM.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `SQL_CONNECTION_OPEN` | 命令 | 便利函数：在sav/sql/下创建DB连接 | [SQL_CONNECT](../Reference/SQL_CONNECT.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_MAP_XML` | 命令 | 从 XML 导入 MAP 到 SQL | [SQL_XML](../Reference/SQL_XML.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_DT_XML` | 命令 | 从 XML 导入 DataTable 到 SQL | [SQL_XML](../Reference/SQL_XML.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_EXPORT_MAP_XML` | 命令 | 从 SQL 导出 MAP 为 XML | [SQL_XML](../Reference/SQL_XML.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_EXPORT_DT_XML` | 命令 | 从 SQL 导出 DataTable 为 XML | [SQL_XML](../Reference/SQL_XML.zh.md) |
+| ![](../assets/images/IconSK.webp) `SQL_IMPORT_XML_CUSTOM` | 命令 | 自定义 XML 导入 | [SQL_XML](../Reference/SQL_XML.zh.md) |
+| ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 严格字体回退模式 | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中函数 | 从NAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中函数 | 从NICKNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYCALLNAME` | 式中函数 | 从CALLNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中函数 | 从MASTERNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `MATCHALL` | 式中函数 | 数组全量搜索（变量引用） | [MATCHALL](../Reference/MATCHALL.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中函数 | 数组全量搜索（字符串变量名） | [MATCHALL](../Reference/MATCHALL.zh.md) |
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | [事件函数](../tutorial/event-functions.zh.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | 事件函数 | 错误发生时首次调用 | [事件函数](../tutorial/event-functions.zh.md#before_error) |
 
@@ -245,7 +245,7 @@
 
     详细说明请参阅[变量声明教程](../tutorial/variable-declaration.zh.md#ref)。
 
-### ![](../assets/images/IconSK.webp)ExecutionContext 栈式函数上下文
+### ![](../assets/images/IconSK.webp)ExecutionContext 栈式函数上下文 { #executioncontext }
 !!! summary ""
 
     每次函数调用创建独立的 `ExecutionContext`，修复 LOCAL/ARG 系变量递归覆写污染。
@@ -279,7 +279,7 @@
     | `UNCHECKED_MUL(a, b)` | `a * b` | 乘法回环溢出 |
     | `UNCHECKED_NEG(a)` | `-a` | 取反回环溢出 |
 
-    详情参阅 [UNCHECKED](../Reference/UNCHECKED.md)。
+    详情参阅 [UNCHECKED](../Reference/UNCHECKED.zh.md)。
 
 ---
 

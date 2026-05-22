@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments            | Return   |
 | :----------------------------------------------------------------------- | :-------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int` | `string` |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.en.md) | `string`, `int` | `string` |
 
 !!! info "API"
     
@@ -42,4 +42,4 @@ hide:
     This is because bold characters are wider than normal
 
 ### See Also
-- [SUBSTRING](SUBSTRING.md)
+- [SUBSTRING](SUBSTRING.en.md)

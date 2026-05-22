@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                    | 参数      | 返回值 |
 | :-------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`(S)IF`](./IF.md) | `operand` | `void` |
+| ![](../assets/images/Iconeramaker.webp)[`(S)IF`](./IF.zh.md) | `operand` | `void` |
 
 !!! info "API"
 
@@ -66,4 +66,4 @@ hide:
     ```
 
 ### 相关项目
-- [SELECTCASE](SELECTCASE.md)
+- [SELECTCASE](SELECTCASE.zh.md)

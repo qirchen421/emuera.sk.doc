@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数         | 返回值 |
 | :----------------------------------------------------------- | :----------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.zh.md) | `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -23,4 +23,4 @@ hide:
     同时支持指令形式和表达式函数形式。
 
 ### 相关项目
-- [GSETCOLOR](GSETCOLOR.md)
+- [GSETCOLOR](GSETCOLOR.zh.md)

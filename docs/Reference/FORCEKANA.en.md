@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments | Return |
 | :------------------------------------------------------------------ | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FORCEKANA`](./FORCEKANA.md) | `int`| none   |
+| ![](../assets/images/IconEmuera.webp)[`FORCEKANA`](./FORCEKANA.en.md) | `int`| none   |
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
 	FORCEKANA int
     ```
 	Specifies hiragana/katakana for display commands.
-	Effective with various [`PRINT`](./PRINT.md) commands that include the `K` keyword.
+	Effective with various [`PRINT`](./PRINT.en.md) commands that include the `K` keyword.
 	The argument has the following effects:
 
 	- 0: No conversion

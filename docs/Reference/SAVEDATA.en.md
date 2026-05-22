@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments         | Return |
 | :------------------------------------------------------------------ | :---------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVEDATA`](./SAVEDATA.md) | `int`, `string`  | none   |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVEDATA`](./SAVEDATA.en.md) | `int`, `string`  | none   |
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
 	SAVEDATA saveID, saveInfo
     ```
     Saves the current state to the file with the number specified by `saveID`.  
-    Since the `SAVEDATA` command does not call `@SAVEINFO`, you cannot add a comment using [`PUTFORM`](./PUTFORM.md).  
+    Since the `SAVEDATA` command does not call `@SAVEINFO`, you cannot add a comment using [`PUTFORM`](./PUTFORM.en.md).  
     Instead, specify a comment using the second argument `saveInfo`.  
     (From 1.704, string expressions can be used in addition to string variables) Below is an example.  
 
@@ -33,23 +33,23 @@ hide:
 		[16] ----
 
     No overwrite confirmation is performed; please implement it in ERB if needed.  
-    You can check if data already exists using the [`CHKDATA`](./CHKDATA.md) command.  
-    Unlike the [`SAVEGAME`](./SAVEGAME.md) command, `SAVEDATA` can be called from anywhere in the script.  
+    You can check if data already exists using the [`CHKDATA`](./CHKDATA.en.md) command.  
+    Unlike the [`SAVEGAME`](./SAVEGAME.en.md) command, `SAVEDATA` can be called from anywhere in the script.  
 
 !!! info "EM+EE Extension: Save Data Format Enhancement"
 
     EM+EE extends the `SAVEDATA` save data format, appending EM-specific data after the standard save data:
 
-    - **Map data**: [`MAP`](./MAP.md) dictionaries marked with the `SAVEDATA` keyword
+    - **Map data**: [`MAP`](./MAP_MANAGE.en.md) dictionaries marked with the `SAVEDATA` keyword
     - **Xml data**: XML documents marked with the `SAVEDATA` keyword
     - **DataTable data**: DataTable tables marked with the `SAVEDATA` keyword
 
-    This data is cleared first and then restored from the save file during [`LOADDATA`](./LOADDATA.md), ensuring data consistency when switching between saves.
+    This data is cleared first and then restored from the save file during [`LOADDATA`](./LOADDATA.en.md), ensuring data consistency when switching between saves.
 
 !!! hint "Hint"
 
     Command only.
 
 ### See Also
-- [LOADDATA](LOADDATA.md)
-- [CHKDATA](CHKDATA.md)
+- [LOADDATA](LOADDATA.en.md)
+- [CHKDATA](CHKDATA.en.md)

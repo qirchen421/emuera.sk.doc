@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                                    | 参数                                        | 返回值 |
 | :------------------------------------------------------------------------ | :------------------------------------------ | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.md)        | `any`, `string`                             | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.zh.md)        | `any`, `string`                             | `int`  |
 |                                                                           | `int`, `string`, `string`(, `int`)          | `int`  |
 |                                                                           | `ref` `string`, `string`, `string`(, `int`) | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](./XML_REPLACE.md) | `string`, `string`, `string`(, `int`)       | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](./XML_REPLACE.zh.md) | `string`, `string`, `string`(, `int`)       | `int`  |
 
 !!! info "API"
 

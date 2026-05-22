@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数         | 返回值 |
 | :----------------------------------------------------------------- | :----------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.md) | `int`, `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.zh.md) | `int`, `int` | 无     |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数   | 返回值     |
 | :--------------------------------------------------------- | :----- | :--------- |
-| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.md) | 无     | `void`     |
+| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.zh.md) | 无     | `void`     |
 
 !!! info "API"
 
@@ -21,6 +21,6 @@ hide:
     仅支持指令形式。
 
 ### 相关项目
-- [WAITANYKEY](WAITANYKEY.md)
-- [TWAIT](TWAIT.md)
-- [AWAIT](AWAIT.md)
+- [WAITANYKEY](WAITANYKEY.zh.md)
+- [TWAIT](TWAIT.zh.md)
+- [AWAIT](AWAIT.zh.md)

@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                               | Arguments | Return |
 | :---------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEWIDTH`](./SPRITEWIDTHHEIGHT.md)  | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEHEIGHT`](./SPRITEWIDTHHEIGHT.md) | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEWIDTH`](./SPRITEWIDTHHEIGHT.en.md)  | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEHEIGHT`](./SPRITEWIDTHHEIGHT.en.md) | `string`  | `int`  |
 
 !!! info "API"
 

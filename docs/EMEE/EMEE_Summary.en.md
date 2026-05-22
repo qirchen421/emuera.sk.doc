@@ -132,7 +132,7 @@
 ### ![](../assets/images/IconEM.webp)`XML`, `MAP`, `DataTable` Can Be Saved in Save Data {#xmlmapdatatable}
 !!! summary ""
 
-    IDs for [`XML`](../Reference/XML_MANAGE.md), [`MAP`](../Reference/MAP_MANAGE.md), and [`DataTable`](../Reference/DT_MANAGE.md) that you want to save can be configured in `VarExt*.csv` files in the CSV folder.
+    IDs for [`XML`](../Reference/XML_MANAGE.en.md), [`MAP`](../Reference/MAP_MANAGE.en.md), and [`DataTable`](../Reference/DT_MANAGE.en.md) that you want to save can be configured in `VarExt*.csv` files in the CSV folder.
 
     * Only valid when [`Save save data in binary format`](../Emuera/config.en.md#save-save-data-in-binary-format) is set to `YES`.
     * Even if IDs are set, data not in memory will not be saved to save data.
@@ -386,4 +386,4 @@
 
     Forces immediate update of button state on the screen.  
     Normally, buttonization is performed automatically every frame, but this command allows immediate button state updates.  
-    See [`BREAKBUTTON`](../Reference/BREAKBUTTON.md) for details.
+    See [`BREAKBUTTON`](../Reference/BREAKBUTTON.en.md) for details.

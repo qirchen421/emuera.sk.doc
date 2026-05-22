@@ -29,12 +29,12 @@ Conversely, in debug mode, lines between `[IF_NDEBUG]` and `[ENDIF]` are treated
 	[ENDIF]
 
 Also, there are commands that only function in debug mode.  
-The `DEBUGPRINT`, `DEBUGPRINTFORM`, `DEBUGPRINTL`, and `DEBUGPRINTFORML` commands function similarly to [`PRINT`](../Reference/PRINT.md) statements, but output to the debug window.  
+The `DEBUGPRINT`, `DEBUGPRINTFORM`, `DEBUGPRINTL`, and `DEBUGPRINTFORML` commands function similarly to [`PRINT`](../Reference/PRINT.en.md) statements, but output to the debug window.  
 The `ASSERT` command throws an error when its argument is 0. When the argument is non-zero, it does nothing.  
 The `DEBUGCLEAR` command clears all text in the debug window. It takes no arguments.  
 These commands do nothing in non-debug mode.  
 Arguments are not parsed either, so even if there are problems with the format in `DEBUGPRINTFORM`, nothing happens in non-debug mode.  
-These are treated as no-op commands, not as comment lines, so they are safe to use immediately after an [`SIF`](../Reference/IF.md) statement.
+These are treated as no-op commands, not as comment lines, so they are safe to use immediately after an [`SIF`](../Reference/IF.en.md) statement.
 
 Also, the variables `__FILE__`, `__LINE__`, and `__FUNCTION__` return meaningful values only in debug mode.  
 In non-debug mode, they return 0 or an empty string.

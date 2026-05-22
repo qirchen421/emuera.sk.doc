@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数                               | 返回值       |
 | :------------------------------------------------------------------- | :--------------------------------- | :----------- |
-| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md) | `string`, `string`, `int`(, `int`) | `int`, `int` |
+| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.zh.md) | `string`, `string`, `int`(, `int`) | `int`, `int` |
 
 !!! info "API"
 
@@ -44,4 +44,4 @@ hide:
     Width:300 Height:150
     ```
 ### 関連項目
-- [GDRAWTEXT](GDRAWTEXT.md)
+- [GDRAWTEXT](GDRAWTEXT.zh.md)

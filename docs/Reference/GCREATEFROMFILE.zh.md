@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                         | 参数                       | 返回值 |
 | :----------------------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md) | `int`, `string`(, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.zh.md) | `int`, `string`(, `int`)   | `int`  |
 
 !!! info "API"
 
@@ -30,4 +30,4 @@ hide:
     此功能同时支持作为命令和表达式函数使用。
 
 ### 相关项目
-- [GCREATE](GCREATE.md)
+- [GCREATE](GCREATE.zh.md)

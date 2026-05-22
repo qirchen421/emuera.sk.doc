@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                     | 参数                                         | 返回值 |
 | :------------------------------------------------------------------------- | :------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FINDELEMENT`](./FINDELEMENT.md)     | `variable`, `value`(, `int`, `int`, `int`)   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`FINDLASTELEMENT`](./FINDELEMENT.md) | `variable`, `value`(, `int`, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDELEMENT`](./FINDELEMENT.zh.md)     | `variable`, `value`(, `int`, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDLASTELEMENT`](./FINDELEMENT.zh.md) | `variable`, `value`(, `int`, `int`, `int`)   | `int`  |
 
 !!! info "API"
 
@@ -22,7 +22,7 @@ hide:
     如果省略 `endIndex`，则搜索范围将覆盖到数组的最后一个元素。  
     如果存在多个匹配项，`FINDELEMENT` 返回第一个匹配项的位置，  
     `FINDLASTELEMENT` 返回最后一个匹配项的位置。如果没有匹配项，则返回 `-1`。  
-    如果搜索目标是字符串类型，则可以像 [`REPLACE`](./REPLACE.md) 一样使用正则表达式。  
+    如果搜索目标是字符串类型，则可以像 [`REPLACE`](./REPLACE.zh.md) 一样使用正则表达式。  
     `completeMatch` 仅在搜索目标是字符串类型时有效，如果为 `0`，则允许部分字符串匹配；  
     如果为非 `0` 值，则要求字符串完全匹配。
 

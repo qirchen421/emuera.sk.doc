@@ -8,7 +8,7 @@ hide:
 如有需要，请在帮助的设置中勾选`使用调试命令`。
 
 **※此功能是调试模式尚未出现版本的简易功能。**
-**建议现版本调试使用[调试模式](debug.md)启动。**
+**建议现版本调试使用[调试模式](debug.zh.md)启动。**
 
 在脚本执行中（游戏中），输入以`@`开头的字符串时会作为调试命令接收。
 是否区分大小写取决于`emuera.config`中的`忽略大小写差异`设置。
@@ -28,7 +28,7 @@ hide:
 	@ FLAG:200
 	@ @"%NAME:MASTER%的CFAG(1) = {CFLAG:MASTER:1}"
 
-但是无法使用改变脚本流程的指令如`[IF](../Reference/IF.md)`、`[CALL](../Reference/CALL.md)`，以及要求输入的指令如`[INPUT](../Reference/INPUT.md)`、`[WAIT](../Reference/WAIT.md)`。
+但是无法使用改变脚本流程的指令如`[IF](../Reference/IF.zh.md)`、`[CALL](../Reference/CALL.zh.md)`，以及要求输入的指令如`[INPUT](../Reference/INPUT.zh.md)`、`[WAIT](../Reference/WAIT.zh.md)`。
 
 还有一些ERB中没有的指令。
 
@@ -43,7 +43,7 @@ hide:
 
 	@EXIT
 
-退出Emuera。与`[QUIT](../Reference/QUIT.md)`指令相同操作。
+退出Emuera。与`[QUIT](../Reference/QUIT.zh.md)`指令相同操作。
 
 	@CONFIG
 

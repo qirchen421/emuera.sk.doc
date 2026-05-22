@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数                     | 返回值 |
 | :--------------------------------------------------------------------- | :----------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYREMOVE`](./ARRAYREMOVE.md) | `variable`, `int`, `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYREMOVE`](./ARRAYREMOVE.zh.md) | `variable`, `int`, `int` | 无     |
 
 !!! info "API"
 

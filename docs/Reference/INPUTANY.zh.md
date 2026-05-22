@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数 | 返回值           |
 | :----------------------------------------------------------- | :--- | :--------------- |
-| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md) | 无   | `int` / `string` |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.zh.md) | 无   | `int` / `string` |
 
 !!! info "API"
 

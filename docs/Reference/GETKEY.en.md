@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                | Arguments      | Return |
 | :-------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETKEY`](./GETKEY.md)          | `keyCode` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETKEYTRIGGERED`](./GETKEY.md) | `keyCode` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETKEY`](./GETKEY.en.md)          | `keyCode` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETKEYTRIGGERED`](./GETKEY.en.md) | `keyCode` | `int`  |
 
 !!! info "API"
 
@@ -31,4 +31,4 @@ hide:
     Both commands and expression functions are supported.
 
 ### See Also
-- [AWAIT](AWAIT.md)
+- [AWAIT](AWAIT.en.md)

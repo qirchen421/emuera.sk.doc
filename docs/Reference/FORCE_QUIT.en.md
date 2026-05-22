@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                           | Arguments | Return |
 | :--------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.md) | `void` | `void` |
+| ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.en.md) | `void` | `void` |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
 	Can only be used as a command.
 
 ### See Also
-- [QUIT](QUIT.md)
+- [QUIT](QUIT.en.md)

@@ -7,9 +7,9 @@ hide:
 
 | Function name | Arguments | Return |
 | :----------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.md) | `formedString`(, `any`...) | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.md) | `formedString`(, `any`...) | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`TRYGOTOFORM`](./TRYFORM.md) | `formedString`             | none   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLFORM`](./TRYFORM.en.md) | `formedString`(, `any`...) | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPFORM`](./TRYFORM.en.md) | `formedString`(, `any`...) | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTOFORM`](./TRYFORM.en.md) | `formedString`             | none   |
 
 !!! info "API"
 
@@ -18,9 +18,9 @@ hide:
 	TRYJUMPFORM formedString(, argument...)
 	TRYGOTOFORM formedString
     ```
-	Same as [`JUMP`](./JUMP.md), [`CALL`](./CALL.md), and [`GOTO`](./GOTO.md), but allows specifying function names in the same format as [`PRINTFORM`](./PRINT.md), and does not throw an error even if the function does not exist.  
+	Same as [`JUMP`](./JUMP.en.md), [`CALL`](./CALL.en.md), and [`GOTO`](./GOTO.en.md), but allows specifying function names in the same format as [`PRINTFORM`](./PRINT.en.md), and does not throw an error even if the function does not exist.  
 	`TRYJUMPFORM` and `TRYCALLFORM` can accept arguments. See the [function argument specification](../Emuera/function.en.md#argument-specification-in-user-defined-functions) section for details.  
-	Note: For entering loop/branch syntax directly via `TRYGOTOFORM`, see [`TRYGOTO`](./TRY.md), [Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax), and the [TRYC system](./TRYC.md).
+	Note: For entering loop/branch syntax directly via `TRYGOTOFORM`, see [`TRYGOTO`](./TRY.en.md), [Loop/Branch Syntax](../Reference/README.en.md#flow-control), and the [TRYC system](./TRYC.en.md).
 
 !!! hint "Hint"
 
@@ -54,7 +54,7 @@ hide:
     ```
 
 ### Related
-- [TRY system](TRY.md)
-- [CALL](CALL.md)
-- [JUMP](JUMP.md)
-- [GOTO](GOTO.md)
+- [TRY system](TRY.en.md)
+- [CALL](CALL.en.md)
+- [JUMP](JUMP.en.md)
+- [GOTO](GOTO.en.md)

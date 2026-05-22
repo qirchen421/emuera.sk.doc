@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值 |
 | :------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.zh.md) | `string` | `int`  |
 
 !!! info "API"
     

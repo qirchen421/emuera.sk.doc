@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                           | Arguments | Return |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.md) | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.en.md) | none | `int`  |
 
 !!! info "API"
 

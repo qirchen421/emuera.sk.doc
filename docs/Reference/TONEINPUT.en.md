@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                        | Arguments                                     | Return    |
 | :------------------------------------------------------------------- | :-------------------------------------------- | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`TONEINPUT`](./TONEINPUT.md)   | `int`, `int`(, `int`, `string`, `int`)      | `int`     |
-| ![](../assets/images/IconEmuera.webp)[`TONEINPUTS`](./TONEINPUT.md)  | `int`, `string`(, `int`, `string`, `int`)    | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`TONEINPUT`](./TONEINPUT.en.md)   | `int`, `int`(, `int`, `string`, `int`)      | `int`     |
+| ![](../assets/images/IconEmuera.webp)[`TONEINPUTS`](./TONEINPUT.en.md)  | `int`, `string`(, `int`, `string`, `int`)    | `string`  |
 
 !!! info "API"
 
@@ -16,11 +16,11 @@ hide:
 	TONEINPUT timeLimit, defaultValue(, displayTimeRemain, timeOverMessage, allowClick)
 	TONEINPUTS timeLimit, defaultValue(, displayTimeRemain, timeOverMessage, allowClick)
     ```
-    The arguments are the same as [`TINPUT` and `TINPUTS`](./TINPUT.md) respectively.  
-    These are input acceptance commands that combine the properties of [`ONEINPUT`](./ONEINPUT.md) with TINPUT, and [`ONEINPUTS`](./ONEINPUT.md) with TINPUTS.  
+    The arguments are the same as [`TINPUT` and `TINPUTS`](./TINPUT.en.md) respectively.  
+    These are input acceptance commands that combine the properties of [`ONEINPUT`](./ONEINPUT.en.md) with TINPUT, and [`ONEINPUTS`](./ONEINPUT.en.md) with TINPUTS.  
     Note that when these commands are used, even if keyboard macros are configured in Emuera's CONFIG settings, they may not work properly - this is by design.  
 
-    Also, in `TONEINPUTS`, macro expressions can be used as with [`INPUTS`](./INPUT.md).  
+    Also, in `TONEINPUTS`, macro expressions can be used as with [`INPUTS`](./INPUT.en.md).  
     To use '()' as a string, escape it using '.'
 
     In EM+EE, an optional fifth argument can be set.  
@@ -32,5 +32,5 @@ hide:
     Command only.
 
 ### See Also
-- [TINPUT](TINPUT.md)
-- [ONEINPUT](ONEINPUT.md)
+- [TINPUT](TINPUT.en.md)
+- [ONEINPUT](ONEINPUT.en.md)

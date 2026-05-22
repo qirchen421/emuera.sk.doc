@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                          | Arguments | Return |
 | :--------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.en.md) | `int`     | `int`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数     | 返回值   |
 | :----------------------------------------------------------- | :------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`ESCAPE`](./ESCAPE.md) | `string` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ESCAPE`](./ESCAPE.zh.md) | `string` | `string` |
 
 !!! info "API"
 

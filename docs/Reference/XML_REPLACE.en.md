@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                                    | Arguments                                      | Return |
 | :------------------------------------------------------------------------------ | :-------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.md)        | `any`, `string`                               | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE`](./XML_REPLACE.en.md)        | `any`, `string`                               | `int`  |
 |                                                                                 | `int`, `string`, `string`(, `int`)           | `int`  |
 |                                                                                 | `ref` `string`, `string`, `string`(, `int`)  | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](./XML_REPLACE.md) | `string`, `string`, `string`(, `int`)        | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REPLACE_BYNAME`](./XML_REPLACE.en.md) | `string`, `string`, `string`(, `int`)        | `int`  |
 
 !!! info "API"
 

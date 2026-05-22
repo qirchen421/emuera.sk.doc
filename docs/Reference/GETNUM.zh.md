@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数                 | 返回值 |
 | :----------------------------------------------------------- | :------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.md) | `variable`, `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.zh.md) | `variable`, `string` | `int`  |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     此功能同时支持指令和表达式函数两种形式。
 
 ### 相关项目
-- [CSV 状态相关](CSV_STATUS.md)
+- [CSV 状态相关](CSV_STATUS.zh.md)
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETNUM 属于第二代"名称反查"反射

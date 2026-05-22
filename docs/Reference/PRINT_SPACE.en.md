@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                 | Arguments | Return   |
 | :----------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md) | `int`     | none     |
+| ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.en.md) | `int`     | none     |
 
 !!! info "API"
 

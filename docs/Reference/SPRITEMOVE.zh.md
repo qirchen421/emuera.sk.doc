@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数                   | 返回值 |
 | :------------------------------------------------------------------- | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEMOVE`](./SPRITEMOVE.md) | `string`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEMOVE`](./SPRITEMOVE.zh.md) | `string`, `int`, `int` | `int`  |
 
 !!! info "API"
 

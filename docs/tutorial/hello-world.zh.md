@@ -2,8 +2,8 @@
 
 !!! info "本节对应手册"
 
-    - [ERB 书式](../eramaker/ERB_format.md) — eramaker 的 ERB 格式（历史参考）
-    - [系统流程](../Emuera/system_flow.md) — 引擎启动与函数调用流程
+    - [ERB 书式](../eramaker/ERB_format.zh.md) — eramaker 的 ERB 格式（历史参考）
+    - [系统流程](../Emuera/system_flow.zh.md) — 引擎启动与函数调用流程
 
 ---
 

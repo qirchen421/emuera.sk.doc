@@ -1,7 +1,7 @@
 # User-Defined Expression Functions
 
 You can also call functions defined with `@~~` in expressions as "Expression Functions".  
-For built-in functions among "Expression Functions", see [Expression Functions](../Reference/README.md).
+For built-in functions among "Expression Functions", see [Expression Functions](../Reference/README.en.md).
 
 ## Format
 
@@ -9,7 +9,7 @@ Functions to be called must have the `#FUNCTION` or `#FUNCTIONS` flag and end wi
 
 Adding `#FUNCTION` makes it recognized as a function that returns a number.  
 Adding `#FUNCTIONS` makes it recognized as a function that returns a string.  
-Functions with `#FUNCTION(S)` cannot end with a normal [`RETURN`](../Reference/RETURN.md). Instead, they end with `RETURNF`.  
+Functions with `#FUNCTION(S)` cannot end with a normal [`RETURN`](../Reference/RETURN.en.md). Instead, they end with `RETURNF`.  
 `RETURNF` takes a numeric expression or string expression. This must match the type indicated by `#FUNCTION(S)`.  
 If the `RETURNF` argument is omitted or the end of the function is reached without `RETURNF`, it returns `0` or an empty string.
 
@@ -42,7 +42,7 @@ For the syntax regarding default values, see [Argument Specification in User-Def
 ## Restrictions
 
 ### Cannot be Called from CALL
-Functions with the `FUNCTION(S)` flag cannot be called normally with [`CALL`](../Reference/CALL.md) etc.  
+Functions with the `FUNCTION(S)` flag cannot be called normally with [`CALL`](../Reference/CALL.en.md) etc.  
 They can only be called within expressions.
 
 		;Error
@@ -56,7 +56,7 @@ They can only be called within expressions.
 They can be called using the dedicated commands `CALLF` and `CALLFORMF` for calling `#FUNCTION(S)`.
 
 ### Some Commands Cannot be Used
-Inside functions with the `FUNCTION(S)` flag, commands that involve input such as [`WAIT`](../Reference/WAIT.md), and commands that involve function calls such as `CALL`, cannot be used.  
+Inside functions with the `FUNCTION(S)` flag, commands that involve input such as [`WAIT`](../Reference/WAIT.en.md), and commands that involve function calls such as `CALL`, cannot be used.  
 Using them will cause an error.
 
 The `CALL` command cannot be used, but functions with the `FUNCTION(S)` flag can be called within expressions.  
@@ -83,7 +83,7 @@ Also, they may behave unexpectedly due to unexpected calls from debug commands o
 
 Even if there is a function in an expression, it may not be called due to short-circuit evaluation.
 
-For example, the following script calls `GET_ASSI_CFLAG` inside the [`IF`](../Reference/IF.md) statement, and changes `ASSI` inside `GET_ASSI_CFLAG`.
+For example, the following script calls `GET_ASSI_CFLAG` inside the [`IF`](../Reference/IF.en.md) statement, and changes `ASSI` inside `GET_ASSI_CFLAG`.
 
 		IF X || GET_ASSI_CFLAG(0)
 			Y = CFLAG:ASSI:2
@@ -114,7 +114,7 @@ In the script below, `TARGET` is being changed inside `@ADDCHARA_CFLAG`.
 
 Depending on whether `CFLAG:TARGET:10` is evaluated before or after `@ADDCHARA_CFLAG`, the variable referred to by `CFLAG:TARGET:10` changes.  
 Therefore, this script depends on evaluation order.  
-You should not use [`ADDCHARA`](../Reference/ADDCHARA.md) or assign to `TARGET` inside functions with the `#FUNCTION(S)` flag.
+You should not use [`ADDCHARA`](../Reference/ADDCHARA.en.md) or assign to `TARGET` inside functions with the `#FUNCTION(S)` flag.
 
 ### May be Called by Debug Features
 

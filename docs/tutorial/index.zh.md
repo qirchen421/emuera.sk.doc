@@ -13,7 +13,7 @@
 | 了解什么是 era 游戏 | [era 游戏是什么](#era-game) |
 | 第一次编写 ERB 脚本 | [第一个 ERB 程序](#first-erb-program) |
 | 从基础系统学习 | [ERABASIC 简介](intro.zh.md) |
-| 查找某个指令的用法 | [指令参考手册](../Reference/README.md) |
+| 查找某个指令的用法 | [指令参考手册](../Reference/README.zh.md) |
 | 了解 EM+EE 有什么新功能 | [EM+EE 功能概览](../EMEE/EMEE_Summary.zh.md) |
 | 了解 Skia 版有什么新功能 | [Skia 版功能概览](../Skia/Skia_Summary.zh.md) |
 
@@ -104,18 +104,18 @@
 | 主题 | 内容 |
 |:---|:---|
 | [HTML 标签语法](html-syntax.zh.md) | HTML_PRINT 标签、属性、变体差异 |
+| [资源设置](resources.zh.md) | CSV 定义格式、图像格式、Skia 版资源管理机制 |
 
 ### 第7章：高级主题 🟢 选读
 
-> 动态解析、运行时机制、反模式——深入理解 ERABASIC
+> 动态解析、运行时机制——深入理解 ERABASIC
 
-**前置知识**：第4章「函数」｜**本章要点**：三阶段流水线、REF 变量生命周期、常见错误规避
+**前置知识**：第4章「函数」｜**本章要点**：三阶段流水线、REF 变量生命周期
 
 | 主题 | 内容 |
 |:---|:---|
 | [动态解析与反射](dynamic-reflection.zh.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名 |
 | [运行时机制](runtime-mechanics.zh.md) | ConvertArg→SetTransporter→IntoFunction、REF变量生命周期 |
-| [反模式与常见错误](anti-patterns.zh.md) | 作用域误解、FORM误用、REF/OUT混淆、HTML输出错误 |
 
 ---
 
@@ -171,7 +171,7 @@ era 游戏是一类基于文本的角色扮演/模拟游戏，使用 **ERABASIC*
 
     - **从基础系统学习**：[ERABASIC 简介](intro.zh.md)
     - **制作手册**：[初级教程](../manual/modification-manual.zh.md) → [中级教程](../manual/eratohowiki-ERBmanual.zh.md)
-    - **完整指令参考**：[Reference](../Reference/README.md)
+    - **完整指令参考**：[Reference](../Reference/README.zh.md)
     - **Emuera 规格**：[规格概要](../Emuera/README.zh.md)
     - **EM+EE 新功能概览**：[EMEE_Summary](../EMEE/EMEE_Summary.zh.md)
     - **Skia 版功能概览**：[Skia 版功能概览](../Skia/Skia_Summary.zh.md)

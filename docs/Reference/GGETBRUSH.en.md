@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments | Return |
 | :------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md) | `int`     | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.en.md) | `int`     | `int`  |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
 	```
 
 ### Related Items
-- [GSETBRUSH](GSETBRUSH.md)
+- [GSETBRUSH](GSETBRUSH.en.md)

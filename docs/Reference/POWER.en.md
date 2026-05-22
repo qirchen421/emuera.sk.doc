@@ -7,7 +7,7 @@ hide:
 
 | Function name                                               | Arguments                        | Return |
 | :---------------------------------------------------------- | :------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.md) | `integerVariable`, `int`, `int`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.en.md) | `integerVariable`, `int`, `int`  | `int`  |
 |                                                             | `int`, `int`                    | `int`  |
 
 !!! info "API"
@@ -45,4 +45,4 @@ hide:
     ```
 
 ### Related
-- [CBRT, LOG, LOG10, EXPONENT](MATH_EXTENSION.md)
+- [CBRT, LOG, LOG10, EXPONENT](MATH_EXTENSION.en.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments                                 | Return |
 | :------------------------------------------------------------------------------- | :---------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYSHIFT`](./ARRAYSHIFT.md) | `variable`, `int`, `value`(, `int`, `int`) | none   |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYSHIFT`](./ARRAYSHIFT.en.md) | `variable`, `int`, `value`(, `int`, `int`) | none   |
 
 !!! info "API"
 

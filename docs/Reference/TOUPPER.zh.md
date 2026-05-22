@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值   |
 | :------------------------------------------------------------- | :------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`TOUPPER`](./TOUPPER.md) | `string` | `string` |
-| ![](../assets/images/IconEmuera.webp)[`TOLOWER`](./TOUPPER.md) | `string` | `string` |
-| ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.md)  | `string` | `string` |
-| ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.md)  | `string` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOUPPER`](./TOUPPER.zh.md) | `string` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOLOWER`](./TOUPPER.zh.md) | `string` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.zh.md)  | `string` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.zh.md)  | `string` | `string` |
 
 !!! info "API"
 

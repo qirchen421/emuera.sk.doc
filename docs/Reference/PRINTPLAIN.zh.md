@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                  | 参数     | 返回值 |
 | :-------------------------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTPLAIN(\|FORM)</code>](./PRINTPLAIN.md) | `string` | 无     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTPLAIN(\|FORM)</code>](./PRINTPLAIN.zh.md) | `string` | 无     |
 
 !!! info "API"
 
@@ -25,4 +25,4 @@ hide:
     仅支持指令形式。
 
 ### 相关项目
-- [PRINT](PRINT.md)
+- [PRINT](PRINT.zh.md)

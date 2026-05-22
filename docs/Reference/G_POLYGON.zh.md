@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                                         | 参数               | 返回值 |
 | :----------------------------------------------------------------------------- | :----------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_DRAW`](./G_POLYGON.md)        | `int`              | `int`  |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_FILL`](./G_POLYGON.md)        | `int`              | `int`  |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.md)   | `int`, `int`, `int` | `int`  |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.md) | `int`              | `int`  |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_DRAW`](./G_POLYGON.zh.md)        | `int`              | `int`  |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_FILL`](./G_POLYGON.zh.md)        | `int`              | `int`  |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.zh.md)   | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.zh.md) | `int`              | `int`  |
 
 !!! info "API"
 
@@ -59,7 +59,7 @@ hide:
 	```
 
 ### 相关项目
-- [GCREATE](GCREATE.md)
-- [GSETPEN](GSETPEN.md)
-- [GSETBRUSH](GSETBRUSH.md)
-- [GFILLRECTANGLE](GFILLRECTANGLE.md)
+- [GCREATE](GCREATE.zh.md)
+- [GSETPEN](GSETPEN.zh.md)
+- [GSETBRUSH](GSETBRUSH.zh.md)
+- [GFILLRECTANGLE](GFILLRECTANGLE.zh.md)

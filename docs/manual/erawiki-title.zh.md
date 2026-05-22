@@ -5,10 +5,10 @@
 
 ---  
 
-- [教程](erawiki-tutorial.md)  
+- [教程](erawiki-tutorial.zh.md)  
 - 标题准备篇  
-- [标题实践篇](erawiki-title2.md)  
-- [ERB制作实践篇](erawiki-ERBmanual.md)  
+- [标题实践篇](erawiki-title2.zh.md)  
+- [ERB制作实践篇](erawiki-ERBmanual.zh.md)  
 
 ---  
 
@@ -398,5 +398,5 @@ Emuera的情况下，超过位数限制时会按0处理。
 
 ---  
 
-下一页→[标题实践篇](erawiki-title2.md)  
+下一页→[标题实践篇](erawiki-title2.zh.md)  
 ```  

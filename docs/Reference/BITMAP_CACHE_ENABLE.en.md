@@ -9,7 +9,7 @@ Author: JukesBouver99
 
 | Function name                                                | Arguments  | Return |
 | :----------------------------------------------------------- | :---------| :------|
-| ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md) | `int` | void   |
+| ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.en.md) | `int` | void   |
 
 !!! info "API"
 

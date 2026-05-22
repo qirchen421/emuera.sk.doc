@@ -245,7 +245,7 @@
 
     See [Variable Declaration Tutorial](../tutorial/variable-declaration.en.md#ref) for details.
 
-### ![](../assets/images/IconSK.webp)ExecutionContext Stack-based Function Context
+### ![](../assets/images/IconSK.webp)ExecutionContext Stack-based Function Context { #executioncontext }
 !!! summary ""
 
     Creates an independent `ExecutionContext` for each function call, fixing LOCAL/ARG variable recursive overwrite pollution.

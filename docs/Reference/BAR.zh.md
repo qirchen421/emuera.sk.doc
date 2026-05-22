@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                    | 参数                  | 返回值 |
 | :-------------------------------------------------------- | :-------------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.md)  | `int`, `int`, `int`   | 无     |
-| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.md) | `int`, `int`, `int`   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.zh.md)  | `int`, `int`, `int`   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.zh.md) | `int`, `int`, `int`   | 无     |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
     ```
 
 ### 相关项目
-* [BARSTR](BARSTR.md)
+* [BARSTR](BARSTR.zh.md)

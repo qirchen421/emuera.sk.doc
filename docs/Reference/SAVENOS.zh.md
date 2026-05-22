@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数 | 返回值 |
 | :------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SAVENOS`](./SAVENOS.md) | `int`| `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SAVENOS`](./SAVENOS.zh.md) | `int`| `int`  |
 
 !!! info "API"
 

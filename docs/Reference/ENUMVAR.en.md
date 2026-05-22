@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                   | Arguments  | Return |
 | :----------------------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.md) | `string`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.md)   | `string`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.md)       | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.en.md) | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.en.md)   | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.en.md)       | `string`   | `int`  |
 
 !!! info "API"
     
@@ -28,7 +28,7 @@ hide:
 
     !!! warning "Warning"
 
-        Unlike [`EXISTVAR`](./EXISTVAR.md), this does not enumerate local variables or constants.
+        Unlike [`EXISTVAR`](./EXISTVAR.en.md), this does not enumerate local variables or constants.
 
 !!! hint "Hint"
 
@@ -74,4 +74,4 @@ hide:
     ```
 
 ### Related Items
-- [EXISTVAR](EXISTVAR.md)
+- [EXISTVAR](EXISTVAR.en.md)

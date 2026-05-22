@@ -317,7 +317,7 @@ L_FLOAT = 10              ; ✅ Integer automatically converts to float
 
 | What You Want to Learn | Go To |
 |:---|:---|
-| Variable declaration and types | [File Types](file-types.md) |
-| Command vs. expression boundary | [Command vs Expression](command-vs-expression.md) |
+| Variable declaration and types | [File Types](file-types.en.md) |
+| Command vs. expression boundary | [Command vs Expression](command-vs-expression.en.md) |
 | ERB file format extensions | [ERB File Format Extensions](erb-format-extension.en.md) |
-| Formatted string details | [PRINT Command](../Reference/PRINT.md) |
+| Formatted string details | [PRINT Command](../Reference/PRINT.en.md) |

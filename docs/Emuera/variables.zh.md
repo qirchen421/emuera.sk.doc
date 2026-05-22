@@ -114,7 +114,7 @@ ENDIF
 #### LOCAL  
 #### LOCALS  
 **※此变量已**过时**，不推荐使用。请使用`#DIM`、`#DIMS`替代。**  
-**详情请参考[用户定义的变量](user_defined_variables.md)。**  
+**详情请参考[用户定义的变量](user_defined_variables.zh.md)。**  
 **对于新游戏开发，建议在`VariableSize.csv`中将`LOCAL`和`LOCALS`的元素数均设为`-1`以禁用，强制迁移到`#DIM`/`#DIMS`。**
 
 局部变量（函数级变量）。  
@@ -133,7 +133,7 @@ ENDIF
 		LOCAL:10 = 567  
 		RETURN  
 
-上述代码的[`PRINTV`](../Reference/PRINT.md)结果为`123`。  
+上述代码的[`PRINTV`](../Reference/PRINT.zh.md)结果为`123`。  
 在`@FUNC001`中修改了`LOCAL:10`，但不会影响`@EVENTFIRST`中的`LOCAL`。  
 与多数语言的局部变量不同，函数调用时不会进行初始化。  
 
@@ -158,7 +158,7 @@ ENDIF
 
 #### （用户定义的私有变量）  
 在特定函数中定义`#DIM`或`#DIMS`定义的变量是私有变量，可按局部变量处理。  
-详情请参考[用户定义的变量](user_defined_variables.md)。  
+详情请参考[用户定义的变量](user_defined_variables.zh.md)。  
 
 ### 存档间共享的变量  
 #### `GLOBAL`  
@@ -177,7 +177,7 @@ ENDIF
 #### （用户定义的全局变量）  
 在ERH中定义`#DIM GLOBAL`或`#DIMS GLOBAL`定义的变量成为全局变量。  
 另外，使用`#DIM SAVEDATA GLOBAL`可以成为可保存的全局变量。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 ### 角色变量  
 #### `NICKNAME`  
@@ -197,7 +197,7 @@ ENDIF
 数值型数组变量。  
 分别设想作为`UP`、`DOWN`、`LOSEBASE`、`TFLAG`的角色变量版本使用。  
 因此初始化时机和是否可保存也与这些变量相同。  
-但是，`CUP`和`CDOWN`需要使用`CUPCHECK`指令代替[`UPCHECK`](../Reference/UPCHECK.md)指令。  
+但是，`CUP`和`CDOWN`需要使用`CUPCHECK`指令代替[`UPCHECK`](../Reference/UPCHECK.zh.md)指令。  
 
 #### `CDFLAG`  
 数值型角色三维数组变量。  
@@ -209,7 +209,7 @@ ENDIF
 
 #### （用户定义的角色变量）  
 在ERH中定义`#DIM CHARADATA`或`#DIMS CHARADATA`定义的变量成为角色变量，可像`CFLAG`等一样自由处理。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 ### csv相关  
 #### csv变量  
@@ -271,11 +271,11 @@ Emuera窗口标题栏显示的字符串。
 ##### `MONEYLABEL`  
 记录货币单位的变量。  
 非数组字符串型变量，不可赋值、不保存变量。  
-初始值为在[`_Replace.csv`](replace.md)中设置的`货币单位`值。  
+初始值为在[`_Replace.csv`](replace.zh.md)中设置的`货币单位`值。  
 如果没有设置`货币单位`，则与eramaker相同为`$`。  
 
 ##### `DRAWLINESTR`  
-记录执行[`DRAWLINE`](../Reference/DRAWLINE.md)指令时显示的字符串的变量。  
+记录执行[`DRAWLINE`](../Reference/DRAWLINE.zh.md)指令时显示的字符串的变量。  
 非数组字符串型变量，不可赋值、不保存变量。  
 初始值为重复在`_Replace.csv`中设置的`DRAWLINE字符`的值。  
 因此并不直接包含`DRAWLINE字符`设置的字符串。  
@@ -296,7 +296,7 @@ Emuera窗口标题栏显示的字符串。
 最后加载的数据的编号（`save*.sav`的`*`对应的编号）  
 
 ##### `LASTLOAD_TEXT`  
-文本（在[`PUTFORM`](../Reference/PUTFORM.md)中添加的文本。`SAVEDATA_TEXT`）  
+文本（在[`PUTFORM`](../Reference/PUTFORM.zh.md)中添加的文本。`SAVEDATA_TEXT`）  
 
 #### `SAVEDATA_TEXT`  
 保存在存档数据中，在保存/加载画面显示的文本。  
@@ -309,13 +309,13 @@ Emuera窗口标题栏显示的字符串。
 #### （用户定义的可保存全局变量）  
 在ERH中定义`#DIM SAVEDATA`或`#DIMS SAVEDATA"`定义的变量成为可保存的全局变量。  
 但是，使用`#DIMS SAVEDATA`定义可保存的多维全局变量时，选项[`以二进制格式保存存档数据`](config.md#_43)必须启用。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 ### 多维数组变量  
 #### `DITEMTYPE`  
 #### `DA ～ DE`  
 **※此变量已废弃。请考虑使用#DIM、#DIMS并根据用途命名。**  
-**详情请参考[用户定义的变量](user_defined_variables.md)。**  
+**详情请参考[用户定义的变量](user_defined_variables.zh.md)。**  
 
 固定长度的整数型二维数组。  
 像`DITEMTYPE:1:2`这样调用。参数不能省略。  
@@ -326,7 +326,7 @@ eramaker的二维数组第一参数指定角色注册编号，因此数组大小
 
 #### `TA, TB`  
 **※此变量已废弃。请考虑使用#DIM、#DIMS并根据用途命名。**  
-**详情请参考[用户定义的变量](user_defined_variables.md)。**  
+**详情请参考[用户定义的变量](user_defined_variables.zh.md)。**  
 
 固定长度的整数型三维数组。  
 像`TA:1:2:3`这样调用。参数不能省略。  
@@ -336,7 +336,7 @@ eramaker的二维数组第一参数指定角色注册编号，因此数组大小
 
 #### （用户定义的多维数组变量）  
 从ver1.808开始，可以通过定义#DIM或#DIMS定义的变量成为多维数组。  
-详情请参考[用户定义的变量](user_defined_variables.md)。  
+详情请参考[用户定义的变量](user_defined_variables.zh.md)。  
 
 ### 调试变量  
 调试变量是提供调试信息的变量。  
@@ -398,15 +398,15 @@ eramaker的二维数组第一参数指定角色注册编号，因此数组大小
 
 #### （用户定义的全局变量）  
 在ERH中定义`#DIM`或`#DIMS`定义的变量成为全局变量，可像一字符变量（`A`等）一样自由处理。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 #### （用户定义的常量）  
 在ERH中及特定函数中，定义`#DIM`或`#DIMS`定义的变量成为一维数组常量，作为不可赋值的变量处理。  
-详情请参考[用户定义的变量](ERH.md)。  
+详情请参考[用户定义的变量](ERH.zh.md)。  
 
 #### （用户定义的引用型变量）  
 在特定函数中定义`#DIM REF`或`#DIMS REF`定义的变量成为引用型变量。  
-详情请参考[用户定义的变量](ERH.md)。  
+详情请参考[用户定义的变量](ERH.zh.md)。  
 
 ### 与maker的规格差异  
 #### `NAME`  

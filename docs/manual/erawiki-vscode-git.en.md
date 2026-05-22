@@ -4,7 +4,7 @@ This page summarizes posts from a Discord server
 
 - [Discord - eraEVENT_KXX](https://discord.gg/cuSh6y5j93)
 
-This explains how to use git with VSCode, which was described in [ERB Production Practice](erawiki-ERBmanual.md).
+This explains how to use git with VSCode, which was described in [ERB Production Practice](erawiki-ERBmanual.en.md).
 Some git terminology appears below, which can be interpreted as follows:
 - Repository → Project
 - Pull → Download

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                           | Arguments    | Return |
 | :------------------------------------------------------------------------------------------------------ | :----------- | :----- |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEE.webp)[`OUTPUTLOG`](./OUTPUTLOG.md) | (`string`)   | none   |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEE.webp)[`OUTPUTLOG`](./OUTPUTLOG.en.md) | (`string`)   | none   |
 
 !!! info "API"
 
@@ -25,4 +25,4 @@ hide:
     Command only.
 
 ### See Also
-- [SAVETEXT](SAVETEXT.md)
+- [SAVETEXT](SAVETEXT.en.md)

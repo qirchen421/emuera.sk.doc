@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数 | 返回值 |
 | :------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`LOADGLOBAL`](./LOADGLOBAL.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LOADGLOBAL`](./LOADGLOBAL.zh.md) | 无   | `int`  |
 
 !!! info "API"
 
@@ -25,5 +25,5 @@ hide:
     仅支持作为指令使用。
 
 ### 相关项目
-- [SAVEGLOBAL](SAVEGLOBAL.md)
+- [SAVEGLOBAL](SAVEGLOBAL.zh.md)
 - [常量·变量>存档间共享的变量](../Emuera/variables.md#_8)

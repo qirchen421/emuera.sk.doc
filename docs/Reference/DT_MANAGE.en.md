@@ -7,11 +7,11 @@ hide:
 
 | Function name                                                    | Arguments        | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)  | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)   | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md) | `string`        | `1`    |
-| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)   | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)  | `string`, `int` | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.en.md)  | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.en.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.en.md) | `string`        | `1`    |
+| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.en.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.en.md)  | `string`, `int` | `int`  |
 
 !!! info "API"
 
@@ -29,7 +29,7 @@ hide:
     - `DT_EXIST`: Checks if a `DataTable` with `dataTableName` exists. Returns `1` if it exists, `0` otherwise.
     - `DT_RELEASE`: Deletes the `DataTable` with `dataTableName`.
     - `DT_CLEAR`: Removes all rows from the `DataTable` with `dataTableName` (column settings remain unchanged), returns `1`. Returns `-1` if the DataTable does not exist.
-    - `DT_NOCASE`: Sets whether the `DataTable` with `dataTableName` ignores case during string comparison in [`DT_SELECT`](./DT_SELECT.md) function. Returns `1`. Returns `-1` if the DataTable does not exist.
+    - `DT_NOCASE`: Sets whether the `DataTable` with `dataTableName` ignores case during string comparison in [`DT_SELECT`](./DT_SELECT.en.md) function. Returns `1`. Returns `-1` if the DataTable does not exist.
         - If `ignoreCase` is `0` (default): Case-sensitive
         - If `ignoreCase` is other value: Case-insensitive
 

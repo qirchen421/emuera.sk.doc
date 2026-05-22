@@ -7,7 +7,7 @@ hide:
 
 | Function name                                             | Arguments | Return |
 | :-------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`PLAYBGM`](./PLAYBGM.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`PLAYBGM`](./PLAYBGM.en.md) | `string` | `void` |
 
 !!! info "API"
 
@@ -24,6 +24,6 @@ hide:
     Uses WMPLib, supports formats playable by WMP
 
 ### Related
-- [PLAYSOUND](PLAYSOUND.md)
-- [STOPBGM](STOPBGM.md)
-- [SETBGMVOLUME](SETBGMVOLUME.md)
+- [PLAYSOUND](PLAYSOUND.en.md)
+- [STOPBGM](STOPBGM.en.md)
+- [SETBGMVOLUME](SETBGMVOLUME.en.md)

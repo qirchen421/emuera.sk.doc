@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数     | 返回值 |
 | :------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md) | `string` | `void`¹ |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.zh.md) | `string` | `void`¹ |
 
 !!! info "API"
 
@@ -53,5 +53,5 @@ hide:
     ```
 
 ### 相关项目
-- [CALLF](CALLF.md)
-- [TRYCALLF](TRYCALLF.md)
+- [CALLF](CALLF.zh.md)
+- [TRYCALLF](TRYCALLF.zh.md)

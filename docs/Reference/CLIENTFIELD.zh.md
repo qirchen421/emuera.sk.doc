@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                  | 参数 | 返回值 |
 | :---------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.md)  | 无   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.zh.md)  | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.zh.md) | 无   | `int`  |
 
 !!! info "API"
 

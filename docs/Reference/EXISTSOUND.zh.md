@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数     | 返回值 |
 | :--------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.md) | `string` | `int`  |
+| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.zh.md) | `string` | `int`  |
 
 !!! info "API"
 
@@ -22,5 +22,5 @@ hide:
     命令 / 行内函数两种写法均有效。
 
 ### 相关项目
-- [PLAYSOUND](PLAYSOUND.md)
-- [PLAYBGM](PLAYBGM.md)
+- [PLAYSOUND](PLAYSOUND.zh.md)
+- [PLAYBGM](PLAYBGM.zh.md)

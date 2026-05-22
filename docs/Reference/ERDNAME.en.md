@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments                  | Return   |
 | :----------------------------------------------------------- | :------------------------ | :-------- |
-| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md) | `variable`, `int`(, `int`) | `string` |
+| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.en.md) | `variable`, `int`(, `int`) | `string` |
 
 !!! info "API"
 

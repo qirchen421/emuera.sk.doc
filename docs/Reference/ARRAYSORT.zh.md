@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数                                     | 返回值 |
 | :----------------------------------------------------------------- | :--------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYSORT`](./ARRAYSORT.md) | `variable`(, `sortFormat`, `int`, `int`) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYSORT`](./ARRAYSORT.zh.md) | `variable`(, `sortFormat`, `int`, `int`) | 无     |
 
 !!! info "API"
 
@@ -71,5 +71,5 @@ hide:
     ```
 
 ### 相关项目
-* [ARRAYMSORT](ARRAYMSORT.md)
-* [ARRAYMSORTEX](ARRAYMSORTEX.md)
+* [ARRAYMSORT](ARRAYMSORT.zh.md)
+* [ARRAYMSORTEX](ARRAYMSORTEX.zh.md)

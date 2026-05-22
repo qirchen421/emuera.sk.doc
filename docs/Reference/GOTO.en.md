@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md) | `labelName`   | none   |
+| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.en.md) | `labelName`   | none   |
 
 !!! info "API"
 
@@ -59,4 +59,4 @@ hide:
     ```
 
 ### Related
-- [GOTOFORM](FORM.md)
+- [GOTOFORM](FORM.en.md)

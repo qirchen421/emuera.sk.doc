@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments | Return |
 | :------------------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.md) | `int`     | none   |
+| ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.en.md) | `int`     | none   |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     Command only.
 
 ### Related
-* [ADDCHARA](ADDCHARA.md)
+* [ADDCHARA](ADDCHARA.en.md)

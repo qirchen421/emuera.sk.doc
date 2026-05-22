@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                              | Arguments | Return |
 | :-------------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.md)  | none      | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.md) | none      | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.en.md)  | none      | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.en.md) | none      | `int`  |
 
 !!! info "API"
 

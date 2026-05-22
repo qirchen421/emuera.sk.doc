@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                         | Arguments | Return |
 | :-------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SAVEGLOBAL`](./SAVEGLOBAL.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`SAVEGLOBAL`](./SAVEGLOBAL.en.md) | none      | none   |
 
 !!! info "API"
 
@@ -23,4 +23,4 @@ hide:
     Command only.
 
 ### See Also
-- [LOADGLOBAL](LOADGLOBAL.md)
+- [LOADGLOBAL](LOADGLOBAL.en.md)

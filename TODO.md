@@ -57,6 +57,10 @@
 
 ## ✅ 已完成
 
+### 2026-05-22
+
+- [x] **三语言交叉引用链接一致性检查** — 全目录批量修复：tutorial + Emuera/Reference/EMEE/Skia/manual/eramaker/i18n，共修复约2500+链接（.zh.md 中 `.md)` → `.zh.md)`，.en.md 中 `.md)` → `.en.md)`），含 `../`、`./`、同目录三种路径格式
+
 ### 2026-05-12
 
 - [x] **SQL_READER_GET_STRING FORM 语法修复** — 9 个文件（三语言版）将 `{SQL_READER_GET_STRING(...)}` 修正为 `%SQL_READER_GET_STRING(...)%`

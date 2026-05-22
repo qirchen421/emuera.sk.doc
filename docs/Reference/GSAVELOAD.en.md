@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                        | Arguments      | Return |
 | :------------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GSAVE`](./GSAVELOAD.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GLOAD`](./GSAVELOAD.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSAVE`](./GSAVELOAD.en.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GLOAD`](./GSAVELOAD.en.md) | `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -20,7 +20,7 @@ hide:
 	Returns non-zero on success.  
 
 	`GLOAD` opens an image with the number specified by `fileNo` as the filename and creates a `Graphics`.  
-	In terms of operation, it is almost the same as the [`GCREATEFROMFILE`](./GCREATEFROMFILE.md) command, but it creates from images saved by the `GSAVE` command rather than from images in the `resources` folder.  
+	In terms of operation, it is almost the same as the [`GCREATEFROMFILE`](./GCREATEFROMFILE.en.md) command, but it creates from images saved by the `GSAVE` command rather than from images in the `resources` folder.  
 	Returns non-zero on success.  
 	If a `Graphics` with the specified `gID` already exists, `Graphics` creation fails and this command returns 0 without doing anything.
 
@@ -29,5 +29,5 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [GCREATE](GCREATE.md)
-- [GCREATEFROMFILE](GCREATEFROMFILE.md)
+- [GCREATE](GCREATE.en.md)
+- [GCREATEFROMFILE](GCREATEFROMFILE.en.md)

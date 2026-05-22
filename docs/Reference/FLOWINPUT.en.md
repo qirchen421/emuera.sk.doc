@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                               | Arguments                       | Return |
 | :-------------------------------------------------------------------------- | :------------------------------ | :----- |
-| ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)             | `int`(, `int`, `int`, `int`) | `void` |
-| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.md)            | `int`(, `string`)              | `void` |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.en.md)             | `int`(, `int`, `int`, `int`) | `void` |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.en.md)            | `int`(, `string`)              | `void` |
 
 !!! info "API"
 
@@ -48,4 +48,4 @@ hide:
 	Supports both command and expression function.
 
 ### See Also
-- [BEGIN](BEGIN.md)
+- [BEGIN](BEGIN.en.md)

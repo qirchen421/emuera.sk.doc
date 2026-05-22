@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                          | 参数                        | 返回值 |
 | :-------------------------------------------------------------- | :-------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`STRFIND`](./STRFIND.md)  | `string`, `string`(, `int`) | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRFINDU`](./STRFIND.md) | `string`, `string`(, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRFIND`](./STRFIND.zh.md)  | `string`, `string`(, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRFINDU`](./STRFIND.zh.md) | `string`, `string`(, `int`) | `int`  |
 
 !!! info "API"
 
@@ -57,5 +57,5 @@ hide:
     ```
 
 ### 相关项目
-- [STRCOUNT](STRCOUNT.md)
-- [SUBSTRING](SUBSTRING.md)
+- [STRCOUNT](STRCOUNT.zh.md)
+- [SUBSTRING](SUBSTRING.zh.md)

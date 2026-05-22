@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数           | 返回值 |
 | :----------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.md) | `functionName` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLEVENT`](./CALLEVENT.zh.md) | `functionName` | `void`¹ |
 
 
 !!! info "API"

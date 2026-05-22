@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数         | 返回值 |
 | :--------------------------------------------------------- | :----------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TWAIT`](./TWAIT.md) | `int`, `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`TWAIT`](./TWAIT.zh.md) | `int`, `int` | 无     |
 
 !!! info "API"
 
@@ -26,5 +26,5 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [WAIT](WAIT.md)
-- [TINPUT](TINPUT.md)
+- [WAIT](WAIT.zh.md)
+- [TINPUT](TINPUT.zh.md)

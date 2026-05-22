@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数                | 返回值 |
 | :----------------------------------------------------------------- | :------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GGETCOLOR`](./GGETCOLOR.md) | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GGETCOLOR`](./GGETCOLOR.zh.md) | `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -25,4 +25,4 @@ hide:
     同时支持作为命令和表达式函数使用。
 
 ### 相关项目
-- [GSETCOLOR](GSETCOLOR.md)
+- [GSETCOLOR](GSETCOLOR.zh.md)

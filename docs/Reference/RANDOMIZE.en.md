@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :----------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`RANDOMIZE`](./RANDOMIZE.md) | `int` | none   |
-| ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.md)  | none  | none   |
-| ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.md)  | none  | none   |
+| ![](../assets/images/IconEmuera.webp)[`RANDOMIZE`](./RANDOMIZE.en.md) | `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.en.md)  | none  | none   |
+| ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.en.md)  | none  | none   |
 
 !!! info "API"
 
@@ -22,7 +22,7 @@ hide:
 
 	The `RANDOMIZE` command initializes the random number generator with the specified value.  
 	If initialized with the same value, `RAND` will always return the same result.  
-	[`PRINTDATA`](./PRINTDATA.md) and [`STRDATA`](./STRDATA.md) will also return the same results.
+	[`PRINTDATA`](./PRINTDATA.en.md) and [`STRDATA`](./STRDATA.en.md) will also return the same results.
 
 	`DUMPRAND` saves the current random number state to the `RANDDATA` variable.  
 	`INITRAND` loads the data saved in the `RANDDATA` variable.  

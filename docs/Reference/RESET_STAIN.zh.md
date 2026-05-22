@@ -7,7 +7,7 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :--- | :--- | :--- |
-| ![](../assets/images/IconEmuera.webp)[`RESET_STAIN`](./RESET_STAIN.md) | `int`| 无 |
+| ![](../assets/images/IconEmuera.webp)[`RESET_STAIN`](./RESET_STAIN.zh.md) | `int`| 无 |
 
 !!! info "API"
 

@@ -5,10 +5,10 @@
 
 ---  
 
-- [教程](erawiki-tutorial.md)  
-- [标题准备篇](erawiki-title.md)  
+- [教程](erawiki-tutorial.zh.md)  
+- [标题准备篇](erawiki-title.zh.md)  
 - 标题实践篇  
-- [ERB制作实践篇](erawiki-ERBmanual.md)  
+- [ERB制作实践篇](erawiki-ERBmanual.zh.md)  
 
 ---  
 
@@ -317,7 +317,7 @@ DIM有规定必须写在『@某某』的下一行。
 
 还有很多其他模式。  
 
-- [EmueraWiki→eramaker basic 开发者信息→Emuera新增扩展语法→用户定义变量](../Emuera/user_defined_variables.md)  
+- [EmueraWiki→eramaker basic 开发者信息→Emuera新增扩展语法→用户定义变量](../Emuera/user_defined_variables.zh.md)  
 
 为了使内容易于理解，便于搜索，给变量起个好名字以提高可读性。  
 为了防止多人使用相同变量进行不同用途，无意中覆盖，  
@@ -575,7 +575,7 @@ GAMEBASE_VERSION % 1000 / 10
 
 `TOSTR()`是Emuera预先准备的，可在表达式中使用的函数。  
 
-- [EmueraWiki→eramaker basic 开发者信息→Emuera新增扩展语法→表达式中可用函数→str TOSTR(int value, str format = "")](../Reference/TOSTR.md)  
+- [EmueraWiki→eramaker basic 开发者信息→Emuera新增扩展语法→表达式中可用函数→str TOSTR(int value, str format = "")](../Reference/TOSTR.zh.md)  
 
 表达式中可用的函数有很多便利功能，但数量太多难以记住。  
 
@@ -584,7 +584,7 @@ GAMEBASE_VERSION % 1000 / 10
 如果有`()`，那就是函数，但如果突然出现在没有`@`或`CALL`的地方，就是表达式中可用的函数。  
 在列出表达式中可用函数的页面搜索一下。  
 （虽然这个判断是否正确另当别论，但基本上可以这样搜索）  
-[命令·表达式函数一览](../Reference/README.md)  
+[命令·表达式函数一览](../Reference/README.zh.md)  
 
 同时按下CTRL键和F键，  
 浏览器的页面内搜索窗口会显示。  
@@ -722,7 +722,7 @@ DRAWLINE
 意思是画分割线。  
 常用于场景变更、标题制作等。  
 
-- [参考→`DRAWLINE`](../Reference/DRAWLINE.md)  
+- [参考→`DRAWLINE`](../Reference/DRAWLINE.zh.md)  
 
 写着这样。  
 
@@ -739,7 +739,7 @@ DRAWLINE
 
 要用什么方法改变`DRAWLINE`使用时显示的线？  
 
-- [EmueraWiki→eramaker basic 开发者信息→_replace.csv](../Emuera/replace.md)  
+- [EmueraWiki→eramaker basic 开发者信息→_replace.csv](../Emuera/replace.zh.md)  
 
 etc1821文件夹内有_Replace.csv文件。  
 
@@ -798,7 +798,7 @@ DRAWLINEFORM <FORM字符串>
 
 这种指令方法。  
 
-- [参考→`CUSTOMDRAWLINE`、`DRAWLINEFORM`](../Reference/CUSTOMDRAWLINE.md)  
+- [参考→`CUSTOMDRAWLINE`、`DRAWLINEFORM`](../Reference/CUSTOMDRAWLINE.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 CUSTOMDRAWLINE ─  
@@ -810,7 +810,7 @@ CUSTOMDRAWLINE ─
 
 ### `ALIGNMENT CENTER`是什么？  
 
-- [参考→`ALIGNMENT`](../Reference/ALIGNMENT.md)  
+- [参考→`ALIGNMENT`](../Reference/ALIGNMENT.zh.md)  
 
 `ALIGNMENT` 是对齐的意思。  
 
@@ -830,7 +830,7 @@ ALIGNMENT LEFT ;左对齐
 
 显示字符串的指令之一。  
 
-- [参考→`PRINT`](../Reference/PRINT.md)  
+- [参考→`PRINT`](../Reference/PRINT.zh.md)  
 
 突然看到`PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`  
 这种神秘描述，可能会有人头疼。  
@@ -928,16 +928,16 @@ Gamebase.csv中整理的信息，
 
 字体显示、颜色变化、特殊显示等  
 
-- [参考→`PRINT系列`](../Reference/PRINT.md)  
-- [参考→显示操作·字体操作·显示规格参考](../Reference/README.md#_3)  
-- [参考→`HTML_PRINT`](../Reference/HTML_PRINT.md)  
+- [参考→`PRINT系列`](../Reference/PRINT.zh.md)  
+- [参考→显示操作·字体操作·显示规格参考](../Reference/README.zh.md#display-font)  
+- [参考→`HTML_PRINT`](../Reference/HTML_PRINT.zh.md)  
 
 图片显示  
 
-- [参考→`PRINT_IMG`](../Reference/PRINT_IMG.md)  
-- [资源文件相关](../Emuera/resources.md)  
-- [参考→`HTML_PRINT`](../Reference/HTML_PRINT.md)  
-- [参考→图像处理相关](../Reference/README.md#_14)  
+- [参考→`PRINT_IMG`](../Reference/PRINT_IMG.zh.md)  
+- [资源文件相关](../Emuera/resources.zh.md)  
+- [参考→`HTML_PRINT`](../Reference/HTML_PRINT.zh.md)  
+- [参考→图像处理相关](../Reference/README.zh.md#image)  
 
 另外，`WINDOW_TITLE`可赋值。  
 
@@ -999,7 +999,7 @@ $TITLE_SELECT
 
 所以，学习循环处理的写法。  
 
-- [参考→循环·分支语法](../Reference/README.md#_10)  
+- [参考→循环·分支语法](../Reference/README.zh.md#flow-control)  
 - [系统改造Q&A→基础知识→循环处理写法(FOR和REPEAT的区别和推荐格式)](erawiki-modification-QandA.md#forrepeat)  
 
 不明白的话，先照着用到理解为止。  
@@ -1056,7 +1056,7 @@ PRINTSL "[1] " + GETCONFIGS("系统菜单1");
 关于`[0]`或`[1]`，在EmueraWiki的`PRINTBUTTON`指令中可以看到  
 按钮显示整体说明，可能更容易理解。  
 
-- [参考→`PRINTBUTTON`](../Reference/PRINTBUTTON.md)  
+- [参考→`PRINTBUTTON`](../Reference/PRINTBUTTON.zh.md)  
 
 ---  
 
@@ -1261,7 +1261,7 @@ RESETDATA
 
 就是，重置数据的指令。  
 
-- [参考→`RESETDATA`](../Reference/RESETDATA.md)  
+- [参考→`RESETDATA`](../Reference/RESETDATA.zh.md)  
 
 不执行这个指令的话，已经玩游戏后  
 从『返回标题』回来时，  
@@ -1278,7 +1278,7 @@ RESETDATA
 
 写着。  
 
-- [参考→`ADDDEFCHARA`](../Reference/ADDDEFCHARA.md)  
+- [参考→`ADDDEFCHARA`](../Reference/ADDDEFCHARA.zh.md)  
 
 是为保持与eramaker兼容性的指令。一次性注册CSV存在的角色。  
 
@@ -1403,7 +1403,7 @@ ENDIF
 用指定的格式化字符串替换最后一行的指令  
 显示无效值。  
 
-- [参考-`REUSELASTLINE`](../Reference/REUSELASTLINE.md)  
+- [参考-`REUSELASTLINE`](../Reference/REUSELASTLINE.zh.md)  
 
 如果想忽略手动输入，可以直接返回。  
 
@@ -1447,7 +1447,7 @@ era是调教模拟器，原本没有RPG、地图或战略。
 
 ---  
 
-下一页→[ERB制作实践篇](erawiki-ERBmanual.md)  
+下一页→[ERB制作实践篇](erawiki-ERBmanual.zh.md)  
 
 <!--  
 ----  

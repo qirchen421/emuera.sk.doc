@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                                   | 参数     | 返回值 |
 | :----------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.zh.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.zh.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.zh.md)       | `string` | `int`  |
 
 !!! info "API"
     
@@ -70,7 +70,7 @@ hide:
     ```
 
 ### 相关项目
-- [ENUMFUNC系](ENUMFUNC.md) — 函数名枚举
-- [ENUMVAR系](ENUMVAR.md) — 变量名枚举
-- [ISDEFINED](ISDEFINED.md) — 宏定义检查
+- [ENUMFUNC系](ENUMFUNC.zh.md) — 函数名枚举
+- [ENUMVAR系](ENUMVAR.zh.md) — 变量名枚举
+- [ISDEFINED](ISDEFINED.zh.md) — 宏定义检查
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ENUMMACRO* 属于第三代"宏名枚举"

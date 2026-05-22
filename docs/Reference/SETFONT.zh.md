@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值   |
 | :------------------------------------------------------------- | :------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CHKFONT`](./SETFONT.md) | `string` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`SETFONT`](./SETFONT.md) | `string` | 无       |
-| ![](../assets/images/IconEmuera.webp)[`GETFONT`](./SETFONT.md) | 无       | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CHKFONT`](./SETFONT.zh.md) | `string` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`SETFONT`](./SETFONT.zh.md) | `string` | 无       |
+| ![](../assets/images/IconEmuera.webp)[`GETFONT`](./SETFONT.zh.md) | 无       | `string` |
 
 !!! info "API"
 

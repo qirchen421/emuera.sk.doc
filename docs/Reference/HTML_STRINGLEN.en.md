@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments              | Return |
 | :----------------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.en.md) | `string`(, `int`) | `int`  |
 
 !!! info "API"
     
@@ -43,4 +43,4 @@ hide:
     This is because bold characters are wider than normal
 
 ### See Also
-- [STRLEN](STRLEN.md)
+- [STRLEN](STRLEN.en.md)

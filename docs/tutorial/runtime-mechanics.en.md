@@ -1,4 +1,4 @@
-# Chapter 7: Runtime Mechanics
+# Runtime Mechanics
 
 !!! info "Prerequisites"
 

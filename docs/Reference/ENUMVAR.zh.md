@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                               | 参数     | 返回值 |
 | :------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.md) | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.md)   | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.md)       | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARBEGINSWITH`](./ENUMVAR.zh.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARENDSWITH`](./ENUMVAR.zh.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMVARWITH`](./ENUMVAR.zh.md)       | `string` | `int`  |
 
 !!! info "API"
     
@@ -27,7 +27,7 @@ hide:
 
     !!! warning "注意"
 
-        与 [`EXISTVAR`](./EXISTVAR.md) 不同，不会列举局部变量 / 常量。
+        与 [`EXISTVAR`](./EXISTVAR.zh.md) 不同，不会列举局部变量 / 常量。
 
 !!! hint "提示"
 
@@ -73,7 +73,7 @@ hide:
     ```
 
 ### 相关项目
-- [ENUMFUNC系](ENUMFUNC.md) — 函数名枚举
-- [ENUMMACRO系](ENUMMACRO.md) — 宏名枚举
-- [EXISTVAR](EXISTVAR.md) — 变量存在检查
+- [ENUMFUNC系](ENUMFUNC.zh.md) — 函数名枚举
+- [ENUMMACRO系](ENUMMACRO.zh.md) — 宏名枚举
+- [EXISTVAR](EXISTVAR.zh.md) — 变量存在检查
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ENUMVAR* 属于第三代"变量名枚举"

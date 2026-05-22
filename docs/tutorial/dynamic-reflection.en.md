@@ -1,4 +1,4 @@
-# Chapter 6: Dynamic Parsing and Reflection
+# Dynamic Parsing and Reflection
 
 !!! info "Prerequisites"
 

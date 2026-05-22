@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数 | 返回值 |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ISACTIVE`](./ISACTIVE.zh.md) | 无   | `int`  |
 
 !!! info "API"
 

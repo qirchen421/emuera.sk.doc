@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                             | Arguments | Return |
 | :----------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`UPCHECK`](./UPCHECK.md) | none      | none   |
+| ![](../assets/images/Iconeramaker.webp)[`UPCHECK`](./UPCHECK.en.md) | none      | none   |
 
 !!! info "API"
 
@@ -47,4 +47,4 @@ hide:
     ```
 
 ### Related Items
-- [CUPCHECK](CUPCHECK.md)
+- [CUPCHECK](CUPCHECK.en.md)

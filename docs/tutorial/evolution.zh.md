@@ -105,5 +105,5 @@ Emuera (基准线 — 现代 ERABASIC 的实际起点)
 |:---|:---|
 | EM+EE | [EM+EE 功能概要](../EMEE/EMEE_Summary.zh.md) |
 | Skia 版 | [Skia 版功能概要](../Skia/Skia_Summary.zh.md) |
-| Emuera | [Emuera 概要](../Emuera/README.md) |
-| eramaker | [eramaker 概要](../eramaker/README.md) |
+| Emuera | [Emuera 概要](../Emuera/README.zh.md) |
+| eramaker | [eramaker 概要](../eramaker/README.zh.md) |

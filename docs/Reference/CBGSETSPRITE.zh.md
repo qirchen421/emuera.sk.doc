@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数                                                     | 返回值 |
 | :----------------------------------------------------------------------- | :------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGSETSPRITE`](./CBGSETSPRITE.md) | `string`, `int`, `int`, `int`(, `int`, `int`, `int`, `var`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETSPRITE`](./CBGSETSPRITE.zh.md) | `string`, `int`, `int`, `int`(, `int`, `int`, `int`, `var`) | `int`  |
 
 !!! info "API"
 
@@ -65,5 +65,5 @@ hide:
     ```
 
 ### 相关项目
-- [CBGSETG](CBGSETG.md)
-- [CBGCLEAR](CBGCLEAR.md)
+- [CBGSETG](CBGSETG.zh.md)
+- [CBGCLEAR](CBGCLEAR.zh.md)

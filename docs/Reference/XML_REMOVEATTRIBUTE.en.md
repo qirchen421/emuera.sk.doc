@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                                    | Arguments                             | Return |
 | :---------------------------------------------------------------------------------------------- | :----------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE`](./XML_REMOVEATTRIBUTE.md)        | `int`, `string`(, `int`)             | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE`](./XML_REMOVEATTRIBUTE.en.md)        | `int`, `string`(, `int`)             | `int`  |
 |                                                                                                  | `ref` `string`, `string`(, `int`)   | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.md) | `string`, `string`(, `int`)         | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVEATTRIBUTE_BYNAME`](./XML_REMOVEATTRIBUTE.en.md) | `string`, `string`(, `int`)         | `int`  |
 
 !!! info "API"
 

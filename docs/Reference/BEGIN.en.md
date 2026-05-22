@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments      | Return |
 | :------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.md) | `idenetifier` | none   |
+| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.en.md) | `idenetifier` | none   |
 
 !!! info "API"
 
@@ -26,13 +26,13 @@ hide:
 	In Emuera, the keywords `FIRST` and `TITLE` have been added.  
 	`BEGIN FIRST` has the same effect as selecting "[0] Start from the beginning" on the title screen, executing the event function `@EVENTFIRST`.  
 	`BEGIN TITLE` returns to the title screen.  
-	Neither initializes variables, so please execute [`RESETDATA`](./RESETDATA.md) as needed.
+	Neither initializes variables, so please execute [`RESETDATA`](./RESETDATA.en.md) as needed.
 
 !!! hint "Hint"
 
     Commands only.
 
 ### See Also
-* [FORCE_BEGIN](FORCE_BEGIN.md)
-* [FLOWINPUT](FLOWINPUT.md)
-* [CALLEVENT](CALLEVENT.md)
+* [FORCE_BEGIN](FORCE_BEGIN.en.md)
+* [FLOWINPUT](FLOWINPUT.en.md)
+* [CALLEVENT](CALLEVENT.en.md)

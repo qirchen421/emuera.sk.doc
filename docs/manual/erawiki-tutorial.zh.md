@@ -8,9 +8,9 @@
 ---
 
 - 教程
-- [标题准备篇](erawiki-title.md)
-- [标题实践篇](erawiki-title2.md)
-- [ERB制作实践篇](erawiki-ERBmanual.md)
+- [标题准备篇](erawiki-title.zh.md)
+- [标题实践篇](erawiki-title2.zh.md)
+- [ERB制作实践篇](erawiki-ERBmanual.zh.md)
 
 ---
 
@@ -48,7 +48,7 @@ vanilla在现在的Emuera中使用了许多已废弃的变量
 ---
 
 ## 读改造入门
-- [改造入门](modification-manual.md)
+- [改造入门](modification-manual.zh.md)
 
 这是标准的调教SLG手册，写明了开始准备需要做的事。
 "【易用的文本编辑器】(modification-manual.md#_4)"、"【能GREP的搜索工具】(erawiki-modification-QandA.md#grep)"、"【首先记住这些】(modification-manual.md#_5)"，
@@ -139,7 +139,7 @@ EmueraEM+EE还需要最新的.NET。请按照启动时的引导下载&安装。
 ## Emuera下载
 
 - [Emuera - emulator of eramaker 下载](https://ja.osdn.net/projects/emuera/releases/)
-- [EmueraEM+EE(从主页下载)](../README.md)
+- [EmueraEM+EE(从主页下载)](../README.zh.md)
 
 这次下载上排的官方Emuera。
 
@@ -452,4 +452,4 @@ SIF STAIN:MASTER:COUNT & 8
 
 关闭文件，再次从Emuera1824.exe启动，警告不再显示。
 
-下一页→[标题准备篇](erawiki-title.md)
+下一页→[标题准备篇](erawiki-title.zh.md)

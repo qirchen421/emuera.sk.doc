@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments                     | Return |
 | :--------------------------------------------------------------- | :--------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SUMARRAY`](./SUMARRAY.md) | `integerArray`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SUMARRAY`](./SUMARRAY.en.md) | `integerArray`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 

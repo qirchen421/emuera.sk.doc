@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                          | Arguments               | Return |
 | :------------------------------------------------------------------- | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEGETCOLOR`](./SPRITEGETCOLOR.md) | `string`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEGETCOLOR`](./SPRITEGETCOLOR.en.md) | `string`, `int`, `int` | `int`  |
 
 !!! info "API"
 

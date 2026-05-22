@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                       | 参数           | 返回值 |
 | :--------------------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CUSTOMDRAWLINE`](./CUSTOMDRAWLINE.md) | `string`       | 无     |
-| ![](../assets/images/IconEmuera.webp)[`DRAWLINEFORM`](./CUSTOMDRAWLINE.md)   | `formedString` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CUSTOMDRAWLINE`](./CUSTOMDRAWLINE.zh.md) | `string`       | 无     |
+| ![](../assets/images/IconEmuera.webp)[`DRAWLINEFORM`](./CUSTOMDRAWLINE.zh.md)   | `formedString` | 无     |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
     ```
 
 ### 相关项目
-- [DRAWLINE](DRAWLINE.md)
+- [DRAWLINE](DRAWLINE.zh.md)

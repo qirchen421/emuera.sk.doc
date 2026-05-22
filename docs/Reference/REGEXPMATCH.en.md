@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                         | Arguments                                            | Return |
 | :------------------------------------------------------------------- | :-------------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md)   | `string`, `string`(, `int`)                         | `int`  |
+| ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.en.md)   | `string`, `string`(, `int`)                         | `int`  |
 |                                                                        | `string`, `string`, `ref` `int`, `ref` `string[]`   | `int`  |
 
 !!! info "API"

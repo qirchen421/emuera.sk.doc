@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数                       | 返回值 |
 | :------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGSETG`](./CBGSETG.md) | `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETG`](./CBGSETG.zh.md) | `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     此函数同时支持作为命令和表达式内函数使用。
 
 ### 相关项目
-- [CBGSETSPRITE](CBGSETSPRITE.md)
-- [CBGCLEAR](CBGCLEAR.md)
+- [CBGSETSPRITE](CBGSETSPRITE.zh.md)
+- [CBGCLEAR](CBGCLEAR.zh.md)

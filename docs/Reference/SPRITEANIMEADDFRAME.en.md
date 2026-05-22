@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                      | Arguments                                                             | Return |
 | :------------------------------------------------------------------------------- | :------------------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEANIMEADDFRAME`](./SPRITEANIMEADDFRAME.md) | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEANIMEADDFRAME`](./SPRITEANIMEADDFRAME.en.md) | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -26,4 +26,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
+- [SPRITEANIMECREATE](SPRITEANIMECREATE.en.md)

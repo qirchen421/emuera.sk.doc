@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments                       | Return   |
 | :------------------------------------------------------------- | :----------------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`REPLACE`](./REPLACE.md) | `string`, `string`, `string`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`REPLACE`](./REPLACE.en.md) | `string`, `string`, `string`  | `string` |
 
 !!! info "API"
 

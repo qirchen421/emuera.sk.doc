@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                             | 参数   | 返回值 |
 | :----------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.md) | 无     | 无     |
-| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.md) | 无     | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.zh.md) | 无     | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.zh.md) | 无     | 无     |
 
 !!! info "API"
 
@@ -23,4 +23,4 @@ hide:
     仅支持作为指令使用。
 
 ### 相关项目
-- [PUTFORM](PUTFORM.md)
+- [PUTFORM](PUTFORM.zh.md)

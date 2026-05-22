@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                   | Arguments  | Return |
 | :----------------------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.md) | `string`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)   | `string`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)       | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROBEGINSWITH`](./ENUMMACRO.en.md) | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.en.md)   | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.en.md)       | `string`   | `int`  |
 
 !!! info "API"
     

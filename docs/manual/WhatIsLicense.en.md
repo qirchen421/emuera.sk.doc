@@ -130,5 +130,5 @@ These items are not directly related to the license, but we recommend writing th
 ### License Template
 A license template created by volunteers.
 There is no rule that you must use this license.
-[About LTOL License](LTOL-license.md)
+[About LTOL License](LTOL-license.en.md)
 <!---[[eratohoYM Dialogue Template License Template>Templates・Tools#YM_KOJO_L]]-->

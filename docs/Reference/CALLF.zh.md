@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                         | 参数           | 返回值 |
 | :------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.zh.md)     | `functionName` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.zh.md) | `formedString` | `void`¹ |
 
 !!! info "API"
 
@@ -25,7 +25,7 @@ hide:
 		当初是为了制作伪 SETTER 而做的，现在正在反省。
 
 	当然，除非在被调用的表达式中函数内部进行了操作，否则 RESULT 或 RESULTS 不会发生变化。  
-	同系列的指令中，EM+EE 版本新增了 [`TRYCALLF`](./TRYCALLF.md)、[`TRYCALLFORMF`](./TRYCALLFORMF.md)。  
+	同系列的指令中，EM+EE 版本新增了 [`TRYCALLF`](./TRYCALLF.zh.md)、[`TRYCALLFORMF`](./TRYCALLFORMF.zh.md)。  
 
 !!! hint "提示"
 
@@ -36,8 +36,8 @@ hide:
     详见教程 [命令 vs 表达式](../tutorial/command-vs-expression.zh.md)。
 
 ### 相关项目
-* [TRYCALLF](TRYCALLF.md)
-* [TRYCALLFORMF](TRYCALLFORMF.md)
-* [EXISTFUNCTION](EXISTFUNCTION.md)
-* [表达式中可用的函数](../Emuera/in_expression_function.md)
+* [TRYCALLF](TRYCALLF.zh.md)
+* [TRYCALLFORMF](TRYCALLFORMF.zh.md)
+* [EXISTFUNCTION](EXISTFUNCTION.zh.md)
+* [表达式中可用的函数](../Emuera/in_expression_function.zh.md)
 * [命令 vs 表达式（教程）](../tutorial/command-vs-expression.zh.md)

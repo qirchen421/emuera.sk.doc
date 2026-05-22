@@ -136,12 +136,12 @@ As a result of the processing, `A:3` becomes `3`.
 Some variables also have a two-dimensional array format. Two-dimensional arrays
 can be written as `A:0:0`, `A:0:1`, ..., `A:1:0`, `A:1:1`, ..., allowing storage of even more values.
 
-Which variables use which array format is listed in the [eramaker variable list](../eramaker/variables.md) and [Emuera constants and variables](../Emuera/variables.md).
+Which variables use which array format is listed in the [eramaker variable list](../eramaker/variables.en.md) and [Emuera constants and variables](../Emuera/variables.en.md).
 
 ---
 
 ### How to Use Variables
-Basically, follow what's written on the [eramaker variable list page](../eramaker/variables.md).
+Basically, follow what's written on the [eramaker variable list page](../eramaker/variables.en.md).
 Here, we'll mainly cover those that require careful handling.
 
 - `A - Z`
@@ -247,7 +247,7 @@ Special operators used for bit operations.
 ---
 
 ## Display
-[`PRINT`](../Reference/PRINT.md) series syntax for displaying text on the screen, mainly used in dialogue.
+[`PRINT`](../Reference/PRINT.en.md) series syntax for displaying text on the screen, mainly used in dialogue.
 
 ### Types of PRINT Commands
 The PRINT series includes mainly the following:
@@ -328,7 +328,7 @@ Write the variable name enclosed in `%~~~%`.
 - `PRINTFORMW`: Adds a newline and stops at that line
 
 Only `PUTFORM`, which is for save data, cannot be substituted with `PRINTFORM`, but since opportunities to modify save data display are rare, it will be omitted.
-See the [`PUTFORM`](../Reference/PUTFORM.md) page for details.
+See the [`PUTFORM`](../Reference/PUTFORM.en.md) page for details.
 
 ---
 
@@ -447,7 +447,7 @@ Common syntax for branching includes `IF`, `SIF`, and `SELECTCASE`.
 
 #### `IF - ELSEIF - ELSE - ENDIF`
 This is the most commonly used syntax for "if ~ then ~" processing.
-[Reference page for `IF`](../Reference/IF.md)
+[Reference page for `IF`](../Reference/IF.en.md)
 
 ``` { #language-erb title="ERB" }  
 IF A == 0  
@@ -525,7 +525,7 @@ Be careful not to forget to write `ENDIF`, as it causes errors.
 
 #### `SIF`
 `SIF` is a simplified version of `IF - ENDIF`.
-[Reference page for `SIF`](../Reference/IF.md)
+[Reference page for `SIF`](../Reference/IF.en.md)
 
 ``` { #language-erb title="ERB" }  
 SIF A == 0  
@@ -588,7 +588,7 @@ Avoid writing branching or iteration statements like `IF` or `SIF` immediately a
 As an alternative to `IF`, there's `SELECTCASE - CASE - CASEELSE - ENDSELECT`.
 It's used when branching processing based on the value of a single numeric variable.
 It's convenient when branching processing based on random numbers, for example.
-[Reference page for `SELECTCASE`](../Reference/SELECTCASE.md)
+[Reference page for `SELECTCASE`](../Reference/SELECTCASE.en.md)
 
 ``` { #language-erb title="ERB" }  
 SELECTCASE A  
@@ -725,7 +725,7 @@ Iteration (loop processing) is used when you want to repeat the same process mul
 ---
 
 #### `REPEAT - REND`
-[Reference page for `REPEAT`](../Reference/REPEAT.md)
+[Reference page for `REPEAT`](../Reference/REPEAT.en.md)
 
 ``` { #language-erb title="ERB" }  
 REPEAT Expression  
@@ -834,7 +834,7 @@ When executed, since `BREAK` is executed when `COUNT` is 5 and the `REPEAT - REN
 ---
 
 #### `FOR - NEXT`
-[Reference page for `FOR-NEXT`](../Reference/FOR.md)
+[Reference page for `FOR-NEXT`](../Reference/FOR.en.md)
 
 ``` { #language-erb title="ERB" }
 FOR <Counter Numeric Variable>, <Expression>, <Expression>[, <Expression>]  
@@ -906,7 +906,7 @@ Note that `CONTINUE` and `BREAK` can also be used, just like with `REPEAT - REND
 ---
 
 #### `WHILE - WEND`
-[Reference page for `WHILE-WEND`](../Reference/WHILE.md)
+[Reference page for `WHILE-WEND`](../Reference/WHILE.en.md)
 
 ``` { #language-erb title="ERB" }
 WHILE Condition  
@@ -932,7 +932,7 @@ so `A < 10` remains forever true, leading to an infinite loop.
 ---
 
 #### `DO - LOOP`
-[Reference page for `DO-LOOP`](../Reference/DO.md)
+[Reference page for `DO-LOOP`](../Reference/DO.en.md)
 
 ``` { #language-erb title="ERB" }
 DO  
@@ -1224,7 +1224,7 @@ As the name "expression function" suggests, you can directly call the function f
 In expression functions, arguments are called by enclosing them in parentheses like `(A)`.
 If there are multiple arguments, write them separated by commas within the parentheses like `(A, B, C)`.
 Conversely, if there are no arguments, write just `()`. Parentheses cannot be omitted even without arguments.
-[Reference page for `ABS`](../Reference/ABS.md)
+[Reference page for `ABS`](../Reference/ABS.en.md)
 
 The same applies to commands that return strings.
 
@@ -1242,7 +1242,7 @@ ENDIF
 ```
 
 The two examples above perform the same operation.
-You can check the list of expression functions on the [Commands and Expression Functions page](../Reference/README.md).
+You can check the list of expression functions on the [Commands and Expression Functions page](../Reference/README.en.md).
 
 ---
 
@@ -1276,7 +1276,7 @@ PRINTFORML {TEST2(3)}
 If you want to create an expression function that returns a string, write `#FUNCTIONS`.
 However, note that the way `RETURNF` is written differs from other commands (like `PRINTFORM`).
 
-Related page: [User-Defined Expression Functions](../Emuera/user_defined_in_expression_function.md)
+Related page: [User-Defined Expression Functions](../Emuera/user_defined_in_expression_function.en.md)
 
 ---
 
@@ -1319,8 +1319,8 @@ In this case, move the second input processing to a different function, etc.
 
 ### Adding and Removing Characters
 Use `ADDCHARA` and `DELCHARA` to add and remove characters.
-[Reference page for `ADDCHARA`](../Reference/ADDCHARA.md)
-[Reference page for `DELCHARA`](../Reference/DELCHARA.md)
+[Reference page for `ADDCHARA`](../Reference/ADDCHARA.en.md)
+[Reference page for `DELCHARA`](../Reference/DELCHARA.en.md)
 
 ``` { #language-erb title="ERB" }
 ADDCHARA 1  
@@ -1379,7 +1379,7 @@ Note that `BARL` also adds a newline after displaying.
 ### Decimal Multiplication
 In erabasic, variables and such are all processed as integers, but as an exception,
 you can perform decimal calculations using `TIMES`.
-[Reference page for `TIMES`](../Reference/TIMES.md)
+[Reference page for `TIMES`](../Reference/TIMES.en.md)
 
 ``` { #language-erb title="ERB" }
 A = 1000  
@@ -1392,8 +1392,8 @@ Note that even if the result of using `TIMES` is a decimal, it's rounded to an i
 ---
 
 ### Other Commands
-[`WAIT`](../Reference/WAIT.md)…Performs only waiting for input. No value is stored in `RESULT`.  
-[`QUIT`](../Reference/QUIT.md)…Terminates eramaker. Mainly used during game over, etc.
+[`WAIT`](../Reference/WAIT.en.md)…Performs only waiting for input. No value is stored in `RESULT`.  
+[`QUIT`](../Reference/QUIT.en.md)…Terminates eramaker. Mainly used during game over, etc.
 
 ---
 
@@ -1401,7 +1401,7 @@ Note that even if the result of using `TIMES` is a decimal, it's rounded to an i
 
 ```
 anon>Hey me. What does the single & that's often used in config mean? Is it a mistake for &&?
-anon>Oh, that's called bit operations. It's properly listed [here](../eramaker/variables.md)
+anon>Oh, that's called bit operations. It's properly listed [here](../eramaker/variables.en.md)
 anon>It's the one at the very bottom
   ----------------------------------------
 anon>...Alright, I get it

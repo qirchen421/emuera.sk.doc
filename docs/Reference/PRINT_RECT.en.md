@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                               | Arguments               | Return   |
 | :-------------------------------------------------------------------------- | :---------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`PRINT_RECT`](./PRINT_RECT.md) | `int`                   | none     |
+| ![](../assets/images/IconEmuera.webp)[`PRINT_RECT`](./PRINT_RECT.en.md) | `int`                   | none     |
 |                                                                           | `int`, `int`, `int`, `int` | none     |
 
 !!! info "API"

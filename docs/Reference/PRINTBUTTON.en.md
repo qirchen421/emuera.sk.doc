@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                     | Arguments    | Return   |
 | :------------------------------------------------------------------------------------------------ | :----------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTBUTTON(\|C\|LC)</code>](./PRINTBUTTON.md) | `string`, `any` | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTBUTTON(\|C\|LC)</code>](./PRINTBUTTON.en.md) | `string`, `any` | none     |
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
     PRINTBUTTON(|C|LC) string, buttonValue
     ```
     The `PRINTBUTTON` command creates a clickable button.
-    The format is similar to the [`PRINTS`](./PRINT.md) command, but the second argument specifies the number or string to input when clicked.
+    The format is similar to the [`PRINTS`](./PRINT.en.md) command, but the second argument specifies the number or string to input when clicked.
     If the first argument contains a newline code, it is omitted and no newline occurs.
 
     Emuera automatically converts numbers enclosed in `[]` (like `[300] Save`) along with surrounding text into buttons.
@@ -41,7 +41,7 @@ hide:
     (Using `PRINTS` instead of `PRINT` is to clearly show the number of half-width spaces)
     With this, `これでいい？ ` becomes non-button, and only `[0] はい` and `[1] いいえ` become buttons.
     While it's not required for the displayed string to contain `[0]` or `[1]`, not displaying the corresponding numbers may confuse users using numpad operations. It is recommended to keep the `[0]` notation as before.
-    Also, `PRINTBUTTON` can create buttons that input strings instead of numbers. Such buttons can be clicked when [`INPUTS`](./INPUT.md) command is executed.
+    Also, `PRINTBUTTON` can create buttons that input strings instead of numbers. Such buttons can be clicked when [`INPUTS`](./INPUT.en.md) command is executed.
 
     ```  { #language-erbapi }
     PRINTL 名前を入力してください。
@@ -54,12 +54,12 @@ hide:
     The keyword in parentheses specifies the text alignment.
 
     - None - No alignment
-    - `C` - Aligns right like [`PRINTC`](./PRINTC.md)
-    - `LC` - Aligns left like [`PRINTLC`](./PRINTC.md)
+    - `C` - Aligns right like [`PRINTC`](./PRINTC.en.md)
+    - `LC` - Aligns left like [`PRINTLC`](./PRINTC.en.md)
 
 !!! hint "Hint"
 
     Command only.
 
 ### Related Items
-- [PRINT](PRINT.md)
+- [PRINT](PRINT.en.md)

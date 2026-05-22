@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                 | 参数                         | 返回值   |
 | :--------------------------------------------------------------------- | :--------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.md)   | `string`(, `ref` `string`)   | `string` |
-| ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.md) | `string`, `string`, `string` | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.zh.md)   | `string`(, `ref` `string`)   | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.zh.md) | `string`, `string`, `string` | `int`    |
 
 
 !!! info "API"

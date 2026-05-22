@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数  | 返回值     |
 | :----------------------------------------------------------------------- | :---- | :--------- |
-| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md) | `int` | `istring`  |
+| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.zh.md) | `int` | `istring`  |
 
 !!! info "API"
 
@@ -47,4 +47,4 @@ hide:
 	```
 
 ### 相关项目
-- [HTML_POPPRINTINGSTR](HTML_POPPRINTINGSTR.md)
+- [HTML_POPPRINTINGSTR](HTML_POPPRINTINGSTR.zh.md)

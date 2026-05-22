@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                        | 参数     | 返回值 |
 | :---------------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEWIDTH`](./SPRITEWIDTHHEIGHT.md)  | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEHEIGHT`](./SPRITEWIDTHHEIGHT.md) | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEWIDTH`](./SPRITEWIDTHHEIGHT.zh.md)  | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEHEIGHT`](./SPRITEWIDTHHEIGHT.zh.md) | `string` | `int`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                       | 参数                                | 返回值 |
 | :--------------------------------------------------------------------------- | :---------------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.zh.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数   | 返回值 |
 | :------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.md) | `()`   | 无     |
+| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.zh.md) | `()`   | 无     |
 
 !!! info "API"
 
@@ -25,4 +25,4 @@ hide:
     无参数。
 
 ### 相关项目
-* [INPUT](INPUT.md)
+* [INPUT](INPUT.zh.md)

@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                 | 参数      | 返回值 |
 | :--------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETKEY`](./GETKEY.md)          | `keyCode` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETKEYTRIGGERED`](./GETKEY.md) | `keyCode` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETKEY`](./GETKEY.zh.md)          | `keyCode` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETKEYTRIGGERED`](./GETKEY.zh.md) | `keyCode` | `int`  |
 
 !!! info "API"
 
@@ -31,4 +31,4 @@ hide:
     该函数同时支持指令和表达式函数两种使用方式。
 
 ### 相关项目
-- [AWAIT](AWAIT.md)
+- [AWAIT](AWAIT.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments                                      | Return |
 | :----------------------------------------------------------------------------- | :-------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`, `int`)    | `1`    |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.en.md) | `string`, `ref` `string[]`(, `int`, `int`)    | `1`    |
 |                                                                              | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`    |
 
 !!! info "API"
@@ -62,4 +62,4 @@ hide:
     ```
 
 ### Related Items
-* [ARRAYSORT](ARRAYSORT.md)
+* [ARRAYSORT](ARRAYSORT.en.md)

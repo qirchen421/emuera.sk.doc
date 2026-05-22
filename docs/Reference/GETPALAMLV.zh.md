@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                               | 参数         | 返回值 |
 | :------------------------------------------------------------------- | :----------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.md)   | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.zh.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.zh.md)   | `int`, `int` | `int`  |
 
 !!! info "API"
 

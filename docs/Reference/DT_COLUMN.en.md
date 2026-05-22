@@ -7,12 +7,12 @@ hide:
 
 | Function name                                                                 | Arguments                                                          | Return |
 | :--------------------------------------------------------------------------- | :---------------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](./DT_COLUMN.md)     | `string`, `string`(, `any`, `int`)                                | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](./DT_COLUMN.md)   | `string`, `string`                                                | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.md)  | `string`, `string`                                                | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.md)  | `string`                                                          | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | none   |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_NAMES`](./DT_COLUMN.md)   | `string`(, `ref` `string[]`)                                     | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](./DT_COLUMN.en.md)     | `string`, `string`(, `any`, `int`)                                | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](./DT_COLUMN.en.md)   | `string`, `string`                                                | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.en.md)  | `string`, `string`                                                | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.en.md)  | `string`                                                          | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.en.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | none   |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_NAMES`](./DT_COLUMN.en.md)   | `string`(, `ref` `string[]`)                                     | `int`  |
 
 !!! info "API"
 

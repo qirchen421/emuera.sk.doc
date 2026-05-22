@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                   | Arguments  | Return |
 | :----------------------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md) | `string`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.md)   | `string`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.md)       | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.en.md) | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.en.md)   | `string`   | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.en.md)       | `string`   | `int`  |
 
 !!! info "API"
     
@@ -70,4 +70,4 @@ hide:
     ```
 
 ### Related Items
-- [EXISTFUNCTION](EXISTFUNCTION.md)
+- [EXISTFUNCTION](EXISTFUNCTION.en.md)

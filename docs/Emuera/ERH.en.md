@@ -12,7 +12,7 @@ eramakerEX does not apply `_rename.csv` to `*.ERH`, so using ERH files will lose
 
 ## Declaring Global Variables
 
-See also: [User-Defined Variables](./user_defined_variables.md)
+See also: [User-Defined Variables](./user_defined_variables.en.md)
 
 You can declare new variables in header files.  
 These become global variables that can be referenced from all places in ERB, unlike private variables declared within ERB.  
@@ -78,7 +78,7 @@ Global variables are neither loaded nor initialized during normal save/load.
 Because of this property, they can be used to share data between different save files.  
 When using both `GLOBAL` and `SAVEDATA` keywords, the variable becomes one that is read from and written to the `global.sav` file by the `SAVEGLOBAL` and `LOADGLOBAL` commands.
 
-For details on initial values and constants, see [User-Defined Variables](./user_defined_variables.md).
+For details on initial values and constants, see [User-Defined Variables](./user_defined_variables.en.md).
 
 ## Macro Definitions
 
@@ -221,7 +221,7 @@ For this purpose, you can also define empty macros (macros without a replacement
 	<*.ERH>
 		#DEFINE HOGE
 
-You can also use EM+EE's [`ISDEFINED`](../Reference/ISDEFINED.md) for the same purpose.
+You can also use EM+EE's [`ISDEFINED`](../Reference/ISDEFINED.en.md) for the same purpose.
 
 ### Macro Limitations
 

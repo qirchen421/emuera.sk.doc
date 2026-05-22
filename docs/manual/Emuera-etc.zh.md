@@ -67,7 +67,7 @@ Emuera有一个特殊的启动模式叫解析模式。
 
 - C.抛出错误的`THROW`  
 
-[`THROW`](../Reference/THROW.md)指令是到达该行时强制抛出错误的指令。  
+[`THROW`](../Reference/THROW.zh.md)指令是到达该行时强制抛出错误的指令。  
 可用于调试中的特定条件确认等多种用途。  
 
 如上所述，合理使用Emuera可以几乎消除简单语法错误残留的代码发布问题，  
@@ -323,7 +323,7 @@ REUSELASTLINE (警告文)
 Emuera实现了`1pN`这样的二进制表示，并增加了许多位运算用运算符，使位运算更容易。  
 不过，对于有编程经验的人还好，否则即使这样实现也很痛苦。  
 因此，准备了`GETBIT`、`SETBIT`、`CLEARBIT`、`INVERTBIT`。  
-参考：[参考/BIT操作系列](../Reference/BIT_OPERATION.md)  
+参考：[参考/BIT操作系列](../Reference/BIT_OPERATION.zh.md)  
 
 格式：  
 

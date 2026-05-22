@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                        | Arguments                         | Return   |
 | :----------------------------------------------------------------------------------- | :-------------------------------- | :------- |
-| ![](../assets/images/IconSK.webp)[`MAP_MERGE`](./MAP_ENHANCED.md)                    | `string`, `string`                | `int`    |
-| ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.md)                 | `string`, `string`, `string`      | `int`    |
-| ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.md)                  | `string`, `string`, `string`      | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_MERGE`](./MAP_ENHANCED.en.md)                    | `string`, `string`                | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.en.md)                 | `string`, `string`, `string`      | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.en.md)                  | `string`, `string`, `string`      | `string` |
 
 !!! info "API"
 
@@ -105,7 +105,7 @@ hide:
     ```
 
 ### Related
-- [MAP Management](MAP_MANAGE.md)
-- [MAP Operations](MAP_OPERATION.md)
-- [MAP Key/Value Retrieval](MAP_GETKEYS.md)
-- [MAP Serialization](MAP_SERIALIZATION.md)
+- [MAP Management](MAP_MANAGE.en.md)
+- [MAP Operations](MAP_OPERATION.en.md)
+- [MAP Key/Value Retrieval](MAP_GETKEYS.en.md)
+- [MAP Serialization](MAP_SERIALIZATION.en.md)

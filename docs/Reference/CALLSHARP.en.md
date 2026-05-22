@@ -9,7 +9,7 @@ Added by Neo_Kesha
 
 | Function name                                                          | Arguments           | Return |
 | :-------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.md) | `functionName` | `void`¹ |
+| ![](../assets/images/Iconetc.webp)[`CALLSHARP`](./CALLSHARP.en.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 

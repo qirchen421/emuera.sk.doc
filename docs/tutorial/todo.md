@@ -76,7 +76,8 @@
 │   └── character-variables.zh.md ✅ 已完成（角色编号、角色变量分类、管理指令、CSV 定义、自定义变量）
 │
 └── 第6章：HTML与图形 🟢 选读 — 富文本与渲染
-    └── html-syntax.zh.md        ✅ 已完成
+    ├── html-syntax.zh.md        ✅ 已完成
+    └── resources.zh.md          ✅ 已完成（CSV 定义格式、图像格式、Skia 版资源管理机制与使用建议）
 ```
 
 ---
@@ -117,7 +118,8 @@
 |------|:--------:|:-----------:|:-----------:|------|
 | dynamic-reflection | ✅ | ✅ | ✅ | 动态解析与反射演进：RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名（含字符串赋值 `'=` 修复） |
 | runtime-mechanics | ✅ | ✅ | ✅ | 运行时机制：ConvertArg→SetTransporter→IntoFunction |
-| anti-patterns | ✅ | ✅ | ✅ | 反模式与常见错误 |
+
+> **注**：anti-patterns 页面已从教程中移除（仅保留在知识库中），内容迁移至 `shared-trae/knowledge/erabasic/declaration-system.md`。
 
 ### 2.2 引擎特性章节引用的规格页
 
@@ -160,9 +162,9 @@
 
 - [x] 创建 index.en.md（英文版教程首页）
 - [x] 补全缺失的 .en.md 文件（见 §2.1 表格中 ❌ 项）— 12 个页面已翻译
-- [ ] 三语言交叉引用链接一致性检查
+- [x] 三语言交叉引用链接一致性检查 — 全目录已完成（tutorial + Emuera/Reference/EMEE/Skia/manual/eramaker/i18n，共修复约2500+链接）
 
-### Phase 5：进阶内容（第6章高级教程）🟡 部分完成
+### Phase 5：进阶内容（第7章高级教程）✅ 已完成
 
 > 以下内容需要从源码中提取洞见，优先级较低。
 
@@ -174,13 +176,33 @@
   - [x] 6.5 反射能力演进总表：从静态编译到运行时动态的逐步解放
   - [x] 字符串赋值 `'=` 语法审查与修复（含 EVAL 参考页三语言同步修正）
 - [x] **tutorial/runtime-mechanics.zh.md** — 运行时机制（ConvertArg→SetTransporter→IntoFunction）
-- [x] **tutorial/anti-patterns.zh.md** — 反模式与常见错误
+- [x] **tutorial/anti-patterns** — 已从教程中移除，仅保留在知识库
+
+### Phase 5.5：章节编号统一与资源文档更新 ✅ 已完成
+
+- [x] **统一标题风格**：移除 dynamic-reflection/runtime-mechanics 页面的"第N章："前缀，与其他教程页面一致
+- [x] **翻译导航标签**：「高度なトピック」→ 中文「高级主题」/ 英文「Advanced Topics」（mkdocs.yml nav_translations）
+- [x] **新增资源设置小节**：在 html-syntax 三语言版中新增「资源设置 — 图像资源的准备方法」，反映 Skia 版新特性（懒加载索引、SharedBitmapCache、AnimSpriteCache、SPRITECREATEFROMFILE）
+- [x] **标注历史文档**：Emuera/resources 三语言版标题添加"历史文档"标记，注意事项后添加 Skia 版特性变更注释并引用新手册
+
+### Phase 5.6：资源设置独立教程页 ✅ 已完成
+
+- [x] **创建独立教程页**：`tutorial/resources.zh.md`/`.md`/`.en.md`，与 html-syntax 同级
+  - CSV 11 参数格式（含 destWidth/destHeight）
+  - 两种动画精灵的缓存差异表（SpriteAnime vs SpriteAnimated）
+  - Skia 版资源使用建议：优先 CSV 注册而非运行时动态加载
+  - 动画精灵建议：优先多帧文件格式（GIF/WebP）或精灵表，避免 CSV ANIME + 多文件导致 SharedBitmapCache 池耗尽
+- [x] **重构 html-syntax**：资源设置小节替换为链接引用，指向独立页面
+- [x] **更新引用**：Emuera/resources 三语言版链接更新指向新页面
+- [x] **导航更新**：mkdocs.yml + 教程首页（三语言版）添加 resources 页面
 
 ### Phase 6：mkdocs.yml 导航更新 ✅ 完成
 
-- [x] 新建教程页加入导航（dynamic-reflection/runtime-mechanics/anti-patterns 已添加到「高度なトピック」章节）
+- [x] 新建教程页加入导航（dynamic-reflection/runtime-mechanics 已添加到「高度なトピック」章节）
+- [x] anti-patterns 已从导航中移除
 - [x] dynamic-reflection 从「関数」移至「高度なトピック」
 - [x] 确保三语言同步（三语言版本导航注册一致）
+- [x] 「高度なトピック」导航标签翻译（中文/英文 nav_translations）
 
 ---
 
@@ -220,6 +242,8 @@ eramaker 仅在"版本演进"章节中作为历史参考提及，教程以 Emuer
 
 | 日期 | 变更 |
 |------|------|
+| 2026-05-22 | 移除 anti-patterns 教程页（三语言版+导航），仅保留知识库；统一标题风格（移除"第N章："前缀）；翻译「高度なトピック」导航标签；html-syntax 新增「资源设置 — 图像资源的准备方法」小节（Skia 懒加载/SharedBitmapCache/AnimSpriteCache）；标注 Emuera/resources 为历史文档并添加 Skia 特性变更注释 |
+| 2026-05-22 | 资源设置独立教程页（resources.zh.md/.md/.en.md）：CSV 11参数格式、两种动画精灵缓存差异、Skia 资源使用建议（优先CSV注册、优先多帧文件格式/精灵表）；html-syntax 资源设置小节重构为链接引用 |
 | 2026-05-15 | 完成第7章高级主题三语言版：runtime-mechanics（运行时机制：ConvertArg→SetTransporter→IntoFunction、REF变量生命周期）、anti-patterns（反模式与常见错误：作用域误解、FORM误用、REF/OUT混淆、HTML输出错误）；dynamic-reflection 从第4章「関数」移至第7章「高度なトピック」；mkdocs.yml 导航更新 |
 | 2026-05-12 | 新增第6章高级教程规划：dynamic-reflection（中文版已创建）、runtime-mechanics、anti-patterns；修复 RETURNFORM 文档（三语言版）：明确两阶段求值机制和整数返回限制；新增 §2.1b 高级教程页面进度表 |
 | 2026-05-12 | Phase 4 多语言同步完成：补全 12 个缺失的 .en.md 文件（index/intro/hello-world/file-types/line-types/evolution/values-types/basic-output/condition/loop/jump/call/command-vs-expression）；修正 values-types 和 variable-declaration 的 .en.md 状态（此前已存在但误标为 ❌） |
@@ -229,4 +253,4 @@ eramaker 仅在"版本演进"章节中作为历史参考提及，教程以 Emuer
 
 ---
 
-> **最后更新**：2026-05-12
+> **最后更新**：2026-05-22

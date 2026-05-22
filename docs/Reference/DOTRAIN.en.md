@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return |
 | :------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`DOTRAIN`](./DOTRAIN.md) | `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`DOTRAIN`](./DOTRAIN.en.md) | `int` | none   |
 
 !!! info "API"
 
@@ -44,4 +44,4 @@ hide:
     Commands only.
 
 ### See Also
-- [CALLTRAIN](CALLTRAIN.md)
+- [CALLTRAIN](CALLTRAIN.en.md)

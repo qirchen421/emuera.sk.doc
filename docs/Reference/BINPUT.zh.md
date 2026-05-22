@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                       | 参数                     | 返回值   |
 | :----------------------------------------------------------- | :----------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)     | (`int`, `int`, `int`)    | `int`    |
-| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)    | (`string`, `int`, `int`) | `string` |
+| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.zh.md)     | (`int`, `int`, `int`)    | `int`    |
+| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.zh.md)    | (`string`, `int`, `int`) | `string` |
 
 !!! info "API"
 
@@ -27,4 +27,4 @@ hide:
 	由于是命令，因此不能作为表达式中的函数使用。
 
 ### 相关项目
-* [INPUT](INPUT.md)
+* [INPUT](INPUT.zh.md)

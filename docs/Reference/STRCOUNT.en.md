@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments          | Return |
 | :--------------------------------------------------------------- | :----------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`STRCOUNT`](./STRCOUNT.md) | `string`, `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRCOUNT`](./STRCOUNT.en.md) | `string`, `string` | `int`  |
 
 !!! info "API"
 
@@ -35,4 +35,4 @@ hide:
     ```
 
 ### See Also
-- [STRFIND](STRFIND.md)
+- [STRFIND](STRFIND.en.md)

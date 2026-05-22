@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                                         | Arguments | Return   |
 | :--------------------------------------------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTSINGLE(\|V\|S\|FORM\|FORMS)(\|K\|D)</code>](./PRINTSINGLE.md) | `string`  | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTSINGLE(\|V\|S\|FORM\|FORMS)(\|K\|D)</code>](./PRINTSINGLE.en.md) | `string`  | none     |
 
 !!! info "API"
 
@@ -20,11 +20,11 @@ hide:
     The `PRINTSINGLE` family is almost the same as `PRINTL`, but `PRINTSINGLE` does not wrap text and always displays on a single line.
     Characters beyond the screen edge are not drawn.
     Since newline is automatically added, there are no `(|L|W)` keywords.
-    Other keywords work the same as the [PRINT](./PRINT.md) family.
+    Other keywords work the same as the [PRINT](./PRINT.en.md) family.
 
 !!! hint "Hint"
 
     Command only.
 
 ### Related Items
-- [PRINT](PRINT.md)
+- [PRINT](PRINT.en.md)

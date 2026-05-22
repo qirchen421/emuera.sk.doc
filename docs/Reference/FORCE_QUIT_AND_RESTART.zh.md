@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                   | 参数   | 返回值 |
 | :--------------------------------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | `void` | `void` |
+| ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.zh.md) | `void` | `void` |
 
 !!! info "API"
 
@@ -33,4 +33,4 @@ hide:
     ![](../assets/images/FORCE_QUIT_AND_RESTART.png)
 
 ### 相关项目
-- [QUIT_AND_RESTART](QUIT_AND_RESTART.md)
+- [QUIT_AND_RESTART](QUIT_AND_RESTART.zh.md)

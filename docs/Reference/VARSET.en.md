@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments                                 | Return |
 | :------------------------------------------------------------- | :---------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`VARSET`](./VARSET.md) | `variable`(, `value`, `startIndex`, `endIndex`) | none   |
+| ![](../assets/images/IconEmuera.webp)[`VARSET`](./VARSET.en.md) | `variable`(, `value`, `startIndex`, `endIndex`) | none   |
 
 !!! info "API"
 
@@ -27,7 +27,7 @@ hide:
 
 	In this example, all elements of `FLAG` become `0`.  
 	`STR:0` to `STR:9` are assigned "あああ", and all elements of the three-dimensional array `TA` are assigned `5678`.  
-	The same can be done using [`FOR-NEXT`](./FOR.md) loops in ERB, but when the loop count reaches tens of thousands, the execution time becomes non-negligible.  
+	The same can be done using [`FOR-NEXT`](./FOR.en.md) loops in ERB, but when the loop count reaches tens of thousands, the execution time becomes non-negligible.  
 	The `VARSET` command can complete processing much faster than assignment in ERB.  
 	When a character variable is the target of `VARSET`, only the elements of the specified character are assigned.
 
@@ -45,4 +45,4 @@ hide:
     Command only.
 
 ### Related Items
-- [VARSETEX](VARSETEX.md)
+- [VARSETEX](VARSETEX.en.md)

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数 | 返回值 |
 | :----------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`PRINTCLENGTH`](./PRINTCLENGTH.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`PRINTCLENGTH`](./PRINTCLENGTH.zh.md) | 无   | `int`  |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     同时支持指令和表达式函数。
 
 ### 相关项目
-- [PRINTCPERLINE](PRINTCPERLINE.md)
+- [PRINTCPERLINE](PRINTCPERLINE.zh.md)

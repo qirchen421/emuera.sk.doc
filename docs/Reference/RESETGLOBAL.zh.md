@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数 | 返回值 |
 | :--------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`RESETGLOBAL`](./RESETGLOBAL.md) | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`RESETGLOBAL`](./RESETGLOBAL.zh.md) | 无   | 无     |
 
 !!! info "API"
 
@@ -35,4 +35,4 @@ hide:
     ```
 
 ### 相关项目
-- [RESETDATA](RESETDATA.md)
+- [RESETDATA](RESETDATA.zh.md)

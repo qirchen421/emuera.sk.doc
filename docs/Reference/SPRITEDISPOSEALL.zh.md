@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                       | 参数  | 返回值 |
 | :--------------------------------------------------------------------------- | :-----| :----- |
-| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md) | `int` | `int`  |
+| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -40,4 +40,4 @@ hide:
     ```
 
 ### 相关项目
-- [SPRITEDISPOSE](./SPRITEDISPOSE.md)
+- [SPRITEDISPOSE](./SPRITEDISPOSE.zh.md)

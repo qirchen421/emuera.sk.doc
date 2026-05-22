@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数  | 返回值   |
 | :------------------------------------------------------------- | :---- | :------- |
-| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.md) | `any` | `string` |
+| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.zh.md) | `any` | `string` |
 
 !!! info "API"
 

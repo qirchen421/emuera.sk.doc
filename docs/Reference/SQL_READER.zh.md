@@ -7,12 +7,12 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_READ`](./SQL_READER.md) | `int` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_LONG`](./SQL_READER.md) | `int`, `int` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_STRING`](./SQL_READER.md) | `int`, `int` | `string` |
-| ![](../assets/images/IconSK.webp)[`SQL_READER_GET_FLOAT`](./SQL_READER.md) | `int`, `int` | `float` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_ISNULL`](./SQL_READER.md) | `int`, `int` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_CLOSE`](./SQL_READER.md) | `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_READ`](./SQL_READER.zh.md) | `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_LONG`](./SQL_READER.zh.md) | `int`, `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_STRING`](./SQL_READER.zh.md) | `int`, `int` | `string` |
+| ![](../assets/images/IconSK.webp)[`SQL_READER_GET_FLOAT`](./SQL_READER.zh.md) | `int`, `int` | `float` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_ISNULL`](./SQL_READER.zh.md) | `int`, `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_CLOSE`](./SQL_READER.zh.md) | `int` | `int` |
 
 !!! info "API"
 
@@ -36,7 +36,7 @@ hide:
 
     !!! warning "注意"
 
-        - `readerId` 由 [`SQL_EXECUTE_READER`](./SQL_EXECUTE.md) 返回。
+        - `readerId` 由 [`SQL_EXECUTE_READER`](./SQL_EXECUTE.zh.md) 返回。
         - 读取列值前必须先调用 `SQL_READER_READ` 至少一次。
         - 使用完毕后**必须**调用 `SQL_READER_CLOSE` 关闭，否则会泄漏资源。
         - `columnIndex` 从 0 开始。

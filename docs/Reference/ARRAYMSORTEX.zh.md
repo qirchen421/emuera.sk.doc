@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数                                          | 返回值 |
 | :------------------------------------------------------------------- | :-------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.md) | `string`, `ref` `string[]`(, `int`, `int`)    | `1`    |
+| ![](../assets/images/IconEM.webp)[`ARRAYMSORTEX`](./ARRAYMSORTEX.zh.md) | `string`, `ref` `string[]`(, `int`, `int`)    | `1`    |
 |                                                                      | `ref` `int`, `ref` `string[]`(, `int`, `int`) | `1`    |
 
 !!! info "API"
@@ -62,4 +62,4 @@ hide:
     ```
 
 ### 相关项目
-* [ARRAYSORT](ARRAYSORT.md)
+* [ARRAYSORT](ARRAYSORT.zh.md)

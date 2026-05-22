@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                             | Arguments                | Return   |
 | :----------------------------------------------------------------------- | :---------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`SUBSTRING`](./SUBSTRING.md)       | `string`, `int`, `int`  | `string` |
-| ![](../assets/images/IconEmuera.webp)[`SUBSTRINGU`](./SUBSTRING.md)      | `string`, `int`, `int`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`SUBSTRING`](./SUBSTRING.en.md)       | `string`, `int`, `int`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`SUBSTRINGU`](./SUBSTRING.en.md)      | `string`, `int`, `int`  | `string` |
 
 !!! info "API"
 
@@ -48,4 +48,4 @@ hide:
     ```
 
 ### See Also
-- [STRFIND](STRFIND.md)
+- [STRFIND](STRFIND.en.md)

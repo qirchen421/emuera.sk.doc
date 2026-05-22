@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                              | Arguments                                                     | Return   |
 | :---------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------ | :------- |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`PRINT_IMG`](./PRINT_IMG.md) | `string`                                                      | none     |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`PRINT_IMG`](./PRINT_IMG.en.md) | `string`                                                      | none     |
 |                                                                                                            | `string`, `int`, `int`, `int`                                 | none     |
 |                                                                                                            | `string`, `string`, `int`, `int`, `int`                       | none     |
 |                                                                                                            | `string`, `string`, `2DIntegerVariable`, `int`, `int`, `int` | none     |
@@ -29,4 +29,4 @@ hide:
     Command only.
 
 ### Related Items
-- [SPRITECREATE](SPRITECREATE.md)
+- [SPRITECREATE](SPRITECREATE.en.md)

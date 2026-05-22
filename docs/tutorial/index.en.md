@@ -13,7 +13,7 @@
 | Understand what era games are | [What is an era game](#era-game) |
 | Write your first ERB script | [First ERB Program](#first-erb-program) |
 | Learn from the basics | [ERABASIC Introduction](intro.en.md) |
-| Look up a specific instruction | [Instruction Reference](../Reference/README.md) |
+| Look up a specific instruction | [Instruction Reference](../Reference/README.en.md) |
 | See what's new in EM+EE | [EM+EE Feature Overview](../EMEE/EMEE_Summary.en.md) |
 | See what's new in Skia | [Skia Feature Overview](../Skia/Skia_Summary.en.md) |
 
@@ -104,18 +104,18 @@
 | Topic | Content |
 |:---|:---|
 | [HTML Tag Syntax](html-syntax.en.md) | HTML_PRINT tags, attributes, variant differences |
+| [Resource Configuration](resources.en.md) | CSV definition format, image formats, Skia resource management |
 
 ### Chapter 7: Advanced Topics 🟢 Optional
 
-> Dynamic analysis, runtime mechanics, anti-patterns — aiming for deep understanding of ERABASIC
+> Dynamic analysis, runtime mechanics — aiming for deep understanding of ERABASIC
 
-**Prerequisites**: Chapter 4 "Functions" ｜ **Key points**: Three-stage pipeline, REF variable lifecycle, avoiding common mistakes
+**Prerequisites**: Chapter 4 "Functions" ｜ **Key points**: Three-stage pipeline, REF variable lifecycle
 
 | Topic | Content |
 |:---|:---|
 | [Dynamic Analysis & Reflection](dynamic-reflection.en.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→variable reflection→ALS aliases |
 | [Runtime Mechanics](runtime-mechanics.en.md) | ConvertArg→SetTransporter→IntoFunction, REF variable lifecycle |
-| [Anti-Patterns & Common Mistakes](anti-patterns.en.md) | Scope misunderstandings, FORM misuse, REF/OUT confusion, HTML output errors |
 
 ---
 
@@ -171,7 +171,7 @@ This defines a custom title screen that displays two options and transitions bas
 
     - **Learn from the basics**: [ERABASIC Introduction](intro.en.md)
     - **Authoring manual**: [Beginner Tutorial](../manual/modification-manual.en.md) → [Intermediate Tutorial](../manual/eratohowiki-ERBmanual.en.md)
-    - **Complete instruction reference**: [Reference](../Reference/README.md)
+    - **Complete instruction reference**: [Reference](../Reference/README.en.md)
     - **Emuera specification**: [Specification Overview](../Emuera/README.en.md)
     - **EM+EE new features overview**: [EMEE_Summary](../EMEE/EMEE_Summary.en.md)
     - **Skia feature overview**: [Skia Feature Overview](../Skia/Skia_Summary.en.md)

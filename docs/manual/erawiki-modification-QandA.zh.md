@@ -37,7 +37,7 @@ LCOUNT = 99
 
 `#DIM` 必须写在每个 `@～～～`（函数标签）的紧后方，否则无效。它不能在其他函数中使用，也不会被保存。  
 字符串型可以用 `#DIMS` 创建。也可以创建巨大的数组等。详情请参阅以下页面：  
-[用户定义的变量](../Emuera/user_defined_variables.md)  
+[用户定义的变量](../Emuera/user_defined_variables.zh.md)  
 
 `LOCAL` 还有另一种用法，即像 `LOCAL@USER_SHOP` 这样在后面加上函数名，就可以从其他函数改写该变量。（这原本是用于调试的功能）  
 以前曾利用这一点来弥补全局变量的不足，但如果这样使用，它就既不是局部也不是全局，最终会出现和 `A～Z` 一样的问题。  
@@ -45,7 +45,7 @@ LCOUNT = 99
 可以决定是否保存，或者是否保存到全局数据中。  
 最近的大型变体大多使用 ERH，所以如果遇到不熟悉名字的变量感到困扰时，请寻找扩展名为 `.ERH` 的文件。  
 （通常放在 ERB 文件夹的根目录下，也可能有多个）  
-[关于 ERH (头文件)](../Emuera/ERH.md)  
+[关于 ERH (头文件)](../Emuera/ERH.zh.md)  
 
 现在还要刻意使用 `LOCAL` 的理由，大概只有在制作补丁时不想大幅修改程序，或者不想升级 Emuera 版本的时候吧。  
 不过，本页面内用于解说的示例代码中可能会使用 `LOCAL`。  
@@ -71,11 +71,11 @@ erabasic 的程序（其他编程语言也大致如此）基本是按照从上�
 
 | 语句名称 | 向前移动 | 向后移动 | 移入其他控制结构内部 |  
 | :--- | :--- | :--- | :--- |  
-| [TRYGOTO・GOTOFORM](../Reference/GOTO.md) | $标签 | $标签 | 可以但不推荐 |  
-| [GOTO](../Reference/GOTO.md) | $标签 | $标签 | 可以但不推荐 |  
-| [LOOP](../Reference/DO.md)・[WHILE](../Reference/WHILE.md)・[FOR](../Reference/FOR.md) | 循环开头 | 循环结尾 | ❌ |  
-| [IF](../Reference/IF.md)・[SELECTCASE](../Reference/SELECTCASE.md) | ELSE・ENDIF・CASE | ❌ | ❌ |  
-| [RESTART](../Reference/RESTART.md) | ❌ | 函数开头 | ❌ |  
+| [TRYGOTO・GOTOFORM](../Reference/GOTO.zh.md) | $标签 | $标签 | 可以但不推荐 |  
+| [GOTO](../Reference/GOTO.zh.md) | $标签 | $标签 | 可以但不推荐 |  
+| [LOOP](../Reference/DO.zh.md)・[WHILE](../Reference/WHILE.zh.md)・[FOR](../Reference/FOR.zh.md) | 循环开头 | 循环结尾 | ❌ |  
+| [IF](../Reference/IF.zh.md)・[SELECTCASE](../Reference/SELECTCASE.zh.md) | ELSE・ENDIF・CASE | ❌ | ❌ |  
+| [RESTART](../Reference/RESTART.zh.md) | ❌ | 函数开头 | ❌ |  
 
 基本上，与其使用各种功能强大的结构，不如使用范围限定的命令，这样程序更安全且易读。  
 如果觉得哪个都可以用，请优先使用上表中**靠下**的项。  
@@ -127,7 +127,7 @@ erabasic 的程序（其他编程语言也大致如此）基本是按照从上�
 虽然写起来简单，但已知存在几个问题。  
 用于查询次数的 `COUNT` 变量是全局变量，因此无法构建两个 `REPEAT` 重叠的机制；如果在 `REPEAT` 中 `CALL` 的函数里使用 `REPEAT`，`CALL` 结束后顺序会变得乱七八糟。  
 
-为此准备了 [FOR～NEXT](../Reference/FOR.md) 结构。  
+为此准备了 [FOR～NEXT](../Reference/FOR.zh.md) 结构。  
 因为可以使用 `COUNT` 以外的变量，所以不会发生上述问题。  
 （也可以使用包括 `COUNT` 在内的全局变量，但那和 `REPEAT` 一样，所以通常使用私有变量）  
 数字也可以不从 0 开始，例如想排除“你（0 号角色）”时，可以从编号 1 开始循环。  
@@ -147,7 +147,7 @@ FOR LCOUNT, 0, CHARANUM
 NEXT  
 ```  
 
-另外可用作重复的结构还有 [WHILE～WEND](../Reference/WHILE.md)。  
+另外可用作重复的结构还有 [WHILE～WEND](../Reference/WHILE.zh.md)。  
 主要用于不知道要循环多少次的情况，两者非常相似，区别在于是在循环前检查结束条件，还是在循环后检查。  
 简单来说，有可能一次都不执行循环内内容时用 `WHILE`，至少要执行一次时用 `LOOP` (`DO`)。  
 不过根据 `BREAK` 和 `IF` 的写法，两者都能实现相同的效果，只要能正确运行，剩下的就是喜好问题。  
@@ -195,7 +195,7 @@ LOCAL = RESULT
 LOCAL = TEST(70)  
 ```  
 
-[自己创建的函数也可以做成表达式函数。](../Emuera/user_defined_in_expression_function.md)  
+[自己创建的函数也可以做成表达式函数。](../Emuera/user_defined_in_expression_function.zh.md)  
 符合以下情况的，做成表达式函数通常会更方便：  
 - 不进行文字输入（如 `INPUT` 等）  
 - 不通过 `PRINT` 等语句显示文字  
@@ -208,7 +208,7 @@ LOCAL = TEST(70)
 比如根据输入得出不同结果，或根据乱数得出不同结果。  
 这种情况下，如果用 `IF` 语句，必须在每个 `IF` 或 `ELSEIF` 后面逐个编写评估式。  
 这相当麻烦，也是导致错误混入的原因。  
-此时派上用场的是 [SELECTCASE 语句](../Reference/SELECTCASE.md)。  
+此时派上用场的是 [SELECTCASE 语句](../Reference/SELECTCASE.zh.md)。  
 这是一个评估一个对象并进行多重分支的命令，比 `IF` 更快。  
 只需要在 `SELECTCASE` 后面写一次评估对象。  
 之后只需在 `CASE` 后面写条件即可。变得相当清爽。  
@@ -249,7 +249,7 @@ ENDSELECT
 
 ### 关于初始设定  
 有 CSV 和 ERB 两种设定方法，但一旦设定后不再更改的东西、仅在标题画面使用的东西等，只能用 CSV 设定。  
-除了下表之外还有一些，但大体上可以在 [GAMEBASE.CSV](../eramaker/CSV_format.md) 或 [_replace.csv](../Emuera/replace.md) 中设定，这里没写的就是用 ERB 设定的东西。  
+除了下表之外还有一些，但大体上可以在 [GAMEBASE.CSV](../eramaker/CSV_format.zh.md) 或 [_replace.csv](../Emuera/replace.zh.md) 中设定，这里没写的就是用 ERB 设定的东西。  
 
 | 项目 | 用于设定的 CSV |  
 | :--- | :--- |  
@@ -279,7 +279,7 @@ ENDSELECT
 
 ### 不要附带 emuera.config  
 如果在分发文件中包含 `emuera.config`，在版本升级时会覆盖玩家自定义的设置。  
-但如果没有任何设置，布局等往往会大幅崩坏，所以利用 [_default.config](../Emuera/config_files.md) 的机制会很方便。  
+但如果没有任何设置，布局等往往会大幅崩坏，所以利用 [_default.config](../Emuera/config_files.zh.md) 的机制会很方便。  
 
 具体步骤大致如下：  
 如果不改变选项进行更新，只需执行 (4) 即可。  
@@ -358,8 +358,8 @@ eraRorona 的文件命名方式非常有参考价值。
 
 主要的改写方法有以下 3 种：  
 - 像 CSV 表記那样写，如 `ABL:技巧`  
-- 创建常数 [#DIM CONST](../Emuera/user_defined_variables.md)（也可以用变量或表达式函数）  
-- 也可以使用 [`#DEFINE`](../Emuera/ERH.md)，但处理困难，面向高级用户。  
+- 创建常数 [#DIM CONST](../Emuera/user_defined_variables.zh.md)（也可以用变量或表达式函数）  
+- 也可以使用 [`#DEFINE`](../Emuera/ERH.zh.md)，但处理困难，面向高级用户。  
 
 例如角色的最大人数，假设是 100，如果在各处都写 100，看到的人无法立刻明白这是最大人数。  
 
@@ -665,7 +665,7 @@ Emuera 的条件判定机制是 C 语言风格的，其他编程语言大体思�
 Emuera 中将二进制写时的右端作为 0 比特，向左数是 1 比特、2 比特…，左端是 63 比特。  
 
 各桁的取出也可以用与十进制相同的计算，但通常使用动作高速且写得简洁的**比特掩码 (Bitmask)**。Emuera 中 `&` 运算符相当于 `AND`，`|` 运算符相当于 `OR`。  
-[关于污垢 (页面下方)](../eramaker/variables.md)  
+[关于污垢 (页面下方)](../eramaker/variables.zh.md)  
 [Mask (信息工学)](http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%82%AF_%28%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%28)  
 [eratoho 总结 V3 - ERB 语法讲座 3](../manual/eratohowiki-ERBmanual.md#_38)  
 
@@ -675,7 +675,7 @@ Emuera 中将二进制写时的右端作为 0 比特，向左数是 1 比特、2
 
 旧的比特掩码程序，仅将十进制部分改写为二进制就会相当易懂，但现在可以用 `GETBIT`、`SETBIT`、`CLEARBIT` 这 3 个命令简单进行比特操作。  
 除非需要一次性取出多个比特，否则不需要比特掩码。（这里与其说是实用，不如说是为了变体改造的知识而写）  
-[BIT 操作系命令](../Reference/BIT_OPERATION.md)  
+[BIT 操作系命令](../Reference/BIT_OPERATION.zh.md)  
 
 这种方法的塞入缺点是，后来需要 64 个以上的 flag，或者想设定 1 以上的数时，应对很麻烦。不能像数组那样简单增加上限。  
 最近的 Emuera 也可以用 `#DIM` 追加变量，所以那种情况可能更简单。  

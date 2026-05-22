@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments | Return |
 | :--------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GCREATED`](./GCREATED.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCREATED`](./GCREATED.en.md) | `int`     | `int`  |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [GCREATE](GCREATE.md)
+- [GCREATE](GCREATE.en.md)

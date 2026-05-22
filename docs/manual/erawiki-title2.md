@@ -874,7 +874,7 @@ GAMEBASE_TITLEを省いてアスキーアートに変えたり、画像を表示
 フォントの表示、色変え、特殊な表示など  
 
 - [リファレンス→`PRINT系`](../Reference/PRINT.md)
-- [リファレンス→表示操作・フォント操作・表示仕様参照](../Reference/README.md#_3)
+- [リファレンス→表示操作・フォント操作・表示仕様参照](../Reference/README.md#display-font)
 - [リファレンス→`HTML_PRINT`](../Reference/HTML_PRINT.md)
 
 画像の表示  
@@ -882,7 +882,7 @@ GAMEBASE_TITLEを省いてアスキーアートに変えたり、画像を表示
 - [リファレンス→`PRINT_IMG`](../Reference/PRINT_IMG.md)
 - [リソースファイルについて](../Emuera/resources.md)
 - [リファレンス→`HTML_PRINT`](../Reference/HTML_PRINT.md)
-- [リファレンス→画像処理関連](../Reference/README.md#_14)
+- [リファレンス→画像処理関連](../Reference/README.md#image)
 
 また、`WINDOW_TITLE`は代入可能。  
 左上のウィンドウタイトルに何か表示を加えたりしても良いかもしれない。  
@@ -936,7 +936,7 @@ $TITLE_SELECT
 
 ということなので、繰り返し処理の書き方も教わろう。  
 
-- [リファレンス→ループ・分岐構文](../Reference/README.md#_10)
+- [リファレンス→ループ・分岐構文](../Reference/README.md#flow-control)
 - [システム改造Q&A→基礎知識→繰り返し処理の書き方(FORとREPEATの違いと推奨書式)](erawiki-modification-QandA.md#forrepeat)
 
 よくわからない場合は、わかるまでとりあえずそのままお借りしよう。  

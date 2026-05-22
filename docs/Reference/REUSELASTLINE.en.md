@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                     | Arguments | Return   |
 | :-------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`REUSELASTLINE`](./REUSELASTLINE.md) | `string`  | none     |
+| ![](../assets/images/IconEmuera.webp)[`REUSELASTLINE`](./REUSELASTLINE.en.md) | `string`  | none     |
 
 !!! info "API"
 
@@ -16,8 +16,8 @@ hide:
     ```
 	Rewrites the last line with the specified formatted string.
 	However, lines rewritten using this will be replaced when the next line is added.
-	Basically, this should only be used within the loop processing of [`INPUT`](./INPUT.md) and [`INPUTS`](./INPUT.md).
-	The argument uses the same format as [`PRINTFORM`](./PRINT.md).
+	Basically, this should only be used within the loop processing of [`INPUT`](./INPUT.en.md) and [`INPUTS`](./INPUT.en.md).
+	The argument uses the same format as [`PRINTFORM`](./PRINT.en.md).
 	Note that `REUSELASTLINE ` (with this half-width space required) allows creating an empty line without warnings.
 
     ```  { #language-erbapi }
@@ -30,7 +30,7 @@ hide:
 	ENDIF  
 	```
 
-	Calling `REUSELASTLINE` before [`GOTO INPUT_LOOP`](./GOTO.md) will erase the previous input from the screen, and the next input will be displayed on the same line as the previous input.
+	Calling `REUSELASTLINE` before [`GOTO INPUT_LOOP`](./GOTO.en.md) will erase the previous input from the screen, and the next input will be displayed on the same line as the previous input.
 	This prevents the number of lines from increasing even when invalid inputs are repeated, avoiding the situation where choices end up off-screen.
 	Additionally, at the end of conditional branches in `@USERXXX` family functions
 	(applicable to `@USERCOM`, `@USERSHOP`, and `@USERABLUP`):

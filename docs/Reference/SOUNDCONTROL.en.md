@@ -7,11 +7,11 @@ hide:
 
 | Function name                                                                    | Arguments                     | Return |
 | :------------------------------------------------------------------------------- | :---------------------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`SOUNDCONTROL`](./SOUNDCONTROL.md)             | `int`, `int`{, `int`, `int`}  | `int`  |
-| ![](../assets/images/IconSK.webp)[`BGMCONTROL`](./SOUNDCONTROL.md)               | `int`{, `int`, `int`}         | `int`  |
-| ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.md)        | `int`{, `int`}                | `int`  |
-| ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.md)           | {`int`}                       | `int`  |
-| ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.md)             | none                          | `int`  |
+| ![](../assets/images/IconSK.webp)[`SOUNDCONTROL`](./SOUNDCONTROL.en.md)             | `int`, `int`{, `int`, `int`}  | `int`  |
+| ![](../assets/images/IconSK.webp)[`BGMCONTROL`](./SOUNDCONTROL.en.md)               | `int`{, `int`, `int`}         | `int`  |
+| ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.en.md)        | `int`{, `int`}                | `int`  |
+| ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.en.md)           | {`int`}                       | `int`  |
+| ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.en.md)             | none                          | `int`  |
 
 !!! info "API — SOUNDCONTROL"
 
@@ -134,9 +134,9 @@ hide:
     ```
 
 ### Related
-- [PLAYSOUND](PLAYSOUND.md)
-- [PLAYBGM](PLAYBGM.md)
-- [STOPSOUND](STOPSOUND.md)
-- [STOPBGM](STOPBGM.md)
-- [SETSOUNDVOLUME](SETSOUNDVOLUME.md)
-- [SETBGMVOLUME](SETBGMVOLUME.md)
+- [PLAYSOUND](PLAYSOUND.en.md)
+- [PLAYBGM](PLAYBGM.en.md)
+- [STOPSOUND](STOPSOUND.en.md)
+- [STOPBGM](STOPBGM.en.md)
+- [SETSOUNDVOLUME](SETSOUNDVOLUME.en.md)
+- [SETBGMVOLUME](SETBGMVOLUME.en.md)

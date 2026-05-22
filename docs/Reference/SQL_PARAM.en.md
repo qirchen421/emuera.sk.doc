@@ -7,12 +7,12 @@ hide:
 
 | Function name | Arguments | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`SQL_ESCAPE`](./SQL_PARAM.md) | `string` | `string` |
-| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_NONQUERY`](./SQL_PARAM.md) | `string`, `string`(, `string`...) | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_READER`](./SQL_PARAM.md) | `string`, `string`(, `string`...) | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_SCALAR_LONG`](./SQL_PARAM.md) | `string`, `string`(, `string`...) | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_SCALAR_STRING`](./SQL_PARAM.md) | `string`, `string`(, `string`...) | `string` |
-| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_SCALAR_FLOAT`](./SQL_PARAM.md) | `string`, `string`(, `string`...) | `float` |
+| ![](../assets/images/IconSK.webp)[`SQL_ESCAPE`](./SQL_PARAM.en.md) | `string` | `string` |
+| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_NONQUERY`](./SQL_PARAM.en.md) | `string`, `string`(, `string`...) | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_READER`](./SQL_PARAM.en.md) | `string`, `string`(, `string`...) | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_SCALAR_LONG`](./SQL_PARAM.en.md) | `string`, `string`(, `string`...) | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_SCALAR_STRING`](./SQL_PARAM.en.md) | `string`, `string`(, `string`...) | `string` |
+| ![](../assets/images/IconSK.webp)[`SQL_P_EXECUTE_SCALAR_FLOAT`](./SQL_PARAM.en.md) | `string`, `string`(, `string`...) | `float` |
 
 !!! info "API"
 

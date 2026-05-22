@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                   | 参数                | 返回值   |
 | :----------------------------------------------------------------------- | :------------------ | :------- |
-| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMNAME`](./COLOR_FROM.md) | `string`            | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.md)  | `int`, `int`, `int` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMNAME`](./COLOR_FROM.zh.md) | `string`            | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.zh.md)  | `int`, `int`, `int` | `string` |
 
 !!! info "API"
 
@@ -27,4 +27,4 @@ hide:
     同时支持指令和表达式函数。
 
 ### 相关项目
-- [SETCOLOR](SETCOLOR.md)
+- [SETCOLOR](SETCOLOR.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                 | Arguments | Return |
 | :----------------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`DELALLCHARA`](./DELALLCHARA.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`DELALLCHARA`](./DELALLCHARA.en.md) | none      | none   |
 
 !!! info "API"
 
@@ -27,4 +27,4 @@ hide:
     Command only.
 
 ### Related
-- [DELCHARA](DELCHARA.md)
+- [DELCHARA](DELCHARA.en.md)

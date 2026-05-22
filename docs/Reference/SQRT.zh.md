@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                   | 参数  | 返回值 |
 | :------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     该函数同时支持指令和表达式函数两种用法。
 
 ### 相关项目
-- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.md)
+- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.zh.md)

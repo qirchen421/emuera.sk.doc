@@ -29,12 +29,12 @@ To increase (or decrease) the items displayed by `PRINT_SHOPITEM`, change the ar
 The smaller of the `ITEMNAME` and `ITEMSALES` array sizes will be the range of items displayed by `PRINT_SHOPITEM`.
 
 ## DRAWLINE Character
-The character displayed by the [`DRAWLINE`](../Reference/DRAWLINE.md) command.  
+The character displayed by the [`DRAWLINE`](../Reference/DRAWLINE.en.md) command.  
 The default is `-`.
 
 ## BAR Character 1
 ## BAR Character 2
-Specifies the characters used in the [`BAR`](../Reference/BAR.md) or [`BARL`](../Reference/BAR.md) commands.  
+Specifies the characters used in the [`BAR`](../Reference/BAR.en.md) or [`BARL`](../Reference/BAR.en.md) commands.  
 The defaults are `*` for `BAR Character 1` and `.` for `BAR Character 2`.  
 In this case, it will be displayed like `[****....]`.  
 Full-width characters or strings consisting of multiple characters can also be specified, but consider display alignment.  

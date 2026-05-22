@@ -9,14 +9,14 @@ hide:
 
 === "v18"
 
-    * Function added: [`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.md).
+    * Function added: [`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.en.md).
     * Bug fix: Fixed line position shift issue with [`<div>` tag](../EMEE/EMEE_Summary.md#html_print).
-    * Bug fix: Fixed error when target of [`DT_CELL_GETS`](../Reference/DT_CELL.md) is INT.
+    * Bug fix: Fixed error when target of [`DT_CELL_GETS`](../Reference/DT_CELL.en.md) is INT.
     * Bug fix: Fixed issue where outer [`<clearbutton>` tag](../EMEE/EMEE_Summary.md#html_print) was ineffective against content in [`<div>` tag](../EMEE/EMEE_Summary.md#html_print).
 
 === "v17"
 
-    * Function added: [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md).
+    * Function added: [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.en.md).
     * Feature extended: Added `display`, `margin`, `padding`, `border`, `bcolor`, `radius` attributes to [`<div>` tag](../EMEE/EMEE_Summary.md#html_print).
     * Bug fix: Fixed crash when rendering `<div>` after restart.
 
@@ -32,10 +32,10 @@ hide:
 
 === "v16"
 
-    * Functions added: [`DT_TOXML`](../Reference/DT_SERIALIZATION.md), [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md), [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md), [`MOVETEXTBOX`](../Reference/TEXTBOX.md), [`RESUMETEXTBOX`](../Reference/TEXTBOX.md).
+    * Functions added: [`DT_TOXML`](../Reference/DT_SERIALIZATION.en.md), [`DT_FROMXML`](../Reference/DT_SERIALIZATION.en.md), [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.en.md), [`MOVETEXTBOX`](../Reference/TEXTBOX.en.md), [`RESUMETEXTBOX`](../Reference/TEXTBOX.en.md).
     * Feature extended: Added [`<div>` tag](../EMEE/EMEE_Summary.md#html_print), added `srcm` attribute to `<img>` tag, extended rendering specification.
     * Feature extended: Added 2 more forms to [`PRINT_IMG` command](../EMEE/EMEE_Summary.md#html_printprint).
-    * Feature extended: [`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md) now accepts array size specification.
+    * Feature extended: [`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.en.md) now accepts array size specification.
 
 === "v15"
 
@@ -76,11 +76,11 @@ hide:
 === "v10"
 
     * HTML tag added: [`<clearbutton>`](../EMEE/EMEE_Summary.md#html_print).
-    * Performance improvement: Improved [`XML_GET`](../Reference/XML_GET.md) performance through algorithm improvements.
+    * Performance improvement: Improved [`XML_GET`](../Reference/XML_GET.en.md) performance through algorithm improvements.
 
 === "v9"
 
-    * Function added: [`ENUMFILES`](../Reference/ENUMFILES.md).
+    * Function added: [`ENUMFILES`](../Reference/ENUMFILES.en.md).
 
 === "v8c"
 
@@ -89,17 +89,17 @@ hide:
 === "v8b"
 
     * Bug fix: Fixed issue with [`REPLACE` extension](../EMEE/EMEE_Summary.md#replace) (caused AA map display errors in eraTW).
-    * Specification change: Changed [`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md) from always returning `1` to string type (same as `RESULTS:0`).
+    * Specification change: Changed [`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.en.md) from always returning `1` to string type (same as `RESULTS:0`).
 
 === "v8"
 
-    * Feature extended: [`XML_GET`](../Reference/XML_GET.md), [`REPLACE`](../EMEE/EMEE_Summary.md#replace)
-    * Bug fix: [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md), [`VARSETEX`](../Reference/VARSETEX.md)
+    * Feature extended: [`XML_GET`](../Reference/XML_GET.en.md), [`REPLACE`](../EMEE/EMEE_Summary.md#replace)
+    * Bug fix: [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.en.md), [`VARSETEX`](../Reference/VARSETEX.en.md)
 
 === "v7"
 
-    * [`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.md) feature extended
-    * [`REGEXPMATCH`](../Reference/REGEXPMATCH.md) feature extended
+    * [`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.en.md) feature extended
+    * [`REGEXPMATCH`](../Reference/REGEXPMATCH.en.md) feature extended
 
 === "v6"
 
@@ -107,25 +107,25 @@ hide:
 
 === "v5"
 
-    * Fixed descriptions of [`XML_SET`](../Reference/XML_SET.md), [`XML_GET`](../Reference/XML_SET.md).
-    * Added description for [`XML_TOSTR`](../Reference/XML_TOSTR.md).
-    * Functions added: [`XML_ADDNODE`](../Reference/XML_ADDNODE.md), [`XML_REMOVENODE`](../Reference/XML_REMOVENODE.md), [`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.md), [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md), [`XML_REPLACE`](../Reference/XML_REPLACE.md).
+    * Fixed descriptions of [`XML_SET`](../Reference/XML_SET.en.md), [`XML_GET`](../Reference/XML_SET.en.md).
+    * Added description for [`XML_TOSTR`](../Reference/XML_TOSTR.en.md).
+    * Functions added: [`XML_ADDNODE`](../Reference/XML_ADDNODE.en.md), [`XML_REMOVENODE`](../Reference/XML_REMOVENODE.en.md), [`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.en.md), [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.en.md), [`XML_REPLACE`](../Reference/XML_REPLACE.en.md).
 
 === "v4"
 
-    * [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md) bug fix.
-    * Functions added: [`MAP_CLEAR`](../Reference/MAP_OPERATION.md), [`MAP_SIZE`](../Reference/MAP_OPERATION.md), [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md), [`XML_TOSTR`](../Reference/XML_TOSTR.md).
+    * [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.en.md) bug fix.
+    * Functions added: [`MAP_CLEAR`](../Reference/MAP_OPERATION.en.md), [`MAP_SIZE`](../Reference/MAP_OPERATION.en.md), [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.en.md), [`XML_TOSTR`](../Reference/XML_TOSTR.en.md).
     * Fixed [`INPUT` system extension](../EMEE/EMEE_Summary.md#input) features.
 
 === "v3"
 
-    * Functions added: [`EXISTFILE`](../Reference/EXISTFILE.md), [`MAP_CREATE`](../Reference/MAP_MANAGE.md), [`MAP_EXIST`](../Reference/MAP_MANAGE.md), [`MAP_RELEASE`](../Reference/MAP_MANAGE.md), [`MAP_GET`](../Reference/MAP_OPERATION.md), [`MAP_HAS`](../Reference/MAP_OPERATION.md), [`MAP_SET`](../Reference/MAP_OPERATION.md), [`MAP_REMOVE`](../Reference/MAP_OPERATION.md), [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md), [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.md).
+    * Functions added: [`EXISTFILE`](../Reference/EXISTFILE.en.md), [`MAP_CREATE`](../Reference/MAP_MANAGE.en.md), [`MAP_EXIST`](../Reference/MAP_MANAGE.en.md), [`MAP_RELEASE`](../Reference/MAP_MANAGE.en.md), [`MAP_GET`](../Reference/MAP_OPERATION.en.md), [`MAP_HAS`](../Reference/MAP_OPERATION.en.md), [`MAP_SET`](../Reference/MAP_OPERATION.en.md), [`MAP_REMOVE`](../Reference/MAP_OPERATION.en.md), [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.en.md), [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.en.md).
 
 === "v2"
 
-    * Removed `FUNCEXIST` (please use EE's [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md))
-    * Function name change: `VAREXIST` → [`EXISTVAR`](../Reference/EXISTVAR.md) (to match `EXISTFUNCTION`)
-    * Functions added: [`XML_DOCUMENT`](../Reference/XML_MANAGE.md), [`XML_RELEASE`](../Reference/XML_MANAGE.md), [`XML_SET`](../Reference/XML_SET.md), [`XML_EXIST`](../Reference/XML_MANAGE.md), [`XML_TOSTR`](../Reference/XML_TOSTR.md).
+    * Removed `FUNCEXIST` (please use EE's [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.en.md))
+    * Function name change: `VAREXIST` → [`EXISTVAR`](../Reference/EXISTVAR.en.md) (to match `EXISTFUNCTION`)
+    * Functions added: [`XML_DOCUMENT`](../Reference/XML_MANAGE.en.md), [`XML_RELEASE`](../Reference/XML_MANAGE.en.md), [`XML_SET`](../Reference/XML_SET.en.md), [`XML_EXIST`](../Reference/XML_MANAGE.en.md), [`XML_TOSTR`](../Reference/XML_TOSTR.en.md).
     * `XML_GET` first argument can now be integer type.
 
 === "v1"
@@ -162,12 +162,12 @@ hide:
 
 === "v51"
 	v50 is skipped
-	* Fixed [`SPRITEANIME`](../Reference/SPRITEANIMECREATE.md) with daughterpatch's patch, fixed tooltips, logs now saved with UTF-8 BOM
+	* Fixed [`SPRITEANIME`](../Reference/SPRITEANIMECREATE.en.md) with daughterpatch's patch, fixed tooltips, logs now saved with UTF-8 BOM
 	* Can replace line break codes when joining lines from options (default is one half-width space)
 	* Completed some translations with CRER's patch, clipboard feature made into tool
 	* Fixed issue where sprites specified in CSV using lowercase letters were not generated properly
 	* CSV sprite generation logs now displayed when showing load report in config
-	* Fixed [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) system commands not working due to restart process change
+	* Fixed [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.en.md) system commands not working due to restart process change
 	* Fixed line wrapping to optimal character count with JukesBouver's patch
 
 === "v49"
@@ -175,7 +175,7 @@ hide:
 	* Memory optimization by JukesBouver99
 	* RikaiDialog processing fix by Alex Swift
 	* Fixed and adjusted sprite generation process from CSV in resources folder, SPRITEDISPOSEALL also fixed
-	* Merged daughter's patch. Added [EXISTMETH](../Reference/EXISTMETH.md), [GETMETH](../Reference/GETMETH.md), [GETMETHS](../Reference/GETMETH.md)
+	* Merged daughter's patch. Added [EXISTMETH](../Reference/EXISTMETH.en.md), [GETMETH](../Reference/GETMETH.en.md), [GETMETHS](../Reference/GETMETH.en.md)
 
 === "v48fix"
 	* Fixed middle-click detection implemented in v48 being incorrect
@@ -183,41 +183,41 @@ hide:
 	* Fixed proper initialization for each Xml, Map, DataTable according to attributes (data saved in save data→cleared when loading separate data, global data→cleared on RESETGLOBAL, LOADGLOBAL)
 	* Merged Private v22 changes
 	* Fixed unable to scroll up logs with up key in text box
-	* Added second argument to [OUTPUTLOG](../Reference/OUTPUTLOG.md). When non-zero, excludes version info
+	* Added second argument to [OUTPUTLOG](../Reference/OUTPUTLOG.en.md). When non-zero, excludes version info
 	* Merged MogeMoc's (RainForTW) fix. srcb now applies on mouseover regardless of depth for images displayed with HTML_PRINT
 	* Added warning when character 0 is defined multiple times
 	* Added exception handling for files opened in separate processes
 
 === "v48"
 	* Merged master branch of [Emuera.NET](https://gitlab.com/VVIIlet/emuera) by VVII (as of 2024/06/30)
-	* Added various QoL improvements, added [`VAR` system commands](../Reference/VAR.md), [`PRINTN` system commands](../Reference/PRINTN.md), [`HTML_PRINT_ISLAND` command](../Reference/HTML_PRINT_ISLAND.md)
-	* [`INPUT`](../Reference/INPUT.md) system now accepts middle-click (mouse wheel click). `RESULTS:1` returns 3
+	* Added various QoL improvements, added [`VAR` system commands](../Reference/VAR.en.md), [`PRINTN` system commands](../Reference/PRINTN.en.md), [`HTML_PRINT_ISLAND` command](../Reference/HTML_PRINT_ISLAND.en.md)
+	* [`INPUT`](../Reference/INPUT.en.md) system now accepts middle-click (mouse wheel click). `RESULTS:1` returns 3
 	* Added HOTKEY related commands
 	* Added comment symbol "`;^;`" that only works in EMEE
 
 === "v47"
-	* Rolled back previous specification for [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) fix due to issues in v46
-	* Added [background operation commands](../Reference/BACKGROUND.md) by Neo_Kesha
-	* Added [`CALLSHARP`](../Reference/CALLSHARP.md) by Neo_Kesha
+	* Rolled back previous specification for [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.en.md) fix due to issues in v46
+	* Added [background operation commands](../Reference/BACKGROUND.en.md) by Neo_Kesha
+	* Added [`CALLSHARP`](../Reference/CALLSHARP.en.md) by Neo_Kesha
 	* Added [CSV alias feature](../EMEE/EMEE_Summary.md#alias) by Neo_Kesha
-	* Added [`BITMAP_CACHE_ENABLE`](../Reference/BITMAP_CACHE_ENABLE.md) by JukesBouver99 (fairylord/KFC)
+	* Added [`BITMAP_CACHE_ENABLE`](../Reference/BITMAP_CACHE_ENABLE.en.md) by JukesBouver99 (fairylord/KFC)
 	* .NET 8 support by fairylord
 
 === "v46"
-	* Fixed [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) arguments to return lines corresponding to `LINECOUNT`
-	* Extended [`FLOWINPUT`](../Reference/FLOWINPUT.md)
-	* Added [`FLOWINPUTS`](../Reference/FLOWINPUT.md)
+	* Fixed [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.en.md) arguments to return lines corresponding to `LINECOUNT`
+	* Extended [`FLOWINPUT`](../Reference/FLOWINPUT.en.md)
+	* Added [`FLOWINPUTS`](../Reference/FLOWINPUT.en.md)
 
 === "v45"
 	* NAudio version feature extension and stability improvements by Ignominious.Reverie
-	* Fixed exception when performing [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) without specifying font
-	* [`GETCONFIG`, `GETCONFIGS`](../Reference/GETCONFIG.md) now can retrieve EMEE extended config
+	* Fixed exception when performing [`GDRAWTEXT`](../Reference/GDRAWTEXT.en.md) without specifying font
+	* [`GETCONFIG`, `GETCONFIGS`](../Reference/GETCONFIG.en.md) now can retrieve EMEE extended config
 
 === "v44"
-	* [`PLAYSOUND`](../Reference/PLAYSOUND.md) second argument now can set playback count
+	* [`PLAYSOUND`](../Reference/PLAYSOUND.en.md) second argument now can set playback count
 
 === "v43"
-	* Bug fixes for [`MOUSEB`](../Reference/MOUSEB.md), [`UPDATECHECK`](../Reference/UPDATECHECK.md), [`SPRITEANIMEADDFRAME`](../Reference/SPRITEANIMEADDFRAME.md)
+	* Bug fixes for [`MOUSEB`](../Reference/MOUSEB.en.md), [`UPDATECHECK`](../Reference/UPDATECHECK.en.md), [`SPRITEANIMEADDFRAME`](../Reference/SPRITEANIMEADDFRAME.en.md)
 	* NAudio version stability improvements (Ignminious.Reverie, CRER)
 	* Fixed some missing config translations
 	* Merged memory optimization for resource file reading by MogeMoc (RainForTW)
@@ -230,7 +230,7 @@ hide:
 	* Replaced included "libwebp.dll" with new version, added "libsharpyuv.dll"
 
 === "v41"
-	* Added [`TOOLIP_IMG`](../Reference/TOOLTIP_EXTENSION.md)
+	* Added [`TOOLIP_IMG`](../Reference/TOOLTIP_EXTENSION.en.md)
 	* Bundled NAudio version for Linux music playback (Ignominious.Reverie)
 
 === "v40"
@@ -245,45 +245,45 @@ hide:
 
 === "v39"
 	* Fixed DPI scaling issue with CRER's patch
-	* Fixed [`ARRAYREMOVE`](../Reference/ARRAYREMOVE.md) third argument 0 or less not clearing all subsequent array elements
-	* Fixed character count mismatch between [`PRINTC` and `PRINTLC`](../Reference/PRINT.md)
+	* Fixed [`ARRAYREMOVE`](../Reference/ARRAYREMOVE.en.md) third argument 0 or less not clearing all subsequent array elements
+	* Fixed character count mismatch between [`PRINTC` and `PRINTLC`](../Reference/PRINT.en.md)
 	* Implemented resource CSV re-read function
 
 === "v38fix"
 	* Fixed some function and command behavior issues due to CurrentCulture change
 
 === "v38"
-	* Fixed suspicious behavior of [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) and [`GGETTEXTSIZE`](../Reference/GGETTEXTSIZE.md) with some fonts
-	* Fixed [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md) to behave according to case-insensitive option
+	* Fixed suspicious behavior of [`GDRAWTEXT`](../Reference/GDRAWTEXT.en.md) and [`GGETTEXTSIZE`](../Reference/GGETTEXTSIZE.en.md) with some fonts
+	* Fixed [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.en.md) to behave according to case-insensitive option
 	* .NET 7 officially supported thanks to CRER
 
 === "v37"
 	* Added config option to handle UTF-8 (without BOM) files
-	* Fixed [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md) fix in v36 having significant impact on processing time, changed to only ignore case when second argument is non-zero
-	* Fixed suspicious timer behavior when mouse click option is attached to [`TINPUT`](../Reference/TINPUT.md) system
+	* Fixed [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.en.md) fix in v36 having significant impact on processing time, changed to only ignore case when second argument is non-zero
+	* Fixed suspicious timer behavior when mouse click option is attached to [`TINPUT`](../Reference/TINPUT.en.md) system
 
 === "v36"
 	* Supported font files (ttf, otf)
-	* Fixed search not working properly with case variations in [`ENUMFUNC`](../Reference/ENUMFUNC.md) and [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md)
+	* Fixed search not working properly with case variations in [`ENUMFUNC`](../Reference/ENUMFUNC.en.md) and [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.en.md)
 
 === "v35fix"
-	* Fixed issue with [`BINPUTS`](../Reference/BINPUT.md)
+	* Fixed issue with [`BINPUTS`](../Reference/BINPUT.en.md)
 
 === "v35"
 	* Changed restart process to address memory leak when restarting repeatedly
 	* Identified cause of initializer error, now shows error message with try-catch (caused by missing WMP)
 	* Added option to check for duplicate ERD identifiers and local variables
-	* Fixed issue where [`BINPUT`](../Reference/BINPUT.md) executed without newline in PRINT was not recognized as button
+	* Fixed issue where [`BINPUT`](../Reference/BINPUT.en.md) executed without newline in PRINT was not recognized as button
 
 === "v34"
-	* Added [`GDASHSTYLE`](../Reference/GDASHSTYLE.md)
+	* Added [`GDASHSTYLE`](../Reference/GDASHSTYLE.en.md)
 
 === "v33"
-	* Added [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md)
-	* [`GCREATEFROMFILE` extension](../Reference/GCREATEFROMFILE.md)
+	* Added [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.en.md)
+	* [`GCREATEFROMFILE` extension](../Reference/GCREATEFROMFILE.en.md)
 
 === "v32"
-	* Added [`GDRAWLINE`](../Reference/GDRAWLINE.md)
+	* Added [`GDRAWLINE`](../Reference/GDRAWLINE.en.md)
 
 === "v31fix"
 	* Fixed issue where `BINPUT` and div feature did not work together properly
@@ -291,50 +291,50 @@ hide:
 	* Fixed issue where screen rendering did not occur for some reason, making div combination unusable
 
 === "v31"
-	* Added [`BINPUT` and `BINPUTS`](../Reference/BINPUT.md) commands
+	* Added [`BINPUT` and `BINPUTS`](../Reference/BINPUT.en.md) commands
 
 === "v30"
-	* Added [`SKIPLOG`](../Reference/SKIPLOG.md) command
+	* Added [`SKIPLOG`](../Reference/SKIPLOG.en.md) command
 	* Fixed shortcut keys for menu access not working
 
 === "v29"
 	* Fixed `GCREATEFROMFILE` not working
 	* Fixed div content not following when specifying margin, border, padding with EM's div feature
 	* Fixed internal processing still running when translation dictionary was disabled, causing slow rendering
-	* Added [`MOUSEB`](../Reference/MOUSEB.md)
-	* Added [`SPRITEDISPOSEALL`](../Reference/SPRITEDISPOSEALL.md)
+	* Added [`MOUSEB`](../Reference/MOUSEB.en.md)
+	* Added [`SPRITEDISPOSEALL`](../Reference/SPRITEDISPOSEALL.en.md)
 
 === "v28"
 	* Fixed EM's INPUT extension not working
 	* Extended INPUT command uniquely for EE
-	* Added [`FLOWINPUT`](../Reference/FLOWINPUT.md)
+	* Added [`FLOWINPUT`](../Reference/FLOWINPUT.en.md)
 
 === "v27"
 	* English dictionary support with patch from JukesBouver99
 
 === "v26"
-	* [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) feature extended with `GSETPEN`
-	* Added [`GGETPEN`](../Reference/GGETPEN.md), [`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md), [`GGETBRUSH`](../Reference/GGETBRUSH.md)
-	* Added [tooltip feature extension commands](../Reference/TOOLTIP_EXTENSION.md)
+	* [`GDRAWTEXT`](../Reference/GDRAWTEXT.en.md) feature extended with `GSETPEN`
+	* Added [`GGETPEN`](../Reference/GGETPEN.en.md), [`GGETPENWIDTH`](../Reference/GGETPENWIDTH.en.md), [`GGETBRUSH`](../Reference/GGETBRUSH.en.md)
+	* Added [tooltip feature extension commands](../Reference/TOOLTIP_EXTENSION.en.md)
 
 === "v25"
 	* Ported [`Clipboard` feature](../EMEE/EMEE_Summary.md#emuera-anchorclipboard) from Emuera-Anchor
 	* Completed translations
 
 === "v24"
-	* Supported [internationalization](../i18n/README.md) (same as EMv14)
+	* Supported [internationalization](../i18n/README.en.md) (same as EMv14)
 	* Applied [`GETNUM` to multidimensional array ERD](../EMEE/EMEE_Summary.md#getnumerd)
-	* Added [`ERDNAME`](../Reference/ERDNAME.md)
+	* Added [`ERDNAME`](../Reference/ERDNAME.en.md)
 
 === "v23"
     * Extended [`ERD` feature](../EMEE/EMEE_Summary.md#erhcsverd) to work with 2D and 3D arrays
 
 === "v22"
     * Specification change: [`ERD` feature](../EMEE/EMEE_Summary.md#erhcsverd) now throws error at startup if the same identifier is defined in multiple definition files for one variable name. Allows specifying multiple identifiers for one array.
-    * Added [`INPUTANY`](../Reference/INPUTANY.md)
+    * Added [`INPUTANY`](../Reference/INPUTANY.en.md)
 
 === "v21"
-    * Added [`GETTEXTBOX`](../Reference/TEXTBOX.md), [`SETTEXTBOX`](../Reference/TEXTBOX.md)
+    * Added [`GETTEXTBOX`](../Reference/TEXTBOX.en.md), [`SETTEXTBOX`](../Reference/TEXTBOX.en.md)
 
 === "v20"
     * Further accelerated ERD reading

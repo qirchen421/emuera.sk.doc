@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                            | Arguments | Return |
 | :---------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.md) | `int`     | `int`  |
+| ![](../assets/images/IconEE.webp)[`SPRITEDISPOSEALL`](./SPRITEDISPOSEALL.en.md) | `int`     | `int`  |
 
 !!! info "API"
 
@@ -40,4 +40,4 @@ hide:
 	```
 
 ### Related Items
-- [SPRITEDISPOSE](./SPRITEDISPOSE.md)
+- [SPRITEDISPOSE](./SPRITEDISPOSE.en.md)

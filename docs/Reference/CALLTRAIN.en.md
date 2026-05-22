@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :----------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLTRAIN`](./CALLTRAIN.md) | `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`CALLTRAIN`](./CALLTRAIN.en.md) | `int` | none   |
 
 !!! info "API"
 
@@ -28,7 +28,7 @@ hide:
 	CALLTRAIN (number of commands set)
     ```
 	Like normal command execution, it calls `SHOW_STATUS` and `SHOW_USERCOM`, but the display of `TRAIN` commands and `USERCOM` is not shown.  
-	If you really want to display `USERCOM`, you can use [`NOSKIP～ENDNOSKIP`](./SKIP_RELATE.md).  
+	If you really want to display `USERCOM`, you can use [`NOSKIP～ENDNOSKIP`](./SKIP_RELATE.en.md).  
 	After automatic execution by `CALLTRAIN` ends, the system function `@CALLTRAINEND` is called.  
 	However, note that `@CALLTRAINEND` is not an event function and cannot be overloaded.  
 	The command numbers used for specifying commands are the values specified in `TRAIN.CSV`, not the in-game values.
@@ -38,5 +38,5 @@ hide:
     Commands only.
 
 ### See Also
-* [DOTRAIN](DOTRAIN.md)
-* [STOPCALLTRAIN](STOPCALLTRAIN.md)
+* [DOTRAIN](DOTRAIN.en.md)
+* [STOPCALLTRAIN](STOPCALLTRAIN.en.md)

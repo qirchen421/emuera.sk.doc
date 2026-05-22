@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                           | Arguments     | Return  |
 | :------------------------------------------------------------------------------- | :------- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.md) | `string` | `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.en.md) | `string` | `string`|
 
 !!! info "API"
 

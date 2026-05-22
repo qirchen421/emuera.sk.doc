@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值 |
 | :------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`PLAYSOUND`](./PLAYSOUND.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`PLAYSOUND`](./PLAYSOUND.zh.md) | `string` | `void` |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     因为使用了 WMPLib 支持库，所以允许使用 Windows Media Player 进行播放。
 
 ### 関連項目
-- [PLAYBGM](PLAYBGM.md)
-- [SETSOUNDVOLUME](SETSOUNDVOLUME.md)
+- [PLAYBGM](PLAYBGM.zh.md)
+- [SETSOUNDVOLUME](SETSOUNDVOLUME.zh.md)

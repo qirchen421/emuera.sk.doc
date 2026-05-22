@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                          | Arguments               | Return |
 | :------------------------------------------------------------------- | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITESETPOS`](./SPRITESETPOS.md) | `string`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITESETPOS`](./SPRITESETPOS.en.md) | `string`, `int`, `int` | `int`  |
 
 !!! info "API"
 

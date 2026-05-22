@@ -29,12 +29,12 @@
 	[ENDIF]  
 
 另外，有一些仅在调试模式下才有效的指令。  
-`DEBUGPRINT`、`DEBUGPRINTFORM`、`DEBUGPRINTL`、`DEBUGPRINTFORML`指令具有与`[PRINT](../Reference/PRINT.md)`指令相同的功能，但输出目的地是调试窗口。  
+`DEBUGPRINT`、`DEBUGPRINTFORM`、`DEBUGPRINTL`、`DEBUGPRINTFORML`指令具有与`[PRINT](../Reference/PRINT.zh.md)`指令相同的功能，但输出目的地是调试窗口。  
 `ASSERT`指令在参数为0时产生错误。参数非0时什么都不做。  
 `DEBUGCLEAR`指令清除调试窗口的所有文字。没有参数。  
 这些指令在非调试模式时什么都不做。  
 由于也不解析参数，即使`DEBUGPRINTFORM`格式错误，在非调试模式时也不会发生任何事情。  
-这些指令只是被当作什么都不做的指令，而不是注释行，所以即使在`[SIF](../Reference/IF.md)`指令后直接使用也是安全的。  
+这些指令只是被当作什么都不做的指令，而不是注释行，所以即使在`[SIF](../Reference/IF.zh.md)`指令后直接使用也是安全的。  
 
 另外，变量`__FILE__`, `__LINE__`, `__FUNCTION__`仅在调试时返回有意义的值。  
 非调试模式时返回0或空字符串。  

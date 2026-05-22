@@ -8,7 +8,7 @@ hide:
 
 | Function name                                                                               | Arguments | Return  |
 | :----------------------------------------------------------------------------------- | :--- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md) | `int`| `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.en.md) | `int`| `string`|
 
 !!! info "API"
 
@@ -50,4 +50,4 @@ hide:
 	![](../assets/images/HTML_GETPRINTEDSTR.png)
 
 ### See Also
-- [GETDISPLAULINE](GETDISPLAYLINE.md)
+- [GETDISPLAULINE](GETDISPLAYLINE.en.md)

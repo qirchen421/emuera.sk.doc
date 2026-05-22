@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                           | Arguments                | Return |
 | :--------------------------------------------------------------------- | :----------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`VARSIZE`](./VARSIZE.md)   | `variable`              | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`VARSIZE()`](./VARSIZE.md) | `variable`(, `dimension`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`VARSIZE`](./VARSIZE.en.md)   | `variable`              | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`VARSIZE()`](./VARSIZE.en.md) | `variable`(, `dimension`) | `int`  |
 
 !!! info "API"
 

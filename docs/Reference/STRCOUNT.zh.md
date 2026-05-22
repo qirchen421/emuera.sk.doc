@@ -7,7 +7,7 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :--- | :--- | :--- |
-| ![](../assets/images/IconEmuera.webp)[`STRCOUNT`](./STRCOUNT.md) | `string`, `string` | `int` |
+| ![](../assets/images/IconEmuera.webp)[`STRCOUNT`](./STRCOUNT.zh.md) | `string`, `string` | `int` |
 
 !!! info "API"
 
@@ -35,4 +35,4 @@ hide:
     ```
 
 ### 相关项目
-- [STRFIND](STRFIND.md)
+- [STRFIND](STRFIND.zh.md)

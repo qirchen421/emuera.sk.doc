@@ -66,10 +66,10 @@ nav:
           - tutorial/character-variables.md
       - HTML・グラフィック:
           - tutorial/html-syntax.md
+          - tutorial/resources.md
       - 高度なトピック:
           - tutorial/dynamic-reflection.md
           - tutorial/runtime-mechanics.md
-          - tutorial/anti-patterns.md
   - 仕様概要:
       - Skia版:
           - Skia/Skia_Summary.md
@@ -578,6 +578,9 @@ plugins:
             MAP（連想配列）系: MAP (Associative Array) Related
             DataTable（データベース）系: DataTable (Database) Related
             その他: Other
+            高度なトピック: Advanced Topics
+            動的解析とリフレクション: Dynamic Parsing and Reflection
+            実行時メカニズム: Runtime Mechanics
         - build: true
           default: true
           locale: ja
@@ -692,6 +695,9 @@ plugins:
             MAP（連想配列）系: MAP（关联数组）相关
             DataTable（データベース）系: DataTable（数据库）相关
             その他: 其他
+            高度なトピック: 高级主题
+            動的解析とリフレクション: 动态解析与反射
+            実行時メカニズム: 运行时机制
       reconfigure_material: true
       reconfigure_search: true
   - minify:

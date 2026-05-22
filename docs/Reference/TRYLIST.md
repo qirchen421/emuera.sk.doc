@@ -24,7 +24,7 @@ hide:
     ```
 	複数の関数（ラベル）を指定し、最初に見つかった関数（のみ）を呼び出すための構文です。  
 	`TRYLIST系～ENDFUNC`内に上記の文法以外の記述をすることはできません。  
-	なお、`TRYGOTOLIST`で直接ループ・分岐構文内に入った場合については[`TRYGOTO`](./TRY.md)や[`ループ・分岐構文`](../Reference/README.md#_8)、[`TRYC`系](./TRYC.md)の項を参照してください。  
+	なお、`TRYGOTOLIST`で直接ループ・分岐構文内に入った場合については[`TRYGOTO`](./TRY.md)や[`ループ・分岐構文`](../Reference/README.md#flow-control)、[`TRYC`系](./TRYC.md)の項を参照してください。  
 	以下のように使用します。  
 
     ```  { #language-erbapi }

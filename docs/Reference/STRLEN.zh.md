@@ -7,12 +7,12 @@ hide:
 
 | 函数名                                                            | 参数     | 返回值 |
 | :---------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`STRLEN`](./STRLEN.md)      | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENS`](./STRLEN.md)     | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENFORM`](./STRLEN.md)  | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENU`](./STRLEN.md)     | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENSU`](./STRLEN.md)    | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENFORMU`](./STRLEN.md) | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLEN`](./STRLEN.zh.md)      | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENS`](./STRLEN.zh.md)     | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENFORM`](./STRLEN.zh.md)  | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENU`](./STRLEN.zh.md)     | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENSU`](./STRLEN.zh.md)    | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENFORMU`](./STRLEN.zh.md) | `string` | `int`  |
 
 !!! info "API"
 

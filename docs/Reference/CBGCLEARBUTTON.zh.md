@@ -7,14 +7,14 @@ hide:
 
 | 函数名                                                                       | 参数 | 返回值 |
 | :--------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGCLEARBUTTON`](./CBGCLEARBUTTON.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGCLEARBUTTON`](./CBGCLEARBUTTON.zh.md) | 无   | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	int CBGCLEARBUTTON
     ```
-	解除由 [`CBGSETBUTTONSPRITE`](./CBGSETBUTTONSPRITE.md) 命令设置的按钮配置。
+	解除由 [`CBGSETBUTTONSPRITE`](./CBGSETBUTTONSPRITE.zh.md) 命令设置的按钮配置。
 
 !!! hint "提示"
 

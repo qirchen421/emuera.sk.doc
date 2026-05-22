@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                                         | 参数                            | 返回值   |
 | :----------------------------------------------------------------------------- | :------------------------------ | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)         | `string`                        | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md)       | `string`, `string`              | `int`    |
-| ![](../assets/images/IconSK.webp)[`MAP_TOSTRING`](./MAP_SERIALIZATION.md)      | `string`(, `string`, `string`)  | `string` |
-| ![](../assets/images/IconSK.webp)[`MAP_FROMSTRING`](./MAP_SERIALIZATION.md)    | `string`, `string`(, `string`, `string`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.zh.md)         | `string`                        | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.zh.md)       | `string`, `string`              | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_TOSTRING`](./MAP_SERIALIZATION.zh.md)      | `string`(, `string`, `string`)  | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_FROMSTRING`](./MAP_SERIALIZATION.zh.md)    | `string`, `string`(, `string`, `string`) | `int`    |
 
 !!! info "API"
 

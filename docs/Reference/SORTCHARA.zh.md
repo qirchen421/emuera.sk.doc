@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数                       | 返回值 |
 | :----------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SORTCHARA`](./SORTCHARA.md) | `charaVariable`, `keyword` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`SORTCHARA`](./SORTCHARA.zh.md) | `charaVariable`, `keyword` | 无     |
 
 !!! info "API"
 
@@ -40,4 +40,4 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [SWAPCHARA](SWAPCHARA.md)
+- [SWAPCHARA](SWAPCHARA.zh.md)

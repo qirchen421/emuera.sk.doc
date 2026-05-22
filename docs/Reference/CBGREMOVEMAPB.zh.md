@@ -7,14 +7,14 @@ hide:
 
 | 函数名                                                                     | 参数 | 返回值 |
 | :------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGREMOVEMAPB`](./CBGREMOVEMAPB.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGREMOVEMAPB`](./CBGREMOVEMAPB.zh.md) | 无   | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	int CBGREMOVEMAPB
     ```
-	解除由 [`CBGSETBMAPG`](./CBGSETBMAPG.md) 命令设置的按钮映射配置。
+	解除由 [`CBGSETBMAPG`](./CBGSETBMAPG.zh.md) 命令设置的按钮映射配置。
 
 !!! hint "提示"
 

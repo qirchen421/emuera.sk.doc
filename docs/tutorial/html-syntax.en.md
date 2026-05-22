@@ -350,8 +350,16 @@ Text enclosed in `<!-- comment -->` is ignored during HTML parsing.
 
 ---
 
+## Resource Configuration
+
+For image resource preparation, CSV definition format, Skia resource management (lazy-load index, SharedBitmapCache, AnimSpriteCache), and usage guidelines, see [Resource Configuration — Preparing Image Resources](resources.en.md).
+
+---
+
 ## See Also
 
-- [HTML_PRINT](../Reference/HTML_PRINT.md) — HTML output command
-- [HTML_PRINT_ISLAND](../Reference/HTML_PRINT_ISLAND.md) — Independent HTML layer output
-- [Resource Configuration](../Emuera/resources.md) — How to prepare image resources
+- [Resource Configuration — Preparing Image Resources](resources.en.md) — CSV definition format, Skia resource management
+- [HTML_PRINT](../Reference/HTML_PRINT.en.md) — HTML output command
+- [HTML_PRINT_ISLAND](../Reference/HTML_PRINT_ISLAND.en.md) — Independent HTML layer output
+- [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.en.md) — Runtime image loading (Skia)
+- [Resource Files (Legacy)](../Emuera/resources.en.md) — Original Emuera resource configuration

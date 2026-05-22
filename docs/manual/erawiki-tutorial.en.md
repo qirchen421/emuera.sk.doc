@@ -8,9 +8,9 @@ Original page:
 ---
 
 - Tutorial
-- [Title preparation](erawiki-title.md)
-- [Title practice](erawiki-title2.md)
-- [ERB creation practice](erawiki-ERBmanual.md)
+- [Title preparation](erawiki-title.en.md)
+- [Title practice](erawiki-title2.en.md)
+- [ERB creation practice](erawiki-ERBmanual.en.md)
 
 ---
 
@@ -49,7 +49,7 @@ Realize that code improvements are something you do to make it easier for yourse
 ---  
 
 ## Read the introduction to modding
-- [Introduction to modding](modification-manual.md)
+- [Introduction to modding](modification-manual.en.md)
 
 This is a manual for a standard training SLG, and it explains what you need to do to get started.
 First, read "[An easy-to-use text editor](modification-manual.md#code-editor)", "[A search tool that can use GREP](erawiki-modification-QandA.en.md#grep)", and "[These are the things you should remember at the beginning](modification-manual.md#lets-modify-it)".
@@ -137,7 +137,7 @@ If there are no problems, continue.
 
 - [Emuera - emulator of eramaker download](https://ja.osdn.net/projects/emuera/releases/)
 
-- [EmueraEM+EE (download from the top page)](../README.md)
+- [EmueraEM+EE (download from the top page)](../README.en.md)
 
 This time, download the original Emuera at the top.
 
@@ -449,4 +449,4 @@ Change it to this and save it.
 
 Close the file and start Emuera1824.exe again, and the warning will no longer be displayed.
 
-Next page → [Title Preparation] (erawiki-title.md)
+Next page → [Title Preparation] (erawiki-title.en.md)

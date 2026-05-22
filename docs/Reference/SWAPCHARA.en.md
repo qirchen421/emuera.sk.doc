@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments      | Return |
 | :--------------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SWAPCHARA`](./SWAPCHARA.md) | `int`, `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`SWAPCHARA`](./SWAPCHARA.en.md) | `int`, `int` | none   |
 
 !!! info "API"
 
@@ -39,4 +39,4 @@ hide:
     ```
 
 ### Related
-- [SORTCHARA](SORTCHARA.md)
+- [SORTCHARA](SORTCHARA.en.md)

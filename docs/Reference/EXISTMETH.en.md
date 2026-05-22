@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.md)  | `string`| `int`  |
+| ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.en.md)  | `string`| `int`  |
 
 !!! info "API"
 
@@ -21,5 +21,5 @@ hide:
 	Available as both a statement and in-expression function.
 
 ### Related
-- [EXISTFUNCTION](EXISTFUNCTION.md)
-- [GETMETH,GETMETHS](GETMETH.md)
+- [EXISTFUNCTION](EXISTFUNCTION.en.md)
+- [GETMETH,GETMETHS](GETMETH.en.md)

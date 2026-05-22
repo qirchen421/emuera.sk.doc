@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments                 | Return |
 | :--------------------------------------------------------------- | :---------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SORTCHARA`](./SORTCHARA.md) | `charaVariable`, `keyword` | none   |
+| ![](../assets/images/IconEmuera.webp)[`SORTCHARA`](./SORTCHARA.en.md) | `charaVariable`, `keyword` | none   |
 
 !!! info "API"
 
@@ -40,4 +40,4 @@ hide:
     Command only.
 
 ### Related
-- [SWAPCHARA](SWAPCHARA.md)
+- [SWAPCHARA](SWAPCHARA.en.md)

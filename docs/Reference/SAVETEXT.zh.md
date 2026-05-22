@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                            | 参数                            | 返回值 |
 | :------------------------------------------------------------------------------------------------ | :------------------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.md) | `string`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`SAVETEXT`](./SAVETEXT.zh.md) | `string`, `int`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 
@@ -53,5 +53,5 @@ hide:
     指令和表达式函数均支持。
 
 ### 相关项目
-- [LOADTEXT](LOADTEXT.md)
-- [OUTPUTLOG](OUTPUTLOG.md)
+- [LOADTEXT](LOADTEXT.zh.md)
+- [OUTPUTLOG](OUTPUTLOG.zh.md)

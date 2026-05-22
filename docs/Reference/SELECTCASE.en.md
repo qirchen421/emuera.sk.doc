@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                             | Arguments | Return |
 | :----------------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SELECTCASE`](./SELECTCASE.md)     | `any` | none   |
-| ![](../assets/images/IconEmuera.webp)[`CASE`](./SELECTCASE.md)           | `any` | none   |
-| ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)       | none  | none   |
-| ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)      | none  | none   |
+| ![](../assets/images/IconEmuera.webp)[`SELECTCASE`](./SELECTCASE.en.md)     | `any` | none   |
+| ![](../assets/images/IconEmuera.webp)[`CASE`](./SELECTCASE.en.md)           | `any` | none   |
+| ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.en.md)       | none  | none   |
+| ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.en.md)      | none  | none   |
 
 !!! info "API"
 
@@ -21,7 +21,7 @@ hide:
 	ENDSELECT
     ```
 	Branching construct. Modeled after Visual Basic's identically named construct.  
-	Similar to the [`IF`](./IF.md) construct, `SELECTCASE` is a construct that branches to multiple lines based on a single value.  
+	Similar to the [`IF`](./IF.en.md) construct, `SELECTCASE` is a construct that branches to multiple lines based on a single value.  
 	Branches based on the value of the argument specified in `SELECTCASE`. The simplest usage is as follows:
 
     ```  { #language-erbapi }
@@ -40,8 +40,8 @@ hide:
 	Similarly, if `X` is `3`, it jumps to `CASE 3`.  
 	If there is no `CASE` matching the value of `X`, it jumps to `CASEELSE` if present, otherwise to `ENDSELECT`.  
 	Unlike C's `switch` statement, execution does not fall through from one `CASE` to the next.  
-	Also, the [`BREAK`](./CONTINUE.md) statement cannot jump to `ENDSELECT`.  
-	Note that if you enter `SELECTCASE～CASE～CASEELSE～ENDSELECT` directly via commands like [`GOTO`](./GOTO.md), it executes normally up to the line before `CASE`, `CASEELSE`, or `ENDSELECT`, then jumps to the next line after `ENDSELECT`, similar to [`IF～ELSEIF～ELSE～ENDIF`](./IF.md).  
+	Also, the [`BREAK`](./CONTINUE.en.md) statement cannot jump to `ENDSELECT`.  
+	Note that if you enter `SELECTCASE～CASE～CASEELSE～ENDSELECT` directly via commands like [`GOTO`](./GOTO.en.md), it executes normally up to the line before `CASE`, `CASEELSE`, or `ENDSELECT`, then jumps to the next line after `ENDSELECT`, similar to [`IF～ELSEIF～ELSE～ENDIF`](./IF.en.md).  
 	There are three formats for `CASE` conditions.  
 	One is specifying values directly as above. The second is `IS <operator> <expression>`. The third is `<expression> TO <expression>`.  
 	For `IS <operator> <expression>`, for example `IS <= 30`, the `CASE` block executes if `X` is 30 or less.  
@@ -104,6 +104,6 @@ hide:
     Commands only.
 
 ### See Also
-- [IF-ENDIF](IF.md)
-- [PRINTDATA](PRINTDATA.md)
-- [STRDATA](STRDATA.md)
+- [IF-ENDIF](IF.en.md)
+- [PRINTDATA](PRINTDATA.en.md)
+- [STRDATA](STRDATA.en.md)

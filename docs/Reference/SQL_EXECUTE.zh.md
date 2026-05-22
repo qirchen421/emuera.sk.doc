@@ -7,11 +7,11 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_NONQUERY`](./SQL_EXECUTE.md) | `string`, `string` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_READER`](./SQL_EXECUTE.md) | `string`, `string` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_LONG`](./SQL_EXECUTE.md) | `string`, `string` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_STRING`](./SQL_EXECUTE.md) | `string`, `string` | `string` |
-| ![](../assets/images/IconSK.webp)[`SQL_EXECUTE_SCALAR_FLOAT`](./SQL_EXECUTE.md) | `string`, `string` | `float` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_NONQUERY`](./SQL_EXECUTE.zh.md) | `string`, `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_READER`](./SQL_EXECUTE.zh.md) | `string`, `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_LONG`](./SQL_EXECUTE.zh.md) | `string`, `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_STRING`](./SQL_EXECUTE.zh.md) | `string`, `string` | `string` |
+| ![](../assets/images/IconSK.webp)[`SQL_EXECUTE_SCALAR_FLOAT`](./SQL_EXECUTE.zh.md) | `string`, `string` | `float` |
 
 !!! info "API"
 
@@ -26,16 +26,16 @@ hide:
     SQLite 数据库的 SQL 语句执行相关函数。
 
     - `SQL_EXECUTE_NONQUERY`：执行非查询 SQL 语句（INSERT / UPDATE / DELETE / CREATE TABLE 等），返回受影响的行数。
-    - `SQL_EXECUTE_READER`：执行查询 SQL 语句（SELECT），返回 Reader ID（用于后续 [`SQL_READER_READ`](./SQL_READER.md) 等操作）。
+    - `SQL_EXECUTE_READER`：执行查询 SQL 语句（SELECT），返回 Reader ID（用于后续 [`SQL_READER_READ`](./SQL_READER.zh.md) 等操作）。
     - `SQL_EXECUTE_SCALAR_LONG`：执行标量查询，返回结果的第一行第一列的整数值。若结果为 NULL 或无结果，返回 `0`。
     - `SQL_EXECUTE_SCALAR_STRING`：执行标量查询，返回结果的第一行第一列的字符串值。若结果为 NULL 或无结果，返回空字符串。
     - `SQL_EXECUTE_SCALAR_FLOAT`：执行标量查询，返回结果的第一行第一列的浮点数值。若结果为 NULL 或无结果，返回 `0.0`。
 
     !!! warning "注意"
 
-        - 执行前必须先通过 [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.md) 或 [`SQL_CONNECT`](./SQL_CONNECT.md) 建立连接。
-        - 若需要参数化查询（防 SQL 注入），请使用 [`SQL_P_EXECUTE_*`](./SQL_PARAM.md) 系列函数。
-        - `SQL_EXECUTE_READER` 返回的 Reader ID 使用完毕后必须调用 [`SQL_READER_CLOSE`](./SQL_READER.md) 关闭，否则会泄漏资源。
+        - 执行前必须先通过 [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.zh.md) 或 [`SQL_CONNECT`](./SQL_CONNECT.zh.md) 建立连接。
+        - 若需要参数化查询（防 SQL 注入），请使用 [`SQL_P_EXECUTE_*`](./SQL_PARAM.zh.md) 系列函数。
+        - `SQL_EXECUTE_READER` 返回的 Reader ID 使用完毕后必须调用 [`SQL_READER_CLOSE`](./SQL_READER.zh.md) 关闭，否则会泄漏资源。
 
 !!! hint "提示"
 

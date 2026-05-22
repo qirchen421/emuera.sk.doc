@@ -7,14 +7,14 @@ hide:
 
 | 函数名                                                       | 参数  | 返回值 |
 | :----------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.md) | `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ASSERT`](./ASSERT.zh.md) | `int` | 无     |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	ASSERT bool
     ```
-	`DEBUG` 系列命令仅在以[调试模式](../Emuera/debug.md)启动时才会执行。  
+	`DEBUG` 系列命令仅在以[调试模式](../Emuera/debug.zh.md)启动时才会执行。  
 	在非调试模式下，这些命令不会执行任何操作。  
 	在非调试模式下，甚至不会解析参数，因此即使<格式化字符串>中存在错误，也不会导致报错。
 
@@ -26,4 +26,4 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
-* [THROW](THROW.md)
+* [THROW](THROW.zh.md)

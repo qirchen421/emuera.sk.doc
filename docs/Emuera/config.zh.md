@@ -52,7 +52,7 @@ EM+EE的功能。默认为`NO`。只改变文件内容，不影响运行
 保存历史记录的最大行数。下限为`500`行。  
 
 ### 无限循环警告超时毫秒数  
-如果`[WAIT](../Reference/WAIT.md)`系列指令在此时间间隔内未执行，将显示警告对话框。  
+如果`[WAIT](../Reference/WAIT.zh.md)`系列指令在此时间间隔内未执行，将显示警告对话框。  
 设置为`0`时，此功能无效。  
 如下所示的脚本虽然是无限循环，但由于中间插入了WAIT，所以不会触发警告。  
 
@@ -271,10 +271,10 @@ EM+EE的功能。设置为`YES`时可支持UTF-8(BOM无)文件
 但当此选项为`YES`时不会补全，需要逐一标记
 
 ### 禁止UPDATECHECK
-EM+EE的功能。设置为`YES`时，执行[`UPDATECHECK`](../Reference/UPDATECHECK.md)时不执行处理，`RESULT`会被赋值为`4`
+EM+EE的功能。设置为`YES`时，执行[`UPDATECHECK`](../Reference/UPDATECHECK.zh.md)时不执行处理，`RESULT`会被赋值为`4`
 
 ### 使用ERD功能
-EM+EE的功能。设置为`NO`可禁用[ERD功能](../EMEE/EMEE_Summary.md)
+EM+EE的功能。设置为`NO`可禁用[ERD功能](../EMEE/EMEE_Summary.zh.md)
 
 ### 将VARSIZE的维度指定与ERD功能对齐
 EM+EE的功能。ERD功能中维度从左至右为`1`, `2`, `3`，而`VARSIZE`中从左至右为`0`, `1`, `2`
@@ -308,7 +308,7 @@ eramaker对指令和变量不区分大小写，但对函数名和属性（性质
 
 ### 允许调用事件函数
 默认为`NO`。  
-设置为`YES`时，可通过`[CALL](../Reference/CALL.md)`指令调用事件函数，与eramaker规格相同。  
+设置为`YES`时，可通过`[CALL](../Reference/CALL.zh.md)`指令调用事件函数，与eramaker规格相同。  
 
 ### 回调至ver1739以前的非按钮换行  
 默认为`NO`。  
@@ -372,7 +372,7 @@ EM+EE的功能。引用[ERD功能](../EMEE/EMEE_Summary.md#csv-erd-erh)中定义
 
 ### 找不到函数时的警告处理  
 仅在加载时解析参数时有效。  
-当`[CALL](../Reference/CALL.md)`指令或`[JUMP](../Reference/JUMP.md)`指令的目标函数不存在时是否发出警告。  
+当`[CALL](../Reference/CALL.zh.md)`指令或`[JUMP](../Reference/JUMP.zh.md)`指令的目标函数不存在时是否发出警告。  
 - `忽略（IGNORE）` - 不发出警告。  
 - `稍后显示总数（LATER）` - 不发出警告，但稍后报告忽略的数量。  
 - `每个文件仅显示一次（ONCE）` - 每个文件仅警告一次。  
@@ -390,7 +390,7 @@ EM+EE的功能。引用[ERD功能](../EMEE/EMEE_Summary.md#csv-erd-erh)中定义
 
 ## 调试  
 调试相关选项仅在以调试模式启动Emuera时有效。  
-有关调试模式的详细信息，请参阅[调试模式](debug.md)的文章。  
+有关调试模式的详细信息，请参阅[调试模式](debug.zh.md)的文章。  
 
 ### 启动时显示调试窗口  
 在调试模式启动时自动显示调试窗口。  
@@ -450,10 +450,10 @@ Y确定垂直轴方向的位置。显示器左上角为`(0, 0)`，向下Y值增�
 双击时进行复制
 
 ### WAIT时
-执行[`WAIT`](../Reference/WAIT.md)时进行复制
+执行[`WAIT`](../Reference/WAIT.zh.md)时进行复制
 
 ### INPUT时
-执行[`INPUT`](../Reference/INPUT.md)时进行复制
+执行[`INPUT`](../Reference/INPUT.zh.md)时进行复制
 
 ### 复制到剪贴板的行数
 功能触发时指定粘贴到剪贴板的行数

@@ -4,7 +4,7 @@
 
 - [Discord - eraEVENT_KXX](https://discord.gg/cuSh6y5j93)  
 
-在[ERB制作实践篇](erawiki-ERBmanual.md)中说明了使用VSCode进行git操作的方法
+在[ERB制作实践篇](erawiki-ERBmanual.zh.md)中说明了使用VSCode进行git操作的方法
 会涉及到一些git术语，可以将其理解为以下内容：
 - 仓库→项目
 - 拉取→下载

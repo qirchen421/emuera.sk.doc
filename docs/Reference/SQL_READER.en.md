@@ -7,12 +7,12 @@ hide:
 
 | Function name | Arguments | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_READ`](./SQL_READER.md) | `int` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_LONG`](./SQL_READER.md) | `int`, `int` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_STRING`](./SQL_READER.md) | `int`, `int` | `string` |
-| ![](../assets/images/IconSK.webp)[`SQL_READER_GET_FLOAT`](./SQL_READER.md) | `int`, `int` | `float` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_ISNULL`](./SQL_READER.md) | `int`, `int` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_READER_CLOSE`](./SQL_READER.md) | `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_READ`](./SQL_READER.en.md) | `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_LONG`](./SQL_READER.en.md) | `int`, `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_GET_STRING`](./SQL_READER.en.md) | `int`, `int` | `string` |
+| ![](../assets/images/IconSK.webp)[`SQL_READER_GET_FLOAT`](./SQL_READER.en.md) | `int`, `int` | `float` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_ISNULL`](./SQL_READER.en.md) | `int`, `int` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_READER_CLOSE`](./SQL_READER.en.md) | `int` | `int` |
 
 !!! info "API"
 
@@ -36,7 +36,7 @@ hide:
 
     !!! warning "Warning"
 
-        - `readerId` is returned by [`SQL_EXECUTE_READER`](./SQL_EXECUTE.md).
+        - `readerId` is returned by [`SQL_EXECUTE_READER`](./SQL_EXECUTE.en.md).
         - You must call `SQL_READER_READ` at least once before reading column values.
         - You **must** call `SQL_READER_CLOSE` after use, otherwise resources will leak.
         - `columnIndex` is 0-based.

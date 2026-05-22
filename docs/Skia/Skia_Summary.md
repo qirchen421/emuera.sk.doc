@@ -245,7 +245,7 @@
 
     詳細は[変数宣言チュートリアル](../tutorial/variable-declaration.md#ref)を参照。
 
-### ![](../assets/images/IconSK.webp)ExecutionContext スタック式関数コンテキスト
+### ![](../assets/images/IconSK.webp)ExecutionContext スタック式関数コンテキスト { #executioncontext }
 !!! summary ""
 
     各関数呼び出しで独立した `ExecutionContext` を作成し、LOCAL/ARG 系変数の再帰上書き汚染を修正。

@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                              | 参数                                      | 返回值 |
 | :---------------------------------------------------------------------------------- | :---------------------------------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`MATCHALL`](./MATCHALL.md)     | `variable`, `any`(, `int`, `int`, `variable`) | `int`  |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`MATCHALLEX`](./MATCHALL.md)   | `string`, `any`(, `int`, `int`, `variable`)   | `int`  |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`MATCHALL`](./MATCHALL.zh.md)     | `variable`, `any`(, `int`, `int`, `variable`) | `int`  |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`MATCHALLEX`](./MATCHALL.zh.md)   | `string`, `any`(, `int`, `int`, `variable`)   | `int`  |
 
 !!! info "API"
 
@@ -28,7 +28,7 @@ hide:
 
 !!! hint "提示"
 
-    支持命令语法（`MATCHALL ARR, 2`）与表达式语法（`LOCAL = MATCHALL(ARR, 2)`）两种形式。作为命令调用时结果写入 `RESULT` 数组。与 [MATCH](MATCH.md) 不同，MATCHALL 返回所有匹配位置而非仅计数。
+    支持命令语法（`MATCHALL ARR, 2`）与表达式语法（`LOCAL = MATCHALL(ARR, 2)`）两种形式。作为命令调用时结果写入 `RESULT` 数组。与 [MATCH](MATCH.zh.md) 不同，MATCHALL 返回所有匹配位置而非仅计数。
 
     `MATCHALL` 与 `MATCHALLEX` 的区别类似于 `GETNUM` 与 `GETNUMB`：
     - `MATCHALL` 第一参数是变量引用（编译期解析），性能更好
@@ -62,5 +62,5 @@ hide:
     ```
 
 ### 相关项目
-- [MATCH](MATCH.md) — 仅计数首个匹配
-- [FINDELEMENT](FINDELEMENT.md) — 查找单个元素位置
+- [MATCH](MATCH.zh.md) — 仅计数首个匹配
+- [FINDELEMENT](FINDELEMENT.zh.md) — 查找单个元素位置

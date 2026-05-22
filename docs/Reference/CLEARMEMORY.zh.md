@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数   | 返回值 |
 | :----------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md) | `void` | `int`  |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.zh.md) | `void` | `int`  |
 
 !!! info "API"
 
@@ -38,4 +38,4 @@ hide:
     ```
 
 ### 相关项目
-- [GETMEMORYUSAGE](GETMEMORYUSAGE.md)
+- [GETMEMORYUSAGE](GETMEMORYUSAGE.zh.md)

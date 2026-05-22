@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments                            | Return |
 | :------------------------------------------------------------- | :---------------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.md) | `int`, `int`, `int`, `int`, `int` | 1      |
+| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.en.md) | `int`, `int`, `int`, `int`, `int` | 1      |
 
 !!! info "API"
 
@@ -45,5 +45,5 @@ hide:
 	![](../assets/images/GDRAWLINE.png)
 
 ### Related Items
-- [GSETPEN](GSETPEN.md)
-- [GDASHSTYLE](GDASHSTYLE.md)
+- [GSETPEN](GSETPEN.en.md)
+- [GDASHSTYLE](GDASHSTYLE.en.md)

@@ -7,8 +7,8 @@ hide:
 
 | Function name | Arguments | Return |
 | :------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.md)     | `functionName` | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.md) | `formedString` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLF`](./CALLF.en.md)     | `functionName` | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`CALLFORMF`](./CALLF.en.md) | `formedString` | `void`¹ |
 
 !!! info "API"
 
@@ -25,14 +25,14 @@ hide:
 		I wanted to make a pseudo-SETTER, but now I'm regretting it
 
 	Of course, RESULT and RESULTS remain unchanged unless the called in-expression function modifies them within itself.  
-	Related commands in EM+EE include [`TRYCALLF`](./TRYCALLF.md) and [`TRYCALLFORMF`](./TRYCALLFORMF.md).
+	Related commands in EM+EE include [`TRYCALLF`](./TRYCALLF.en.md) and [`TRYCALLFORMF`](./TRYCALLFORMF.en.md).
 
 !!! hint "Hint"
 
     Only available as a statement.
 
 ### Related
-* [TRYCALLF](TRYCALLF.md)
-* [TRYCALLFORMF](TRYCALLFORMF.md)
-* [EXISTFUNCTION](EXISTFUNCTION.md)
-* [In-expression functions](../Emuera/in_expression_function.md)
+* [TRYCALLF](TRYCALLF.en.md)
+* [TRYCALLFORMF](TRYCALLFORMF.en.md)
+* [EXISTFUNCTION](EXISTFUNCTION.en.md)
+* [In-expression functions](../Emuera/in_expression_function.en.md)

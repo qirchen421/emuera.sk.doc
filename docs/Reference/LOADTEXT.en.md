@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                           | Arguments              | Return   |
 | :------------------------------------------------------------------------------------------------------ | :--------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.md) | `int`(, `int`, `int`) | `string` |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEM.webp)[`LOADTEXT`](./LOADTEXT.en.md) | `int`(, `int`, `int`) | `string` |
 
 !!! info "API"
 
@@ -50,4 +50,4 @@ hide:
     Command and expression function both supported.
 
 ### See Also
-- [SAVETEXT](SAVETEXT.md)
+- [SAVETEXT](SAVETEXT.en.md)

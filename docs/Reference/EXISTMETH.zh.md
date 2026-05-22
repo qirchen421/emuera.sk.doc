@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数 | 返回值 |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.md)  | `string`| `int`  |
+| ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.zh.md)  | `string`| `int`  |
 
 !!! info "API"
 
@@ -21,5 +21,5 @@ hide:
     该函数同时支持命令和表达式中函数。
 
 ### 相关项目
-- [EXISTFUNCTION](EXISTFUNCTION.md)
-- [GETMETH,GETMETHS](GETMETH.md)
+- [EXISTFUNCTION](EXISTFUNCTION.zh.md)
+- [GETMETH,GETMETHS](GETMETH.zh.md)

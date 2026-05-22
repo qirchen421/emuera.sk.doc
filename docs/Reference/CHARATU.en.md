@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments       | Return   |
 | :------------------------------------------------------------- | :-------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CHARATU`](./CHARATU.md) | `string`, `int` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CHARATU`](./CHARATU.en.md) | `string`, `int` | `string` |
 
 !!! info "API"
 
@@ -45,4 +45,4 @@ hide:
     ```
 
 ### See Also
-- [SUBSTRING](SUBSTRING.md)
+- [SUBSTRING](SUBSTRING.en.md)

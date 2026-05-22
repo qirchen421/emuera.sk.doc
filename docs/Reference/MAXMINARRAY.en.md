@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                        | Arguments                   | Return |
 | :------------------------------------------------------------------ | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MAXARRAY`](./MAXMINARRAY.md) | `integerArray`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MINARRAY`](./MAXMINARRAY.md) | `integerArray`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MAXARRAY`](./MAXMINARRAY.en.md) | `integerArray`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MINARRAY`](./MAXMINARRAY.en.md) | `integerArray`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
     Both command and expression function forms are available.
 
 ### Related
-- [MAX, MIN](MAX.md)
+- [MAX, MIN](MAX.en.md)

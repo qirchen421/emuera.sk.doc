@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                  | 参数 | 返回值 |
 | :------------------------------------------------------ | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.md)  | `int`| `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.md) | `int`| `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.zh.md)  | `int`| `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.zh.md) | `int`| `int`  |
 
 !!! info "API"
 

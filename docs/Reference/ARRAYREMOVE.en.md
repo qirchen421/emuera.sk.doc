@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments               | Return |
 | :------------------------------------------------------------------------------- | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYREMOVE`](./ARRAYREMOVE.md) | `variable`, `int`, `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYREMOVE`](./ARRAYREMOVE.en.md) | `variable`, `int`, `int` | none   |
 
 !!! info "API"
 

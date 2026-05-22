@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值 |
 | :------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.zh.md) | `string` | `int`  |
 
 !!! info "API"
 
@@ -39,4 +39,4 @@ hide:
     ```
 
 ### 相关项目
-- [ENUMFILES](ENUMFILES.md)
+- [ENUMFILES](ENUMFILES.zh.md)

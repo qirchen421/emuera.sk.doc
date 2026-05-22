@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                   | 参数                   | 返回值 |
 | :------------------------------------------------------- | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SWAP`](./SWAP.md) | `variable`, `variable` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`SWAP`](./SWAP.zh.md) | `variable`, `variable` | 无     |
 
 !!! info "API"
 

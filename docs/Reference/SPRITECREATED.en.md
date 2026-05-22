@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITECREATED`](./SPRITECREATED.md) | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITECREATED`](./SPRITECREATED.en.md) | `string`  | `int`  |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [SPRITECREATE](SPRITECREATE.md)
+- [SPRITECREATE](SPRITECREATE.en.md)

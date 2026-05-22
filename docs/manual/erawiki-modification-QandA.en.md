@@ -43,7 +43,7 @@ LCOUNT = 99
 
 `#DIM` must be written immediately after each `@~~~~~` to be valid. It cannot be used in other functions. It is not saved.  
 You can create string types with `#DIMS`. You can also create large arrays. See the page below for details.  
-[User-Defined Variables](../Emuera/user_defined_variables.md)
+[User-Defined Variables](../Emuera/user_defined_variables.en.md)
 
 `LOCAL` has another usage. By appending a function name like `LOCAL@USER_SHOP`, you can modify other function's variables. (This was originally a debug feature)  
 In the past, this was used to compensate for the lack of global variables, but when used this way, they're no longer local or anything, and you end up with the same problems as `A～Z`.  
@@ -51,7 +51,7 @@ Now, to create new variables with `#DIM`, you write them in an ERH file instead 
 You can also decide whether to save them, or whether to save to global data.  
 In recent large-scale variants, ERH is commonly used, so if you encounter unfamiliar variable names, try looking for files with the .ERH extension.  
 (They are often placed directly in the ERB folder, and there may be multiple)  
-[About ERH (Header Files)](../Emuera/ERH.md)
+[About ERH (Header Files)](../Emuera/ERH.en.md)
 
 The only reason to deliberately use `LOCAL` now is when making patches where you don't want to significantly change the program, or when you don't want to upgrade the Emuera version.  
 However, sample code in this page may use `LOCAL`.  
@@ -77,11 +77,11 @@ Control structures include things like using separate functions like `CALL` and 
 
 | Control Structure Name              | Go Forward      | Go Backward     | Move Into Other Control Structures   |
 | :---                                | :---            | :---            | :---                                  |
-| [TRYGOTO・GOTOFORM](../Reference/GOTO.md) | $label          | $label          | Possible but not recommended         |
-| [GOTO](../Reference/GOTO.md)            | $label          | $label          | Possible but not recommended         |
-| [LOOP](../Reference/DO.md), [WHILE](../Reference/WHILE.md), [FOR](../Reference/FOR.md) | Loop start      | Loop end        | &#9747;                              |
-| [IF](../Reference/IF.md), [SELECTCASE](../Reference/SELECTCASE.md) | ELSE, ENDIF, CASE | &#9747;         | &#9747;                               |
-| [RESTART](../Reference/RESTART.md)     | &#9747;         | Function start  | &#9747;                               |
+| [TRYGOTO・GOTOFORM](../Reference/GOTO.en.md) | $label          | $label          | Possible but not recommended         |
+| [GOTO](../Reference/GOTO.en.md)            | $label          | $label          | Possible but not recommended         |
+| [LOOP](../Reference/DO.en.md), [WHILE](../Reference/WHILE.en.md), [FOR](../Reference/FOR.en.md) | Loop start      | Loop end        | &#9747;                              |
+| [IF](../Reference/IF.en.md), [SELECTCASE](../Reference/SELECTCASE.en.md) | ELSE, ENDIF, CASE | &#9747;         | &#9747;                               |
+| [RESTART](../Reference/RESTART.en.md)     | &#9747;         | Function start  | &#9747;                               |
 
 Basically, using limited commands within a scope is safer and makes for more readable programs than using powerful constructs that allow everything.  
 If any seem suitable, prefer the ones lower in the table above.
@@ -133,7 +133,7 @@ Restoring everyone's health is the same: increase character 1's HP, then repeat 
 While easy to write, it has several known problems.  
 The `COUNT` variable used to check which iteration you're on is a global variable, so you can't create mechanisms that nest two `REPEAT`s, and if you use `REPEAT` in a function that gets `CALL`ed during `REPEAT`, the order becomes chaotic after the `CALL` finishes.
 
-That's why the [FOR～NEXT](../Reference/FOR.md) construct was prepared.  
+That's why the [FOR～NEXT](../Reference/FOR.en.md) construct was prepared.  
 Since you can use variables other than `COUNT`, the above problems don't occur.  
 (You can use global variables including `COUNT`, but since that's the same as with `REPEAT`, you normally use private variables)  
 You can also change the starting number from 0, so you can start from 1 instead of 0 to exclude "you (character 0)".  
@@ -153,7 +153,7 @@ FOR LCOUNT, 0, CHARANUM
 NEXT  
 ```
 
-Another structure you can use for repetition is [WHILE～WEND](../Reference/WHILE.md).  
+Another structure you can use for repetition is [WHILE～WEND](../Reference/WHILE.en.md).  
 It's mainly used when you don't know how many times to loop, and while the two are similar, the difference is whether the exit condition is checked before or after the loop.  
 Simply put, use `WHILE` when there's a chance the loop body might not execute at all, and `LOOP` when it must execute at least once.  
 However, depending on how you write `BREAK` and `IF`, you can do the same things with either, so it's a matter of preference once it works correctly.  
@@ -201,7 +201,7 @@ LOCAL = RESULT
 LOCAL = TEST(70)  
 ```
 
-[You can also make your own functions into inline functions.](../Emuera/user_defined_in_expression_function.md)  
+[You can also make your own functions into inline functions.](../Emuera/user_defined_in_expression_function.en.md)  
 Things that fall under the following conditions are often better made as inline functions:
 - Don't do character input like `INPUT`
 - Don't display characters with `PRINT` statements, etc.
@@ -217,7 +217,7 @@ That's when this applies.
 
 With `IF` statements, you have to write evaluation expressions one by one after `IF` and `ELSEIF`.  
 It's quite laborious and a source of mistakes.  
-That's when [SELECTCASE](../Reference/SELECTCASE.md) comes in handy.  
+That's when [SELECTCASE](../Reference/SELECTCASE.en.md) comes in handy.  
 It's a command to evaluate one thing and branch to multiple destinations, and it's faster than `IF`.  
 You only need to write the evaluation target once after `SELECTCASE`.  
 Then you just write conditions after `CASE`. It's much cleaner.  
@@ -259,7 +259,7 @@ ENDSELECT
 ### About Initial Settings
 
 There are two setting methods, CSV and ERB, but things you set once and don't change, or things used only on the title screen, can only be set with CSV.  
-There are more than what's in the table below, but since most can be set with either [GAMEBASE.CSV](../eramaker/CSV_format.md) or [_replace.csv](../Emuera/replace.md), things not written here should be set in ERB, not CSV.
+There are more than what's in the table below, but since most can be set with either [GAMEBASE.CSV](../eramaker/CSV_format.en.md) or [_replace.csv](../Emuera/replace.en.md), things not written here should be set in ERB, not CSV.
 
 | Setting Item                          | CSV Used for Setting |
 | :---                                  | :---                  |
@@ -289,7 +289,7 @@ Games where each character acts with AI (era红魔馆, era恋姬, etc.) need cha
 
 ### Don't Include emuera.config in Distribution
 Including `emuera.config` in distributed files will overwrite player custom settings during version updates.  
-However, if there are no settings at all, the layout can break significantly, so using the [[_default.config](../Emuera/config_files.md) mechanism is convenient.
+However, if there are no settings at all, the layout can break significantly, so using the [[_default.config](../Emuera/config_files.en.md) mechanism is convenient.
 
 The specific steps would be something like this:  
 (Only step (4) is needed for updates that don't change options)
@@ -368,8 +368,8 @@ In display-related contexts, sometimes being second has meaning while being "ski
 
 The main ways to replace them are:
 - Write using the CSV notation like `ABL:技巧`
-- Create constants with [#DIM CONST](../Emuera/user_defined_variables.md) (can also be variables or inline functions)
-- [`#DEFINE`](../Emuera/ERH.md) can also be used, but handling is difficult, so it's for advanced users.
+- Create constants with [#DIM CONST](../Emuera/user_defined_variables.en.md) (can also be variables or inline functions)
+- [`#DEFINE`](../Emuera/ERH.en.md) can also be used, but handling is difficult, so it's for advanced users.
 
 For example, if the maximum number of characters is 100, and you write 100 everywhere, you can't immediately tell that's the maximum number of characters just by looking.
 
@@ -708,7 +708,7 @@ In binary, you can't say "ones place" or "tens place"—instead you say "what bi
 In Emuera, the rightmost digit in binary is bit 0, counting up to bit 1, bit 2... toward the left, with the leftmost being bit 63.
 
 You can extract each digit with calculations similar to decimal, but bit masks are normally used because they're faster and more concise. In Emuera, the `&` operator is `AND`, and the `|` operator is `OR`.  
-[About Stains (lower part of page)](../eramaker/variables.md)  
+[About Stains (lower part of page)](../eramaker/variables.en.md)  
 [Mask (Information Engineering)](http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%82%AF_%28%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%29)  
 [eratoho Summary V3 - ERB Syntax Lecture 3](../manual/eratohowiki-ERBmanual.en.md#branching)
 
@@ -718,7 +718,7 @@ Normally you should use `&&`, and only use `&` when using as bit masks. Converse
 
 While older bit mask programs become much clearer just by replacing the decimal parts with binary, you can now easily do bit operations with the three commands `GETBIT`, `SETBIT`, and `CLEARBIT`.  
 Unless you're extracting multiple bits at once, you don't need bit masks. (This is written as knowledge for variant modification rather than practical use)  
-[BIT Operation Commands](../Reference/BIT_OPERATION.md)
+[BIT Operation Commands](../Reference/BIT_OPERATION.en.md)
 
 The disadvantage of packing with this method is that if you later need more than 64 flags, or want to set numbers greater than 1, it's troublesome to handle. You can't easily increase the limit like with arrays.  
 Since recent Emuera can add variables with `#DIM`, that might be simpler in some cases.

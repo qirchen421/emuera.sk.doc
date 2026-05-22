@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                                  | Arguments                               | Return |
 | :----------------------------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.md)            | `int`, `int`                           | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.md)            | `integerVariable`, `int`(, `int`...)   | none   |
-| ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.md)          | `integerVariable`, `int`(, `int`...)   | none   |
-| ![](../assets/images/IconEmuera.webp)[`INVERTBIT`](./BIT_OPERATION.md)        | `integerVariable`, `int`(, `int`...)   | none   |
+| ![](../assets/images/IconEmuera.webp)[`GETBIT`](./BIT_OPERATION.en.md)            | `int`, `int`                           | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SETBIT`](./BIT_OPERATION.en.md)            | `integerVariable`, `int`(, `int`...)   | none   |
+| ![](../assets/images/IconEmuera.webp)[`CLEARBIT`](./BIT_OPERATION.en.md)          | `integerVariable`, `int`(, `int`...)   | none   |
+| ![](../assets/images/IconEmuera.webp)[`INVERTBIT`](./BIT_OPERATION.en.md)        | `integerVariable`, `int`(, `int`...)   | none   |
 
 !!! info "API"
 

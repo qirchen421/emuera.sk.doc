@@ -53,7 +53,7 @@ An EM+EE feature. Default is `NO`. Only the file content changes; it does not af
 The maximum number of lines to save in the history log. The minimum is `500` lines.
 
 ### Milliseconds Until Infinite Loop Warning
-Displays a warning dialog if no [`WAIT`](../Reference/WAIT.md)-type commands are executed for the specified time.  
+Displays a warning dialog if no [`WAIT`](../Reference/WAIT.en.md)-type commands are executed for the specified time.  
 If `0` is specified, this feature is disabled.  
 The following script is an infinite loop, but since WAIT is inserted between them, it is not subject to warning.
 
@@ -101,7 +101,7 @@ If `Maximum Skip Frame Count` is small, making frames per second smaller may not
 This option was deprecated.
 
 ### Number of PRINTC to Arrange
-How often the system performs the [`PRINTC`](../Reference/PRINTC.md) command, such as with `PRINT_SHOPITEM`, before line breaking. In original eramaker, this is `3`.  
+How often the system performs the [`PRINTC`](../Reference/PRINTC.en.md) command, such as with `PRINT_SHOPITEM`, before line breaking. In original eramaker, this is `3`.  
 If `0` is specified, no line breaking is performed based on the number of `PRINTC`s.  
 If specifying `0`, also set `Do not wrap lines in the middle of buttons` to `YES`.  
 This enables automatic wrapping when exceeding the window size.
@@ -161,13 +161,13 @@ Specifies how many lines to move with one mouse wheel scroll.
 The background color.
 
 ### Text Color
-The text color. If a [`SETCOLOR`](../Reference/SETCOLOR.md) command is performed in the script, that takes precedence.
+The text color. If a [`SETCOLOR`](../Reference/SETCOLOR.en.md) command is performed in the script, that takes precedence.
 
 ### Selected Text Color
 The text color of the button currently selected by mouse.
 
 ### History Text Color
-The text color during backlog display. If a [`SETCOLOR`](../Reference/SETCOLOR.md) command is performed in the script, that takes precedence.
+The text color during backlog display. If a [`SETCOLOR`](../Reference/SETCOLOR.en.md) command is performed in the script, that takes precedence.
 
 ### Font Name
 Specifies the font. Raster fonts cannot be specified.  
@@ -272,7 +272,7 @@ An EM+EE feature. If `YES`, supports files in UTF-8 (without BOM).
 Default is `NO`. When using character variables like `CFLAG`, if written as `CFLAG:0`, it is automatically complemented and executed as `CFLAG:TARGET:0`, but if this option is `YES`, it is not complemented and must be written each time.
 
 ### Disable UPDATECHECK
-An EM+EE feature. If `YES`, when executing [`UPDATECHECK`](../Reference/UPDATECHECK.md), processing is not performed and `4` is assigned to `RESULT`.
+An EM+EE feature. If `YES`, when executing [`UPDATECHECK`](../Reference/UPDATECHECK.en.md), processing is not performed and `4` is assigned to `RESULT`.
 
 ### Use ERD Feature
 An EM+EE feature. Setting to `NO` disables the [ERD feature](../EMEE/EMEE_Summary.md#erhcsverd).
@@ -310,7 +310,7 @@ Setting this item to `YES` and `Ignore Case Differences:YES` enables the same be
 
 ### Allow CALL of Event Functions
 Default is `NO`.  
-If `YES`, event functions can be called with the [`CALL`](../Reference/CALL.md) command, resulting in the same specification as eramaker.
+If `YES`, event functions can be called with the [`CALL`](../Reference/CALL.en.md) command, resulting in the same specification as eramaker.
 
 ### Reproduce Pre-1739 Non-Button Line Wrapping
 Default is `NO`.  
@@ -375,7 +375,7 @@ If `YES`, argument parsing is not performed for uncalled functions.
 
 ### Handling of Function Not Found Warning
 Only effective when parsing arguments on load.  
-Whether to warn when the destination function of [`CALL`](../Reference/CALL.md) or [`JUMP`](../Reference/JUMP.md) commands does not exist.
+Whether to warn when the destination function of [`CALL`](../Reference/CALL.en.md) or [`JUMP`](../Reference/JUMP.en.md) commands does not exist.
 - `Ignore (IGNORE)` - Do not warn.
 - `Display Only Count (LATER)` - Do not warn, but report only the ignored count later.
 - `Display Once Per File (ONCE)` - Warn only once per file.
@@ -394,7 +394,7 @@ This feature was removed.
 ## Debug
 
 Debug-related options are only effective when starting Emuera in debug mode.  
-See the [Debug Mode](debug.md) article for details on debug mode.
+See the [Debug Mode](debug.en.md) article for details on debug mode.
 
 ### Display Debug Window on Startup
 Automatically displays the debug window when starting in debug mode.
@@ -454,10 +454,10 @@ Copies when a mouse click occurs.
 Copies when a double click occurs.
 
 ### Use WAIT as Trigger
-Copies when [`WAIT`](../Reference/WAIT.md) occurs.
+Copies when [`WAIT`](../Reference/WAIT.en.md) occurs.
 
 ### Use INPUT as Trigger
-Copies when [`INPUT`](../Reference/INPUT.md) occurs.
+Copies when [`INPUT`](../Reference/INPUT.en.md) occurs.
 
 ### Number of Lines to Paste to Clipboard
 Specifies the number of lines to paste to the clipboard when the feature is triggered.

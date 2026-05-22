@@ -41,7 +41,7 @@ Also, if `COUNT` is set as a prohibited variable, `REPEAT` also becomes unusable
 #### LOCAL
 #### LOCALS
 **※This variable is `obsolete`. Please consider using `#DIM` and `#DIMS` instead.**
-**See [User-Defined Variables](user_defined_variables.md) for details.**
+**See [User-Defined Variables](user_defined_variables.en.md) for details.**
 **For new game development, it is recommended to set both `LOCAL` and `LOCALS` element counts to `-1` in `VariableSize.csv` to disable them, forcing migration to `#DIM`/`#DIMS`.**
 
 Local variables.
@@ -59,7 +59,7 @@ They are not saved.
 		LOCAL:10 = 567
 		RETURN
 
-The result of [`PRINTV`](../Reference/PRINT.md) in the above code will be `123`.
+The result of [`PRINTV`](../Reference/PRINT.en.md) in the above code will be `123`.
 Even though `LOCAL:10` is changed inside `@FUNC001`, the `LOCAL` in `@EVENTFIRST` is not affected.
 Unlike local variables in many other languages, they are not initialized when a function is called.
 
@@ -85,7 +85,7 @@ Since this is intended to be used for specifying arguments in functions, using i
 
 #### (User-Defined Private Variables)
 Variables defined using `#DIM` or `#DIMS` within a specific function become private variables and can be treated as local variables.
-See [User-Defined Variables](user_defined_variables.md) for details.
+See [User-Defined Variables](user_defined_variables.en.md) for details.
 
 ### Variables Shared Between Save Data
 #### `GLOBAL`
@@ -104,7 +104,7 @@ Through `GLOBAL` and `GLOBALS`, you can share data between different save data.
 #### (User-Defined Global Variables)
 Variables defined using `#DIM GLOBAL` or `#DIMS GLOBAL` in ERH become global variables.
 Also, by using `#DIM SAVEDATA GLOBAL`, it becomes a saveable global variable.
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 ### Character Variables
 #### `NICKNAME`
@@ -124,7 +124,7 @@ In `chara*.csv`, specify as `CSTR`.
 Numeric array variables.
 Each is intended to be used as the character variable version of `UP`, `DOWN`, `LOSEBASE`, and `TFLAG` respectively.
 Therefore, the initialization timing and save/non-save status are the same as these variables.
-However, use the `CUPCHECK` command instead of the [`UPCHECK`](../Reference/UPCHECK.md) command for `CUP` and `CDOWN`.
+However, use the `CUPCHECK` command instead of the [`UPCHECK`](../Reference/UPCHECK.en.md) command for `CUP` and `CDOWN`.
 
 #### `CDFLAG`
 Numeric type character three-dimensional array variable.
@@ -135,7 +135,7 @@ The first argument is the character registration number, as with traditional cha
 
 #### (User-Defined Character Variables)
 Variables defined using `#DIM CHARADATA` or `#DIMS CHARADATA` in ERH become character variables and can be freely used like `CFLAG` and others.
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 ### CSV-Related
 #### CSV Variables
@@ -197,11 +197,11 @@ If `タイトル` is also not set, it becomes `Emuera`.
 ##### `MONEYLABEL`
 A variable that records the currency unit.
 It is a non-array string variable that cannot be assigned and is not saved.
-The initial value is the value set as `お金の単位` (currency unit) in [`_Replace.csv`](replace.md).
+The initial value is the value set as `お金の単位` (currency unit) in [`_Replace.csv`](replace.en.md).
 If `お金の単位` is not set, it becomes `$`, the same as eramaker.
 
 ##### `DRAWLINESTR`
-A variable that records the string displayed when the [`DRAWLINE`](../Reference/DRAWLINE.md) command is executed.
+A variable that records the string displayed when the [`DRAWLINE`](../Reference/DRAWLINE.en.md) command is executed.
 It is a non-array string variable that cannot be assigned and is not saved.
 The initial value is the value set in `DRAWLINE文字` (DRAWLINE character) in `_Replace.csv`, repeated.
 Therefore, it does not contain the exact string set in `DRAWLINE文字`.
@@ -222,7 +222,7 @@ The version of the last loaded data (value defined in `gamebase.csv`)
 The number of the last loaded data (the number corresponding to `*` in `save*.sav`)
 
 ##### `LASTLOAD_TEXT`
-Text (text added with [`PUTFORM`](../Reference/PUTFORM.md). `SAVEDATA_TEXT`)
+Text (text added with [`PUTFORM`](../Reference/PUTFORM.en.md). `SAVEDATA_TEXT`)
 
 #### `SAVEDATA_TEXT`
 This is the text saved in save data and displayed in the save/load screen.
@@ -230,18 +230,18 @@ It is also the text that can be referenced with `LASTLOAD_TEXT` after loading.
 Both reference and assignment are possible.
 A string representing the current time is assigned when `@SAVEINFO` is called, and it is a string that can be appended to with `PUTFORM`.
 You can also customize the time display by directly assigning to this string in `@SAVEINFO`.
-If you don't use [`SAVEGAME`](../Reference/SAVEGAME.md) and `PUTFORM` (when using `SAVELOAD.ERB`), it won't be used.
+If you don't use [`SAVEGAME`](../Reference/SAVEGAME.en.md) and `PUTFORM` (when using `SAVELOAD.ERB`), it won't be used.
 
 #### (User-Defined Saveable Global-Scope Variables)
 Variables defined using `#DIM SAVEDATA` or `#DIMS SAVEDATA` in ERH become saveable global-scope variables.
 However, when defining a saveable multi-dimensional global-scope variable using `#DIMS SAVEDATA`, the option [`Save data in binary format`](config.en.md#save-save-data-in-binary-format) must be enabled.
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 ### Multi-Dimensional Array Variables
 #### `DITEMTYPE`
 #### `DA` to `DE`
 **※This variable is obsolete. Please consider using #DIM and #DIMS to assign appropriate names according to usage.**
-**See [User-Defined](user_defined_variables.md) for details.**
+**See [User-Defined](user_defined_variables.en.md) for details.**
 
 Fixed-length integer two-dimensional arrays.
 Called like `DITEMTYPE:1:2`. Arguments cannot be omitted.
@@ -252,7 +252,7 @@ If `DITEMTYPE,100,200` is specified in `VariableSize.csv`, you can use up to `DI
 
 #### `TA`, `TB`
 **※This variable is obsolete. Please consider using #DIM and #DIMS to assign appropriate names according to usage.**
-**See [User-Defined Variables](user_defined_variables.md) for details.**
+**See [User-Defined Variables](user_defined_variables.en.md) for details.**
 
 Fixed-length integer three-dimensional arrays.
 Called like `TA:1:2:3`. Arguments cannot be omitted.
@@ -262,7 +262,7 @@ When used as an argument for the `VARSIZE` command, the number of elements is as
 
 #### (User-Defined Multi-Dimensional Array Variables)
 Since ver1.808, variables defined using `#DIM` or `#DIMS` can be made multi-dimensional.
-See [User-Defined Variables](user_defined_variables.md) for details.
+See [User-Defined Variables](user_defined_variables.en.md) for details.
 
 ### Debug Variables
 Debug variables provide information for debugging.
@@ -323,15 +323,15 @@ Since they are not debug variables, they can be used even in normal startup.
 
 #### (User-Defined Global-Scope Variables)
 Variables defined using `#DIM` or `#DIMS` in ERH become global-scope variables and can be freely used like single-character variables (`A`, etc.).
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 #### (User-Defined Constants)
 Variables defined using `#DIM` or `#DIMS` in ERH and specific functions become one-dimensional array constants and are treated as variables that cannot be assigned.
-See [User-Defined Variables](ERH.md) for details.
+See [User-Defined Variables](ERH.en.md) for details.
 
 #### (User-Defined Reference Type Variables)
 Variables defined using `#DIM REF` or `#DIMS REF` within a specific function become reference type variables.
-See [User-Defined Variables](ERH.md) for details.
+See [User-Defined Variables](ERH.en.md) for details.
 
 ### Differences from eramaker Specifications
 #### `NAME`

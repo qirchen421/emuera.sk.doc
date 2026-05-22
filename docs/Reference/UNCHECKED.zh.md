@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                                   | 参数        | 返回值 |
 | :----------------------------------------------------------------------- | :---------- | :----- |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_ADD`](./UNCHECKED.md)       | `int`, `int` | `int`  |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_SUB`](./UNCHECKED.md)       | `int`, `int` | `int`  |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_MUL`](./UNCHECKED.md)       | `int`, `int` | `int`  |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_NEG`](./UNCHECKED.md)       | `int`        | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_ADD`](./UNCHECKED.zh.md)       | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_SUB`](./UNCHECKED.zh.md)       | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_MUL`](./UNCHECKED.zh.md)       | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_NEG`](./UNCHECKED.zh.md)       | `int`        | `int`  |
 
 !!! info "API"
 

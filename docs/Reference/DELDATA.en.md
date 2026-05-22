@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments | Return |
 | :---------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`DELDATA`](./DELDATA.md) | `int`     | none   |
+| ![](../assets/images/IconEmuera.webp)[`DELDATA`](./DELDATA.en.md) | `int`     | none   |
 
 !!! info "API"
 

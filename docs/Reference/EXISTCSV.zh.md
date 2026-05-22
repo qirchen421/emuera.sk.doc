@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数 | 返回值 |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`EXISTCSV`](./EXISTCSV.md) | `int`| `int`  |
+| ![](../assets/images/IconEmuera.webp)[`EXISTCSV`](./EXISTCSV.zh.md) | `int`| `int`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值   |
 | :------------------------------------------------------------- | :------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.md) | `string` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.zh.md) | `string` | `string` |
 
 !!! info "API"
 
@@ -21,5 +21,5 @@ hide:
     同时支持指令和表达式函数两种形式。
 
 ### 相关项目
-- [GETVAR,GETVARS](GETSETVAR.md)
-- [GETMETH,GETMETHS](GETMETH.md)
+- [GETVAR,GETVARS](GETSETVAR.zh.md)
+- [GETMETH,GETMETHS](GETMETH.zh.md)

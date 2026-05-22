@@ -7,14 +7,14 @@ hide:
 
 | Function name                                                        | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGREMOVEMAPB`](./CBGREMOVEMAPB.md) | none      | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGREMOVEMAPB`](./CBGREMOVEMAPB.en.md) | none      | `int`  |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	int CBGREMOVEMAPB
     ```
-	Clears the button map setting set by the [`CBGSETBMAPG`](./CBGSETBMAPG.md) command.
+	Clears the button map setting set by the [`CBGSETBMAPG`](./CBGSETBMAPG.en.md) command.
 
 !!! hint "Hint"
 

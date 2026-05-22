@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                               | 参数                         | 返回值 |
 | :------------------------------------------------------------------- | :--------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)       | `int`(, `int`, `int`, `int`) | `void` |
-| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.md)      | `int`(, `string`)            | `void` |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.zh.md)       | `int`(, `int`, `int`, `int`) | `void` |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.zh.md)      | `int`(, `string`)            | `void` |
 
 !!! info "API"
 
@@ -48,4 +48,4 @@ hide:
 	指令和表达式函数均支持此功能。
 
 ### 相关项目
-- [BEGIN](BEGIN.md)
+- [BEGIN](BEGIN.zh.md)

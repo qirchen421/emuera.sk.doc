@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments | Return   |
 | :------------------------------------------------------------ | :-------- | :------- |
-| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.md) | `any`     | `string` |
+| ![](../assets/images/IconEM.webp)[`XML_TOSTR`](./XML_TOSTR.en.md) | `any`     | `string` |
 
 
 !!! info "API"

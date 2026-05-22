@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments                              | Return |
 | :------------------------------------------------------------- | :------------------------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYSORT`](./ARRAYSORT.md) | `variable`(, `sortFormat`, `int`, `int`) | none   |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYSORT`](./ARRAYSORT.en.md) | `variable`(, `sortFormat`, `int`, `int`) | none   |
 
 !!! info "API"
 
@@ -73,5 +73,5 @@ hide:
     ```
 
 ### Related Items
-* [ARRAYMSORT](ARRAYMSORT.md)
-* [ARRAYMSORTEX](ARRAYMSORTEX.md)
+* [ARRAYMSORT](ARRAYMSORT.en.md)
+* [ARRAYMSORTEX](ARRAYMSORTEX.en.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                      | Arguments     | Return |
 | :----------------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TWAIT`](./TWAIT.md)        | `int`, `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`TWAIT`](./TWAIT.en.md)        | `int`, `int` | none   |
 
 !!! info "API"
 
@@ -27,5 +27,5 @@ hide:
     Command only.
 
 ### See Also
-- [WAIT](WAIT.md)
-- [TINPUT](TINPUT.md)
+- [WAIT](WAIT.en.md)
+- [TINPUT](TINPUT.en.md)

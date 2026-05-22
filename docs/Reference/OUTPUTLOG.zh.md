@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                              | 参数       | 返回值 |
 | :-------------------------------------------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEE.webp)[`OUTPUTLOG`](./OUTPUTLOG.md) | (`string`) | 无     |
+| ![](../assets/images/IconEmuera.webp)![](../assets/images/IconEE.webp)[`OUTPUTLOG`](./OUTPUTLOG.zh.md) | (`string`) | 无     |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
-- [SAVETEXT](SAVETEXT.md)
+- [SAVETEXT](SAVETEXT.zh.md)

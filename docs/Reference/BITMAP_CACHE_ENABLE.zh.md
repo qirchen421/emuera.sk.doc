@@ -9,7 +9,7 @@ hide:
 
 | 函数名                                             | 参数  | 返回值 |
 | :------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.md) | `int` | void   |
+| ![](../assets/images/Iconetc.webp)[`BITMAP_CACHE_ENABLE`](./BITMAP_CACHE_ENABLE.zh.md) | `int` | void   |
 
 !!! info "API"
 

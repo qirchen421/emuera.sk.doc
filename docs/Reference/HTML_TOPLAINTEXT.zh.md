@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                           | 参数     | 返回值  |
 | :------------------------------------------------------------------------------- | :------- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.md) | `string` | `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.zh.md) | `string` | `string`|
 
 !!! info "API"
 

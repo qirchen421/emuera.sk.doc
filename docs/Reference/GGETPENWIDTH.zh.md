@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数  | 返回值 |
 | :------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.md) | `int` | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETPENWIDTH`](./GGETPENWIDTH.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -36,5 +36,5 @@ hide:
 	```
 
 ### 相关项目
-- [GSETPEN](GSETPEN.md)
-- [GGETPENWIDTH](GGETPENWIDTH.md)
+- [GSETPEN](GSETPEN.zh.md)
+- [GGETPENWIDTH](GGETPENWIDTH.zh.md)

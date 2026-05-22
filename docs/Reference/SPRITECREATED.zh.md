@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                     | 参数     | 返回值 |
 | :------------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITECREATED`](./SPRITECREATED.md) | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITECREATED`](./SPRITECREATED.zh.md) | `string` | `int`  |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     该函数同时支持在指令和表达式中使用。
 
 ### 相关项目
-- [SPRITECREATE](SPRITECREATE.md)
+- [SPRITECREATE](SPRITECREATE.zh.md)

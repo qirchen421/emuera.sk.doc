@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                 | 参数                                                             | 返回值 |
 | :------------------------------------------------------------------------------------- | :--------------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEANIMEADDFRAME`](./SPRITEANIMEADDFRAME.md) | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEANIMEADDFRAME`](./SPRITEANIMEADDFRAME.zh.md) | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -26,4 +26,4 @@ hide:
 命令、式中函数均可使用。
 
 ### 相关项目
-- [SPRITRANIMECREATE](SPRITEANIMECREATE.md)
+- [SPRITRANIMECREATE](SPRITEANIMECREATE.zh.md)

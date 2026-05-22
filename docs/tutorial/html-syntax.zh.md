@@ -350,8 +350,16 @@ INPUTS
 
 ---
 
+## 资源设置
+
+图像资源的准备方法、CSV 定义格式、Skia 版资源管理机制（懒加载索引、SharedBitmapCache、AnimSpriteCache）及使用建议，详见 [资源设置 — 图像资源的准备方法](resources.zh.md)。
+
+---
+
 ## 相关项目
 
-- [HTML_PRINT](../Reference/HTML_PRINT.md) — HTML 输出命令
-- [HTML_PRINT_ISLAND](../Reference/HTML_PRINT_ISLAND.md) — 独立 HTML 图层输出
-- [资源设置](../Emuera/resources.md) — 图像资源的准备方法
+- [资源设置 — 图像资源的准备方法](resources.zh.md) — CSV 定义格式、Skia 版资源管理机制
+- [HTML_PRINT](../Reference/HTML_PRINT.zh.md) — HTML 输出命令
+- [HTML_PRINT_ISLAND](../Reference/HTML_PRINT_ISLAND.zh.md) — 独立 HTML 图层输出
+- [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.zh.md) — 运行时图像加载（Skia）
+- [资源文件（历史）](../Emuera/resources.zh.md) — 原版 Emuera 的资源设置说明

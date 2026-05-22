@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                           | Arguments | Return |
 | :---------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.md) | `int`     | `void` |
+| ![](../assets/images/IconEE.webp)[`SETBGMVOLUME`](./SETBGMVOLUME.en.md) | `int`     | `void` |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     Available as command only
 
 ### Related
-- [PLAYBGM](PLAYBGM.md)
+- [PLAYBGM](PLAYBGM.en.md)

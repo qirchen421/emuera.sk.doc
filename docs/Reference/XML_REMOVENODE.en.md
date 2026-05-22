@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                          | Arguments                            | Return |
 | :------------------------------------------------------------------------------------ | :---------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.md)        | `int`, `string`(, `int`)            | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.en.md)        | `int`, `string`(, `int`)            | `int`  |
 |                                                                                       | `ref` `string`, `string`(, `int`)   | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](./XML_REMOVENODE.md) | `string`, `string`(, `int`)         | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](./XML_REMOVENODE.en.md) | `string`, `string`(, `int`)         | `int`  |
 
 !!! info "API"
 

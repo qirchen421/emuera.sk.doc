@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return   |
 | :------------------------------------------------------- | :--- | :------- |
-| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md) | none | `string` |
+| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.en.md) | none | `string` |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
 	Returns as string type because it is not determined whether it is `INPUT` or `INPUTS` at the time of execution
 
 ### See Also
-- [AWAIT](AWAIT.md)
+- [AWAIT](AWAIT.en.md)

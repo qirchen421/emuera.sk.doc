@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                      | Arguments                                                              | Return |
 | :--------------------------------------------------------------- | :---------------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITECREATE`](./SPRITECREATE.md) | `string`, `int`                                                   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITECREATE`](./SPRITECREATE.en.md) | `string`, `int`                                                   | `int`  |
 |                                                                    | `string`, `int`, `int`, `int`, `int`, `int`                       | `int`  |
 |                                                                    | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`         | `int`  |
 |                                                                    | `string`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int` | `int`  |
@@ -28,7 +28,7 @@ hide:
     Since sprites only remember the parent `Graphics`'s `gID` and crop position, changes to the parent `Graphics` will also change the sprite.
     Also, if the parent `Graphics` is disposed, the sprite is also treated as disposed.
     The created sprite can be handled almost like resources declared in the csv file in the `resources` folder.
-    For example, it can be used with the [`PRINT_IMG`](./PRINT_IMG.md) command or [`HTML_PRINT` img tags](../Emuera/HTML_PRINT.md#img).
+    For example, it can be used with the [`PRINT_IMG`](./PRINT_IMG.en.md) command or [`HTML_PRINT` img tags](../Emuera/HTML_PRINT.md#img).
 
     **Skia (SkiaSharp version) extended parameters** (from the 7th argument):
 
@@ -40,4 +40,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [GCREATE](GCREATE.md)
+- [GCREATE](GCREATE.en.md)

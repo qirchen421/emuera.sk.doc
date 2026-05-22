@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                     | Arguments | Return |
 | :--------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)       | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md)   | `string`  | `int`  |
-| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.md)      | `string`  | `float`  |
+| ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.en.md)       | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.en.md)   | `string`  | `int`  |
+| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.en.md)      | `string`  | `float`  |
 
 !!! info "API"
 
@@ -88,4 +88,4 @@ hide:
     ```
 
 ### See Also
-- [TOSTR](TOSTR.md)
+- [TOSTR](TOSTR.en.md)

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数 | 返回值 |
 | :--------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.md) | `int`| 无     |
+| ![](../assets/images/IconEmuera.webp)[`PRINT_SPACE`](./PRINT_SPACE.zh.md) | `int`| 无     |
 
 !!! info "API"
 

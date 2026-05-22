@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                        | Arguments           | Return    |
 | :------------------------------------------------------------------- | :------------------ | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`ONEINPUT`](./ONEINPUT.md)   | `int`(, `int`)     | `int`     |
-| ![](../assets/images/IconEmuera.webp)[`ONEINPUTS`](./ONEINPUT.md)  | `string`(, `int`)  | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`ONEINPUT`](./ONEINPUT.en.md)   | `int`(, `int`)     | `int`     |
+| ![](../assets/images/IconEmuera.webp)[`ONEINPUTS`](./ONEINPUT.en.md)  | `string`(, `int`)  | `string`  |
 
 !!! info "API"
 
@@ -29,7 +29,7 @@ hide:
 
     Note that when these commands are used, even if keyboard macros are configured in Emuera's CONFIG settings, they may not work properly - this is by design.  
 
-    Also, in `ONEINPUTS`, macro expressions can be used as with [`INPUTS`](./INPUT.md).  
+    Also, in `ONEINPUTS`, macro expressions can be used as with [`INPUTS`](./INPUT.en.md).  
     To use '()' as a string, escape it using '.'
 
 
@@ -38,5 +38,5 @@ hide:
     Command only.
 
 ### See Also
-- [INPUT](INPUT.md)
-- [WAITANYKEY](WAITANYKEY.md)
+- [INPUT](INPUT.en.md)
+- [WAITANYKEY](WAITANYKEY.en.md)

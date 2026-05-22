@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数 | 返回值 |
 | :--------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`AWAIT`](./AWAIT.md) | `int` | 无  |
+| ![](../assets/images/IconEmuera.webp)[`AWAIT`](./AWAIT.zh.md) | `int` | 无  |
 
 !!! info "API"
 
@@ -35,5 +35,5 @@ hide:
     仅支持作为指令使用。
 
 ### 相关项目
-* [WAIT](WAIT.md)
-* [TWAIT](TWAIT.md)
+* [WAIT](WAIT.zh.md)
+* [TWAIT](TWAIT.zh.md)

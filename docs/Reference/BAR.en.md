@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                  | Arguments         | Return |
 | :------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.md)     | `int`, `int`, `int`  | none   |
-| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.md)    | `int`, `int`, `int`  | none   |
+| ![](../assets/images/Iconeramaker.webp)[`BAR`](./BAR.en.md)     | `int`, `int`, `int`  | none   |
+| ![](../assets/images/Iconeramaker.webp)[`BARL`](./BAR.en.md)    | `int`, `int`, `int`  | none   |
 
 !!! info "API"
 
@@ -38,4 +38,4 @@ hide:
     ```
 
 ### Related
-* [BARSTR](BARSTR.md)
+* [BARSTR](BARSTR.en.md)

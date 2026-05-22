@@ -5,9 +5,9 @@
 
 ---  
 
-- [教程](erawiki-tutorial.md)  
-- [标题准备篇](erawiki-title.md)  
-- [标题实践篇](erawiki-title2.md)  
+- [教程](erawiki-tutorial.zh.md)  
+- [标题准备篇](erawiki-title.zh.md)  
+- [标题实践篇](erawiki-title2.zh.md)  
 - ERB制作实践篇  
 
 ---  
@@ -16,7 +16,7 @@
 
 - [Discord - eraEVENT_KXX](https://discord.gg/cuSh6y5j93)  
 
-从[标题实践篇](erawiki-title2.md)继续，说明ERB的实践内容  
+从[标题实践篇](erawiki-title2.zh.md)继续，说明ERB的实践内容  
 
 ---  
 
@@ -87,8 +87,8 @@ Visual Studio是一个集成开发环境(IDE)，用于编译、构建、调试�
 
 解决这个问题的就是"变量定义"和"ERH文件"  
 
-- [用户定义的变量](../Emuera/user_defined_variables.md)  
-- [头文件(ERH)](../Emuera/ERH.md)  
+- [用户定义的变量](../Emuera/user_defined_variables.zh.md)  
+- [头文件(ERH)](../Emuera/ERH.zh.md)  
 
 如果想在口上中创建在一个函数内完成，且不需要保存进度的单发事件，可以在函数名下面使用`DIM`创建变量，这样很方便  
 例如，在"今天是圣诞节"这样的场景中创建分支时，创建名为"CHRISTMAS"的变量  
@@ -346,7 +346,7 @@ ENDIF
 如果说是与英语`IF`和`ELSE`含义相同的话，可能更容易想象  
 
 官方"条件判断"项中记载了基础知识  
-[eramaker的era basic格式](../eramaker/ERB_format.md)  
+[eramaker的era basic格式](../eramaker/ERB_format.zh.md)  
 
 如果对`IF`不太理解的话，建议也读一下这个  
 [标题实践篇 - IF](erawiki-title2.md#if)  
@@ -615,7 +615,7 @@ ENDIF
 
 乘法在这里有说明  
 
-- [Emuera Wiki - 运算](../Emuera/operand.md)  
+- [Emuera Wiki - 运算](../Emuera/operand.zh.md)  
 
 ``` { #language-erb title="ERB" }  
   STR:0 = % "啊" * 10 %  
@@ -692,7 +692,7 @@ era是文字游戏，所以用来显示文字的`PRINT`系列命令是游戏的�
 参考链接  
 
 - [标题实践篇 - 什么是PRINTFORML？](erawiki-title2.md#printforml)  
-- [参考 - PRINT系列](../Reference/PRINT.md)  
+- [参考 - PRINT系列](../Reference/PRINT.zh.md)  
 
 现在最常见的是`PRINT(L|W)`和`PRINTFORM(L|W)`  
 `PRINT(L|W)`是直接显示指定的文章，而`PRINTFORM(L|W)`是展开变量和式中函数后显示  
@@ -783,7 +783,7 @@ BackSpace左边的"￥"符号也具有相同作用
 
 通过此快捷方式启动Emuera，就可以以调试模式开始  
 
-- [调试模式](../Emuera/debug.md)  
+- [调试模式](../Emuera/debug.zh.md)  
 
 调试模式时出现的调试窗口有3个标签："变量监视"、"堆栈跟踪"、"控制台"  
 如上述页面所述，可以确认变量的变化（内容），检查函数调用链`CALL`到了哪里，甚至可以直接修改变量  
@@ -965,7 +965,7 @@ DATA "今天想吃炒饭"
 现在说明近年来变体中常见的，给文字着色美化的方法  
 最简单的方法是使用"`SETCOLOR`"命令  
 
-- [参考 - SETCOLOR](../Reference/SETCOLOR.md)  
+- [参考 - SETCOLOR](../Reference/SETCOLOR.zh.md)  
 
 如其所述，SETCOLOR有几种写法  
 
@@ -999,7 +999,7 @@ PRINTW 这是黄色文字
 
 像`cyan`、`lime`、`purple`这样用名字写的，容易想象"这个`SETCOLOR`会变成这种颜色"，所以推荐  
 但只能指定已定义的颜色，指定原创颜色名或拼写错误会出错  
-使用[`COLOR_FROMNAME`](../Reference/COLOR_FROM.md)这个式中函数可以确认颜色名是否存在，不确定时先测试一下吧  
+使用[`COLOR_FROMNAME`](../Reference/COLOR_FROM.zh.md)这个式中函数可以确认颜色名是否存在，不确定时先测试一下吧  
 
 ``` { #language-erb title="ERB" }  
 SIF COLOR_FROMNAME("yelow") == -1  
@@ -1012,7 +1012,7 @@ PRINTW 拼写错误
 
 不仅能改变文字颜色，还能改变字体  
 
-[参考 - FONTBOLD、FONTITALIC、FONTREGULAR](../Reference/FONT_OPERATION.md)  
+[参考 - FONTBOLD、FONTITALIC、FONTREGULAR](../Reference/FONT_OPERATION.zh.md)  
 
 `FONTBOLD`变粗体，`FONTITALIC`变斜体，`FONTSTYLE`指定4为删除线，8为下划线  
 `FONTSTYLE`使用位数，如果不懂这部分现在最好别碰  
@@ -1121,7 +1121,7 @@ PRINTW 拼写错误
 ## 可用于位运算的指令和表达式函数  
 主要有 4 种：`SETBIT`、`CLEARBIT`、`INVERTBIT`、`GETBIT`。  
 
-- [参考 - 位操作系](../Reference/BIT_OPERATION.md)  
+- [参考 - 位操作系](../Reference/BIT_OPERATION.zh.md)  
 
 在前述的位数中，例如只想打开从右数第 3 个开关时，只需给变量代入 4 即可（二进制 `0100`）。  
 但是，如果直接代入，该变量的位数记录会被全部初始化。  
@@ -1208,7 +1208,7 @@ Emuera Ver1.823 实装了名为 `AWAIT` 的指令。
 出现这个提示大多数情况是真的发生了无限循环，但根据电脑的性能，沉重的处理也可能被当作无限循环处理。  
 在循环处理中加入 `AWAIT` 指令，可以防止这种误判。  
 
-[参考 - AWAIT](../Reference/AWAIT.md)  
+[参考 - AWAIT](../Reference/AWAIT.zh.md)  
 
 正如 EmueraWiki 所述，如果频繁插入 `AWAIT`，处理速度会肉眼可见地变慢。因此可以下功夫，例如每循环 100 次插入一次 `AWAIT`，或者每整体进度的 10% 插入一次等。这样既能利用 `AWAIT` 防止误判，又能实现轻量级的处理。  
 

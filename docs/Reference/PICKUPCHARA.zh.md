@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数              | 返回值 |
 | :--------------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`PICKUPCHARA`](./PICKUPCHARA.md) | `int`(, `int`...) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`PICKUPCHARA`](./PICKUPCHARA.zh.md) | `int`(, `int`...) | 无     |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     仅支持指令形式。
 
 ### 相关项目
-- [DELCHARA](DELCHARA.md)
-- [DELALLCHARA](DELALLCHARA.md)
+- [DELCHARA](DELCHARA.zh.md)
+- [DELALLCHARA](DELALLCHARA.zh.md)

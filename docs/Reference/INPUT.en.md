@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                      | Arguments                  | Return    |
 | :----------------------------------------------------------------- | :------------------------- | :-------- |
-| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.md)      | (`int`, `int`, `int`)     | `void`    |
-| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.md)    | (`int`, `int`, `int`)     | `void`    |
+| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.en.md)      | (`int`, `int`, `int`)     | `void`    |
+| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.en.md)    | (`int`, `int`, `int`)     | `void`    |
 
 !!! info "API"
 
@@ -33,8 +33,8 @@ hide:
     Command only.
 
 ### See Also
-- [TINPUT](TINPUT.md)
-- [INPUTMOUSEKEY](INPUTMOUSEKEY.md)
-- [BINPUT](BINPUT.md)
-- [INPUTANY](INPUTANY.md)
-- [REUSELASTLINE](REUSELASTLINE.md)
+- [TINPUT](TINPUT.en.md)
+- [INPUTMOUSEKEY](INPUTMOUSEKEY.en.md)
+- [BINPUT](BINPUT.en.md)
+- [INPUTANY](INPUTANY.en.md)
+- [REUSELASTLINE](REUSELASTLINE.en.md)

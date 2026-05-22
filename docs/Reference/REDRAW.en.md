@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                          | Arguments | Return |
 | :-------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`REDRAW`](./REDRAW.md)         | `int`| none   |
-| ![](../assets/images/IconEmuera.webp)[`CURRENTREDRAW`](./REDRAW.md) | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`REDRAW`](./REDRAW.en.md)         | `int`| none   |
+| ![](../assets/images/IconEmuera.webp)[`CURRENTREDRAW`](./REDRAW.en.md) | none | `int`  |
 
 !!! info "API"
 

@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                      | Arguments                    | Return    |
 | :----------------------------------------------------------------- | :-------------------------- | :-------- |
-| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.md)           | (`int`, `int`, `int`)      | `int`     |
-| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)         | (`string`, `int`, `int`)   | `string`  |
+| ![](../assets/images/IconEE.webp)[`BINPUT`](./BINPUT.en.md)           | (`int`, `int`, `int`)      | `int`     |
+| ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.en.md)         | (`string`, `int`, `int`)   | `string`  |
 
 !!! info "API"
 
@@ -28,4 +28,4 @@ hide:
     Since it is a command, it cannot be used as an expression function.
 
 ### See Also
-* [INPUT](INPUT.md)
+* [INPUT](INPUT.en.md)

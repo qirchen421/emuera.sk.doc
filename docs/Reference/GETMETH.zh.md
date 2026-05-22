@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                       | 参数                                | 返回值    |
 | :----------------------------------------------------------- | :---------------------------------- | :-------- |
-| ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.md)  | `string`(, `int`, `argument`...)    | `int`     |
-| ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.md) | `string`(, `string`, `argument`...) | `string`  |
+| ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.zh.md)  | `string`(, `int`, `argument`...)    | `int`     |
+| ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.zh.md) | `string`(, `string`, `argument`...) | `string`  |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
     同时支持命令和式中函数。
 
 ### 相关项目
-- [GETVAR,GETVARS,SETVAR](GETSETVAR.md)
+- [GETVAR,GETVARS,SETVAR](GETSETVAR.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数 | 返回值 |
 | :----------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FORCEKANA`](./FORCEKANA.md) | `int`| 无     |
+| ![](../assets/images/IconEmuera.webp)[`FORCEKANA`](./FORCEKANA.zh.md) | `int`| 无     |
 
 !!! info "API "
 
@@ -15,7 +15,7 @@ hide:
 	FORCEKANA int
     ```
 	指定显示命令的平假名/片假名转换。
-	对包含关键字`K`的各种[`PRINT`](./PRINT.md)系命令有效。
+	对包含关键字`K`的各种[`PRINT`](./PRINT.zh.md)系命令有效。
 	根据参数指定的值，会产生以下影响。
 
     - 0:不进行转换

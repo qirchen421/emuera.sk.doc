@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments                          | Return |
 | :------------------------------------------------------------- | :-------------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md) | `int`, `string`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.en.md) | `int`, `string`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 
@@ -44,6 +44,6 @@ hide:
 	![](../assets/images/GDRAWTEXT.png)
 
 ### Related Items
-- [GSETFONT](GSETFONT.md)
-- [GSETPEN](GSETPEN.md)
-- [GGETTEXTSIZE](GGETTEXTSIZE.md)
+- [GSETFONT](GSETFONT.en.md)
+- [GSETPEN](GSETPEN.en.md)
+- [GGETTEXTSIZE](GGETTEXTSIZE.en.md)

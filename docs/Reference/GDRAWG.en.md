@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                      | Arguments                                                                                      | Return |
 | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWG`](./GDRAWG.md) | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                        | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWG`](./GDRAWG.en.md) | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`                        | `int`  |
 |                                                              | `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `int`, `integerVariable` | `int`  |
 
 !!! info "API"
@@ -29,4 +29,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [GDRAWSPRITE](GDRAWSPRITE.md)
+- [GDRAWSPRITE](GDRAWSPRITE.en.md)

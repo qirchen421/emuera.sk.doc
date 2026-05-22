@@ -7,11 +7,11 @@ hide:
 
 | 函数名                                                                         | 参数                          | 返回值 |
 | :----------------------------------------------------------------------------- | :---------------------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`SOUNDCONTROL`](./SOUNDCONTROL.md)           | `int`, `int`{, `int`, `int`}  | `int`  |
-| ![](../assets/images/IconSK.webp)[`BGMCONTROL`](./SOUNDCONTROL.md)             | `int`{, `int`, `int`}         | `int`  |
-| ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.md)      | `int`{, `int`}                | `int`  |
-| ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.md)         | {`int`}                       | `int`  |
-| ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.md)           | 无                            | `int`  |
+| ![](../assets/images/IconSK.webp)[`SOUNDCONTROL`](./SOUNDCONTROL.zh.md)           | `int`, `int`{, `int`, `int`}  | `int`  |
+| ![](../assets/images/IconSK.webp)[`BGMCONTROL`](./SOUNDCONTROL.zh.md)             | `int`{, `int`, `int`}         | `int`  |
+| ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.zh.md)      | `int`{, `int`}                | `int`  |
+| ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.zh.md)         | {`int`}                       | `int`  |
+| ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.zh.md)           | 无                            | `int`  |
 
 !!! info "API — SOUNDCONTROL"
 
@@ -134,9 +134,9 @@ hide:
     ```
 
 ### 相关项目
-- [PLAYSOUND](PLAYSOUND.md)
-- [PLAYBGM](PLAYBGM.md)
-- [STOPSOUND](STOPSOUND.md)
-- [STOPBGM](STOPBGM.md)
-- [SETSOUNDVOLUME](SETSOUNDVOLUME.md)
-- [SETBGMVOLUME](SETBGMVOLUME.md)
+- [PLAYSOUND](PLAYSOUND.zh.md)
+- [PLAYBGM](PLAYBGM.zh.md)
+- [STOPSOUND](STOPSOUND.zh.md)
+- [STOPBGM](STOPBGM.zh.md)
+- [SETSOUNDVOLUME](SETSOUNDVOLUME.zh.md)
+- [SETBGMVOLUME](SETBGMVOLUME.zh.md)

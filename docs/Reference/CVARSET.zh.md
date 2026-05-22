@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数                                          | 返回值 |
 | :------------------------------------------------------------- | :-------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CVARSET`](./CVARSET.md) | `charaVariable`(, `int`, `int`, `int`, `int`) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CVARSET`](./CVARSET.zh.md) | `charaVariable`(, `int`, `int`, `int`, `int`) | 无     |
 
 !!! info "API"
 
@@ -38,4 +38,4 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
-- [VARSET](VARSET.md)
+- [VARSET](VARSET.zh.md)

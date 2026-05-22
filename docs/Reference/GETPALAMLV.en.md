@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                   | Arguments  | Return |
 | :------------------------------------------------------------------------------ | :--------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.md) | `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.md)   | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETPALAMLV`](./GETPALAMLV.en.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETEXPLV`](./GETPALAMLV.en.md)   | `int`, `int` | `int`  |
 
 !!! info "API"
 

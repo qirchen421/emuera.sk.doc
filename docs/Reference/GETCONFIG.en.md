@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                      | Arguments | Return    |
 | :---------------------------------------------------------------- | :-------- | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`GETCONFIG`](./GETCONFIG.md)  | `string`  | `int`     |
-| ![](../assets/images/IconEmuera.webp)[`GETCONFIGS`](./GETCONFIG.md) | `string`  | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`GETCONFIG`](./GETCONFIG.en.md)  | `string`  | `int`     |
+| ![](../assets/images/IconEmuera.webp)[`GETCONFIGS`](./GETCONFIG.en.md) | `string`  | `string`  |
 
 !!! info "API"
 
@@ -16,13 +16,13 @@ hide:
 	int GETCONFIG configWord
 	string GETCONFIGS configWord
     ```
-	Gets the configuration and [`replace.csv`](../Emuera/replace.md) settings as an integer or string.  
-	For available items, see the [config](../Emuera/config.md) page.
+	Gets the configuration and [`replace.csv`](../Emuera/replace.en.md) settings as an integer or string.  
+	For available items, see the [config](../Emuera/config.en.md) page.
 
 !!! hint "Hint"
 
     Available as both command and function in expressions
 
 ### Related
-- [GETCOLOR](GETCOLOR.md)
-- [PRINTCPERLINE](PRINTCPERLINE.md)
+- [GETCOLOR](GETCOLOR.en.md)
+- [PRINTCPERLINE](PRINTCPERLINE.en.md)

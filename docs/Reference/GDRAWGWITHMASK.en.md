@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                      | Arguments                            | Return |
 | :--------------------------------------------------------------------------- | :---------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.en.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 

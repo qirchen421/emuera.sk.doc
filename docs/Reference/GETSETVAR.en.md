@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                   | Arguments      | Return   |
 | :------------------------------------------------------------- | :------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.md)  | `string`       | `int`    |
-| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md) | `string`       | `string` |
-| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)  | `string`, `any` | `1`      |
+| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.en.md)  | `string`       | `int`    |
+| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.en.md) | `string`       | `string` |
+| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.en.md)  | `string`, `any` | `1`      |
 
 !!! info "API"
     
@@ -59,5 +59,5 @@ hide:
     ```
 
 ### Related Items
-- [STRFORM](STRFORM.md)
-- [GETMETH,GETMETHS](GETMETH.md)
+- [STRFORM](STRFORM.en.md)
+- [GETMETH,GETMETHS](GETMETH.en.md)

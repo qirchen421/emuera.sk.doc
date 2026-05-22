@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                    | Arguments | Return |
 | :-------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_MANAGE.md)  | `string`  | `int`  |
-| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_MANAGE.md)   | `string`  | `int`  |
-| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_MANAGE.md) | `string`  | `1`    |
+| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_MANAGE.en.md)  | `string`  | `int`  |
+| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_MANAGE.en.md)   | `string`  | `int`  |
+| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_MANAGE.en.md) | `string`  | `1`    |
 
 !!! info "API"
 
@@ -64,4 +64,4 @@ hide:
     ```
 
 ### Related
-- [MAP Operations](MAP_OPERATION.md)
+- [MAP Operations](MAP_OPERATION.en.md)

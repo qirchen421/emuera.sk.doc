@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                         | Arguments            | Return   |
 | :------------------------------------------------------------------- | :------------------ | :------- |
-| ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.md)       | `int`               | `string` |
-| ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.md)   | `string`             | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.en.md)       | `int`               | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.en.md)   | `string`             | `int`    |
 
 !!! info "API"
 

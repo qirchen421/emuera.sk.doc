@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                         | Arguments | Return |
 | :-------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`LOADGLOBAL`](./LOADGLOBAL.md) | none      | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LOADGLOBAL`](./LOADGLOBAL.en.md) | none      | `int`  |
 
 !!! info "API"
 
@@ -26,5 +26,5 @@ hide:
     Command only.
 
 ### See Also
-- [SAVEGLOBAL](SAVEGLOBAL.md)
+- [SAVEGLOBAL](SAVEGLOBAL.en.md)
 - [Variables shared between save data](../Emuera/variables.en.md#variables-shared-between-save-data)

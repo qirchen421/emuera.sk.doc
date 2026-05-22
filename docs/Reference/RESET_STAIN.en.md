@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                               | Arguments | Return |
 | :------------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`RESET_STAIN`](./RESET_STAIN.md) | `int`     | none   |
+| ![](../assets/images/IconEmuera.webp)[`RESET_STAIN`](./RESET_STAIN.en.md) | `int`     | none   |
 
 !!! info "API"
 

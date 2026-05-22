@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                 | Arguments                        | Return   |
 | :----------------------------------------------------------------------------- | :------------------------------ | :------- |
-| ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.md)   | `string`(, `ref` `string`)     | `string` |
-| ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.md) | `string`, `string`, `string`    | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_TOXML`](./DT_SERIALIZATION.en.md)   | `string`(, `ref` `string`)     | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_FROMXML`](./DT_SERIALIZATION.en.md) | `string`, `string`, `string`    | `int`    |
 
 
 !!! info "API"

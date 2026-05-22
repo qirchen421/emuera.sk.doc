@@ -7,15 +7,15 @@ hide:
 
 | Function name                                                          | Arguments | Return |
 | :--------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`WAITANYKEY`](./WAITANYKEY.md)  | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`WAITANYKEY`](./WAITANYKEY.en.md)  | none      | none   |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	WAITANYKEY
     ```
-    A [`WAIT`](./WAIT.md) command that waits for any key input or mouse click.  
-    Can also be considered the [`ONEINPUT`](./ONEINPUT.md) version of `WAIT`.  
+    A [`WAIT`](./WAIT.en.md) command that waits for any key input or mouse click.  
+    Can also be considered the [`ONEINPUT`](./ONEINPUT.en.md) version of `WAIT`.  
 
 
 !!! hint "Hint"
@@ -23,5 +23,5 @@ hide:
     Command both supported.
 
 ### See Also
-- [WAIT](WAIT.md)
-- [ONEINPUT](ONEINPUT.md)
+- [WAIT](WAIT.en.md)
+- [ONEINPUT](ONEINPUT.en.md)

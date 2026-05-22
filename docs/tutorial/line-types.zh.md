@@ -2,8 +2,8 @@
 
 !!! info "本节对应手册"
 
-    - [函数·预处理器](../Emuera/function.md) — 函数与预处理行的完整规格
-    - [用户定义变量](../Emuera/user_defined_variables.md) — #DIM 声明的完整规格
+    - [函数·预处理器](../Emuera/function.zh.md) — 函数与预处理行的完整规格
+    - [用户定义变量](../Emuera/user_defined_variables.zh.md) — #DIM 声明的完整规格
 
 ---
 
@@ -227,4 +227,4 @@ $RETRY                         ← 4. $ Goto 标签行
 | 你想了解什么 | 前往 |
 |:---|:---|
 | 声明系统详解 | [声明系统](variable-declaration.zh.md) |
-| 控制流 | [IF](../Reference/IF.md) / [SELECTCASE](../Reference/SELECTCASE.md) / [REPEAT](../Reference/REPEAT.md) |
+| 控制流 | [IF](../Reference/IF.zh.md) / [SELECTCASE](../Reference/SELECTCASE.zh.md) / [REPEAT](../Reference/REPEAT.zh.md) |

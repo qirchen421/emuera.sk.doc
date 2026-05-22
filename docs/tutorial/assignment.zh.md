@@ -4,7 +4,7 @@
 
     - **Reference 分类**: [算术](../Reference/README.zh.md#arithmetic)
     - [Emuera 新增语法](../Emuera/expression.zh.md) — FORM 语法赋值、字符串表达式赋值
-    - [eramaker ERB 书式](../eramaker/ERB_format.md) — 基本赋值语法（历史参考）
+    - [eramaker ERB 书式](../eramaker/ERB_format.zh.md) — 基本赋值语法（历史参考）
 
 ---
 

@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string` | `int`  |
+| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.en.md) | `string` | `int`  |
 
 !!! info "API"
 
@@ -53,4 +53,4 @@ hide:
     ```
 
 ### Related
-- [ENUMFUNC](ENUMFUNC.md)
+- [ENUMFUNC](ENUMFUNC.en.md)

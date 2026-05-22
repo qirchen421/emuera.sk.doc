@@ -97,7 +97,7 @@ Makes the enclosed text bold, italic, underlined, or strikethrough respectively.
 	<img src='~~' srcb='~~' height='~~'>
 
 Displays an image inline.  
-See [Resource Settings](resources.md) for how to prepare images.
+See [Resource Settings](resources.en.md) for how to prepare images.
 
 - `src` attribute
 	Required.  

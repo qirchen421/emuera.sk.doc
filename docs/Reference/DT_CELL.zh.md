@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                            | 参数                                      | 返回值   |
 | :---------------------------------------------------------------- | :---------------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.md)    | `string`, `int`, `string`(, `int`)        | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.md)   | `string`, `int`, `string`(, `int`)        | `string` |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.md) | `string`, `int`, `string`(, `int`)        | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.md)    | `string`, `int`, `string`(, `any`, `int`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.zh.md)    | `string`, `int`, `string`(, `int`)        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.zh.md)   | `string`, `int`, `string`(, `int`)        | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.zh.md) | `string`, `int`, `string`(, `int`)        | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.zh.md)    | `string`, `int`, `string`(, `any`, `int`) | `int`    |
 
 !!! info "API"
 

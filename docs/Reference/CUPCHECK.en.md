@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return |
 | :------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CUPCHECK`](./CUPCHECK.md) | `int`     | none   |
+| ![](../assets/images/IconEmuera.webp)[`CUPCHECK`](./CUPCHECK.en.md) | `int`     | none   |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
     Command only.
 
 ### Related Items
-- [UPCHECK](UPCHECK.md)
+- [UPCHECK](UPCHECK.en.md)

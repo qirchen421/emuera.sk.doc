@@ -7,7 +7,7 @@ hide:
 
 | Function name                                             | Arguments | Return |
 | :-------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SQRT`](./SQRT.en.md) | `int`     | `int`  |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     Both command and expression function forms are available.
 
 ### Related
-- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.md)
+- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.en.md)

@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :----------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CONTINUE`](./CONTINUE.md) | none | none   |
-| ![](../assets/images/Iconeramaker.webp)[`BREAK`](./CONTINUE.md)    | none | none   |
+| ![](../assets/images/Iconeramaker.webp)[`CONTINUE`](./CONTINUE.en.md) | none | none   |
+| ![](../assets/images/Iconeramaker.webp)[`BREAK`](./CONTINUE.en.md)    | none | none   |
 
 !!! info "API"
 
@@ -18,7 +18,7 @@ hide:
 		BREAK
 	loopendInstruction
     ```
-    Loop control commands available within [`REPEAT`](./REPEAT.md), [`FOR`](./FOR.md), [`WHILE`](./WHILE.md), and [`DO`](./DO.md).  
+    Loop control commands available within [`REPEAT`](./REPEAT.en.md), [`FOR`](./FOR.en.md), [`WHILE`](./WHILE.en.md), and [`DO`](./DO.en.md).  
 	`CONTINUE` returns to the loop start line at execution. For `REPEAT` and `FOR`, it increments or decrements the corresponding counter variable.  
 	`BREAK` terminates the remaining loop execution at execution and jumps to the loop end line.
 

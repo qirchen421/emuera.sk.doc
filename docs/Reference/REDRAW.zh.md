@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                              | 参数 | 返回值 |
 | :------------------------------------------------------------------ | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`REDRAW`](./REDRAW.md)        | `int`| 无     |
-| ![](../assets/images/IconEmuera.webp)[`CURRENTREDRAW`](./REDRAW.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`REDRAW`](./REDRAW.zh.md)        | `int`| 无     |
+| ![](../assets/images/IconEmuera.webp)[`CURRENTREDRAW`](./REDRAW.zh.md) | 无   | `int`  |
 
 !!! info "API"
 

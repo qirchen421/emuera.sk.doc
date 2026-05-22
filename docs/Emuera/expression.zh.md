@@ -4,7 +4,7 @@
 	A = B ;将B赋值给A  
 
 这样可以在行末插入注释  
-不过，也有例外，如[`PRINT`](../Reference/PRINT.md)指令那样参数为简单字符串的指令，不会被注释化，而是被评价为字符串的一部分  
+不过，也有例外，如[`PRINT`](../Reference/PRINT.zh.md)指令那样参数为简单字符串的指令，不会被注释化，而是被评价为字符串的一部分  
 
 	PRINT foobar;霍格霍格  
 
@@ -63,7 +63,7 @@ eramaker中可能只为角色创建准备了100个数组。
 因此，即使在`chara3.csv`和`chara03.csv`和`chara3B.csv`中分别定义不同的角色，也只有一个生效。  
 Emuera中只要内存允许，可以定义任意多个角色。  
 另外，只要是符合`chara*.csv`的，`chara101.csv`、`charaABC.csv`等任何文件都会读取。  
-角色编号重复，在使用[`ADDCHARA`](../Reference/ADDCHARA.md)或`ADDSPCHARA`时有多个候选时，只有先读取的那个生效。  
+角色编号重复，在使用[`ADDCHARA`](../Reference/ADDCHARA.zh.md)或`ADDSPCHARA`时有多个候选时，只有先读取的那个生效。  
 
 ## 整数类型的值范围  
 eramaker中可处理的整数是32位有符号整数，即`-2147483648～2147483647`范围。  
@@ -86,7 +86,7 @@ Emuera中与吉里吉里一样，处理64位有符号整数，`-9223372036854775
 	STR:20 '= "草莓", "蜜瓜", "蓝色夏威夷"  
 
 ## 使用FORM语法对字符串变量赋值  
-对字符串变量赋值时，可以使用与[`PRINTFORM`](../Reference/PRINT.md)相同的形式指定要赋值的字符串。  
+对字符串变量赋值时，可以使用与[`PRINTFORM`](../Reference/PRINT.zh.md)相同的形式指定要赋值的字符串。  
 
 	SAVESTR:0 = %RESULTS%  
 
@@ -115,7 +115,7 @@ Emuera中与吉里吉里一样，处理64位有符号整数，`-9223372036854775
 
 ## 用字符串指定数组变量元素 { #string-array-element }  
 以下变量，可以用`*.csv`中定义的字符串作为参数调用。  
-关于Emuera新增变量的详细信息，请参阅Emuera新增的[扩展语法 - 常量·变量](variables.md)。  
+关于Emuera新增变量的详细信息，请参阅Emuera新增的[扩展语法 - 常量·变量](variables.zh.md)。  
 
 	ITEM (item.csv)  
 	ITEMSALES (item.csv)  
@@ -190,7 +190,7 @@ Emuera中与吉里吉里一样，处理64位有符号整数，`-9223372036854775
 因为在读取`chara*.csv`阶段，系统还未掌握`chara`的姓名与`NO`的对应关系。  
 
 ## 格式化字符串（FORM语法）扩展  
-在[`PRINTFORM`](../Reference/PRINT.md)等使用的格式化字符串中，可以为`{}`、`%%`指定显示位数（字符数）。  
+在[`PRINTFORM`](../Reference/PRINT.zh.md)等使用的格式化字符串中，可以为`{}`、`%%`指定显示位数（字符数）。  
 指定格式为`{变量·表达式等,显示位数, 对齐(LEFT or RIGHT)}`、`%变量、字符串表达式等, 显示位数, 对齐(LEFT or RIGHT)%`。  
 字符数按全角字符算2字符计算。  
 不足显示位数（字符数）的部分会补充半角空格。  
@@ -255,6 +255,6 @@ Emuera中与吉里吉里一样，处理64位有符号整数，`-9223372036854775
 	PRINTFORM @"%RESULTS%かきくけこ"  
 
 ## `INPUTS`系列中使用宏语法  
-在[`INPUTS`](../Reference/INPUT.md)及类似输入接收指令中，可以使用宏表达式。  
+在[`INPUTS`](../Reference/INPUT.zh.md)及类似输入接收指令中，可以使用宏表达式。  
 关于宏的语法，请参考使用方法中的宏项。  
 如果不使用宏语法，单纯将`()`作为字符串使用时，请使用`\`转义。  

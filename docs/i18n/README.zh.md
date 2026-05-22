@@ -15,7 +15,7 @@ hide:
 
     从`帮助`→`设置`→`显示`→`Emuera界面语言`处可选择语言。或者在配置文件(*.config)的`Emueraの表示言語`/`Emuera interface language`项目处设定。
 
-    在Emuera的命令行中添加`-genlang`(详见[Emueraをデバッグモードで起動する](../Emuera/debug.md)，会自动生存默认语言文件，以`lang/emuera-default-lang.xml`的名称保存。欢迎翻译并发布其它语言翻译文件。
+    在Emuera的命令行中添加`-genlang`(详见[Emueraをデバッグモードで起動する](../Emuera/debug.zh.md)，会自动生存默认语言文件，以`lang/emuera-default-lang.xml`的名称保存。欢迎翻译并发布其它语言翻译文件。
 
 !!! example "配置文件示例" 
     

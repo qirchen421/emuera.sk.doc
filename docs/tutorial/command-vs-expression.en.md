@@ -4,7 +4,7 @@
 
     - **Reference Category**: [Functions (CALL, etc.)](../Reference/README.en.md#function-call)
     - [Expression Functions](../Emuera/user_defined_in_expression_function.en.md) — Complete specification for #FUNCTION/#FUNCTIONS
-    - [CALLF Instruction Reference](../Reference/CALLF.md) — CALLF API documentation
+    - [CALLF Instruction Reference](../Reference/CALLF.en.md) — CALLF API documentation
 
 ---
 
@@ -171,7 +171,7 @@ CALLF SETTER("key", val)
 
 !!! info "CALLF Reference"
 
-    See [CALLF Instruction Reference](../Reference/CALLF.md).
+    See [CALLF Instruction Reference](../Reference/CALLF.en.md).
 
 ### Solution 2: Register Directly as Instruction (Design-level Solution)
 
@@ -233,4 +233,4 @@ In other words: **There is no "bare" function call statement in ERABASIC.** Ever
 
 - [Line Types & Structure](line-types.en.md) — Basics of the four line types
 - [Expression Functions](../Emuera/user_defined_in_expression_function.en.md) — Complete specification for #FUNCTION/#FUNCTIONS
-- [CALLF Instruction Reference](../Reference/CALLF.md) — CALLF API documentation
+- [CALLF Instruction Reference](../Reference/CALLF.en.md) — CALLF API documentation

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数            | 返回值   |
 | :------------------------------------------------------------- | :-------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CHARATU`](./CHARATU.md) | `string`, `int` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CHARATU`](./CHARATU.zh.md) | `string`, `int` | `string` |
 
 !!! info "API"
 
@@ -45,4 +45,4 @@ hide:
     ```
 
 ### 相关项目
-- [SUBSTRING](SUBSTRING.md)
+- [SUBSTRING](SUBSTRING.zh.md)

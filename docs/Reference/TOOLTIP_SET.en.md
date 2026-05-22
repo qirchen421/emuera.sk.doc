@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                         | Arguments    | Return |
 | :----------------------------------------------------------------------------- | :------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDELAY`](./TOOLTIP_SET.md)    | `int`   | none   |
-| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDURATION`](./TOOLTIP_SET.md) | `int`   | none   |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDELAY`](./TOOLTIP_SET.en.md)    | `int`   | none   |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDURATION`](./TOOLTIP_SET.en.md) | `int`   | none   |
 
 !!! info "API"
 
@@ -26,5 +26,5 @@ hide:
     Only commands are supported.
 
 ### See Also
-- [Tooltip Extension](TOOLTIP_EXTENSION.md)
-- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.md)
+- [Tooltip Extension](TOOLTIP_EXTENSION.en.md)
+- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.en.md)

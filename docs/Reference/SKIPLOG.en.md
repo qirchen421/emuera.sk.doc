@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments  | Return |
 | :------------------------------------------------------------- | :----------| :------|
-| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md)   | `int`      | `void` |
+| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.en.md)   | `int`      | `void` |
 
 !!! info "API"
 

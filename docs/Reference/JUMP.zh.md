@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数             | 返回值 |
 | :--------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.md) | `functionName`   | `void`¹ |
+| ![](../assets/images/Iconeramaker.webp)[`JUMP`](./JUMP.zh.md) | `functionName`   | `void`¹ |
 
 !!! info "API"
 
@@ -15,10 +15,10 @@ hide:
 	JUMP functionName
     ```
     以 `@` 开头的字符串定义的函数  
-    当到达函数末端或执行 [`RETURN`](./RETURN.md) 时，结束函数  
-    与 [`CALL`](./CALL.md) 的区别在于，执行时不会将函数压入栈，因此即使跳转到的函数结束也不会返回。所以，如果没有调用栈，可能会导致错误终止  
+    当到达函数末端或执行 [`RETURN`](./RETURN.zh.md) 时，结束函数  
+    与 [`CALL`](./CALL.zh.md) 的区别在于，执行时不会将函数压入栈，因此即使跳转到的函数结束也不会返回。所以，如果没有调用栈，可能会导致错误终止  
 
-    ¹ `void` 表示指令本身不返回值，但 JUMP 目标函数中的 [`RETURN`](./RETURN.md) 仍会设置 `RESULT`。详见下方「JUMP 与 RESULT 的关系」。
+    ¹ `void` 表示指令本身不返回值，但 JUMP 目标函数中的 [`RETURN`](./RETURN.zh.md) 仍会设置 `RESULT`。详见下方「JUMP 与 RESULT 的关系」。
 
 !!! hint "提示"
 
@@ -26,9 +26,9 @@ hide:
 
 !!! info "JUMP 与 RESULT 的关系"
 
-    JUMP 目标函数中执行 [`RETURN`](./RETURN.md) 时，`RESULT` 会正常设置。JUMP 只是替换栈帧，不影响 `RETURN` 设置 `RESULT` 的行为。
+    JUMP 目标函数中执行 [`RETURN`](./RETURN.zh.md) 时，`RESULT` 会正常设置。JUMP 只是替换栈帧，不影响 `RETURN` 设置 `RESULT` 的行为。
 
-    JUMP 目标函数结束时，`Return()` 会检测到 `IsJump` 标志，**递归地回退栈帧**，直到回到最初的非 JUMP 调用方（如 [`CALL`](./CALL.md)）。JUMP 链（A→JUMP B→JUMP C→RETURN）中 RESULT 也能正确设置。
+    JUMP 目标函数结束时，`Return()` 会检测到 `IsJump` 标志，**递归地回退栈帧**，直到回到最初的非 JUMP 调用方（如 [`CALL`](./CALL.zh.md)）。JUMP 链（A→JUMP B→JUMP C→RETURN）中 RESULT 也能正确设置。
 
     ``` { #language-erb }
     @SYSTEM_TITLE
@@ -70,6 +70,6 @@ hide:
     ```
 
 ### 相关项目
-- [JUMPFORM](FORM.md)
-- [TRYJUMPFORM](TRYFORM.md)
-- [TRYCJUMP](TRYC.md)
+- [JUMPFORM](FORM.zh.md)
+- [TRYJUMPFORM](TRYFORM.zh.md)
+- [TRYCJUMP](TRYC.zh.md)

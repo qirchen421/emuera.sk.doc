@@ -9,10 +9,10 @@ hide:
 
 | 函数名                                                                 | 参数  | 返回值 |
 | :--------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBRT`](./MATH_EXTENSION.md)     | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`LOG`](./MATH_EXTENSION.md)      | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`LOG10`](./MATH_EXTENSION.md)    | `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`EXPOMENT`](./MATH_EXTENSION.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBRT`](./MATH_EXTENSION.zh.md)     | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LOG`](./MATH_EXTENSION.zh.md)      | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LOG10`](./MATH_EXTENSION.zh.md)    | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`EXPOMENT`](./MATH_EXTENSION.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -38,12 +38,12 @@ hide:
 
 | 函数名                                                          | 参数          | 返回值              |
 | :-------------------------------------------------------------- | :------------ | :------------------ |
-| ![](../assets/images/IconSK.webp)[`SIN`](./MATH_EXTENSION.md)   | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`COS`](./MATH_EXTENSION.md)   | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`TAN`](./MATH_EXTENSION.md)   | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`ASIN`](./MATH_EXTENSION.md)  | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`ACOS`](./MATH_EXTENSION.md)  | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`ATAN`](./MATH_EXTENSION.md)  | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`SIN`](./MATH_EXTENSION.zh.md)   | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`COS`](./MATH_EXTENSION.zh.md)   | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`TAN`](./MATH_EXTENSION.zh.md)   | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`ASIN`](./MATH_EXTENSION.zh.md)  | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`ACOS`](./MATH_EXTENSION.zh.md)  | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`ATAN`](./MATH_EXTENSION.zh.md)  | `int`/`float` | `int`/`float`（同型） |
 
 !!! info "API"
 
@@ -69,9 +69,9 @@ hide:
 
 | 函数名                                                            | 参数          | 返回值              |
 | :---------------------------------------------------------------- | :------------ | :------------------ |
-| ![](../assets/images/IconSK.webp)[`FLOOR`](./MATH_EXTENSION.md)   | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`CEIL`](./MATH_EXTENSION.md)    | `int`/`float` | `int`/`float`（同型） |
-| ![](../assets/images/IconSK.webp)[`ROUND`](./MATH_EXTENSION.md)   | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`FLOOR`](./MATH_EXTENSION.zh.md)   | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`CEIL`](./MATH_EXTENSION.zh.md)    | `int`/`float` | `int`/`float`（同型） |
+| ![](../assets/images/IconSK.webp)[`ROUND`](./MATH_EXTENSION.zh.md)   | `int`/`float` | `int`/`float`（同型） |
 
 !!! info "API"
 

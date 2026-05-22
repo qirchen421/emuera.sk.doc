@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                           | Arguments | Return |
 | :----------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`PRINTCLENGTH`](./PRINTCLENGTH.md) | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`PRINTCLENGTH`](./PRINTCLENGTH.en.md) | none | `int`  |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     Command and expression function both supported.
 
 ### Related
-- [PRINTCPERLINE](PRINTCPERLINE.md)
+- [PRINTCPERLINE](PRINTCPERLINE.en.md)

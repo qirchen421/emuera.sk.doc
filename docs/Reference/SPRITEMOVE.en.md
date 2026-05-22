@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments               | Return |
 | :------------------------------------------------------------------ | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEMOVE`](./SPRITEMOVE.md) | `string`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEMOVE`](./SPRITEMOVE.en.md) | `string`, `int`, `int` | `int`  |
 
 !!! info "API"
 

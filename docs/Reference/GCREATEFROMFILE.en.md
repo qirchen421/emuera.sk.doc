@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                        | Arguments                  | Return |
 | :----------------------------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.md) | `int`, `string`(, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCREATEFROMFILE`](./GCREATEFROMFILE.en.md) | `int`, `string`(, `int`)   | `int`  |
 
 !!! info "API"
 
@@ -30,4 +30,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [GCREATE](GCREATE.md)
+- [GCREATE](GCREATE.en.md)

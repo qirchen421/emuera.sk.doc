@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return |
 | :------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`EXISTCSV`](./EXISTCSV.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`EXISTCSV`](./EXISTCSV.en.md) | `int`     | `int`  |
 
 !!! info "API"
 

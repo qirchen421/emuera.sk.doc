@@ -7,7 +7,7 @@ hide:
 
 | Function Name                                                   | Arguments | Return Value |
 | :------------------------------------------------------------- | :-------- | :----------- |
-| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.md) | `()`      | None         |
+| ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.en.md) | `()`      | None         |
 
 !!! info "API"
 
@@ -25,4 +25,4 @@ hide:
     No arguments.
 
 ### Related Items
-* [INPUT](INPUT.md)
+* [INPUT](INPUT.en.md)

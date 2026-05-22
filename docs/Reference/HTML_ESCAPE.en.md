@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                 | Arguments     | Return  |
 | :--------------------------------------------------------------------- | :------- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.md) | `string` | `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.en.md) | `string` | `string`|
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
 	str HTML_ESCAPE, htmlString  
     ```
 	Escapes (converts to character references) the target string for HTML.  
-	Use the [`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.md) function to unescape.
+	Use the [`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.en.md) function to unescape.
 
 
 !!! hint "Hint"
@@ -34,5 +34,5 @@ hide:
     ```
 
 ### See Also
-- [HTML_TOPLAINTEXT](HTML_TOPLAINTEXT.md)
-- [ESCAPE](ESCAPE.md)
+- [HTML_TOPLAINTEXT](HTML_TOPLAINTEXT.en.md)
+- [ESCAPE](ESCAPE.en.md)

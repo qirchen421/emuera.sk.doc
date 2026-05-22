@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                               | Arguments | Return |
 | :------------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`RESETGLOBAL`](./RESETGLOBAL.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`RESETGLOBAL`](./RESETGLOBAL.en.md) | none      | none   |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
     ```
 
 ### Related Items
-- [RESETDATA](RESETDATA.md)
+- [RESETDATA](RESETDATA.en.md)

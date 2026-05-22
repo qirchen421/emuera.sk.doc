@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                             | Arguments  | Return |
 | :----------------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.en.md) | `string` | `void` |
 
 !!! info "API"
 
@@ -52,4 +52,4 @@ hide:
     ```
 
 ### See Also
-- [BEGIN](BEGIN.md)
+- [BEGIN](BEGIN.en.md)

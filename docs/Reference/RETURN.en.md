@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                                              | Arguments                   | Return                    |
 | :-------------------------------------------------------------------------------------------------- | :--------------------- | :------------------------ |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)     | `same as arguments`              |
-| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `string`(, `string`,...)| `same as arguments (converted to numeric)`|
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.en.md) | `int`(, `int`,...)     | `same as arguments`              |
+| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.en.md)                                    | `string`(, `string`,...)| `same as arguments (converted to numeric)`|
 
 !!! info "API"
 
@@ -66,7 +66,7 @@ hide:
         ; No RETURN → at function end, RESULT:0 = 0
     ```
 
-    However, expression functions declared with [`#FUNCTION`](../Emuera/function.md) use `RETURNF`, which **does not overwrite RESULT**. The implicit assignment at the function end is also skipped.
+    However, expression functions declared with [`#FUNCTION`](../Emuera/function.en.md) use `RETURNF`, which **does not overwrite RESULT**. The implicit assignment at the function end is also skipped.
 
     ``` { #language-erb }
     @MY_EXPR_FUNC
@@ -105,4 +105,4 @@ hide:
     ```
 
 ### See Also
-- [RESTART](RESTART.md)
+- [RESTART](RESTART.en.md)

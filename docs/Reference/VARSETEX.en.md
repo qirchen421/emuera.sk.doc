@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments                           | Return |
 | :------------------------------------------------------------- | :---------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md) | `string`, `any`(, `int`, `int`, `int`) | `1`    |
+| ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.en.md) | `string`, `any`(, `int`, `int`, `int`) | `1`    |
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
     1 VARSETEX varName, value(, setAllDim, from, to)
     ```
     
-    Similar to the original version of [`VARSET`](VARSET.md). Instead of directly using an identifier, assigns `value` to the array of the variable name represented by `varName`.  
+    Similar to the original version of [`VARSET`](VARSET.en.md). Instead of directly using an identifier, assigns `value` to the array of the variable name represented by `varName`.  
 	If `setAllDim` is not `0` or omitted, assigns `value` to all dimensions of the array. Otherwise, only assigns to the lowest dimension.  
 	You can specify the start and end positions of elements with `from` and `to` (elements at the `to` position are not included). If `to` is omitted, assignment continues to the end of that dimension's array. If `from` is omitted, assignment starts from position `0` of that dimension's array.
 
@@ -87,4 +87,4 @@ hide:
     ```
 
 ### Related Items
-- [VARSET](VARSET.md)
+- [VARSET](VARSET.en.md)

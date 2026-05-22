@@ -7,12 +7,12 @@ hide:
 
 | 函数名                                                                 | 参数                                                          | 返回值 |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------ | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](./DT_COLUMN.md)     | `string`, `string`(, `any`, `int`)                            | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](./DT_COLUMN.md)   | `string`, `string`                                            | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.md)  | `string`, `string`                                            | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.md)  | `string`                                                      | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | 无     |
-| ![](../assets/images/IconEM.webp)[`DT_COLUMN_NAMES`](./DT_COLUMN.md)   | `string`(, `ref` `string[]`)                                  | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_ADD`](./DT_COLUMN.zh.md)     | `string`, `string`(, `any`, `int`)                            | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_EXIST`](./DT_COLUMN.zh.md)   | `string`, `string`                                            | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_REMOVE`](./DT_COLUMN.zh.md)  | `string`, `string`                                            | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_LENGTH`](./DT_COLUMN.zh.md)  | `string`                                                      | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_OPTIONS`](./DT_COLUMN.zh.md) | `string`, `string`, `keyword`, `any`([,`keyword`, `any`] ...) | 无     |
+| ![](../assets/images/IconEM.webp)[`DT_COLUMN_NAMES`](./DT_COLUMN.zh.md)   | `string`(, `ref` `string[]`)                                  | `int`  |
 
 !!! info "API"
 

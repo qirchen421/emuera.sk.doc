@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                                              | 参数     | 返回值 |
 | :---------------------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYNAME`](./GETCSVNOBY.md)       | `string` | `int`  |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYNICKNAME`](./GETCSVNOBY.md)   | `string` | `int`  |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYCALLNAME`](./GETCSVNOBY.md)   | `string` | `int`  |
-| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYMASTERNAME`](./GETCSVNOBY.md) | `string` | `int`  |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYNAME`](./GETCSVNOBY.zh.md)       | `string` | `int`  |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYNICKNAME`](./GETCSVNOBY.zh.md)   | `string` | `int`  |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYCALLNAME`](./GETCSVNOBY.zh.md)   | `string` | `int`  |
+| ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)[`GETCSVNOBYMASTERNAME`](./GETCSVNOBY.zh.md) | `string` | `int`  |
 
 !!! info "API"
 
@@ -53,5 +53,5 @@ hide:
 
 ### 相关项目
 - [CSVNAME系](CSVNAME.zh.md) — 从编号查名字（逆操作）
-- [FINDCHARA](FINDCHARA.md) — 从已添加角色中查找
+- [FINDCHARA](FINDCHARA.zh.md) — 从已添加角色中查找
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETCSVNOBY* 属于 DotNet 扩展"角色名→编号反查"

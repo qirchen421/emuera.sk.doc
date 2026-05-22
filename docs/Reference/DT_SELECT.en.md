@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments                                          | Return |
 | :------------------------------------------------------------ | :------------------------------------------------ | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_SELECT`](./DT_SELECT.md) | `string`(, `string`, `string`, `ref` `int[]`)    | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_SELECT`](./DT_SELECT.en.md) | `string`(, `string`, `string`, `ref` `int[]`)    | `int`  |
 
 
 !!! info "API"

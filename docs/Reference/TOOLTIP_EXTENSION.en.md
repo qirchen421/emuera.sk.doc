@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                                           | Arguments     |
 | :------------------------------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.en.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.en.md)     | `string` |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.en.md) | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.en.md)      | `int`    |
 
 !!! info "API"
 
@@ -65,5 +65,5 @@ hide:
 	![](../assets/images/TOOLTIP_EXTENSION2.png)
 
 ### See Also
-- [Tooltip Display Operations](TOOLTIP_SET.md)
-- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.md)
+- [Tooltip Display Operations](TOOLTIP_SET.en.md)
+- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.en.md)

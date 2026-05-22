@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数         | 返回值   |
 | :------------------------------------------------------------- | :----------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.md) | `int`, `int` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.zh.md) | `int`, `int` | `string` |
 
 !!! info "API"
 

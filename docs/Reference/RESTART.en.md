@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md) | none | none   |
+| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.en.md) | none | none   |
 
 !!! info "API"
 
@@ -68,4 +68,4 @@ hide:
     ```
 
 ### Related
-- [RETURN](RETURN.md)
+- [RETURN](RETURN.en.md)

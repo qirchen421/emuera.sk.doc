@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                    | Arguments                             | Return |
 | :-------------------------------------------------------------- | :----------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SUMCARRAY`](./CARRAY.md) | `charaArray`(, `int`, `int`)         | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`CMATCH`](./CARRAY.md)    | `charaArray`, `any`(, `int`, `int`) | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MAXCARRAY`](./CARRAY.md) | `charaArray`(, `int`, `int`)         | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MINCARRAY`](./CARRAY.md) | `charaArray`(, `int`, `int`)         | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SUMCARRAY`](./CARRAY.en.md) | `charaArray`(, `int`, `int`)         | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CMATCH`](./CARRAY.en.md)    | `charaArray`, `any`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MAXCARRAY`](./CARRAY.en.md) | `charaArray`(, `int`, `int`)         | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MINCARRAY`](./CARRAY.en.md) | `charaArray`(, `int`, `int`)         | `int`  |
 
 !!! info "API"
 
@@ -20,7 +20,7 @@ hide:
 	int MAXCARRAY charaArray(, start, end)
 	int MINCARRAY charaArray(, start, end)
     ```
-	Variations of [`SUMARRAY`](./SUMARRAY.md), [`MATCH`](./MATCH.md), [`MAXARRAY`](./MAXMINARRAY.md), and [`MINARRAY`](./MAXMINARRAY.md) that scan across characters.  
+	Variations of [`SUMARRAY`](./SUMARRAY.en.md), [`MATCH`](./MATCH.en.md), [`MAXARRAY`](./MAXMINARRAY.en.md), and [`MINARRAY`](./MAXMINARRAY.en.md) that scan across characters.  
 	`charaArray` must be a character array variable.  
 	`start` and `end` are specified by character registration numbers.  
 	For example, `RESULT = SUMCARRAY(CFLAG:2, A, B)` can also be written as:  

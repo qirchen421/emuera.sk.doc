@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                   | 参数                                         | 返回值 |
 | :----------------------------------------------------------------------- | :------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`INRANGEARRAY`](./INRANGEARRAY.md)  | `integerArray`, `int`, `int`(, `int`, `int`) | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`INRANGECARRAY`](./INRANGEARRAY.md) | `charaArray`, `int`, `int`(, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`INRANGEARRAY`](./INRANGEARRAY.zh.md)  | `integerArray`, `int`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`INRANGECARRAY`](./INRANGEARRAY.zh.md) | `charaArray`, `int`, `int`(, `int`, `int`)   | `int`  |
 
 !!! info "API"
 

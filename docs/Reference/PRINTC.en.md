@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                        | Arguments | Return   |
 | :---------------------------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINT(\|FORM)(C\|LC)(\|K\|D)</code>](./PRINTC.md) | `string`  | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINT(\|FORM)(C\|LC)(\|K\|D)</code>](./PRINTC.en.md) | `string`  | none     |
 
 !!! info "API"
 
@@ -29,7 +29,7 @@ hide:
     - `C` - Align right (adds half-width spaces on the left)
     - `LC` - Align left
 
-    The `K` and `D` in the third set of parentheses work the same as the [PRINT](./PRINT.md) family.
+    The `K` and `D` in the third set of parentheses work the same as the [PRINT](./PRINT.en.md) family.
 
 !!! hint "Hint"
 
@@ -66,5 +66,5 @@ hide:
     ```
 
 ### Related Items
-- [PRINTCPERLINE](PRINTCPERLINE.md)
-- [PRINTCLENGTH](PRINTCLENGTH.md)
+- [PRINTCPERLINE](PRINTCPERLINE.en.md)
+- [PRINTCLENGTH](PRINTCLENGTH.en.md)

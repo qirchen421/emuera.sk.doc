@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                                                                            | Arguments | Return   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)(\|K\|D)(\|L\|W\|N)</code>](./PRINT.md) | `string`  | none     |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)(\|K\|D)(\|L\|W\|N)</code>](./PRINT.en.md) | `string`  | none     |
 
 !!! info "API"
 
@@ -73,7 +73,7 @@ hide:
     ![](../assets/images/PRINT.png)
 
 ### Related Items
-- [Basic Output](../tutorial/basic-output.md) — PRINT family tutorial: argument types, behavior suffixes, output colors, buttons
-- [PRINTBUTTON](PRINTBUTTON.md)
-- [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
+- [Basic Output](../tutorial/basic-output.en.md) — PRINT family tutorial: argument types, behavior suffixes, output colors, buttons
+- [PRINTBUTTON](PRINTBUTTON.en.md)
+- [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.en.md)
 - [Extensions added in Emuera>Formatted String (FORM syntax) Extensions](../Emuera/expression.en.md#formatted-string-form-syntax-extension)

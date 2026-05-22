@@ -9,9 +9,9 @@ Added by Neo_Kesha
 
 | Function name                                                               | Arguments                     | Return |
 | :------------------------------------------------------------------- | :----------------------- | :----- |
-| ![](../assets/images/Iconetc.webp)[`SETBGIMAGE`](./BACKGROUND.md)    | `string`(, `int`, `int`) | None   |
-| ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.md) | `string`                 | None   |
-| ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.md)  | None                     | None   |
+| ![](../assets/images/Iconetc.webp)[`SETBGIMAGE`](./BACKGROUND.en.md)    | `string`(, `int`, `int`) | None   |
+| ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.en.md) | `string`                 | None   |
+| ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.en.md)  | None                     | None   |
 
 !!! info "API"
     ```  { #language-erbapi }

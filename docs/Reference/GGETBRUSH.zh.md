@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数  | 返回值 |
 | :------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.md) | `int` | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETBRUSH`](./GGETBRUSH.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
 	```
 
 ### 相关项目
-- [GSETBRUSH](GSETBRUSH.md)
+- [GSETBRUSH](GSETBRUSH.zh.md)

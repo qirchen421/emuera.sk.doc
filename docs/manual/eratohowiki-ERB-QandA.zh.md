@@ -39,7 +39,7 @@ eramaker和Emuera中关于开发使用的ERA-BASIC的各种知识以Q&A形式解
 **A:他们也有自己的家庭**  
 在ERA的世界里，几乎没有不拥有家庭的个体。虽然很羡慕，但比如，COUNT、RESULT、DAY、TIME、MONEY、MASTER、TARGET、ASSI、PLAYER、ASSIPLAY、SELECTCOM、PREVCOM、LOSEBASE、UP、DOWN、PALAMLV、EXPLV、EJAC、FLAG、TFLAG、ITEM、ITEMSALES、BOUGHT、NOITEM、PBAND、RESULTS、STR、SAVESTR、NO、ISASSI、NAME、CALLNAME、BASE、MAXBASE、ABL、TALENT、EXP、MARK、RELATION、JUEL、CFLAG、EQUIP、TEQUIP、PALAM、STAIN、EX、SOURCE、NOWEX、GOTJUEL都是数组变量。  
 注意，上面变量中有些在特定时机初始化，那时是数组变量的所有元素初始化还是只初始化特定元素有所不同。比如，调教开始时`PREVCOM:0`初始化为`-1`，但`PREVCOM:1`和`PREVCOM:2`以后不初始化。  
-[参考：Emuera的变量表](../Emuera/variables.md)  
+[参考：Emuera的变量表](../Emuera/variables.zh.md)  
 
 ---  
 
@@ -137,7 +137,7 @@ eramaker和Emuera中关于开发使用的ERA-BASIC的各种知识以Q&A形式解
 
 即，非角色变量管理各角色时，只能通过操作`TARGET:0`，但这样操作时，其他角色退避标志不够，所以eramaker中同时调教多个角色的变体需要创建应对标志不足的机制。  
 Emuera中这个情况有所好转，但仍需要一些技巧。  
-关于哪些变量是角色变量，哪些是非角色变量，[变量一览](../Emuera/variables.md)请参考。  
+关于哪些变量是角色变量，哪些是非角色变量，[变量一览](../Emuera/variables.zh.md)请参考。  
 
 ---  
 
@@ -335,7 +335,7 @@ era中通常函数用CALL或JUMP调用或跳转，但Emuera中引入了"用户�
 总之，`#FUNCTION`的用户定义表达式函数内`RETURNF`不能返回字符串，`#FUNCTIONS`的用户定义表达式函数内`RETURNF`不能返回数值。  
 
 另外，不必勉强使用用户定义表达式函数。使用时可能代码更清晰易懂，但不清楚时不要用表达式函数，应该用自己的易懂指令构建。  
-另外，当然存在不是用户定义而是预设的表达式函数。[指令·表达式函数一览](../Reference/README.md)请参考。范围内理解后使用即可。  
+另外，当然存在不是用户定义而是预设的表达式函数。[指令·表达式函数一览](../Reference/README.zh.md)请参考。范围内理解后使用即可。  
 
 ---  
 

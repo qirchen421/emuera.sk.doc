@@ -7,11 +7,11 @@ hide:
 
 | 函数名                                                          | 参数            | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.md)  | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.md)   | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.md) | `string`        | `1`    |
-| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.md)   | `string`        | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.md)  | `string`, `int` | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_CREATE`](./DT_MANAGE.zh.md)  | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_EXIST`](./DT_MANAGE.zh.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_RELEASE`](./DT_MANAGE.zh.md) | `string`        | `1`    |
+| ![](../assets/images/IconEM.webp)[`DT_CLEAR`](./DT_MANAGE.zh.md)   | `string`        | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_NOCASE`](./DT_MANAGE.zh.md)  | `string`, `int` | `int`  |
 
 !!! info "API"
 
@@ -30,13 +30,13 @@ hide:
     - `DT_EXIST`：判断是否存在名为 `dataTableName` 的 `DataTable`，若存在，返回 `1`；否则返回 `0`。
     - `DT_RELEASE`：删除名为 `dataTableName` 的 `DataTable`。
     - `DT_CLEAR`：删除名为 `dataTableName` 的 `DataTable` 中保存的所有行（不会清除列的设置），返回 `1`。若指定的 `DataTable` 本身就不存在，返回 `-1`。
-    - `DT_NOCASE`：设置名为 `dataTableName` 的 `DataTable` 在 [`DT_SELECT`](./DT_SELECT.md) 函数处理字符串比较时是否无视大小写。返回 `1`。若指定的 `DataTable` 本身就不存在，返回 `-1`。
+    - `DT_NOCASE`：设置名为 `dataTableName` 的 `DataTable` 在 [`DT_SELECT`](./DT_SELECT.zh.md) 函数处理字符串比较时是否无视大小写。返回 `1`。若指定的 `DataTable` 本身就不存在，返回 `-1`。
         - `ignoreCase` 为 `0` 时（默认值）：大小写敏感
         - `ignoreCase` 为其它值时：无视大小写
 
     !!! warning "注意"
 
-        生成 `DataTable` 之后会自动添加 `id` 列。若需要保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        生成 `DataTable` 之后会自动添加 `id` 列。若需要保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.zh.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

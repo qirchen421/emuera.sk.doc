@@ -2,9 +2,9 @@
 
 !!! info "本节对应手册"
 
-    - [ERB 书式](../eramaker/ERB_format.md) — ERB 文件格式
-    - [CSV 书式](../eramaker/CSV_format.md) — CSV 文件格式
-    - [头文件](../Emuera/ERH.md) — ERH 头文件规格
+    - [ERB 书式](../eramaker/ERB_format.zh.md) — ERB 文件格式
+    - [CSV 书式](../eramaker/CSV_format.zh.md) — CSV 文件格式
+    - [头文件](../Emuera/ERH.zh.md) — ERH 头文件规格
 
 ---
 

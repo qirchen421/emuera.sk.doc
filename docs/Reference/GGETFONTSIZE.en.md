@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                              | Arguments | Return |
 | :------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.md) | `int`     | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSIZE`](./GGETFONTSIZE.en.md) | `int`     | `int`  |
 
 !!! info "API"
 
@@ -42,6 +42,6 @@ hide:
 	```
 
 ### Related Items
-- [GSETFONT](GSETFONT.md)
-- [GGETFONT](GGETFONT.md)
-- [GGETFONTSTYLE](GGETFONTSTYLE.md)
+- [GSETFONT](GSETFONT.en.md)
+- [GGETFONT](GGETFONT.en.md)
+- [GGETFONTSTYLE](GGETFONTSTYLE.en.md)

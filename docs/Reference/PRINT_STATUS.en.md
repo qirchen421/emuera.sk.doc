@@ -7,13 +7,13 @@ hide:
 
 | Function name                                                                       | Arguments | Return   |
 | :---------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.md)      | `int`     | none     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.md)   | `int`     | none     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.md)       | `int`     | none     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.md)      | `int`     | none     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.md)    | `int`     | none     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.md)     | none      | none     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.md) | none      | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.en.md)      | `int`     | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.en.md)   | `int`     | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.en.md)       | `int`     | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.en.md)      | `int`     | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.en.md)    | `int`     | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.en.md)     | none      | none     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.en.md) | none      | none     |
 
 !!! info "API"
 

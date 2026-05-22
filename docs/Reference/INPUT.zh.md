@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                        | 参数                    | 返回值     |
 | :------------------------------------------------------------ | :---------------------- | :--------- |
-| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.md)  | (`int`, `int`, `int`)   | `void`     |
-| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.md) | (`int`, `int`, `int`)   | `void`     |
+| ![](../assets/images/Iconeramaker.webp)[`INPUT`](./INPUT.zh.md)  | (`int`, `int`, `int`)   | `void`     |
+| ![](../assets/images/Iconeramaker.webp)[`INPUTS`](./INPUT.zh.md) | (`int`, `int`, `int`)   | `void`     |
 
 !!! info "API"
 
@@ -31,8 +31,8 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
-- [TINPUT](TINPUT.md)
-- [INPUTMOUSEKEY](INPUTMOUSEKEY.md)
-- [BINPUT](BINPUT.md)
-- [INPUTANY](INPUTANY.md)
-- [REUSELASTLINE](REUSELASTLINE.md)
+- [TINPUT](TINPUT.zh.md)
+- [INPUTMOUSEKEY](INPUTMOUSEKEY.zh.md)
+- [BINPUT](BINPUT.zh.md)
+- [INPUTANY](INPUTANY.zh.md)
+- [REUSELASTLINE](REUSELASTLINE.zh.md)

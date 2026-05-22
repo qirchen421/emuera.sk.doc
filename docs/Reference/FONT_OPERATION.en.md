@@ -7,11 +7,11 @@ hide:
 
 | Function name                                                                    | Arguments | Return |
 | :------------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FONTBOLD`](./FONT_OPERATION.md)          | none | none   |
-| ![](../assets/images/IconEmuera.webp)[`FONTITALIC`](./FONT_OPERATION.md)        | none | none   |
-| ![](../assets/images/IconEmuera.webp)[`FONTSTYLE`](./FONT_OPERATION.md)         | `int`| none   |
-| ![](../assets/images/IconEmuera.webp)[`FONTREGULAR`](./FONT_OPERATION.md)      | none | none   |
-| ![](../assets/images/IconEmuera.webp)[`GETSTYLE`](./FONT_OPERATION.md)          | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FONTBOLD`](./FONT_OPERATION.en.md)          | none | none   |
+| ![](../assets/images/IconEmuera.webp)[`FONTITALIC`](./FONT_OPERATION.en.md)        | none | none   |
+| ![](../assets/images/IconEmuera.webp)[`FONTSTYLE`](./FONT_OPERATION.en.md)         | `int`| none   |
+| ![](../assets/images/IconEmuera.webp)[`FONTREGULAR`](./FONT_OPERATION.en.md)      | none | none   |
+| ![](../assets/images/IconEmuera.webp)[`GETSTYLE`](./FONT_OPERATION.en.md)          | none | `int`  |
 
 !!! info "API"
 

@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                             | 参数 | 返回值 |
 | :----------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CONTINUE`](./CONTINUE.md) | 无   | 无     |
-| ![](../assets/images/Iconeramaker.webp)[`BREAK`](./CONTINUE.md)    | 无   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`CONTINUE`](./CONTINUE.zh.md) | 无   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`BREAK`](./CONTINUE.zh.md)    | 无   | 无     |
 
 !!! info "API"
 
@@ -18,7 +18,7 @@ hide:
 		BREAK
 	loopendInstruction
     ```
-    可在 [`REPEAT`](./REPEAT.md)、[`FOR`](./FOR.md)、[`WHILE`](./WHILE.md)、[`DO`](./DO.md) 内部使用的循环控制指令。
+    可在 [`REPEAT`](./REPEAT.zh.md)、[`FOR`](./FOR.zh.md)、[`WHILE`](./WHILE.zh.md)、[`DO`](./DO.zh.md) 内部使用的循环控制指令。
     `CONTINUE` 在执行时会返回到循环开始行，对于 `REPEAT` 和 `FOR` 循环，还会递增或递减对应的计数变量。
     `BREAK` 在执行时会中断后续的循环处理，并跳转到循环结束行。
 

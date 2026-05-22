@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                                | Arguments           | Return |
 | :----------------------------------------------------------------------------------------------------------- | :----------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.md) | `int`(, `int`,...) | none   |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.en.md) | `int`(, `int`,...) | none   |
 
 !!! info "API"
 
@@ -57,5 +57,5 @@ hide:
     ```
 
 ### Related
-- [ADDCHARA](ADDCHARA.md)
-- [DELALLCHARA](DELALLCHARA.md)
+- [ADDCHARA](ADDCHARA.en.md)
+- [DELALLCHARA](DELALLCHARA.en.md)

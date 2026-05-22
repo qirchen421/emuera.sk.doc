@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数   | 返回值 |
 | :--------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.md) | `void` | `void` |
+| ![](../assets/images/IconEE.webp)[`FORCE_QUIT`](./FORCE_QUIT.zh.md) | `void` | `void` |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     只能作为命令使用。
 
 ### 相关项目
-- [QUIT](QUIT.md)
+- [QUIT](QUIT.zh.md)

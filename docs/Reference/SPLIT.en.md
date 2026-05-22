@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                   | Arguments                              | Return   |
 | :------------------------------------------------------------- | :------------------------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`SPLIT`](./SPLIT.md)    | `string`, `string`, `stringArray`      | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`STRJOIN`](./SPLIT.md)  | `stringArray`(, `string`, `int`, `int`) | `string` |
+| ![](../assets/images/IconEmuera.webp)[`SPLIT`](./SPLIT.en.md)    | `string`, `string`, `stringArray`      | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRJOIN`](./SPLIT.en.md)  | `stringArray`(, `string`, `int`, `int`) | `string` |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                      | Arguments                            | Return |
 | :--------------------------------------------------------------------------- | :---------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GFILLRECTANGLE`](./GFILLRECTANGLE.en.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -16,11 +16,11 @@ hide:
     ```
 	Draws a rectangle at `x, y` with the specified `width` and `height` on the `Graphics` with the specified `gID`.  
 	Returns non-zero on success.  
-	The drawing color defaults to the Emuera config text color if not specified beforehand using the [`GSETBRUSH`](./GSETBRUSH.md) command.
+	The drawing color defaults to the Emuera config text color if not specified beforehand using the [`GSETBRUSH`](./GSETBRUSH.en.md) command.
 
 !!! hint "Hint"
 
     Both command and expression function supported.
 
 ### Related Items
-- [GSETBRUSH](GSETBRUSH.md)
+- [GSETBRUSH](GSETBRUSH.en.md)

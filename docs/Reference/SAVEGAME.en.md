@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :----------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.md) | none  | none   |
-| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.md) | none  | none   |
+| ![](../assets/images/Iconeramaker.webp)[`SAVEGAME`](./SAVEGAME.en.md) | none  | none   |
+| ![](../assets/images/Iconeramaker.webp)[`LOADGAME`](./SAVEGAME.en.md) | none  | none   |
 
 !!! info "API"
 
@@ -23,4 +23,4 @@ hide:
     Commands only.
 
 ### See Also
-- [PUTFORM](PUTFORM.md)
+- [PUTFORM](PUTFORM.en.md)

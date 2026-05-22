@@ -5,10 +5,10 @@ Original page:
 
 ---
 
-- [Tutorial](erawiki-tutorial.md)
-- [Title Preparation](erawiki-title.md)
+- [Tutorial](erawiki-tutorial.en.md)
+- [Title Preparation](erawiki-title.en.md)
 - Title Practice
-- [ERB Creation Practice](erawiki-ERBmanual.md)
+- [ERB Creation Practice](erawiki-ERBmanual.en.md)
 
 ---
 
@@ -255,7 +255,7 @@ Declaring variables like this is called "declaring a variable."
 
 There are various other patterns too.
 
-- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → User-defined Variables](../Emuera/user_defined_variables.md)
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → User-defined Variables](../Emuera/user_defined_variables.en.md)
 
 Give variables names that make their contents clear and searchable to improve readability.  
 Prevent multiple people from using the same variable for different purposes and accidentally overwriting.  
@@ -469,7 +469,7 @@ This means "convert to string."
 
 `TOSTR()` is a function usable in expressions, pre-built into Emuera.
 
-- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → Functions Usable in Expressions → str TOSTR(int value, str format = "")](../Reference/TOSTR.md)
+- [EmueraWiki → eramaker basic Developer Info → Emuera Added Extended Syntax → Functions Usable in Expressions → str TOSTR(int value, str format = "")](../Reference/TOSTR.en.md)
 
 There are many convenient expression functions, but there are too many to memorize.
 
@@ -477,7 +477,7 @@ The mysterious English-looking parts that aren't default variable names or DIM-d
 If they have `()`, they're functions, and if they appear abruptly without `@` or `CALL`, they're functions usable in expressions.  
 Search the page listing these expression functions.  
 (Whether this judgment is correct aside, I think you can mostly find things this way)  
-[List of Commands and Expression Functions](../Reference/README.md)
+[List of Commands and Expression Functions](../Reference/README.en.md)
 
 Press CTRL and F together to open the browser's page search.
 
@@ -592,7 +592,7 @@ DRAWLINE
 This means "draw a dividing line."  
 Often used for scene changes and creating headings.
 
-- [Reference → `DRAWLINE`](../Reference/DRAWLINE.md)
+- [Reference → `DRAWLINE`](../Reference/DRAWLINE.en.md)
 
 > DRAWLINE draws a line from the left edge of the screen to the right edge like "----".
 
@@ -603,7 +603,7 @@ By default in Emuera, `DRAWLINE` creates a line like `-` connected together.
 Some might want to change it to a solid line `─` or make it a double line with `=`.  
 How do you change the line displayed when using `DRAWLINE`?
 
-- [EmueraWiki → eramaker basic Developer Info → _replace.csv](../Emuera/replace.md)
+- [EmueraWiki → eramaker basic Developer Info → _replace.csv](../Emuera/replace.en.md)
 
 There's a file called _Replace.csv in the etc1821 folder.  
 Copy this and paste it into the CSV folder in the erakanon folder.
@@ -655,7 +655,7 @@ and a command method
 DRAWLINEFORM <FORM string>  
 ```
 
-- [Reference → `CUSTOMDRAWLINE`, `DRAWLINEFORM`](../Reference/CUSTOMDRAWLINE.md)
+- [Reference → `CUSTOMDRAWLINE`, `DRAWLINEFORM`](../Reference/CUSTOMDRAWLINE.en.md)
 
 ``` { #language-erb title="ERB" }  
 CUSTOMDRAWLINE ─  
@@ -667,7 +667,7 @@ Like this, specify the symbol you want to use for the line each time.
 
 ### What is `ALIGNMENT CENTER`?
 
-- [Reference → `ALIGNMENT`](../Reference/ALIGNMENT.md)
+- [Reference → `ALIGNMENT`](../Reference/ALIGNMENT.en.md)
 
 Alignment means to arrange or align.  
 It specifies left-align, center-align, or right-align text.
@@ -685,7 +685,7 @@ Usually it's left-aligned, but here it's center-aligned to look like a title scr
 ### What is `PRINTFORML`? {#printforml}
 This is a type of command that displays strings.
 
-- [Reference → `PRINT`](../Reference/PRINT.md)
+- [Reference → `PRINT`](../Reference/PRINT.en.md)
 
 Suddenly seeing the mysterious description `PRINT(|V|S|FORM|FORMS)(|K|D)(|L|W)`  
 might make some people's heads hurt.
@@ -774,16 +774,16 @@ omit GAMEBASE_TITLE and replace with ASCII art, display images, etc.
 
 For font display, color changes, special displays,
 
-- [Reference → `PRINT` family](../Reference/PRINT.md)
-- [Reference → Display Operations / Font Operations / Display Specifications](../Reference/README.en.md#print-related)
-- [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.md)
+- [Reference → `PRINT` family](../Reference/PRINT.en.md)
+- [Reference → Display Operations / Font Operations / Display Specifications](../Reference/README.en.md#display-font)
+- [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.en.md)
 
 For image display,
 
-- [Reference → `PRINT_IMG`](../Reference/PRINT_IMG.md)
-- [About Resource Files](../Emuera/resources.md)
-- [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.md)
-- [Reference → Image Processing Related](../Reference/README.en.md#image-processing-related)
+- [Reference → `PRINT_IMG`](../Reference/PRINT_IMG.en.md)
+- [About Resource Files](../Emuera/resources.en.md)
+- [Reference → `HTML_PRINT`](../Reference/HTML_PRINT.en.md)
+- [Reference → Image Processing Related](../Reference/README.en.md#image)
 
 Also, `WINDOW_TITLE` can be assigned.  
 You can add something to display in the window title at the top left.  
@@ -832,7 +832,7 @@ It might be a bit difficult, so even if you can't understand it, search for "spa
 
 So let's learn how to write loop processing too.
 
-- [Reference → Loop/Branch Syntax](../Reference/README.en.md#loopbranch-syntax)
+- [Reference → Loop/Branch Syntax](../Reference/README.en.md#flow-control)
 - [System Modification Q&A → Basics → Loop Processing Writing Methods (FOR and REPEAT Differences and Recommended Syntax)](erawiki-modification-QandA.md#forrepeat)
 
 If unclear, for now just borrow it as is until you understand.
@@ -883,7 +883,7 @@ can be replaced to change "最初から調教" to "Game Start", etc.
 
 For `[0]` and `[1]`, reading what's written about the `PRINTBUTTON` command in EmueraWiki might give you an overall understanding of button display.
 
-- [Reference → `PRINTBUTTON`](../Reference/PRINTBUTTON.md)
+- [Reference → `PRINTBUTTON`](../Reference/PRINTBUTTON.en.md)
 
 ---  
 
@@ -1080,7 +1080,7 @@ RESETDATA
 
 This is a command meaning "please reset the data."
 
-- [Reference → `RESETDATA`](../Reference/RESETDATA.md)
+- [Reference → `RESETDATA`](../Reference/RESETDATA.en.md)
 
 If you don't issue this command, when returning via "Return to Title" after already playing the game,  
 other data might remain.
@@ -1094,7 +1094,7 @@ other data might remain.
 ;Use ADDCHARA in other situations.  
 ```
 
-- [Reference → `ADDDEFCHARA`](../Reference/ADDDEFCHARA.md)
+- [Reference → `ADDDEFCHARA`](../Reference/ADDDEFCHARA.en.md)
 
 This is a command to maintain compatibility with eramaker - it registers all characters with CSV data at once.
 
@@ -1201,7 +1201,7 @@ ENDIF
 `ELSE` means "otherwise."  
 Here, perhaps for guidance, it displays that it's an invalid value using `REUSELASTLINE`, a command that rewrites the last line with a formatted string.
 
-- [Reference - `REUSELASTLINE`](../Reference/REUSELASTLINE.md)
+- [Reference - `REUSELASTLINE`](../Reference/REUSELASTLINE.en.md)
 
 If you want to ignore manual input, you can just return without question.
 
@@ -1237,4 +1237,4 @@ I hope this becomes a stepping stone for you to create what you want.
 
 ---
 
-Next Page → [ERB Production Practical Edition](erawiki-ERBmanual.md)
+Next Page → [ERB Production Practical Edition](erawiki-ERBmanual.en.md)

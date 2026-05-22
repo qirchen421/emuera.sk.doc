@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments                                | Return |
 | :------------------------------------------------------------- | :--------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CVARSET`](./CVARSET.md) | `charaVariable`(, `int`, `int`, `int`, `int`) | none   |
+| ![](../assets/images/IconEmuera.webp)[`CVARSET`](./CVARSET.en.md) | `charaVariable`(, `int`, `int`, `int`, `int`) | none   |
 
 !!! info "API"
 
@@ -38,4 +38,4 @@ hide:
     Command only.
 
 ### Related Items
-- [VARSET](VARSET.md)
+- [VARSET](VARSET.en.md)

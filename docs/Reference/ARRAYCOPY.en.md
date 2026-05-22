@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments        | Return |
 | :------------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYCOPY`](./ARRAYCOPY.md) | `variable`, `variable` | none   |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYCOPY`](./ARRAYCOPY.en.md) | `variable`, `variable` | none   |
 
 !!! info "API"
 

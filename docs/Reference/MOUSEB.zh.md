@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                   | 参数 | 返回值   |
 | :------------------------------------------------------- | :--- | :------- |
-| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.md) | 无   | `string` |
+| ![](../assets/images/IconEE.webp)[`MOUSEB`](./MOUSEB.zh.md) | 无   | `string` |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
 	由于执行时点无法确定是 `INPUT` 还是 `INPUTS`，因此返回字符串类型
 
 ### 相关项目
-- [AWAIT](AWAIT.md)
+- [AWAIT](AWAIT.zh.md)

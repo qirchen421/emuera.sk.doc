@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                  | 参数      | 返回值   |
 | :---------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`ALIGNMENT`](./ALIGNMENT.md)    | `keyword` | 无       |
-| ![](../assets/images/IconEmuera.webp)[`CURRENTALIGN`](./ALIGNMENT.md) | 无        | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ALIGNMENT`](./ALIGNMENT.zh.md)    | `keyword` | 无       |
+| ![](../assets/images/IconEmuera.webp)[`CURRENTALIGN`](./ALIGNMENT.zh.md) | 无        | `string` |
 
 !!! info "API"
 

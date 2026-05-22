@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                 | Arguments                               | Return |
 | :----------------------------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FINDCHARA`](./FINDCHARA.md)     | `charaVariable`, `int`(, `int`, `int`) | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`FINDLASTCHARA`](./FINDCHARA.md) | `charaVariable`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDCHARA`](./FINDCHARA.en.md)     | `charaVariable`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDLASTCHARA`](./FINDCHARA.en.md) | `charaVariable`, `int`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 

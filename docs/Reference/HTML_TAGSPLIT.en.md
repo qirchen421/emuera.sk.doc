@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                        | Arguments                                              | Return          |
 | :---------------------------------------------------------------------------- | :------------------------------------------------ | :-------------- |
-| ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md) | `string`(, `integerVariable`, `stringVariable`)   | `int`, `string` |
+| ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.en.md) | `string`(, `integerVariable`, `stringVariable`)   | `int`, `string` |
 
 !!! info "API"
 
@@ -51,4 +51,4 @@ hide:
     ```
 
 ### See Also
-- [SPLIT](SPLIT.md)
+- [SPLIT](SPLIT.en.md)

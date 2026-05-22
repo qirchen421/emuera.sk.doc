@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数                  | 返回值 |
 | :----------------------------------------------------------------- | :-------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYCOPY`](./ARRAYCOPY.md) | `varible`, `variable` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYCOPY`](./ARRAYCOPY.zh.md) | `varible`, `variable` | 无     |
 
 !!! info "API"
 

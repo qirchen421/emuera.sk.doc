@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                 | Arguments      | Return   |
 | :------------------------------------------------------------ | :------------ | :------- |
-| ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.md)   | `int`, `option` | `string` |
-| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.md) | `float`{, `option`} | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOSTR`](./TOSTR.en.md)   | `int`, `option` | `string` |
+| ![](../assets/images/IconSK.webp)[`TOSTRF`](./TOSTR.en.md) | `float`{, `option`} | `string` |
 
 !!! info "API — TOSTR"
 
@@ -17,7 +17,7 @@ hide:
     ```
 	Command that converts a number to a string.
 	Specify the number to convert as the first argument, and the format as a string in the second argument.  
-	The second argument can be omitted; when omitted, it simply becomes a string (similar to `{}` in [`PRINTFORM`](./PRINT.md)).  
+	The second argument can be omitted; when omitted, it simply becomes a string (similar to `{}` in [`PRINTFORM`](./PRINT.en.md)).  
 	This function internally calls C#'s [`Int64.ToString()` function](https://learn.microsoft.com/en-us/dotnet/api/system.int64.tostring), so C# format specifiers can be used. If the second argument is invalid, an error occurs.  
 	For simple format specifier examples, see the expression function with the same name. For detailed format specifications, refer to websites explaining C# numeric format strings.  
 

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments | Return |
 | :--------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md) | `void`    | `int`  |
+| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.en.md) | `void`    | `int`  |
 
 !!! info "API"
 

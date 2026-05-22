@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                            | 参数     | 返回值 |
 | :---------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_MANAGE.md)  | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_MANAGE.md)   | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_MANAGE.md) | `string` | `1`    |
+| ![](../assets/images/IconEM.webp)[`MAP_CREATE`](./MAP_MANAGE.zh.md)  | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`MAP_EXIST`](./MAP_MANAGE.zh.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`MAP_RELEASE`](./MAP_MANAGE.zh.md) | `string` | `1`    |
 
 !!! info "API"
 
@@ -28,7 +28,7 @@ hide:
 
     !!! warning "注意"
 
-        关于生成的 `MAP` 保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        关于生成的 `MAP` 保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.zh.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 
@@ -64,4 +64,4 @@ hide:
     ```
 
 ### 相关项目
-- [MAP操作](MAP_OPERATION.md)
+- [MAP操作](MAP_OPERATION.zh.md)

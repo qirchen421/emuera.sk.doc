@@ -45,23 +45,23 @@ Emuera不会重现这种情况，而是报错并使此定义无效，`TALENT:0`�
 Emuera会将其视为错误。  
 
 ## 其他与eramaker运行不同的地方  
-[`SIF`](../Reference/IF.md)后直接是空行或注释行等情况  
+[`SIF`](../Reference/IF.zh.md)后直接是空行或注释行等情况  
 
 对于如下脚本：  
 	SIF 条件  
 		;注释  
 		PRINT hogehoge  
 
-eramaker总是执行[`PRINT`](../Reference/PRINT.md)行。  
+eramaker总是执行[`PRINT`](../Reference/PRINT.zh.md)行。  
 因为eramaker认为`SIF`的下一行是";注释"。  
 
 Emuera与吉里吉里等一样，只在条件为真时执行`PRINT`行。  
 Emuera将空行和注释行完全当作不存在，认为`SIF`的下一行是`PRINT hogehoge`。  
-此外，eramaker中可以在`SIF`后放置[`IF`](../Reference/IF.md)语句或REPEAT语句，但这通常会导致与作者意图不同的行为，因此Emuera限制了可以放在`SIF`后的内容。  
+此外，eramaker中可以在`SIF`后放置[`IF`](../Reference/IF.zh.md)语句或REPEAT语句，但这通常会导致与作者意图不同的行为，因此Emuera限制了可以放在`SIF`后的内容。  
 
 ### 省略`IF`、`ELSEIF`等参数时的动作  
 eramaker中省略`IF`、`ELSEIF`或赋值语句的参数时，动作会不确定。  
-不过，省略[`RETURN`](../Reference/RETURN.md)参数时为`RETURN 0`。  
+不过，省略[`RETURN`](../Reference/RETURN.zh.md)参数时为`RETURN 0`。  
 Emuera总是将省略的参数解释为`0`，因此`IF`以下永远不执行，但会被警告。  
 
 ### 函数名可使用的字符  
@@ -81,7 +81,7 @@ Emuera中，如果函数名包含","或"("，会被误认为是函数参数。
 包含"{}"或"%"时，`CALLFORM`调用会受阻。  
 因此，Emuera与C#、吉里吉里等许多编程语言一样，禁止在函数名中使用符号。  
 在ver 1.721中，这只是警告级别1，并不会立即错误终止，但可能会出现意外行为。  
-另外，如果函数名以半角数字开头，则无法作为`表达式中可使用的函数`(in_expression_functions.md)调用。  
+另外，如果函数名以半角数字开头，则无法作为`表达式中可使用的函数`(in_expression_functions.zh.md)调用。  
 因为在表达式中，会根据第一个字符判断是数字还是变量/函数。  
 
 ### `RAND`的规格  
@@ -100,13 +100,13 @@ Emuera返回`(0～18446744073709551615的随机数) % (X)`。
 只要X在100万亿以下，几乎不会有明显的偏差。  
 
 ### `WAIT`的规格  
-eramaker中执行[`WAIT`](../Reference/WAIT.md)指令时不换行，按Enter键时才换行。  
+eramaker中执行[`WAIT`](../Reference/WAIT.zh.md)指令时不换行，按Enter键时才换行。  
 Emuera中执行`WAIT`指令时如果光标在行中间则会换行，而在"按Enter键"、"左键单击"等操作时不换行。  
 
 ### `JUMP`的规格  
-eramaker中无法从通过[`CALL`](../Reference/CALL.md)调用的函数中执行[`JUMP`](../Reference/JUMP.md)。  
+eramaker中无法从通过[`CALL`](../Reference/CALL.zh.md)调用的函数中执行[`JUMP`](../Reference/JUMP.zh.md)。  
 Emuera中即使是被`CALL`调用的函数也可以执行`JUMP`。  
-在`JUMP`目标处执行[`RETURN`](../Reference/RETURN.md)时，与从`JUMP`源函数返回时动作相同。  
+在`JUMP`目标处执行[`RETURN`](../Reference/RETURN.zh.md)时，与从`JUMP`源函数返回时动作相同。  
 
 **示例**  
 
@@ -245,7 +245,7 @@ Emuera可以处理`-9223372036854775808～9223372036854775807`范围的数字，
 
 ### `abl.csv`等的读取方式  
 eramaker中可以为索引指定负值或非常大的值，如`99999:技巧`。  
-不过，这里指定的编号会在[`PRINT_ABL`](../Reference/PRINT_STATUS.md)等时使用，因此在`PRINT_ABL`时（在eramaker内部）会引用`ABL:99999`，导致错误。  
+不过，这里指定的编号会在[`PRINT_ABL`](../Reference/PRINT_STATUS.zh.md)等时使用，因此在`PRINT_ABL`时（在eramaker内部）会引用`ABL:99999`，导致错误。  
 因此，实用上可用的值与`ABL`或`TALENT`的数组数量相同。  
 在`item.csv`中，`SHOP`引用`ITEM`或`ITEMSALES`时也会出错。  
 Emuera中无法指定`ABL`等数组范围外的值。  
@@ -262,7 +262,7 @@ Emuera不会重现这种行为。
 如果没有改变`TRAINNAME`的大小，则有效范围是`0～999`。  
 
 ### chara*.csv的读取方式  
-eramaker中，即使`号码`为0以下或1000以上，也能正常执行[`ADDCHARA`](../Reference/ADDCHARA.md)。  
+eramaker中，即使`号码`为0以下或1000以上，也能正常执行[`ADDCHARA`](../Reference/ADDCHARA.zh.md)。  
 Emuera也是如此。  
 
 eramaker中，如`基础,0`一样，第三位值是必需的情况下省略该值时，会当作`0`处理。  
@@ -276,13 +276,13 @@ Emuera不会重现这种行为，只有`[CR]`时也视为换行。
 
 ## 未修复的Bug和不自然行为  
 ### 文件读取顺序依赖于文件系统  
-eramaker basic中，多重定义的函数在被[`CALL`](../Reference/CALL.md)调用时等，动作依赖于文件读取顺序。  
+eramaker basic中，多重定义的函数在被[`CALL`](../Reference/CALL.zh.md)调用时等，动作依赖于文件读取顺序。  
 然而，由于eramaker的文件读取顺序依赖于文件系统，可能不会按预期运行。  
 Emuera中也会重现这个问题。  
 目前公开的许多脚本都假设文件系统是NTFS，如果文件系统是FAT则无法正常运行。  
 
 ### REPEAT-REND结束时COUNT递增  
-eramaker中，从[`REPEAT-REND`](../Reference/REPEAT.md)退出时`COUNT`会+1。  
+eramaker中，从[`REPEAT-REND`](../Reference/REPEAT.zh.md)退出时`COUNT`会+1。  
 即使是用`BREAK`退出也会+1。  
 Emuera会重现这种行为。  
 `FOR-NEXT`结构中同样会对循环变量+1。  
@@ -299,7 +299,7 @@ Emuera也会重现这种行为。
 ## 修改的功能  
 ### SP角色  
 eramaker中，csv中`CFLAG:0`被设置为非0的角色是SP角色。  
-需要通过[`ADDCHARA`](../Reference/ADDCHARA.md)注册，而不能用`ADDCHARA`注册，这有点难以理解。  
+需要通过[`ADDCHARA`](../Reference/ADDCHARA.zh.md)注册，而不能用`ADDCHARA`注册，这有点难以理解。  
 此外，无意中将`CFLAG:0`设置为非0，导致无法用`ADDCHARA`注册，这也是造成bug的原因之一。  
 从ver 1.816开始，Emuera决定默认不支持此功能。  
 `CFLAG:0`不再特殊处理，所有角色都可以通过`ADDCHARA`注册。  

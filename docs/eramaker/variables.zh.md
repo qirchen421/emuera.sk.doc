@@ -11,7 +11,7 @@ Emuera 中变量的上限可以通过 VariableSize.csv 进行修改。
 	- 可作为临时数据容器自由使用。但由于其值可能在任何地方被修改，不适合长时间存储数据。
 
 !!! note "COUNT"
-	- 使用 [REPEAT](../Reference/REPEAT.md) 命令时，记录重复次数的变量。
+	- 使用 [REPEAT](../Reference/REPEAT.zh.md) 命令时，记录重复次数的变量。
 	- 为避免误操作，建议不要在 REPEAT～REND 内部修改 COUNT 的值。
 
 !!! note "RESULT"

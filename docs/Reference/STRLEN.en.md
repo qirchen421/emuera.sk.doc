@@ -7,12 +7,12 @@ hide:
 
 | Function name                                                           | Arguments | Return |
 | :--------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`STRLEN`](./STRLEN.md)            | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENS`](./STRLEN.md)          | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENFORM`](./STRLEN.md)       | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENU`](./STRLEN.md)          | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENSU`](./STRLEN.md)         | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRLENFORMU`](./STRLEN.md)      | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLEN`](./STRLEN.en.md)            | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENS`](./STRLEN.en.md)          | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENFORM`](./STRLEN.en.md)       | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENU`](./STRLEN.en.md)          | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENSU`](./STRLEN.en.md)         | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRLENFORMU`](./STRLEN.en.md)      | `string`  | `int`  |
 
 !!! info "API"
 

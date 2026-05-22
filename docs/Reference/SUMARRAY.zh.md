@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数                           | 返回值 |
 | :--------------------------------------------------------------- | :----------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SUMARRAY`](./SUMARRAY.md) | `integerArray`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SUMARRAY`](./SUMARRAY.zh.md) | `integerArray`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 

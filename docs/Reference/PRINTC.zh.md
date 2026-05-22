@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                        | 参数     | 返回值 |
 | :-------------------------------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINT(\|FORM)(C\|LC)(\|K\|D)</code>](./PRINTC.md) | `string` | 无     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINT(\|FORM)(C\|LC)(\|K\|D)</code>](./PRINTC.zh.md) | `string` | 无     |
 
 !!! info "API"
 
@@ -29,7 +29,7 @@ hide:
     - `C` - 右对齐（在左侧添加半角空格）
     - `LC` - 左对齐。
 
-    第三个括号内的 `K`、`D` 与 [`PRINT`](./PRINT.md) 系列命令相同。
+    第三个括号内的 `K`、`D` 与 [`PRINT`](./PRINT.zh.md) 系列命令相同。
 
     !!! hint "提示"
 
@@ -66,5 +66,5 @@ hide:
     ```
 
 ### 相关项目
-- [PRINTCPERLINE](PRINTCPERLINE.md)
-- [PRINTCLENGTH](PRINTCLENGTH.md)
+- [PRINTCPERLINE](PRINTCPERLINE.zh.md)
+- [PRINTCLENGTH](PRINTCLENGTH.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                       | Arguments            | Return |
 | :--------------------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLINES`](./HTML_STRINGLINES.md) | `string`, `int` | `int`  |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLINES`](./HTML_STRINGLINES.en.md) | `string`, `int` | `int`  |
 
 !!! info "API"
 

@@ -2,8 +2,8 @@
 
 | 函数名                                                       | 参数                                    | 返回值   |
 | :----------------------------------------------------------- | :-------------------------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`SPLIT`](./SPLIT.md)   | `string`, `string`, `stringArray`       | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`STRJOIN`](./SPLIT.md) | `stringArray`(, `string`, `int`, `int`) | `string` |
+| ![](../assets/images/IconEmuera.webp)[`SPLIT`](./SPLIT.zh.md)   | `string`, `string`, `stringArray`       | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`STRJOIN`](./SPLIT.zh.md) | `stringArray`(, `string`, `int`, `int`) | `string` |
 
 !!! info "API"
 

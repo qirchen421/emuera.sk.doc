@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                                         | Arguments                            | Return   |
 | :----------------------------------------------------------------------------------- | :---------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.md)               | `string`                            | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.md)             | `string`, `string`                  | `int`    |
-| ![](../assets/images/IconSK.webp)[`MAP_TOSTRING`](./MAP_SERIALIZATION.md)            | `string`(, `string`, `string`)      | `string` |
-| ![](../assets/images/IconSK.webp)[`MAP_FROMSTRING`](./MAP_SERIALIZATION.md)          | `string`, `string`(, `string`, `string`) | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_TOXML`](./MAP_SERIALIZATION.en.md)               | `string`                            | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_FROMXML`](./MAP_SERIALIZATION.en.md)             | `string`, `string`                  | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_TOSTRING`](./MAP_SERIALIZATION.en.md)            | `string`(, `string`, `string`)      | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_FROMSTRING`](./MAP_SERIALIZATION.en.md)          | `string`, `string`(, `string`, `string`) | `int`    |
 
 !!! info "API"
 

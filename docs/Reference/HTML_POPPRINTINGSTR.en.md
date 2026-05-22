@@ -7,14 +7,14 @@ hide:
 
 | Function name                                                                                    | Arguments  | Return  |
 | :---------------------------------------------------------------------------------------- | :---- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)    | `void`| `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.en.md)    | `void`| `string`|
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	string HTML_POPPRINTINGSTR
     ```
-	Gets the current string buffer waiting for newline in [`PRINT`](./PRINT.md) in HTML format and clears the buffer.  
+	Gets the current string buffer waiting for newline in [`PRINT`](./PRINT.en.md) in HTML format and clears the buffer.  
 	Since `p` tags are not used, `align` from the `ALIGNMENT` command is not reflected.
 
 

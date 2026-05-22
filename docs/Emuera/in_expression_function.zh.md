@@ -5,12 +5,12 @@
 
 "表达式中可使用的函数"是在Emuera ver 1.712中新增的语法。  
 这在许多编程语言中简称为"函数"。  
-在eramaker basic中，将用`@～～`定义并用[`CALL`](../Reference/CALL.md)调用的称为"函数"，因此在Emuera中将新的"函数"称为"表达式中可使用的函数"。  
+在eramaker basic中，将用`@～～`定义并用[`CALL`](../Reference/CALL.zh.md)调用的称为"函数"，因此在Emuera中将新的"函数"称为"表达式中可使用的函数"。  
 以下，如无误解可能，将"表达式中可使用的函数"简称为函数。  
 
 另外，在其他页面中"表达式中可使用的函数"可能会简称为"表达式函数"。  
 但是，这与其它编程语言中的表达式函数（匿名函数）或内联函数无关。  
-非内置函数、在ERB中定义使用的"表达式中可使用的函数"请参考[用户定义的表达式函数](./user_defined_in_expression_function.md)。  
+非内置函数、在ERB中定义使用的"表达式中可使用的函数"请参考[用户定义的表达式函数](./user_defined_in_expression_function.zh.md)。  
 
 "表达式中可使用的函数"使用方法如下。  
 
@@ -50,11 +50,11 @@
 	A = STRLENS("abc")  
 	A = SUBSTRING("abc", 0, 1)  
 
-[`SUBSTRING`](../Reference/SUBSTRING.md)的返回值是`str`，即字符串型，所以不能赋值给整数型变量`A`。虽然字符串型函数不能赋值，但在其他方面可以像字符串变量一样处理。  
+[`SUBSTRING`](../Reference/SUBSTRING.zh.md)的返回值是`str`，即字符串型，所以不能赋值给整数型变量`A`。虽然字符串型函数不能赋值，但在其他方面可以像字符串变量一样处理。  
 
 	STR = %SUBSTRING("abc", 0, 1)%
 
-接下来的[`STRLENS`](../Reference/STRLEN.md)和`SUBSTRING`是函数名称。  
+接下来的[`STRLENS`](../Reference/STRLEN.zh.md)和`SUBSTRING`是函数名称。  
 
 `()`中的文字，如`str s`表示参数。
 如果有多个参数，用`,`（逗号）分隔。`STRLENS`有1个参数，`SUBSTRING`有3个参数。  

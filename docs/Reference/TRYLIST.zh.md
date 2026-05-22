@@ -7,11 +7,11 @@ hide:
 
 | 函数名                                                             | 参数                       | 返回值 |
 | :----------------------------------------------------------------- | :------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.md) | 无                       | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.md) | 无                       | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.md) | 无                       | 无   |
-| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.md)        | `functionName`(, `any`...) | `void`¹ |
-| ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.md)     | 无                       | 无   |
+| ![](../assets/images/IconEmuera.webp)[`TRYCALLLIST`](./TRYLIST.zh.md) | 无                       | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYJUMPLIST`](./TRYLIST.zh.md) | 无                       | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`TRYGOTOLIST`](./TRYLIST.zh.md) | 无                       | 无   |
+| ![](../assets/images/IconEmuera.webp)[`FUNC`](./TRYLIST.zh.md)        | `functionName`(, `any`...) | `void`¹ |
+| ![](../assets/images/IconEmuera.webp)[`ENDFUNC`](./TRYLIST.zh.md)     | 无                       | 无   |
 
 !!! info "API"
 
@@ -24,7 +24,7 @@ hide:
     ```
 	这是一个用于指定多个函数（标签）并仅调用第一个找到的函数的语法。  
 	在 `TRYLIST系～ENDFUNC` 内部，不能使用上述语法以外的描述。  
-	另外，关于使用 `TRYGOTOLIST` 直接进入循环/分支结构的情况，请参考 [`TRYGOTO`](./TRY.md)、[`循环/分支结构`](../Reference/README.md#_8) 以及 [`TRYC` 系](./TRYC.md) 的章节。  
+	另外，关于使用 `TRYGOTOLIST` 直接进入循环/分支结构的情况，请参考 [`TRYGOTO`](./TRY.zh.md)、[`循环/分支结构`](../Reference/README.zh.md#flow-control) 以及 [`TRYC` 系](./TRYC.zh.md) 的章节。  
 	使用方法如下所示：  
 
     ```  { #language-erbapi }
@@ -51,8 +51,8 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [TRY系](TRY.md)
-- [TRYC系](TRYC.md)
-- [CALL](CALL.md)
-- [JUMP](JUMP.md)
-- [GOTO](GOTO.md)
+- [TRY系](TRY.zh.md)
+- [TRYC系](TRYC.zh.md)
+- [CALL](CALL.zh.md)
+- [JUMP](JUMP.zh.md)
+- [GOTO](GOTO.zh.md)

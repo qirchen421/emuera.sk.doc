@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                                              | 参数                   | 返回值                    |
 | :-------------------------------------------------------------------------------------------------- | :--------------------- | :------------------------ |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.md) | `int`(, `int`,...)     | `与参数相同`              |
-| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.md)                                    | `string`(, `string`,...)| `与参数相同（转换为数值类型）`|
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`RETURN`](./RETURN.zh.md) | `int`(, `int`,...)     | `与参数相同`              |
+| ![](../assets/images/IconEmuera.webp)[`RETURNFORM`](./RETURN.zh.md)                                    | `string`(, `string`,...)| `与参数相同（转换为数值类型）`|
 
 !!! info "API"
 
@@ -66,7 +66,7 @@ hide:
         ; 无 RETURN → 函数末尾 RESULT:0 = 0
     ```
 
-    但是，声明了 [`#FUNCTION`](../Emuera/function.md) 的表达式函数使用 `RETURNF`，`RETURNF` **不会覆盖 RESULT**。函数末尾也不会对 `RESULT` 进行隐式赋值。
+    但是，声明了 [`#FUNCTION`](../Emuera/function.zh.md) 的表达式函数使用 `RETURNF`，`RETURNF` **不会覆盖 RESULT**。函数末尾也不会对 `RESULT` 进行隐式赋值。
 
     ``` { #language-erb }
     @MY_EXPR_FUNC
@@ -104,5 +104,5 @@ hide:
     ```
 
 ### 相关项目
-- [RESTART](RESTART.md)
+- [RESTART](RESTART.zh.md)
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — RETURNFORM 属于第二代"FORM 动态求值"

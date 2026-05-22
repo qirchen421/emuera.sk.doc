@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数     | 返回值 |
 | :----------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.zh.md) | `string` | `void` |
 
 !!! info "API"
 
@@ -52,4 +52,4 @@ hide:
     ```
 
 ### 相关项目
-- [BEGIN](BEGIN.md)
+- [BEGIN](BEGIN.zh.md)

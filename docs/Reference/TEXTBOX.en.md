@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                       | Arguments              | Return   |
 | :----------------------------------------------------------------- | :-------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](./TEXTBOX.md)    | `string`              | `1`      |
-| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.md)    | none                  | `string` |
-| ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.md)   | `int`, `int`, `int`  | `1`      |
-| ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.md) | none                  | `1`      |
+| ![](../assets/images/IconEE.webp)[`SETTEXTBOX`](./TEXTBOX.en.md)    | `string`              | `1`      |
+| ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.en.md)    | none                  | `string` |
+| ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.en.md)   | `int`, `int`, `int`  | `1`      |
+| ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.en.md) | none                  | `1`      |
 
 !!! info "API"
 

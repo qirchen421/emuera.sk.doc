@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments          | Return |
 | :------------------------------------------------------------ | :---------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`STRDATA`](./STRDATA.md) | `stringVariable`  | none   |
+| ![](../assets/images/IconEmuera.webp)[`STRDATA`](./STRDATA.en.md) | `stringVariable`  | none   |
 
 !!! info "API"
 
@@ -19,11 +19,11 @@ hide:
 		ENDLIST
 	ENDDATA
     ```
-	A command that assigns strings to a specified string-type variable instead of displaying them with [`PRINTDATA`](./PRINTDATA.md).  
+	A command that assigns strings to a specified string-type variable instead of displaying them with [`PRINTDATA`](./PRINTDATA.en.md).  
 	Each format is the same as `PRINTDATA`, so please refer to that page.
 
 !!! hint "Hint"
 
     Command only.
 ### Related
-- [PRINTDATA](PRINTDATA.md)
+- [PRINTDATA](PRINTDATA.en.md)

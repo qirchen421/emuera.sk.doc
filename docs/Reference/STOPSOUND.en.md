@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments | Return |
 | :------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`STOPSOUND`](./STOPSOUND.md) | `void` | `void` |
+| ![](../assets/images/IconEE.webp)[`STOPSOUND`](./STOPSOUND.en.md) | `void` | `void` |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     Available as command only
 
 ### Related
-- [PLAYSOUND](PLAYSOUND.md)
+- [PLAYSOUND](PLAYSOUND.en.md)

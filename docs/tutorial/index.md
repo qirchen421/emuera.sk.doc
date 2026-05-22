@@ -104,18 +104,18 @@
 | トピック | 内容 |
 |:---|:---|
 | [HTMLタグ構文](html-syntax.md) | HTML_PRINTタグ、属性、派生版差異 |
+| [リソース設定](resources.md) | CSV定義フォーマット、画像フォーマット、Skia版リソース管理機構 |
 
 ### 第7章：高度なトピック 🟢 選読
 
-> 動的解析、実行時メカニズム、アンチパターン——ERABASICの深い理解を目指す
+> 動的解析、実行時メカニズム——ERABASICの深い理解を目指す
 
-**前提知識**：第4章「関数」｜**本章のポイント**：三段階パイプライン、REF変数ライフサイクル、よくある間違いの回避
+**前提知識**：第4章「関数」｜**本章のポイント**：三段階パイプライン、REF変数ライフサイクル
 
 | トピック | 内容 |
 |:---|:---|
 | [動的解析とリフレクション](dynamic-reflection.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→変数リフレクション→ALS別名 |
 | [実行時メカニズム](runtime-mechanics.md) | ConvertArg→SetTransporter→IntoFunction、REF変数ライフサイクル |
-| [アンチパターンとよくある間違い](anti-patterns.md) | スコープ誤解、FORM誤用、REF/OUT混同、HTML出力の間違い |
 
 ---
 

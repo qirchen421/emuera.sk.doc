@@ -7,7 +7,7 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :--- | :--- | :--- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)(\|K\|D)(\|L\|W\|N)</code>](./PRINT.md) | `string` | 无 |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)![](../assets/images/Icondotnet.webp)[<code>PRINT(\|V\|S\|FORM\|FORMS)(\|K\|D)(\|L\|W\|N)</code>](./PRINT.zh.md) | `string` | 无 |
 
 !!! info "API"
 
@@ -74,6 +74,6 @@ hide:
 
 ### 相关项目
 - [基本输出](../tutorial/basic-output.zh.md) — PRINT 系列教程：参数类型、行为后缀、输出颜色、按钮
-- [PRINTBUTTON](PRINTBUTTON.md)
-- [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.md)
+- [PRINTBUTTON](PRINTBUTTON.zh.md)
+- [BITMAP_CACHE_ENABLE](BITMAP_CACHE_ENABLE.zh.md)
 - [Emuera新增语法>格式化字符串（FORM语法）扩展](../Emuera/expression.md#form_1)

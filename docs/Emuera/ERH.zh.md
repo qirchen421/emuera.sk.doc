@@ -10,7 +10,7 @@ Emuera会读取ERB文件夹中的所有`*.ERH`文件。
 eramakerEX不会对`*.ERH`应用`_rename.csv`，因此使用ERH文件会失去与`eramakerEX`的兼容性。  
 
 ## 全局变量的声明  
-※请同时参考[用户定义](./user_defined_variables.md)的变量。  
+※请同时参考[用户定义](./user_defined_variables.zh.md)的变量。  
 
 头文件中可以声明新变量。  
 这与在ERB中声明的私有变量不同，成为可以在ERB中所有地方引用的全局变量。  
@@ -74,7 +74,7 @@ eramakerEX不会对`*.ERH`应用`_rename.csv`，因此使用ERH文件会失去�
 由于这个特性，可以在不同的存档数据之间共享数据。  
 当同时使用`GLOBAL`和`SAVEDATA`关键字时，将成为通过`SAVEGLOBAL`、`LOADGLOBAL`指令读写`global.sav`文件的变量。  
 
-其他关于初始值、常量化等详细信息请参考[用户定义的变量](./user_defined_variables.md)。  
+其他关于初始值、常量化等详细信息请参考[用户定义的变量](./user_defined_variables.zh.md)。  
 
 ## 宏的定义  
 这里所说的宏是将ERB代码中的字符串替换为预先定义的另一字符串的功能。  
@@ -213,7 +213,7 @@ eramakerEX不会对`*.ERH`应用`_rename.csv`，因此使用ERH文件会失去�
 	<*.ERH>  
 		#DEFINE HOGE  
 
-同样的用途，EM+EE也可以使用[`ISDEFINED`](../Reference/ISDEFINED.md)  
+同样的用途，EM+EE也可以使用[`ISDEFINED`](../Reference/ISDEFINED.zh.md)  
 
 ### 宏的限制  
 宏展开基本只在表达式中进行。  

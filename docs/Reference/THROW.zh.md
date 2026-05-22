@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数     | 返回值 |
 | :--------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`THROW`](./THROW.md) | `string` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`THROW`](./THROW.zh.md) | `string` | 无     |
 
 !!! info "API"
 

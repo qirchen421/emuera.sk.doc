@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                                          | 参数                              | 返回值 |
 | :------------------------------------------------------------------------------ | :-------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.md)        | `int`, `string`(, `int`)          | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE`](./XML_REMOVENODE.zh.md)        | `int`, `string`(, `int`)          | `int`  |
 |                                                                                 | `ref` `string`, `string`(, `int`) | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](./XML_REMOVENODE.md) | `string`, `string`(, `int`)       | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_REMOVENODE_BYNAME`](./XML_REMOVENODE.zh.md) | `string`, `string`(, `int`)       | `int`  |
 
 !!! info "API"
 

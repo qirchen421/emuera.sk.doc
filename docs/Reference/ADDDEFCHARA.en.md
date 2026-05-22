@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                 | Arguments | Return |
 | :----------------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ADDDEFCHARA`](./ADDDEFCHARA.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`ADDDEFCHARA`](./ADDDEFCHARA.en.md) | none      | none   |
 
 !!! info "API"
 

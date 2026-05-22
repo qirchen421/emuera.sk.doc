@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments | Return |
 | :--------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.md) | `void`    | `int`  |
+| ![](../assets/images/IconEE.webp)[`CLEARMEMORY`](./CLEARMEMORY.en.md) | `void`    | `int`  |
 
 !!! info "API"
 
@@ -38,4 +38,4 @@ hide:
 	```
 
 ### Related
-- [GETMEMORYUSAGE](GETMEMORYUSAGE.md)
+- [GETMEMORYUSAGE](GETMEMORYUSAGE.en.md)

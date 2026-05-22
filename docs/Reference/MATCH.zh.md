@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数                         | 返回值 |
 | :--------------------------------------------------------- | :--------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MATCH`](./MATCH.md) | `array`, `any`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MATCH`](./MATCH.zh.md) | `array`, `any`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
     同时支持指令和表达式函数两种形式。
 
 ### 相关项目
-- [GROUPMATCH](GROUPCHECK.md)
+- [GROUPMATCH](GROUPCHECK.zh.md)

@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                               | 参数            | 返回值 |
 | :------------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GROUPMATCH`](./GROUPCHECK.md) | `any`, `any`... | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`NOSAMES`](./GROUPCHECK.md)    | `any`, `any`... | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.md)   | `any`, `any`... | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GROUPMATCH`](./GROUPCHECK.zh.md) | `any`, `any`... | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`NOSAMES`](./GROUPCHECK.zh.md)    | `any`, `any`... | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.zh.md)   | `any`, `any`... | `int`  |
 
 !!! info "API"
 
@@ -28,4 +28,4 @@ hide:
     该函数既可作为指令使用，也可在表达式中使用。
 
 ### 相关项目
-- [MATCH](MATCH.md)
+- [MATCH](MATCH.zh.md)

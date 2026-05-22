@@ -7,8 +7,8 @@ hide:
 
 | Function name | Arguments | Return |
 | :----------------------------------------------------------- | :---------------------------------- | :-------- |
-| ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.md)  | `string`(, `int`, `argument`...)    | `int`     |
-| ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.md) | `string`(, `string`, `argument`...) | `string`  |
+| ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.en.md)  | `string`(, `int`, `argument`...)    | `int`     |
+| ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.en.md) | `string`(, `string`, `argument`...) | `string`  |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
 	Available as both a statement and in-expression function.
 
 ### Related
-- [GETVAR,GETVARS,SETVAR](GETSETVAR.md)
+- [GETVAR,GETVARS,SETVAR](GETSETVAR.en.md)

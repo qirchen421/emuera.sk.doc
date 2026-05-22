@@ -7,12 +7,12 @@ hide:
 
 | 函数名                                                                   | 参数             | 返回值 |
 | :----------------------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.zh.md)           | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.zh.md)           | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.zh.md)        | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.zh.md)        | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.zh.md)       | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.zh.md)       | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.zh.md)           | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.zh.md)           | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.zh.md)        | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.zh.md)        | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.zh.md)       | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.zh.md)       | `stringVariable` | `void`¹ |
 
 !!! info "API"
 

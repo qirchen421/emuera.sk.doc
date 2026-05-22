@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                | Arguments              | Return |
 | :---------------------------------------------------------- | :--------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGSETG`](./CBGSETG.md) | `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGSETG`](./CBGSETG.en.md) | `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [CBGSETSPRITE](CBGSETSPRITE.md)
-- [CBGCLEAR](CBGCLEAR.md)
+- [CBGSETSPRITE](CBGSETSPRITE.en.md)
+- [CBGCLEAR](CBGCLEAR.en.md)

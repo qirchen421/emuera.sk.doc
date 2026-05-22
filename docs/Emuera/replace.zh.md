@@ -28,12 +28,12 @@ Emuera也基本上重现了这个处理。
 `ITEMNAME`和`ITEMSALES`数组元素数量中较小的那个将成为`PRINT_SHOPITEM`显示的商品范围。
 
 ## DRAWLINE文字(DRAWLINE character)
-`[DRAWLINE](../Reference/DRAWLINE.md)`指令显示的字符。
+`[DRAWLINE](../Reference/DRAWLINE.zh.md)`指令显示的字符。
 标准为`-`。
 
 ## BAR文字1(BAR character 1)
 ## BAR文字2(BAR character 2)
-指定用于`[BAR](../Reference/BAR.md)`或`[BARL](../Reference/BAR.md)`指令的字符。
+指定用于`[BAR](../Reference/BAR.zh.md)`或`[BARL](../Reference/BAR.zh.md)`指令的字符。
 标准为`BAR字符1`为`*`，`BAR字符2`为`.`。
 这种情况下会显示为`[****....]`。
 也可以指定全角字符或多字符字符串，但请考虑显示偏移。

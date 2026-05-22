@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                   | Arguments | Return |
 | :------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`REPEAT`](./REPEAT.md) | `int` | none   |
-| ![](../assets/images/Iconeramaker.webp)[`REND`](./REPEAT.md)   | none  | none   |
+| ![](../assets/images/Iconeramaker.webp)[`REPEAT`](./REPEAT.en.md) | `int` | none   |
+| ![](../assets/images/Iconeramaker.webp)[`REND`](./REPEAT.en.md)   | none  | none   |
 
 !!! info "API"
 
@@ -17,8 +17,8 @@ hide:
 	REND
     ```
     The code between `REPEAT` and `REND` loops the number of times specified by the argument. The loop count is stored in the `COUNT` variable.  
-	When [`CONTINUE`](./CONTINUE.md) is executed, it returns to the `REPEAT` line and increments the `COUNT` variable by 1.  
-	When [`BREAK`](./CONTINUE.md) is executed, it terminates the loop and proceeds to the `REND` line.
+	When [`CONTINUE`](./CONTINUE.en.md) is executed, it returns to the `REPEAT` line and increments the `COUNT` variable by 1.  
+	When [`BREAK`](./CONTINUE.en.md) is executed, it terminates the loop and proceeds to the `REND` line.
 
 
 !!! hint "Hint"
@@ -47,6 +47,6 @@ hide:
     ```
 
 ### See Also
-- [FOR-NEXT](FOR.md)
-- [WHILE_WEND](WHILE.md)
-- [CONTINUE,BREAK](CONTINUE.md)
+- [FOR-NEXT](FOR.en.md)
+- [WHILE_WEND](WHILE.en.md)
+- [CONTINUE,BREAK](CONTINUE.en.md)

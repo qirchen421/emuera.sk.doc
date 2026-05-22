@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数 | 返回值 |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`UPCHECK`](./UPCHECK.md) | 无   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`UPCHECK`](./UPCHECK.zh.md) | 无   | 无     |
 
 !!! info "API"
 
@@ -45,4 +45,4 @@ hide:
     ```
 
 ### 相关项目
-- [CUPCHECK](CUPCHECK.md)
+- [CUPCHECK](CUPCHECK.zh.md)

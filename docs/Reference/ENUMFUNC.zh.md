@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                                 | 参数     | 返回值 |
 | :--------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.md) | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.md)   | `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.md)       | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCBEGINSWITH`](./ENUMFUNC.zh.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCENDSWITH`](./ENUMFUNC.zh.md)   | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ENUMFUNCWITH`](./ENUMFUNC.zh.md)       | `string` | `int`  |
 
 !!! info "API"
     
@@ -69,6 +69,6 @@ hide:
     ```
 
 ### 相关项目
-- [ENUMVAR系](ENUMVAR.md) — 变量名枚举
-- [ENUMMACRO系](ENUMMACRO.md) — 宏名枚举
+- [ENUMVAR系](ENUMVAR.zh.md) — 变量名枚举
+- [ENUMMACRO系](ENUMMACRO.zh.md) — 宏名枚举
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — ENUMFUNC* 属于第三代"函数名枚举"

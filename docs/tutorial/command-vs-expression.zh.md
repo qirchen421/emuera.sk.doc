@@ -4,7 +4,7 @@
 
     - **Reference 分类**: [函数系列（CALL 等）](../Reference/README.zh.md#function-call)
     - [表达式函数](../Emuera/user_defined_in_expression_function.zh.md) — #FUNCTION/#FUNCTIONS 的完整规格
-    - [CALLF 指令参考](../Reference/CALLF.md) — CALLF 的 API 文档
+    - [CALLF 指令参考](../Reference/CALLF.zh.md) — CALLF 的 API 文档
 
 ---
 
@@ -171,7 +171,7 @@ CALLF SETTER("key", val)
 
 !!! info "CALLF 参考"
 
-    详见 [CALLF 指令参考](../Reference/CALLF.md)。
+    详见 [CALLF 指令参考](../Reference/CALLF.zh.md)。
 
 ### 方案 2：直接注册为 Instruction（设计层面解决）
 
@@ -233,4 +233,4 @@ CALLF SETTER("key", val)
 
 - [行类型与结构](line-types.zh.md) — 四种行类型的基础知识
 - [表达式函数](../Emuera/user_defined_in_expression_function.zh.md) — #FUNCTION/#FUNCTIONS 的完整规格
-- [CALLF 指令参考](../Reference/CALLF.md) — CALLF 的 API 文档
+- [CALLF 指令参考](../Reference/CALLF.zh.md) — CALLF 的 API 文档

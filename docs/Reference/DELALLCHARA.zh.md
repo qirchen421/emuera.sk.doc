@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数 | 返回值 |
 | :--------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`DELALLCHARA`](./DELALLCHARA.md) | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`DELALLCHARA`](./DELALLCHARA.zh.md) | 无   | 无     |
 
 !!! info "API"
 
@@ -27,4 +27,4 @@ hide:
     仅支持作为命令使用。
 
 ### 相关项目
-- [DELCHARA](DELCHARA.md)
+- [DELCHARA](DELCHARA.zh.md)

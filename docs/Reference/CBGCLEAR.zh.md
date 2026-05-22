@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数 | 返回值 |
 | :--------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CBGCLEAR`](./CBGCLEAR.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CBGCLEAR`](./CBGCLEAR.zh.md) | 无   | `int`  |
 
 !!! info "API"
 
@@ -21,5 +21,5 @@ hide:
     同时支持命令形式和表达式函数形式。
 
 ### 相关项目
-- [CBGSETG](CBGSETG.md)
-- [CGBSETSPRITE](CBGSETSPRITE.md)
+- [CBGSETG](CBGSETG.zh.md)
+- [CGBSETSPRITE](CBGSETSPRITE.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                               | 参数 | 返回值  |
 | :----------------------------------------------------------------------------------- | :--- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.md) | `int`| `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_GETPRINTEDSTR`](./HTML_GETPRINTEDSTR.zh.md) | `int`| `string`|
 
 !!! info "API"
 
@@ -47,4 +47,4 @@ hide:
 	![](../assets/images/HTML_GETPRINTEDSTR.png)
 
 ### 相关项目
-- [GETDISPLAYLINE](GETDISPLAYLINE.md)
+- [GETDISPLAYLINE](GETDISPLAYLINE.zh.md)

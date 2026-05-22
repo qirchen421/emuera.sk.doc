@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                      | Arguments                              | Return |
 | :--------------------------------------------------------------------------- | :----------------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEE.webp)[`GDRAWGWITHROTATE`](./GDRAWGWITHROTATE.en.md) | `int`, `int`, `int`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 

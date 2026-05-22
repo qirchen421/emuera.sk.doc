@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数  | 返回值 |
 | :--------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CUPCHECK`](./CUPCHECK.md) | `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CUPCHECK`](./CUPCHECK.zh.md) | `int` | 无     |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [UPCHECK](UPCHECK.md)
+- [UPCHECK](UPCHECK.zh.md)

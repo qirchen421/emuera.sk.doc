@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                             | Arguments | Return   |
 | :------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.md) | none      | none     |
+| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.en.md) | none      | none     |
 
 !!! info "API"
 
@@ -34,4 +34,4 @@ hide:
     ```
 
 ### Related Items
-- [CUSTOMDRAWLINE](CUSTOMDRAWLINE.md)
+- [CUSTOMDRAWLINE](CUSTOMDRAWLINE.en.md)

@@ -7,12 +7,12 @@ hide:
 
 | Function name                                                                                        | Arguments     | Return   |
 | :---------------------------------------------------------------------------------------------------- | :------------ | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTDATA(\|K\|D)(\|L\|W)</code>](./PRINTDATA.md) | none          | none     |
-| ![](../assets/images/IconEmuera.webp)[`DATA`](./PRINTDATA.md)                                        | `string`      | none     |
-| ![](../assets/images/IconEmuera.webp)[`DATAFORM`](./PRINTDATA.md)                                     | `formedString` | none     |
-| ![](../assets/images/IconEmuera.webp)[`DATALIST`](./PRINTDATA.md)                                    | none          | none     |
-| ![](../assets/images/IconEmuera.webp)[`ENDLIST`](./PRINTDATA.md)                                     | none          | none     |
-| ![](../assets/images/IconEmuera.webp)[`ENDDATA`](./PRINTDATA.md)                                     | none          | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTDATA(\|K\|D)(\|L\|W)</code>](./PRINTDATA.en.md) | none          | none     |
+| ![](../assets/images/IconEmuera.webp)[`DATA`](./PRINTDATA.en.md)                                        | `string`      | none     |
+| ![](../assets/images/IconEmuera.webp)[`DATAFORM`](./PRINTDATA.en.md)                                     | `formedString` | none     |
+| ![](../assets/images/IconEmuera.webp)[`DATALIST`](./PRINTDATA.en.md)                                    | none          | none     |
+| ![](../assets/images/IconEmuera.webp)[`ENDLIST`](./PRINTDATA.en.md)                                     | none          | none     |
+| ![](../assets/images/IconEmuera.webp)[`ENDDATA`](./PRINTDATA.en.md)                                     | none          | none     |
 
 !!! info "API"
 
@@ -44,7 +44,7 @@ hide:
     Use this when you want to modify subsequent processing based on which string was displayed.
     Within DATALIST~ENDLIST, each DATA or DATAFORM counts as one line.
 
-    The `K`, `D`, `L`, `W` keywords work the same as the [PRINT](./PRINT.md) family.
+    The `K`, `D`, `L`, `W` keywords work the same as the [PRINT](./PRINT.en.md) family.
     If no display data is provided by the `DATA` family inside `PRINTDATA`~`ENDDATA`, it proceeds without doing anything.
     You cannot include any statements other than the above syntax inside `PRINTDATA`~`ENDDATA` or `DATALIST`~`ENDLIST`.
 
@@ -73,6 +73,6 @@ hide:
     ```
 
 ### Related Items
-- [STRDATA](STRDATA.md)
-- [SELECTCASE](SELECTCASE.md)
-- [RAND](RAND.md)
+- [STRDATA](STRDATA.en.md)
+- [SELECTCASE](SELECTCASE.en.md)
+- [RAND](RAND.en.md)

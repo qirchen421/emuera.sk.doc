@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数   | 返回值 |
 | :----------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.md) | `void` | `int`  |
+| ![](../assets/images/IconEE.webp)[`UPDATECHECK`](./UPDATECHECK.zh.md) | `void` | `int`  |
 
 !!! info "API"
 

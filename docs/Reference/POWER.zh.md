@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数                              | 返回值 |
 | :--------------------------------------------------------- | :-------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.md) | `integerVariable`, `int`, `int`   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`POWER`](./POWER.zh.md) | `integerVariable`, `int`, `int`   | `int`  |
 |                                                            | `int`, `int`                      | `int`  |
 
 !!! info "API"
@@ -43,4 +43,4 @@ hide:
     ```
 
 ### 相关项目
-- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.md)
+- [CBRT, LOG, LOG10, EXPOMENT](MATH_EXTENSION.zh.md)

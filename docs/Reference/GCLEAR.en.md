@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                      | Arguments      | Return |
 | :----------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GCLEAR`](./GCLEAR.en.md) | `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -23,4 +23,4 @@ hide:
     Both command and expression function supported.
 
 ### Related Items
-- [GSETCOLOR](GSETCOLOR.md)
+- [GSETCOLOR](GSETCOLOR.en.md)

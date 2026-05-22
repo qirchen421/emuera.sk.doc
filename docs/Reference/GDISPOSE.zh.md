@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数  | 返回值 |
 | :--------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDISPOSE`](./GDISPOSE.zh.md) | `int` | `int`  |
 
 !!! info "API"
 

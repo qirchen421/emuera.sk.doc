@@ -7,11 +7,11 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_MAP_XML`](./SQL_XML.md) | `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_MAP_XML`](./SQL_XML.md) | `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.md) | `string`, `string`, `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_MAP_XML`](./SQL_XML.zh.md) | `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_DT_XML`](./SQL_XML.zh.md) | `string`, `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_MAP_XML`](./SQL_XML.zh.md) | `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.zh.md) | `string`, `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.zh.md) | `string`, `string`, `string`, `string`, `string` | `int` |
 
 !!! info "API"
 
@@ -33,7 +33,7 @@ hide:
 
     !!! warning "注意"
 
-        - 执行前必须先通过 [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.md) 或 [`SQL_CONNECT`](./SQL_CONNECT.md) 建立连接。
+        - 执行前必须先通过 [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.zh.md) 或 [`SQL_CONNECT`](./SQL_CONNECT.zh.md) 建立连接。
         - `SQL_IMPORT_MAP_XML` 和 `SQL_IMPORT_DT_XML` 使用流式解析（XmlReader），支持大文件。
         - `SQL_IMPORT_DT_XML` 的 Schema 文件用于推断列类型，Data 文件包含实际数据。
         - 导出文件路径相对于程序目录。

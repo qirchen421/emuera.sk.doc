@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数  | 返回值 |
 | :--------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.md) | `int` | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETFONTSTYLE`](./GGETFONTSTYLE.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -42,6 +42,6 @@ hide:
     ```
 
 ### 相关项目
-- [GSETFONT](GSETFONT.md)
-- [GGETFONT](GGETFONT.md)
-- [GGETFONTSIZE](GGETFONTSIZE.md)
+- [GSETFONT](GSETFONT.zh.md)
+- [GGETFONT](GGETFONT.zh.md)
+- [GGETFONTSIZE](GGETFONTSIZE.zh.md)

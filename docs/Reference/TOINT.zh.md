@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                         | 参数     | 返回值 |
 | :------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.md)     | `string` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.md) | `string` | `int`  |
-| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.md)      | `string` | `float`  |
+| ![](../assets/images/IconEmuera.webp)[`TOINT`](./TOINT.zh.md)     | `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ISNUMERIC`](./TOINT.zh.md) | `string` | `int`  |
+| ![](../assets/images/IconSK.webp)[`TOFLOAT`](./TOINT.zh.md)      | `string` | `float`  |
 
 !!! info "API"
 
@@ -87,4 +87,4 @@ hide:
     ```
 
 ### 相关项目
-- [TOSTR](TOSTR.md)
+- [TOSTR](TOSTR.zh.md)

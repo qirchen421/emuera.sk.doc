@@ -7,7 +7,7 @@ hide:
 
 | Function name                                               | Arguments             | Return |
 | :---------------------------------------------------------- | :-------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SWAP`](./SWAP.md) | `variable`, `variable` | none   |
+| ![](../assets/images/IconEmuera.webp)[`SWAP`](./SWAP.en.md) | `variable`, `variable` | none   |
 
 !!! info "API"
 

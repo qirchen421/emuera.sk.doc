@@ -41,12 +41,12 @@ hide:
 | 你想做什么？ | 前往 |
 |:---|:---|
 | 从零学习 ERABASIC | [教程](tutorial/index.zh.md) |
-| 查找指令用法 | [指令参考](Reference/README.md) |
+| 查找指令用法 | [指令参考](Reference/README.zh.md) |
 | 了解 EM+EE 新功能 | [EM+EE 功能概览](EMEE/EMEE_Summary.zh.md) |
 | 了解 Skia 版新功能 | [Skia 版功能概览](Skia/Skia_Summary.zh.md) |
-| 了解变量系统 | [变量规格](Emuera/variables.md) |
-| 了解函数与预处理器 | [函数·预处理器](Emuera/function.md) |
-| 了解系统流程 | [流程图](Emuera/system_flow.md) |
+| 了解变量系统 | [变量规格](Emuera/variables.zh.md) |
+| 了解函数与预处理器 | [函数·预处理器](Emuera/function.zh.md) |
+| 了解系统流程 | [流程图](Emuera/system_flow.zh.md) |
 | 版本间功能对比 | [版本进化比较](tutorial/evolution.zh.md) |
 
 ## 许可证

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments | Return |
 | :------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md) | `string`  | `int`  |
+| ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.en.md) | `string`  | `int`  |
 
 !!! info "API"
 
@@ -38,4 +38,4 @@ hide:
 	```
 
 ### Related
-- [ENUMFILES](ENUMFILES.md)
+- [ENUMFILES](ENUMFILES.en.md)

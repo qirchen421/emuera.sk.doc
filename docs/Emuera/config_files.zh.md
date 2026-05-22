@@ -1,6 +1,6 @@
 # 配置设置的强制设定
 当Emuera检测到csv文件夹内存在名为`_fixed.config`和/或`_default.config`的文件时，将会读取这些文件。
-各个`.config`文件的格式与`emuera.config`相同。各项配置的具体含义请参见[配置项目](config.md)。  
+各个`.config`文件的格式与`emuera.config`相同。各项配置的具体含义请参见[配置项目](config.zh.md)。  
 
 各文件的优先级取决于Emuera读取配置文件的顺序。  
 Emuera读取配置文件的顺序如下：  

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数                       | 返回值   |
 | :--------------------------------------------------------- | :------------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.md) | `variable`, `int`(, `int`) | `string` |
+| ![](../assets/images/IconEE.webp)[`ERDNAME`](./ERDNAME.zh.md) | `variable`, `int`(, `int`) | `string` |
 
 !!! info "API"
 

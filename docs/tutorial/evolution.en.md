@@ -105,5 +105,5 @@ Emuera (Baseline — the practical starting point of modern ERABASIC)
 |:---|:---|
 | EM+EE | [EM+EE Feature Overview](../EMEE/EMEE_Summary.en.md) |
 | Skia | [Skia Feature Overview](../Skia/Skia_Summary.en.md) |
-| Emuera | [Emuera Overview](../Emuera/README.md) |
-| eramaker | [eramaker Overview](../eramaker/README.md) |
+| Emuera | [Emuera Overview](../Emuera/README.en.md) |
+| eramaker | [eramaker Overview](../eramaker/README.en.md) |

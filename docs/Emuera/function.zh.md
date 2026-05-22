@@ -9,7 +9,7 @@
 在标准标题画面选择加载时被调用。  
 通过定义`@TITLE_LOADGAME`，可以在标题画面使用自定义加载画面。  
 如果没有定义，将使用标准加载画面。  
-如果定义了`@SYSTEM_TITLE`，除非明确使用[`CALL`](../Reference/CALL.md)，否则不会调用`@TITLE_LOADGAME`。  
+如果定义了`@SYSTEM_TITLE`，除非明确使用[`CALL`](../Reference/CALL.zh.md)，否则不会调用`@TITLE_LOADGAME`。  
 
 ### `@SYSTEM_AUTOSAVE`  
 在自动保存时机被调用。  
@@ -43,7 +43,7 @@
 数值可以使用数值表达式或字符串表达式。  
 将字符串字面量（常量）作为参数时，请用`""`括起来。  
 将格式化字符串字面量作为参数时，请写成`@"～～"`。  
-除了[`CALL`](../Reference/CALL.md)外，[`JUMP`](../Reference/JUMP.md)、CALLFORM、TRYCALL等也可以使用相同格式。  
+除了[`CALL`](../Reference/CALL.zh.md)外，[`JUMP`](../Reference/JUMP.zh.md)、CALLFORM、TRYCALL等也可以使用相同格式。  
 函数侧可以指定任意多个参数。  
 截至ver1.808，函数侧和调用侧类型不同时，无论从数值到字符串还是从字符串到数值，都会出错而不是转换。  
 如果想像ver1.807以前一样在字符串型参数中传递数值进行调用，请更改配置设置或使用`TOSTR`函数。  
@@ -158,12 +158,12 @@
 ### `#FUNCTION`  
 表达式函数的属性。  
 表达式函数不能用普通的RETURN结束，需要用`RETURNF <数值表达式>`结束。  
-详情请参考[用户定义的表达式函数](user_defined_in_expression_function.md)。  
+详情请参考[用户定义的表达式函数](user_defined_in_expression_function.zh.md)。  
 
 ### `#FUNCTIONS`  
 表达式函数的属性。  
 表达式函数不能用普通的`RETURN`结束，需要用RETURNF <字符串表达式>结束。  
-详情请参考[用户定义的表达式函数](user_defined_in_expression_function.md)。  
+详情请参考[用户定义的表达式函数](user_defined_in_expression_function.zh.md)。  
 
 ## 定义  
 定义变量名称及其规格的预处理器。  
@@ -179,12 +179,12 @@
 用户定义变量声明。在ERB中的特定函数内使用，可以定义仅在该函数内使用的数值型变量。  
 详情请参考用户定义的变量。  
 另外，在ERH中使用时，可以定义所有函数间共享值的数值型变量。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 ### `#DIMS`  
 用户定义变量声明。在ERB中的特定函数内使用，可以定义仅在该函数内使用的字符串型变量。  
 详情请参考用户定义的变量。 另外，在ERH中使用时，可以定义所有函数间共享值的字符串型变量。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 ### `#DEFINE`  
 DEFINE宏声明。在ERH中使用时，可以将全ERB代码中的字符串替换为预先定义的另一字符串。  
@@ -200,21 +200,21 @@ DEFINE宏声明。在ERH中使用时，可以将全ERB代码中的字符串替�
 这是有意改变Emuera和eramaker行为时使用的。  
 请在不想在Emuera中执行的语句中使用。  
 另外，与`;!;`一起使用时，可以在Emuera以外不执行不想执行的语句。  
-详情请参考[Emuera中新增的语法](expression.md)章节。  
+详情请参考[Emuera中新增的语法](expression.zh.md)章节。  
 
 ### `[IF XXX]`～`[ELSEIF XXX]`～`[ELSE]`～`[ENDIF]`  
 可以根据名称`XXX`的宏是否定义来决定执行多行或分支。  
-详情请参考[头文件（ERH）](ERH.md)。  
+详情请参考[头文件（ERH）](ERH.zh.md)。  
 
 ### `[IF_DEBUG]`～`[ENDIF]`  
 从`[IF_DEBUG]`到`[ENDIF]`之间写的行只在调试模式时执行。  
 非调试模式时被视为注释行不执行。  
 不过，`DEBUG`系列指令原本在非调试模式时就被忽略，因此不需要在行首添加`;#;`。  
 同样，调试变量在非调试模式时也是空字符串或0，不用担心出错。  
-关于调试模式请参考[这里](debug.md)。  
+关于调试模式请参考[这里](debug.zh.md)。  
 
 ### `[IF_NDEBUG]`～`[ENDIF]`  
 从`[IF_NDEBUG]`到`[ENDIF]`之间写的行只在非调试模式时执行。  
 调试模式时被视为注释行不执行。  
 与`[IF_DEBUG]`的判断正好相反。  
-关于调试模式请参考[这里](debug.md)。  
+关于调试模式请参考[这里](debug.zh.md)。  

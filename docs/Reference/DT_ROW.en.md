@@ -7,13 +7,13 @@ hide:
 
 | Function name                                                  | Arguments                                                      | Return |
 | :------------------------------------------------------------ | :------------------------------------------------------------ | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_ADD`](./DT_ROW.md)    | `string`([, `string`, `any`] ...)                             | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_ADD`](./DT_ROW.en.md)    | `string`([, `string`, `any`] ...)                             | `int`  |
 |                                                                | `string`, `ref` `string[]`, `ref` `any[]`, `int`            | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_SET`](./DT_ROW.md)    | `string`, `int`, `string`, `any`([, `string`, `any`] ...) | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_SET`](./DT_ROW.en.md)    | `string`, `int`, `string`, `any`([, `string`, `any`] ...) | `int`  |
 |                                                                | `string`, `int`, `ref` `string[]`, `ref` `any[]`, `int`   | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_REMOVE`](./DT_ROW.md) | `string`, `int`                                              | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_REMOVE`](./DT_ROW.en.md) | `string`, `int`                                              | `int`  |
 |                                                                | `string`, `ref` `int[]`, `int`                              | `int`  |
-| ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.md) | `string`                                                      | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.en.md) | `string`                                                      | `int`  |
 
 !!! info "API"
 

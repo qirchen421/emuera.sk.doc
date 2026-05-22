@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments | Return |
 | :---------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SAVENOS`](./SAVENOS.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SAVENOS`](./SAVENOS.en.md) | `int`     | `int`  |
 
 !!! info "API"
 

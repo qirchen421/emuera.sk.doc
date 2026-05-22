@@ -7,11 +7,11 @@ hide:
 
 | Function name | Arguments | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_NONQUERY`](./SQL_EXECUTE.md) | `string`, `string` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_READER`](./SQL_EXECUTE.md) | `string`, `string` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_LONG`](./SQL_EXECUTE.md) | `string`, `string` | `int` |
-| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_STRING`](./SQL_EXECUTE.md) | `string`, `string` | `string` |
-| ![](../assets/images/IconSK.webp)[`SQL_EXECUTE_SCALAR_FLOAT`](./SQL_EXECUTE.md) | `string`, `string` | `float` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_NONQUERY`](./SQL_EXECUTE.en.md) | `string`, `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_READER`](./SQL_EXECUTE.en.md) | `string`, `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_LONG`](./SQL_EXECUTE.en.md) | `string`, `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_EXECUTE_SCALAR_STRING`](./SQL_EXECUTE.en.md) | `string`, `string` | `string` |
+| ![](../assets/images/IconSK.webp)[`SQL_EXECUTE_SCALAR_FLOAT`](./SQL_EXECUTE.en.md) | `string`, `string` | `float` |
 
 !!! info "API"
 
@@ -26,16 +26,16 @@ hide:
     Functions for executing SQL statements on SQLite databases.
 
     - `SQL_EXECUTE_NONQUERY`: Executes a non-query SQL statement (INSERT / UPDATE / DELETE / CREATE TABLE, etc.) and returns the number of affected rows.
-    - `SQL_EXECUTE_READER`: Executes a query SQL statement (SELECT) and returns a Reader ID (for subsequent operations like [`SQL_READER_READ`](./SQL_READER.md)).
+    - `SQL_EXECUTE_READER`: Executes a query SQL statement (SELECT) and returns a Reader ID (for subsequent operations like [`SQL_READER_READ`](./SQL_READER.en.md)).
     - `SQL_EXECUTE_SCALAR_LONG`: Executes a scalar query and returns the first column of the first row as an integer. Returns `0` if the result is NULL or empty.
     - `SQL_EXECUTE_SCALAR_STRING`: Executes a scalar query and returns the first column of the first row as a string. Returns an empty string if the result is NULL or empty.
     - `SQL_EXECUTE_SCALAR_FLOAT`: Executes a scalar query and returns the first column of the first row as a float. Returns `0.0` if the result is NULL or empty.
 
     !!! warning "Warning"
 
-        - A connection must be established via [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.md) or [`SQL_CONNECT`](./SQL_CONNECT.md) before executing any SQL.
-        - For parameterized queries (SQL injection prevention), use the [`SQL_P_EXECUTE_*`](./SQL_PARAM.md) series.
-        - The Reader ID returned by `SQL_EXECUTE_READER` must be closed with [`SQL_READER_CLOSE`](./SQL_READER.md) after use, otherwise resources will leak.
+        - A connection must be established via [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.en.md) or [`SQL_CONNECT`](./SQL_CONNECT.en.md) before executing any SQL.
+        - For parameterized queries (SQL injection prevention), use the [`SQL_P_EXECUTE_*`](./SQL_PARAM.en.md) series.
+        - The Reader ID returned by `SQL_EXECUTE_READER` must be closed with [`SQL_READER_CLOSE`](./SQL_READER.en.md) after use, otherwise resources will leak.
 
 !!! hint "Hint"
 

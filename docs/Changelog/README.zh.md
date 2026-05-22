@@ -7,14 +7,14 @@
 
 === "v18"
 
-    * 新增函数：[`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.md)。
+    * 新增函数：[`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.zh.md)。
     * 修复：[`<div>` 标签](../EMEE/EMEE_Summary.md#html_print) 的行位置偏移问题。
-    * 修复：[`DT_CELL_GETS`](../Reference/DT_CELL.md) 的目标为 INT 时出现错误的问题。
+    * 修复：[`DT_CELL_GETS`](../Reference/DT_CELL.zh.md) 的目标为 INT 时出现错误的问题。
     * 修复：外层 [`<clearbutton>` 标签](../EMEE/EMEE_Summary.md#html_print) 对 [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print) 中的内容无效的问题。
 
 === "v17"
 
-    * 新增了 [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.md)。
+    * 新增了 [`DT_COLUMN_NAMES`](../Reference/DT_COLUMN.zh.md)。
     * [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print) 新增 `display`、`margin`、`padding`、`border`、`bcolor`、`radius`属性。
     * 修正了重启后渲染 `<div>` 时报错终止的问题。
 
@@ -30,14 +30,14 @@
 
 === "v16"
 
-    *  新增了 [`DT_TOXML`](../Reference/DT_SERIALIZATION.md) / [`DT_FROMXML`](../Reference/DT_SERIALIZATION.md) / [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.md) / [`MOVETEXTBOX`](../Reference/TEXTBOX.md) / [`RESUMETEXTBOX`](../Reference/TEXTBOX.md)。
+    *  新增了 [`DT_TOXML`](../Reference/DT_SERIALIZATION.zh.md) / [`DT_FROMXML`](../Reference/DT_SERIALIZATION.zh.md) / [`DT_COLUMN_OPTIONS`](../Reference/DT_COLUMN.zh.md) / [`MOVETEXTBOX`](../Reference/TEXTBOX.zh.md) / [`RESUMETEXTBOX`](../Reference/TEXTBOX.zh.md)。
     * 新增了 [`<div>` 标签](../EMEE/EMEE_Summary.md#html_print)，`<img>` 标签新增了 `srcm` 属性，扩展了渲染时的特性。
     * 为 `PRINT_IMG` 命令添加了[另外两种调用形式](../EMEE/EMEE_Summary.md#html_print-print)。
-    * [`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.md) 现在可以指定数组大小了。
+    * [`ARRAYMSORTEX`](../Reference/ARRAYMSORTEX.zh.md) 现在可以指定数组大小了。
 
 === "v15"
 
-    * 新增了 [`DataTable` 系列函数](../Reference/DT_MANAGE.md)。
+    * 新增了 [`DataTable` 系列函数](../Reference/DT_MANAGE.zh.md)。
     * 修复了字体大小不为 `16` 时输入栏的显示问题。
     * 修复了用户定义的程序图标的透明通道信息无效的问题。
 
@@ -58,14 +58,14 @@
 
 === "v13"
 
-    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.md)。
-    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.md)。
+    * 扩展了 HTML 图像相关参数的[输入格式](../EMEE/EMEE_Summary.zh.md)。
+    * 新增了 [`PRINT_IMG` 的参数](../EMEE/EMEE_Summary.zh.md)。
 
 === "v12"
 
     * 新增「[セーブデータを圧縮して保存する](../EMEE/EMEE_Summary.md#_5)」设置项。
     * 新增将 [XML、MAP 数据保存进存档](../EMEE/EMEE_Summary.md#xmlmapdatatable)的功能。
-	* 调整 [XML 系列命令](../Reference/XML_MANAGE.md)的行为，现在使用字符串作为 ID，兼容旧版本。
+	* 调整 [XML 系列命令](../Reference/XML_MANAGE.zh.md)的行为，现在使用字符串作为 ID，兼容旧版本。
 
 === "v11"
 
@@ -74,11 +74,11 @@
 === "v10"
 
     * 新增HTML标签：[`<clearbutton>`](../EMEE/EMEE_Summary.md#html_print)。
-    * 性能提高：修正算法以提高 [`XML_GET`](../Reference/XML_GET.md) 的性能。
+    * 性能提高：修正算法以提高 [`XML_GET`](../Reference/XML_GET.zh.md) 的性能。
 
 === "v9"
 
-    * 新增函数：[`ENUMFILES`](../Reference/ENUMFILES.md)。
+    * 新增函数：[`ENUMFILES`](../Reference/ENUMFILES.zh.md)。
 
 === "v8c"
 
@@ -87,17 +87,17 @@
 === "v8b"
 
 	* 修复关于 [`REPLACE` 扩展](../EMEE/EMEE_Summary.md#replace)带来的错误(该错误会导致eraTW的AA显示发生错误)。
-	* 将 [`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.md) 的返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
+	* 将 [`HTML_SUBSTRING`](../Reference/HTML_SUBSTRING.zh.md) 的返回值从整数型(固定为 `1`)更改为字符串型(与 `RESULTS:0` 相同)。
 
 === "v8"
 
-    * 扩展 [`XML_GET`](../Reference/XML_GET.md) / [`REPLACE`](../EMEE/EMEE_Summary.md#replace) 相关功能。
-    * 修复关于 [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md) / [`VARSETEX`](../Reference/VARSETEX.md) 的错误。
+    * 扩展 [`XML_GET`](../Reference/XML_GET.zh.md) / [`REPLACE`](../EMEE/EMEE_Summary.md#replace) 相关功能。
+    * 修复关于 [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.zh.md) / [`VARSETEX`](../Reference/VARSETEX.zh.md) 的错误。
 
 === "v7"
 
-    * 扩展 [`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.md) 功能。
-    * 扩展 [`REGEXPMATCH`](../Reference/REGEXPMATCH.md) 功能。
+    * 扩展 [`HTML_STRINGLEN`](../Reference/HTML_STRINGLEN.zh.md) 功能。
+    * 扩展 [`REGEXPMATCH`](../Reference/REGEXPMATCH.zh.md) 功能。
 
 === "v6"
 
@@ -105,25 +105,25 @@
 
 === "v5"
 
-    * 修订关于 [`XML_SET`](../Reference/XML_SET.md) / [`XML_GET`](../Reference/XML_SET.md) 的说明。
-    * 补充关于 [`XML_TOSTR`](../Reference/XML_TOSTR.md) 的说明。
-    * 新增函数：[`XML_ADDNODE`](../Reference/XML_ADDNODE.md) / [`XML_REMOVENODE`](../Reference/XML_REMOVENODE.md) / [`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.md) / [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.md) / [`XML_REPLACE`](../Reference/XML_REPLACE.md)。
+    * 修订关于 [`XML_SET`](../Reference/XML_SET.zh.md) / [`XML_GET`](../Reference/XML_SET.zh.md) 的说明。
+    * 补充关于 [`XML_TOSTR`](../Reference/XML_TOSTR.zh.md) 的说明。
+    * 新增函数：[`XML_ADDNODE`](../Reference/XML_ADDNODE.zh.md) / [`XML_REMOVENODE`](../Reference/XML_REMOVENODE.zh.md) / [`XML_ADDATTRIBUTE`](../Reference/XML_ADDATTRIBUTE.zh.md) / [`XML_REMOVEATTRIBUTE`](../Reference/XML_REMOVEATTRIBUTE.zh.md) / [`XML_REPLACE`](../Reference/XML_REPLACE.zh.md)。
 
 === "v4"
 
-    * 修复关于 [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md) 的错误。
-    * 新增函数：[`MAP_CLEAR`](../Reference/MAP_OPERATION.md) / [`MAP_SIZE`](../Reference/MAP_OPERATION.md) / [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
+    * 修复关于 [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.zh.md) 的错误。
+    * 新增函数：[`MAP_CLEAR`](../Reference/MAP_OPERATION.zh.md) / [`MAP_SIZE`](../Reference/MAP_OPERATION.zh.md) / [`MAP_GETKEYS`](../Reference/MAP_GETKEYS.zh.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.zh.md)。
     * 修复关于 [`INPUT` 系列命令扩展](../EMEE/EMEE_Summary.md#input)的错误。
 
 === "v3"
 
-    * 新增函数：[`EXISTFILE`](../Reference/EXISTFILE.md) / [`MAP_CREATE`](../Reference/MAP_MANAGE.md) / [`MAP_EXIST`](../Reference/MAP_MANAGE.md) / [`MAP_RELEASE`](../Reference/MAP_MANAGE.md) / [`MAP_GET`](../Reference/MAP_OPERATION.md) / [`MAP_HAS`](../Reference/MAP_OPERATION.md) / [`MAP_SET`](../Reference/MAP_OPERATION.md) / [`MAP_REMOVE`](../Reference/MAP_OPERATION.md) / [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.md) / [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.md)。
+    * 新增函数：[`EXISTFILE`](../Reference/EXISTFILE.zh.md) / [`MAP_CREATE`](../Reference/MAP_MANAGE.zh.md) / [`MAP_EXIST`](../Reference/MAP_MANAGE.zh.md) / [`MAP_RELEASE`](../Reference/MAP_MANAGE.zh.md) / [`MAP_GET`](../Reference/MAP_OPERATION.zh.md) / [`MAP_HAS`](../Reference/MAP_OPERATION.zh.md) / [`MAP_SET`](../Reference/MAP_OPERATION.zh.md) / [`MAP_REMOVE`](../Reference/MAP_OPERATION.zh.md) / [`MAP_TOXML`](../Reference/MAP_SERIALIZATION.zh.md) / [`MAP_FROMXML`](../Reference/MAP_SERIALIZATION.zh.md)。
 
 === "v2"
 
-    * 删除 `FUNCEXIST` 函数（请使用 EE 版的 [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.md) 函数作为替代）。
-    * 修改函数名：`VAREXIST` → [`EXISTVAR`](../Reference/EXISTVAR.md)（为了与 `EXISTFUNCTION` 的命名格式保持一致）。
-    * 新增函数：[`XML_DOCUMENT`](../Reference/XML_MANAGE.md) / [`XML_RELEASE`](../Reference/XML_MANAGE.md) / [`XML_SET`](../Reference/XML_SET.md) / [`XML_EXIST`](../Reference/XML_MANAGE.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.md)。
+    * 删除 `FUNCEXIST` 函数（请使用 EE 版的 [`EXISTFUNCTION`](../Reference/EXISTFUNCTION.zh.md) 函数作为替代）。
+    * 修改函数名：`VAREXIST` → [`EXISTVAR`](../Reference/EXISTVAR.zh.md)（为了与 `EXISTFUNCTION` 的命名格式保持一致）。
+    * 新增函数：[`XML_DOCUMENT`](../Reference/XML_MANAGE.zh.md) / [`XML_RELEASE`](../Reference/XML_MANAGE.zh.md) / [`XML_SET`](../Reference/XML_SET.zh.md) / [`XML_EXIST`](../Reference/XML_MANAGE.zh.md) / [`XML_TOSTR`](../Reference/XML_TOSTR.zh.md)。
     * `XML_GET` 函数的第 1 个参数允许使用整型（整数类型）。
 
 === "v1"
@@ -160,12 +160,12 @@
 
 === "v51"
 	v50 为空缺版本
-	* 合并 daughterpatch 氏的补丁修复了 [`SPRITEANNIME`](../Reference/SPRITEANIMECREATE.md)、工具提示以及日志以 UTF-8 BOM 格式保存的问题
+	* 合并 daughterpatch 氏的补丁修复了 [`SPRITEANNIME`](../Reference/SPRITEANIMECREATE.zh.md)、工具提示以及日志以 UTF-8 BOM 格式保存的问题
 	* 现在可以在设置中替换行连接时的换行代码（默认为半角空格 1 个）
 	* 合并 CRER 氏的补丁补充了部分翻译，并将剪贴板功能工具化
 	* 修复了 CSV 指定的精灵图使用小写字母时无法正常生成的问题
 	* 设置中开启加载报告时现在也会显示 CSV 精灵图的生成日志
-	* 修改了重启处理，修复了 [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.md) 系列命令无法正常工作的问题
+	* 修改了重启处理，修复了 [`QUIT_AND_RESTART`](../Reference/QUIT_AND_RESTART.zh.md) 系列命令无法正常工作的问题
 	* 合并 JukesBouver 氏的补丁使屏幕上的文字换行以最佳字数进行
 
 === "v49"
@@ -173,7 +173,7 @@
 	* JukesBouver99 氏的内存优化
 	* Alex Swift 氏的 RikaiDialog 处理修正
 	* 修复并调整了 resources 文件夹内 CSV 生成精灵图的处理，同时修复了 SPRITEDISPOSEALL
-	* 合并 daughter 氏的补丁。新增 [EXISTMETH](../Reference/EXISTMETH.md)、[GETMETH](../Reference/GETMETH.md)、[GETMETHS](../Reference/GETMETH.md)
+	* 合并 daughter 氏的补丁。新增 [EXISTMETH](../Reference/EXISTMETH.zh.md)、[GETMETH](../Reference/GETMETH.zh.md)、[GETMETHS](../Reference/GETMETH.zh.md)
 
 === "v48fix"
 	* 修复了 v48 中实现的中键点击判定异常的问题
@@ -181,41 +181,41 @@
 	* 各 Xml、Map、DataTable 现在会根据属性进行正确的初始化（存档数据→加载其他数据时清除；全局数据→RESETGLOBAL/LOADGLOBAL 时清除）
 	* 合并私家版 v22 的变更
 	* 修复了文本框中按 ↑ 键无法回溯日志的问题
-	* [OUTPUTLOG](../Reference/OUTPUTLOG.md) 新增第二参数。非 0 时不包含版本信息
+	* [OUTPUTLOG](../Reference/OUTPUTLOG.zh.md) 新增第二参数。非 0 时不包含版本信息
 	* 合并 MogeMoc 氏(RainForTW)的修正。HTML_PRINT 显示的图片现在无论 depth 如何，鼠标悬停时都会应用 srcb
 	* 现在当 0 号角色被重复定义时会发出警告
 	* 添加了文件被其他进程占用时的异常处理
 
 === "v48"
 	* 合并 VVII 氏制作的 [Emuera.NET](https://gitlab.com/VVIIlet/emuera) 的 master 分支(截至 2024/06/30)
-	* 除了各项操作的 QoL 改善外，新增了 [`VAR` 系列命令](../Reference/VAR.md)、[`PRINTN` 系列命令](../Reference/PRINTN.md)、[`HTML_PRINT_ISLAND` 命令](../Reference/HTML_PRINT_ISLAND.md)
-	* [`INPUT`](../Reference/INPUT.md) 系列现在支持中键点击（鼠标滚轮点击）。`RESULTS:1` 中会填入 3
+	* 除了各项操作的 QoL 改善外，新增了 [`VAR` 系列命令](../Reference/VAR.zh.md)、[`PRINTN` 系列命令](../Reference/PRINTN.zh.md)、[`HTML_PRINT_ISLAND` 命令](../Reference/HTML_PRINT_ISLAND.zh.md)
+	* [`INPUT`](../Reference/INPUT.zh.md) 系列现在支持中键点击（鼠标滚轮点击）。`RESULTS:1` 中会填入 3
 	* 新增 HOTKEY 相关命令
 	* 新增仅在 EMEE 中生效的注释符号「`;^;`」
 
 === "v47"
-	* v46 中对 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 的修正存在问题，回滚到之前的规格
-	* Neo_Kesha 氏新增了[后台操作系列命令](../Reference/BACKGROUND.md)
-	* Neo_Kesha 氏新增了 [`CALLSHARP`](../Reference/CALLSHARP.md)
+	* v46 中对 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.zh.md) 的修正存在问题，回滚到之前的规格
+	* Neo_Kesha 氏新增了[后台操作系列命令](../Reference/BACKGROUND.zh.md)
+	* Neo_Kesha 氏新增了 [`CALLSHARP`](../Reference/CALLSHARP.zh.md)
 	* Neo_Kesha 氏新增了 [CSV 别名功能](../EMEE/EMEE_Summary.md#alias)
-	* ユケッス(JukesBouver99) 氏新增了 [`BITMAP_CACHE_ENABLE`](../Reference/BITMAP_CACHE_ENABLE.md)
+	* ユケッス(JukesBouver99) 氏新增了 [`BITMAP_CACHE_ENABLE`](../Reference/BITMAP_CACHE_ENABLE.zh.md)
 	* fairylord(KFC的人) 氏完成了 .NET 8 适配
 
 === "v46"
-	* 修正了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 的参数使其返回与 `LINECOUNT` 对应的行
-	* 扩展了 [`FLOWINPUT`](../Reference/FLOWINPUT.md)
-	* 新增了 [`FLOWINPUTS`](../Reference/FLOWINPUT.md)
+	* 修正了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.zh.md) 的参数使其返回与 `LINECOUNT` 对应的行
+	* 扩展了 [`FLOWINPUT`](../Reference/FLOWINPUT.zh.md)
+	* 新增了 [`FLOWINPUTS`](../Reference/FLOWINPUT.zh.md)
 
 === "v45"
 	* 合并 Ignominious.Reverie 氏的补丁，扩展了 NAudio 版功能并提高了稳定性
-	* 修复了未指定字体执行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) 时异常退出的问题
-	* [`GETCONFIG`/`GETCONFIGS`](../Reference/GETCONFIG.md) 现在可以获取 EMEE 扩展的配置项
+	* 修复了未指定字体执行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.zh.md) 时异常退出的问题
+	* [`GETCONFIG`/`GETCONFIGS`](../Reference/GETCONFIG.zh.md) 现在可以获取 EMEE 扩展的配置项
 
 === "v44"
-	* [`PLAYSOUND`](../Reference/PLAYSOUND.md) 的第二参数现在可以设置播放次数
+	* [`PLAYSOUND`](../Reference/PLAYSOUND.zh.md) 的第二参数现在可以设置播放次数
 
 === "v43"
-	* 修复了 [`MOUSEB`](../Reference/MOUSEB.md)、[`UPDATECHECK`](../Reference/UPDATECHECK.md)、[`SPRITEANIMEADDFRAME`](../Reference/SPRITEANIMEADDFRAME.md) 的问题
+	* 修复了 [`MOUSEB`](../Reference/MOUSEB.zh.md)、[`UPDATECHECK`](../Reference/UPDATECHECK.zh.md)、[`SPRITEANIMEADDFRAME`](../Reference/SPRITEANIMEADDFRAME.zh.md) 的问题
 	* NAudio 版运行稳定性提升（Ignominious.Reverie、CRER）
 	* 修复了部分配置项的翻译遗漏
 	* 合并 MogeMoc 氏的资源文件读取处理内存优化（RainForTW）
@@ -228,7 +228,7 @@
 	* 请替换附带的「libwebp.dll」并新增使用「libsharpyuv.dll」
 
 === "v41"
-	* 新增 [`TOOLTIP_IMG`](../Reference/TOOLTIP_EXTENSION.md)
+	* 新增 [`TOOLTIP_IMG`](../Reference/TOOLTIP_EXTENSION.zh.md)
 	* 为 Linux 版附带了使用 NAudio 作为音乐播放库的版本（Ignominious.Reverie 氏）
 
 === "v40"
@@ -243,8 +243,8 @@
 
 === "v39"
 	* 合并 CRER 氏的补丁解决了 DPI 缩放问题
-	* 修复了 [`ARRAYREMOVE`](../Reference/ARRAYREMOVE.md) 第三参数设为 0 以下时未能清除后续数组元素的问题
-	* 修复了 [`PRINTC` 和 `PRINTLC`](../Reference/PRINT.md) 字符数不一致的问题
+	* 修复了 [`ARRAYREMOVE`](../Reference/ARRAYREMOVE.zh.md) 第三参数设为 0 以下时未能清除后续数组元素的问题
+	* 修复了 [`PRINTC` 和 `PRINTLC`](../Reference/PRINT.zh.md) 字符数不一致的问题
 	* 实现了资源 CSV 重新加载功能
 
 === "v38fix"
@@ -271,17 +271,17 @@
 	* 为了解决重复重启导致的内存泄漏问题，修改了重启机制。
 	* 为了明确类型初始化的报错，使用try-catch得到了报错信息。(原因是WMP未安装)
 	* 设置选项中添加了对ERD的变量名与局部变量重复的检查。
-	* 修复了使用PRINT并未换行时，执行[`BINPUT`](../Reference/BINPUT.md)无法识别该行按钮的问题。
+	* 修复了使用PRINT并未换行时，执行[`BINPUT`](../Reference/BINPUT.zh.md)无法识别该行按钮的问题。
 
 === "v34"
-	* 新增了 [`GDASHSTYLE`](../Reference/GDASHSTYLE.md) 函数。
+	* 新增了 [`GDASHSTYLE`](../Reference/GDASHSTYLE.zh.md) 函数。
 
 === "v33"
-	* 新增了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.md) 函数。
-	* [`GCREATEFROMFILE`扩展](../Reference/README.md)
+	* 新增了 [`GETDISPLAYLINE`](../Reference/GETDISPLAYLINE.zh.md) 函数。
+	* [`GCREATEFROMFILE`扩展](../Reference/README.zh.md)
 
 === "v32"
-	* 新增了 [`GDRAWLINE`](../Reference/GDRAWLINE.md) 函数。
+	* 新增了 [`GDRAWLINE`](../Reference/GDRAWLINE.zh.md) 函数。
 
 === "v31fix"
 	* 修复了`BINPUT`和`div`功能组合后无法继续执行的问题。
@@ -289,40 +289,40 @@
 	* 修复了`BINPUT`执行时由于某些原因不会重绘画面，导致与`div`并用时出现错误的问题。
 
 === "v31"
-	* 新增了 [`BINPUT`及`BINPUTS`](../Reference/BINPUT.md) 函数。
+	* 新增了 [`BINPUT`及`BINPUTS`](../Reference/BINPUT.zh.md) 函数。
 
 === "v30"
-	* 新增了 [`SKIPLOG`](../Reference/SKIPLOG.md) 函数。
+	* 新增了 [`SKIPLOG`](../Reference/SKIPLOG.zh.md) 函数。
 	* 修复了菜单栏的快捷键无效的问题。
 
 === "v29"
 	* 修复`GCREATEFROMFILE`无法正常生效的问题。
 	* 修复了`EM`的`div`功能中设定`margin`、`border`、`padding`后，`div`内的文字未能跟随设置的问题。
 	* 修复了关闭翻译词典时，仍会在内部处理，导致重复描绘的问题。
-	* 新增了 [`MOUSEB`](../Reference/MOUSEB.md) 函数。
-	* 新增了 [`SPRITEDISPOSEALL`](../Reference/SPRITEDISPOSEALL.md) 函数。
+	* 新增了 [`MOUSEB`](../Reference/MOUSEB.zh.md) 函数。
+	* 新增了 [`SPRITEDISPOSEALL`](../Reference/SPRITEDISPOSEALL.zh.md) 函数。
 
 === "v28"
 	* 修复了`EM`的INPUT功能扩展无法正常生效的问题。
 	* `EE`方面对`INPUT`命令进行扩展。
-	* 新增了 [`FLOWINPUT`](../Reference/FLOWINPUT.md) 函数。
+	* 新增了 [`FLOWINPUT`](../Reference/FLOWINPUT.zh.md) 函数。
 
 === "v27"
 	* `JukesBouver99`提供了英语翻译词典的补丁
 
 === "v26"
-	* 扩展了利用 `GSETPEN` 进行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.md) 的相关功能。
-	* 新增了 [`GGETPEN`](../Reference//GGETPEN.md) / [`GGETPENWIDTH`](../Reference/GGETPENWIDTH.md) / [`GGETBRUSH`](../Reference/GGETBRUSH.md)。
-	* 新增了 [TOOLTIPS 功能扩展](../Reference/TOOLTIP_EXTENSION.md)相关函数。
+	* 扩展了利用 `GSETPEN` 进行 [`GDRAWTEXT`](../Reference/GDRAWTEXT.zh.md) 的相关功能。
+	* 新增了 [`GGETPEN`](../Reference//GGETPEN.zh.md) / [`GGETPENWIDTH`](../Reference/GGETPENWIDTH.zh.md) / [`GGETBRUSH`](../Reference/GGETBRUSH.zh.md)。
+	* 新增了 [TOOLTIPS 功能扩展](../Reference/TOOLTIP_EXTENSION.zh.md)相关函数。
 
 === "v25"
 	* 移植了 `Emuera-Anchor` 的[剪贴板功能](../EMEE/EMEE_Summary.md#emuera-anchor_2)。
 	* 补充了遗漏的翻译。
 
 === "V24"
-	* [多语言支持](../i18n/README.md)(同EMv14)。
+	* [多语言支持](../i18n/README.zh.md)(同EMv14)。
 	* `GETNUM` 现在支持[多维数组的 ERD 功能](../EMEE/EMEE_Summary.md#getnumerd)。
-	* 新增 [`ERDNAME`](../Reference//ERDNAME.md) 函数。
+	* 新增 [`ERDNAME`](../Reference//ERDNAME.zh.md) 函数。
 
 === "v23"
 
@@ -331,11 +331,11 @@
 === "v22"
 
     * [`ERD` 功能](../EMEE/EMEE_Summary.md#csv-erd-erh)现在对于同一个变量的多个定义文件，只有其中定义了相同标识符时会报错，不同标识符现在可以替换为同一个整数。
-    * 新增命令 [`INPUTANY`](../Reference/INPUTANY.md)
+    * 新增命令 [`INPUTANY`](../Reference/INPUTANY.zh.md)
 
 === "v21"
 
-	* 新增函数：[`GETTEXTBOX`](../Reference/TEXTBOX.md) / [`SETTEXTBOX`](../Reference/TEXTBOX.md)。
+	* 新增函数：[`GETTEXTBOX`](../Reference/TEXTBOX.zh.md) / [`SETTEXTBOX`](../Reference/TEXTBOX.zh.md)。
 
 === "v20"
 

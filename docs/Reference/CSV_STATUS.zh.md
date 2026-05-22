@@ -7,16 +7,16 @@ hide:
 
 | 函数名                                                                | 参数         | 返回值   |
 | :-------------------------------------------------------------------- | :----------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CSVBASE`](./CSV_STATUS.md)     | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVCSTR`](./CSV_STATUS.md)     | `int`, `int` | `string` |
-| ![](../assets/images/IconEmuera.webp)[`CSVABL`](./CSV_STATUS.md)      | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVTALENT`](./CSV_STATUS.md)   | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVMARK`](./CSV_STATUS.md)     | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVEXP`](./CSV_STATUS.md)      | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVRELATION`](./CSV_STATUS.md) | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVJUEL`](./CSV_STATUS.md)     | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVEQUIP`](./CSV_STATUS.md)    | `int`, `int` | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`CSVCFLAG`](./CSV_STATUS.md)    | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVBASE`](./CSV_STATUS.zh.md)     | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVCSTR`](./CSV_STATUS.zh.md)     | `int`, `int` | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVABL`](./CSV_STATUS.zh.md)      | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVTALENT`](./CSV_STATUS.zh.md)   | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVMARK`](./CSV_STATUS.zh.md)     | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVEXP`](./CSV_STATUS.zh.md)      | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVRELATION`](./CSV_STATUS.zh.md) | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVJUEL`](./CSV_STATUS.zh.md)     | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVEQUIP`](./CSV_STATUS.zh.md)    | `int`, `int` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`CSVCFLAG`](./CSV_STATUS.zh.md)    | `int`, `int` | `int`    |
 
 !!! info "API"
 
@@ -60,4 +60,4 @@ hide:
     ```
 
 ### 相关项目
-- [CSVNAME系列](CSVNAME.md)
+- [CSVNAME系列](CSVNAME.zh.md)

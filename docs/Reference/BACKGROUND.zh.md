@@ -9,9 +9,9 @@ hide:
 
 | 函数名                                                               | 参数                     | 返回值 |
 | :------------------------------------------------------------------- | :----------------------- | :----- |
-| ![](../assets/images/Iconetc.webp)[`SETBGIMAGE`](./BACKGROUND.md)    | `string`(, `int`, `int`) | 无     |
-| ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.md) | `string`                 | 无     |
-| ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.md)  | 无                       | 无     |
+| ![](../assets/images/Iconetc.webp)[`SETBGIMAGE`](./BACKGROUND.zh.md)    | `string`(, `int`, `int`) | 无     |
+| ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.zh.md) | `string`                 | 无     |
+| ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.zh.md)  | 无                       | 无     |
 
 !!! info "API"
 	```  { #language-erbapi }

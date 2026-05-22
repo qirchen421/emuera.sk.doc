@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                             | 参数  | 返回值 |
 | :----------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`RANDOMIZE`](./RANDOMIZE.md) | `int` | 无     |
-| ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.md)  | 无    | 无     |
-| ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.md)  | 无    | 无     |
+| ![](../assets/images/IconEmuera.webp)[`RANDOMIZE`](./RANDOMIZE.zh.md) | `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`DUMPRAND`](./RANDOMIZE.zh.md)  | 无    | 无     |
+| ![](../assets/images/IconEmuera.webp)[`INITRAND`](./RANDOMIZE.zh.md)  | 无    | 无     |
 
 !!! info "API"
 
@@ -22,7 +22,7 @@ hide:
 
 	`RANDOMIZE` 指令使用指定的值初始化随机数。  
 	如果使用相同的值进行初始化，`RAND` 必定会返回相同的结果。  
-	对于 [`PRINTDATA`](./PRINTDATA.md) 和 [`STRDATA`](./STRDATA.md) 也会返回相同的结果。
+	对于 [`PRINTDATA`](./PRINTDATA.zh.md) 和 [`STRDATA`](./STRDATA.zh.md) 也会返回相同的结果。
 
 	`DUMPRAND` 将当前的随机数状态保存到 `RANDDATA` 变量中。  
 	`INITRAND` 从 `RANDDATA` 变量中读取保存的数据。  

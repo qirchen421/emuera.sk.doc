@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                      | Arguments | Return    |
 | :----------------------------------------------------------------- | :-------- | :-------- |
-| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.md)        | none      | `void`    |
+| ![](../assets/images/Iconeramaker.webp)[`WAIT`](./WAIT.en.md)        | none      | `void`    |
 
 !!! info "API"
 
@@ -22,6 +22,6 @@ hide:
     Command only.
 
 ### See Also
-- [WAITANYKEY](WAITANYKEY.md)
-- [TWAIT](TWAIT.md)
-- [AWAIT](AWAIT.md)
+- [WAITANYKEY](WAITANYKEY.en.md)
+- [TWAIT](TWAIT.en.md)
+- [AWAIT](AWAIT.en.md)

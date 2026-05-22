@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数              | 返回值 |
 | :----------------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.md) | `string`(, `int`) | `int`  |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLEN`](./HTML_STRINGLEN.zh.md) | `string`(, `int`) | `int`  |
 
 !!! info "API"
     
@@ -43,4 +43,4 @@ hide:
     因为粗体比常规字体宽。
 
 ### 相关项目
-- [STRLEN](STRLEN.md)
+- [STRLEN](STRLEN.zh.md)

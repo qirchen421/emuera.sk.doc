@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                                         | 参数    | 返回值 |
 | :----------------------------------------------------------------------------- | :------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDELAY`](./TOOLTIP_SET.md)    | `int`   | 无     |
-| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDURATION`](./TOOLTIP_SET.md) | `int`   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDELAY`](./TOOLTIP_SET.zh.md)    | `int`   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`TOOLTIP_SETDURATION`](./TOOLTIP_SET.zh.md) | `int`   | 无     |
 
 !!! info "API"
 
@@ -26,5 +26,5 @@ hide:
     仅支持作为指令使用。
 
 ### 相关项目
-- [工具提示扩展功能](TOOLTIP_EXTENSION.md)
-- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.md)
+- [工具提示扩展功能](TOOLTIP_EXTENSION.zh.md)
+- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.zh.md)

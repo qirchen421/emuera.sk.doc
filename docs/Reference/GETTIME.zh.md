@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                             | 参数 | 返回值          |
 | :----------------------------------------------------------------- | :--- | :-------------- |
-| ![](../assets/images/IconEmuera.webp)[`GETTIME`](./GETTIME.md)     | 无   | `int`, `string` |
-| ![](../assets/images/IconEmuera.webp)[`GETTIME()`](./GETTIME.md)   | 无   | `int`           |
-| ![](../assets/images/IconEmuera.webp)[`GETTIMES()`](./GETTIME.md)  | 无   | `string`        |
+| ![](../assets/images/IconEmuera.webp)[`GETTIME`](./GETTIME.zh.md)     | 无   | `int`, `string` |
+| ![](../assets/images/IconEmuera.webp)[`GETTIME()`](./GETTIME.zh.md)   | 无   | `int`           |
+| ![](../assets/images/IconEmuera.webp)[`GETTIMES()`](./GETTIME.zh.md)  | 无   | `string`        |
 
 !!! info "API"
 
@@ -34,5 +34,5 @@ hide:
     同时支持命令形式和表达式内函数形式。
 
 ### 相关项目
-- [GETSECOND](GETSECOND.md)
-- [GETMILLISECOND](GETMILLISECOND.md)
+- [GETSECOND](GETSECOND.zh.md)
+- [GETMILLISECOND](GETMILLISECOND.zh.md)

@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                      | Arguments                               | Return    |
 | :----------------------------------------------------------------- | :-------------------------------------- | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`TINPUT`](./TINPUT.md)      | `int`, `int`(, `int`, `string`, `int`) | `int`     |
-| ![](../assets/images/IconEmuera.webp)[`TINPUTS`](./TINPUT.md)    | `int`, `int`(, `int`, `string`, `int`) | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`TINPUT`](./TINPUT.en.md)      | `int`, `int`(, `int`, `string`, `int`) | `int`     |
+| ![](../assets/images/IconEmuera.webp)[`TINPUTS`](./TINPUT.en.md)    | `int`, `int`(, `int`, `string`, `int`) | `string`  |
 
 !!! info "API"
 
@@ -22,7 +22,7 @@ hide:
     The fourth argument is the string displayed on timeout. If it is an empty string, the timer display is cleared and processing moves to the next step.  
     Note that if the fourth argument is set, the third argument cannot be omitted.  
 
-    Also, in `TINPUTS`, macro expressions can be used as with [`INPUTS`](./INPUT.md).  
+    Also, in `TINPUTS`, macro expressions can be used as with [`INPUTS`](./INPUT.en.md).  
 
     To use '()' as a string, escape it using '.'
 
@@ -35,5 +35,5 @@ hide:
     Command only.
 
 ### See Also
-- [INPUT](INPUT.md)
-- [TONEINPUT](TONEINPUT.md)
+- [INPUT](INPUT.en.md)
+- [TONEINPUT](TONEINPUT.en.md)

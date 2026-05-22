@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :--------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.md) | `functionName` | `void`¹ |
+| ![](../assets/images/Iconeramaker.webp)[`CALL`](./CALL.en.md) | `functionName` | `void`¹ |
 
 !!! info "API"
 
@@ -16,7 +16,7 @@ hide:
 	```
 
 	Calls a function defined with a string starting with `@`  
-	When the function reaches its end or executes [`RETURN`](./RETURN.md), the function ends and control returns to the line that executed `CALL`  
+	When the function reaches its end or executes [`RETURN`](./RETURN.en.md), the function ends and control returns to the line that executed `CALL`  
 	If `RETURN` is executed, its argument is stored in `RESULT`; if the function reaches its end, `0` is stored in `RESULT`
 
 !!! hint "Hint"
@@ -49,9 +49,9 @@ hide:
 	```
 
 ### Related
-- [CALLFORM](FORM.md)
-- [TRYCALLFORM](TRYFORM.md)
-- [EXISTFUNCTION](EXISTFUNCTION.md)
+- [CALLFORM](FORM.en.md)
+- [TRYCALLFORM](TRYFORM.en.md)
+- [EXISTFUNCTION](EXISTFUNCTION.en.md)
 - [CALLSTR](CALLSTR.en.md)
 
 ### ![](../assets/images/IconSK.webp)Skia Version Changes

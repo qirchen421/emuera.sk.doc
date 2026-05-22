@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数             | 返回值 |
 | :----------------------------------------------------------- | :--------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md) | `int`, `float`   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.zh.md) | `int`, `float`   | 无     |
 
 !!! info "API"
 

@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                            | Arguments    | Return |
 | :----------------------------------------------------------------------- | :----------- | :----- |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_ADD`](./UNCHECKED.md)       | `int`, `int` | `int`  |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_SUB`](./UNCHECKED.md)       | `int`, `int` | `int`  |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_MUL`](./UNCHECKED.md)       | `int`, `int` | `int`  |
-| ![](../assets/images/IconSK.webp)[`UNCHECKED_NEG`](./UNCHECKED.md)       | `int`        | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_ADD`](./UNCHECKED.en.md)       | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_SUB`](./UNCHECKED.en.md)       | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_MUL`](./UNCHECKED.en.md)       | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`UNCHECKED_NEG`](./UNCHECKED.en.md)       | `int`        | `int`  |
 
 !!! info "API"
 

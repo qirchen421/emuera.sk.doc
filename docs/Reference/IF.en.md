@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                | Arguments  | Return |
 | :----------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`(S)IF`](./IF.md) | `operand` | `void` |
+| ![](../assets/images/Iconeramaker.webp)[`(S)IF`](./IF.en.md) | `operand` | `void` |
 
 !!! info "API"
 
@@ -67,4 +67,4 @@ hide:
     ```
 
 ### See Also
-- [SELECTCASE](SELECTCASE.md)
+- [SELECTCASE](SELECTCASE.en.md)

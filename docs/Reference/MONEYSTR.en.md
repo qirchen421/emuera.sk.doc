@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments         | Return   |
 | :------------------------------------------------------------------ | :---------------- | :--------|
-| ![](../assets/images/IconEmuera.webp)[`MONEYSTR`](./MONEYSTR.md)  | `int`, `option`  | `string`|
+| ![](../assets/images/IconEmuera.webp)[`MONEYSTR`](./MONEYSTR.en.md)  | `int`, `option`  | `string`|
 
 !!! info "API"
 
@@ -16,7 +16,7 @@ hide:
     ```
 	Returns in `RESULTS:0` a string with the [configured money unit](../Emuera/replace.en.md#money-unit) appended to the number given as the argument.  
 	Unit prefix/suffix is automatically handled.  
-	The second argument is the conversion format specifier for numeric string conversion, similar to the [`TOSTR`](./TOSTR.md) command.
+	The second argument is the conversion format specifier for numeric string conversion, similar to the [`TOSTR`](./TOSTR.en.md) command.
 
 !!! hint "Hint"
 

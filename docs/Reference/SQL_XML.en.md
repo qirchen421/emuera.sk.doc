@@ -7,11 +7,11 @@ hide:
 
 | Function name | Arguments | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_MAP_XML`](./SQL_XML.md) | `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_MAP_XML`](./SQL_XML.md) | `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.md) | `string`, `string`, `string`, `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.md) | `string`, `string`, `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_MAP_XML`](./SQL_XML.en.md) | `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_DT_XML`](./SQL_XML.en.md) | `string`, `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_MAP_XML`](./SQL_XML.en.md) | `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_EXPORT_DT_XML`](./SQL_XML.en.md) | `string`, `string`, `string`, `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_IMPORT_XML_CUSTOM`](./SQL_XML.en.md) | `string`, `string`, `string`, `string`, `string` | `int` |
 
 !!! info "API"
 
@@ -33,7 +33,7 @@ hide:
 
     !!! warning "Warning"
 
-        - A connection must be established via [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.md) or [`SQL_CONNECT`](./SQL_CONNECT.md) before executing.
+        - A connection must be established via [`SQL_CONNECTION_OPEN`](./SQL_CONNECT.en.md) or [`SQL_CONNECT`](./SQL_CONNECT.en.md) before executing.
         - `SQL_IMPORT_MAP_XML` and `SQL_IMPORT_DT_XML` use streaming parsing (XmlReader) and support large files.
         - The Schema file for `SQL_IMPORT_DT_XML` is used to infer column types; the Data file contains the actual data.
         - Export file paths are relative to the program directory.

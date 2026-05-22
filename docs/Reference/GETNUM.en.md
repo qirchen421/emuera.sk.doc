@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments           | Return |
 | :------------------------------------------------------------- | :------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.md) | `variable`, `string` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETNUM`](./GETNUM.en.md) | `variable`, `string` | `int`  |
 
 !!! info "API"
 
@@ -24,4 +24,4 @@ hide:
     Both command and expression function are supported.
 
 ### Related Items
-- [CSV Status Functions](CSV_STATUS.md)
+- [CSV Status Functions](CSV_STATUS.en.md)

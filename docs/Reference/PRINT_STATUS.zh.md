@@ -7,13 +7,13 @@ hide:
 
 | 函数名                                                                       | 参数 | 返回值 |
 | :--------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.md)      | `int`| 无     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.md)   | `int`| 无     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.md)     | `int`| 无     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.md)      | `int`| 无     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.md)    | `int`| 无     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.md)     | 无   | 无     |
-| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.md) | 无   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ABL`](./PRINT_STATUS.zh.md)      | `int`| 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_TALENT`](./PRINT_STATUS.zh.md)   | `int`| 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_MARK`](./PRINT_STATUS.zh.md)     | `int`| 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_EXP`](./PRINT_STATUS.zh.md)      | `int`| 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_PALAM`](./PRINT_STATUS.zh.md)    | `int`| 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_ITEM`](./PRINT_STATUS.zh.md)     | 无   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PRINT_SHOPITEM`](./PRINT_STATUS.zh.md) | 无   | 无     |
 
 !!! info "API"
 

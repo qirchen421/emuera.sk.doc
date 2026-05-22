@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数                                       | 返回值 |
 | :------------------------------------------------------------------- | :----------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYSHIFT`](./ARRAYSHIFT.md) | `variable`, `int`, `value`(, `int`, `int`) | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYSHIFT`](./ARRAYSHIFT.zh.md) | `variable`, `int`, `value`(, `int`, `int`) | 无     |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return   |
 | :------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.md) | `string`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.en.md) | `string`  | `string` |
 
 !!! info "API"
 
@@ -22,5 +22,5 @@ hide:
     Supported as both command and expression function.
 
 ### See Also
-- [GETVAR, GETVARS](GETSETVAR.md)
-- [GETMETH, GETMETHS](GETMETH.md)
+- [GETVAR, GETVARS](GETSETVAR.en.md)
+- [GETMETH, GETMETHS](GETMETH.en.md)

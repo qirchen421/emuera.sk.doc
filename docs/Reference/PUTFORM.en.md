@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.md) | `string`  | none   |
+| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.en.md) | `string`  | none   |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     Command only.
 
 ### See Also
-- [SAVEDATA](SAVEDATA.md)
+- [SAVEDATA](SAVEDATA.en.md)
 - [System Flow Diagram>SAVEGAME](../Emuera/system_flow.md#savegame)

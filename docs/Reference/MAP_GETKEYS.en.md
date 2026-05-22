@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                     | Arguments                          | Return   |
 | :--------------------------------------------------------------- | :-------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.md) | `string`                          | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_GETKEYS`](./MAP_GETKEYS.en.md) | `string`                          | `string` |
 |                                                                  | `string`, `int`                   | `string` |
 |                                                                  | `string`, `ref` `string[]`, `int` | `string` |
-| ![](../assets/images/IconSK.webp)[`MAP_VALUES`](./MAP_GETKEYS.md)  | `string`                          | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_VALUES`](./MAP_GETKEYS.en.md)  | `string`                          | `string` |
 |                                                                  | `string`, `int`                   | `string` |
 |                                                                  | `string`, `ref` `string[]`, `int` | `string` |
 
@@ -30,9 +30,9 @@ hide:
     - `MAP_GETKEYS`: Outputs all keys of the `MAP`.
     - `MAP_VALUES`: Added in Skia (SkiaSharp version). Outputs all values of the `MAP`. Symmetric to `MAP_GETKEYS`.
 
-    1. Returns a string in the form "key1,key2,key3,...". Returns an empty string if the MAP itself does not exist. No exception is thrown, so use [`MAP_EXIST`](./MAP_MANAGE.md) if needed.
-    2. If `doOutput` is not `0`, sequentially assigns keys (or values) to `RESULTS` and returns `RESULTS:0`. No exception is thrown, so use [`MAP_EXIST`](./MAP_MANAGE.md) if needed.
-    3. If `doOutput` is not `0`, sequentially assigns keys (or values) to `outputArray` and returns an empty string. No exception is thrown, so use [`MAP_EXIST`](./MAP_MANAGE.md) if needed.
+    1. Returns a string in the form "key1,key2,key3,...". Returns an empty string if the MAP itself does not exist. No exception is thrown, so use [`MAP_EXIST`](./MAP_MANAGE.en.md) if needed.
+    2. If `doOutput` is not `0`, sequentially assigns keys (or values) to `RESULTS` and returns `RESULTS:0`. No exception is thrown, so use [`MAP_EXIST`](./MAP_MANAGE.en.md) if needed.
+    3. If `doOutput` is not `0`, sequentially assigns keys (or values) to `outputArray` and returns an empty string. No exception is thrown, so use [`MAP_EXIST`](./MAP_MANAGE.en.md) if needed.
 
 !!! hint "Hint"
 
@@ -79,4 +79,4 @@ hide:
     ```
 
 ### Related
-- [MAP Operations](MAP_OPERATION.md)
+- [MAP Operations](MAP_OPERATION.en.md)

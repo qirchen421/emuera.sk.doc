@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return |
 | :-------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.md) | `string`  | `int`  |
+| ![](../assets/images/IconEE.webp)[`EXISTSOUND`](./EXISTSOUND.en.md) | `string`  | `int`  |
 
 !!! info "API"
 
@@ -23,5 +23,5 @@ hide:
     Available as both command and function in expressions
 
 ### Related
-- [PLAYSOUND](PLAYSOUND.md)
-- [PLAYBGM](PLAYBGM.md)
+- [PLAYSOUND](PLAYSOUND.en.md)
+- [PLAYBGM](PLAYBGM.en.md)

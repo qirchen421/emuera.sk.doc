@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                        | Arguments                | Return |
 | :------------------------------------------------------------- | :----------------------| :----- |
-| ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.md) | `int`, `int`, `int` | 1      |
+| ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.en.md) | `int`, `int`, `int` | 1      |
 
 !!! info "API"
 
@@ -52,4 +52,4 @@ hide:
 	![](../assets/images/GDASHSTYLE.png)
 
 ### Related Items
-- [GDRAWLINE](GDRAWLINE.md)
+- [GDRAWLINE](GDRAWLINE.en.md)

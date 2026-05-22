@@ -394,7 +394,7 @@ else
 
     Use the `TOSTRF` function with `%` substitution when precision is needed (see "Combined Precision and Width Control" below).
 
-> **For the complete API documentation of TO series type conversion functions** (TOSTR / TOSTRF / TOINT / TOFLOAT parameter signatures, format strings, and example code), see [Values, Types & Variables — Type Conversion Functions](../Reference/TOSTR.md). This section only covers aspects directly related to FORM syntax.
+> **For the complete API documentation of TO series type conversion functions** (TOSTR / TOSTRF / TOINT / TOFLOAT parameter signatures, format strings, and example code), see [Values, Types & Variables — Type Conversion Functions](../Reference/TOSTR.en.md). This section only covers aspects directly related to FORM syntax.
 
 ### Cross-Reference with FORM Syntax
 
@@ -474,7 +474,7 @@ else
 
     **Current recommendation**: Proposal 1 (extend `TOSTRF`), as it has minimal changes and is compatible with the existing `TOSTRF` + `%...%` workaround.
 
-    > **Complete TO series function documentation**: [Values, Types & Variables — Type Conversion Functions](../Reference/TOSTR.md)
+    > **Complete TO series function documentation**: [Values, Types & Variables — Type Conversion Functions](../Reference/TOSTR.en.md)
 
 ---
 

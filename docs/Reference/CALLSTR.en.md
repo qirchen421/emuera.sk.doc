@@ -7,12 +7,12 @@ hide:
 
 | Function Name                                                            | Arguments        | Return Value |
 | :----------------------------------------------------------------------- | :--------------- | :----------- |
-| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.en.md)        | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.en.md)        | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.en.md)     | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.en.md)     | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.en.md)    | `stringVariable` | `void` |
-| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.en.md)    | `stringVariable` | `void` |
+| ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.en.md)        | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.en.md)        | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.en.md)     | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYJUMPSTR`](./CALLSTR.en.md)     | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYCCALLSTR`](./CALLSTR.en.md)    | `stringVariable` | `void`¹ |
+| ![](../assets/images/IconSK.webp)[`TRYCJUMPSTR`](./CALLSTR.en.md)    | `stringVariable` | `void`¹ |
 
 !!! info "API"
 

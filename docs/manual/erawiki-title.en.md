@@ -5,10 +5,10 @@ Original page:
 
 ---
 
-- [Tutorial](erawiki-tutorial.md)
+- [Tutorial](erawiki-tutorial.en.md)
 - Title Preparation
-- [Title Practice](erawiki-title2.md)
-- [ERB Creation Practice](erawiki-ERBmanual.md)
+- [Title Practice](erawiki-title2.en.md)
+- [ERB Creation Practice](erawiki-ERBmanual.en.md)
 
 ---  
 
@@ -393,4 +393,4 @@ they cannot be rewritten from the ERB side.
 
 ---
 
-Next page → [Title Practice](erawiki-title2.md)
+Next page → [Title Practice](erawiki-title2.en.md)

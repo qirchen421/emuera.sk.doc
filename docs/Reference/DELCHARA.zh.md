@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                                                  | 参数                 | 返回值 |
 | :------------------------------------------------------------------------------------------------------ | :------------------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.md) | `int`(, `int`,...)   | 无     |
+| ![](../assets/images/Iconeramaker.webp)![](../assets/images/IconEmuera.webp)[`DELCHARA`](./DELCHARA.zh.md) | `int`(, `int`,...)   | 无     |
 
 !!! info "API"
 
@@ -55,5 +55,5 @@ hide:
     ```
 
 ### 相关项目
-- [ADDCHARA](ADDCHARA.md)
-- [DELALLCHARA](DELALLCHARA.md)
+- [ADDCHARA](ADDCHARA.zh.md)
+- [DELALLCHARA](DELALLCHARA.zh.md)

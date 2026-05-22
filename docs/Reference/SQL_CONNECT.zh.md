@@ -7,9 +7,9 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`SQL_CONNECTION_OPEN`](./SQL_CONNECT.md) | `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_CONNECT`](./SQL_CONNECT.md) | `string`(, `string`) | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_DISCONNECT`](./SQL_CONNECT.md) | `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_CONNECTION_OPEN`](./SQL_CONNECT.zh.md) | `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_CONNECT`](./SQL_CONNECT.zh.md) | `string`(, `string`) | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_DISCONNECT`](./SQL_CONNECT.zh.md) | `string` | `int` |
 
 !!! info "API"
 

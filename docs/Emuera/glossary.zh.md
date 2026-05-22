@@ -19,7 +19,7 @@
 如果函数太多导致日志滚动，请增加配置中的日志行数。  
 
 ### 调试模式  
-将`-Debug`作为命令行参数传递启动时的模式。详情请参见[调试模式](debug.md)。  
+将`-Debug`作为命令行参数传递启动时的模式。详情请参见[调试模式](debug.zh.md)。  
 
 ## 窗口·对话框  
 ### 主窗口  
@@ -42,10 +42,10 @@
 
 ## 函数  
 ### 指令  
-如[`PRINT`](../Reference/PRINT.md)或[`WAIT`](../Reference/WAIT.md)等。  
+如[`PRINT`](../Reference/PRINT.zh.md)或[`WAIT`](../Reference/WAIT.zh.md)等。  
 
 ### 函数  
-在ERB脚本中用`@～～`语句定义名称，通过[`CALL`](../Reference/CALL.md)指令等调用的对象。  
+在ERB脚本中用`@～～`语句定义名称，通过[`CALL`](../Reference/CALL.zh.md)指令等调用的对象。  
 包括可在表达式中使用的函数中用`@～～`语句定义名称的。  
 
 ### 事件函数  
@@ -86,7 +86,7 @@
 
 ### 用户定义函数  
 用户定义的函数。  
-在ERB脚本中用`@～～`语句定义名称，通过[`CALL`](../Reference/CALL.md)指令等调用的。  
+在ERB脚本中用`@～～`语句定义名称，通过[`CALL`](../Reference/CALL.zh.md)指令等调用的。  
 即与上述函数是同一概念。  
 
 ### `#FUNCTION(S)`函数  

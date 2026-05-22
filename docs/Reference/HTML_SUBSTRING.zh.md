@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数            | 返回值   |
 | :----------------------------------------------------------------------- | :-------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.md) | `string`, `int` | `string` |
+| ![](../assets/images/IconEM.webp)[`HTML_SUBSTRING`](./HTML_SUBSTRING.zh.md) | `string`, `int` | `string` |
 
 !!! info "API"
 
@@ -42,4 +42,4 @@ hide:
     因为粗体比常规字体宽。
 
 ### 相关项目
-- [SUBSTRING](SUBSTRING.md)
+- [SUBSTRING](SUBSTRING.zh.md)

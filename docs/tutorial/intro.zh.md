@@ -2,8 +2,8 @@
 
 !!! info "本节对应手册"
 
-    - [函数·预处理器](../Emuera/function.md) — 函数声明的完整规格
-    - [变量规格](../Emuera/variables.md) — 变量系统的完整规格
+    - [函数·预处理器](../Emuera/function.zh.md) — 函数声明的完整规格
+    - [变量规格](../Emuera/variables.zh.md) — 变量系统的完整规格
     - [版本演进对照](evolution.zh.md) — Emuera → EM+EE → 各变体功能对比
 
 ---

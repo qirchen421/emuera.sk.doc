@@ -47,7 +47,7 @@ In the era world, there are almost no variables without households. This is quit
 
 Note that some of the above variables are initialized at specific times, and whether all elements of that array variable are initialized or only specific elements differ. For example, at the start of training, `PREVCOM:0` is initialized to `-1`, but `PREVCOM:1` and beyond are not initialized.
 
-[Reference: Emuera Variable List](../Emuera/variables.md)
+[Reference: Emuera Variable List](../Emuera/variables.en.md)
 
 ---
 
@@ -182,7 +182,7 @@ UP:B B...Indicates PALAM:B
 In other words, to manage each character with non-character variables, you would have to manipulate `TARGET:0`, but if you do that, you'd likely run out of flags for saving other characters, so if you're making a variant that trains multiple targets simultaneously in eramaker, you'd need to create a mechanism to handle the flag shortage.
 Emuera has slightly improved this situation, but some ingenuity is still needed.
 
-For which variables are character variables and which are non-character variables, please refer to the [Variable List](../Emuera/variables.md).
+For which variables are character variables and which are non-character variables, please refer to the [Variable List](../Emuera/variables.en.md).
 
 ---
 
@@ -448,7 +448,7 @@ In any case, you cannot return a string from `RETURNF` in a user-defined inline 
 
 Also, you don't have to force yourself to use user-defined inline functions. While they can make code cleaner and easier to understand, if you're not sure, you should build with instructions that are easy for you to understand instead of inline functions.
 
-Of course, there are also pre-defined inline functions that are not user-defined. For those, please refer to [List of Instructions/Inline Functions](../Reference/README.md). You can use them as much as you understand.
+Of course, there are also pre-defined inline functions that are not user-defined. For those, please refer to [List of Instructions/Inline Functions](../Reference/README.en.md). You can use them as much as you understand.
 
 ---
 

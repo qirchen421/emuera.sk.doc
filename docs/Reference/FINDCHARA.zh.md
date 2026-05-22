@@ -2,8 +2,8 @@
 
 | 函数名                                                                 | 参数                                     | 返回值 |
 | :--------------------------------------------------------------------- | :--------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FINDCHARA`](./FINDCHARA.md)     | `charaVariable`, `int`(, `int`, `int`)   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`FINDLASTCHARA`](./FINDCHARA.md) | `charaVariable`, `int`(, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDCHARA`](./FINDCHARA.zh.md)     | `charaVariable`, `int`(, `int`, `int`)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FINDLASTCHARA`](./FINDCHARA.zh.md) | `charaVariable`, `int`(, `int`, `int`)   | `int`  |
 
 !!! info "API"
 
@@ -35,5 +35,5 @@
     该功能同时支持命令形式和函数形式。
 
 ### 相关项目
-- [GETCHARA](GETCHARA.md) — 按模板编号查找角色
+- [GETCHARA](GETCHARA.zh.md) — 按模板编号查找角色
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — FINDCHARA 属于第一代"固定映射"

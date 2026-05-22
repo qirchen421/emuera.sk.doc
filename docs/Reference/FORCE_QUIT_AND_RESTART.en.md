@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                   | Arguments   | Return |
 | :--------------------------------------------------------------------------------------- | :----- | :----- |
-| ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | `void` | `void` |
+| ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.en.md) | `void` | `void` |
 
 !!! info "API"
 
@@ -33,4 +33,4 @@ hide:
 	![](../assets/images/FORCE_QUIT_AND_RESTART.png)
 
 ### Related Topics
-- [QUIT_AND_RESTART](QUIT_AND_RESTART.md)
+- [QUIT_AND_RESTART](QUIT_AND_RESTART.en.md)

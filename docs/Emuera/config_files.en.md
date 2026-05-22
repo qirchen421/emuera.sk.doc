@@ -1,7 +1,7 @@
 # Forcing Config Settings
 
 Emuera reads files named `_fixed.config` and/or `_default.config` if they exist in the csv folder.  
-The format of each `.config` file is the same as `emuera.config`. See [Config Items](config.md) for the meaning of each item.
+The format of each `.config` file is the same as `emuera.config`. See [Config Items](config.en.md) for the meaning of each item.
 
 The priority of each file depends on the order in which Emuera reads config files.  
 Emuera reads config files in the following order:

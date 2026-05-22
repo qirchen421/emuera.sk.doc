@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数  | 返回值 |
 | :----------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.md) | `int` | `void` |
+| ![](../assets/images/IconEE.webp)[`SETSOUNDVOLUME`](./SETSOUNDVOLUME.zh.md) | `int` | `void` |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     只能作为命令使用。
 
 ### 相关项目
-- [PLAYSOUND](PLAYSOUND.md)
+- [PLAYSOUND](PLAYSOUND.zh.md)

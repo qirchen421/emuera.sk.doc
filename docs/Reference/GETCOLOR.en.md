@@ -7,11 +7,11 @@ hide:
 
 | Function name                                                                | Arguments | Return |
 | :--------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETCOLOR`](./GETCOLOR.md)           | none | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETBGCOLOR`](./GETCOLOR.md)         | none | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETDEFCOLOR`](./GETCOLOR.md)         | none | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETDEFBGCOLOR`](./GETCOLOR.md)      | none | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GETFOCUSCOLOR`](./GETCOLOR.md)      | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETCOLOR`](./GETCOLOR.en.md)           | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETBGCOLOR`](./GETCOLOR.en.md)         | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETDEFCOLOR`](./GETCOLOR.en.md)         | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETDEFBGCOLOR`](./GETCOLOR.en.md)      | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETFOCUSCOLOR`](./GETCOLOR.en.md)      | none | `int`  |
 
 !!! info "API"
 
@@ -28,13 +28,13 @@ hide:
 	The return value is in hexadecimal format as `0xRRGGBB`.  
 	For example, orange (R,G,B) = (`255, 128, 0`) returns `0xFF8000` (which is `16744448` in decimal).  
 	For color-to-number mapping, you can refer to websites that explain web colors.  
-	Due to changes in version 1.731, the [`SETCOLOR`](./SETCOLOR.md) command can now also accept the format `SETCOLOR 0xFF8000`.
+	Due to changes in version 1.731, the [`SETCOLOR`](./SETCOLOR.en.md) command can now also accept the format `SETCOLOR 0xFF8000`.
 
 !!! hint "Hint"
 
     Command and expression function both supported.
 
 ### Related
-- [SETCOLOR](SETCOLOR.md)
-- [SETBGCOLOR](SETBGCOLOR.md)
-- [GETCONFIG](GETCONFIG.md)
+- [SETCOLOR](SETCOLOR.en.md)
+- [SETBGCOLOR](SETBGCOLOR.en.md)
+- [GETCONFIG](GETCONFIG.en.md)

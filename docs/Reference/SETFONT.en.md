@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                        | Arguments   | Return    |
 | :------------------------------------------------------------------ | :---------- | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`CHKFONT`](./SETFONT.md)      | `string`    | `int`     |
-| ![](../assets/images/IconEmuera.webp)[`SETFONT`](./SETFONT.md)      | `string`    | none      |
-| ![](../assets/images/IconEmuera.webp)[`GETFONT`](./SETFONT.md)      | none        | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`CHKFONT`](./SETFONT.en.md)      | `string`    | `int`     |
+| ![](../assets/images/IconEmuera.webp)[`SETFONT`](./SETFONT.en.md)      | `string`    | none      |
+| ![](../assets/images/IconEmuera.webp)[`GETFONT`](./SETFONT.en.md)      | none        | `string`  |
 
 !!! info "API"
 

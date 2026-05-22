@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数                                              | 返回值 |
 | :----------------------------------------------------------------- | :------------------------------------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`VARSET`](./VARSET.md)       | `variable`(, `value`, `startIndex`, `endIndex`)   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`VARSET`](./VARSET.zh.md)       | `variable`(, `value`, `startIndex`, `endIndex`)   | 无     |
 
 !!! info "API"
 
@@ -27,7 +27,7 @@ hide:
 
     在这个例子中，`FLAG` 的所有元素都将变为 `0`。  
     `STR:0` 到 `STR:9` 将被赋值为 `あああ`，`TA` 的所有三维数组元素也将被赋值为 `5678`。  
-    同样的事情也可以在 ERB 中使用 [`FOR-NEXT`](./FOR.md) 循环等来实现，但当循环次数达到数十万次时，执行时间就不可忽视了。  
+    同样的事情也可以在 ERB 中使用 [`FOR-NEXT`](./FOR.zh.md) 循环等来实现，但当循环次数达到数十万次时，执行时间就不可忽视了。  
     `VARSET` 指令可以比在 ERB 中进行赋值更快地完成处理。  
     当将角色变量作为 `VARSET` 指令的目标时，赋值将仅作用于指定角色的元素。
 
@@ -45,4 +45,4 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
-- [VARSETEX](VARSETEX.md)
+- [VARSETEX](VARSETEX.zh.md)

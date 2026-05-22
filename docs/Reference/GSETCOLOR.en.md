@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                          | Arguments                     | Return |
 | :----------------------------------------------------------------- | :--------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GSETCOLOR`](./GSETCOLOR.md) | `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GSETCOLOR`](./GSETCOLOR.en.md) | `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -17,11 +17,11 @@ hide:
 	Replaces the pixel at the specified position in the `Graphics` with the specified `gID` with the specified color.  
 	Returns non-zero on success.  
 	This command is not particularly fast.  
-	Using this together with the [`GGETCOLOR`](./GGETCOLOR.md) command to rewrite an entire large image will not finish within a practical time.
+	Using this together with the [`GGETCOLOR`](./GGETCOLOR.en.md) command to rewrite an entire large image will not finish within a practical time.
 
 !!! hint "Hint"
 
     Both command and expression function supported.
 
 ### Related Items
-- [GGETCOLOR](GGETCOLOR.md)
+- [GGETCOLOR](GGETCOLOR.en.md)

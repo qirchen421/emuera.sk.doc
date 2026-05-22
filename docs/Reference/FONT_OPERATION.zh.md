@@ -7,11 +7,11 @@ hide:
 
 | 函数名                                                                     | 参数 | 返回值 |
 | :------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FONTBOLD`](./FONT_OPERATION.md)     | 无   | 无     |
-| ![](../assets/images/IconEmuera.webp)[`FONTITALIC`](./FONT_OPERATION.md)   | 无   | 无     |
-| ![](../assets/images/IconEmuera.webp)[`FONTSTYLE`](./FONT_OPERATION.md)    | `int`| 无     |
-| ![](../assets/images/IconEmuera.webp)[`FONTREGULAR`](./FONT_OPERATION.md)  | 无   | 无     |
-| ![](../assets/images/IconEmuera.webp)[`GETSTYLE`](./FONT_OPERATION.md)     | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`FONTBOLD`](./FONT_OPERATION.zh.md)     | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`FONTITALIC`](./FONT_OPERATION.zh.md)   | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`FONTSTYLE`](./FONT_OPERATION.zh.md)    | `int`| 无     |
+| ![](../assets/images/IconEmuera.webp)[`FONTREGULAR`](./FONT_OPERATION.zh.md)  | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`GETSTYLE`](./FONT_OPERATION.zh.md)     | 无   | `int`  |
 
 !!! info "API"
 

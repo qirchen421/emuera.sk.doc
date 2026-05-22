@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                  | Arguments | Return |
 | :----------------------------------------------------------| :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.md) | `int`     | `int`  |
+| ![](../assets/images/IconEE.webp)[`GGETPEN`](./GGETPEN.en.md) | `int`     | `int`  |
 
 !!! info "API"
 
@@ -36,5 +36,5 @@ hide:
 	```
 
 ### Related Items
-- [GSETPEN](GSETPEN.md)
-- [GGETPENWIDTH](GGETPENWIDTH.md)
+- [GSETPEN](GSETPEN.en.md)
+- [GGETPENWIDTH](GGETPENWIDTH.en.md)

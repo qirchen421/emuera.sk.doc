@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                                      | Arguments                                             | Return |
 | :-------------------------------------------------------------------------------- | :--------------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_ADDNODE`](./XML_ADDNODE.md)        | `int`, `string`, `string`(, `int`, `int`)           | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_ADDNODE`](./XML_ADDNODE.en.md)        | `int`, `string`, `string`(, `int`, `int`)           | `int`  |
 |                                                                                   | `ref` `string`, `string`, `string`(, `int`, `int`) | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_ADDNODE_BYNAME`](./XML_ADDNODE.md) | `string`, `string`, `string`(, `int`, `int`)       | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_ADDNODE_BYNAME`](./XML_ADDNODE.en.md) | `string`, `string`, `string`(, `int`, `int`)       | `int`  |
 
 !!! info "API"
 

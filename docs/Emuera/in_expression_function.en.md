@@ -6,12 +6,12 @@
 
 "Expression Functions" is a new syntax added in Emuera ver 1.712.  
 This is what is simply called a "function" in many programming languages.  
-In eramaker basic, what is defined with `@~~` and called with [`CALL`](../Reference/CALL.md) is called a "function", so Emuera calls the new "function" a "function available in expressions".  
+In eramaker basic, what is defined with `@~~` and called with [`CALL`](../Reference/CALL.en.md) is called a "function", so Emuera calls the new "function" a "function available in expressions".  
 Below, when there is no misunderstanding, "Expression Functions" will simply be called functions.
 
 Also, other pages may abbreviate "Expression Functions" as "expression functions".  
 However, this is unrelated to expression functions (anonymous functions) or inline functions in other programming languages.  
-For user-defined "Expression Functions" that are not built-in and are defined and used in ERB, see [User-Defined Expression Functions](./user_defined_in_expression_function.md).
+For user-defined "Expression Functions" that are not built-in and are defined and used in ERB, see [User-Defined Expression Functions](./user_defined_in_expression_function.en.md).
 
 "Expression Functions" are used as follows:
 
@@ -52,11 +52,11 @@ The following script works on line 1 but causes an error on line 2:
 	A = STRLENS("abc")
 	A = SUBSTRING("abc", 0, 1)
 
-The return value of [`SUBSTRING`](../Reference/SUBSTRING.md) is `str`, i.e., string type, so it cannot be assigned to the integer variable `A`. Functions that return string type cannot be assigned, but can otherwise be treated like string variables.
+The return value of [`SUBSTRING`](../Reference/SUBSTRING.en.md) is `str`, i.e., string type, so it cannot be assigned to the integer variable `A`. Functions that return string type cannot be assigned, but can otherwise be treated like string variables.
 
 	STR = %SUBSTRING("abc", 0, 1)%
 
-Next, [`STRLENS`](../Reference/STRLEN.md) or `SUBSTRING` is the function name.
+Next, [`STRLENS`](../Reference/STRLEN.en.md) or `SUBSTRING` is the function name.
 
 The characters inside `()`, such as `str s`, represent arguments.  
 If there are multiple arguments, they are separated by `,` (comma). `STRLENS` has 1 argument, `SUBSTRING` has 3 arguments.

@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                       | 参数            | 返回值   |
 | :----------------------------------------------------------- | :-------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.md)  | `string`        | `int`    |
-| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md) | `string`        | `string` |
-| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)  | `string`, `any` | `1`      |
+| ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.zh.md)  | `string`        | `int`    |
+| ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.zh.md) | `string`        | `string` |
+| ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.zh.md)  | `string`, `any` | `1`      |
 
 !!! info "API"
     
@@ -59,6 +59,6 @@ hide:
     ```
 
 ### 相关项目
-- [STRFORM](STRFORM.md)
-- [GETMETH,GETMETHS](GETMETH.md)
+- [STRFORM](STRFORM.zh.md)
+- [GETMETH,GETMETHS](GETMETH.zh.md)
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — GETVAR/GETVARS/SETVAR 属于第三代"变量反射"

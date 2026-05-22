@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                  | 参数              | 返回值 |
 | :------------------------------------------------------ | :---------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.md) | `string`(, `int`) | 无     |
-| ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.md) | `string`(, `int`) | 无     |
+| ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.zh.md) | `string`(, `int`) | 无     |
+| ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.zh.md) | `string`(, `int`) | 无     |
 
 !!! info "API"
 

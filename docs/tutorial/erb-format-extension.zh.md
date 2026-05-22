@@ -3,7 +3,7 @@
 !!! info "本节对应手册"
 
     - **Reference 分类**: [存档操作](../Reference/README.zh.md#save-data) / [图像处理相关](../Reference/README.zh.md#image) / [音频系列](../Reference/README.zh.md#sound)
-    - [eramaker ERB 书式](../eramaker/ERB_format.md) — 原始 ERB 格式（历史参考）
+    - [eramaker ERB 书式](../eramaker/ERB_format.zh.md) — 原始 ERB 格式（历史参考）
     - [Emuera 新增语法](../Emuera/expression.zh.md) — 行连接、特殊注释行
     - [Emuera 扩展语法 - 函数](../Emuera/function.zh.md) — `#FUNCTION`/`#FUNCTIONS` 声明
     - [Emuera 扩展语法 - 变量](../Emuera/variables.zh.md) — `#DIM`/`#DIMS`/`#DIMF` 声明

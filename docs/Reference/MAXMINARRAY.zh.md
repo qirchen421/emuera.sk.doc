@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                              | 参数                         | 返回值 |
 | :------------------------------------------------------------------ | :--------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MAXARRAY`](./MAXMINARRAY.md) | `integerArray`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MINARRAY`](./MAXMINARRAY.md) | `integerArray`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MAXARRAY`](./MAXMINARRAY.zh.md) | `integerArray`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MINARRAY`](./MAXMINARRAY.zh.md) | `integerArray`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -37,4 +37,4 @@ hide:
     同时支持指令和表达式函数两种形式。
 
 ### 相关项目
-- [MAX,MIN](MAX.md)
+- [MAX,MIN](MAX.zh.md)

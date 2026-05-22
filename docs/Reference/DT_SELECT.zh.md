@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                            | 参数                                      | 返回值   |
 | :------------------------------------------------------------- | :-------------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`DT_SELECT`](./DT_SELECT.md) | `string`(, `string`, `string`, `ref` `int[]`) | `int`  |
+| ![](../assets/images/IconEM.webp)[`DT_SELECT`](./DT_SELECT.zh.md) | `string`(, `string`, `string`, `ref` `int[]`) | `int`  |
 
 
 !!! info "API"

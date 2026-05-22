@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                             | Arguments            | Return    |
 | :------------------------------------------------------------------------ | :------------------- | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMNAME`](./COLOR_FROM.md) | `string`            | `int`     |
-| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.md)  | `int`, `int`, `int` | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMNAME`](./COLOR_FROM.en.md) | `string`            | `int`     |
+| ![](../assets/images/IconEmuera.webp)[`COLOR_FROMRGB`](./COLOR_FROM.en.md)  | `int`, `int`, `int` | `string`  |
 
 !!! info "API"
 
@@ -27,4 +27,4 @@ hide:
     Command and expression function both supported.
 
 ### Related
-- [SETCOLOR](SETCOLOR.md)
+- [SETCOLOR](SETCOLOR.en.md)

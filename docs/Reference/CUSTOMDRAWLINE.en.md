@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                       | Arguments      | Return   |
 | :---------------------------------------------------------------------------------- | :------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CUSTOMDRAWLINE`](./CUSTOMDRAWLINE.md) | `string`       | none     |
-| ![](../assets/images/IconEmuera.webp)[`DRAWLINEFORM`](./CUSTOMDRAWLINE.md)   | `formedString` | none     |
+| ![](../assets/images/IconEmuera.webp)[`CUSTOMDRAWLINE`](./CUSTOMDRAWLINE.en.md) | `string`       | none     |
+| ![](../assets/images/IconEmuera.webp)[`DRAWLINEFORM`](./CUSTOMDRAWLINE.en.md)   | `formedString` | none     |
 
 !!! info "API"
 
@@ -37,4 +37,4 @@ hide:
     ```
 
 ### Related Items
-- [DRAWLINE](DRAWLINE.md)
+- [DRAWLINE](DRAWLINE.en.md)

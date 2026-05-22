@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                           | 参数       | 返回值 |
 | :--------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.md) | `string`   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`PUTFORM`](./PUTFORM.zh.md) | `string`   | 无     |
 
 !!! info "API"
 
@@ -23,5 +23,5 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [SAVEDATA](SAVEDATA.md)
+- [SAVEDATA](SAVEDATA.zh.md)
 - [流程图>SAVEGAME](../Emuera/system_flow.md#savegame)

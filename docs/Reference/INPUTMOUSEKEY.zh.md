@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                     | 参数  | 返回值 |
 | :------------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`INPUTMOUSEKEY`](./INPUTMOUSEKEY.md) | `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`INPUTMOUSEKEY`](./INPUTMOUSEKEY.zh.md) | `int` | `int`  |
 
 !!! info "API"
 
@@ -15,11 +15,11 @@ hide:
 	INPUTMOUSEKEY timeLimit
     ```
     `INPUTMOUSEKEY` 指令用于直接识别鼠标或键盘的输入。  
-    参数以毫秒为单位指定执行超时处理前的等待时间，类似于 [`TINPUT`](./TINPUT.md)。  
+    参数以毫秒为单位指定执行超时处理前的等待时间，类似于 [`TINPUT`](./TINPUT.zh.md)。  
     如果省略参数或指定了 0 或负数，则不会执行超时处理。  
-    此指令可以识别 [`ONEINPUT`](./ONEINPUT.md) 等指令无法捕获的功能键、方向键、PageUp 键等作为输入。  
+    此指令可以识别 [`ONEINPUT`](./ONEINPUT.zh.md) 等指令无法捕获的功能键、方向键、PageUp 键等作为输入。  
     另一方面，在此指令等待输入期间，无法使用 ESC 键或右键的跳过功能、宏功能以及其他功能，仅能接收按下 ESC 键等的结果。  
-    此外，此指令不执行任何 [`PRINT`](./PRINT.md) 处理，包括超时显示等。  
+    此外，此指令不执行任何 [`PRINT`](./PRINT.zh.md) 处理，包括超时显示等。  
     如果需要实现跳过功能或显示输入内容等，需要在 ERB 侧进行相应处理。  
     通过在第一参数中指定以毫秒为单位的数值，将执行超时处理。`INPUTMOUSEKEY` 的返回值最多有 6 个，分别赋值给 `RESULT:0`、`RESULT:1`、`RESULT:2`、`RESULT:3`、`RESULT:4`、`RESULT:5`。
 
@@ -39,7 +39,7 @@ hide:
         RESULT:0 == 4; 因超时而结束
 
 <!-- 关于鼠标按钮，请参考 _VirtualKey.ERH 中的 MB_LEFT 到 MB_MIDDLE；关于键码，请参考 _VirtualKey.ERH 中的 VK_~。 -->
-键码与 [`GETKEY`](./GETKEY.md) 函数通用。  
+键码与 [`GETKEY`](./GETKEY.zh.md) 函数通用。  
 请注意，鼠标滚轮的滚动量不是 1 或 -1，而是至少为 120 等较大的值。  
 此外，当光标位于 Emuera 窗口外时，滚轮是否被检测到取决于 Windows 的设置，Emuera 端无法更改。  
 在默认设置下，Windows 8.1 及更早版本会检测到，但在 Windows 10 中，窗口外的滚轮似乎不会被检测到。
@@ -49,4 +49,4 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [INPUT](INPUT.md)
+- [INPUT](INPUT.zh.md)

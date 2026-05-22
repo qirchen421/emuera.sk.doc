@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数          | 返回值 |
 | :--------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.md) | `labelName`   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`GOTO`](./GOTO.zh.md) | `labelName`   | 无     |
 
 !!! info "API"
 
@@ -57,4 +57,4 @@ hide:
     ```
 
 ### 相关项目
-- [GOTOFORM](FORM.md)
+- [GOTOFORM](FORM.zh.md)

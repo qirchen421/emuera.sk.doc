@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments | Return |
 | :------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEE.webp)[`PLAYSOUND`](./PLAYSOUND.md) | `string` | `void` |
+| ![](../assets/images/IconEE.webp)[`PLAYSOUND`](./PLAYSOUND.en.md) | `string` | `void` |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     Uses WMPLib, supports formats playable by WMP
 
 ### Related
-- [PLAYBGM](PLAYBGM.md)
-- [SETSOUNDVOLUME](SETSOUNDVOLUME.md)
+- [PLAYBGM](PLAYBGM.en.md)
+- [SETSOUNDVOLUME](SETSOUNDVOLUME.en.md)

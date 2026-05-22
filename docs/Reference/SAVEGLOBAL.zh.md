@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数 | 返回值 |
 | :------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SAVEGLOBAL`](./SAVEGLOBAL.md) | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`SAVEGLOBAL`](./SAVEGLOBAL.zh.md) | 无   | 无     |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
-- [LOADGLOBAL](LOADGLOBAL.md)
+- [LOADGLOBAL](LOADGLOBAL.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments                | Return |
 | :----------------------------------------------------------------------------- | :---------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYMSORT`](./ARRAYMSORT.md) | `variable`(, `variable`...) | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYMSORT`](./ARRAYMSORT.en.md) | `variable`(, `variable`...) | `int`  |
 
 !!! info "API"
 
@@ -51,4 +51,4 @@ hide:
     Command only.
 
 ### Related Items
-* [ARRAYSORT](ARRAYSORT.md)
+* [ARRAYSORT](ARRAYSORT.en.md)

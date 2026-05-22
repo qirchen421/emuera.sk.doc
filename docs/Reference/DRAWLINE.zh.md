@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数 | 返回值 |
 | :----------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.md) | 无   | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`DRAWLINE`](./DRAWLINE.zh.md) | 无   | 无     |
 
 !!! info "API"
 
@@ -32,4 +32,4 @@ hide:
     ```
 
 ### 相关项目
-- [CUSTOMDRAWLINE](CUSTOMDRAWLINE.md)
+- [CUSTOMDRAWLINE](CUSTOMDRAWLINE.zh.md)

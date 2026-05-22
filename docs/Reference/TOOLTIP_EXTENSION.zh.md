@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                                           | 参数     |
 | :------------------------------------------------------------------------------- | :------- |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.md)      | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.md)     | `string` |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.md) | `int`    |
-| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_CUSTOM`](./TOOLTIP_EXTENSION.zh.md)      | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONT`](./TOOLTIP_EXTENSION.zh.md)     | `string` |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_SETFONTSIZE`](./TOOLTIP_EXTENSION.zh.md) | `int`    |
+| ![](../assets/images/IconEE.webp)[`TOOLTIP_FORMAT`](./TOOLTIP_EXTENSION.zh.md)      | `int`    |
 
 !!! info "API"
 
@@ -65,5 +65,5 @@ hide:
 	![](../assets/images/TOOLTIP_EXTENSION2.png)
 
 ### 相关项目
-- [工具提示显示操作](TOOLTIP_SET.md)
-- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.md)
+- [工具提示显示操作](TOOLTIP_SET.zh.md)
+- [TOOLTIP_SETCOLOR](TOOLTIP_SETCOLOR.zh.md)

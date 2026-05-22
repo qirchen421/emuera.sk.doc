@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                  | Arguments             | Return |
 | :---------------------------------------------------------- | :------------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.md) | `string`(, `int`)   | none   |
-| ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.md) | `string`(, `int`)   | none   |
+| ![](../assets/images/Icondotnet.webp)[`VARI`](./VAR.en.md) | `string`(, `int`)   | none   |
+| ![](../assets/images/Icondotnet.webp)[`VARS`](./VAR.en.md) | `string`(, `int`)   | none   |
 
 
 !!! info "API"

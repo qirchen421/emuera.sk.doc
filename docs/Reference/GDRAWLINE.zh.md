@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数                              | 返回值 |
 | :------------------------------------------------------------- | :-------------------------------- | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.md) | `int`, `int`, `int`, `int`, `int` | 1      |
+| ![](../assets/images/IconEE.webp)[`GDRAWLINE`](./GDRAWLINE.zh.md) | `int`, `int`, `int`, `int`, `int` | 1      |
 
 !!! info "API"
 
@@ -45,5 +45,5 @@ hide:
 	![](../assets/images/GDRAWLINE.png)
 
 ### 相关项目
-- [GSETPEN](GSETPEN.md)
-- [GDASHSTYLE](GDASHSTYLE.md)
+- [GSETPEN](GSETPEN.zh.md)
+- [GDASHSTYLE](GDASHSTYLE.zh.md)

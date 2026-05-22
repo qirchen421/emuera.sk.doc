@@ -36,14 +36,14 @@ hide:
 
 | What do you want? | Go to |
 |:---|:---|
-| Learn ERABASIC from scratch | [Tutorial](tutorial/index.md) |
+| Learn ERABASIC from scratch | [Tutorial](tutorial/index.en.md) |
 | Look up instruction usage | [Reference](Reference/README.en.md) |
 | Learn EM+EE new features | [EM+EE Feature Overview](EMEE/EMEE_Summary.en.md) |
-| Learn Skia new features | [Skia Feature Overview](Skia/Skia_Summary.md) |
-| Understand the variable system | [Variable Specification](Emuera/variables.md) |
-| Functions and preprocessors | [Functions & Preprocessors](Emuera/function.md) |
-| System flow | [Flowchart](Emuera/system_flow.md) |
-| Cross-version feature comparison | [Version Evolution](tutorial/evolution.md) |
+| Learn Skia new features | [Skia Feature Overview](Skia/Skia_Summary.en.md) |
+| Understand the variable system | [Variable Specification](Emuera/variables.en.md) |
+| Functions and preprocessors | [Functions & Preprocessors](Emuera/function.en.md) |
+| System flow | [Flowchart](Emuera/system_flow.en.md) |
+| Cross-version feature comparison | [Version Evolution](tutorial/evolution.en.md) |
 
 ## Licence
 > This document is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.

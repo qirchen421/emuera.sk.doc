@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                       | 参数            | 返回值 |
 | :--------------------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`HTML_STRINGLINES`](./HTML_STRINGLINES.md) | `string`, `int` | `int`  |
+| ![](../assets/images/IconEM.webp)[`HTML_STRINGLINES`](./HTML_STRINGLINES.zh.md) | `string`, `int` | `int`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                               | 参数                          | 返回值 |
 | :------------------------------------------------------------------- | :---------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ARRAYMSORT`](./ARRAYMSORT.md) | `variable`(, `variable`...)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ARRAYMSORT`](./ARRAYMSORT.zh.md) | `variable`(, `variable`...)   | `int`  |
 
 !!! info "API"
 
@@ -51,4 +51,4 @@ hide:
     仅支持命令。
 
 ### 相关项目
-* [ARRAYSORT](ARRAYSORT.md)
+* [ARRAYSORT](ARRAYSORT.zh.md)

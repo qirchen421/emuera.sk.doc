@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数     | 返回值 |
 | :--------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.md) | `string` | `int`  |
+| ![](../assets/images/IconEE.webp)[`EXISTFUNCTION`](./EXISTFUNCTION.zh.md) | `string` | `int`  |
 
 !!! info "API"
 
@@ -53,4 +53,4 @@ hide:
     ```
 
 ### 相关项目
-- [ENUMFUNC](ENUMFUNC.md)
+- [ENUMFUNC](ENUMFUNC.zh.md)

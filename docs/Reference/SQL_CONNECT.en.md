@@ -7,9 +7,9 @@ hide:
 
 | Function name | Arguments | Return |
 | :-------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/Icondotnet.webp)[`SQL_CONNECTION_OPEN`](./SQL_CONNECT.md) | `string` | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_CONNECT`](./SQL_CONNECT.md) | `string`(, `string`) | `int` |
-| ![](../assets/images/IconSK.webp)[`SQL_DISCONNECT`](./SQL_CONNECT.md) | `string` | `int` |
+| ![](../assets/images/Icondotnet.webp)[`SQL_CONNECTION_OPEN`](./SQL_CONNECT.en.md) | `string` | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_CONNECT`](./SQL_CONNECT.en.md) | `string`(, `string`) | `int` |
+| ![](../assets/images/IconSK.webp)[`SQL_DISCONNECT`](./SQL_CONNECT.en.md) | `string` | `int` |
 
 !!! info "API"
 

@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                           | Arguments | Return |
 | :--------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEPOSX`](./SPRITEPOSXY.md) | `string`  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SPRITEPOSY`](./SPRITEPOSXY.md) | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEPOSX`](./SPRITEPOSXY.en.md) | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SPRITEPOSY`](./SPRITEPOSXY.en.md) | `string`  | `int`  |
 
 !!! info "API"
 
@@ -18,7 +18,7 @@ hide:
     ```
 	Gets the relative X or Y position of the sprite with the specified name.  
 	Returns 0 if the sprite has not been created or has been disposed.  
-	To distinguish between position X/Y being 0 versus not created/disposed, call [`SPRITECREATED`](./SPRITECREATED.md) separately.
+	To distinguish between position X/Y being 0 versus not created/disposed, call [`SPRITECREATED`](./SPRITECREATED.en.md) separately.
 
 !!! hint "Hint"
 

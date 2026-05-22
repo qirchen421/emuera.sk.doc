@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                         | Arguments          | Return |
 | :------------------------------------------------------------------- | :---------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GROUPMATCH`](./GROUPCHECK.md) | `any`, `any`...   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`NOSAMES`](./GROUPCHECK.md)    | `any`, `any`...   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.md)   | `any`, `any`...   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GROUPMATCH`](./GROUPCHECK.en.md) | `any`, `any`...   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`NOSAMES`](./GROUPCHECK.en.md)    | `any`, `any`...   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ALLSAMES`](./GROUPCHECK.en.md)   | `any`, `any`...   | `int`  |
 
 !!! info "API"
 
@@ -29,4 +29,4 @@ hide:
     Both command and expression function forms are available.
 
 ### Related
-- [MATCH](MATCH.md)
+- [MATCH](MATCH.en.md)

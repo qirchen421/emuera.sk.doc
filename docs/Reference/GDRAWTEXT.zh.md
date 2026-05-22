@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数                            | 返回值 |
 | :------------------------------------------------------------- | :------------------------------ | :----- |
-| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.md) | `int`, `string`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconEE.webp)[`GDRAWTEXT`](./GDRAWTEXT.zh.md) | `int`, `string`(, `int`, `int`) | `int`  |
 
 !!! info "API"
 
@@ -44,6 +44,6 @@ hide:
     ![](../assets/images/GDRAWTEXT.png)
 
 ### 相关项目
-- [GSETFONT](GSETFONT.md)
-- [GSETPEN](GSETPEN.md)
-- [GGETTEXTSIZE](GGETTEXTSIZE.md)
+- [GSETFONT](GSETFONT.zh.md)
+- [GSETPEN](GSETPEN.zh.md)
+- [GGETTEXTSIZE](GGETTEXTSIZE.zh.md)

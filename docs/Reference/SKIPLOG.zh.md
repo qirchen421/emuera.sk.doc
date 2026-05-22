@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                     | 参数  | 返回值 |
 | :--------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.md) | `int` | `void` |
+| ![](../assets/images/IconEE.webp)[`SKIPLOG`](./SKIPLOG.zh.md) | `int` | `void` |
 
 !!! info "API"
 

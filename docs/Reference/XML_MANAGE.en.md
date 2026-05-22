@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                     | Arguments       | Return |
 | :--------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md) | `any`, `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)  | `any`           | `1`    |
-| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)    | `any`           | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.en.md) | `any`, `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.en.md)  | `any`           | `1`    |
+| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.en.md)    | `any`           | `int`  |
 
 !!! info "API"
 

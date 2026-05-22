@@ -7,7 +7,7 @@ hide:
 
 | Function name                                             | Arguments                   | Return |
 | :-------------------------------------------------------- | :-------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MATCH`](./MATCH.md) | `array`, `any`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MATCH`](./MATCH.en.md) | `array`, `any`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -36,4 +36,4 @@ hide:
     Both command and expression function forms are available.
 
 ### Related
-- [GROUPMATCH](GROUPCHECK.md)
+- [GROUPMATCH](GROUPCHECK.en.md)

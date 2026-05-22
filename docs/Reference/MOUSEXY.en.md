@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                             | Arguments | Return |
 | :----------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MOUSEX`](./MOUSEXY.md)      | none | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MOUSEY`](./MOUSEXY.md)      | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MOUSEX`](./MOUSEXY.en.md)      | none | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MOUSEY`](./MOUSEXY.en.md)      | none | `int`  |
 
 !!! info "API"
 
@@ -19,7 +19,7 @@ hide:
 	Gets the current X or Y coordinate of the mouse cursor.  
 	The coordinates are relative positions with the bottom-left of the client area as (0,0), with the positive x-axis to the right and the positive y-axis downward.  
 	Note that MOUSEY returns a negative value when the cursor is inside the client area.  
-	The size of the client area can be obtained using the [`CLIENTWIDTH`](./CLIENTFIELD.md) and [`CLIENTHEIGHT`](./CLIENTFIELD.md) functions.  
+	The size of the client area can be obtained using the [`CLIENTWIDTH`](./CLIENTFIELD.en.md) and [`CLIENTHEIGHT`](./CLIENTFIELD.en.md) functions.  
 	(If you need Y coordinates relative to the top-left of the client area, you can get them with `MOUSEY()+CLIENTHEIGHT()`)  
 	This function works even when Emuera's window is not active, and even when the mouse cursor is outside the window.
 
@@ -28,4 +28,4 @@ hide:
     Both commands and expression functions are supported.
 
 ### See Also
-- [AWAIT](AWAIT.md)
+- [AWAIT](AWAIT.en.md)

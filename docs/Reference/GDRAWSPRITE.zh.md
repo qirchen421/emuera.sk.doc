@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数                                                           | 返回值 |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWSPRITE`](./GDRAWSPRITE.md) | `int`, `string`                                                | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWSPRITE`](./GDRAWSPRITE.zh.md) | `int`, `string`                                                | `int`  |
 |                                                                        | `int`, `string`, `int`, `int`                                  | `int`  |
 |                                                                        | `int`, `string`, `int`, `int`, `int`, `int`                    | `int`  |
 |                                                                        | `int`, `string`, `int`, `int`, `int`, `int`, `integerVariable` | `int`  |
@@ -34,4 +34,4 @@ hide:
     同时支持指令和表达式函数。
 
 ### 相关项目
-- [GDRAWG](GDRAWG.md)
+- [GDRAWG](GDRAWG.zh.md)

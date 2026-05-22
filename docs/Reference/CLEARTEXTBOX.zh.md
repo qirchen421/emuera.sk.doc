@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数 | 返回值 |
 | :----------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CLEARTEXTBOX`](./CLEARTEXTBOX.md) | 无   | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CLEARTEXTBOX`](./CLEARTEXTBOX.zh.md) | 无   | 无     |
 
 !!! info "API"
 

@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                             | 参数     | 返回值   |
 | :----------------------------------------------------------------- | :------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.md)     | `int`    | `string` |
-| ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.md) | `string` | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`UNICODE`](./UNICODE.zh.md)     | `int`    | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ENCODETOUNI`](./UNICODE.zh.md) | `string` | `int`    |
 
 !!! info "API"
 

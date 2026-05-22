@@ -7,7 +7,7 @@ For items you'd like to add, contact us on [Discord](https://discord.com/channel
 ### git
 A version control system. It maintains change history locally and can upload to and back up online projects called remote repositories.
 It particularly excels in collaborative development, but even for individual projects, it has useful features like checking changed areas and rolling back, so learning how to use it is worthwhile.
-See [this page](HowToUseGit.md) for details.
+See [this page](HowToUseGit.en.md) for details.
 
 ### VSCode (VSC)
 An IDE (Integrated Development Environment) for programming. It's essentially an application.
@@ -61,7 +61,7 @@ Also, there's a troublesome aspect that source code with many magic numbers that
 
 ### Command
 Something that executes an action in era source code - calling functions, adding characters, displaying text, etc.
-See [this page](../Reference/README.md) for a list of available commands.
+See [this page](../Reference/README.en.md) for a list of available commands.
 
 ### Infinite Loop
 A phenomenon where loops don't end due to some cause when using loop commands. Most are due to program errors.
@@ -104,7 +104,7 @@ Since it's basically an extension unique to era, it's not used in other applicat
 In IDEs like Visual Studio Code, you can create files without extensions, so use by adding the ".ERB" extension.
 
 ### NO
-The character number listed in character CSVs. A unique number for each character, also used in [CSV reference commands](../Reference/CSV_STATUS.md).
+The character number listed in character CSVs. A unique number for each character, also used in [CSV reference commands](../Reference/CSV_STATUS.en.md).
 Basically fixed values and don't change. Sometimes confused with registration number (ID), but they're different. Beginners should be careful.
 
 ### SHOP
@@ -137,7 +137,7 @@ The problem is that both require **enormous effort and time, plus writing skill*
 ### Expression Function
 In erabasic, functions are normally called with `CALL`, but functions that can return numbers or strings in expressions without using `CALL` are called expression functions.
 Bundling frequently used verbose processes into functions is the same as regular functions, used for situations like getting only the result (number) from complex calculations, or getting text (string) that changes depending on the scene.
-See [this page](../Emuera/in_expression_function.md) for detailed expression function specifications.
+See [this page](../Emuera/in_expression_function.en.md) for detailed expression function specifications.
 
 ### Registration Number (ID)
 Numbers assigned to characters added with ADDCHARA system commands. Starts from 0 and is always processed front-packed.

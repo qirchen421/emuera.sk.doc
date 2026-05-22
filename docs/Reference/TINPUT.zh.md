@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                        | 参数                                   | 返回值   |
 | :------------------------------------------------------------ | :------------------------------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`TINPUT`](./TINPUT.md)  | `int`, `int`(, `int`, `string`, `int`) | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`TINPUTS`](./TINPUT.md) | `int`, `int`(, `int`, `string`, `int`) | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TINPUT`](./TINPUT.zh.md)  | `int`, `int`(, `int`, `string`, `int`) | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`TINPUTS`](./TINPUT.zh.md) | `int`, `int`(, `int`, `string`, `int`) | `string` |
 
 !!! info "API"
 
@@ -21,7 +21,7 @@ hide:
 	第三个参数控制是否显示剩余时间，0为不显示，其他值为显示。省略时默认为1（显示）。  
 	第四个参数是超时时显示的字符串。如果为空字符串，则会清除计时器显示并继续执行后续处理。  
 	请注意，如果设置了第四个参数，则不能省略第三个参数。  
-	此外，在`TINPUTS`中，与[`INPUTS`](./INPUT.md)一样，可以使用宏表达式。  
+	此外，在`TINPUTS`中，与[`INPUTS`](./INPUT.zh.md)一样，可以使用宏表达式。  
 	若要在字符串中使用`()`，请使用``进行转义。
 
     EM+EE中可设置可选的第五个参数。  
@@ -32,5 +32,5 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [INPUT](INPUT.md)
-- [TONEINPUT](TONEINPUT.md)
+- [INPUT](INPUT.zh.md)
+- [TONEINPUT](TONEINPUT.zh.md)

@@ -145,12 +145,12 @@ A:3 = A:0 + A:1 + A:2
 有些变量还有二维数组这种形式。二维数组  
 用`A:0:0`、`A:0:1`、…、`A:1:0`、`A:1:1`、…这样的方式表示，可以存储更多值。  
 
-哪个变量是哪种数组形式，可以参考[eramaker变量列表](../eramaker/variables.md)或[Emuera常量・变量](../Emuera/variables.md)。  
+哪个变量是哪种数组形式，可以参考[eramaker变量列表](../eramaker/variables.zh.md)或[Emuera常量・变量](../Emuera/variables.zh.md)。  
 
 ---  
 
 ### 变量的使用方法  
-基本上和[eramaker变量列表页面](../eramaker/variables.md)上写的相同。  
+基本上和[eramaker变量列表页面](../eramaker/variables.zh.md)上写的相同。  
 这里主要介绍需要注意的部分。  
 
 - `A - Z`  
@@ -264,7 +264,7 @@ TALENT:A:20
 ---  
 
 ## 显示  
-主要用于口上，在屏幕上显示文字等内容的[`PRINT`](../Reference/PRINT.md)系列语法。  
+主要用于口上，在屏幕上显示文字等内容的[`PRINT`](../Reference/PRINT.zh.md)系列语法。  
 
 ### `PRINT`系列指令的种类  
 `PRINT`系列指令主要有以下几种。  
@@ -353,7 +353,7 @@ PRINTFORM あいうえお%STR:0%さしすせそ
 
 只有存档数据显示的`PUTFORM`不能用`PRINTFORM`替代，  
 但由于修改存档显示的机会较少，这里就不详述了。  
-详情请参阅[`PUTFORM`](../Reference/PUTFORM.md)页面。  
+详情请参阅[`PUTFORM`](../Reference/PUTFORM.zh.md)页面。  
 
 ---  
 
@@ -477,7 +477,7 @@ B = RAND:A
 #### `IF - ELSEIF - ELSE - ENDIF`  
 "如果○○"这种处理最常用的是这个语法。  
 
-[`IF`的参考页面](../Reference/IF.md)  
+[`IF`的参考页面](../Reference/IF.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 IF A == 0  
@@ -560,7 +560,7 @@ ENDIF
 #### `SIF`  
 将上面的`IF - ENDIF`简化后就是`SIF`。  
 
-[`SIF`的参考页面](../Reference/IF.md)  
+[`SIF`的参考页面](../Reference/IF.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 SIF A == 0  
@@ -627,7 +627,7 @@ SIF 条件式1
 
 用于根据单个数值变量的值进行处理分支。例如在随机数分支时很方便的语法。  
 
-[`SELECTCASE`的参考页面](../Reference/SELECTCASE.md)  
+[`SELECTCASE`的参考页面](../Reference/SELECTCASE.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 SELECTCASE A  
@@ -773,7 +773,7 @@ ENDIF
 ---  
 
 #### `REPEAT - REND`  
-[`REPEAT`的参考页面](../Reference/REPEAT.md)  
+[`REPEAT`的参考页面](../Reference/REPEAT.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 REPEAT 表达式  
@@ -895,7 +895,7 @@ REND
 ---  
 
 #### `FOR - NEXT`  
-[`FOR-NEXT`的参考页面](../Reference/FOR.md)  
+[`FOR-NEXT`的参考页面](../Reference/FOR.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 FOR <计数器数值变量>, <表达式>, <表达式>[, <表达式>]  
@@ -971,7 +971,7 @@ NEXT
 ---  
 
 #### `WHILE - WEND`  
-[`WHILE-WEND`的参考页面](../Reference/WHILE.md)  
+[`WHILE-WEND`的参考页面](../Reference/WHILE.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 WHILE 条件式  
@@ -999,7 +999,7 @@ WEND
 ---  
 
 #### `DO - LOOP`  
-[`DO-LOOP`的参考页面](../Reference/DO.md)  
+[`DO-LOOP`的参考页面](../Reference/DO.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 DO  
@@ -1267,7 +1267,7 @@ LOCAL = ABS(A)
 
 正如"表达式函数"这个名字所示，可以直接从赋值表达式中调用函数，无需通过`RESULT`，直接将返回值赋给`LOCAL`。在表达式函数中，参数用`(A)`这样的圆括号包围。如果参数有多个，用`(A, B, C)`这样的形式在括号内用逗号分隔写入。反之，如果没有参数，则只写`()`圆括号。即使没有参数也不能省略圆括号。  
 
-[`ABS`的参考页面](../Reference/ABS.md)  
+[`ABS`的参考页面](../Reference/ABS.zh.md)  
 
 对于返回字符串的指令，也可以写成类似的方式。  
 
@@ -1283,7 +1283,7 @@ IF STRLENS(STR:0) > A
     LOCALS:0 = %SUBSTRING(STR:0, A, 1)%  
 ENDIF  
 ```  
-上面两个例子的行为相同。表达式函数的列表可在[指令·表达式函数页面](../Reference/README.md)查看。  
+上面两个例子的行为相同。表达式函数的列表可在[指令·表达式函数页面](../Reference/README.zh.md)查看。  
 
 ---  
 
@@ -1315,7 +1315,7 @@ PRINTFORML {TEST2(3)}
 
 如果要创建返回字符串的表达式函数，则写`#FUNCTIONS`。但要注意，`RETURNF`的写法与其他指令（如`PRINTFORM`等）有所不同。  
 
-相关页面：[用户定义的表达式函数](../Emuera/user_defined_in_expression_function.md)  
+相关页面：[用户定义的表达式函数](../Emuera/user_defined_in_expression_function.zh.md)  
 <!--（相关文章：[[Emuera补充#关于字符串和RETURNF的奇怪规范]]） -->  
 
 ---  
@@ -1357,8 +1357,8 @@ ENDIF
 ### 角色的添加和删除  
 角色的添加和删除使用`ADDCHARA`和`DELCHARA`。  
 
-[`ADDCHARA`的参考页面](../Reference/ADDCHARA.md)  
-[`DELCHARA`的参考页面](../Reference/DELCHARA.md)  
+[`ADDCHARA`的参考页面](../Reference/ADDCHARA.zh.md)  
+[`DELCHARA`的参考页面](../Reference/DELCHARA.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 ADDCHARA 1  
@@ -1408,7 +1408,7 @@ BAR A, B, 10
 虽然erabasic中变量等都按整数处理，但有个例外，  
 使用`TIMES`可以进行小数计算。  
 
-[`TIMES`的参考页面](../Reference/TIMES.md)  
+[`TIMES`的参考页面](../Reference/TIMES.zh.md)  
 
 ``` { #language-erb title="ERB" }  
 A = 1000  
@@ -1420,8 +1420,8 @@ TIMES A, 1.5
 ---  
 
 ### 其他指令  
-[`WAIT`](../Reference/WAIT.md)…只进行输入等待。`RESULT`中不存储值。  
-[`QUIT`](../Reference/QUIT.md)…退出eramaker。主要用于游戏结束等情况。  
+[`WAIT`](../Reference/WAIT.zh.md)…只进行输入等待。`RESULT`中不存储值。  
+[`QUIT`](../Reference/QUIT.zh.md)…退出eramaker。主要用于游戏结束等情况。  
 
 ---  
 
@@ -1429,7 +1429,7 @@ TIMES A, 1.5
 
 ```  
 anonymous>喂，配置中经常用到的那个单独的&符号是什么意思？是不是应该是&&？  
-anonymous>啊，那是位运算。[这里](../eramaker/variables.md)有详细介绍  
+anonymous>啊，那是位运算。[这里](../eramaker/variables.zh.md)有详细介绍  
 anonymous>就在最下面  
  ---------------------------------------  
 anonymous>……好吧，完全不明白  
@@ -2121,7 +2121,7 @@ eramaker 和 Emuera 只认识 CSV 文件、ERB 文件（以及 config 文件和 
 ---  
 
 ### 避免使用 `CFLAG:999`  
-在本 wiki 的 [eramaker 变量信息](../eramaker//variables.md) 中写有 eramaker 可利用的元素数量范围，但有一点需要注意。  
+在本 wiki 的 [eramaker 变量信息](../eramaker//variables.zh.md) 中写有 eramaker 可利用的元素数量范围，但有一点需要注意。  
 其实 eramaker 有一个 bug：如果像 `CFLAG:999` 这样的数组变量的最后一个元素不为 0，在保存/加载后数据会被破坏。  
 所以实际上能使用的是元素数 -2 为止（`CFLAG` 的话到 `998` 为止）。  
 不过在 Emuera 中这个 bug 已被修正。利用 `VariableSize.CSV` 还可以增加元素数量本身，所以如果是 Emuera 专用变体可以放心使用。  

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments | Return |
 | :------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETCHARA`](./GETCHARA.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETCHARA`](./GETCHARA.en.md) | `int`     | `int`  |
 
 !!! info "API"
 

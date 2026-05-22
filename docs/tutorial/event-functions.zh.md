@@ -456,5 +456,5 @@ CALL CHECK_LEVEL_UP
 | ERB 文件格式扩展 | [ERB 文件格式扩展](erb-format-extension.zh.md) |
 | 赋值语句详解 | [赋值语句](assignment.zh.md) |
 | 系统流程图 | [流程图](../Emuera/system_flow.zh.md) |
-| BEGIN 指令 | [BEGIN](../Reference/BEGIN.md) |
-| CALL 指令 | [CALL](../Reference/CALL.md) |
+| BEGIN 指令 | [BEGIN](../Reference/BEGIN.zh.md) |
+| CALL 指令 | [CALL](../Reference/CALL.zh.md) |

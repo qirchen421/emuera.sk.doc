@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                    | Arguments                                      | Return   |
 | :-------------------------------------------------------------- | :-------------------------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.md)    | `string`, `int`, `string`(, `int`)            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.md)   | `string`, `int`, `string`(, `int`)            | `string` |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.md) | `string`, `int`, `string`(, `int`)            | `int`    |
-| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.md)    | `string`, `int`, `string`(, `any`, `int`)    | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.en.md)    | `string`, `int`, `string`(, `int`)            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.en.md)   | `string`, `int`, `string`(, `int`)            | `string` |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.en.md) | `string`, `int`, `string`(, `int`)            | `int`    |
+| ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.en.md)    | `string`, `int`, `string`(, `any`, `int`)    | `int`    |
 
 !!! info "API"
 

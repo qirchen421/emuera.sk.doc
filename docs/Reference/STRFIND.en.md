@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                          | Arguments                     | Return |
 | :-------------------------------------------------------------------- | :--------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`STRFIND`](./STRFIND.md)        | `string`, `string`(, `int`)  | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`STRFINDU`](./STRFIND.md)       | `string`, `string`(, `int`)  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRFIND`](./STRFIND.en.md)        | `string`, `string`(, `int`)  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`STRFINDU`](./STRFIND.en.md)       | `string`, `string`(, `int`)  | `int`  |
 
 !!! info "API"
 
@@ -58,5 +58,5 @@ hide:
     ```
 
 ### See Also
-- [STRCOUNT](STRCOUNT.md)
-- [SUBSTRING](SUBSTRING.md)
+- [STRCOUNT](STRCOUNT.en.md)
+- [SUBSTRING](SUBSTRING.en.md)

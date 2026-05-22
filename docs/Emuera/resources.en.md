@@ -1,4 +1,8 @@
-# Resource Files
+# Resource Files (Legacy Document)
+
+!!! warning "Legacy Document"
+
+    This page describes the resource configuration method for the original Emuera. The Skia edition has completely redesigned image resource management (lazy-load index, SharedBitmapCache, AnimSpriteCache). The resource configuration documentation has been moved to [Resource Configuration — Preparing Image Resources](../tutorial/resources.en.md).
 
 This section explains how to prepare resource files for displaying images in Emuera.
 
@@ -49,7 +53,7 @@ Placing a CSV format text file in the `resources` folder will read it as a resou
 	In subsequent lines, specify the images for each frame of the animation.  
 	Each frame is defined the same way as a normal sprite.  
 	`delay` specifies the time that frame is displayed, in milliseconds. If omitted, it defaults to `1000ms`.  
-	Note that Emuera does not normally redraw during wait times like [`INPUT`](../Reference/INPUT.md), so animated sprites may appear frozen at a specific frame.  
+	Note that Emuera does not normally redraw during wait times like [`INPUT`](../Reference/INPUT.en.md), so animated sprites may appear frozen at a specific frame.  
 	Use the `SETANIMETIMER` command to instruct redrawing during INPUT.  
 	See the command documentation for details on the `SETANIMETIMER` command.
 
@@ -62,9 +66,20 @@ You can also generate graphics within ERB using `GCREATEFROMFILE`.
 
 ## Notes
 
-All image files specified in CSV files are loaded into memory when Emuera starts and occupy memory until it ends.  
-It is better for both memory and speed to combine images into a single file and use them by specifying ranges, rather than loading many image files.  
-Also, using `GCREATEFROMFILE` and `GDISPOSE`, and `SPRITECREATE` and `SPRITEDISPOSE` as needed is effective.  
-If the drawing interface in config is set to `WINAPI`, processing is done by `GDI` and alpha blending is not performed.  
-If the drawing interface is `Graphics` or `TextRenderer`, processing is done by `GDI+` and alpha blending is performed.  
+All image files specified in CSV files are loaded into memory when Emuera starts and occupy memory until it ends.
+It is better for both memory and speed to combine images into a single file and use them by specifying ranges, rather than loading many image files.
+Also, using `GCREATEFROMFILE` and `GDISPOSE`, and `SPRITECREATE` and `SPRITEDISPOSE` as needed is effective.
+If the drawing interface in config is set to `WINAPI`, processing is done by `GDI` and alpha blending is not performed.
+If the drawing interface is `Graphics` or `TextRenderer`, processing is done by `GDI+` and alpha blending is performed.
 Scaling also differs slightly between `WINAPI (GDI)` and `Graphics` or `TextRenderer (GDI+)`.
+
+!!! info "Skia Edition Changes"
+
+    The above notes apply only to the original Emuera (GDI/GDI+ rendering). The Skia edition uses the following new mechanisms:
+
+    - **Lazy loading**: CSV pre-loading only builds an index; images are decoded on first render, not at startup
+    - **SharedBitmapCache**: Global LRU bitmap pool (max 200), same file decoded only once
+    - **AnimSpriteCache**: Animated sprite LRU cache (max 6), automatic eviction when exceeded
+    - **SPRITECREATEFROMFILE**: Runtime dynamic loading, no CSV pre-definition required
+
+    See [Resource Configuration — Preparing Image Resources](../tutorial/resources.en.md#skia-resource-management) for details

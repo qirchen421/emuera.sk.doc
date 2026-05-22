@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                              | Arguments                             | Return        |
 | :------------------------------------------------------------------- | :----------------------------------- | :------------ |
-| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.md) | `string`, `string`, `int`(, `int`) | `int`, `int` |
+| ![](../assets/images/IconEE.webp)[`GGETTEXTSIZE`](./GGETTEXTSIZE.en.md) | `string`, `string`, `int`(, `int`) | `int`, `int` |
 
 !!! info "API"
 
@@ -45,4 +45,4 @@ hide:
 	```
 
 ### Related Items
-- [GDRAWTEXT](GDRAWTEXT.md)
+- [GDRAWTEXT](GDRAWTEXT.en.md)

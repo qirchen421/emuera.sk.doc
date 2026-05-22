@@ -390,5 +390,5 @@ SAVESTR:0 = %RESULTS%
 |:---|:---|
 | Assignment statement details | [Assignment Statements](assignment.en.md) |
 | Event function mechanism | [Event Functions](event-functions.en.md) |
-| Variables and declarations | [File Types](file-types.md) |
+| Variables and declarations | [File Types](file-types.en.md) |
 | System flow diagrams | [Flow Diagrams](../Emuera/system_flow.en.md) |

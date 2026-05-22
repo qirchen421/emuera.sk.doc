@@ -7,7 +7,7 @@ hide:
 
 | Function name | Arguments | Return |
 | :------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.md) | `string` | `void`¹ |
+| ![](../assets/images/IconEE.webp)[`TRYCALLFORMF`](./TRYCALLFORMF.en.md) | `string` | `void`¹ |
 
 !!! info "API"
 
@@ -52,5 +52,5 @@ hide:
 	```
 
 ### Related
-- [CALLF](CALLF.md)
-- [TRYCALLF](TRYCALLF.md)
+- [CALLF](CALLF.en.md)
+- [TRYCALLF](TRYCALLF.en.md)

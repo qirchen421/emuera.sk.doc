@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments  | Return |
 | :----------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`ISDEFINED`](./ISDEFINED.en.md) | `string` | `int`  |
 
 !!! info "API"
     

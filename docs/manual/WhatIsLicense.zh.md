@@ -127,5 +127,5 @@ era修改刚开始时，修改是在默许下进行的，
 ### 许可证模板  
 由志愿者制作的许可证模板。  
 没有必须使用此许可证的规定。  
-[关于LTOL许可证](LTOL-license.md)  
+[关于LTOL许可证](LTOL-license.zh.md)  
 <!---[[eratohoYM用 口上模板内许可证模板>模板·工具#YM_KOJO_L]]-->  

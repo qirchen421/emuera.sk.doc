@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments      | Return    |
 | :------------------------------------------------------------- | :------------ | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.md) | `int`, `int`  | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`CONVERT`](./CONVERT.en.md) | `int`, `int`  | `string`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                       | 参数 | 返回值 |
 | :--------------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETMILLISECOND`](./GETMILLISECOND.md) | 无   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETMILLISECOND`](./GETMILLISECOND.zh.md) | 无   | `int`  |
 
 !!! info "API"
 
@@ -25,5 +25,5 @@ hide:
     该函数既可作为指令使用，也可在表达式中作为函数使用。
 
 ### 相关项目
-- [GETSECOND](GETSECOND.md)
-- [GETTIME](GETTIME.md)
+- [GETSECOND](GETSECOND.zh.md)
+- [GETTIME](GETTIME.zh.md)

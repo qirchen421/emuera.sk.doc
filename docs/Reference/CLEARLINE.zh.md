@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数 | 返回值 |
 | :----------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CLEARLINE`](./CLEARLINE.md) | `int`| 无     |
+| ![](../assets/images/IconEmuera.webp)[`CLEARLINE`](./CLEARLINE.zh.md) | `int`| 无     |
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
 	CLEARLINE line
     ```
 	删除指定行数的字符串（行数的计数方式与`LINECOUNT`相同）。  
-	行数是指从[`PRINTL`](./PRINT.md)等命令开始到发生换行为止的内容算作一行。  
+	行数是指从[`PRINTL`](./PRINT.zh.md)等命令开始到发生换行为止的内容算作一行。  
 	请注意，即使一个长字符串被分割成多行显示，也会被整体视为一行。
 
 !!! hint "提示"
@@ -46,4 +46,4 @@ hide:
     ```
 
 ### 相关项目
-- [REUSELASTLINE](REUSELASTLINE.md)
+- [REUSELASTLINE](REUSELASTLINE.zh.md)

@@ -5,9 +5,9 @@ Original page
 
 ---
 
-- [Tutorial](erawiki-tutorial.md)
-- [Title Preparation](erawiki-title.md)
-- [Title Practice](erawiki-title2.md)
+- [Tutorial](erawiki-tutorial.en.md)
+- [Title Preparation](erawiki-title.en.md)
+- [Title Practice](erawiki-title2.en.md)
 - ERB creation practice
 
 ---
@@ -16,7 +16,7 @@ This page summarizes discussions from a Discord server
 
 - [Discord - eraEVENT_KXX](https://discord.gg/cuSh6y5j93)
 
-Continuing from [Title Practice](erawiki-title2.md), this page explains practical ERB content.
+Continuing from [Title Practice](erawiki-title2.en.md), this page explains practical ERB content.
 
 ---
 
@@ -93,8 +93,8 @@ Next, I'll explain from both the dialogue author's and variant author's perspect
 
 The solution is "Variable Definition" and "ERH Files."
 
-- [User-Defined Variables](../Emuera/user_defined_variables.md)
-- [Header Files (ERH)](../Emuera/ERH.md)
+- [User-Defined Variables](../Emuera/user_defined_variables.en.md)
+- [Header Files (ERH)](../Emuera/ERH.en.md)
 
 For creating one-time events in dialogue that are self-contained and don't need to be saved, using `DIM` to define variables under the function name is convenient.  
 For example, creating a variable named `CHRISTMAS` when branching based on "it's Christmas today."
@@ -354,7 +354,7 @@ This processes the branch to display the first message if `CFLAG:0` is 1 or grea
 This should be easy to imagine since the English meanings of `IF` and `ELSE` are the same.
 
 The official "Conditionals" section from eramaker has the basics:  
-[eramaker era basic format](../eramaker/ERB_format.md)
+[eramaker era basic format](../eramaker/ERB_format.en.md)
 
 If you're still unclear about `IF`, try reading this as well:  
 [Title Practice - IF](erawiki-title2.md#if)
@@ -617,7 +617,7 @@ The operators that can be used are `+` and `*`—addition and multiplication.
 
 Multiplication is as written here:
 
-- [Emuera Wiki - Operations](../Emuera/operand.md)
+- [Emuera Wiki - Operations](../Emuera/operand.en.md)
 
 ``` { #language-erb title="ERB" }
     STR:0 = % "あ" * 10 %
@@ -695,7 +695,7 @@ In extreme terms, you can get by with just `PRINTFORML` and `PRINTFORMW`, but le
 Reference links:
 
 - [Title Practice - PRINTFORML?](erawiki-title2.md#printforml)
-- [Reference - PRINT commands](../Reference/PRINT.md)
+- [Reference - PRINT commands](../Reference/PRINT.en.md)
 
 `PRINT(L|W)` and `PRINTFORM(L|W)` are the most common `PRINT` commands nowadays.  
 `PRINT(L|W)` displays the specified text as-is, while `PRINTFORM(L|W)` expands variables and expression functions to display.  
@@ -785,7 +785,7 @@ In the created shortcut's properties, add " -debug" to the end of the target. A 
 
 Starting Emuera from this shortcut starts it in debug mode.
 
-- [Debug Mode](../Emuera/debug.md)
+- [Debug Mode](../Emuera/debug.en.md)
 
 The debug window in debug mode has three tabs: "Variable Watch," "Stack Trace," and "Console."  
 As written on the page, you can check how variables change (what's in them), check what functions are connected via `CALL`, and even directly modify variables.  
@@ -967,7 +967,7 @@ You should now be able to use `PRINT` commands to display text.
 Now I'll explain how to color text to make it more vibrant, which is common in modern variants.  
 The easiest way is using the command `SETCOLOR`.
 
-- [Reference - SETCOLOR](../Reference/SETCOLOR.md)
+- [Reference - SETCOLOR](../Reference/SETCOLOR.en.md)
 
 As written there, SETCOLOR has a few syntaxes.
 
@@ -983,7 +983,7 @@ Emuera can write in hexadecimal by starting with "0x". Depending on the situatio
 
 For those who "can't imagine colors from numbers," there's also `SETCOLORBYNAME`:
 
-- [Reference - SETCOLORBYNAME](../Reference/SETCOLORBYNAME.md)
+- [Reference - SETCOLORBYNAME](../Reference/SETCOLORBYNAME.en.md)
 
 Usage is as follows:
 
@@ -1017,7 +1017,7 @@ Using `SETCOLOR` in dialogue to indicate "this character has this image color" i
 
 You can also change fonts, not just colors.
 
-- [Reference - FONTBOLD/FONTITALIC/FONTREGULAR](../Reference/FONT_OPERATION.md)
+- [Reference - FONTBOLD/FONTITALIC/FONTREGULAR](../Reference/FONT_OPERATION.en.md)
 
 `FONTBOLD` is bold, `FONTITALIC` is italic, and `FONTSTYLE` with 4 is strikethrough, 8 is underline.  
 `FONTSTYLE` uses bit numbers, so if you don't understand that, it's best not to touch it for now.  
@@ -1127,7 +1127,7 @@ I explained the minimum understanding needed for patterns where using bit number
 
 There are 4 main types: `SETBIT`, `CLEARBIT`, `INVERTBIT`, and `GETBIT`.
 
-- [Reference - Bit Operations](../Reference/BIT_OPERATION.md)
+- [Reference - Bit Operations](../Reference/BIT_OPERATION.en.md)
 
 In the above bit numbers, to turn only the third switch from the right ON, you assign 4 to the variable—0100 in binary.  
 However, when assigning, all bit number records are initialized.  
@@ -1214,7 +1214,7 @@ Sometimes when creating processes with too many loop iterations, Emuera displays
 Most of the time this appears, an actual infinite loop is occurring, but depending on PC specs, heavy processing is treated as infinite loops.  
 Inserting the `AWAIT` command in loop processing prevents this malfunction.
 
-- [Reference - AWAIT](../Reference/AWAIT.md)
+- [Reference - AWAIT](../Reference/AWAIT.en.md)
 
 As EmueraWiki states, frequent `AWAIT` noticeably slows processing, so for example, inserting `AWAIT` every 100 loops or inserting `AWAIT` every 10% of the total achieves light processing while using `AWAIT`.
 

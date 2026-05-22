@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                        | Arguments | Return |
 | :------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.md) | `int`     | none   |
-| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.md) | none      | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SETANIMETIMER`](./SETANIMETIMER.en.md) | `int`     | none   |
+| ![](../assets/images/IconSK.webp)[`GETANIMETIMER`](./SETANIMETIMER.en.md) | none      | `int`  |
 
 !!! info "API"
 
@@ -17,15 +17,15 @@ hide:
 	int GETANIMETIMER
     ```
 	Specifies the redraw interval in milliseconds for animated sprites.  
-	Normally, Emuera does not redraw during input waits such as [`INPUT`](./INPUT.md).  
+	Normally, Emuera does not redraw during input waits such as [`INPUT`](./INPUT.en.md).  
 	By setting a redraw interval with this command, images can be animated during input waits like `INPUT`.  
-	Note that no redraw is performed in commands with timeout processing such as [`TINPUT`](./TINPUT.md).  
+	Note that no redraw is performed in commands with timeout processing such as [`TINPUT`](./TINPUT.en.md).  
 	The actual drawing interval will be slightly slower than the specified time due to computer conditions.  
 	Therefore, setting the drawing interval to the same value as the animation's `delay` will cause frequent frame drops.  
 	Please specify an interval sufficiently shorter than `delay`.  
 
 	This command is independent of the "Frames per second" setting in config.  
-	Also, it is not affected by the redraw suppression effect of the [`REDRAW`](./REDRAW.md) command.
+	Also, it is not affected by the redraw suppression effect of the [`REDRAW`](./REDRAW.en.md) command.
 
 	**GETANIMETIMER**: Returns the current animation timer value in milliseconds. Supports both command and expression function forms.
 
@@ -44,5 +44,5 @@ hide:
 
 ### See Also
 - [Command vs Expression — The Fundamental Difference Between Two Evaluation Paths](../tutorial/command-vs-expression.en.md) — RESULT pollution issue and why expression functions were reimplemented as commands
-- [SPRITEANIMECREATE](SPRITEANIMECREATE.md)
+- [SPRITEANIMECREATE](SPRITEANIMECREATE.en.md)
 - [Skia Edition Specification Changes](../Skia/Skia_Summary.md#changed-commands)

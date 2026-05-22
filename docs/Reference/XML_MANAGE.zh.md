@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                             | 参数            | 返回值 |
 | :----------------------------------------------------------------- | :-------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.md) | `any`, `string` | `int`  |
-| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.md)  | `any`           | `1`    |
-| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.md)    | `any`           | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_DOCUMENT`](./XML_MANAGE.zh.md) | `any`, `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`XML_RELEASE`](./XML_MANAGE.zh.md)  | `any`           | `1`    |
+| ![](../assets/images/IconEM.webp)[`XML_EXIST`](./XML_MANAGE.zh.md)    | `any`           | `int`  |
 
 !!! info "API"
 
@@ -28,7 +28,7 @@ hide:
 
     !!! warning "注意"
 
-        关于将生成的 `XmlDocument` 保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
+        关于将生成的 `XmlDocument` 保存进存档文件请参考「[`XML`、`MAP`、`DataTable` 保存功能](./README.zh.md)」。「タイトル画面へ戻る（返回标题界面）」或 [`RESETDATA`](https://osdn.net/projects/emuera/wiki/excom#h5-RESETDATA) 后会自动删除。
 
 !!! hint "提示"
 

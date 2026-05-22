@@ -7,9 +7,9 @@ hide:
 
 | Function name                                                       | Arguments | Return          |
 | :------------------------------------------------------------------ | :-------- | :-------------- |
-| ![](../assets/images/IconEmuera.webp)[`GETTIME`](./GETTIME.md)     | none      | `int`, `string` |
-| ![](../assets/images/IconEmuera.webp)[`GETTIME()`](./GETTIME.md)   | none      | `int`           |
-| ![](../assets/images/IconEmuera.webp)[`GETTIMES()`](./GETTIME.md)  | none      | `string`        |
+| ![](../assets/images/IconEmuera.webp)[`GETTIME`](./GETTIME.en.md)     | none      | `int`, `string` |
+| ![](../assets/images/IconEmuera.webp)[`GETTIME()`](./GETTIME.en.md)   | none      | `int`           |
+| ![](../assets/images/IconEmuera.webp)[`GETTIMES()`](./GETTIME.en.md)  | none      | `string`        |
 
 !!! info "API"
 
@@ -35,5 +35,5 @@ hide:
     Command and expression function both supported.
 
 ### See Also
-- [GETSECOND](GETSECOND.md)
-- [GETMILLISECOND](GETMILLISECOND.md)
+- [GETSECOND](GETSECOND.en.md)
+- [GETMILLISECOND](GETMILLISECOND.en.md)

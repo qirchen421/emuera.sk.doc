@@ -7,10 +7,10 @@ hide:
 
 | Function name                                               | Arguments              | Return |
 | :---------------------------------------------------------- | :-------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.md)       | `int`(, `int`...)     | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.md)       | `int`(, `int`...)     | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.md)    | `int`, `int`, `int`   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.md)  | `int`, `int`, `int`   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.en.md)       | `int`(, `int`...)     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.en.md)       | `int`(, `int`...)     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.en.md)    | `int`, `int`, `int`   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.en.md)  | `int`, `int`, `int`   | `int`  |
 
 !!! info "API"
 
@@ -52,4 +52,4 @@ hide:
     Both command and expression function forms are available.
 
 ### Related
-- [MAXARRAY, MINARRAY](MAXMINARRAY.md)
+- [MAXARRAY, MINARRAY](MAXMINARRAY.en.md)

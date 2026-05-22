@@ -7,10 +7,10 @@ hide:
 
 | Function Name                                                                  | Parameters          | Returns |
 | :----------------------------------------------------------------------------- | :------------------ | :------ |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_DRAW`](./G_POLYGON.md)        | `int`               | `int`   |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_FILL`](./G_POLYGON.md)        | `int`               | `int`   |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.md)   | `int`, `int`, `int` | `int`   |
-| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.md) | `int`               | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_DRAW`](./G_POLYGON.en.md)        | `int`               | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_FILL`](./G_POLYGON.en.md)        | `int`               | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_ADD`](./G_POLYGON.en.md)   | `int`, `int`, `int` | `int`   |
+| ![](../assets/images/Icondotnet.webp)[`G_POLYGON_POINT_CLEAR`](./G_POLYGON.en.md) | `int`               | `int`   |
 
 !!! info "API"
 
@@ -59,7 +59,7 @@ hide:
 	```
 
 ### Related Items
-- [GCREATE](GCREATE.md)
-- [GSETPEN](GSETPEN.md)
-- [GSETBRUSH](GSETBRUSH.md)
-- [GFILLRECTANGLE](GFILLRECTANGLE.md)
+- [GCREATE](GCREATE.en.md)
+- [GSETPEN](GSETPEN.en.md)
+- [GSETBRUSH](GSETBRUSH.en.md)
+- [GFILLRECTANGLE](GFILLRECTANGLE.en.md)

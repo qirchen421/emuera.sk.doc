@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments     | Return |
 | :------------------------------------------------------------ | :------------ | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.md) | `int`, `float` | none   |
+| ![](../assets/images/Iconeramaker.webp)[`TIMES`](./TIMES.en.md) | `int`, `float` | none   |
 
 !!! info "API"
 

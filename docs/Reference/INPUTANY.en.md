@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                      | Arguments | Return           |
 | :----------------------------------------------------------------- | :-------- | :--------------- |
-| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.md)      | none      | `int` / `string` |
+| ![](../assets/images/IconEE.webp)[`INPUTANY`](./INPUTANY.en.md)      | none      | `int` / `string` |
 
 !!! info "API"
 
@@ -16,7 +16,7 @@ hide:
     ```
 
     An INPUT command that accepts both numeric and string input.  
-    When executed, [`PRINTBUTTON`](./PRINTBUTTON.md) and `[{int}]` become clickable.  
+    When executed, [`PRINTBUTTON`](./PRINTBUTTON.en.md) and `[{int}]` become clickable.  
     If numeric input is entered, it is assigned to `RESULT`; if string input is entered, it is assigned to `RESULTS`.  
 
 
@@ -56,4 +56,4 @@ hide:
     ```
 
 ### See Also
-- [INPUT](INPUT.md)
+- [INPUT](INPUT.en.md)

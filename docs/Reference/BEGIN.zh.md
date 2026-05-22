@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数          | 返回值 |
 | :----------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.md) | `identifier` | 无     |
+| ![](../assets/images/Iconeramaker.webp)[`BEGIN`](./BEGIN.zh.md) | `identifier` | 无     |
 
 !!! info "API"
 
@@ -26,13 +26,13 @@ hide:
     在 Emuera 中，新增了 `FIRST` 和 `TITLE` 作为关键字。
     `BEGIN FIRST` 的效果与在标题画面选择 `[0] 从头开始` 相同，将执行事件函数 `@EVENTFIRST`。
     `BEGIN TITLE` 用于返回标题画面。
-    请注意，这两条指令均不会初始化变量，请根据需要适时执行 [`RESETDATA`](./RESETDATA.md) 指令。
+    请注意，这两条指令均不会初始化变量，请根据需要适时执行 [`RESETDATA`](./RESETDATA.zh.md) 指令。
 
 !!! hint "提示"
 
     仅支持作为指令使用。
 
 ### 相关项目
-* [FORCE_BEGIN](FORCE_BEGIN.md)
-* [FLOWINPUT](FLOWINPUT.md)
-* [CALLEVENT](CALLEVENT.md)
+* [FORCE_BEGIN](FORCE_BEGIN.zh.md)
+* [FLOWINPUT](FLOWINPUT.zh.md)
+* [CALLEVENT](CALLEVENT.zh.md)

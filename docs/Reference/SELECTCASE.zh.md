@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                               | 参数  | 返回值 |
 | :------------------------------------------------------------------- | :---- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SELECTCASE`](./SELECTCASE.md) | `any` | 无     |
-| ![](../assets/images/IconEmuera.webp)[`CASE`](./SELECTCASE.md)       | `any` | 无     |
-| ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.md)   | 无    | 无     |
-| ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.md)  | 无    | 无     |
+| ![](../assets/images/IconEmuera.webp)[`SELECTCASE`](./SELECTCASE.zh.md) | `any` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CASE`](./SELECTCASE.zh.md)       | `any` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`CASEELSE`](./SELECTCASE.zh.md)   | 无    | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ENDSELECT`](./SELECTCASE.zh.md)  | 无    | 无     |
 
 !!! info "API"
 
@@ -21,7 +21,7 @@ hide:
 	ENDSELECT
     ```
 	这是一个分支结构。其行为模仿了 Visual Basic 的同名结构。  
-	它与 [`IF`](./IF.md) 结构类似，但 `SELECTCASE` 是根据一个值分支到多行代码的结构。  
+	它与 [`IF`](./IF.zh.md) 结构类似，但 `SELECTCASE` 是根据一个值分支到多行代码的结构。  
 	根据 `SELECTCASE` 指定的参数值进行分支。最简单的用法如下所示。  
 
     ```  { #language-erbapi }
@@ -40,8 +40,8 @@ hide:
     同样地，如果 `X` 为 `3`，则跳转到 `CASE 3`。  
     当 `X` 的值没有对应的 `CASE` 语句时，如果存在 `CASEELSE` 语句，则跳转到该处；否则跳转到 `ENDSELECT`。  
     与 C 语言等的 `switch` 语句不同，它不会从一个 `CASE` 继续执行到下一个 `CASE`。  
-    此外，无法使用 [`BREAK`](./CONTINUE.md) 语句跳转到 `ENDSELECT`。  
-    另外，如果通过 [`GOTO`](./GOTO.md) 等指令直接进入 `SELECTCASE～CASE～CASEELSE～ENDSELECT` 内部，则会与 [`IF～ELSEIF～ELSE～ENDIF`](./IF.md) 类似，  
+    此外，无法使用 [`BREAK`](./CONTINUE.zh.md) 语句跳转到 `ENDSELECT`。  
+    另外，如果通过 [`GOTO`](./GOTO.zh.md) 等指令直接进入 `SELECTCASE～CASE～CASEELSE～ENDSELECT` 内部，则会与 [`IF～ELSEIF～ELSE～ENDIF`](./IF.zh.md) 类似，  
     正常执行直到 `CASE`、`CASEELSE`、`ENDSELECT` 的紧前位置，然后跳转到 `ENDSELECT` 的下一行继续处理。  
     `CASE` 的条件表达式有三种格式。  
     第一种是如上所述直接指定值的方法，第二种是 `IS <运算符> <表达式>`，第三种是 `<表达式> TO <表达式>`。  
@@ -106,6 +106,6 @@ hide:
     仅支持指令。
 
 ### 相关项目
-- [IF-ENDIF](IF.md)
-- [PRINTDATA](PRINTDATA.md)
-- [STRDATA](STRDATA.md)
+- [IF-ENDIF](IF.zh.md)
+- [PRINTDATA](PRINTDATA.zh.md)
+- [STRDATA](STRDATA.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments  | Return      |
 | :--------------------------------------------------------------- | :--------- | :---------- |
-| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.md) | `int` | `string`  |
+| ![](../assets/images/IconEE.webp)[`GETDISPLAYLINE`](./GETDISPLAYLINE.en.md) | `int` | `string`  |
 
 !!! info "API"
 
@@ -47,4 +47,4 @@ hide:
 	```
 
 ### Related
-- [HTML_POPPRINTINGSTR](HTML_POPPRINTINGSTR.md)
+- [HTML_POPPRINTINGSTR](HTML_POPPRINTINGSTR.en.md)

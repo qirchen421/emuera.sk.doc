@@ -7,12 +7,12 @@ hide:
 
 | 函数名                                                                                        | 参数           | 返回值 |
 | :-------------------------------------------------------------------------------------------- | :------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTDATA(\|K\|D)(\|L\|W)</code>](./PRINTDATA.md) | 无             | 无     |
-| ![](../assets/images/IconEmuera.webp)[`DATA`](./PRINTDATA.md)                                 | `string`       | 无     |
-| ![](../assets/images/IconEmuera.webp)[`DATAFORM`](./PRINTDATA.md)                             | `formedString` | 无     |
-| ![](../assets/images/IconEmuera.webp)[`DATALIST`](./PRINTDATA.md)                             | 无             | 无     |
-| ![](../assets/images/IconEmuera.webp)[`ENDLIST`](./PRINTDATA.md)                              | 无             | 无     |
-| ![](../assets/images/IconEmuera.webp)[`ENDDATA`](./PRINTDATA.md)                              | 无             | 无     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTDATA(\|K\|D)(\|L\|W)</code>](./PRINTDATA.zh.md) | 无             | 无     |
+| ![](../assets/images/IconEmuera.webp)[`DATA`](./PRINTDATA.zh.md)                                 | `string`       | 无     |
+| ![](../assets/images/IconEmuera.webp)[`DATAFORM`](./PRINTDATA.zh.md)                             | `formedString` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`DATALIST`](./PRINTDATA.zh.md)                             | 无             | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ENDLIST`](./PRINTDATA.zh.md)                              | 无             | 无     |
+| ![](../assets/images/IconEmuera.webp)[`ENDDATA`](./PRINTDATA.zh.md)                              | 无             | 无     |
 
 !!! info "API"
 
@@ -45,7 +45,7 @@ hide:
 	    DATALIST～ENDLIST内部，每个DATA或DATAFORM相当于一行
 
 	如上所述。
-	`K`、`D`、`L`、`W`关键字的效果与[`PRINT`](./PRINT.md)系命令相同。
+	`K`、`D`、`L`、`W`关键字的效果与[`PRINT`](./PRINT.zh.md)系命令相同。
 	若`PRINTDATA`系～`ENDDATA`内部没有通过`DATA`系提供显示数据，则不执行任何操作并继续执行后续命令。
 	不能在`PRINTDATA`系～`ENDDATA`以及`DATALIST`～`ENDLIST`内部书写上述语法以外的内容。
 
@@ -74,6 +74,6 @@ DBDAEACDAE
 ```
 
 ### 相关项目
-- [STRDATA](STRDATA.md)
-- [SELECTCASE](SELECTCASE.md)
-- [RAND](RAND.md)
+- [STRDATA](STRDATA.zh.md)
+- [SELECTCASE](SELECTCASE.zh.md)
+- [RAND](RAND.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                                  | Arguments | Return   |
 | :--------------------------------------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[<code>PRINTPLAIN(\|FORM)</code>](./PRINTPLAIN.md) | `string`  | none     |
+| ![](../assets/images/IconEmuera.webp)[<code>PRINTPLAIN(\|FORM)</code>](./PRINTPLAIN.en.md) | `string`  | none     |
 
 !!! info "API"
 
@@ -25,4 +25,4 @@ hide:
     Command only.
 
 ### Related Items
-- [PRINT](PRINT.md)
+- [PRINT](PRINT.en.md)

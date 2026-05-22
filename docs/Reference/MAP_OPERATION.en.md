@@ -7,12 +7,12 @@ hide:
 
 | Function name                                                      | Arguments                       | Return   |
 | :---------------------------------------------------------------- | :----------------------------- | :------- |
-| ![](../assets/images/IconEM.webp)[`MAP_GET`](./MAP_OPERATION.md)    | `string`, `string`             | `string` |
-| ![](../assets/images/IconEM.webp)[`MAP_HAS`](./MAP_OPERATION.md)    | `string`, `string`             | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_SET`](./MAP_OPERATION.md)    | `string`, `string`, `string`   | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_REMOVE`](./MAP_OPERATION.md) | `string`, `string`             | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_SIZE`](./MAP_OPERATION.md)   | `string`                       | `int`    |
-| ![](../assets/images/IconEM.webp)[`MAP_CLEAR`](./MAP_OPERATION.md)  | `string`                       | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_GET`](./MAP_OPERATION.en.md)    | `string`, `string`             | `string` |
+| ![](../assets/images/IconEM.webp)[`MAP_HAS`](./MAP_OPERATION.en.md)    | `string`, `string`             | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_SET`](./MAP_OPERATION.en.md)    | `string`, `string`, `string`   | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_REMOVE`](./MAP_OPERATION.en.md) | `string`, `string`             | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_SIZE`](./MAP_OPERATION.en.md)   | `string`                       | `int`    |
+| ![](../assets/images/IconEM.webp)[`MAP_CLEAR`](./MAP_OPERATION.en.md)  | `string`                       | `int`    |
 
 !!! info "API"
 
@@ -27,7 +27,7 @@ hide:
 
     Functions for manipulating data stored in `MAP` (associative array, [`Dictionary<string,string>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)).
     
-    - `MAP_GET`: Returns the value associated with `key` in the `MAP` with `mapName`. Returns an empty string if the key or MAP does not exist. No exception is thrown, so use `MAP_HAS` or [`MAP_EXIST`](./MAP_MANAGE.md) if needed.
+    - `MAP_GET`: Returns the value associated with `key` in the `MAP` with `mapName`. Returns an empty string if the key or MAP does not exist. No exception is thrown, so use `MAP_HAS` or [`MAP_EXIST`](./MAP_MANAGE.en.md) if needed.
     - `MAP_HAS`: Checks if `key` exists in the `MAP` with `mapName`. Returns `1` if it exists, `0` otherwise. Returns `-1` if the MAP itself does not exist.
     - `MAP_SET`: Overwrites the value associated with `key` in the MAP with `mapName` with `value`. If `key` does not exist, it is added and returns `1`. Returns `-1` if the MAP itself does not exist.
     - `MAP_REMOVE`: Removes the value associated with `key` from the MAP with `mapName` and returns `1`. Returns `-1` if the MAP itself does not exist.
@@ -65,4 +65,4 @@ hide:
     ```
 
 ### Related
-- [MAP Creation](MAP_MANAGE.md)
+- [MAP Creation](MAP_MANAGE.en.md)

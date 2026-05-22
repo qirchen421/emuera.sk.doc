@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                   | Arguments  | Return |
 | :------------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`THROW`](./THROW.md)   | `string` | none   |
+| ![](../assets/images/IconEmuera.webp)[`THROW`](./THROW.en.md)   | `string` | none   |
 
 !!! info "API"
 

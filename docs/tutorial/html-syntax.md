@@ -350,8 +350,16 @@ INPUTS
 
 ---
 
+## リソース設定
+
+画像リソースの準備方法、CSV定義フォーマット、Skia版リソース管理機構（遅延読み込みインデックス、SharedBitmapCache、AnimSpriteCache）および使用ガイドラインについては、[リソース設定 — 画像リソースの準備方法](resources.md)を参照してください。
+
+---
+
 ## 関連項目
 
+- [リソース設定 — 画像リソースの準備方法](resources.md) — CSV定義フォーマット、Skia版リソース管理機構
 - [HTML_PRINT](../Reference/HTML_PRINT.md) — HTML出力命令
 - [HTML_PRINT_ISLAND](../Reference/HTML_PRINT_ISLAND.md) — 独立HTMLレイヤー出力
-- [リソース設定](../Emuera/resources.md) — 画像リソースの準備方法
+- [SPRITECREATEFROMFILE](../Reference/SPRITECREATEFROMFILE.md) — 実行時画像読み込み（Skia）
+- [リソースファイル（歴史）](../Emuera/resources.md) — 原版Emueraのリソース設定説明

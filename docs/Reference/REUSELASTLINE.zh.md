@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                     | 参数     | 返回值 |
 | :------------------------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`REUSELASTLINE`](./REUSELASTLINE.md) | `string` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`REUSELASTLINE`](./REUSELASTLINE.zh.md) | `string` | 无     |
 
 !!! info "API"
 
@@ -16,8 +16,8 @@ hide:
     ```
 	使用指定的格式化字符串重写最后一行，  
 	但通过此方式重写的行，在添加下一行时会被替换掉。  
-	基本上仅在 [`INPUT`](./INPUT.md)、[`INPUTS`](./INPUT.md) 的循环处理中使用。  
-	参数可使用与 [`PRINTFORM`](./PRINT.md) 相同的格式。  
+	基本上仅在 [`INPUT`](./INPUT.zh.md)、[`INPUTS`](./INPUT.zh.md) 的循环处理中使用。  
+	参数可使用与 [`PRINTFORM`](./PRINT.zh.md) 相同的格式。  
 	另外，使用 `REUSELASTLINE （此半角空格必需）` 可以在不显示警告信息的情况下清空该行。
 
     ```  { #language-erbapi }
@@ -30,7 +30,7 @@ hide:
 	ENDIF  
 	```
 
-	类似这样，在[`GOTO INPUT_LOOP`](./GOTO.md)之前调用`REUSELASTLINE`，  
+	类似这样，在[`GOTO INPUT_LOOP`](./GOTO.zh.md)之前调用`REUSELASTLINE`，  
 	之前的输入会从画面中清除，下一次输入会显示在与前一次输入相同的行上  
 	这样一来，即使重复进行无效输入，行数也不会增加，  
 	应该能防止出现“回过神来选项已经跑到画面外了…”这种情况  

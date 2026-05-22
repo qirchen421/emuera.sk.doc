@@ -7,7 +7,7 @@ hide:
 
 | 函数名 | 参数 | 返回值 |
 | :--- | :--- | :--- |
-| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.md) | 无 | 无 |
+| ![](../assets/images/Iconeramaker.webp)[`RESTART`](./RESTART.zh.md) | 无 | 无 |
 
 !!! info "API"
 
@@ -68,4 +68,4 @@ hide:
     ```
 
 ### 相关项目
-- [RETURN](RETURN.md)
+- [RETURN](RETURN.zh.md)

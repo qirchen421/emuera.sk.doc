@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                             | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GWIDTH`](./GWIDTHHEIGHT.md)  | `int`     | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`GHEIGHT`](./GWIDTHHEIGHT.md) | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GWIDTH`](./GWIDTHHEIGHT.en.md)  | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GHEIGHT`](./GWIDTHHEIGHT.en.md) | `int`     | `int`  |
 
 !!! info "API"
 

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments | Return |
 | :------------------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CLEARTEXTBOX`](./CLEARTEXTBOX.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`CLEARTEXTBOX`](./CLEARTEXTBOX.en.md) | none      | none   |
 
 !!! info "API"
 

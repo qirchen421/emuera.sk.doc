@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数     | 返回值 |
 | :----------------------------------------------------------- | :------- | :----- |
-| ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.zh.md) | `string` | `int`  |
 
 !!! info "API"
     
@@ -59,5 +59,5 @@ hide:
     ```
 
 ### 相关项目
-- [ENUMVAR](ENUMVAR.md)
+- [ENUMVAR](ENUMVAR.zh.md)
 - [动态解析与反射](../tutorial/dynamic-reflection.zh.md) — EXISTVAR 属于第三代"变量存在检查"

@@ -7,14 +7,14 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`FORCEWAIT`](./FORCEWAIT.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`FORCEWAIT`](./FORCEWAIT.en.md) | none      | none   |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	FORCEWAIT
     ```
-    A [`WAIT`](./WAIT.md) command that cannot be skipped by right-click or macro skip.  
+    A [`WAIT`](./WAIT.en.md) command that cannot be skipped by right-click or macro skip.  
     The skip state is cleared when this command is reached.
 
 
@@ -23,4 +23,4 @@ hide:
     Command only.
 
 ### See Also
-- [WAIT](WAIT.md)
+- [WAIT](WAIT.en.md)

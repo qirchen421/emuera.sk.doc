@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                   | Arguments | Return |
 | :------------------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ADDVOIDCHARA`](./ADDVOIDCHARA.md) | none      | none   |
+| ![](../assets/images/IconEmuera.webp)[`ADDVOIDCHARA`](./ADDVOIDCHARA.en.md) | none      | none   |
 
 !!! info "API"
 
@@ -22,4 +22,4 @@ hide:
     Command only.
 
 ### Related
-* [ADDCHARA](ADDCHARA.md)
+* [ADDCHARA](ADDCHARA.en.md)

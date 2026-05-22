@@ -7,8 +7,8 @@ hide:
 
 | 函数名                                                             | 参数              | 返回值   |
 | :----------------------------------------------------------------- | :---------------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`ONEINPUT`](./ONEINPUT.md)   | `int`(, `int`)    | `int`    |
-| ![](../assets/images/IconEmuera.webp)[`ONEINPUTS`](./ONEINPUT.md)  | `string`(, `int`) | `string` |
+| ![](../assets/images/IconEmuera.webp)[`ONEINPUT`](./ONEINPUT.zh.md)   | `int`(, `int`)    | `int`    |
+| ![](../assets/images/IconEmuera.webp)[`ONEINPUTS`](./ONEINPUT.zh.md)  | `string`(, `int`) | `string` |
 
 !!! info "API"
 
@@ -35,5 +35,5 @@ hide:
 
     仅支持命令。
 ### 相关项目
-- [INPUT](INPUT.md)
-- [WAITANYKEY](WAITANYKEY.md)
+- [INPUT](INPUT.zh.md)
+- [WAITANYKEY](WAITANYKEY.zh.md)

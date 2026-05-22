@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                        | 参数                                              | 返回值          |
 | :---------------------------------------------------------------------------- | :------------------------------------------------ | :-------------- |
-| ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.md) | `string`(, `integerVariable`, `stringVariable`)   | `int`, `string` |
+| ![](../assets/images/IconEmuera.webp)[`HTML_TAGSPLIT`](./HTML_TAGSPLIT.zh.md) | `string`(, `integerVariable`, `stringVariable`)   | `int`, `string` |
 
 !!! info "API"
 
@@ -50,4 +50,4 @@ hide:
     ```
 
 ### 相关项目
-- [SPLIT](SPLIT.md)
+- [SPLIT](SPLIT.zh.md)

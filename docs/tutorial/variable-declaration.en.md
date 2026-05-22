@@ -473,7 +473,7 @@ In mainstream languages, function signatures also declare parameters (`void f(in
 
 If a variable referenced in the signature has no `#DIM` declaration, a parser error occurs.
 
-### Named Parameters vs ARG Array
+### Named Parameters vs ARG Array { #arg }
 
 Function parameters can be passed in two ways:
 
@@ -682,6 +682,6 @@ CALL PROCESS(1, 10, 20, 30)
 |:---|:---|
 | Three-type system and type conversion | [Values, Types & Variables](values-types.en.md) |
 | Assignment statement details | [Assignment Statements](assignment.en.md) |
-| Function definition and invocation | [Functions & CALL](call.md) |
+| Function definition and invocation | [Functions & CALL](call.en.md) |
 | ERH global variable declarations | [Header Files ERH](../Emuera/ERH.en.md) |
 | User-defined variable specification | [User-Defined Variables](../Emuera/user_defined_variables.en.md) |

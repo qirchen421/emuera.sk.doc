@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                     | Arguments      | Return |
 | :--------------------------------------------------------------- | :------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.md) | `int`, `int` | none   |
+| ![](../assets/images/IconEmuera.webp)[`COPYCHARA`](./COPYCHARA.en.md) | `int`, `int` | none   |
 
 !!! info "API"
 

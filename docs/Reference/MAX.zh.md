@@ -7,10 +7,10 @@ hide:
 
 | 函数名                                                     | 参数                | 返回值 |
 | :--------------------------------------------------------- | :------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.md)     | `int`(, `int`...)   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.md)     | `int`(, `int`...)   | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.md)   | `int`, `int`, `int` | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.md) | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MAX`](./MAX.zh.md)     | `int`(, `int`...)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`MIN`](./MAX.zh.md)     | `int`(, `int`...)   | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`LIMIT`](./MAX.zh.md)   | `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`INRANGE`](./MAX.zh.md) | `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 
@@ -52,4 +52,4 @@ hide:
     该功能同时支持命令形式和函数形式。
 
 ### 相关项目
-- [MAXARRAY,MINARRAY](MAXMINARRAY.md)
+- [MAXARRAY,MINARRAY](MAXMINARRAY.zh.md)

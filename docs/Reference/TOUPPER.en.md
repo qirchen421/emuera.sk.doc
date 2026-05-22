@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                      | Arguments | Return   |
 | :----------------------------------------------------------------- | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`TOUPPER`](./TOUPPER.md)   | `string`  | `string` |
-| ![](../assets/images/IconEmuera.webp)[`TOLOWER`](./TOUPPER.md)   | `string`  | `string` |
-| ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.md)    | `string`  | `string` |
-| ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.md)    | `string`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOUPPER`](./TOUPPER.en.md)   | `string`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOLOWER`](./TOUPPER.en.md)   | `string`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOHALF`](./TOUPPER.en.md)    | `string`  | `string` |
+| ![](../assets/images/IconEmuera.webp)[`TOFULL`](./TOUPPER.en.md)    | `string`  | `string` |
 
 !!! info "API"
 

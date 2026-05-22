@@ -7,8 +7,8 @@ hide:
 
 | Function name                                             | Arguments | Return |
 | :-------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.md)   | `int`     | `int`  |
-| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.md)  | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`ABS`](./ABS.en.md)   | `int`     | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`SIGN`](./ABS.en.md)  | `int`     | `int`  |
 
 !!! info "API"
 

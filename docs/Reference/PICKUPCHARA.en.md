@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                                 | Arguments            | Return |
 | :----------------------------------------------------------------------------- | :------------------ | :----- |
-| ![](../assets/images/IconEmuera.webp)[`PICKUPCHARA`](./PICKUPCHARA.md) | `int`(, `int`...)  | none   |
+| ![](../assets/images/IconEmuera.webp)[`PICKUPCHARA`](./PICKUPCHARA.en.md) | `int`(, `int`...)  | none   |
 
 !!! info "API"
 
@@ -23,5 +23,5 @@ hide:
     Command only.
 
 ### Related
-- [DELCHARA](DELCHARA.md)
-- [DELALLCHARA](DELALLCHARA.md)
+- [DELCHARA](DELCHARA.en.md)
+- [DELALLCHARA](DELALLCHARA.en.md)

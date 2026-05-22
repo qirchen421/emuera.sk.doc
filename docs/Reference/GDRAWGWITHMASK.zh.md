@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                       | 参数                              | 返回值 |
 | :--------------------------------------------------------------------------- | :-------------------------------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GDRAWGWITHMASK`](./GDRAWGWITHMASK.zh.md) | `int`, `int`, `int`, `int`, `int` | `int`  |
 
 !!! info "API"
 

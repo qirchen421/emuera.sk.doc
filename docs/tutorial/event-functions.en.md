@@ -452,5 +452,5 @@ CALL CHECK_LEVEL_UP
 | ERB file format extensions | [ERB File Format Extensions](erb-format-extension.en.md) |
 | Assignment statement details | [Assignment Statements](assignment.en.md) |
 | System flow diagrams | [Flow Diagrams](../Emuera/system_flow.en.md) |
-| BEGIN command | [BEGIN](../Reference/BEGIN.md) |
-| CALL command | [CALL](../Reference/CALL.md) |
+| BEGIN command | [BEGIN](../Reference/BEGIN.en.md) |
+| CALL command | [CALL](../Reference/CALL.en.md) |

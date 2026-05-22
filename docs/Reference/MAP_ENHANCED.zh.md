@@ -7,9 +7,9 @@ hide:
 
 | 函数名                                                                        | 参数                              | 返回值   |
 | :---------------------------------------------------------------------------- | :-------------------------------- | :------- |
-| ![](../assets/images/IconSK.webp)[`MAP_MERGE`](./MAP_ENHANCED.md)             | `string`, `string`                | `int`    |
-| ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.md)          | `string`, `string`, `string`      | `int`    |
-| ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.md)           | `string`, `string`, `string`      | `string` |
+| ![](../assets/images/IconSK.webp)[`MAP_MERGE`](./MAP_ENHANCED.zh.md)             | `string`, `string`                | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_REMOVEIF`](./MAP_ENHANCED.zh.md)          | `string`, `string`, `string`      | `int`    |
+| ![](../assets/images/IconSK.webp)[`MAP_FINDKEY`](./MAP_ENHANCED.zh.md)           | `string`, `string`, `string`      | `string` |
 
 !!! info "API"
 
@@ -105,7 +105,7 @@ hide:
     ```
 
 ### 相关项目
-- [MAP管理](MAP_MANAGE.md)
-- [MAP操作](MAP_OPERATION.md)
-- [MAP键值获取](MAP_GETKEYS.md)
-- [MAP序列化](MAP_SERIALIZATION.md)
+- [MAP管理](MAP_MANAGE.zh.md)
+- [MAP操作](MAP_OPERATION.zh.md)
+- [MAP键值获取](MAP_GETKEYS.zh.md)
+- [MAP序列化](MAP_SERIALIZATION.zh.md)

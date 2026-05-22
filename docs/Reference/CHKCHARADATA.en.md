@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                         | Arguments | Return |
 | :-------------------------------------------------------------------- | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`CHKCHARADATA`](./CHKCHARADATA.md) | `string`  | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`CHKCHARADATA`](./CHKCHARADATA.en.md) | `string`  | `int`  |
 
 !!! info "API"
 
@@ -24,5 +24,5 @@ hide:
     Command and expression function both supported.
 
 ### See Also
-- [SAVECHARA](SAVECHARA.md)
-- [LOADCHARA](LOADCHARA.md)
+- [SAVECHARA](SAVECHARA.en.md)
+- [LOADCHARA](LOADCHARA.en.md)

@@ -11,7 +11,7 @@ If `@EVENTLOAD` is not defined, it transitions to `@SHOW_SHOP` (same behavior as
 Called when Load is selected on the standard title screen.  
 By defining `@TITLE_LOADGAME`, you can use your own load screen even on the title screen.  
 If not defined, the standard load screen is used.  
-If `@SYSTEM_TITLE` is defined, `@TITLE_LOADGAME` will not be called unless you explicitly [`CALL`](../Reference/CALL.md) it.
+If `@SYSTEM_TITLE` is defined, `@TITLE_LOADGAME` will not be called unless you explicitly [`CALL`](../Reference/CALL.en.md) it.
 
 ### `@SYSTEM_AUTOSAVE`
 Called at the timing when an autosave is performed.  
@@ -45,7 +45,7 @@ Note that since it is not an event function, it cannot be multiply defined.
 Both numeric expressions and string expressions can be used for numbers.  
 When using string literals (constants) as arguments, enclose them in `""`.  
 When using formatted string literals as arguments, write them as `@"~~"`.  
-The same format can be used with [`JUMP`](../Reference/JUMP.md), CALLFORM, TRYCALL, etc., in addition to [`CALL`](../Reference/CALL.md).  
+The same format can be used with [`JUMP`](../Reference/JUMP.en.md), CALLFORM, TRYCALL, etc., in addition to [`CALL`](../Reference/CALL.en.md).  
 Any number of arguments can be specified on the function side.  
 As of ver 1.808, if the types differ between the function side and calling side, an error occurs without conversion, regardless of whether it's number to string or string to number.  
 If you want to call with a number for a string-type argument as in ver 1.807 and earlier, change the config setting or use the `TOSTR` function.  
@@ -163,12 +163,12 @@ Also, if there are multiple event functions with the same name with `#ONLY` spec
 ### `#FUNCTION`
 An attribute for expression functions.  
 Expression functions cannot end with a normal RETURN; instead, they must end with `RETURNF <numeric expression>`.  
-See [User-Defined Expression Functions](user_defined_in_expression_function.md) for details.
+See [User-Defined Expression Functions](user_defined_in_expression_function.en.md) for details.
 
 ### `#FUNCTIONS`
 An attribute for expression functions.  
 Expression functions cannot end with a normal `RETURN`; instead, they must end with RETURNF <string expression>.  
-See [User-Defined Expression Functions](user_defined_in_expression_function.md) for details.
+See [User-Defined Expression Functions](user_defined_in_expression_function.en.md) for details.
 
 ## Definitions
 
@@ -187,13 +187,13 @@ If this preprocessor is used on an event function, the setting of the first one 
 User-defined variable declaration. When used in a specific function in ERB, you can define a numeric variable that can only be used within that function.  
 See User-Defined Variables for details.  
 Also, when used in an ERH file, you can define a numeric variable whose value can be shared by all functions.  
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 ### `#DIMS`
 
 User-defined variable declaration. When used in a specific function in ERB, you can define a string variable that can only be used within that function.  
 See User-Defined Variables for details. Also, when used in an ERH file, you can define a string variable whose value can be shared by all functions.  
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 ### `#DEFINE`
 
@@ -212,12 +212,12 @@ Lines written between `[SKIPSTART]` and `[SKIPEND]` are not read or executed by 
 This is used when intentionally changing behavior between Emuera and eramaker.  
 Use this when writing statements you do not want executed in Emuera.  
 Also, by combining with `;!;`, you can write statements you do not want executed outside of Emuera.  
-See the [Notation Added in Emuera](expression.md) section for details.
+See the [Notation Added in Emuera](expression.en.md) section for details.
 
 ### `[IF XXX]` to `[ELSEIF XXX]` to `[ELSE]` to `[ENDIF]`
 
 You can branch whether to execute multiple lines based on whether a macro named `XXX` is defined.  
-See [Header Files (ERH)](ERH.md) for details.
+See [Header Files (ERH)](ERH.en.md) for details.
 
 ### `[IF_DEBUG]` to `[ENDIF]`
 
@@ -225,11 +225,11 @@ Lines written between `[IF_DEBUG]` and `[ENDIF]` are executed only in debug mode
 In non-debug mode, they are treated as comment lines and not executed.  
 However, `DEBUG` commands are originally ignored in non-debug mode, so there is no need to prefix `;#;` to the beginning of the line.  
 Similarly, debug variables are empty strings or 0 in non-debug mode, so there is no worry about errors.  
-See [here](debug.md) for debug mode.
+See [here](debug.en.md) for debug mode.
 
 ### `[IF_NDEBUG]` to `[ENDIF]`
 
 Lines written between `[IF_NDEBUG]` and `[ENDIF]` are executed only in non-debug mode.  
 In debug mode, they are treated as comment lines and not executed.  
 The condition is reversed compared to `[IF_DEBUG]`.  
-See [here](debug.md) for debug mode.
+See [here](debug.en.md) for debug mode.

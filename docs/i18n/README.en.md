@@ -16,7 +16,7 @@ hide:
 
     You can select the display language from `Help` → `Settings` → `Display` → `Emuera Display Language`. Alternatively, you can set it in the config file (*.config) using the `Emueraの表示言語` / `Emuera interface language` setting.
 
-    By adding `-genlang` to the Emuera command line (see [Debug Mode](../Emuera/debug.md)), the default language file is automatically generated and saved as `lang/emuera-default-lang.xml`. Translations and distribution of language files are welcome.
+    By adding `-genlang` to the Emuera command line (see [Debug Mode](../Emuera/debug.en.md)), the default language file is automatically generated and saved as `lang/emuera-default-lang.xml`. Translations and distribution of language files are welcome.
 
 !!! example "Example" 
 

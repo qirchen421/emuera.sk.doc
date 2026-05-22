@@ -7,14 +7,14 @@ hide:
 
 | 函数名                                                                                    | 参数  | 返回值  |
 | :---------------------------------------------------------------------------------------- | :---- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.md)    | `void`| `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_POPPRINTINGSTR`](./HTML_POPPRINTINGSTR.zh.md)    | `void`| `string`|
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	string HTML_POPPRINTINGSTR
     ```
-    获取当前 [`PRINT`](./PRINT.md) 中处于换行等待状态的字符串缓冲区的 HTML 格式内容，并清空缓冲区。
+    获取当前 [`PRINT`](./PRINT.zh.md) 中处于换行等待状态的字符串缓冲区的 HTML 格式内容，并清空缓冲区。
     由于不包含 `p` 标签，因此 `ALIGNMENT` 指令设置的 `align` 属性不会生效。
 
 !!! hint "提示"

@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                       | Arguments | Return |
 | :------------------------------------------------------------------ | :-------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.md) | none      | `int`  |
+| ![](../assets/images/IconEmuera.webp)[`GETSECOND`](./GETSECOND.en.md) | none      | `int`  |
 
 !!! info "API"
 
@@ -23,5 +23,5 @@ hide:
     Command and expression function both supported.
 
 ### See Also
-- [GETMILLISECOND](GETMILLISECOND.md)
-- [GETTIME](GETTIME.md)
+- [GETMILLISECOND](GETMILLISECOND.en.md)
+- [GETTIME](GETTIME.en.md)

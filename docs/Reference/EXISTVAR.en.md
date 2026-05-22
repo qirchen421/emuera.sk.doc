@@ -7,7 +7,7 @@ hide:
 
 | Function name                                                 | Arguments  | Return |
 | :----------------------------------------------------------- | :--------- | :----- |
-| ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.md) | `string` | `int`  |
+| ![](../assets/images/IconEM.webp)[`EXISTVAR`](./EXISTVAR.en.md) | `string` | `int`  |
 
 !!! info "API"
     
@@ -59,4 +59,4 @@ hide:
     ```
 
 ### Related Items
-- [ENUMVAR](ENUMVAR.md)
+- [ENUMVAR](ENUMVAR.en.md)

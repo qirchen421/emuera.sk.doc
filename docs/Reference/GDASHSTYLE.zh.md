@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                         | 参数                  | 返回值 |
 | :------------------------------------------------------------- | :---------------------| :----- |
-| ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.md) | `int`, `int`, `int` | 1      |
+| ![](../assets/images/IconEE.webp)[`GDASHSTYLE`](./GDASHSTYLE.zh.md) | `int`, `int`, `int` | 1      |
 
 !!! info "API"
 
@@ -52,4 +52,4 @@ hide:
 	![](../assets/images/GDASHSTYLE.png)
 
 ### 相关项目
-- [GDRAWLINE](GDRAWLINE.md)
+- [GDRAWLINE](GDRAWLINE.zh.md)

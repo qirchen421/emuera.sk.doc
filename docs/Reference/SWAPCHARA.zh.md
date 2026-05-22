@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                             | 参数         | 返回值 |
 | :----------------------------------------------------------------- | :----------- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`SWAPCHARA`](./SWAPCHARA.md) | `int`, `int` | 无     |
+| ![](../assets/images/IconEmuera.webp)[`SWAPCHARA`](./SWAPCHARA.zh.md) | `int`, `int` | 无     |
 
 !!! info "API"
 
@@ -37,4 +37,4 @@ hide:
     ```
 
 ### 相关项目
-- [SORTCHARA](SORTCHARA.md)
+- [SORTCHARA](SORTCHARA.zh.md)

@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                 | 参数     | 返回值  |
 | :--------------------------------------------------------------------- | :------- | :------ |
-| ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.md) | `string` | `string`|
+| ![](../assets/images/IconEmuera.webp)[`HTML_ESCAPE`](./HTML_ESCAPE.zh.md) | `string` | `string`|
 
 !!! info "API"
 
@@ -15,7 +15,7 @@ hide:
     str HTML_ESCAPE, htmlString  
     ```
     将目标字符串转义为HTML格式（转换为字符引用）。  
-    要取消转义，请使用[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.md)函数。
+    要取消转义，请使用[`HTML_TOPLAINTEXT`](./HTML_TOPLAINTEXT.zh.md)函数。
 
 !!! hint "提示"
 
@@ -32,5 +32,5 @@ hide:
     ```
 
 ### 相关项目
-- [HTML_TOPLAINTEXT](HTML_TOPLAINTEXT.md)
-- [ESCAPE](ESCAPE.md)
+- [HTML_TOPLAINTEXT](HTML_TOPLAINTEXT.zh.md)
+- [ESCAPE](ESCAPE.zh.md)

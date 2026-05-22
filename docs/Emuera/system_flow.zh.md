@@ -12,10 +12,10 @@
 ![](../assets/images/title.gif)
 
 如果定义了`@SYSTEM_TITLE`则调用它，其他什么也不做。
-如果在`@SYSTEM_TITLE`中没有执行[`BEGIN`](../Reference/BEGIN.md)指令或`LOADDATA`指令，而是执行了[`RETURN`](../Reference/RETURN.md)，则由于没有要执行的处理而错误终止。
+如果在`@SYSTEM_TITLE`中没有执行[`BEGIN`](../Reference/BEGIN.zh.md)指令或`LOADDATA`指令，而是执行了[`RETURN`](../Reference/RETURN.zh.md)，则由于没有要执行的处理而错误终止。
 如果没有定义`@SYSTEM_TITLE`，则执行标准的标题处理。
 标准标题画面的`[0] 从最初开始`等文字是可以更改的。
-详情请参考[_replace.csv](replace.md)。
+详情请参考[_replace.csv](replace.zh.md)。
 
 选择`[0] 从最初开始`时，首先进行数据初始化。
 具体来说是设置`STR`或`PRINTLV`的初始值（与`RESETDATA`指令相同）、`ADDCHARA 0`等。
@@ -27,7 +27,7 @@
 
 ## FIRST
 在标题画面选择`[0] 从最初开始`时，以及执行`BEGIN FIRST`后。
-如果在`@EVENTFIRST`中没有执行[`BEGIN`](../Reference/BEGIN.md)指令，由于没有要执行的处理而错误终止。
+如果在`@EVENTFIRST`中没有执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，由于没有要执行的处理而错误终止。
 
 ![](../assets/images/first.gif)
 
@@ -38,7 +38,7 @@
 ![](../assets/images/shop.gif)
 
 调用`@SHOW_SHOP`后要求输入。此输入中，输入`0～99`则执行购买处理，其他输入则调用`@USERSHOP`。
-此范围可通过`_replace.csv`更改。详情请参考[_replace.csv](replace.md)。
+此范围可通过`_replace.csv`更改。详情请参考[_replace.csv](replace.zh.md)。
 另外，`PRINT_ITEMSHOP`指令显示的商品范围为`ITEMNAME`和`ITEMSALES`元素数中较小的一个（标准为1000）。
 
 如果调用购买处理，会判断对应的`ITEMSALES`是否不为`0`，或`MONEY`是否大于`ITEMPRICE`。
@@ -48,7 +48,7 @@
 购买判断成功时，将`ITEM`编号赋值给`BOUGHT`变量，将`ITEM:BOUGHT`增加`1`，将`MONEY`减少`ITEMPRICE:BOUGHT`。
 调用`@EVENTBUY`并返回`@SHOW_SHOP`。
 
-只要不执行[`BEGIN`](../Reference/BEGIN.md)指令，就不会离开`SHOP`。
+只要不执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，就不会离开`SHOP`。
 
 ## TRAIN
 执行`BEGIN TRAIN`后。
@@ -87,7 +87,7 @@ Emuera的`NEXTCOM`是为了重现旧代码动作（包括前述缺陷）而实�
 另外，执行`UPCHECK`指令时，将`UP`和`DOWN`的值加减到`TARGET`的`PALAM`上，并将`UP`和`DOWN`的所有值设为`0`。
 如果输入结果不是可执行的命令，则调用`@USERCOM`，返回`@SHOW_STATUS`。
 
-只要不执行[`BEGIN`](../Reference/BEGIN.md)指令，就不会离开`TRAIN`。
+只要不执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，就不会离开`TRAIN`。
 
 ## ABLUP
 执行`BEGIN ABLUP`后。
@@ -104,46 +104,46 @@ Emuera的`NEXTCOM`是为了重现旧代码动作（包括前述缺陷）而实�
 如果输入超出`0～99`范围，则调用`@USERABLUP`，返回`@SHOW_JUEL`。
 截至Emuera1.705，没有改变此范围的方法。
 
-只要不执行[`BEGIN`](../Reference/BEGIN.md)指令，就不会离开`ABLUP`。
+只要不执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，就不会离开`ABLUP`。
 
 ## AFTERTRAIN
 执行`BEGIN AFTERTRAIN`后。
-如果在`@EVENTEND`中没有执行[`BEGIN`](../Reference/BEGIN.md)指令，由于没有要执行的处理而错误终止。
+如果在`@EVENTEND`中没有执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，由于没有要执行的处理而错误终止。
 
 ![](../assets/images/aftertrain.gif)
 
 ## TURNEND
 执行`BEGIN TURNEND`后。
-如果在`@EVENTTURNEND`中没有执行[`BEGIN`](../Reference/BEGIN.md)指令，由于没有要执行的处理而错误终止。
+如果在`@EVENTTURNEND`中没有执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，由于没有要执行的处理而错误终止。
 
 ![](../assets/images/turnend.gif)
 
 ## LOADGAME
-执行[`LOADGAME`](../Reference/SAVEGAME.md)指令时。
-[`BEGIN`](../Reference/BEGIN.md)指令包含[`RETURN`](../Reference/RETURN.md)指令，因此`[BEGIN]`以下的语句决不会执行，但[`LOADGAME`](../Reference/SAVEGAME.md)和[`SAVEGAME`](../Reference/SAVEGAME.md)指令与[`CALL`](../Reference/CALL.md)指令一样会回到原来的位置。
+执行[`LOADGAME`](../Reference/SAVEGAME.zh.md)指令时。
+[`BEGIN`](../Reference/BEGIN.zh.md)指令包含[`RETURN`](../Reference/RETURN.zh.md)指令，因此`[BEGIN]`以下的语句决不会执行，但[`LOADGAME`](../Reference/SAVEGAME.zh.md)和[`SAVEGAME`](../Reference/SAVEGAME.zh.md)指令与[`CALL`](../Reference/CALL.zh.md)指令一样会回到原来的位置。
 不过，如果执行了LOAD，则会忘记原来的位置并转移到`LOADDATAEND`。
 
 ![](../assets/images/loadgame.gif)
 
 ## SAVEGAME
-执行[`SAVEGAME`](../Reference/SAVEGAME.md)指令时。
+执行[`SAVEGAME`](../Reference/SAVEGAME.zh.md)指令时。
 调用`@SAVEINFO`的时机是在实际写入前一刻。
 
 ![](../assets/images/savegame.gif)
 
 ## LOADDATAEND
-在[`LOADGAME`](../Reference/SAVEGAME.md)中执行LOAD后，以及执行`LOADDATA`指令后。
+在[`LOADGAME`](../Reference/SAVEGAME.zh.md)中执行LOAD后，以及执行`LOADDATA`指令后。
 在执行LOAD时，调用中的函数等之前的状态全部被清除。
 
 ![](../assets/images/loaddataend1821.gif)
 
 在eramaker中这里什么也不做，转移到`@SHOW_SHOP`。
 在Emuera中，如果定义了`@SYSTEM_LOADEND`则执行`@SYSTEM_LOADEND`。
-直到`@SYSTEM_LOADEND`结束前如果执行了[`BEGIN`](../Reference/BEGIN.md)指令，则转移到那里。
+直到`@SYSTEM_LOADEND`结束前如果执行了[`BEGIN`](../Reference/BEGIN.zh.md)指令，则转移到那里。
 否则如果定义了`@EVENTLOAD`则执行`@EVENTLOAD`。
 
-直到`@EVENTLOAD`结束前如果执行了[`BEGIN`](../Reference/BEGIN.md)指令，则转移到那里。
-如果没有执行[`BEGIN`](../Reference/BEGIN.md)指令，则照常转移到`@SHOW_SHOP`。
+直到`@EVENTLOAD`结束前如果执行了[`BEGIN`](../Reference/BEGIN.zh.md)指令，则转移到那里。
+如果没有执行[`BEGIN`](../Reference/BEGIN.zh.md)指令，则照常转移到`@SHOW_SHOP`。
 
 ## 错误处理流程（SK 专属）
 

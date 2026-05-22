@@ -7,10 +7,10 @@ hide:
 
 | Function name                                                                  | Arguments | Return   |
 | :------------------------------------------------------------------------------ | :-------- | :------- |
-| ![](../assets/images/IconEmuera.webp)[`CSVNAME`](./CSVNAME.md)       | `int`     | `string` |
-| ![](../assets/images/IconEmuera.webp)[`CSVCALLNAME`](./CSVNAME.md)   | `int`     | `string` |
-| ![](../assets/images/IconEmuera.webp)[`CSVNICKNAME`](./CSVNAME.md)   | `int`     | `string` |
-| ![](../assets/images/IconEmuera.webp)[`CSVMASTERNAME`](./CSVNAME.md) | `int`     | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVNAME`](./CSVNAME.en.md)       | `int`     | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVCALLNAME`](./CSVNAME.en.md)   | `int`     | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVNICKNAME`](./CSVNAME.en.md)   | `int`     | `string` |
+| ![](../assets/images/IconEmuera.webp)[`CSVMASTERNAME`](./CSVNAME.en.md) | `int`     | `string` |
 
 !!! info "API"
 
@@ -45,4 +45,4 @@ hide:
     ```
 
 ### Related Items
-- [CSV Status Functions](CSV_STATUS.md)
+- [CSV Status Functions](CSV_STATUS.en.md)

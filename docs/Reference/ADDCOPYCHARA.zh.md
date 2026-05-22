@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                                   | 参数 | 返回值 |
 | :----------------------------------------------------------------------- | :--- | :----- |
-| ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.md) | `int`| 无     |
+| ![](../assets/images/IconEmuera.webp)[`ADDCOPYCHARA`](./ADDCOPYCHARA.zh.md) | `int`| 无     |
 
 !!! info "API"
 
@@ -21,4 +21,4 @@ hide:
     仅支持作为指令使用。
 
 ### 相关项目
-* [ADDCHARA](ADDCHARA.md)
+* [ADDCHARA](ADDCHARA.zh.md)

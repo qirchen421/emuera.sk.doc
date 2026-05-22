@@ -7,8 +7,8 @@ hide:
 
 | Function name                                                                  | Arguments    | Return    |
 | :----------------------------------------------------------------------------- | :----------- | :-------- |
-| ![](../assets/images/IconEmuera.webp)[`ALIGNMENT`](./ALIGNMENT.md)            | `keyword`    | none      |
-| ![](../assets/images/IconEmuera.webp)[`CURRENTALIGN`](./ALIGNMENT.md)         | none         | `string`  |
+| ![](../assets/images/IconEmuera.webp)[`ALIGNMENT`](./ALIGNMENT.en.md)            | `keyword`    | none      |
+| ![](../assets/images/IconEmuera.webp)[`CURRENTALIGN`](./ALIGNMENT.en.md)         | none         | `string`  |
 
 !!! info "API"
 

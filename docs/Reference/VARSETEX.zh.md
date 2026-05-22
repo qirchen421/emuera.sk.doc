@@ -7,7 +7,7 @@ hide:
 
 | 函数名                                                       | 参数                                   | 返回值 |
 | :----------------------------------------------------------- | :------------------------------------- | :----- |
-| ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md) | `string`, `any`(, `int`, `int`, `int`) | `1`    |
+| ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.zh.md) | `string`, `any`(, `int`, `int`, `int`) | `1`    |
 
 !!! info "API"
 
@@ -87,4 +87,4 @@ hide:
     ```
 
 ### 相关项目
-- [VARSET](VARSET.md)
+- [VARSET](VARSET.zh.md)
