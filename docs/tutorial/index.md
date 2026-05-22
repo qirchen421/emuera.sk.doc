@@ -108,14 +108,16 @@
 
 ### 第7章：高度なトピック 🟢 選読
 
-> 動的解析、実行時メカニズム——ERABASICの深い理解を目指す
+> 動的解析、実行時メカニズム、関数安全性、定数畳み込み——ERABASICの深い理解を目指す
 
-**前提知識**：第4章「関数」｜**本章のポイント**：三段階パイプライン、REF変数ライフサイクル
+**前提知識**：第4章「関数」｜**本章のポイント**：三段階パイプライン、METHOD_SAFE制限、CanRestructureとコンパイル時最適化
 
 | トピック | 内容 |
 |:---|:---|
 | [動的解析とリフレクション](dynamic-reflection.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→変数リフレクション→ALS別名 |
 | [実行時メカニズム](runtime-mechanics.md) | ConvertArg→SetTransporter→IntoFunction、REF変数ライフサイクル |
+| [関数安全性と METHOD_SAFE](method-safety.md) | #FUNCTION本体内で使用可能な命令の制限、METHOD_SAFEフラグ、RESULT汚染との違い |
+| [定数畳み込み](constant-folding.md) | CanRestructure、配列初期化の定数畳み込み、SELECTCASEジャンプテーブル最適化 |
 
 ---
 

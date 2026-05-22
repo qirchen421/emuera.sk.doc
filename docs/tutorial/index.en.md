@@ -108,14 +108,16 @@
 
 ### Chapter 7: Advanced Topics 🟢 Optional
 
-> Dynamic analysis, runtime mechanics — aiming for deep understanding of ERABASIC
+> Dynamic analysis, runtime mechanics, function safety, constant folding — aiming for deep understanding of ERABASIC
 
-**Prerequisites**: Chapter 4 "Functions" ｜ **Key points**: Three-stage pipeline, REF variable lifecycle
+**Prerequisites**: Chapter 4 "Functions" ｜ **Key points**: Three-stage pipeline, METHOD_SAFE restrictions, CanRestructure and compile-time optimization
 
 | Topic | Content |
 |:---|:---|
 | [Dynamic Analysis & Reflection](dynamic-reflection.en.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→variable reflection→ALS aliases |
 | [Runtime Mechanics](runtime-mechanics.en.md) | ConvertArg→SetTransporter→IntoFunction, REF variable lifecycle |
+| [Function Safety & METHOD_SAFE](method-safety.en.md) | Command restrictions in #FUNCTION bodies, METHOD_SAFE flag, distinction from RESULT pollution |
+| [Constant Folding](constant-folding.en.md) | CanRestructure, array initialization constant folding, SELECTCASE jump table optimization |
 
 ---
 

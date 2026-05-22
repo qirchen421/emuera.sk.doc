@@ -108,14 +108,16 @@
 
 ### 第7章：高级主题 🟢 选读
 
-> 动态解析、运行时机制——深入理解 ERABASIC
+> 动态解析、运行时机制、函数安全性、常量折叠——深入理解 ERABASIC
 
-**前置知识**：第4章「函数」｜**本章要点**：三阶段流水线、REF 变量生命周期
+**前置知识**：第4章「函数」｜**本章要点**：三阶段流水线、METHOD_SAFE 限制、CanRestructure 与编译期优化
 
 | 主题 | 内容 |
 |:---|:---|
 | [动态解析与反射](dynamic-reflection.zh.md) | RETURNFORM→EVAL→CALLFORM→CALLSTR→变量反射→ALS别名 |
 | [运行时机制](runtime-mechanics.zh.md) | ConvertArg→SetTransporter→IntoFunction、REF变量生命周期 |
+| [函数安全性与 METHOD_SAFE](method-safety.zh.md) | #FUNCTION 体内可用命令限制、METHOD_SAFE flag、与 RESULT 污染的区别 |
+| [常量折叠](constant-folding.zh.md) | CanRestructure、数组初始化常量折叠、SELECTCASE 跳转表优化 |
 
 ---
 

@@ -70,6 +70,8 @@ nav:
       - 高度なトピック:
           - tutorial/dynamic-reflection.md
           - tutorial/runtime-mechanics.md
+          - tutorial/method-safety.md
+          - tutorial/constant-folding.md
   - 仕様概要:
       - Skia版:
           - Skia/Skia_Summary.md
@@ -581,6 +583,8 @@ plugins:
             高度なトピック: Advanced Topics
             動的解析とリフレクション: Dynamic Parsing and Reflection
             実行時メカニズム: Runtime Mechanics
+            関数安全性と METHOD_SAFE: Function Safety and METHOD_SAFE
+            定数畳み込み: Constant Folding
         - build: true
           default: true
           locale: ja
@@ -698,6 +702,8 @@ plugins:
             高度なトピック: 高级主题
             動的解析とリフレクション: 动态解析与反射
             実行時メカニズム: 运行时机制
+            関数安全性と METHOD_SAFE: 函数安全性与 METHOD_SAFE
+            定数畳み込み: 常量折叠
       reconfigure_material: true
       reconfigure_search: true
   - minify:
