@@ -17,6 +17,10 @@ hide:
 
 	Returns the font size set by `GSETFONT` for the `Graphics` with the specified `gID`.
 
+!!! warning "Skia version note"
+
+	Calling `GGETFONTSIZE` after `GCREATE` without `GSETFONT` causes a NullReferenceException in EM+EE, but returns `0` in the Skia version.
+
 !!! hint "Hint"
 
     Both command and expression function supported.

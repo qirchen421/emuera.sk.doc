@@ -17,6 +17,10 @@ hide:
 
 	Returns the font name set by `GSETFONT` for the `Graphics` with the specified `gID`.
 
+!!! warning "Skia version note"
+
+	Calling `GGETFONT` after `GCREATE` without `GSETFONT` causes a NullReferenceException in EM+EE, but returns an empty string `""` in the Skia version.
+
 !!! hint "Hint"
 
     Both command and expression function supported.

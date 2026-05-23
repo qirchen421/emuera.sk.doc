@@ -36,7 +36,7 @@ Emuera 文档项目（MkDocs + mkdocs-i18n 多语言站点），非代码项目�
 | 中文 | `.zh.md` |
 | 英语 | `.en.md` |
 
-同步范围：`Skia/Skia_Summary.*`、`EMEE/EMEE_Summary.*`、`Reference/README.*`、`Reference/<FunctionName>.*`
+同步范围：`Skia/Skia_Summary.*`、`Skia/CHANGELOG.*`、`EMEE/EMEE_Summary.*`、`EMEE/CHANGELOG.*`、`Reference/README.*`、`Reference/<FunctionName>.*`
 
 流程：确认语言版本 → 检查其他语言版本是否存在 → **同时修改所有版本**
 
@@ -44,16 +44,22 @@ Emuera 文档项目（MkDocs + mkdocs-i18n 多语言站点），非代码项目�
 
 > 上游 `Changelog/README.md` 已被移动到子栏目 `EMEE/CHANGELOG.md`。
 > **当前权威位置为 `EMEE/CHANGELOG.*`**。上游更新时需同步。
+> **Skia 变体 Changelog 权威位置为 `emuera_lazyloading_selfmodified_version/CHANGELOG.md`**。
 
 | 文件 | 作用 | 同步方向 |
 |------|------|---------|
 | `Changelog/README.*` | 上游旧位置（可能不再更新） | 接收上游后 → 同步到 EMEE |
 | `EMEE/CHANGELOG.*` | **当前权威位置**，MkDocs 实际访问 | 主编辑位置 |
+| `emuera_lazyloading_selfmodified_version/CHANGELOG.md` | Skia 变体源文件 | 源更新后 → 同步到 docs/skia/CHANGELOG.* |
 
-同步流程：
+### EMEE Changelog 同步流程
 1. 上游 `Changelog/README.en.md` 更新 → 翻译后更新 `Changelog/README.md` + `README.zh.md`
 2. 将更新同步到 `EMEE/CHANGELOG.md` + `CHANGELOG.en.md` + `CHANGELOG.zh.md`
 3. 三语言必须全部同步
+
+### Skia Changelog 同步流程
+1. `emuera_lazyloading_selfmodified_version/CHANGELOG.md` 更新 → 作为源文件将源文件内容同步到 `docs/skia/CHANGELOG.zh.md`
+2. 三语言必须全部同步
 
 ## Git 分支策略
 

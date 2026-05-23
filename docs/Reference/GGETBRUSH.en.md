@@ -17,6 +17,10 @@ hide:
 
 	Returns the color set by `GSETBRUSH` for the `Graphics` with the specified `gID` (cARGB).
 
+!!! warning "Skia version note"
+
+	Calling `GGETBRUSH` after `GCREATE` without `GSETBRUSH` causes a NullReferenceException in EM+EE, but returns `0` in the Skia version.
+
 !!! hint "Hint"
 
     Both command and expression function supported.

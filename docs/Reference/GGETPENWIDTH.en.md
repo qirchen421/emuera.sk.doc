@@ -17,6 +17,10 @@ hide:
 
 	Returns the pen width set by `GSETPEN` for the `Graphics` with the specified `gID`.
 
+!!! warning "Skia version note"
+
+	Calling `GGETPENWIDTH` after `GCREATE` without `GSETPEN` causes a NullReferenceException in EM+EE, but returns `0` in the Skia version.
+
 !!! hint "Hint"
 
     Both command and expression function supported.

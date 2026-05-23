@@ -17,6 +17,10 @@ hide:
 
     返回指定的 `gID` 使用 `GSETFONT` 设置的字体名称。
 
+!!! warning "Skia版注意"
+
+    `GCREATE` 后未调用 `GSETFONT` 就调用 `GGETFONT` 时，EM+EE 会抛出 NullReferenceException，而 Skia 版返回空字符串 `""`。
+
 !!! hint "提示"
 
     命令 / 行内函数两种写法均有效。

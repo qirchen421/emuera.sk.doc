@@ -17,6 +17,10 @@ hide:
 
 	返回  `gID` 代表的图像中 `GSETPEN` 所指定的颜色（cARGB）。
 
+!!! warning "Skia版注意"
+
+	`GCREATE` 后未调用 `GSETPEN` 就调用 `GGETPEN` 时，EM+EE 会抛出 NullReferenceException，而 Skia 版返回 `0`。
+
 !!! hint "提示"
 
     命令 / 行内函数两种写法均有效。

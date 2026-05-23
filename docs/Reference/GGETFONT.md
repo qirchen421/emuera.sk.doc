@@ -17,6 +17,10 @@ hide:
 
 	指定した`gID`の、`GSETFONT`で指定したフォント名を返す
 
+!!! warning "Skia版の注意"
+
+	`GCREATE`後に`GSETFONT`を呼び出さずに`GGETFONT`を呼ぶと、EM+EEではNullReferenceExceptionが発生しますが、Skia版では空文字列`""`を返します。
+
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。

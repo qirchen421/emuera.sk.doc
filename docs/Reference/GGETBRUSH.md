@@ -17,6 +17,10 @@ hide:
 
 	指定した`gID`の、`GSETBRUSH`で指定した色名を返す(cARGB)
 
+!!! warning "Skia版の注意"
+
+	`GCREATE`後に`GSETBRUSH`を呼び出さずに`GGETBRUSH`を呼ぶと、EM+EEではNullReferenceExceptionが発生しますが、Skia版では`0`を返します。
+
 !!! hint "ヒント"
 
     命令、式中関数両方対応しています。
