@@ -1292,8 +1292,8 @@ CSV编号可以设置为`1,3,7`等跳过，
 但角色注册时会紧凑注册。  
 
 处理预先准备的角色数据如`CFLAG`或`BASE`等时  
-指定的角色编号不是CSV编号，而是注册顺序。  
-（CSV编号在EmueraWiki等中也被称为"NO"（Number的含义）。后者也被称为"注册编号"）  
+指定的编号不是CSV编号（角色注册编号 (NO)），而是登记编号 (CharaID)（注册顺序）。  
+（CSV编号在EmueraWiki等中也被称为"NO"（Number的含义），即角色注册编号 (NO)。后者即角色登记编号 (CharaID)）  
 
 ---  
 
@@ -1464,7 +1464,7 @@ era是调教模拟器，原本没有RPG、地图或战略。
 //  
 //***自定义角色相关的补充  
 //创建无csv编号的自定义角色，使其可删除的系统情况下  
-//删除角色时注册编号也会紧凑。CFLAG等也联动。  
+//删除角色时登记编号 (CharaID) 也会紧凑。CFLAG等也联动。  
 
 //不仅是自定义角色，删除CSV存在的角色时编号也会紧凑。  
 
@@ -1474,24 +1474,24 @@ era是调教模拟器，原本没有RPG、地图或战略。
 //例如，  
 //=||  
 //;这里CFLAG:0是"记录初次对象ID的东西"  
-//;TARGET是"调教对象"的注册编号  
-//CFLAG:注册编号:0 = TARGET  
+//;TARGET是"调教对象"的登记编号 (CharaID)  
+//CFLAG:登记编号(CharaID):0 = TARGET  
 //||=  
-//上述示例是，记录"注册编号"角色的首次对象为TARGET。  
+//上述示例是，记录"登记编号 (CharaID)"角色的首次对象为TARGET。  
 
-//删除角色时CFLAG的注册编号部分会自动处理，这里不用考虑。  
+//删除角色时CFLAG的登记编号 (CharaID) 部分会自动处理，这里不用考虑。  
 
 //但是，如果TARGET是1，1号角色名为"Firstko"，2号角色名为"Secondko"，  
 
-//删除Firstko后编号会自动紧凑，Secondko成为注册编号1号角色  
+//删除Firstko后编号会自动紧凑，Secondko成为登记编号 (CharaID) 1号角色  
 
-//"CFLAG:注册编号:0"保持1不变，首次对象变成Secondko的错误发生。  
+//"CFLAG:登记编号(CharaID):0"保持1不变，首次对象变成Secondko的错误发生。  
 
-//另外，"SORTCHARA"排序角色处理和"SWAPCHARA"交换注册编号时也会发生同样现象。  
+//另外，"SORTCHARA"排序角色处理和"SWAPCHARA"交换登记编号 (CharaID) 时也会发生同样现象。  
 
 //所以，角色参考，  
 //如上项所示使用NO（CSV编号）等，  
-//CFLAG:注册编号:0 = NO:TARGET  
+//CFLAG:登记编号(CharaID):0 = NO:TARGET  
 //等保存可避免错误。  
 
 //使用ADDVOIDCHARA的自定义角色，所有信息都是全新的（0或空字符串）。NO也不例外，  

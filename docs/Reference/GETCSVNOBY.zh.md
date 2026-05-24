@@ -20,16 +20,20 @@ hide:
     GETCSVNOBYCALLNAME callname
     GETCSVNOBYMASTERNAME mastername
     ```
-    通过角色的名字反查 CSV 模板编号。是 [CSVNAME系](CSVNAME.zh.md) 的逆操作：CSVNAME 从编号查名字，GETCSVNOBY 从名字查编号。
+    通过角色的名字反查角色注册编号 (NO)。是 [CSVNAME系](CSVNAME.zh.md) 的逆操作：CSVNAME 从编号查名字，GETCSVNOBY 从名字查编号。
 
     - `GETCSVNOBYNAME`：通过 `NAME`（角色名）反查
     - `GETCSVNOBYNICKNAME`：通过 `NICKNAME`（昵称）反查
     - `GETCSVNOBYCALLNAME`：通过 `CALLNAME`（称呼）反查
     - `GETCSVNOBYMASTERNAME`：通过 `MASTERNAME`（主人名）反查
 
-    返回值：找到则返回模板编号（≥0），未找到返回 -1。
+    返回值：找到则返回角色注册编号 (NO)（≥0），未找到返回 -1。
 
-    当存在多个同名角色时，返回最后加载的模板编号。
+    当存在多个同名角色时，返回最后加载的注册编号。
+
+    !!! warning "与 FINDCHARA 的区别"
+        `GETCSVNOBY*` 查询的是 CSV 模板数据，角色无需已被 `ADDCHARA` 添加即可查找。
+        [FINDCHARA](FINDCHARA.zh.md) 查询的是运行时已添加的角色，返回的是登记编号 (CharaID) 而非注册编号 (NO)。
 
 !!! hint "提示"
 
@@ -45,10 +49,10 @@ hide:
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE 
         LOCAL = GETCSVNOBYNAME("絵夢 江良")
-        PRINTFORMW 编号={LOCAL} 称呼编号={GETCSVNOBYCALLNAME("江良")}
+        PRINTFORMW 番号={LOCAL} 呼び名番号={GETCSVNOBYCALLNAME("江良")}
     ``` 
     ``` title="结果"
-    编号=0 称呼编号=0
+    番号=0 呼び名番号=0
     ```
 
 ### 相关项目

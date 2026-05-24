@@ -33,7 +33,7 @@ hide:
 	CSVCFLAG charaNo, index
     ```
 	这是直接调用 CSV 中定义的值的函数。  
-	第一参数为角色编号，第二参数为各变量的索引。  
+	第一参数为角色注册编号 (NO)，第二参数为各变量的索引。  
 	`CSVCSTR` 会将字符串赋值给 `RESULTS`，其他函数则将数值赋值给 `RESULT`。  
 
 !!! hint "提示"

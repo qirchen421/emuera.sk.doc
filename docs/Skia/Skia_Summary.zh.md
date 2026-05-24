@@ -86,10 +86,10 @@
 | ![](../assets/images/IconSK.webp) `SQL_EXPORT_DT_XML` | 命令 | 从 SQL 导出 DataTable 为 XML | [SQL_XML](../Reference/SQL_XML.zh.md) |
 | ![](../assets/images/IconSK.webp) `SQL_IMPORT_XML_CUSTOM` | 命令 | 自定义 XML 导入 | [SQL_XML](../Reference/SQL_XML.zh.md) |
 | ![](../assets/images/IconSK.webp) `STRICT_FONT_FALLBACK` | 命令 | 严格字体回退模式 | [STRICT_FONT_FALLBACK](../Reference/STRICT_FONT_FALLBACK.zh.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中函数 | 从NAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中函数 | 从NICKNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYCALLNAME` | 式中函数 | 从CALLNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
-| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中函数 | 从MASTERNAME反查角色编号 | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNAME` | 式中函数 | 从NAME反查角色注册编号 (NO) | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYNICKNAME` | 式中函数 | 从NICKNAME反查角色注册编号 (NO) | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYCALLNAME` | 式中函数 | 从CALLNAME反查角色注册编号 (NO) | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
+| ![](../assets/images/Icondotnet.webp) `GETCSVNOBYMASTERNAME` | 式中函数 | 从MASTERNAME反查角色注册编号 (NO) | [GETCSVNOBY](../Reference/GETCSVNOBY.zh.md) |
 | ![](../assets/images/Icondotnet.webp) `MATCHALL` | 式中函数 | 数组全量搜索（变量引用） | [MATCHALL](../Reference/MATCHALL.zh.md) |
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中函数 | 数组全量搜索（字符串变量名） | [MATCHALL](../Reference/MATCHALL.zh.md) |
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | [事件函数](../tutorial/event-functions.zh.md#before_throw) |
@@ -698,7 +698,7 @@
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)GETCSVNOBY* 名称反查
 !!! summary ""
 
-    从 NAME/NICKNAME/CALLNAME/MASTERNAME 反查角色编号。O(1) 查找，未找到时返回 `-1`。
+    从 NAME/NICKNAME/CALLNAME/MASTERNAME 反查角色注册编号 (NO)。O(1) 查找，未找到时返回 `-1`。
 
 !!! info "API"
 

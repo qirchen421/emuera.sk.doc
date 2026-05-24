@@ -14,7 +14,7 @@ hide:
     ```  { #language-erbapi }
 	SWAPCHARA charaID, charaID
     ```
-    交换指定两个角色的注册编号。
+    交换指定两个角色的登记编号 (CharaID)。
 
 !!! hint "提示"
 

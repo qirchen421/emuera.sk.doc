@@ -13,7 +13,7 @@
 
 era 游戏的核心是**角色**——每个角色有自己的属性、状态、能力。ERABASIC 通过**角色变量**系统来管理这些数据。
 
-角色变量与普通变量的关键区别：角色变量的第一维索引是**角色注册编号**，每个角色拥有独立的一组数据。
+角色变量与普通变量的关键区别：角色变量的第一维索引是**角色登记编号 (CharaID)**，每个角色拥有独立的一组数据。
 
 !!! note "eramaker 兼容性"
     基础信息变量（`NAME`/`CALLNAME`/`NO`）、数值型角色变量（`BASE`/`ABL`/`TALENT`/`EXP`/`MARK`/`CFLAG`/`PALAM`/`SOURCE`）、角色管理指令（`ADDCHARA`/`DELCHARA`）是 eramaker 就存在的功能。`CSTR`/`CDFLAG`/`TCVAR`、CSV 读取函数（`CSVABL` 等）、`VariableSize.csv`、自定义角色变量（`#DIM CHARADATA`）是 Emuera 的扩展功能。
@@ -22,7 +22,7 @@ era 游戏的核心是**角色**——每个角色有自己的属性、状态、
 ; 普通变量：一维索引
 FLAG:10 = 1
 
-; 角色变量：第一维是角色注册编号
+; 角色变量：第一维是登记编号 (CharaID)
 CFLAG:TARGET:10 = 1    ; 当前调教角色的第10号 CFLAG
 CFLAG:MASTER:10 = 1    ; 主角的第10号 CFLAG
 ```
@@ -33,32 +33,47 @@ CFLAG:MASTER:10 = 1    ; 主角的第10号 CFLAG
 
 理解角色变量的前提是理解两种"角色编号"：
 
-### 注册编号 vs 角色编号
+### 角色注册编号 (NO) vs 角色登记编号 (CharaID)
 
-| 概念 | 标识符 | 说明 | 特点 |
-|------|--------|------|------|
-| **注册编号** | `MASTER`/`TARGET`/`ASSI`/`PLAYER` | 引擎动态分配的索引 | 从 0 开始连续，随增删变化 |
-| **角色编号** | `NO` | CSV 中定义的固定编号 | 静态不变，标识角色模板 |
+| 概念 | 标识符 | 日文原文 | 说明 | 特点 |
+|------|--------|---------|------|------|
+| **角色注册编号 (NO)** | `NO` | キャラ番号 | CSV 中定义的固定编号 | 静态不变，标识角色身份，类似"身份证号" |
+| **角色登记编号 (CharaID)** | `MASTER`/`TARGET`/`ASSI`/`PLAYER` | キャラ登録番号 | 引擎动态分配的索引 | 从 0 开始连续，随增删变化，类似"座位号" |
+
+!!! warning "日文原文命名与中文直觉相反"
+
+    日文原文将 `CharacterList[i]` 的动态索引称为「キャラ登録番号」（字面：角色登记编号），
+    将 CSV 中的固定编号 `NO` 称为「キャラ番号」（字面：角色编号）。
+
+    在中文语境中，"注册"暗示"登记在册、固定不变"（如注册商标、注册号），
+    而"登记"暗示"临时入住、动态分配"（如酒店登记号）。
+
+    | 日文原文 | 中文术语 | 缩写 | 类比 | 特点 |
+    |---------|---------|------|------|------|
+    | キャラ番号 | **角色注册编号** | **(NO)** | 身份证号 | CSV 定义，永久不变 |
+    | キャラ登録番号 | **角色登记编号** | **(CharaID)** | 酒店登记号 | 动态分配，随 ADD/DEL 重排 |
+
+    `GETCHARA(NO值)` 的语义就是"用角色注册编号 (NO) 查角色登记编号 (CharaID)"——用身份证号找酒店房间号。
 
 ```erb
-; 注册编号是动态的
-; 游戏启动时主角自动注册，编号为 0
+; 角色登记编号 (CharaID) 是动态的
+; 游戏启动时主角自动加载，登记编号 (CharaID) 为 0
 ; ADDCHARA 分配下一个连续编号
 ; DELCHARA 后编号重新排列
 
-; 角色编号是静态的
-; 在 CharaXX.csv 的第一列定义
+; 角色注册编号 (NO) 是静态的
+; 在 CharaXX.csv 的番号行定义
 ; 不会随添加/删除而改变
 ```
 
-### 四个核心注册编号
+### 四个核心登记编号 (CharaID)
 
 | 变量 | 含义 | 默认值 | 说明 |
 |------|------|--------|------|
-| `MASTER` | 主角的注册编号 | `0`（固定） | 始终为 0 |
-| `TARGET` | 当前调教对象的注册编号 | `1` | 被调教的角色 |
-| `ASSI` | 助手的注册编号 | `-1`（无助手） | 辅助调教的角色 |
-| `PLAYER` | 当前执行调教者的注册编号 | `0`（= MASTER） | 通常等于 MASTER 或 ASSI，由脚本赋值 |
+| `MASTER` | 主角的登记编号 (CharaID) | `0`（固定） | 始终为 0 |
+| `TARGET` | 当前调教对象的登记编号 (CharaID) | `1` | 被调教的角色 |
+| `ASSI` | 助手的登记编号 (CharaID) | `-1`（无助手） | 辅助调教的角色 |
+| `PLAYER` | 当前执行调教者的登记编号 (CharaID) | `0`（= MASTER） | 通常等于 MASTER 或 ASSI，由脚本赋值 |
 
 > **PLAYER 与 ASSIPLAY 的关系**：`PLAYER` 表示"谁在执行调教"，`ASSIPLAY` 表示"助手是否在执行调教"（0=主角执行，1=助手执行）。当 `ASSIPLAY == 1` 时，`PLAYER` 通常被设为 `ASSI`。
 
@@ -83,18 +98,18 @@ ELSE
 ENDIF
 ```
 
-### 注册编号的动态性
+### 登记编号 (CharaID) 的动态性
 
 ```erb
-; 初始状态：只有主角，注册编号 0
+; 初始状态：只有主角，登记编号 (CharaID) 0
 ; MASTER == 0, CHARANUM == 1
 
-ADDCHARA 5        ; 添加角色编号5的角色，注册编号变为 1
-ADDCHARA 10       ; 添加角色编号10的角色，注册编号变为 2
+ADDCHARA 5        ; 添加角色注册编号 (NO) 5的角色，登记编号 (CharaID) 变为 1
+ADDCHARA 10       ; 添加角色注册编号 (NO) 10的角色，登记编号 (CharaID) 变为 2
 ; CHARANUM == 3
 
-DELCHARA 1        ; 删除注册编号1的角色
-; 注册编号重新排列：原编号2变为1
+DELCHARA 1        ; 删除登记编号 (CharaID) 1的角色
+; 登记编号 (CharaID) 重新排列：原编号2变为1
 ; CHARANUM == 2
 ```
 
@@ -102,18 +117,18 @@ DELCHARA 1        ; 删除注册编号1的角色
 
 ```erb
 REPEAT CHARANUM
-    ; COUNT 为当前角色的注册编号（0 ~ CHARANUM-1）
-    PRINTFORML 注册编号={COUNT}, 角色编号={NO:COUNT}, 名字=%NAME:COUNT%
+    ; COUNT 为当前角色的登记编号 (CharaID)（0 ~ CHARANUM-1）
+    PRINTFORML 登记编号(CharaID)={COUNT}, 注册编号(NO)={NO:COUNT}, 名字=%NAME:COUNT%
 REND
 ```
 
-### 通过角色编号查找注册编号
+### 通过角色注册编号 (NO) 查找登记编号 (CharaID)
 
 ```erb
-#DIM regNo
-regNo = GETCHARA(5)    ; 查找角色编号为5的注册编号
-IF regNo >= 0
-    PRINTFORML 找到了，注册编号={regNo}
+#DIM L_REG_NO
+L_REG_NO = GETCHARA(5)    ; 查找角色注册编号 (NO) 为5的登记编号 (CharaID)
+IF L_REG_NO >= 0
+    PRINTFORML 找到了，登记编号 (CharaID)={L_REG_NO}
 ELSE
     PRINTL 角色不存在
 ENDIF
@@ -133,12 +148,12 @@ ENDIF
 | `CALLNAME` | 字符串 | 角色称呼 |
 | `NICKNAME` | 字符串 | 昵称 |
 | `MASTERNAME` | 字符串 | 对主人的称呼 |
-| `NO` | 整数 | 角色编号（CSV 定义） |
+| `NO` | 整数 | 角色注册编号 (NO)（CSV 定义，静态不变） |
 
 ```erb
 PRINTFORML 名字：%NAME:TARGET%
 PRINTFORML 称呼：%CALLNAME:TARGET%
-PRINTFORML 角色编号：{NO:TARGET}
+PRINTFORML 角色注册编号 (NO)：{NO:TARGET}
 ```
 
 ### 数值型角色变量
@@ -209,7 +224,7 @@ CUPCHECK TARGET
 | `CDFLAG` | 三维角色变量，需要三个索引 |
 
 ```erb
-; 第一参数：角色注册编号
+; 第一参数：角色登记编号 (CharaID)
 ; 第二、三参数：自定义索引
 CDFLAG:MASTER:0:2 = 1
 ```
@@ -221,20 +236,20 @@ CDFLAG:MASTER:0:2 = 1
 ### 添加角色
 
 ```erb
-; 添加角色编号为 0 的角色（通常在 FIRST 中）
+; 添加角色注册编号 (NO) 为 0 的角色（通常在 FIRST 中）
 ADDCHARA 0
 
-; 添加指定角色编号的角色
+; 添加指定角色注册编号 (NO) 的角色
 ADDCHARA 5
 
 ; 在指定位置插入角色
-ADDCHARA 3, 1    ; 在注册编号1的位置插入角色编号3的角色
+ADDCHARA 3, 1    ; 在登记编号 (CharaID) 1的位置插入角色注册编号 (NO) 3的角色
 ```
 
 ### 删除角色
 
 ```erb
-; 删除指定注册编号的角色
+; 删除指定登记编号 (CharaID) 的角色
 DELCHARA 2
 
 ; 删除所有角色（除了 MASTER）
@@ -244,13 +259,21 @@ DELCHARA 2
 ### 查找角色
 
 ```erb
-; 按角色编号查找注册编号
-#DIM regNo
-regNo = GETCHARA(5)
-; regNo >= 0 表示找到，-1 表示不存在
+; 按角色注册编号 (NO) 查找登记编号 (CharaID)
+#DIM L_CHARA_ID
+L_CHARA_ID = GETCHARA(5)
+; L_CHARA_ID >= 0 表示找到，-1 表示不存在
 
-; 按角色名查找
-regNo = GETCHARA("博丽灵梦")
+; 按角色名查找登记编号 (CharaID) — 使用 FINDCHARA
+L_CHARA_ID = FINDCHARA(NAME, "博丽灵梦")
+; L_CHARA_ID >= 0 表示找到，-1 表示不存在
+
+; 按角色名反查注册编号 (NO) — 使用 GETCSVNOBYNAME
+#DIM L_NO
+L_NO = GETCSVNOBYNAME("博丽灵梦")
+; L_NO >= 0 表示找到，-1 表示不存在
+; 注意：返回的是注册编号 (NO)，不是登记编号 (CharaID)
+; 若需登记编号，可组合使用：GETCHARA(GETCSVNOBYNAME("博丽灵梦"))
 ```
 
 ### 角色数量
@@ -264,12 +287,12 @@ PRINTFORML 当前角色数：{CHARANUM}
 
 ## CSV 定义角色数据
 
-角色数据在 `CSV/CHARA*.CSV` 文件中定义。文件名中的数字是**角色编号**。
+角色数据在 `CSV/CHARA*.CSV` 文件中定义。文件名中的数字是**角色注册编号 (NO)**。
 
 ### 基本格式
 
 ```csv
-; CSV/CHARA0.CSV — 角色编号0
+; CSV/CHARA0.CSV — 角色注册编号 (NO) 0
 番号,0
 名前,博丽灵梦
 呼び名,灵梦
@@ -281,7 +304,7 @@ PRINTFORML 当前角色数：{CHARANUM}
 
 | 关键字 | 对应变量 | 说明 |
 |--------|---------|------|
-| `番号` | `NO` | 角色编号 |
+| `番号` | `NO` | 角色注册编号 (NO) |
 | `名前` | `NAME` | 角色名 |
 | `呼び名` | `CALLNAME` | 角色称呼 |
 | `基礎` | `BASE` | 基础参数 |
@@ -374,7 +397,7 @@ CSTR,0,测试用角色
 ```
 
 ```erb
-; ADDCHARA 执行后的变量状态（注册编号 = 1 时）
+; ADDCHARA 执行后的变量状态（登记编号 (CharaID) = 1 时）
 ; NO:1 = 5
 ; NAME:1 = "博丽灵梦"
 ; CALLNAME:1 = "灵梦"
@@ -403,10 +426,10 @@ ABL:TARGET:idx = 10
 
 ### CSV 读取函数
 
-无需 `ADDCHARA` 即可直接读取 CSV 定义值的函数群。第一参数是**角色编号**（不是注册编号）。
+无需 `ADDCHARA` 即可直接读取 CSV 定义值的函数群。第一参数是**角色注册编号 (NO)**（不是登记编号 (CharaID)）。
 
 ```erb
-; 直接读取角色编号5的CSV数据（无需 ADDCHARA）
+; 直接读取角色注册编号 (NO) 5的CSV数据（无需 ADDCHARA）
 PRINTFORML 能力0 = {CSVABL(5, 0)}
 PRINTFORML 素质3 = {CSVTALENT(5, 3)}
 PRINTFORML 基础0 = {CSVBASE(5, 0)}
@@ -414,7 +437,7 @@ PRINTFORML CFLAG0 = {CSVCFLAG(5, 0)}
 PRINTFORML CSTR0 = %CSVCSTR(5, 0)%
 ```
 
-> **CSV 读取函数与变量访问的区别**：`CSVABL(5, 0)` 读取角色编号5的 CSV 定义值。`ABL:TARGET:0` 读取注册编号 TARGET 的当前运行时值。CSV 读取函数用于引用初始值，运行时值用变量访问。
+> **CSV 读取函数与变量访问的区别**：`CSVABL(5, 0)` 读取角色注册编号 (NO) 5的 CSV 定义值。`ABL:TARGET:0` 读取登记编号 (CharaID) TARGET 的当前运行时值。CSV 读取函数用于引用初始值，运行时值用变量访问。
 
 ### VariableSize.csv 修改数组大小
 
@@ -461,15 +484,15 @@ PRINTFORML 状态：%特殊状态:TARGET:0%
 
 ## RELATION — 特殊的角色变量
 
-`RELATION` 是特殊的角色变量，它的第二参数是**角色编号**而非注册编号：
+`RELATION` 是特殊的角色变量，它的第二参数是**角色注册编号 (NO)**而非登记编号 (CharaID)：
 
 ```erb
-; RELATION:注册编号:角色编号
-; 调教对象与角色编号3的角色的相性
+; RELATION:登记编号(CharaID):角色注册编号(NO)
+; 调教对象与角色注册编号 (NO) 3的角色的相性
 RELATION:TARGET:3 = 50
 ```
 
-这与大多数角色变量不同——其他角色变量的第二参数是数组索引，而 `RELATION` 的第二参数是角色编号。
+这与大多数角色变量不同——其他角色变量的第二参数是数组索引，而 `RELATION` 的第二参数是角色注册编号 (NO)。
 
 ---
 
@@ -477,9 +500,9 @@ RELATION:TARGET:3 = 50
 
 | 陷阱 | 说明 | 解决方案 |
 |------|------|---------|
-| 混淆注册编号和角色编号 | 注册编号随增删变化，角色编号固定不变 | 用 `GETCHARA()` 按角色编号查找注册编号 |
+| 混淆登记编号 (CharaID) 和角色注册编号 (NO) | 登记编号 (CharaID) 随增删变化，角色注册编号 (NO) 固定不变 | 用 `GETCHARA()` 按角色注册编号 (NO) 查找登记编号 (CharaID) |
 | `ASSI` 为 -1 时访问角色变量 | 没有助手时 `ASSI == -1`，访问 `BASE:ASSI:0` 会出错 | 先检查 `ASSI >= 0` |
-| `DELCHARA` 后注册编号变化 | 删除角色后，后续角色的注册编号会重新排列 | 遍历时用 `CHARANUM` 和 `REPEAT`，不要缓存注册编号 |
+| `DELCHARA` 后登记编号 (CharaID) 变化 | 删除角色后，后续角色的登记编号 (CharaID) 会重新排列 | 遍历时用 `CHARANUM` 和 `REPEAT`，不要缓存登记编号 (CharaID) |
 | 忘记 `CUP`/`CDOWN` 用 `CUPCHECK` | `CUP`/`CDOWN` 需要用 `CUPCHECK` 而非 `UPCHECK` | 角色版用 `CUPCHECK`，全局版用 `UPCHECK` |
 | `TALENT` 是二值标记 | `TALENT` 的值是 0 或 1，不是任意整数 | 用 `IF TALENT:TARGET:服从` 而非 `IF TALENT:TARGET:服从 > 0` |
 | `SOURCE` 自动清零 | `@SOURCE_CHECK` 结束后所有 `SOURCE` 被设为 0 | 如需保留 SOURCE 值，在 `@SOURCE_CHECK` 前保存 |

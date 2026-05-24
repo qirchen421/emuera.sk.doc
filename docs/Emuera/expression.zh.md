@@ -63,7 +63,7 @@ eramaker中可能只为角色创建准备了100个数组。
 因此，即使在`chara3.csv`和`chara03.csv`和`chara3B.csv`中分别定义不同的角色，也只有一个生效。  
 Emuera中只要内存允许，可以定义任意多个角色。  
 另外，只要是符合`chara*.csv`的，`chara101.csv`、`charaABC.csv`等任何文件都会读取。  
-角色编号重复，在使用[`ADDCHARA`](../Reference/ADDCHARA.zh.md)或`ADDSPCHARA`时有多个候选时，只有先读取的那个生效。  
+角色注册编号 (NO) 重复，在使用[`ADDCHARA`](../Reference/ADDCHARA.zh.md)或`ADDSPCHARA`时有多个候选时，只有先读取的那个生效。  
 
 ## 整数类型的值范围  
 eramaker中可处理的整数是32位有符号整数，即`-2147483648～2147483647`范围。  

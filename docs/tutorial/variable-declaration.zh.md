@@ -325,7 +325,7 @@ STATIC 和默认（非 DYNAMIC）的区别在于**语义清晰性**：STATIC 明
 #DIMS CHARADATA NICKNAME         ; 每个角色的昵称
 ```
 
-- 访问方式：`SKILL_LEVEL:角色编号:技能编号`
+- 访问方式：`SKILL_LEVEL:登记编号(CharaID):技能编号`
 - 随角色添加/删除而分配/释放
 
 ### 全局修饰互斥表
@@ -623,7 +623,7 @@ CALL PROCESS(1, 10, 20, 30)
 |------|------|---------|
 | `A` ~ `Z`（26个） | 引擎内置泛用变量 | `L_A`, `L_COUNT` |
 | `DAY`, `MONEY`, `TIME` | 系统状态变量 | `L_DAY`, `L_MONEY` |
-| `TARGET`, `ASSI`, `MASTER` | 角色编号变量 | `L_TARGET` |
+| `TARGET`, `ASSI`, `MASTER` | 登记编号 (CharaID) 变量 | `L_TARGET` |
 | `LOCAL`, `ARG`, `GLOBAL` | 引擎扩展变量（LOCAL/LOCALS 已过时） | `L_LOCAL`, `L_ARG`，或使用 `#DIM`/`#DIMS` |
 | `REF`, `OUT` | #DIM 修饰关键字 | `_ref`, `_out`, `L_OUT` |
 | 指令同名 | 如 `PRINTFORM`, `CALL`, `RETURN` | 加前缀 |

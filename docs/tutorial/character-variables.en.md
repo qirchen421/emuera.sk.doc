@@ -249,8 +249,16 @@ DELCHARA 2
 regNo = GETCHARA(5)
 ; regNo >= 0 means found, -1 means not found
 
-; Find by character name
-regNo = GETCHARA("Hakurei Reimu")
+; Find registration number by character name — use FINDCHARA
+regNo = FINDCHARA(NAME, "Hakurei Reimu")
+; regNo >= 0 means found, -1 means not found
+
+; Look up character number by name — use GETCSVNOBYNAME
+#DIM charaNo
+charaNo = GETCSVNOBYNAME("Hakurei Reimu")
+; charaNo >= 0 means found, -1 means not found
+; Note: returns the character number (NO), not the registration number
+; For registration number, combine: GETCHARA(GETCSVNOBYNAME("Hakurei Reimu"))
 ```
 
 ### Character Count

@@ -22,7 +22,7 @@ hide:
     ```
 	这是直接调用 CSV 中定义的 `NAME`、`CALLNAME`、`NICKNAME`、`MASTERNAME` 的函数。  
 	当你想要获取未拥有角色的名字等情况时可以使用。  
-	第一个参数是角色编号（`NO` 对应的那个）。
+	第一个参数是角色注册编号 (NO)（`NO` 对应的那个）。
 
 !!! hint "提示"
 
@@ -37,10 +37,10 @@ hide:
     
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE 
-        PRINTFORMW 角色编号0的全名:%CSVNAME(0)% 称呼名:%CSVCALLNAME(0)%
+        PRINTFORMW 角色注册编号 (NO) 0的全名:%CSVNAME(0)% 称呼名:%CSVCALLNAME(0)%
     ``` 
     ``` title="结果"
-    角色编号0的全名:絵夢 江良 称呼名:江良
+    角色注册编号 (NO) 0的全名:絵夢 江良 称呼名:江良
     ```
 
 ### 相关项目

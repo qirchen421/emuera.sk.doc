@@ -22,7 +22,7 @@ hide:
     ```
     这是遍历角色间的 [`SUMARRAY`](./SUMARRAY.zh.md)、[`MATCH`](./MATCH.zh.md)、[`MAXARRAY`](./MAXMINARRAY.zh.md)、[`MINARRAY`](./MAXMINARRAY.zh.md) 的变体。  
     `charaArray` 必须是角色数组变量。  
-    `start, end` 需通过角色注册编号指定。  
+    `start, end` 需通过角色登记编号 (CharaID) 指定。  
     例如，`RESULT = SUMCARRAY(CFLAG:2, A, B)` 也可以写成如下形式。  
     （`B` 必须小于 `CHARANUM`）
 

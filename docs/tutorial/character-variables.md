@@ -249,8 +249,16 @@ DELCHARA 2
 regNo = GETCHARA(5)
 ; regNo >= 0 なら見つかった、-1 なら存在しない
 
-; キャラ名で検索
-regNo = GETCHARA("博麗霊夢")
+; キャラ名で登録番号を検索 — FINDCHARAを使用
+regNo = FINDCHARA(NAME, "博麗霊夢")
+; regNo >= 0 なら見つかった、-1 なら存在しない
+
+; キャラ名でキャラ番号を逆引き — GETCSVNOBYNAMEを使用
+#DIM charaNo
+charaNo = GETCSVNOBYNAME("博麗霊夢")
+; charaNo >= 0 なら見つかった、-1 なら存在しない
+; 注意：返されるのはキャラ番号 (NO) であり、登録番号ではない
+; 登録番号が必要な場合は組み合わせて使用：GETCHARA(GETCSVNOBYNAME("博麗霊夢"))
 ```
 
 ### キャラ数の取得

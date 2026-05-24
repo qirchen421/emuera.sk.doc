@@ -325,13 +325,13 @@ erakanon或eralight的CSV文件夹内，扩展名为`.csv`的文件。
 CSV这样写的话，在ERB处理中
 
 ```
-ABL:角色编号:0
+ABL:登记编号(CharaID):0
 ```
 
 可以写成
 
 ```
-ABL:角色编号:顺从
+ABL:登记编号(CharaID):顺从
 ```
 
 这样。

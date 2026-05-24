@@ -6,7 +6,7 @@
     - [函数与 CALL](call.zh.md) — 函数调用机制、RETURN/RETURNF
     - [FORM 语法](form-syntax.zh.md) — `%变量%`、`{表达式}` 展开规则
     - [命令 vs 表达式](command-vs-expression.zh.md) — 两条求值路径
-    - [角色变量](character-variables.zh.md) — CSV 模板与角色编号
+    - [角色变量](character-variables.zh.md) — CSV 模板与角色注册编号 (NO)
 
 !!! tip "本章要点"
 
@@ -248,7 +248,7 @@ TRYCCALLSTR L_CALL_STRING            ; 函数不存在时跳到 CATCH
 | 时代 | 能力 | 代表函数 | 动态程度 | 查询方向 |
 |------|------|---------|---------|---------|
 | eramaker | CSV 编号→值查询 | `CSVNAME`/`CSVBASE`/`CSVTALENT` | 编号→值（固定映射） | 编号 → 值 |
-| eramaker | 角色编号反查 | `GETCHARA`/`FINDCHARA` | 编号→角色索引 | 编号 → 索引 |
+| eramaker | 注册编号反查 | `GETCHARA`/`FINDCHARA` | 角色注册编号 (NO)→登记编号 (CharaID) | 角色注册编号 (NO) → 登记编号 (CharaID) |
 | eramaker | 数值→等级查询 | `GETPALAMLV`/`GETEXPLV` | 数值→等级阈值 | 值 → 等级 |
 | Emuera | 名称→编号反查 | `GETNUM` | 字符串→编号映射 | 名称 → 编号 |
 | Emuera | FORM 动态返回值 | `RETURNFORM` | FORM→整数解析 | 字符串 → 整数 |

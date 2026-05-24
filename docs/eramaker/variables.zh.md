@@ -36,13 +36,13 @@ Emuera 中变量的上限可以通过 VariableSize.csv 进行修改。
 ### 調教基礎情報変数
 
 !!! note "MASTER"
-	- 指向主角角色的注册编号 `[VariableCode.MASTER]`。注意这可能与 CharaXX.CSV 中指定的角色编号不同。通常为 0。
+	- 指向主角角色的登记编号 (CharaID) `[VariableCode.MASTER]`。注意这可能与 CharaXX.CSV 中指定的角色注册编号 (NO) 不同。通常为 0。
 !!! note "TARGET"
-	- 指向调教中角色的注册编号 `[VariableCode.TARGET]`。注意这可能与 CharaXX.CSV 中指定的角色编号不同。
+	- 指向调教中角色的登记编号 (CharaID) `[VariableCode.TARGET]`。注意这可能与 CharaXX.CSV 中指定的角色注册编号 (NO) 不同。
 !!! note "ASSI"
-	- 指向助手角色的注册编号 `[VariableCode.ASSI]`。注意这可能与 CharaXX.CSV 中指定的角色编号不同。
+	- 指向助手角色的登记编号 (CharaID) `[VariableCode.ASSI]`。注意这可能与 CharaXX.CSV 中指定的角色注册编号 (NO) 不同。
 !!! note "PLAYER"
-	- 指向正在进行调教的角色的注册编号 `[VariableCode.PLAYER]`。通常应与 MASTER 或 ASSI 一致。注意这可能与 CharaXX.CSV 中指定的角色编号不同。
+	- 指向正在进行调教的角色的登记编号 (CharaID) `[VariableCode.PLAYER]`。通常应与 MASTER 或 ASSI 一致。注意这可能与 CharaXX.CSV 中指定的角色注册编号 (NO) 不同。
 !!! note "CHARANUM"
 	- 当前已注册的角色数量 `[VariableCode.CHARANUM]`。包含主角。此变量用户无法修改。
 
@@ -89,7 +89,7 @@ Emuera 中变量的上限可以通过 VariableSize.csv 进行修改。
 但也可以写成 EXP:0，这种情况下会被解释为 EXP:TARGET:0。也就是说，访问调教中角色的数据时可以省略 TARGET:。
 
 !!! note "NO"
-	- 角色编号 `[VariableCode.NO]`（CSV中定义的固定编号）。不是二维数组，需使用 NO:TARGET 或 NO:ASSI 方式访问。
+	- 角色注册编号 (NO) `[VariableCode.NO]`（CSV中定义的固定编号）。不是二维数组，需使用 NO:TARGET 或 NO:ASSI 方式访问。
 
 !!! note "BASE"
 	- 角色的基础参数。示例游戏中，BASE:0 表示体力，BASE:1 表示气力，BASE:2 表示射精槽。
@@ -110,7 +110,7 @@ Emuera 中变量的上限可以通过 VariableSize.csv 进行修改。
 	- 角色的刻印。通过 MARK.CSV 中注册的刻印编号访问。
 
 !!! note "RELATION"
-	- 角色的相性 `[VariableCode.RELATION]`。RELATION:TARGET:3 表示调教中角色与角色编号 3 的角色之间的相性。注意这不是指角色注册编号为 3 的角色的相性（索引是角色编号，不是注册编号）。
+	- 角色的相性 `[VariableCode.RELATION]`。RELATION:TARGET:3 表示调教中角色与角色注册编号 (NO) 为 3 的角色之间的相性。注意这不是指角色登记编号 (CharaID) 为 3 的角色的相性（索引是角色注册编号 (NO)，不是登记编号 (CharaID)）。
 
 !!! note "JUEL"
 	- 角色持有的宝石。通过 PALAM.CSV 中注册的参数编号访问。
@@ -199,23 +199,23 @@ Emuera 中变量的上限可以通过 VariableSize.csv 进行修改。
 	- 这是一个特殊变量，返回随机数。例如 `PRINTV RAND:10` 会随机显示 0 到 9 的数字。
 	- 请记住，RAND:A 返回的是 0 到 A-1 之间的整数。
 
-## 角色的注册编号
+## 角色的登记编号 (CharaID)
 
-### 角色的注册编号与角色编号的区别
+### 角色的登记编号 (CharaID) 与角色注册编号 (NO) 的区别
 
 > 注意：
-> - **角色编号** `[VariableCode.NO]`：CharaXX.CSV 中定义的固定编号，与实体无关
-> - **注册编号** `[VariableCode.TARGET/VariableCode.MASTER/VariableCode.ASSI]`：当前游戏状态中动态分配的编号，0 表示第一个角色
+> - **角色注册编号 (NO)** `[VariableCode.NO]`：CharaXX.CSV 中定义的固定编号，与实体无关
+> - **登记编号 (CharaID)** `[VariableCode.TARGET/VariableCode.MASTER/VariableCode.ASSI]`：当前游戏状态中动态分配的编号，0 表示第一个角色
 
 !!! note "没有实体的角色数据"
-	- CharaXX.CSV 中指定了「编号」。此处指定的编号是「角色编号」。
+	- CharaXX.CSV 中指定了「编号」。此处指定的编号是「角色注册编号 (NO)」。
 	- 但是，CharaXX.CSV 中的角色在调教开始时并非都具有实体。只有通过 ADDCHARA 命令调用后，才会获得实体。
 !!! note "注册角色"
-	- 游戏开始时，只有主角具有实体。主角的「角色注册编号」为 0。
-	- 假设通过 ADDCHARA 注册了「角色编号」为 5 的角色。该角色的「角色编号」是 5，但「角色注册编号」是主角之后的下一个编号，即 1。如果再添加一个「角色编号」为 7 的角色，该角色的注册编号为 2。
+	- 游戏开始时，只有主角具有实体。主角的「登记编号 (CharaID)」为 0。
+	- 假设通过 ADDCHARA 注册了「角色注册编号 (NO)」为 5 的角色。该角色的「角色注册编号 (NO)」是 5，但「登记编号 (CharaID)」是主角之后的下一个编号，即 1。如果再添加一个「角色注册编号 (NO)」为 7 的角色，该角色的登记编号 (CharaID) 为 2。
 !!! note "删除角色"
-	- 通过 DELCHARA 命令删除「角色注册编号」为 1 的角色。那么后来添加的「角色编号」为 7 的角色的「注册编号」会变为 1。
-	- 请务必记住，当前已注册的角色会从 0 开始连续分配「角色注册编号」。
+	- 通过 DELCHARA 命令删除「登记编号 (CharaID)」为 1 的角色。那么后来添加的「角色注册编号 (NO)」为 7 的角色的「登记编号 (CharaID)」会变为 1。
+	- 请务必记住，当前已注册的角色会从 0 开始连续分配「登记编号 (CharaID)」。
 
 ## 关于污秽
 

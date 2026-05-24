@@ -14,7 +14,7 @@ hide:
     ```  { #language-erbapi }
 	ADDCOPYCHARA charaID
     ```
-	新增一个与参数指定注册编号的角色数据完全相同的角色。也就是说，这是 `ADDCHARA` 的一个变体。
+	新增一个与参数指定登记编号 (CharaID) 的角色数据完全相同的角色。也就是说，这是 `ADDCHARA` 的一个变体。
 
 !!! hint "提示"
 

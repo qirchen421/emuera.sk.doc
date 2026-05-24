@@ -219,9 +219,9 @@ ERABASIC 提供了大量内置变量，无需声明即可使用。以下是常�
 | `ARGS` | Str 一维数组 | 函数字符串参数 |
 | `ARGF` | Float 一维数组 | 函数浮点参数（Skia 新增） |
 | `COUNT` | Int | 循环计数器（`REPEAT` 使用） |
-| `TARGET` | Int | 当前交互角色编号 |
-| `MASTER` | Int | 主角编号（通常为 0） |
-| `ASSI` | Int | 助手角色编号 |
+| `TARGET` | Int | 当前交互角色的登记编号 (CharaID) |
+| `MASTER` | Int | 主角的登记编号 (CharaID)（通常为 0） |
+| `ASSI` | Int | 助手角色的登记编号 (CharaID) |
 | `MONEY` | Int | 金钱 |
 | `DAY` | Int | 经过天数 |
 | `TIME` | Int | 时刻 |
@@ -359,7 +359,7 @@ CFLAG:L_VAR:2
 ; 3. 但 L_VAR 本身是数组，L_VAR 会展开为 L_VAR:0
 ; 4. 最终：CFLAG:TARGET:(L_VAR:0):2  → 错误的维度结构
 
-; ✅ 正确：显式写出角色编号
+; ✅ 正确：显式写出角色登记编号 (CharaID)
 CFLAG:TARGET:L_VAR
 ```
 

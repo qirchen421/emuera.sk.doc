@@ -25,8 +25,8 @@ hide:
     
     ``` { #language-erb title="MAIN.ERB" }
     @SYSTEM_TITLE 
-		;假设角色编号0的角色名为浩之，是主人公。
-		;假设角色编号3的角色名为智子，编号5的角色名为蕾米，编号6的角色名为琴音
+		;假设登记编号 (CharaID) 0的角色名为浩之，是主人公。
+		;假设角色注册编号 (NO) 3的角色名为智子，编号5的角色名为蕾米，编号6的角色名为琴音
 		PRINTFORML 当前存在的角色有{CHARANUM}人。
 		ADDCHARA 3
 		ADDCHARA 5

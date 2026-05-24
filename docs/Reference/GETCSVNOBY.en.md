@@ -20,16 +20,20 @@ hide:
     GETCSVNOBYCALLNAME callname
     GETCSVNOBYMASTERNAME mastername
     ```
-    Reverse lookups the CSV template number from a character's name. This is the inverse of [CSVNAME series](CSVNAME.en.md): CSVNAME gets the name from a number, GETCSVNOBY gets the number from a name.
+    Reverse lookups the character number (NO) from a character's name. This is the inverse of [CSVNAME series](CSVNAME.en.md): CSVNAME gets the name from a number, GETCSVNOBY gets the number from a name.
 
     - `GETCSVNOBYNAME`: Reverse lookup by `NAME` (character name)
     - `GETCSVNOBYNICKNAME`: Reverse lookup by `NICKNAME`
     - `GETCSVNOBYCALLNAME`: Reverse lookup by `CALLNAME`
     - `GETCSVNOBYMASTERNAME`: Reverse lookup by `MASTERNAME`
 
-    Return value: Template number (≥0) if found, -1 if not found.
+    Return value: Character number (NO) (≥0) if found, -1 if not found.
 
-    When multiple characters share the same name, returns the last loaded template number.
+    When multiple characters share the same name, returns the last loaded character number.
+
+    !!! warning "Difference from FINDCHARA"
+        `GETCSVNOBY*` queries CSV template data, so characters do not need to be added via `ADDCHARA` to be found.
+        [FINDCHARA](FINDCHARA.en.md) queries runtime-added characters and returns the registration number (CharaID), not the character number (NO).
 
 !!! hint "Hint"
 

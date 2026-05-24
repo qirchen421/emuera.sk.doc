@@ -20,16 +20,20 @@ hide:
     GETCSVNOBYCALLNAME callname
     GETCSVNOBYMASTERNAME mastername
     ```
-    キャラクターの名前からCSVテンプレート番号を逆引きします。[CSVNAME系](CSVNAME.md)の逆操作です：CSVNAME は番号から名前を取得し、GETCSVNOBY は名前から番号を取得します。
+    キャラクターの名前からキャラ番号 (NO) を逆引きします。[CSVNAME系](CSVNAME.md)の逆操作です：CSVNAME は番号から名前を取得し、GETCSVNOBY は名前から番号を取得します。
 
     - `GETCSVNOBYNAME`：`NAME`（キャラクター名）で逆引き
     - `GETCSVNOBYNICKNAME`：`NICKNAME`（ニックネーム）で逆引き
     - `GETCSVNOBYCALLNAME`：`CALLNAME`（呼び名）で逆引き
     - `GETCSVNOBYMASTERNAME`：`MASTERNAME`（主人名）で逆引き
 
-    戻り値：見つかった場合はテンプレート番号（≥0）、見つからない場合は -1 を返します。
+    戻り値：見つかった場合はキャラ番号 (NO)（≥0）、見つからない場合は -1 を返します。
 
-    同名のキャラクターが複数存在する場合、最後にロードされたテンプレート番号を返します。
+    同名のキャラクターが複数存在する場合、最後にロードされたキャラ番号を返します。
+
+    !!! warning "FINDCHARA との違い"
+        `GETCSVNOBY*` は CSV テンプレートデータを検索するため、`ADDCHARA` で追加されていないキャラクターでも検索可能です。
+        [FINDCHARA](FINDCHARA.md) は実行時に追加済みのキャラクターを検索し、登録番号 (CharaID) を返します（キャラ番号ではありません）。
 
 !!! hint "ヒント"
 

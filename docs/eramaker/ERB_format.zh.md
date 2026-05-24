@@ -194,7 +194,7 @@ FLAG:FLAG:20 = 10000
 - 关于二维数组
 
 - 有些变量可以使用两个冒号来访问。这是涉及角色数据的变量。
-- 访问形式为(变量名):(持有角色编号):(变量编号)。
+- 访问形式为(变量名):(持有角色登记编号 (CharaID)):(变量编号)。
 
 **例**
 
@@ -561,16 +561,16 @@ eramaker中有几个用于调教的特殊命令。
 
 - 角色的管理
 
-- [ADDCHARA](../Reference/ADDCHARA.zh.md)添加角色。想添加角色编号3的角色时，像ADDCHARA 3这样写。
-- ADDSPCHARA添加SP角色。想添加角色编号3的SP角色时，像ADDSPCHARA 3这样写。
+- [ADDCHARA](../Reference/ADDCHARA.zh.md)添加角色。想添加角色注册编号 (NO) 3的角色时，像ADDCHARA 3这样写。
+- ADDSPCHARA添加SP角色。想添加角色注册编号 (NO) 3的SP角色时，像ADDSPCHARA 3这样写。
 （SP角色是指角色标志的0号为1的角色）
 - [DELCHARA](../Reference/DELCHARA.zh.md)删除通过ADDCHARA等添加的角色。
 
 **例**
 
 ```
-;角色编号0的角色名字是浩之，是主角。
-;假设角色编号3的名字是智子、5的名字是蕾米、6的名字是琴音
+;登记编号 (CharaID) 0的角色名字是浩之，是主角。
+;假设角色注册编号 (NO) 3的名字是智子、5的名字是蕾米、6的名字是琴音
 PRINTFORML 现在有{CHARANUM}个角色。
 ADDCHARA 3
 ADDCHARA 5

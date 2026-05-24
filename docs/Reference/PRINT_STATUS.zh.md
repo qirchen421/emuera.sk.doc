@@ -26,7 +26,7 @@ hide:
 	PRINT_ITEM
 	PRINT_SHOPITEM
     ```
-    分别简易显示当前状态。`PRINT_ABL`、`PRINT_TALENT`、`PRINT_MARK`、`PRINT_EXP`、`PRINT_PALAM` 请将角色编号指定为参数。
+    分别简易显示当前状态。`PRINT_ABL`、`PRINT_TALENT`、`PRINT_MARK`、`PRINT_EXP`、`PRINT_PALAM` 请将角色登记编号 (CharaID) 指定为参数。
 
 !!! hint "提示"
 
