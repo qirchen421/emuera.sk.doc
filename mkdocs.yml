@@ -441,6 +441,9 @@ nav:
           - Reference/GETMEMORYUSAGE.md
           - Reference/CLEARMEMORY.md
           - Reference/TEXTBOX.md
+          - Reference/GETDOINGFUNCTION.md
+          - Reference/ARGLEN.md
+          - Reference/HOTKEY_STATE.md
   - i18n: i18n/README.md
   - 制作マニュアル:
     - manual/README.md
@@ -577,6 +580,7 @@ plugins:
             画像処理関連: Image Processing Related
             サウンド系: Sound Related
             XML系: XML Related
+            データベース系: Database Related
             MAP（連想配列）系: MAP (Associative Array) Related
             DataTable（データベース）系: DataTable (Database) Related
             その他: Other
@@ -696,6 +700,7 @@ plugins:
             画像処理関連: 图像处理相关
             サウンド系: 声音相关
             XML系: XML相关
+            データベース系: 数据库相关
             MAP（連想配列）系: MAP（关联数组）相关
             DataTable（データベース）系: DataTable（数据库）相关
             その他: 其他

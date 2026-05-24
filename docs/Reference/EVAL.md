@@ -3,27 +3,30 @@ hide:
   - toc
 ---
 
-# EVAL / EVALS
+# EVAL / EVALS / EVALF
 
 | 関数名                                                        | 引数                                | 戻り値 |
 | :------------------------------------------------------------ | :---------------------------------- | :----- |
 | ![](../assets/images/IconSK.webp)[`EVAL`](./EVAL.md)     | `string`(, `int`)                   | `int`  |
 | ![](../assets/images/IconSK.webp)[`EVALS`](./EVAL.md)    | `string`(, `string`)                | `string` |
+| ![](../assets/images/IconSK.webp)[`EVALF`](./EVAL.md)    | `string`(, `float`)                 | `float` |
 
 !!! info "API"
 
     ``` { #language-erbapi }
     int EVAL expressionString{, defaultValue}
     string EVALS expressionString{, defaultValue}
+    float EVALF expressionString{, defaultValue}
     ```
 
     渡された文字列`expression`をERB式として実行時に動的に解析・評価します。
     - `EVAL`は**整数**結果を計算して返します。
     - `EVALS`は**文字列**結果を計算して返します。
+    - `EVALF`は**浮動小数点数**結果を計算して返します。
 
     **セーフフェイル機構（Fallback）**：
     渡された式が空、構文エラー、参照変数が存在しない、または計算結果の型が関数の要求する型と一致しない場合（例：`EVAL`で文字列を計算した場合）、エンジンは**赤字エラーを投げず**、エラーを静的にインターセプトして`defaultValue`を返します。
-    - `defaultValue`を省略した場合、`EVAL`は`0`、`EVALS`は空文字列`""`を返します。
+    - `defaultValue`を省略した場合、`EVAL`は`0`、`EVALS`は空文字列`""`、`EVALF`は`0.0`を返します。
 
 !!! hint "ヒント"
 

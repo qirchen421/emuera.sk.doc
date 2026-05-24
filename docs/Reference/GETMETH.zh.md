@@ -3,20 +3,22 @@ hide:
   - toc
 ---
 
-# GETMETH,GETMETHS
+# GETMETH,GETMETHS,GETMETHF
 
 | 函数名                                                       | 参数                                | 返回值    |
 | :----------------------------------------------------------- | :---------------------------------- | :-------- |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.zh.md)  | `string`(, `int`, `argument`...)    | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.zh.md) | `string`(, `string`, `argument`...) | `string`  |
+| ![](../assets/images/IconSK.webp)[`GETMETHF`](./GETMETH.zh.md)  | `string`(, `float`, `argument`...)  | `float`   |
 
 !!! info "API"
 
     ```  { #language-erbapi }
 	int GETMETH functionName(, defaultValue, argument...)
 	string GETMETHs functionName(, defaultValue, argument...)
+	float GETMETHF functionName(, defaultValue, argument...)
     ```
-    可以从字符串调用式中函数。`GETMETH` 对应 `#FUNCTION`，`GETMETHS` 对应 `#FUNCTIONS`。  
+    可以从字符串调用式中函数。`GETMETH` 对应 `#FUNCTION`，`GETMETHS` 对应 `#FUNCTIONS`，`GETMETHF` 对应 `#FUNCTIONF`。
     第二参数是函数未找到时的返回值，第三参数及后续参数将成为第一参数所指定的式中函数的参数。
 
 !!! hint "提示"

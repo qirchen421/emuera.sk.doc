@@ -152,6 +152,7 @@
 | ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.zh.md)      | `string`                                          | `string` |
 | ![](../assets/images/IconSK.webp)[`EVAL`](./EVAL.zh.md)            | `string`(, `int`)                                 | `int`    |
 | ![](../assets/images/IconSK.webp)[`EVALS`](./EVAL.zh.md)           | `string`(, `string`)                              | `string` |
+| ![](../assets/images/IconSK.webp)[`EVALF`](./EVAL.zh.md)           | `string`(, `float`)                               | `float`  |
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.zh.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
@@ -284,6 +285,7 @@
 | ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.zh.md)     | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.zh.md)         | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.zh.md)                | `string`                                      | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETVARF`](./GETSETVAR.zh.md)               | `string`                                      | `float`  |
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.zh.md)               | `string`                                      | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.zh.md)                | `string`, `any`                               | `1`      |
 | ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.zh.md)               | `string`, `any`(, `int`, `int`, `int`)        | `1`      |
@@ -389,6 +391,7 @@
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.zh.md) | 无                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.zh.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.zh.md)                           | `int`(, `int`, `int`) |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.zh.md)                          | `int`(, `string`)     |
 
 ### 函数系列（CALL 等） { #function-call }
 
@@ -430,6 +433,7 @@
 | ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.zh.md)        | `functionName`             | `int` |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.zh.md)            | `string`(, `int`, `argument`...)   | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.zh.md)           | `string`(, `string`, `argument`...)| `string`  |
+| ![](../assets/images/IconSK.webp)[`GETMETHF`](./GETMETH.zh.md)            | `string`(, `float`, `argument`...) | `float`   |
 | ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.zh.md)           | `stringVariable`             | `void`¹  |
 | ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.zh.md)           | `stringVariable`             | `void`¹  |
 | ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.zh.md)        | `stringVariable`             | `void`¹  |
@@ -698,6 +702,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 |                                                                        | `string`, `ref` `int[]`, `int`                                | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.zh.md)        | `string`                                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.zh.md)         | `string`, `int`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconSK.webp)[`DT_CELL_GETF`](./DT_CELL.zh.md)        | `string`, `int`, `string`(, `int`)                            | `float`  |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.zh.md)        | `string`, `int`, `string`(, `int`)                            | `string` |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.zh.md)      | `string`, `int`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.zh.md)         | `string`, `int`, `string`(, `any`, `int`)                     | `int`    |
@@ -756,4 +761,8 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.zh.md)              | 无                        | `string` |
 | ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.zh.md)             | `int`, `int`, `int`         | `1`      |
 | ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.zh.md)           | 无                        | `1`      |
+| ![](../assets/images/IconEE.webp)[`GETDOINGFUNCTION`](./GETDOINGFUNCTION.zh.md) | 无                      | `string` |
+| ![](../assets/images/IconSK.webp)[`ARGLEN`](./ARGLEN.zh.md)                   | 无                         | `int`    |
+| ![](../assets/images/Iconetc.webp)[`HOTKEY_STATE`](./HOTKEY_STATE.zh.md)       | `int`(, `int`)             | `int`    |
+| ![](../assets/images/Iconetc.webp)[`HOTKEY_STATE_INIT`](./HOTKEY_STATE.zh.md)  | `int`                      | `int`    |
 

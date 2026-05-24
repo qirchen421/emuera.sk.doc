@@ -8,6 +8,7 @@ hide:
 | 函数名                                                       | 参数            | 返回值   |
 | :----------------------------------------------------------- | :-------------- | :------- |
 | ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.zh.md)  | `string`        | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETVARF`](./GETSETVAR.zh.md) | `string`        | `float`  |
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.zh.md) | `string`        | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.zh.md)  | `string`, `any` | `1`      |
 
@@ -15,6 +16,7 @@ hide:
     
     ``` { #language-erbapi }
     int GETVAR varName
+    float GETVARF varName
     string GETVARS varName
     1 SETVAR varName, value
     ```
@@ -22,6 +24,7 @@ hide:
     名为 `varName` 的变量 / 常量的 `GET` / `SET` 函数（常量无法使用 `SET` 修改值）。
 
     - `GETVAR` 返回 `varName` 表示的整型变量 / 常量的值。
+    - `GETVARF` 返回 `varName` 表示的浮点型变量 / 常量的值。
     - `GETVARS` 返回 `varName` 表示的字符串变量 / 常量的值。
     - `SETVAR` 将 `varName` 赋值为 `value`。`value` 的类型必须与该变量原本的类型相同。
 

@@ -8,6 +8,7 @@ hide:
 | 関数名                                                       | 引数            | 戻り値   |
 | :----------------------------------------------------------- | :-------------- | :------- |
 | ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.md)  | `string`        | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETVARF`](./GETSETVAR.md) | `string`        | `float`  |
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md) | `string`        | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)  | `string`, `any` | `1`      |
 
@@ -15,6 +16,7 @@ hide:
     
     ``` { #language-erbapi }
     int GETVAR varName
+    float GETVARF varName
     string GETVARS varName
     1 SETVAR varName, value
     ```
@@ -22,6 +24,7 @@ hide:
     `varName`で表した変数・定数の`GET`、`SET`関数です（定数は`SET`不可）。
 
     - `GETVAR`は，`varName`で表した整数型変数・定数の値を返します。
+    - `GETVARF`は，`varName`で表した浮動小数点数型変数・定数の値を返します。
     - `GETVARS`は，`varName`で表した文字列型変数・定数の値を返します。
     - `SETVAR`は，`varName`で表した変数に`value`を代入します。`value`は変数と同じ型でなければなりません。
 

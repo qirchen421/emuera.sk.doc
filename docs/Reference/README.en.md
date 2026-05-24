@@ -152,6 +152,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.en.md)      | `string`                                          | `string` |
 | ![](../assets/images/IconSK.webp)[`EVAL`](./EVAL.en.md)            | `string`(, `int`)                                 | `int`    |
 | ![](../assets/images/IconSK.webp)[`EVALS`](./EVAL.en.md)           | `string`(, `string`)                              | `string` |
+| ![](../assets/images/IconSK.webp)[`EVALF`](./EVAL.en.md)           | `string`(, `float`)                               | `float`  |
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.en.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
@@ -284,6 +285,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.en.md)     | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.en.md)         | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.en.md)                | `string`                                      | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETVARF`](./GETSETVAR.en.md)               | `string`                                      | `float`  |
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.en.md)               | `string`                                      | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.en.md)                | `string`, `any`                               | `1`      |
 | ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.en.md)               | `string`, `any`(, `int`, `int`, `int`)        | `1`      |
@@ -389,6 +391,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.en.md) | none                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.en.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.en.md)                           | `int`(, `int`, `int`) |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.en.md)                          | `int`(, `string`)     |
 
 ### Functions (CALL, etc.) { #function-call }
 
@@ -430,6 +433,7 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.en.md)        | `functionName`             | `int` |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.en.md)            | `string`(, `int`, `argument`...)   | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.en.md)           | `string`(, `string`, `argument`...)| `string`  |
+| ![](../assets/images/IconSK.webp)[`GETMETHF`](./GETMETH.en.md)            | `string`(, `float`, `argument`...) | `float`   |
 | ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.en.md)           | `stringVariable`             | `void`¹  |
 | ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.en.md)           | `stringVariable`             | `void`¹  |
 | ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.en.md)        | `stringVariable`             | `void`¹  |
@@ -698,6 +702,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 |                                                                        | `string`, `ref` `int[]`, `int`                                | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.en.md)        | `string`                                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.en.md)         | `string`, `int`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconSK.webp)[`DT_CELL_GETF`](./DT_CELL.en.md)        | `string`, `int`, `string`(, `int`)                            | `float`  |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.en.md)        | `string`, `int`, `string`(, `int`)                            | `string` |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.en.md)      | `string`, `int`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.en.md)         | `string`, `int`, `string`(, `any`, `int`)                     | `int`    |
@@ -756,4 +761,8 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.en.md)              | none                        | `string` |
 | ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.en.md)             | `int`, `int`, `int`         | `1`      |
 | ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.en.md)           | none                        | `1`      |
+| ![](../assets/images/IconEE.webp)[`GETDOINGFUNCTION`](./GETDOINGFUNCTION.en.md) | none                      | `string` |
+| ![](../assets/images/IconSK.webp)[`ARGLEN`](./ARGLEN.en.md)                   | none                        | `int`    |
+| ![](../assets/images/Iconetc.webp)[`HOTKEY_STATE`](./HOTKEY_STATE.en.md)       | `int`(, `int`)             | `int`    |
+| ![](../assets/images/Iconetc.webp)[`HOTKEY_STATE_INIT`](./HOTKEY_STATE.en.md)  | `int`                      | `int`    |
 

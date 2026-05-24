@@ -152,6 +152,7 @@
 | ![](../assets/images/IconEmuera.webp)[`STRFORM`](./STRFORM.md)      | `string`                                          | `string` |
 | ![](../assets/images/IconSK.webp)[`EVAL`](./EVAL.md)            | `string`(, `int`)                                 | `int`    |
 | ![](../assets/images/IconSK.webp)[`EVALS`](./EVAL.md)           | `string`(, `string`)                              | `string` |
+| ![](../assets/images/IconSK.webp)[`EVALF`](./EVAL.md)           | `string`(, `float`)                               | `float`  |
 | ![](../assets/images/IconEM.webp)[`REGEXPMATCH`](./REGEXPMATCH.md)  | `string`, `string`(, `int`)                       | `int`    |
 |                                                                     | `string`, `string`, `ref` `int`, `ref` `string[]` | `int`    |
 
@@ -284,6 +285,7 @@
 | ![](../assets/images/IconEM.webp)[`ENUMMACROENDSWITH`](./ENUMMACRO.md)     | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`ENUMMACROWITH`](./ENUMMACRO.md)         | `string`                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.md)                | `string`                                      | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETVARF`](./GETSETVAR.md)               | `string`                                      | `float`  |
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.md)               | `string`                                      | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.md)                | `string`, `any`                               | `1`      |
 | ![](../assets/images/IconEM.webp)[`VARSETEX`](./VARSETEX.md)               | `string`, `any`(, `int`, `int`, `int`)        | `1`      |
@@ -389,6 +391,7 @@
 | ![](../assets/images/IconEE.webp)[`FORCE_QUIT_AND_RESTART`](./FORCE_QUIT_AND_RESTART.md) | なし                  |
 | ![](../assets/images/IconEE.webp)[`FORCE_BEGIN`](./FORCE_BEGIN.md)                       | `identifier`          |
 | ![](../assets/images/IconEE.webp)[`FLOWINPUT`](./FLOWINPUT.md)                           | `int`(, `int`, `int`) |
+| ![](../assets/images/IconEE.webp)[`FLOWINPUTS`](./FLOWINPUT.md)                          | `int`(, `string`)     |
 
 ### 関数系（CALL 等） { #function-call }
 
@@ -430,6 +433,7 @@
 | ![](../assets/images/Iconetc.webp)[`EXISTMETH`](./EXISTMETH.md)        | `functionName`             | `int` |
 | ![](../assets/images/Iconetc.webp)[`GETMETH`](./GETMETH.md)            | `string`(, `int`, `argument`...)   | `int`     |
 | ![](../assets/images/Iconetc.webp)[`GETMETHS`](./GETMETH.md)           | `string`(, `string`, `argument`...)| `string`  |
+| ![](../assets/images/IconSK.webp)[`GETMETHF`](./GETMETH.md)            | `string`(, `float`, `argument`...) | `float`   |
 | ![](../assets/images/IconSK.webp)[`CALLSTR`](./CALLSTR.md)           | `stringVariable`             | `void`¹  |
 | ![](../assets/images/IconSK.webp)[`JUMPSTR`](./CALLSTR.md)           | `stringVariable`             | `void`¹  |
 | ![](../assets/images/IconSK.webp)[`TRYCALLSTR`](./CALLSTR.md)        | `stringVariable`             | `void`¹  |
@@ -698,6 +702,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 |                                                                        | `string`, `ref` `int[]`, `int`                                | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_ROW_LENGTH`](./DT_ROW.md)        | `string`                                                      | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_GET`](./DT_CELL.md)         | `string`, `int`, `string`(, `int`)                            | `int`    |
+| ![](../assets/images/IconSK.webp)[`DT_CELL_GETF`](./DT_CELL.md)        | `string`, `int`, `string`(, `int`)                            | `float`  |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_GETS`](./DT_CELL.md)        | `string`, `int`, `string`(, `int`)                            | `string` |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_ISNULL`](./DT_CELL.md)      | `string`, `int`, `string`(, `int`)                            | `int`    |
 | ![](../assets/images/IconEM.webp)[`DT_CELL_SET`](./DT_CELL.md)         | `string`, `int`, `string`(, `any`, `int`)                     | `int`    |
@@ -756,4 +761,8 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEE.webp)[`GETTEXTBOX`](./TEXTBOX.md)              | なし                        | `string` |
 | ![](../assets/images/IconEM.webp)[`MOVETEXTBOX`](./TEXTBOX.md)             | `int`, `int`, `int`         | `1`      |
 | ![](../assets/images/IconEM.webp)[`RESUMETEXTBOX`](./TEXTBOX.md)           | なし                        | `1`      |
+| ![](../assets/images/IconEE.webp)[`GETDOINGFUNCTION`](./GETDOINGFUNCTION.md) | なし                      | `string` |
+| ![](../assets/images/IconSK.webp)[`ARGLEN`](./ARGLEN.md)                   | なし                         | `int`    |
+| ![](../assets/images/Iconetc.webp)[`HOTKEY_STATE`](./HOTKEY_STATE.md)       | `int`(, `int`)             | `int`    |
+| ![](../assets/images/Iconetc.webp)[`HOTKEY_STATE_INIT`](./HOTKEY_STATE.md)  | `int`                      | `int`    |
 

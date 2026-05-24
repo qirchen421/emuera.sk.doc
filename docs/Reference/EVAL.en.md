@@ -3,27 +3,30 @@ hide:
   - toc
 ---
 
-# EVAL / EVALS
+# EVAL / EVALS / EVALF
 
 | Function Name                                                 | Arguments                          | Return Value |
 | :------------------------------------------------------------ | :--------------------------------- | :----------- |
 | ![](../assets/images/IconSK.webp)[`EVAL`](./EVAL.en.md)  | `string`(, `int`)                  | `int`        |
 | ![](../assets/images/IconSK.webp)[`EVALS`](./EVAL.en.md) | `string`(, `string`)               | `string`     |
+| ![](../assets/images/IconSK.webp)[`EVALF`](./EVAL.en.md) | `string`(, `float`)                | `float`      |
 
 !!! info "API"
 
     ``` { #language-erbapi }
     int EVAL expressionString{, defaultValue}
     string EVALS expressionString{, defaultValue}
+    float EVALF expressionString{, defaultValue}
     ```
 
     Dynamically parses and evaluates the passed string `expression` as an ERB expression at runtime.
     - `EVAL` computes and returns an **integer** result.
     - `EVALS` computes and returns a **string** result.
+    - `EVALF` computes and returns a **floating-point** result.
 
     **Safe Fallback Mechanism**:
     If the passed expression is empty, contains a syntax error, references a non-existent variable, or the result type does not match the function's expected type (e.g., computing a string with `EVAL`), the engine **does not throw a red error**. Instead, it silently intercepts the error and returns `defaultValue`.
-    - If `defaultValue` is omitted, `EVAL` returns `0` and `EVALS` returns an empty string `""`.
+    - If `defaultValue` is omitted, `EVAL` returns `0`, `EVALS` returns an empty string `""`, and `EVALF` returns `0.0`.
 
 !!! hint "Hint"
 

@@ -8,6 +8,7 @@ hide:
 | Function name                                                   | Arguments      | Return   |
 | :------------------------------------------------------------- | :------------- | :------- |
 | ![](../assets/images/IconEM.webp)[`GETVAR`](./GETSETVAR.en.md)  | `string`       | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETVARF`](./GETSETVAR.en.md) | `string`       | `float`  |
 | ![](../assets/images/IconEM.webp)[`GETVARS`](./GETSETVAR.en.md) | `string`       | `string` |
 | ![](../assets/images/IconEM.webp)[`SETVAR`](./GETSETVAR.en.md)  | `string`, `any` | `1`      |
 
@@ -15,6 +16,7 @@ hide:
     
     ``` { #language-erbapi }
     int GETVAR varName
+    float GETVARF varName
     string GETVARS varName
     1 SETVAR varName, value
     ```
@@ -22,6 +24,7 @@ hide:
     `GET` and `SET` functions for variables/constants represented by `varName` (constants cannot be `SET`).
 
     - `GETVAR` returns the value of the integer type variable/constant represented by `varName`.
+    - `GETVARF` returns the value of the floating-point type variable/constant represented by `varName`.
     - `GETVARS` returns the value of the string type variable/constant represented by `varName`.
     - `SETVAR` assigns `value` to the variable represented by `varName`. `value` must be of the same type as the variable.
 
