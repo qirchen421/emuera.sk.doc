@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [4.2.0] — FONTBOLD/FONTITALIC/FONTREGULAR 跨平台修复 + GETPLATFORM API
+
+### Fixed — 移动端字体样式指令空操作导致 Bold 泄漏
+
+- **Instraction.Child.cs** — `FONTBOLD`/`FONTITALIC`/`FONTREGULAR` 在非 Windows 平台是空操作（`if (!OperatingSystem.IsWindows()) return;`）
+  - `FONTSTYLE` 命令无此限制，在移动端正常执行
+  - 不对称导致：`FONTSTYLE 1` 设置 Bold 后 `FONTREGULAR` 无法恢复 → Bold 泄漏 → `GETSTYLE()` 返回 1 → `HTMLWRAP(STYLE_FLAG=-1)` 生成 `<b>` 标签 → 嵌套 → SkiaX HtmlManager 抛出"标签重复使用"错误
+  - 修复：移除三个指令的 `!IsWindows()` 限制，`FontStyle` 枚举是纯内存操作，不依赖平台 API
+
+### Added — ERB 平台检测 API
+
+- **GETPLATFORM()** — 返回当前运行平台的整数编码
+  - 0=Windows, 1=Android, 2=iOS, 3=macOS, 4=Linux, 5=Unknown
+  - `CanRestructure = true`（纯函数，编译期可常量折叠）
+  - ERB 脚本可通过 `IF GETPLATFORM() == 0` 等方式做平台条件分支
+
+***
+
 ## [4.1.0] — 跨平台音频架构重构 + 回流修复
 
 ### Changed — 音频架构重构（跨平台基础建设）

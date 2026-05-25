@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [4.2.0] — FONTBOLD/FONTITALIC/FONTREGULAR クロスプラットフォーム修正 + GETPLATFORM API
+
+### Fixed — モバイル版フォントスタイル命令の空操作によるBoldリーク
+
+- **Instraction.Child.cs** — `FONTBOLD`/`FONTITALIC`/`FONTREGULAR` が非Windowsプラットフォームで空操作だった（`if (!OperatingSystem.IsWindows()) return;`）
+  - `FONTSTYLE` 命令にはこの制限がなく、モバイルでも正常に動作
+  - 非対称性により：`FONTSTYLE 1` でBoldを設定後、`FONTREGULAR` でリセット不可 → Boldリーク → `GETSTYLE()` が1を返す → `HTMLWRAP(STYLE_FLAG=-1)` が`<b>`タグを生成 → ネスト → SkiaX HtmlManagerが「タグ重複使用」エラーをスロー
+  - 修正：3つの命令から `!IsWindows()` 制限を削除。`FontStyle` 列挙型は純粋なメモリ操作であり、プラットフォームAPIに依存しない
+
+### Added — ERB プラットフォーム検出 API
+
+- **GETPLATFORM()** — 現在の実行プラットフォームの整数コードを返す
+  - 0=Windows, 1=Android, 2=iOS, 3=macOS, 4=Linux, 5=Unknown
+  - `CanRestructure = true`（純粋関数、コンパイル時定数畳み込み可能）
+  - ERBスクリプトで `IF GETPLATFORM() == 0` のようにプラットフォーム条件分岐が可能
+
+***
+
 ## [4.1.0](https://gitgud.io/minus010001/emuera_lazyloading_selfmodified_version) — 2026-05-23
 
 ### Changed — オーディオアーキテクチャリファクタリング（クロスプラットフォーム基盤）

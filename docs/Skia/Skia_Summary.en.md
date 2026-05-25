@@ -94,6 +94,7 @@
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | Expression | Full array search (string variable name) | [MATCHALL](../Reference/MATCHALL.en.md) |
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | Event | Called before THROW throws exception | [Event Functions](../tutorial/event-functions.en.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | Event | Called on first error occurrence | [Event Functions](../tutorial/event-functions.en.md#before_error) |
+| ![](../assets/images/IconSK.webp) `GETPLATFORM` | Expression | Get execution platform code | [GETPLATFORM](../Reference/GETPLATFORM.en.md) |
 
 ---
 

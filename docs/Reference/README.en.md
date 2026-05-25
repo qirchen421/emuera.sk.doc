@@ -750,6 +750,7 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconEmuera.webp)[`STOPCALLTRAIN`](./STOPCALLTRAIN.en.md) | none                        | none     |
 | ![](../assets/images/IconEmuera.webp)[`GETCONFIG`](./GETCONFIG.en.md)         | `string`                    | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETCONFIGS`](./GETCONFIG.en.md)        | `string`                    | `string` |
+| ![](../assets/images/IconSK.webp)[`GETPLATFORM`](./GETPLATFORM.en.md)         | none                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.en.md)     | none                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.en.md)    | none                        | `int`    |
 | ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.en.md)             | `string`                    | `int`    |

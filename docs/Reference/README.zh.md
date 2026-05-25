@@ -750,6 +750,7 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconEmuera.webp)[`STOPCALLTRAIN`](./STOPCALLTRAIN.zh.md) | 无                        | 无     |
 | ![](../assets/images/IconEmuera.webp)[`GETCONFIG`](./GETCONFIG.zh.md)         | `string`                    | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETCONFIGS`](./GETCONFIG.zh.md)        | `string`                    | `string` |
+| ![](../assets/images/IconSK.webp)[`GETPLATFORM`](./GETPLATFORM.zh.md)         | 无                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.zh.md)     | 无                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.zh.md)    | 无                        | `int`    |
 | ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.zh.md)             | `string`                    | `int`    |

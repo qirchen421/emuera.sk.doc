@@ -434,6 +434,7 @@ nav:
           - Reference/STRDATA.md
           - Reference/STOPCALLTRAIN.md
           - Reference/GETCONFIG.md
+          - Reference/GETPLATFORM.md
           - Reference/CLIENTFIELD.md
           - Reference/EXISTFILE.md
           - Reference/ENUMFILES.md

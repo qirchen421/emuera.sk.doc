@@ -750,6 +750,7 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconEmuera.webp)[`STOPCALLTRAIN`](./STOPCALLTRAIN.md) | なし                        | なし     |
 | ![](../assets/images/IconEmuera.webp)[`GETCONFIG`](./GETCONFIG.md)         | `string`                    | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`GETCONFIGS`](./GETCONFIG.md)        | `string`                    | `string` |
+| ![](../assets/images/IconSK.webp)[`GETPLATFORM`](./GETPLATFORM.md)         | なし                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CLIENTWIDTH`](./CLIENTFIELD.md)     | なし                        | `int`    |
 | ![](../assets/images/IconEmuera.webp)[`CLIENTHEIGHT`](./CLIENTFIELD.md)    | なし                        | `int`    |
 | ![](../assets/images/IconEM.webp)[`EXISTFILE`](./EXISTFILE.md)             | `string`                    | `int`    |

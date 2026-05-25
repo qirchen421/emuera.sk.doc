@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [4.2.0] — FONTBOLD/FONTITALIC/FONTREGULAR Cross-Platform Fix + GETPLATFORM API
+
+### Fixed — Mobile Font Style Commands No-Op Causing Bold Leak
+
+- **Instraction.Child.cs** — `FONTBOLD`/`FONTITALIC`/`FONTREGULAR` were no-ops on non-Windows platforms (`if (!OperatingSystem.IsWindows()) return;`)
+  - `FONTSTYLE` command had no such restriction and worked normally on mobile
+  - Asymmetry caused: `FONTSTYLE 1` sets Bold, but `FONTREGULAR` cannot reset → Bold leak → `GETSTYLE()` returns 1 → `HTMLWRAP(STYLE_FLAG=-1)` generates `<b>` tag → nesting → SkiaX HtmlManager throws "duplicate tag" error
+  - Fix: Remove `!IsWindows()` restriction from all three commands. `FontStyle` enum is a pure memory operation with no platform API dependency
+
+### Added — ERB Platform Detection API
+
+- **GETPLATFORM()** — Returns integer code of current execution platform
+  - 0=Windows, 1=Android, 2=iOS, 3=macOS, 4=Linux, 5=Unknown
+  - `CanRestructure = true` (pure function, compile-time constant folding enabled)
+  - ERB scripts can use `IF GETPLATFORM() == 0` for platform-specific branching
+
+***
+
 ## [4.1.0] — Cross-platform Audio Architecture Refactor + Backport Fixes
 
 ### Changed — Audio Architecture Refactor (Cross-platform Infrastructure)

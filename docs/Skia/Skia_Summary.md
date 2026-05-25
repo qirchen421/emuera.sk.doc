@@ -94,6 +94,7 @@
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中関数 | 配列の全量検索（文字列変数名） | [MATCHALL](../Reference/MATCHALL.md) |
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | イベント関数 | THROW スロー前に呼び出し | [イベント関数](../tutorial/event-functions.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | イベント関数 | エラー発生時に初回呼び出し | [イベント関数](../tutorial/event-functions.md#before_error) |
+| ![](../assets/images/IconSK.webp) `GETPLATFORM` | 式中関数 | 実行プラットフォームの取得 | [GETPLATFORM](../Reference/GETPLATFORM.md) |
 
 ---
 

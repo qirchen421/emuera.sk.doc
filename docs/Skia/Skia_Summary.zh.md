@@ -94,6 +94,7 @@
 | ![](../assets/images/Icondotnet.webp) `MATCHALLEX` | 式中函数 | 数组全量搜索（字符串变量名） | [MATCHALL](../Reference/MATCHALL.zh.md) |
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | [事件函数](../tutorial/event-functions.zh.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | 事件函数 | 错误发生时首次调用 | [事件函数](../tutorial/event-functions.zh.md#before_error) |
+| ![](../assets/images/IconSK.webp) `GETPLATFORM` | 式中函数 | 获取运行平台编码 | [GETPLATFORM](../Reference/GETPLATFORM.zh.md) |
 
 ---
 
