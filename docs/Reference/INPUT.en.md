@@ -33,6 +33,7 @@ hide:
     Command only.
 
 ### See Also
+- [TINPUTNF](TINPUTNF.en.md)
 - [TINPUT](TINPUT.en.md)
 - [INPUTMOUSEKEY](INPUTMOUSEKEY.en.md)
 - [BINPUT](BINPUT.en.md)

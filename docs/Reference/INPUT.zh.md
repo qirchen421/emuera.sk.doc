@@ -31,6 +31,7 @@ hide:
     仅支持命令形式。
 
 ### 相关项目
+- [TINPUTNF](TINPUTNF.zh.md)
 - [TINPUT](TINPUT.zh.md)
 - [INPUTMOUSEKEY](INPUTMOUSEKEY.zh.md)
 - [BINPUT](BINPUT.zh.md)

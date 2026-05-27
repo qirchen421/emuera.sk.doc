@@ -33,4 +33,5 @@ hide:
 
 ### 相关项目
 - [INPUT](INPUT.zh.md)
+- [TINPUTNF](TINPUTNF.zh.md)
 - [TONEINPUT](TONEINPUT.zh.md)

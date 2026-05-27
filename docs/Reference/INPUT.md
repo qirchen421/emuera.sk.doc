@@ -31,6 +31,7 @@ hide:
     命令のみ対応しています。
 
 ### 関連項目
+- [TINPUTNF](TINPUTNF.md)
 - [TINPUT](TINPUT.md)
 - [INPUTMOUSEKEY](INPUTMOUSEKEY.md)
 - [BINPUT](BINPUT.md)

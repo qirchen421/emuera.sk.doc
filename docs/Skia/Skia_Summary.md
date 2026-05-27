@@ -286,6 +286,24 @@
 
 ## 仕様が変更された命令・式中関数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp) T プレフィックス INPUT 命令の NF サフィックス変体
+!!! summary ""
+
+    TINPUT/TINPUTS/TONEINPUT/TONEINPUTS に NF（NoFocus）サフィックス変体を追加：`TINPUTNF`/`TINPUTSNF`/`TONEINPUTNF`/`TONEINPUTSNF`。
+    元の命令と完全に同じパラメータと戻り値だが、下への強制スクロールを行わない点のみ異なる。
+    入力待ち中のユーザーのフリースクロールを許可する。T プレフィックス（タイマー付き入力）命令のみ NF 変体を提供——INPUT/INPUTS は完全ブロッキングのため、待機中に新しいコンテンツがなく NF は無意味。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    TINPUTNF time, {defaultvalue}, {cancelvalue}, {cancelform}
+    TINPUTSNF time, {defaultstring}, {cancelvalue}, {cancelform}
+    TONEINPUTNF time, {defaultvalue}, {cancelvalue}, {cancelform}
+    TONEINPUTSNF time, {defaultstring}, {cancelvalue}, {cancelform}
+    ```
+
+    **NF サフィックスのセマンティクス**：`WaitInput` ではなく `WaitInputNoFocus` 状態に入り、`ApplyTextBoxChanges()` を呼び出さず、ボタン ハイライト/Tooltip 機能を保持する。
+
 ### ![](../assets/images/IconSK.webp)`CBGSETSPRITE`の拡張パラメータ
 !!! summary ""
 

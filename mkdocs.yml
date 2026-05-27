@@ -63,6 +63,7 @@ nav:
       - エンジン特性:
           - tutorial/system-flow.md
           - tutorial/event-functions.md
+          - tutorial/interaction.md
           - tutorial/character-variables.md
       - HTML・グラフィック:
           - tutorial/html-syntax.md
@@ -258,9 +259,11 @@ nav:
           - Reference/WAIT.md
           - Reference/FORCEWAIT.md
           - Reference/TINPUT.md
+          - Reference/TINPUTNF.md
           - Reference/TWAIT.md
           - Reference/ONEINPUT.md
           - Reference/TONEINPUT.md
+          - Reference/TONEINPUTNF.md
           - Reference/WAITANYKEY.md
           - Reference/INPUTMOUSEKEY.md
           - Reference/INPUTANY.md
@@ -531,6 +534,7 @@ plugins:
             コマンド vs 式: Command vs Expression
             変数宣言システム: Variable Declaration System
             エンジン特性: Engine Features
+            インタラクションシステム: Interaction System
             HTML タグ構文リファレンス: HTML Tag Syntax Reference
             バージョン進化比較: Version Evolution Comparison
             ファイルタイプと処理順序: File Types and Processing Order
@@ -652,6 +656,7 @@ plugins:
             コマンド vs 式: 命令 vs 表达式
             変数宣言システム: 变量声明系统
             エンジン特性: 引擎特性
+            インタラクションシステム: 交互系统
             HTML タグ構文リファレンス: HTML 标签语法参考
             バージョン進化比較: 版本演进对照
             ファイルタイプと処理順序: 文件类型与处理顺序

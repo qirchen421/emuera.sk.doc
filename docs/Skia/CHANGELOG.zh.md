@@ -6,6 +6,68 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [5.0.0] — T 前缀 NF 后缀指令 + 自由滚动 + HOVER_PAUSE
+
+### Added
+
+- **NF 后缀指令**：`TINPUTNF`, `TINPUTSNF`, `TONEINPUTNF`, `TONEINPUTSNF`
+  - 与原版 TINPUT/TINPUTS/TONEINPUT/TONEINPUTS 参数和返回值相同，但不强制滚动到底部
+  - NF = NoFocus，进入 `ConsoleState.WaitInputNoFocus` 状态，不调用 `ApplyTextBoxChanges()`
+  - 仅 T 前缀指令提供 NF 变体（INPUT/INPUTS 全阻塞无轮询，NF 无意义）
+  - 用 `TINPUTSNF` 替代 AWAIT+GETKEYTRIGGERED 轮询 hack
+
+- **ConsoleState.WaitInputNoFocus = 22**：与 `WaitInput` 唯一区别是不调用 `ApplyTextBoxChanges()`
+- **InputRequest.NoFocus**：布尔标志，T 前缀 NF 变体通过 `noFocus` 构造参数设置
+- **EmueraConsole.WaitInputNoFocus()**：设置 `WaitInputNoFocus` 状态
+- **EmueraConsole.IsWaitInputState**：替代 28 处 `state == ConsoleState.WaitInput` 判断
+
+### Fixed
+
+- **NF 滚动机制**：`nfUserScrolledBack` 标志记录用户上滚意图；`nfScrollOffsetFromBottom` 保存偏移量；`WaitInput` 入口强制回底；`RefreshStrings` 跳过 NF 上滚时的中间渲染
+- **HOVER_PAUSE 悬停暂停**：鼠标悬停按钮时暂停动画，离开时恢复。4 个地图函数统一应用
+
+***
+
+## [4.3.1] — GETKEY 解耦：Latch 泄漏修复
+
+### Fixed — AWAIT 循环首次迭代虚假鼠标点击
+
+- **EmueraConsole.cs** — `Await()` 方法在 `DoEvents()` 前调用 `WinInput.ClearLatches()`
+  - 根因：INPUTS/TINPUTS 模式下 `MouseDown` 事件设置 `_keyLatch[1]=1`，但内置输入系统不调用 `GETKEYTRIGGERED` 消费 latch
+  - 从 INPUTS 切换到 AWAIT 循环时，残留 latch 被 `GETKEYTRIGGERED(1)` 消费，产生虚假点击
+  - 现象：qol_MAP 地图首次进入时大概率立即退出（鼠标左键虚假触发）
+  - 修复：每次 `Await()` 迭代开始前清除所有残留 latch，`DoEvents()` 产生的新 latch 由 `GETKEYTRIGGERED` 正常消费
+
+- **WinInput.cs** — 新增 `ClearLatches()` 方法
+  - 原子清除 `_keyLatch` 数组所有元素为 0
+  - 防止跨输入模式（INPUTS → AWAIT）的 latch 泄漏
+
+***
+
+## [4.3.0] — PRINTC 像素制表重构：跨平台列对齐统一
+
+### Fixed — PRINTFORMLC 中文环境列错位（回归修复）
+
+- **EmueraConsole.Print.cs** — `CreateTypeCString` 中 `Config.Encode.GetByteCount(str)` 默认 UTF-8 编码下 CJK 字符=3字节，但 `Config.PrintCLength` 以半角字符为单位（CJK=2）
+  - A24 修复将编码从 Shift-JIS 改为 Config.Encode 后引入回归
+  - 修复：改用 `LangManager.GetStrlenLang(str)`，基于语言设置的 ANSI 编码（中文=GB2312/936，日文=Shift-JIS/932）计算字节长度
+
+### Changed — PrintC/PrintButtonC 从字节制表重构为像素制表
+
+- **EmueraConsole.Print.cs** — 删除 `CreateTypeCString` 方法，`PrintC`/`PrintButtonC` 改用像素制表路径
+  - 旧方案：字节长度计算补空格字符 → while 循环删空格微调 → 受编码和字体 hinting 影响
+  - 新方案：`StringMeasure.GetDisplayLength` 测量内容像素宽度 → `ConsoleSpacePart` 像素矩形填充差值
+  - 与 `PrintHtmlC` 共享同一套像素制表理念，确保 WinForms + SkiaX 双端对齐一致
+  - 删除 `printCWidthL`/`printCWidthL2`（仅旧 while 循环使用）
+  - 根因分析：等宽字体 `N × charWidth ≠ stringWidth`（字体 hinting/kerning 截断），WinForms GDI 整串绘制误差被吸收，SkiaX 逐字符绘制误差累积为可见偏移
+
+### 同步修改
+
+- **SkiaX Desktop** (`Emuera/UI/Game/EmueraConsole.Print.cs`) — 同步重构
+- **SkiaX Xamarin** (`Emuera.Xamarin/Platform/GameView/EmueraConsole.Print.cs`) — 同步重构
+
+***
+
 ## [4.2.0] — FONTBOLD/FONTITALIC/FONTREGULAR 跨平台修复 + GETPLATFORM API
 
 ### Fixed — 移动端字体样式指令空操作导致 Bold 泄漏

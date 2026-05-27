@@ -36,4 +36,5 @@ hide:
 
 ### See Also
 - [INPUT](INPUT.en.md)
+- [TINPUTNF](TINPUTNF.en.md)
 - [TONEINPUT](TONEINPUT.en.md)

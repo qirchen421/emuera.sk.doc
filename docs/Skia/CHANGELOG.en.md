@@ -6,6 +6,68 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [5.0.0] — T-Prefixed NF Suffix Instructions + Free Scrolling + HOVER_PAUSE
+
+### Added
+
+- **NF suffix instructions**: `TINPUTNF`, `TINPUTSNF`, `TONEINPUTNF`, `TONEINPUTSNF`
+  - Same parameters and return values as TINPUT/TINPUTS/TONEINPUT/TONEINPUTS, but does not force scroll to bottom
+  - NF = NoFocus, enters `ConsoleState.WaitInputNoFocus` state, does not call `ApplyTextBoxChanges()`
+  - Only T-prefixed instructions provide NF variants (INPUT/INPUTS are fully blocking, NF is meaningless)
+  - `TINPUTSNF` replaces AWAIT+GETKEYTRIGGERED polling hack
+
+- **ConsoleState.WaitInputNoFocus = 22**: Only difference from `WaitInput` is not calling `ApplyTextBoxChanges()`
+- **InputRequest.NoFocus**: Boolean flag, set via `noFocus` constructor parameter in T-prefixed NF variants
+- **EmueraConsole.WaitInputNoFocus()**: Sets `WaitInputNoFocus` state
+- **EmueraConsole.IsWaitInputState**: Replaces 28 `state == ConsoleState.WaitInput` checks
+
+### Fixed
+
+- **NF scrolling mechanism**: `nfUserScrolledBack` flag records user scroll-up intent; `nfScrollOffsetFromBottom` preserves offset; `WaitInput` entry forces scroll to bottom; `RefreshStrings` skips intermediate rendering during NF scroll-back
+- **HOVER_PAUSE hover pause**: Pauses animation when mouse hovers over button, resumes on leave. Applied to 4 map functions
+
+***
+
+## [4.3.1] — GETKEY Decoupling: Latch Leak Fix
+
+### Fixed — AWAIT Loop First Iteration Spurious Mouse Click
+
+- **EmueraConsole.cs** — `Await()` method calls `WinInput.ClearLatches()` before `DoEvents()`
+  - Root cause: Under INPUTS/TINPUTS mode, `MouseDown` event sets `_keyLatch[1]=1`, but built-in input system doesn't call `GETKEYTRIGGERED` to consume latch
+  - When switching from INPUTS to AWAIT loop, residual latch consumed by `GETKEYTRIGGERED(1)`, producing spurious click
+  - Symptom: qol_MAP map exits immediately on first entry with high probability (spurious left mouse click)
+  - Fix: Clear all residual latches before each `Await()` iteration start; new latches from `DoEvents()` consumed normally by `GETKEYTRIGGERED`
+
+- **WinInput.cs** — Added `ClearLatches()` method
+  - Atomically clears all elements of `_keyLatch` array to 0
+  - Prevents cross-input-mode (INPUTS → AWAIT) latch leak
+
+***
+
+## [4.3.0] — PRINTC Pixel Tabulation Refactor: Cross-platform Column Alignment Unification
+
+### Fixed — PRINTFORMLC Column Misalignment in Chinese Environment (Regression Fix)
+
+- **EmueraConsole.Print.cs** — `CreateTypeCString` uses `Config.Encode.GetByteCount(str)` which under default UTF-8 encoding counts CJK characters as 3 bytes, but `Config.PrintCLength` uses half-width character units (CJK=2)
+  - A24 fix changed encoding from Shift-JIS to Config.Encode and introduced regression
+  - Fix: Changed to `LangManager.GetStrlenLang(str)`, calculates byte length based on language-specific ANSI encoding (Chinese=GB2312/936, Japanese=Shift-JIS/932)
+
+### Changed — PrintC/PrintButtonC Refactored from Byte Tabulation to Pixel Tabulation
+
+- **EmueraConsole.Print.cs** — Deleted `CreateTypeCString` method, `PrintC`/`PrintButtonC` now use pixel tabulation path
+  - Old approach: byte length calculation + space padding → while loop space trimming → affected by encoding and font hinting
+  - New approach: `StringMeasure.GetDisplayLength` measures content pixel width → `ConsoleSpacePart` pixel rectangle fills the difference
+  - Shares same pixel tabulation concept with `PrintHtmlC`, ensuring WinForms + SkiaX dual-platform alignment consistency
+  - Deleted `printCWidthL`/`printCWidthL2` (only used by old while loop)
+  - Root cause analysis: monospace font `N × charWidth ≠ stringWidth` (font hinting/kerning truncation), WinForms GDI whole-string rendering absorbs error, SkiaX per-character rendering accumulates error into visible offset
+
+### Sync Modifications
+
+- **SkiaX Desktop** (`Emuera/UI/Game/EmueraConsole.Print.cs`) — Sync refactor
+- **SkiaX Xamarin** (`Emuera.Xamarin/Platform/GameView/EmueraConsole.Print.cs`) — Sync refactor
+
+***
+
 ## [4.2.0] — FONTBOLD/FONTITALIC/FONTREGULAR Cross-Platform Fix + GETPLATFORM API
 
 ### Fixed — Mobile Font Style Commands No-Op Causing Bold Leak

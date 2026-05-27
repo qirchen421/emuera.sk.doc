@@ -34,4 +34,5 @@ hide:
 
 ### 関連項目
 - [INPUT](INPUT.md)
+- [TINPUTNF](TINPUTNF.md)
 - [TONEINPUT](TONEINPUT.md)

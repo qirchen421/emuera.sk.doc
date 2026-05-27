@@ -6,6 +6,68 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ***
 
+## [5.0.0] — T プレフィックス NF サフィックス命令 + フリースクロール + HOVER_PAUSE
+
+### Added
+
+- **NF サフィックス命令**：`TINPUTNF`, `TINPUTSNF`, `TONEINPUTNF`, `TONEINPUTSNF`
+  - TINPUT/TINPUTS/TONEINPUT/TONEINPUTS と同じパラメータと戻り値だが、下への強制スクロールを行わない
+  - NF = NoFocus、`ConsoleState.WaitInputNoFocus` 状態に入り、`ApplyTextBoxChanges()` を呼び出さない
+  - T プレフィックス命令のみ NF 変体を提供（INPUT/INPUTS は完全ブロッキングで NF は無意味）
+  - `TINPUTSNF` で AWAIT+GETKEYTRIGGERED ポーリングハックを代替
+
+- **ConsoleState.WaitInputNoFocus = 22**：`WaitInput` との唯一の違いは `ApplyTextBoxChanges()` を呼び出さないこと
+- **InputRequest.NoFocus**：ブールフラグ、T プレフィックス NF 変体は `noFocus` コンストラクタ引数で設定
+- **EmueraConsole.WaitInputNoFocus()**：`WaitInputNoFocus` 状態を設定
+- **EmueraConsole.IsWaitInputState**：28箇所の `state == ConsoleState.WaitInput` 判定を置き換え
+
+### Fixed
+
+- **NF スクロール機構**：`nfUserScrolledBack` フラグでユーザーの上方スクロール意図を記録；`nfScrollOffsetFromBottom` でオフセットを保存；`WaitInput` 入口で強制最下部スクロール；NF 上方スクロール時の `RefreshStrings` 中間レンダリングをスキップ
+- **HOVER_PAUSE ホバー一時停止**：マウスがボタンにホバーした時にアニメーションを一時停止、離れた時に再開。4つのマップ関数に統一適用
+
+***
+
+## [4.3.1] — GETKEY デカップリング：Latch リーク修正
+
+### Fixed — AWAIT ループ初回反復の虚偽マウスクリック
+
+- **EmueraConsole.cs** — `Await()` メソッドが `DoEvents()` の前に `WinInput.ClearLatches()` を呼び出す
+  - 根因：INPUTS/TINPUTS モードで `MouseDown` イベントが `_keyLatch[1]=1` を設定するが、組み込み入力システムは `GETKEYTRIGGERED` を呼び出して latch を消費しない
+  - INPUTS から AWAIT ループに切り替えると、残留 latch が `GETKEYTRIGGERED(1)` に消費され、虚偽クリックが発生
+  - 現象：qol_MAP マップ初回進入時に高確率で即座に退出（マウス左クリックの虚偽トリガー）
+  - 修正：各 `Await()` 反復開始前に全残留 latch をクリア；`DoEvents()` で生成された新規 latch は `GETKEYTRIGGERED` で正常に消費
+
+- **WinInput.cs** — `ClearLatches()` メソッドを追加
+  - `_keyLatch` 配列の全要素を原子的に 0 にクリア
+  - 入力モード横断（INPUTS → AWAIT）の latch リークを防止
+
+***
+
+## [4.3.0] — PRINTC ピクセルタブリファクタリング：クロスプラットフォーム列揃え統一
+
+### Fixed — PRINTFORMLC 中国語環境での列ずれ（回帰修正）
+
+- **EmueraConsole.Print.cs** — `CreateTypeCString` で `Config.Encode.GetByteCount(str)` がデフォルト UTF-8 エンコーディングで CJK 文字を3バイトとして計算するが、`Config.PrintCLength` は半角文字単位（CJK=2）
+  - A24 修正がエンコーディングを Shift-JIS から Config.Encode に変更した際の回帰
+  - 修正：`LangManager.GetStrlenLang(str)` に変更、言語設定の ANSI エンコーディング（中国語=GB2312/936、日本語=Shift-JIS/932）に基づいてバイト長を計算
+
+### Changed — PrintC/PrintButtonC をバイトタブからピクセルタブにリファクタリング
+
+- **EmueraConsole.Print.cs** — `CreateTypeCString` メソッドを削除、`PrintC`/`PrintButtonC` をピクセルタブパスに変更
+  - 旧方式：バイト長計算でスペース文字補完 → while ループでスペース微調整 → エンコーディングとフォントヒンティングの影響を受ける
+  - 新方式：`StringMeasure.GetDisplayLength` でコンテンツのピクセル幅を測定 → `ConsoleSpacePart` ピクセル矩形で差分を埋める
+  - `PrintHtmlC` と同じピクセルタブ概念を共有、WinForms + SkiaX デュアルプラットフォームの揃え一貫性を確保
+  - `printCWidthL`/`printCWidthL2` を削除（旧 while ループのみで使用）
+  - 根因分析：等幅フォント `N × charWidth ≠ stringWidth`（フォントヒンティング/カーニングの切り捨て）、WinForms GDI は文字列全体描画で誤差を吸収、SkiaX は文字ごと描画で誤差が蓄積して可視オフセットに
+
+### 同期修正
+
+- **SkiaX Desktop** (`Emuera/UI/Game/EmueraConsole.Print.cs`) — 同期リファクタリング
+- **SkiaX Xamarin** (`Emuera.Xamarin/Platform/GameView/EmueraConsole.Print.cs`) — 同期リファクタリング
+
+***
+
 ## [4.2.0] — FONTBOLD/FONTITALIC/FONTREGULAR クロスプラットフォーム修正 + GETPLATFORM API
 
 ### Fixed — モバイル版フォントスタイル命令の空操作によるBoldリーク

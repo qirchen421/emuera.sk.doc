@@ -393,6 +393,7 @@ THROW 执行
 
 | 你想了解什么 | 前往 |
 |:---|:---|
+| 交互系统：INPUT 与 AWAIT | [交互系统](interaction.zh.md) |
 | 事件函数详解 | [事件函数](event-functions.zh.md) |
 | BEGIN 指令 API | [BEGIN](../Reference/BEGIN.zh.md) |
 | 角色变量系统 | [角色变量](../Emuera/variables.zh.md) |

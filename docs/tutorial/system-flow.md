@@ -393,6 +393,7 @@ THROW 実行
 
 | 知りたいこと | 前へ |
 |:---|:---|
+| インタラクションシステム：INPUTとAWAIT | [インタラクションシステム](interaction.md) |
 | イベント関数の詳細 | [イベント関数](event-functions.md) |
 | BEGIN 命令 API | [BEGIN](../Reference/BEGIN.md) |
 | キャラ変数システム | [キャラ変数](../Emuera/variables.md) |

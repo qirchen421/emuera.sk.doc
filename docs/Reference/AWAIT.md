@@ -37,3 +37,4 @@ hide:
 ### 関連項目
 * [WAIT](WAIT.md)
 * [TWAIT](TWAIT.md)
+* [TINPUTNF](TINPUTNF.md)

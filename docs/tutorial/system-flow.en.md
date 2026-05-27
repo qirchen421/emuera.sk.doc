@@ -393,6 +393,7 @@ When any uncaught error occurs, if `@BEFORE_ERROR` event function (Skia exclusiv
 
 | What you want to learn | Go to |
 |:---|:---|
+| Interaction system: INPUT and AWAIT | [Interaction System](interaction.en.md) |
 | Event functions in detail | [Event Functions](event-functions.en.md) |
 | BEGIN instruction API | [BEGIN](../Reference/BEGIN.en.md) |
 | Character variable system | [Character Variables](../Emuera/variables.en.md) |

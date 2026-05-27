@@ -286,6 +286,24 @@
 
 ## Changed Commands & Expression Functions { #changed-commands }
 
+### ![](../assets/images/IconSK.webp) T-Prefixed INPUT Instruction NF Suffix Variants
+!!! summary ""
+
+    TINPUT/TINPUTS/TONEINPUT/TONEINPUTS now have NF (NoFocus) suffix variants: `TINPUTNF`/`TINPUTSNF`/`TONEINPUTNF`/`TONEINPUTSNF`.
+    Identical parameters and return values as the original instructions, except they don't force scroll to bottom,
+    allowing users to freely scroll while waiting for input. Only T-prefixed (timed input) instructions provide NF variants — INPUT/INPUTS are fully blocking with no content updates during wait, making NF meaningless.
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    TINPUTNF time, {defaultvalue}, {cancelvalue}, {cancelform}
+    TINPUTSNF time, {defaultstring}, {cancelvalue}, {cancelform}
+    TONEINPUTNF time, {defaultvalue}, {cancelvalue}, {cancelform}
+    TONEINPUTSNF time, {defaultstring}, {cancelvalue}, {cancelform}
+    ```
+
+    **NF suffix semantics**: Enters `WaitInputNoFocus` state instead of `WaitInput`, does not call `ApplyTextBoxChanges()`, preserves button highlighting/Tooltip functionality.
+
 ### ![](../assets/images/IconSK.webp)`CBGSETSPRITE` Extended Parameters
 !!! summary ""
 

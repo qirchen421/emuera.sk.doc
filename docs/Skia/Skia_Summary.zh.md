@@ -286,6 +286,24 @@
 
 ## 规格变更的命令·式中函数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp) T 前缀 INPUT 指令的 NF 后缀变体
+!!! summary ""
+
+    TINPUT/TINPUTS/TONEINPUT/TONEINPUTS 新增 NF（NoFocus）后缀变体：`TINPUTNF`/`TINPUTSNF`/`TONEINPUTNF`/`TONEINPUTSNF`。
+    与原版指令参数和返回值完全相同，唯一区别是不强制滚动到底部，允许用户在等待输入时自由滚动。
+    仅 T 前缀（定时输入）指令提供 NF 变体——INPUT/INPUTS 为全阻塞，等待期间无内容更新，NF 无意义。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    TINPUTNF time, {defaultvalue}, {cancelvalue}, {cancelform}
+    TINPUTSNF time, {defaultstring}, {cancelvalue}, {cancelform}
+    TONEINPUTNF time, {defaultvalue}, {cancelvalue}, {cancelform}
+    TONEINPUTSNF time, {defaultstring}, {cancelvalue}, {cancelform}
+    ```
+
+    **NF 后缀语义**：进入 `WaitInputNoFocus` 状态而非 `WaitInput`，不调用 `ApplyTextBoxChanges()`，保留按钮高亮/Tooltip 功能。
+
 ### ![](../assets/images/IconSK.webp)`CBGSETSPRITE` 的扩展参数
 !!! summary ""
 
