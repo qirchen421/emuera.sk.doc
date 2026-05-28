@@ -357,6 +357,19 @@ Neo_Kesha氏による追加
 ### ![](../assets/images/IconEE.webp)`BREAKBUTTON`命令追加
 !!! summary ""
 
-	画面のボタン化を強制的に更新します。  
-	通常、ボタン化はフレームごとに自動的に行われますが、この命令を使用することで即時にボタン化を更新することができます。  
+	画面のボタン化を強制的に更新します。
+	通常、ボタン化はフレームごとに自動的に行われますが、この命令を使用することで即時にボタン化を更新することができます。
 	詳しくは[`BREAKBUTTON`](../Reference/BREAKBUTTON.md)を参照してください。
+
+### ![](../assets/images/IconEE.webp)外部プラグイン警告設定 { #pluginavailablewarn }
+!!! summary ""
+
+	`Plugins`フォルダに外部プラグイン（DLL）が存在する場合、起動時に警告を表示するかどうかを設定可能にしました。
+
+	* コンフィグ画面もしくは`emuera.config`の`PluginAvailableWarn`項目で設定可能（デフォルト：YES）
+	* 以前のバージョンでは`pluginsAware.txt`ファイルの有無で実行を制御していましたが、この仕組みは廃止されました
+
+!!! example "例"
+    ``` title="emuera.config"
+    外部プラグインが有効時に警告を表示する:YES
+    ```

@@ -57,6 +57,7 @@
     <tr id="UI.ConfigDialog.Environment.UseSaveFolder"><![CDATA[将存档保存到sav文件夹]]></tr>
     <tr id="UI.ConfigDialog.Environment.EnglishConfigOutput"><![CDATA[用英文输出配置文件的设置项目]]></tr>
 	<tr id="UI.ConfigDialog.Environment.UseCtrlZUndo"><![CDATA[使用Ctrl+Z撤销热键]]></tr>
+	<tr id="UI.ConfigDialog.Environment.PluginAvailableWarn"><![CDATA[外部插件启用时显示警告]]></tr>
     <tr id="UI.ConfigDialog.Environment.MaxLog"><![CDATA[历史日志行数]]></tr>
     <tr id="UI.ConfigDialog.Environment.InfiniteLoopAlertTime"><![CDATA[无限循环警告超时毫秒数]]></tr>
     <tr id="UI.ConfigDialog.Environment.SaveDataPerPage"><![CDATA[每页显示的存档数]]></tr>
@@ -711,6 +712,7 @@ Emuera的历史版本有效的内容变得无效等等现象而设置的。
     <tr id="Error.NumberOfArg"><![CDATA[@{0}的第{1}个参数:{2}]]></tr>
     <tr id="Error.CanNotOmitArgWithMessage"><![CDATA[@{0}的第{1}个参数不能省略(此警告可以用兼容性配置「{2}」来无视)]]></tr>
     <tr id="Error.CanNotConvertStrToInt"><![CDATA[不能将"@{0}"的第{1}个参数从字符串型转换为整型]]></tr>
+    <tr id="Error.DuplicateCaseValue"><![CDATA[SELECTCASE中存在重复的常量值{0}。该值已被CASE {1}匹配，当前CASE分支将不可达]]></tr>
     <tr id="Error.CanNotConvertIntToStr"><![CDATA[不能将"@{0}"的第{1}个参数从整转换为字符串型型(此警告可以用兼容性配置「{2}」来无视)]]></tr>
     <tr id="Error.CalltrainArgMoreThanSelectcom"><![CDATA[CALLTRAIN命令的参数值超过SELECTCOM的元素数]]></tr>
     <tr id="Error.SelectExitInfiniteLoopMB"><![CDATA[可能进入了无限循环因此选择强制终止]]></tr>
@@ -1093,6 +1095,7 @@ Emuera的历史版本有效的内容变得无效等等现象而设置的。
 	<tr id="SystemLine.CreateFromCSV"><![CDATA[从文件「{0}」生成拼接图索引「{1}」……]]></tr>
 	<tr id="SystemLine.Variant"><![CDATA[# 变体]]></tr>
 	<tr id="SystemLine.NotDefinedGameBase"><![CDATA[未定义GameBase]]></tr>
+	<tr id="SystemLine.PluginAvailable"><![CDATA[注意：外部插件功能已启用。因该功能引发的问题不在Emuera支持范围内]]></tr>
 	<tr id="SystemLine.LazyLoadingNoConfigFile"><![CDATA[懒加载配置文件未找到，因此跳过索引表构建]]></tr>
 	<tr id="SystemLine.LazyLoadingConfigError"><![CDATA[懒加载配置文件读取失败。消息：{0}]]></tr>
 	<tr id="SystemLine.LazyLoadingTableReadError"><![CDATA[懒加载索引表读取失败。消息：{0}]]></tr>

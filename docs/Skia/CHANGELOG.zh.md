@@ -4,6 +4,31 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [5.1.0] — EEv56 上游对齐：PluginAvailableWarn + TOOLTIP 回退
+
+### Changed — 上游对齐（emuera.em EEv56）
+
+- **PluginAvailableWarn 配置项**（ee commit `0abdff8`）
+  - 移除 `pluginsAware.txt` 安全检查机制（原机制：文件不存在时 throw ExeEE 阻止运行）
+  - 新增 `ConfigCode.PluginAvailableWarn` 配置项（默认 true），检测到 Plugins 目录有 DLL 时打印警告
+  - 新增 `GlobalStatic.ExistPlugin` 标志，`PluginManager.LoadPlugins()` 中根据 DLL 存在性设置
+  - 新增 `Lang.PluginAvailable` 翻译字符串
+  - 警告内容：「注意：外部插件功能已启用。因该功能引发的问题不在Emuera支持范围内」
+  - WinForms ConfigDialog 新增 checkBox36 UI 控件（仅 WinForms 端，SkiaX 不使用 ConfigDialog）
+
+- **TOOLTIP 默认设置回退**（ee commit `07e58ac`）
+  - 当 ToolTip 三项设置均为默认值（OwnerDraw=false, InitialDelay=0, tooltip_duration=0）时，使用简单 `SetToolTip()` 而非异步 `Task.Run`
+  - 修复默认配置下 TOOLTIP 显示延迟问题（异步路径的 InitialDelay 等待 + SynchronizationContext 调度开销）
+  - 仅影响 Desktop 端（WinForms + SkiaX Desktop），Xamarin 端 TOOLTIP 实现不同无需修改
+
+- **版本号更新**（ee commit `26a35dc`）
+  - EEv55 → EEv56
+  - Skia 版本号 v5 → v5.1
+
+### Fixed
+
+- **Program.cs bgm.close 注释恢复** — ee 恢复了被注释掉的 `bgm.close()` / `sound[].close()`，本仓库已在 A 类修复中取消注释，无需额外操作
+
 ***
 
 ## [5.0.0] — T 前缀 NF 后缀指令 + 自由滚动 + HOVER_PAUSE

@@ -51,4 +51,4 @@ hide:
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 
 ## Download
-[**Latest Version: Emuera_skiaV3_x64**](assets/files/Emuera_skiaV3_x64.zip)
+[**Latest Version: Emuera_skiaV5_x64**](assets/files/Emuera_skiaV5_x64.zip) ｜ [**SkiaX Android: v0.60.1**](assets/files/Emuera.SkiaX.0.60.2.apk.zip)

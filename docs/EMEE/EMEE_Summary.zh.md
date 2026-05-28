@@ -56,6 +56,19 @@
 
     开启压缩功能的存档不兼容旧版本及本家版的 Emuera.exe。
 
+### ![](../assets/images/IconEE.webp)外部插件警告设置 { #pluginavailablewarn }
+!!! summary ""
+
+    当 `Plugins` 文件夹中存在外部插件（DLL）时，可以设置是否在启动时显示警告。
+
+    * 可在设置界面或 `emuera.config` 的 `PluginAvailableWarn` 项目中进行设置（默认：YES）
+    * 旧版本通过 `pluginsAware.txt` 文件的有无来控制运行，该机制已被废弃
+
+!!! example "示例代码"
+    ``` title="emuera.config"
+    外部插件启用时显示警告:YES
+    ```
+
 ### ![](../assets/images/IconEM.webp)Emuera 图标设置功能
 !!! summary ""
 

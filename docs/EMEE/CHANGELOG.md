@@ -4,6 +4,12 @@
 
 ## Emuera.EM
 
+=== "v19"
+
+    * 機能追加：[`PluginAvailableWarn`](../EMEE/EMEE_Summary.md#pluginavailablewarn)設定項目。外部プラグイン機能が有効な時に警告を表示するかどうかを制御。
+    * 仕様変更：`pluginsAware.txt`による安全チェックを廃止。設定項目`PluginAvailableWarn`に置き換え。
+    * 最適化：ToolTip設定がデフォルト値（OwnerDraw=false, InitialDelay=0, tooltip_duration=0）の場合、非同期`Task.Run`の代わりに同期`SetToolTip()`を使用。
+
 === "v18"
 
     * 関数追加：[`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.md)。

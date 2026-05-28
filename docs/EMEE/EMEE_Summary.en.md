@@ -384,6 +384,19 @@
 ### ![](../assets/images/IconEE.webp)`BREAKBUTTON` Command Added
 !!! summary ""
 
-    Forces immediate update of button state on the screen.  
-    Normally, buttonization is performed automatically every frame, but this command allows immediate button state updates.  
+    Forces immediate update of button state on the screen.
+    Normally, buttonization is performed automatically every frame, but this command allows immediate button state updates.
     See [`BREAKBUTTON`](../Reference/BREAKBUTTON.en.md) for details.
+
+### ![](../assets/images/IconEE.webp)External Plugin Warning Setting { #pluginavailablewarn }
+!!! summary ""
+
+    When external plugins (DLLs) exist in the `Plugins` folder, you can configure whether to display a warning at startup.
+
+    * Configurable via the config screen or `emuera.config` `PluginAvailableWarn` item (default: YES)
+    * Previous versions controlled execution via the presence of `pluginsAware.txt` file; this mechanism has been removed
+
+!!! example "Example"
+    ``` title="emuera.config"
+    Show warning when external plugins are enabled:YES
+    ```

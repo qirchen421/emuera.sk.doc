@@ -4,6 +4,31 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [5.1.0] — EEv56 Upstream Sync: PluginAvailableWarn + TOOLTIP Fallback
+
+### Changed — Upstream Sync (emuera.em EEv56)
+
+- **PluginAvailableWarn config item** (ee commit `0abdff8`)
+  - Removed `pluginsAware.txt` safety check mechanism (original: throw ExeEE to block execution when file missing)
+  - Added `ConfigCode.PluginAvailableWarn` config item (default true), shows warning when DLLs exist in Plugins directory
+  - Added `GlobalStatic.ExistPlugin` flag, set in `PluginManager.LoadPlugins()` based on DLL presence
+  - Added `Lang.PluginAvailable` translation string
+  - Warning text: "Note: External plugin functionality is enabled. Issues caused by this feature are not covered by Emuera support"
+  - Added checkBox36 UI control to WinForms ConfigDialog (WinForms only, SkiaX does not use ConfigDialog)
+
+- **TOOLTIP default settings fallback** (ee commit `07e58ac`)
+  - When all three ToolTip settings are at default values (OwnerDraw=false, InitialDelay=0, tooltip_duration=0), uses synchronous `SetToolTip()` instead of async `Task.Run`
+  - Fixes TOOLTIP display delay under default configuration (async path's InitialDelay wait + SynchronizationContext dispatch overhead)
+  - Desktop only (WinForms + SkiaX Desktop); Xamarin's TOOLTIP implementation differs and needs no change
+
+- **Version number update** (ee commit `26a35dc`)
+  - EEv55 → EEv56
+  - Skia version v5 → v5.1
+
+### Fixed
+
+- **Program.cs bgm.close comment restoration** — ee restored commented-out `bgm.close()` / `sound[].close()`, but this repo had already uncommented them in an A-class fix, no additional action needed
+
 ***
 
 ## [5.0.0] — T-Prefixed NF Suffix Instructions + Free Scrolling + HOVER_PAUSE

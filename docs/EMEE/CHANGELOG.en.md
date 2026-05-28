@@ -7,6 +7,12 @@ hide:
 
 ## Emuera.EM
 
+=== "v19"
+
+    * Feature added: [`PluginAvailableWarn`](../EMEE/EMEE_Summary.en.md#pluginavailablewarn) config item. Controls whether to show a warning when external plugin functionality is enabled.
+    * Specification change: Removed `pluginsAware.txt` safety check. Replaced with `PluginAvailableWarn` config item.
+    * Optimization: When ToolTip settings are at default values (OwnerDraw=false, InitialDelay=0, tooltip_duration=0), uses synchronous `SetToolTip()` instead of async `Task.Run`.
+
 === "v18"
 
     * Function added: [`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.en.md).
