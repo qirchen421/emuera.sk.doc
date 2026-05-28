@@ -5,12 +5,6 @@
 
 ## Emuera.EM
 
-=== "v19"
-
-    * 新增功能：[`PluginAvailableWarn`](../EMEE/EMEE_Summary.zh.md#pluginavailablewarn) 配置项。控制外部插件功能启用时是否显示警告。
-    * 规格变更：移除 `pluginsAware.txt` 安全检查机制，替换为 `PluginAvailableWarn` 配置项。
-    * 优化：当 ToolTip 设置为默认值（OwnerDraw=false, InitialDelay=0, tooltip_duration=0）时，使用同步 `SetToolTip()` 替代异步 `Task.Run`。
-
 === "v18"
 
     * 新增函数：[`HTML_STRINGLINES`](../Reference/HTML_STRINGLINES.zh.md)。
@@ -137,6 +131,11 @@
     初次公开发布。
 
 ## Emuera.EE
+=== "v56"
+	* 新增功能：[`PluginAvailableWarn`](../EMEE/EMEE_Summary.zh.md#pluginavailablewarn) 配置项。控制外部插件功能启用时是否显示警告。
+	* 规格变更：移除 `pluginsAware.txt` 安全检查机制，替换为 `PluginAvailableWarn` 配置项。
+	* 优化：当 ToolTip 设置为默认值（OwnerDraw=false, InitialDelay=0, tooltip_duration=0）时，使用同步 `SetToolTip()` 替代异步 `Task.Run`。
+
 === "v55"
 	* 新增 ONEBINPUT、ONEBINPUTS 函数
 	* 合并 VVII 氏的补丁以支持 .NET 10
