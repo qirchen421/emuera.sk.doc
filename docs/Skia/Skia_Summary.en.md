@@ -95,6 +95,10 @@
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | Event | Called before THROW throws exception | [Event Functions](../tutorial/event-functions.en.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | Event | Called on first error occurrence | [Event Functions](../tutorial/event-functions.en.md#before_error) |
 | ![](../assets/images/IconSK.webp) `GETPLATFORM` | Expression | Get execution platform code | [GETPLATFORM](../Reference/GETPLATFORM.en.md) |
+| ![](../assets/images/IconSK.webp) `TINPUTNF` | Command | NF variant of TINPUT, no forced scroll | [TINPUTNF](../Reference/TINPUTNF.en.md) |
+| ![](../assets/images/IconSK.webp) `TINPUTSNF` | Command | NF variant of TINPUTS, no forced scroll | [TINPUTSNF](../Reference/TINPUTNF.en.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTNF` | Command | NF variant of TONEINPUT, no forced scroll | [TONEINPUTNF](../Reference/TONEINPUTNF.en.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | Command | NF variant of TONEINPUTS, no forced scroll | [TONEINPUTSNF](../Reference/TONEINPUTNF.en.md) |
 
 ---
 
@@ -291,7 +295,7 @@
 
     TINPUT/TINPUTS/TONEINPUT/TONEINPUTS now have NF (NoFocus) suffix variants: `TINPUTNF`/`TINPUTSNF`/`TONEINPUTNF`/`TONEINPUTSNF`.
     Identical parameters and return values as the original instructions, except they don't force scroll to bottom,
-    allowing users to freely scroll while waiting for input. Only T-prefixed (timed input) instructions provide NF variants — INPUT/INPUTS are fully blocking with no content updates during wait, making NF meaningless.
+    allowing users to freely scroll while waiting for input.
 
 !!! info "API"
 

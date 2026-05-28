@@ -95,6 +95,10 @@
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | 事件函数 | THROW 抛出前调用 | [事件函数](../tutorial/event-functions.zh.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | 事件函数 | 错误发生时首次调用 | [事件函数](../tutorial/event-functions.zh.md#before_error) |
 | ![](../assets/images/IconSK.webp) `GETPLATFORM` | 式中函数 | 获取运行平台编码 | [GETPLATFORM](../Reference/GETPLATFORM.zh.md) |
+| ![](../assets/images/IconSK.webp) `TINPUTNF` | 命令 | TINPUT 的 NF 变体，不强制滚动 | [TINPUTNF](../Reference/TINPUTNF.zh.md) |
+| ![](../assets/images/IconSK.webp) `TINPUTSNF` | 命令 | TINPUTS 的 NF 变体，不强制滚动 | [TINPUTSNF](../Reference/TINPUTNF.zh.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTNF` | 命令 | TONEINPUT 的 NF 变体，不强制滚动 | [TONEINPUTNF](../Reference/TONEINPUTNF.zh.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS 的 NF 变体，不强制滚动 | [TONEINPUTSNF](../Reference/TONEINPUTNF.zh.md) |
 
 ---
 
@@ -291,7 +295,6 @@
 
     TINPUT/TINPUTS/TONEINPUT/TONEINPUTS 新增 NF（NoFocus）后缀变体：`TINPUTNF`/`TINPUTSNF`/`TONEINPUTNF`/`TONEINPUTSNF`。
     与原版指令参数和返回值完全相同，唯一区别是不强制滚动到底部，允许用户在等待输入时自由滚动。
-    仅 T 前缀（定时输入）指令提供 NF 变体——INPUT/INPUTS 为全阻塞，等待期间无内容更新，NF 无意义。
 
 !!! info "API"
 

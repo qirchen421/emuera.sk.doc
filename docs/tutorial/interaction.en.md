@@ -146,7 +146,7 @@ GOTO LOOP
 
 ## NoFocus Variants: Bridging the Two Models
 
-NF (NoFocus) suffix variants resolve this contradiction. Only T-prefixed (timed input) instructions provide NF variants — INPUT/INPUTS are fully blocking with no content updates during wait, making NF meaningless.
+NF (NoFocus) suffix variants resolve this contradiction.
 
 ```erb
 TINPUTNF  ; Same, with timeout

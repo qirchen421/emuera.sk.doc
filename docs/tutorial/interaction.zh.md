@@ -146,7 +146,7 @@ GOTO LOOP
 
 ## NoFocus 变体：两种模型的桥梁
 
-NF（NoFocus）后缀变体解决了上述矛盾。仅 T 前缀（定时输入）指令提供 NF 变体——INPUT/INPUTS 为全阻塞，等待期间无内容更新，NF 无意义。
+NF（NoFocus）后缀变体解决了上述矛盾。
 
 ```erb
 TINPUTNF  ; 同上，带超时

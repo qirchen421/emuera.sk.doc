@@ -95,6 +95,10 @@
 | ![](../assets/images/IconSK.webp) `BEFORE_THROW` | イベント関数 | THROW スロー前に呼び出し | [イベント関数](../tutorial/event-functions.md#before_throw) |
 | ![](../assets/images/IconSK.webp) `BEFORE_ERROR` | イベント関数 | エラー発生時に初回呼び出し | [イベント関数](../tutorial/event-functions.md#before_error) |
 | ![](../assets/images/IconSK.webp) `GETPLATFORM` | 式中関数 | 実行プラットフォームの取得 | [GETPLATFORM](../Reference/GETPLATFORM.md) |
+| ![](../assets/images/IconSK.webp) `TINPUTNF` | 命令 | TINPUT の NF 変種、強制スクロールなし | [TINPUTNF](../Reference/TINPUTNF.md) |
+| ![](../assets/images/IconSK.webp) `TINPUTSNF` | 命令 | TINPUTS の NF 変種、強制スクロールなし | [TINPUTSNF](../Reference/TINPUTNF.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTNF` | 命令 | TONEINPUT の NF 変種、強制スクロールなし | [TONEINPUTNF](../Reference/TONEINPUTNF.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS の NF 変種、強制スクロールなし | [TONEINPUTSNF](../Reference/TONEINPUTNF.md) |
 
 ---
 
@@ -291,7 +295,7 @@
 
     TINPUT/TINPUTS/TONEINPUT/TONEINPUTS に NF（NoFocus）サフィックス変体を追加：`TINPUTNF`/`TINPUTSNF`/`TONEINPUTNF`/`TONEINPUTSNF`。
     元の命令と完全に同じパラメータと戻り値だが、下への強制スクロールを行わない点のみ異なる。
-    入力待ち中のユーザーのフリースクロールを許可する。T プレフィックス（タイマー付き入力）命令のみ NF 変体を提供——INPUT/INPUTS は完全ブロッキングのため、待機中に新しいコンテンツがなく NF は無意味。
+    入力待ち中のユーザーのフリースクロールを許可する。
 
 !!! info "API"
 
