@@ -95,7 +95,7 @@ RETURN L_TEMP:0
 | `#DIM` | Declare integer private variable | Within function |
 | `#DIMS` | Declare string private variable | Within function |
 | `#DIMF` | Declare float private variable | Within function |
-| `#REF` / `#REFS` / `#REFF` | Declare scalar reference | Within function |
+| `#REF` / `#REFS` / `#REFF` | Declare element reference | Within function |
 | `#FUNCTION` / `#FUNCTIONS` / `#FUNCTIONF` | Mark expression function type | Function-level |
 | `#LOCALSIZE` / `#LOCALSSIZE` / `#LOCALFSIZE` | Set LOCAL array size | Function-level |
 | `#PRI` / `#LATER` / `#SINGLE` / `#ONLY` | Event function priority modifier | Event function |

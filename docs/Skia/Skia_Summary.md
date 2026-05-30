@@ -241,10 +241,10 @@
 ### ![](../assets/images/IconSK.webp)参照パラメータ（REF/OUT）
 !!! summary ""
 
-    EM+EEの配列参照（`#DIM REF`）を拡張し、スカラー参照とOUT パラメータを追加。
+    EM+EEの配列参照（`#DIM REF`）を拡張し、要素参照とOUT パラメータを追加。
 
-    - スカラー参照：`#REF X` / `#REFS X` / `#REFF X` — 単一要素の参照渡し（EM+EEは配列全体のみ）
-    - OUT パラメータ：`#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — 省略可能なスカラー参照（省略時は書き込み破棄）
+    - 要素参照：`#REF X` / `#REFS X` / `#REFF X` — ターゲット配列変数の特定インデックス位置にバインド（EM+EEは配列全体のみ）
+    - OUT パラメータ：`#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — 省略可能な要素参照（省略時は書き込み破棄）
 
 !!! warning "注意"
 
@@ -796,7 +796,7 @@
 | 文字装飾線 | ❌ | ✅ 下線/取り消し線 | FONTSTYLE拡張 |
 | テキスト背景色制御 | ❌ | ✅ TEXT_BGC_ON/OFF | |
 | レンダリングバックエンド | ❌ | ✅ Auto/OpenGL/CPU | |
-| 参照パラメータ | 配列のみ | ✅ スカラー+OUT | #REF/#REFF/OUT追加 |
+| 参照パラメータ | 配列のみ | ✅ 要素参照+OUT | #REF/#REFF/OUT追加 |
 | CBGSETSPRITE拡張 | 基本 | ✅ 縮尺/透明度/CM | |
 | SPRITECREATE拡張 | 基本 | ✅ オフセット/ターゲットサイズ | |
 | 画像反転 | ❌ | ✅ 負サイズで反転 | |

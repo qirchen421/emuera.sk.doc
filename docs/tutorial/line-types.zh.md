@@ -95,7 +95,7 @@ RETURN L_TEMP:0
 | `#DIM` | 声明整数私有变量 | 函数内 |
 | `#DIMS` | 声明字符串私有变量 | 函数内 |
 | `#DIMF` | 声明浮点私有变量 | 函数内 |
-| `#REF` / `#REFS` / `#REFF` | 声明标量引用 | 函数内 |
+| `#REF` / `#REFS` / `#REFF` | 声明元素引用 | 函数内 |
 | `#FUNCTION` / `#FUNCTIONS` / `#FUNCTIONF` | 标记表达式函数类型 | 函数级 |
 | `#LOCALSIZE` / `#LOCALSSIZE` / `#LOCALFSIZE` | 设置 LOCAL 数组大小 | 函数级 |
 | `#PRI` / `#LATER` / `#SINGLE` / `#ONLY` | 事件函数优先级修饰 | 事件函数 |

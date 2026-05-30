@@ -65,7 +65,7 @@ LOCAL = FUNC(arg1, arg2)
 CALL FUNC(arg1, arg2)
 │
 ├─ 型チェック（REF引数はVariableTermでなければならない）
-├─ 次元マッチング（スカラーREF vs 配列REF）
+├─ 次元マッチング（要素参照 vs 配列参照）
 ├─ MatchType型互換性チェック
 ├─ デフォルト値の充填（省略された引数にDef[i]を適用）
 └─ 可変長引数をVariadicArgTermにパッキング
@@ -80,8 +80,7 @@ ConvertArgの主な役割は**静的検証**である。引数の型と数が関
 SetTransporter(exm)
 │
 ├─ 非REF引数: 式を評価 → TransporterInt/Str/Float[i] に値を格納
-├─ REFスカラー: GetArray() → TransporterRef[i] に参照を格納
-├─ REF配列要素: new ElementRefInfo(...) → TransporterElementRef[i] に要素参照を格納
+├─ 要素参照: new ElementRefInfo(...) → TransporterElementRef[i] に要素参照を格納
 └─ REF配列全体: GetArray() → TransporterRef[i] に配列参照を格納
 → 出力: Transporter配列の充填完了
 ```

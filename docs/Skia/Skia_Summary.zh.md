@@ -241,10 +241,10 @@
 ### ![](../assets/images/IconSK.webp)引用参数（REF/OUT）
 !!! summary ""
 
-    扩展 EM+EE 的数组引用（`#DIM REF`），新增标量引用和 OUT 参数。
+    扩展 EM+EE 的数组引用（`#DIM REF`），新增元素引用和 OUT 参数。
 
-    - 标量引用：`#REF X` / `#REFS X` / `#REFF X` — 引用传递单个元素（EM+EE 仅支持数组整体引用）
-    - OUT 参数：`#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — 可省略的标量引用（省略时写入丢弃）
+    - 元素引用：`#REF X` / `#REFS X` / `#REFF X` — 绑定到目标数组变量的特定索引位置（EM+EE 仅支持数组整体引用）
+    - OUT 参数：`#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — 可省略的元素引用（省略时写入丢弃）
 
 !!! warning "注意"
 
@@ -795,7 +795,7 @@
 | 文字装饰线 | ❌ | ✅ 下划线/删除线 | FONTSTYLE扩展 |
 | 文本背景色控制 | ❌ | ✅ TEXT_BGC_ON/OFF | |
 | 渲染后端 | ❌ | ✅ Auto/OpenGL/CPU | |
-| 引用参数 | 仅数组 | ✅ 标量+OUT | #REF/#REFF/OUT新增 |
+| 引用参数 | 仅数组 | ✅ 元素引用+OUT | #REF/#REFF/OUT新增 |
 | CBGSETSPRITE扩展 | 基础 | ✅ 缩放/透明度/CM | |
 | SPRITECREATE扩展 | 基础 | ✅ 偏移/目标尺寸 | |
 | 图像翻转 | ❌ | ✅ 负尺寸翻转 | |

@@ -146,8 +146,8 @@ Use `#DIM`/`#DIMS`/`#DIMF` inside functions to declare private variables:
 ```erb
 @MY_FUNC(ARG:0)
 #DIM L_COUNT, 10          ; Private integer array, 10 elements
-#DIMS L_NAME              ; Private string scalar
-#DIMF L_SCORE             ; Private float scalar (Skia addition)
+#DIMS L_NAME              ; Private string variable (single-element array)
+#DIMF L_SCORE             ; Private float variable (single-element array, Skia addition)
     L_COUNT:0 = ARG:0
     L_NAME '= "Test"
     L_SCORE = 0.0

@@ -144,8 +144,8 @@ ERABASIC には多数の組み込み変数が用意されており、宣言な�
 ```erb
 @MY_FUNC(ARG:0)
 #DIM L_COUNT, 10          ; プライベート整数配列、10要素
-#DIMS L_NAME              ; プライベート文字列スカラー
-#DIMF L_SCORE             ; プライベート浮動小数点数スカラー（Skia追加）
+#DIMS L_NAME              ; プライベート文字列変数（単一要素配列）
+#DIMF L_SCORE             ; プライベート浮動小数点変数（単一要素配列、Skia追加）
     L_COUNT:0 = ARG:0
     L_NAME '= "テスト"
     L_SCORE = 0.0

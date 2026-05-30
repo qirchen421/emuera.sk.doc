@@ -241,10 +241,10 @@
 ### ![](../assets/images/IconSK.webp)Reference Parameters (REF/OUT)
 !!! summary ""
 
-    Extends EM+EE's array references (`#DIM REF`) with scalar references and OUT parameters.
+    Extends EM+EE's array references (`#DIM REF`) with element references and OUT parameters.
 
-    - Scalar reference: `#REF X` / `#REFS X` / `#REFF X` — pass-by-reference for single elements (EM+EE only supports entire arrays)
-    - OUT parameter: `#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — optional scalar reference (write is discarded when omitted)
+    - Element reference: `#REF X` / `#REFS X` / `#REFF X` — binds to a specific index position of a target array variable (EM+EE only supports entire arrays)
+    - OUT parameter: `#DIM OUT X` / `#DIMS OUT X` / `#DIMF OUT X` — optional element reference (write is discarded when omitted)
 
 !!! warning "Note"
 
@@ -795,7 +795,7 @@
 | Text decoration lines | ❌ | ✅ Underline/Strikethrough | FONTSTYLE extension |
 | Text background color control | ❌ | ✅ TEXT_BGC_ON/OFF | |
 | Rendering backend | ❌ | ✅ Auto/OpenGL/CPU | |
-| Reference parameters | Arrays only | ✅ Scalar+OUT | #REF/#REFF/OUT added |
+| Reference parameters | Arrays only | ✅ Element ref+OUT | #REF/#REFF/OUT added |
 | CBGSETSPRITE extension | Basic | ✅ Scale/opacity/CM | |
 | SPRITECREATE extension | Basic | ✅ Offset/target size | |
 | Image flip | ❌ | ✅ Flip with negative size | |

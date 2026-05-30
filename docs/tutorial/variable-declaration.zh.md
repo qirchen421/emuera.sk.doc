@@ -52,7 +52,7 @@ ERB 函数内声明（函数级私有）
 ├── #DIM DYNAMIC L_TMP   → 动态私有变量
 ├── #DIM STATIC L_CACHE  → 静态私有变量
 ├── #DIM REF L_ARR, 0    → 数组引用
-├── #REF L_ELEM          → 标量引用
+├── #REF L_ELEM          → 元素引用
 └── #DIM OUT L_OUT       → 可省略 OUT 参数
 ```
 
@@ -80,7 +80,7 @@ ERB 函数内声明（函数级私有）
 
 | 声明 | 维度 | 大小 | 说明 |
 |------|------|------|------|
-| `#DIM X` | 0 | 1 | 标量（省略大小时自动=1） |
+| `#DIM X` | 0 | 1 | 单元素数组（省略大小时自动=1） |
 | `#DIM X, 100` | 1 | 100 | 一维数组 |
 | `#DIM X, 10, 20` | 2 | 10×20 | 二维数组 |
 | `#DIM X, 10, 20, 5` | 3 | 10×20×5 | 三维数组（最大） |
@@ -381,13 +381,13 @@ CALL PROCESS_ARRAY(DATA)
 ; #DIM REF L_ARR, 10
 ```
 
-### 标量引用
+### 元素引用
 
-`#REF`/`#REFS`/`#REFF` 声明标量引用（Dimension=0），引用单个变量元素：
+`#REF`/`#REFS`/`#REFF` 声明元素引用（Dimension=0），绑定到目标数组变量的特定索引位置：
 
 ```erb
 @MODIFY_ELEM
-#REF L_REF                   ; 整数标量引用
+#REF L_REF                   ; 整数元素引用
     L_REF += 100             ; 修改的是传入的原始元素
 RETURN
 
@@ -398,12 +398,14 @@ CALL MODIFY_ELEM(TALENT:0:23)
 
 | 声明 | 类型 | Dimension | 引用粒度 |
 |------|------|-----------|---------|
-| `#REF X` | Int | 0 | 标量元素 |
-| `#REFS X` | Str | 0 | 标量元素 |
-| `#REFF X` | Float | 0 | 标量元素 |
+| `#REF X` | Int | 0 | 单个元素 |
+| `#REFS X` | Str | 0 | 单个元素 |
+| `#REFF X` | Float | 0 | 单个元素 |
 | `#DIM REF X, 0` | Int | 1 | 整个数组 |
 | `#DIMS REF X, 0` | Str | 1 | 整个数组 |
 | `#DIMF REF X, 0` | Float | 1 | 整个数组 |
+
+> **术语说明**：`#REF` 声明的变量 Dimension=0，源码类名为 `ReferenceIntScalarToken`。类名中的 "Scalar" 指的是**该引用变量自身是零维的（不接受下标）**，而非"引用了一个标量值"。ERABASIC 没有标量——所有变量都是数组，`X` 是 `X:0` 的省略写法。`#REF` 的绑定语义是"引用另一个数组变量中特定索引位置的元素"，通过 `ElementRefInfo(TargetVar, Indices)` 实现。
 
 ---
 
@@ -439,7 +441,7 @@ PRINTFORML 商={L_Q}，余数={L_R}   ; 商=3，余数=2
 
 ### OUT 的约束
 
-- 强制 `Dimension=0`（标量引用）
+- 强制 `Dimension=0`（元素引用）
 - 声明中的维度数字被直接丢弃
 - 隐含 REF 语义，不能与 REF 同时使用
 - 不能与 CONST、GLOBAL、SAVEDATA、CHARADATA、STATIC 同时使用

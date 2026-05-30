@@ -226,12 +226,12 @@ QUIT
 #DIMS CONST GAME_TITLE = "My Game"
 ```
 
-#### 参照変数宣言
+#### 要素参照宣言
 
-`#REF`/`#REFS`/`#REFF`で参照変数（エイリアス変数）を宣言し、別の変数を指します：
+`#REF`/`#REFS`/`#REFF`で要素参照変数を宣言し、別の配列変数の特定インデックス位置にバインドします：
 
 ```erb
-#REF L_REF = TARGET    ; L_REF は TARGET のエイリアス
+#REF L_REF = TARGET    ; L_REF は TARGET:0 にバインド
 #REFS L_NAME_REF = NAME:TARGET
 ```
 

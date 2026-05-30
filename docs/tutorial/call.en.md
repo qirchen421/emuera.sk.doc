@@ -79,7 +79,7 @@ RETURN
     CALL SHOW_DAMAGE 100, 50
     WAIT
 
-@SHOW_DAMAGE, ARG, ARG
+@SHOW_DAMAGE, ARG:0, ARG:1
     PRINTFORML Physical damage: {ARG:0}, Magic damage: {ARG:1}
     PRINTFORML Total damage: {ARG:0 + ARG:1}
 RETURN
@@ -96,22 +96,32 @@ RETURN
 
 ### Two Ways to Declare Parameters
 
-**Method 1: Declare parameter types in signature** (recommended)
+**Method 1: Using built-in parameter variables ARG/ARGS/ARGF**
+
+ERABASIC has no scalars — all variables are arrays. `ARG`/`ARGS`/`ARGF` are also arrays; omitting the subscript accesses element 0 by default:
 
 ```erb
-@SHOW_DAMAGE, ARG, ARG
-; Signature declares two integer parameters
+@SHOW_DAMAGE, ARG, ARG:1
+; ARG without subscript = ARG:0 (element 0), ARG:1 = element 1
 ; ARG:0 = first parameter, ARG:1 = second parameter
 ```
 
-**Method 2: #DIM to declare parameter variables**
+!!! warning "Cannot register the same array element twice"
+
+    `@SHOW_DAMAGE, ARG, ARG` binds both parameters to `ARG:0`, causing the second parameter to overwrite the first. The engine issues a duplicate parameter warning. Use different subscripts to distinguish: `ARG, ARG:1` or `ARG:0, ARG:1`.
+
+**Method 2: Using named private variables** (recommended)
 
 ```erb
-@SHOW_DAMAGE
-#DIM ARG
-#DIM ARG, 2
-; Declared inside function body, less intuitive than signature method
+@SHOW_DAMAGE(L_PHYS, L_MAGIC)
+#DIM DYNAMIC L_PHYS
+#DIM DYNAMIC L_MAGIC
+; Names in the signature reference #DIM variables. Parameter meaning is self-evident
+    PRINTFORML Physical damage: {L_PHYS}, Magic damage: {L_MAGIC}
+RETURN
 ```
+
+Named private variables and the ARG array are **completely independent entities** — named parameters are not automatically assigned to corresponding ARG elements. See [Variable Declaration System → Named Parameters vs ARG Array](variable-declaration.en.md#arg) for details.
 
 ### String Parameters
 
@@ -121,7 +131,7 @@ RETURN
     WAIT
 
 @GREET, ARGS
-    PRINTFORML Hello, %ARGS:0%!
+    PRINTFORML Hello, %ARGS%!
 RETURN
 ; Output: Hello, Elina!
 ```
@@ -129,9 +139,9 @@ RETURN
 ### Mixed Parameters
 
 ```erb
-@SHOW_INFO, ARGS, ARG, ARG
-; ARGS:0 = name, ARG:0 = level, ARG:1 = HP
-    PRINTFORML %ARGS:0% Lv.{ARG:0} HP:{ARG:1}
+@SHOW_INFO, ARGS, ARG, ARG:1
+; ARGS = ARGS:0 = name, ARG = ARG:0 = level, ARG:1 = HP
+    PRINTFORML %ARGS% Lv.{ARG} HP:{ARG:1}
 RETURN
 ```
 

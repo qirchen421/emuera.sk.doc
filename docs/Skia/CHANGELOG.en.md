@@ -469,16 +469,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - `ReferenceToken` subclasses (Scalar/1D/2D/3D) use `ElementRefInfo` to proxy read/write
   - `ScopeIn`/`ScopeOut` save/restore reference state (`_scopeState` list)
   - `SetTransporter` three-way dispatch: Array reference / Element-level reference / NullRef
-- **`#REF` / `#REFS` Scalar Reference Keyword** (Phase 2.3)
-  - `#REF X` declares integer scalar reference (Dimension=0)
-  - `#REFS S` declares string scalar reference (Dimension=0)
+- **`#REF` / `#REFS` Element Reference Keyword** (Phase 2.3)
+  - `#REF X` declares integer element reference (Dimension=0)
+  - `#REFS S` declares string element reference (Dimension=0)
   - Completely separate from `#DIM REF` array reference, eliminate semantic ambiguity
   - `ConvertArg` three-dimensional branch matching (Dimension=0 / Dimension>0 / OUT)
 - **OUT Parameter (Optional Output Parameter)** (Phase 2.4)
   - `#DIM OUT X` / `#DIMS OUT X` declares omittable output parameter
   - `NullRefTerm` black hole variable: All read/write silently ignored when omitted
-  - OUT isomorphic with `#REF` (Scalar reference Dimension=0), not isomorphic with `#DIM REF`
-  - `refDestDimension` field distinguishes scalar reference and array reference passing methods
+  - OUT isomorphic with `#REF` (Element reference Dimension=0), not isomorphic with `#DIM REF`
+  - `refDestDimension` field distinguishes element reference and array reference passing methods
   - Supports OUT + variadic parameter combinations, nested calls, CALLFORM/TRYCALL
 
 ### Fixed
@@ -486,7 +486,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **ARGLEN() compile-time constant folded to 0**: `CanRestructure = false` prevents optimizer mis-folding
 - **ElementRefInfo context-dependent caused reference write-back failure**: Capture actual array snapshot when created
 - **ReferenceToken ScopeIn/ScopeOut didn't save reference state**: Introduced `_scopeState` list to save/restore
-- **SetTransporter array REF parameter passing error**: `refDestDimension` distinguishes scalar reference vs array reference
+- **SetTransporter array REF parameter passing error**: `refDestDimension` distinguishes element reference vs array reference
 - **CreatePrivateVariable missing IsOut=true setting**: Can't recognize when OUT parameter omitted
 - **MatchType missing allowElementRef parameter**: OUT parameter reference matching fails
 - **MatchType blocked OUT parameter chain passing**: Added `!rother.IsOut` exemption

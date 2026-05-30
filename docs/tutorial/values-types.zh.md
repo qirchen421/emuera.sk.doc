@@ -254,8 +254,8 @@ ERABASIC 提供了大量内置变量，无需声明即可使用。以下是常�
 ```erb
 @MY_FUNC(ARG:0)
 #DIM L_COUNT, 10          ; 私有整数数组，10 个元素
-#DIMS L_NAME              ; 私有字符串标量
-#DIMF L_SCORE             ; 私有浮点标量（Skia 新增）
+#DIMS L_NAME              ; 私有字符串变量（单元素数组）
+#DIMF L_SCORE             ; 私有浮点变量（单元素数组，Skia 新增）
     L_COUNT:0 = ARG:0
     L_NAME '= "测试"
     L_SCORE = 0.0

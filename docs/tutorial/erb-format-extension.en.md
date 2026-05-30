@@ -226,12 +226,12 @@ Use the `CONST` keyword to declare constants:
 #DIMS CONST GAME_TITLE = "My Game"
 ```
 
-#### Reference Variable Declarations
+#### Element Reference Declarations
 
-Use `#REF`/`#REFS`/`#REFF` to declare reference variables (alias variables) pointing to another variable:
+Use `#REF`/`#REFS`/`#REFF` to declare element reference variables, binding to a specific index position of another array variable:
 
 ```erb
-#REF L_REF = TARGET    ; L_REF is an alias for TARGET
+#REF L_REF = TARGET    ; L_REF binds to TARGET:0
 #REFS L_NAME_REF = NAME:TARGET
 ```
 

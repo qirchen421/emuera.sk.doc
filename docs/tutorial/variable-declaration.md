@@ -52,7 +52,7 @@ ERB 関数内宣言（関数レベルプライベート）
 ├── #DIM DYNAMIC L_TMP   → 動的プライベート変数
 ├── #DIM STATIC L_CACHE  → 静的プライベート変数
 ├── #DIM REF L_ARR, 0    → 配列参照
-├── #REF L_ELEM          → スカラー参照
+├── #REF L_ELEM          → 要素参照
 └── #DIM OUT L_OUT       → 省略可能 OUT 引数
 ```
 
@@ -79,7 +79,7 @@ ERB 関数内宣言（関数レベルプライベート）
 
 | 宣言 | 次元 | サイズ | 説明 |
 |------|------|------|------|
-| `#DIM X` | 0 | 1 | スカラー（サイズ省略時は自動的に1） |
+| `#DIM X` | 0 | 1 | 単一要素配列（サイズ省略時は自動的に1） |
 | `#DIM X, 100` | 1 | 100 | 1次元配列 |
 | `#DIM X, 10, 20` | 2 | 10×20 | 2次元配列 |
 | `#DIM X, 10, 20, 5` | 3 | 10×20×5 | 3次元配列（最大） |
@@ -380,13 +380,13 @@ CALL PROCESS_ARRAY(DATA)
 ; #DIM REF L_ARR, 10
 ```
 
-### スカラー参照
+### 要素参照
 
-`#REF`/`#REFS`/`#REFF` はスカラー参照（Dimension=0）を宣言し、単一の変数要素を参照します：
+`#REF`/`#REFS`/`#REFF` は要素参照（Dimension=0）を宣言し、ターゲット配列変数の特定のインデックス位置にバインドします：
 
 ```erb
 @MODIFY_ELEM
-#REF L_REF                   ; 整数スカラー参照
+#REF L_REF                   ; 整数要素参照
     L_REF += 100             ; 渡された元の要素を変更
 RETURN
 
@@ -397,12 +397,14 @@ CALL MODIFY_ELEM(TALENT:0:23)
 
 | 宣言 | 型 | Dimension | 参照粒度 |
 |------|------|-----------|---------|
-| `#REF X` | Int | 0 | スカラー要素 |
-| `#REFS X` | Str | 0 | スカラー要素 |
-| `#REFF X` | Float | 0 | スカラー要素 |
+| `#REF X` | Int | 0 | 単一要素 |
+| `#REFS X` | Str | 0 | 単一要素 |
+| `#REFF X` | Float | 0 | 単一要素 |
 | `#DIM REF X, 0` | Int | 1 | 配列全体 |
 | `#DIMS REF X, 0` | Str | 1 | 配列全体 |
 | `#DIMF REF X, 0` | Float | 1 | 配列全体 |
+
+> **用語説明**：`#REF` で宣言される変数は Dimension=0 で、ソースコード上のクラス名は `ReferenceIntScalarToken` です。クラス名の "Scalar" は**参照変数自身がゼロ次元（添字を受け付けない）**であることを指し、「スカラー値を参照している」わけではありません。ERABASIC にスカラーは存在せず、すべての変数は配列で、`X` は `X:0` の省略表記です。`#REF` のバインドセマンティクスは「別の配列変数の特定のインデックス位置の要素を参照する」ことで、`ElementRefInfo(TargetVar, Indices)` で実装されています。
 
 ---
 
@@ -438,7 +440,7 @@ PRINTFORML 商={L_Q}、余り={L_R}   ; 商=3、余り=2
 
 ### OUT の制約
 
-- Dimension=0 が強制される（スカラー参照）
+- Dimension=0 が強制される（要素参照）
 - 宣言内の次元数字は直接破棄される
 - REF セマンティクスを暗黙に含み、REF と同時使用不可
 - CONST、GLOBAL、SAVEDATA、CHARADATA、STATIC と同時使用不可

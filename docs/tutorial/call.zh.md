@@ -79,7 +79,7 @@ RETURN
     CALL SHOW_DAMAGE 100, 50
     WAIT
 
-@SHOW_DAMAGE, ARG, ARG
+@SHOW_DAMAGE, ARG:0, ARG:1
     PRINTFORML 物理伤害：{ARG:0}，魔法伤害：{ARG:1}
     PRINTFORML 总伤害：{ARG:0 + ARG:1}
 RETURN
@@ -96,22 +96,32 @@ RETURN
 
 ### 参数声明的两种方式
 
-**方式一：签名中声明参数类型**（推荐）
+**方式一：使用内置参数变量 ARG/ARGS/ARGF**
+
+ERABASIC 没有标量——所有变量都是数组。`ARG`/`ARGS`/`ARGF` 也是数组，省略下标时默认访问第 0 号元素：
 
 ```erb
-@SHOW_DAMAGE, ARG, ARG
-; 签名中声明了两个整数参数
+@SHOW_DAMAGE, ARG, ARG:1
+; ARG 省略下标 = ARG:0（第 0 号元素），ARG:1 = 第 1 号元素
 ; ARG:0 = 第一个参数，ARG:1 = 第二个参数
 ```
 
-**方式二：#DIM 声明参数变量**
+!!! warning "不能重复注册同一数组元素"
+
+    `@SHOW_DAMAGE, ARG, ARG` 会将两个参数都绑定到 `ARG:0`，导致第二个参数覆盖第一个。引擎会发出重复参数警告。必须用不同下标区分：`ARG, ARG:1` 或 `ARG:0, ARG:1`。
+
+**方式二：使用命名私有变量**（推荐）
 
 ```erb
-@SHOW_DAMAGE
-#DIM ARG
-#DIM ARG, 2
-; 函数体内声明，但不如签名方式直观
+@SHOW_DAMAGE(L_PHYS, L_MAGIC)
+#DIM DYNAMIC L_PHYS
+#DIM DYNAMIC L_MAGIC
+; 签名中的名字是对 #DIM 变量的引用，参数含义一目了然
+    PRINTFORML 物理伤害：{L_PHYS}，魔法伤害：{L_MAGIC}
+RETURN
 ```
+
+命名私有变量和 ARG 数组是**完全独立的实体**——命名参数不会自动赋值给对应的 ARG 元素。详见 [变量声明系统 → 命名参数 vs ARG 数组](variable-declaration.zh.md#arg)。
 
 ### 字符串参数
 
@@ -121,7 +131,7 @@ RETURN
     WAIT
 
 @GREET, ARGS
-    PRINTFORML 你好，%ARGS:0%！
+    PRINTFORML 你好，%ARGS%！
 RETURN
 ; 输出：你好，艾莉娜！
 ```
@@ -129,9 +139,9 @@ RETURN
 ### 混合参数
 
 ```erb
-@SHOW_INFO, ARGS, ARG, ARG
-; ARGS:0 = 名字，ARG:0 = 等级，ARG:1 = HP
-    PRINTFORML %ARGS:0% Lv.{ARG:0} HP:{ARG:1}
+@SHOW_INFO, ARGS, ARG, ARG:1
+; ARGS = ARGS:0 = 名字，ARG = ARG:0 = 等级，ARG:1 = HP
+    PRINTFORML %ARGS% Lv.{ARG} HP:{ARG:1}
 RETURN
 ```
 

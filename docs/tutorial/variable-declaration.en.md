@@ -52,7 +52,7 @@ ERB Function-Local Declarations (function-level private)
 ├── #DIM DYNAMIC L_TMP   → Dynamic private variable
 ├── #DIM STATIC L_CACHE  → Static private variable
 ├── #DIM REF L_ARR, 0    → Array reference
-├── #REF L_ELEM          → Scalar reference
+├── #REF L_ELEM          → Element reference
 └── #DIM OUT L_OUT       → Optional OUT parameter
 ```
 
@@ -80,7 +80,7 @@ The number after `#DIM` determines the array's dimensionality and size:
 
 | Declaration | Dimensions | Size | Description |
 |-------------|-----------|------|-------------|
-| `#DIM X` | 0 | 1 | Scalar (size defaults to 1 when omitted) |
+| `#DIM X` | 0 | 1 | Single-element array (size defaults to 1 when omitted) |
 | `#DIM X, 100` | 1 | 100 | One-dimensional array |
 | `#DIM X, 10, 20` | 2 | 10×20 | Two-dimensional array |
 | `#DIM X, 10, 20, 5` | 3 | 10×20×5 | Three-dimensional array (maximum) |
@@ -381,13 +381,13 @@ The number after `#DIM REF` is a **dimension placeholder**, not an array size. T
 ; #DIM REF L_ARR, 10
 ```
 
-### Scalar References
+### Element References
 
-`#REF`/`#REFS`/`#REFF` declare scalar references (Dimension=0), referencing a single variable element:
+`#REF`/`#REFS`/`#REFF` declare element references (Dimension=0), binding to a specific index position of a target array variable:
 
 ```erb
 @MODIFY_ELEM
-#REF L_REF                   ; Integer scalar reference
+#REF L_REF                   ; Integer element reference
     L_REF += 100             ; Modifies the original passed-in element
 RETURN
 
@@ -398,12 +398,14 @@ CALL MODIFY_ELEM(TALENT:0:23)
 
 | Declaration | Type | Dimension | Reference granularity |
 |-------------|------|-----------|----------------------|
-| `#REF X` | Int | 0 | Scalar element |
-| `#REFS X` | Str | 0 | Scalar element |
-| `#REFF X` | Float | 0 | Scalar element |
+| `#REF X` | Int | 0 | Single element |
+| `#REFS X` | Str | 0 | Single element |
+| `#REFF X` | Float | 0 | Single element |
 | `#DIM REF X, 0` | Int | 1 | Entire array |
 | `#DIMS REF X, 0` | Str | 1 | Entire array |
 | `#DIMF REF X, 0` | Float | 1 | Entire array |
+
+> **Terminology note**: Variables declared with `#REF` have Dimension=0. The source code class name is `ReferenceIntScalarToken`, where "Scalar" means **the reference variable itself is zero-dimensional (does not accept subscripts)**, not "references a scalar value". ERABASIC has no scalars — all variables are arrays, and `X` is shorthand for `X:0`. The binding semantics of `#REF` is "reference a specific index position of another array variable", implemented via `ElementRefInfo(TargetVar, Indices)`.
 
 ---
 
@@ -439,7 +441,7 @@ PRINTFORML Quotient={L_Q}, Remainder={L_R}   ; Quotient=3, Remainder=2
 
 ### OUT Constraints
 
-- Forces `Dimension=0` (scalar reference)
+- Forces `Dimension=0` (element reference)
 - Dimension number in declaration is silently discarded
 - Implies REF semantics; cannot be combined with REF
 - Cannot be combined with CONST, GLOBAL, SAVEDATA, CHARADATA, or STATIC

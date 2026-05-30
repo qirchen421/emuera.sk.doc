@@ -95,7 +95,7 @@ RETURN L_TEMP:0
 | `#DIM` | 整数プライベート変数の宣言 | 関数内 |
 | `#DIMS` | 文字列プライベート変数の宣言 | 関数内 |
 | `#DIMF` | 浮動小数点プライベート変数の宣言 | 関数内 |
-| `#REF` / `#REFS` / `#REFF` | スカラー参照の宣言 | 関数内 |
+| `#REF` / `#REFS` / `#REFF` | 要素参照の宣言 | 関数内 |
 | `#FUNCTION` / `#FUNCTIONS` / `#FUNCTIONF` | 式関数タイプのマーク | 関数レベル |
 | `#LOCALSIZE` / `#LOCALSSIZE` / `#LOCALFSIZE` | LOCAL 配列サイズの設定 | 関数レベル |
 | `#PRI` / `#LATER` / `#SINGLE` / `#ONLY` | イベント関数の優先度修飾 | イベント関数 |

@@ -226,12 +226,12 @@ QUIT
 #DIMS CONST GAME_TITLE = "My Game"
 ```
 
-#### 引用变量声明
+#### 元素引用声明
 
-使用 `#REF`/`#REFS`/`#REFF` 声明引用变量（别名变量），指向另一个变量：
+使用 `#REF`/`#REFS`/`#REFF` 声明元素引用变量，绑定到另一个数组变量的特定索引位置：
 
 ```erb
-#REF L_REF = TARGET    ; L_REF 是 TARGET 的别名
+#REF L_REF = TARGET    ; L_REF 绑定到 TARGET:0
 #REFS L_NAME_REF = NAME:TARGET
 ```
 

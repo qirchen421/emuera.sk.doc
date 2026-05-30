@@ -79,7 +79,7 @@ RETURN
     CALL SHOW_DAMAGE 100, 50
     WAIT
 
-@SHOW_DAMAGE, ARG, ARG
+@SHOW_DAMAGE, ARG:0, ARG:1
     PRINTFORML 物理ダメージ：{ARG:0}、魔法ダメージ：{ARG:1}
     PRINTFORML 合計ダメージ：{ARG:0 + ARG:1}
 RETURN
@@ -96,22 +96,32 @@ RETURN
 
 ### 引数宣言の2つの方法
 
-**方法1：シグネチャで引数型を宣言**（推奨）
+**方法1：組み込み引数変数 ARG/ARGS/ARGF を使用**
+
+ERABASIC にスカラーは存在しません。すべての変数は配列です。`ARG`/`ARGS`/`ARGF` も配列であり、添え字を省略すると第0要素にアクセスします：
 
 ```erb
-@SHOW_DAMAGE, ARG, ARG
-; シグネチャで2つの整数引数を宣言
+@SHOW_DAMAGE, ARG, ARG:1
+; ARG 添え字省略 = ARG:0（第0要素）、ARG:1 = 第1要素
 ; ARG:0 = 第1引数、ARG:1 = 第2引数
 ```
 
-**方法2：#DIM で引数変数を宣言**
+!!! warning "同じ配列要素を重複登録できない"
+
+    `@SHOW_DAMAGE, ARG, ARG` は両方の引数を `ARG:0` にバインドし、2番目の引数が1番目を上書きします。エンジンは重複引数警告を出します。異なる添え字で区別する必要があります：`ARG, ARG:1` または `ARG:0, ARG:1`。
+
+**方法2：名前付きプライベート変数を使用**（推奨）
 
 ```erb
-@SHOW_DAMAGE
-#DIM ARG
-#DIM ARG, 2
-; 関数本体内で宣言するが、シグネチャ方式ほど直感的ではない
+@SHOW_DAMAGE(L_PHYS, L_MAGIC)
+#DIM DYNAMIC L_PHYS
+#DIM DYNAMIC L_MAGIC
+; シグネチャの名前は #DIM 変数への参照。引数の意味が一目瞭然
+    PRINTFORML 物理ダメージ：{L_PHYS}、魔法ダメージ：{L_MAGIC}
+RETURN
 ```
+
+名前付きプライベート変数と ARG 配列は**完全に独立した実体**です。名前付き引数が対応する ARG 要素に自動代入されることはありません。詳しくは[変数宣言システム → 名前付き引数 vs ARG 配列](variable-declaration.md#arg)を参照。
 
 ### 文字列引数
 
@@ -121,7 +131,7 @@ RETURN
     WAIT
 
 @GREET, ARGS
-    PRINTFORML こんにちは、%ARGS:0%！
+    PRINTFORML こんにちは、%ARGS%！
 RETURN
 ; 出力：こんにちは、エリナ！
 ```
@@ -129,9 +139,9 @@ RETURN
 ### 混合引数
 
 ```erb
-@SHOW_INFO, ARGS, ARG, ARG
-; ARGS:0 = 名前、ARG:0 = レベル、ARG:1 = HP
-    PRINTFORML %ARGS:0% Lv.{ARG:0} HP:{ARG:1}
+@SHOW_INFO, ARGS, ARG, ARG:1
+; ARGS = ARGS:0 = 名前、ARG = ARG:0 = レベル、ARG:1 = HP
+    PRINTFORML %ARGS% Lv.{ARG} HP:{ARG:1}
 RETURN
 ```
 

@@ -470,16 +470,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - `ReferenceToken` 子类（Scalar/1D/2D/3D）使用 `ElementRefInfo` 代理读写
   - `ScopeIn`/`ScopeOut` 保存/恢复引用状态（`_scopeState` 列表）
   - `SetTransporter` 三路分发：数组引用 / 元素级引用 / NullRef
-- **`#REF`** **/** **`#REFS`** **标量引用关键字**（Phase 2.3）
-  - `#REF X` 声明整数标量引用（Dimension=0）
-  - `#REFS S` 声明字符串标量引用（Dimension=0）
+- **`#REF`** **/** **`#REFS`** **元素引用关键字**（Phase 2.3）
+  - `#REF X` 声明整数元素引用（Dimension=0）
+  - `#REFS S` 声明字符串元素引用（Dimension=0）
   - 与 `#DIM REF` 数组引用彻底分离，消除语义歧义
   - `ConvertArg` 三维分支匹配（Dimension=0 / Dimension>0 / OUT）
 - **OUT 参数（Optional Output Parameters）**（Phase 2.4）
   - `#DIM OUT X` / `#DIMS OUT X` 声明可省略输出参数
   - `NullRefTerm` 黑洞变量：省略时所有读写被静默忽略
-  - OUT 与 `#REF` 同构（标量引用 Dimension=0），与 `#DIM REF` 不同构
-  - `refDestDimension` 字段区分标量引用和数组引用传递方式
+  - OUT 与 `#REF` 同构（元素引用 Dimension=0），与 `#DIM REF` 不同构
+  - `refDestDimension` 字段区分元素引用和数组引用传递方式
   - 支持 OUT + 可变参数组合、嵌套调用、CALLFORM/TRYCALL
 
 ### Fixed
@@ -487,7 +487,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **ARGLEN() 编译期常量折叠为 0**：`CanRestructure = false` 阻止优化器误折叠
 - **ElementRefInfo 上下文依赖导致引用写回失败**：创建时捕获实际数组快照
 - **ReferenceToken ScopeIn/ScopeOut 未保存引用状态**：引入 `_scopeState` 列表保存/恢复
-- **SetTransporter 数组 REF 参数传递错误**：`refDestDimension` 区分标量引用 vs 数组引用
+- **SetTransporter 数组 REF 参数传递错误**：`refDestDimension` 区分元素引用 vs 数组引用
 - **CreatePrivateVariable 缺少 IsOut=true 设置**：OUT 参数省略时无法识别
 - **MatchType 缺少 allowElementRef 参数**：OUT 参数引用匹配失败
 - **MatchType 阻止 OUT 参数链式传递**：增加 `!rother.IsOut` 豁免

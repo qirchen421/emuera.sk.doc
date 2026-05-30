@@ -478,16 +478,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - `ReferenceToken` サブクラス（Scalar/1D/2D/3D）で `ElementRefInfo` を使用して読み書きをプロキシ
   - `ScopeIn`/`ScopeOut` で参照状態を保存/復元（`_scopeState` リスト）
   - `SetTransporter` で 3 つの分岐に分配：配列参照 / 要素レベル参照 / NullRef
-- **`#REF`** **/** **`#REFS`** **スカラー参照キーワード**（Phase 2.3）
-  - `#REF X` で整数スカラー参照を宣言（Dimension=0）
-  - `#REFS S` で文字列スカラー参照を宣言（Dimension=0）
+- **`#REF`** **/** **`#REFS`** **要素参照キーワード**（Phase 2.3）
+  - `#REF X` で整数要素参照を宣言（Dimension=0）
+  - `#REFS S` で文字列要素参照を宣言（Dimension=0）
   - `#DIM REF` 配列参照と完全に分離、セマンティクスの曖昧さを解消
   - `ConvertArg` で 3 次元の分岐にマッチ（Dimension=0 / Dimension>0 / OUT）
 - **OUT パラメータ（Optional Output Parameters）**（Phase 2.4）
   - `#DIM OUT X` / `#DIMS OUT X` で省略可能な出力パラメータを宣言
   - `NullRefTerm` ブラックホール変数：省略時は全ての読み書きがサイレントに無視される
-  - OUT は `#REF` と同型（スカラー参照 Dimension=0）、`#DIM REF` とは同型ではない
-  - `refDestDimension` フィールドでスカラー参照と配列参照の渡し方を区別
+  - OUT は `#REF` と同型（要素参照 Dimension=0）、`#DIM REF` とは同型ではない
+  - `refDestDimension` フィールドで要素参照と配列参照の渡し方を区別
   - OUT + 可変パラメータの組み合わせ、ネスト呼び出し、CALLFORM/TRYCALL をサポート
 
 ### Fixed
@@ -495,7 +495,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **ARGLEN() コンパイル時定数折りたたみで 0 になる**：`CanRestructure = false` でオプティマイザの誤折りたたみを防止
 - **ElementRefInfo コンテキスト依存による参照書き戻し失敗**：作成時に実際の配列スナップショットをキャプチャ
 - **ReferenceToken ScopeIn/ScopeOut で参照状態が保存されない**：`_scopeState` リストを導入して保存/復元
-- **SetTransporter 配列 REF パラメータの渡し方が誤り**：`refDestDimension` でスカラー参照 vs 配列参照を区別
+- **SetTransporter 配列 REF パラメータの渡し方が誤り**：`refDestDimension` で要素参照 vs 配列参照を区別
 - **CreatePrivateVariable に IsOut=true 設定が欠落**：OUT パラメータ省略時に認識できない
 - **MatchType に allowElementRef パラメータが欠落**：OUT パラメータ参照マッチが失敗
 - **MatchType が OUT パラメータのチェーン受け渡しをブロック**：`!rother.IsOut` 豁免を追加

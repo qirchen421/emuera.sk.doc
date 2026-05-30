@@ -65,7 +65,7 @@ LOCAL = FUNC(arg1, arg2)
 CALL FUNC(arg1, arg2)
 │
 ├─ 类型检查（REF 参数必须是 VariableTerm）
-├─ 维度匹配（标量 REF vs 数组 REF）
+├─ 维度匹配（元素引用 vs 数组引用）
 ├─ MatchType 类型兼容性检查
 ├─ 默认值填充（省略的参数用 Def[i] 填充）
 └─ 可变参数打包为 VariadicArgTerm
@@ -80,8 +80,7 @@ ConvertArg 的主要职责是**静态验证**。检查参数的类型和数量�
 SetTransporter(exm)
 │
 ├─ 非 REF 参数: 计算表达式值 → 存入 TransporterInt/Str/Float[i]
-├─ REF 标量: GetArray() → 存入 TransporterRef[i]
-├─ REF 数组元素: new ElementRefInfo(...) → 存入 TransporterElementRef[i]
+├─ 元素引用: new ElementRefInfo(...) → 存入 TransporterElementRef[i]
 └─ REF 整个数组: GetArray() → 存入 TransporterRef[i]
 → 输出: Transporter 数组填充完成
 ```

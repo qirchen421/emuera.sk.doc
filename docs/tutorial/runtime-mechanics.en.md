@@ -65,7 +65,7 @@ LOCAL = FUNC(arg1, arg2)
 CALL FUNC(arg1, arg2)
 │
 ├─ Type checking (REF arguments must be VariableTerm)
-├─ Dimension matching (scalar REF vs array REF)
+├─ Dimension matching (element reference vs array reference)
 ├─ MatchType type compatibility checking
 ├─ Default value filling (omitted arguments filled with Def[i])
 └─ Variadic arguments packed into VariadicArgTerm
@@ -80,8 +80,7 @@ ConvertArg's primary responsibility is **static validation**. It checks whether 
 SetTransporter(exm)
 │
 ├─ Non-REF arguments: Evaluate expression → store in TransporterInt/Str/Float[i]
-├─ REF scalar: GetArray() → store in TransporterRef[i]
-├─ REF array element: new ElementRefInfo(...) → store in TransporterElementRef[i]
+├─ Element reference: new ElementRefInfo(...) → store in TransporterElementRef[i]
 └─ REF entire array: GetArray() → store in TransporterRef[i]
 → Output: Transporter arrays filled
 ```
