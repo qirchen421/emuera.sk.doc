@@ -4,6 +4,53 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [6.1.0] — IsFunctionMethod Bounds Check + FindContextByLabel Snapshot Enumeration
+
+### Fixed — Type A Cross-platform Bug Fixes (Dual-platform Benefit)
+
+- **Process.State.cs** — `IsFunctionMethod` property `ArgumentOutOfRangeException`
+  - `functionList[currentMin]` index out of bounds after `functionList` is partially cleared
+  - Fix: Added `if (currentMin >= functionList.Count) return false;` bounds check
+  - Trigger scenario: Exception path (BEFORE_ERROR/BEFORE_THROW handling) where `RollbackToState()` modifies `functionList` but doesn't sync `currentMin`
+
+- **Process.State.cs** — `FindContextByLabel` method `InvalidOperationException`
+  - `foreach (var ctx in stack)` enumerating `_contextStack` while stack is modified by `ClearFunctionList()` and other operations
+  - Fix: Changed to snapshot enumeration `foreach (var ctx in stack.ToArray())`
+  - Trigger scenario: LOCAL/ARG variable with subID access, `Return()` exception triggers BEFORE_ERROR → `ClearFunctionList()` modifies `_contextStack`
+
+## [6.0.0] — Debug Window Fixes: LOCAL@FUNCNAME + Call Stack Preservation + Watch Stability
+
+### Fixed
+
+- **LOCAL@FUNCNAME detection failure** — `GetArrayLocal()` ignores `subID`, always returns `CurrentContext`'s array. Now searches for matching `ExecutionContext` in context stack by `subID`
+- **Debug window call stack cleared after error/THROW** — `handleException` no longer calls `ClearFunctionList()`, preserving call stack for debug window inspection. Added `ClearFunctionListPreserveTrace()` for BEFORE_ERROR/BEFORE_THROW internal use
+- **Debug window watch expressions with LOCAL variables error** — `saveCurrentState` clones state, `CurrentContext` becomes null, LOCAL variables fall through FallbackArray returning empty array. Now `Clone()` preserves reference to original `_contextStack`, `CurrentContext` auto-falls-back when own stack is empty
+- **Debug window currentLine residue after expression function evaluation** — `Process.GetValue` finally block calls `PopContext()` on success path but doesn't restore `currentLine`. Now `CaptureCallState` also saves `currentLine`, both success/failure paths restore it
+- **One debug watch error causes all subsequent watches to fail** — Above currentLine residue causes subsequent watches to parse private variables in wrong function context. Fixing currentLine restoration breaks the error propagation chain
+
+### Changed
+
+- `DisableBeforeErrorThrow` config item no longer necessary (call stack preserved by default after errors), but retained for backward compatibility
+- Added `ProcessState.ContextStackCount` property
+
+***
+
+## [5.2.0] — DisableBeforeErrorThrow Config Item: Preserve Debug Function Stack
+
+### Added
+
+- **DisableBeforeErrorThrow config item** — New config option that, when enabled, skips BEFORE_ERROR/BEFORE_THROW event functions and directly throws exceptions. Resolves the issue of these two events clearing the function stack during exception handling, enabling the debug window to correctly display call stack and local variables when exceptions occur. Default off for backward compatibility.
+
+### Fixed
+
+- Debug window unable to watch function parameters when THROW or error occurs (requires DisableBeforeErrorThrow to be enabled)
+
+### Xamarin Porting Note
+
+- Xamarin side `ConfigData.SetDefault()` has been synced with corresponding ConfigItem (refer to v0.60.2 PluginAvailableWarn NRE fix)
+
+***
+
 ## [5.1.0] — EEv56 Upstream Sync: PluginAvailableWarn + TOOLTIP Fallback
 
 ### Changed — Upstream Sync (emuera.em EEv56)
@@ -26,6 +73,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Skia version v5 → v5.1
 
 ### Fixed
+
+- **Config dialog unresponsive while TINPUT timer is running** — `ShowConfigDialog()` uses modal `ShowDialog()`, but TINPUTNF's `System.Timers.Timer` continues running, timeout triggers `RunEmueraProgram` occupying main thread causing config dialog to become unresponsive
+  - `EmueraConsole.cs`: Added `PauseTimer()` / `ResumeTimer()` methods, pause/resume genericTimer and reset timing origin
+  - `MainWindow.cs`: Pause timer before opening dialog in `ShowConfigDialog()`, resume after closing
+
+- **System page checkBoxUseLazyLoading missing label text** — Control created in Designer but Text not set, not bound to ConfigCode
+  - `ConfigDialog.cs`: Added `checkBoxUseLazyLoading.Text` (`Lang.UI.ConfigDialog.System.UseLazyLoading`)
+  - `ConfigDialog.cs`: Bind `ConfigCode.UseLazyLoading` in SetConfig, save value in SaveConfig
+
+- **PluginAvailableWarn English description typo** — `"If available pllugins, Show warning"` → `"Plugin available warning"`
+  - `ConfigData.cs`: Fixed typo (`pllugins` → `plugins`), changed to noun phrase consistent with other entries
 
 - **Program.cs bgm.close comment restoration** — ee restored commented-out `bgm.close()` / `sound[].close()`, but this repo had already uncommented them in an A-class fix, no additional action needed
 
@@ -108,6 +166,62 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 0=Windows, 1=Android, 2=iOS, 3=macOS, 4=Linux, 5=Unknown
   - `CanRestructure = true` (pure function, compile-time constant folding enabled)
   - ERB scripts can use `IF GETPLATFORM() == 0` for platform-specific branching
+
+***
+
+## [4.1.4] — GETKEY/GETKEYTRIGGERED Mouse Button Fix
+
+### Fixed — Regression Bug from Cross-platform Backport
+
+- **MainWindow.cs** — `GETKEYTRIGGERED(1/2/4)` mouse buttons always return 0 (A35)
+  - V4.1.0 changed `WinInput.GetKeyState` from Win32 `user32.dll GetKeyState` to event-driven `_keyState` array
+  - `SetKeyPressed`/`SetKeyReleased` only called in `richTextBox1_KeyDown`/`KeyUp`, mouse buttons don't trigger `KeyDown` event
+  - Caused `GETKEYTRIGGERED(1)` (VK_LBUTTON), `GETKEYTRIGGERED(2)` (VK_RBUTTON), `GETKEYTRIGGERED(4)` (VK_MBUTTON) to always return 0
+  - Fix: Added `WinInput.SetKeyPressed`/`SetKeyReleased` in `mainPicBox_MouseDown`/`mainPicBox_MouseUp` mapping mouse buttons to VK_LBUTTON/VK_RBUTTON/VK_MBUTTON
+  - Corresponding commit `63afa0d` (cross-platform audio architecture refactor) introduced regression
+
+- **WinInput.cs / Creator.Method.cs** — Fast mouse clicks lost in AWAIT loop (A35 supplementary fix)
+  - Root cause: `MouseDown` + `MouseUp` may be processed in the same `DoEvents()`, `SetKeyReleased` immediately clears `_keyState`, causing `GETKEYTRIGGERED` to read 0
+  - V3's Win32 `GetKeyState` reads hardware state directly, unaffected by message queue timing
+  - Fix: Added `_keyLatch` latch array, `SetKeyPressed` sets to 1, `GETKEYTRIGGERED` prioritizes latch consumption (`ConsumeKeyLatch`), ensuring press events are detected even if button already released
+
+***
+
+## [4.1.3] — Remove Deprecated #FUNCTION ... Variadic Syntax
+
+### Removed — Deprecated Syntax Cleanup
+
+- **UserDefinedFunctionDataArgType** — Removed `__Variadic = 0x80` enum value
+  - `#FUNCTION` declaration's `...` variadic syntax conflicts with lexer's float parsing, deprecated
+  - Variadic arguments are now uniformly declared via `VARIADIC` keyword in function definition (`@FUNC(VARIADIC ARG:0)`), `#FUNCTION` declaration does not contain variadic argument info
+- **UserDefinedFunction.cs** — Removed `case '.'` parsing code and `state == 7` handling
+- **UserDefinedRefMethod.cs** — Removed `__Variadic` flag matching (2 places)
+
+***
+
+## [4.1.2] — debug_log Persistent Write Fix
+
+### Fixed — debug_log No Longer Writes Persistently
+
+- **Process.cs / Process.ScriptProc.cs** — `DebugLogEnabled` once set to `true` (triggered by exception or THROW) is never reset, causing subsequent normal execution flow to continuously write logs
+  - Root cause: `catch` blocks and `THROW` instruction set `DebugLogEnabled = true`, but all `return`/`break` paths fail to reset to `false`
+  - Impact: In WinForms, THROW followed by program exit has minimal impact; Android app returns to game list but process continues, `DebugLogEnabled` stays `true`, next game entry causes `IntoFunction`/`ReturnF`/`ClearFunctionList`/`GetValue` etc. high-frequency calls to continuously write logs, causing debug_log.log to grow rapidly
+  - Fix: Reset `DebugLogEnabled = false` before all exception handling end paths (after `ClearFunctionList`) and all THROW `break` paths
+
+***
+
+## [4.1.1] — Audio API Bug Fixes (A33-A34 Backport)
+
+### Fixed — Kernel Bug Fixes (Type A, Backported from feature/xamarin)
+
+- **Creator.Method.cs** — ISPLAYINGSOUND dead code + infinite loop (A33)
+  - `arguments[0] == null` is always false: after calling `arguments[0].GetIntValue(exm)`, `arguments[0]` cannot be null
+  - for loop condition `channelId < GlobalStatic.Sound.Length` should be `i < GlobalStatic.Sound.Length`, using `channelId` causes infinite loop
+  - Fix: Simplified to directly check if specified channel is playing
+
+- **Creator.Method.cs** — SOUNDCONTROL comment error (A34)
+  - Comment `2=speed change` inconsistent with actual switch logic (action=2 is stop, action=3 is speed change)
+  - Corrected comment to `0=pause, 1=resume, 2=stop, 3=speed change`
 
 ***
 

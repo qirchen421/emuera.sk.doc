@@ -4,6 +4,53 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [6.1.0] — IsFunctionMethod 境界チェック + FindContextByLabel スナップショット列挙
+
+### Fixed — A類クロスプラットフォームバグ修正（デュアルプラットフォーム受益）
+
+- **Process.State.cs** — `IsFunctionMethod` プロパティ `ArgumentOutOfRangeException`
+  - `functionList[currentMin]` が `functionList` の部分クリア後にインデックス越境
+  - 修正：`if (currentMin >= functionList.Count) return false;` 境界チェックを追加
+  - トリガー場面：例外パス（BEFORE_ERROR/BEFORE_THROW 処理）で `RollbackToState()` が `functionList` を変更するが `currentMin` を同期しない
+
+- **Process.State.cs** — `FindContextByLabel` メソッド `InvalidOperationException`
+  - `foreach (var ctx in stack)` で `_contextStack` を列挙中にスタックが `ClearFunctionList()` 等の操作で変更される
+  - 修正：スナップショット列挙 `foreach (var ctx in stack.ToArray())` に変更
+  - トリガー場面：LOCAL/ARG 変数の subID アクセス時、`Return()` 例外が BEFORE_ERROR をトリガー → `ClearFunctionList()` が `_contextStack` を変更
+
+## [6.0.0] — デバッグウィンドウ修正：LOCAL@FUNCNAME + コールスタック保持 + ウォッチ安定性
+
+### Fixed
+
+- **LOCAL@FUNCNAME 検出無効** — `GetArrayLocal()` が `subID` を無視し、常に `CurrentContext` の配列を返す。現在 `subID` に基づいてコンテキストスタックで一致する `ExecutionContext` を検索
+- **エラー/THROW 後デバッグウィンドウのコールスタックがクリアされる** — `handleException` 後に `ClearFunctionList()` を呼び出さず、デバッグウィンドウで確認できるようコールスタックを保持。BEFORE_ERROR/BEFORE_THROW 内部用に `ClearFunctionListPreserveTrace()` を新規追加
+- **デバッグウィンドウで LOCAL 変数を含む式のウォッチがエラー** — `saveCurrentState` が state をクローンした後 `CurrentContext` が null、LOCAL 変数が FallbackArray にフォールバックして空配列を返す。現在 `Clone()` は元の `_contextStack` への参照を保持、`CurrentContext` は自身のスタックが空の時に自動フォールバック
+- **デバッグウィンドウの式関数評価後 currentLine 残留** — `Process.GetValue` の finally ブロックが成功パスで `PopContext()` するが `currentLine` を復元しない。現在 `CaptureCallState` が `currentLine` も同時に保存、成功/失敗パス共に復元
+- **デバッグウィンドウで1つのウォッチがエラーになると他のウォッチも全て失敗** — 上記 currentLine 残留により後続ウォッチが誤った関数コンテキストでプライベート変数を解析。currentLine 復元修正後エラー伝播チェーンが断絶
+
+### Changed
+
+- `DisableBeforeErrorThrow` 設定項目は不要になった（エラー後コールスタックはデフォルトで保持）、ただし後方互換のため維持
+- `ProcessState.ContextStackCount` プロパティを新規追加
+
+***
+
+## [5.2.0] — DisableBeforeErrorThrow 設定項目：デバッグ関数スタック保持
+
+### Added
+
+- **DisableBeforeErrorThrow 設定項目** — 新規設定オプション、有効化すると BEFORE_ERROR/BEFORE_THROW イベント関数をスキップし、直接例外をスロー。これら2つのイベントが例外処理時に関数スタックをクリアする問題を解決し、デバッグウィンドウが例外発生時にコールスタックとローカル変数を正しく表示できるようにする。後方互換のためデフォルトはオフ。
+
+### Fixed
+
+- デバッグウィンドウで THROW やエラー発生時に関数パラメータをウォッチできない問題（DisableBeforeErrorThrow の有効化が必要）
+
+### Xamarin 移植注意
+
+- Xamarin 側 `ConfigData.SetDefault()` に対応 ConfigItem を同期的に追加（v0.60.2 PluginAvailableWarn NRE 修正を参照）
+
+***
+
 ## [5.1.0] — EEv56 上流同期：PluginAvailableWarn + TOOLTIP フォールバック
 
 ### Changed — 上流同期（emuera.em EEv56）
@@ -26,6 +73,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Skia バージョン番号 v5 → v5.1
 
 ### Fixed
+
+- **TINPUT タイマー動作中に設定ウィンドウが操作不能** — `ShowConfigDialog()` がモーダル `ShowDialog()` を使用するが、TINPUTNF の `System.Timers.Timer` が動作し続け、タイムアウト後に `RunEmueraProgram` がメインスレッドを占有して設定ウィンドウが応答しなくなる
+  - `EmueraConsole.cs`：`PauseTimer()` / `ResumeTimer()` メソッドを追加、genericTimer の一時停止/再開とタイマー起点のリセット
+  - `MainWindow.cs`：`ShowConfigDialog()` でダイアログを開く前にタイマーを一時停止、閉じた後に再開
+
+- **システムページ checkBoxUseLazyLoading の説明テキスト欠落** — コントロールが Designer で作成されているが Text が未設定、ConfigCode に未バインド
+  - `ConfigDialog.cs`：`checkBoxUseLazyLoading.Text` を追加（`Lang.UI.ConfigDialog.System.UseLazyLoading`）
+  - `ConfigDialog.cs`：SetConfig で `ConfigCode.UseLazyLoading` をバインド、SaveConfig で値を保存
+
+- **PluginAvailableWarn 英語説明のスペルミス** — `"If available pllugins, Show warning"` → `"Plugin available warning"`
+  - `ConfigData.cs`：スペル修正（`pllugins` → `plugins`）、他の項目とスタイルを統一する名詞句に変更
 
 - **Program.cs bgm.close コメント復元** — ee はコメントアウトされた`bgm.close()` / `sound[].close()`を復元したが、本リポジトリは A クラス修正で既にコメント解除済み、追加操作不要
 
@@ -108,6 +166,62 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 0=Windows, 1=Android, 2=iOS, 3=macOS, 4=Linux, 5=Unknown
   - `CanRestructure = true`（純粋関数、コンパイル時定数畳み込み可能）
   - ERBスクリプトで `IF GETPLATFORM() == 0` のようにプラットフォーム条件分岐が可能
+
+***
+
+## [4.1.4] — GETKEY/GETKEYTRIGGERED マウスボタン修正
+
+### Fixed — クロスプラットフォームバックポートによる回帰バグ
+
+- **MainWindow.cs** — `GETKEYTRIGGERED(1/2/4)` マウスボタンが常に 0 を返す（A35）
+  - V4.1.0 で `WinInput.GetKeyState` を Win32 `user32.dll GetKeyState` からイベント駆動の `_keyState` 配列に変更
+  - `SetKeyPressed`/`SetKeyReleased` は `richTextBox1_KeyDown`/`KeyUp` でのみ呼び出され、マウスボタンは `KeyDown` イベントをトリガーしない
+  - `GETKEYTRIGGERED(1)` (VK_LBUTTON)、`GETKEYTRIGGERED(2)` (VK_RBUTTON)、`GETKEYTRIGGERED(4)` (VK_MBUTTON) が常に 0 を返す
+  - 修正：`mainPicBox_MouseDown`/`mainPicBox_MouseUp` で `WinInput.SetKeyPressed`/`SetKeyReleased` を追加し、マウスボタンを VK_LBUTTON/VK_RBUTTON/VK_MBUTTON にマッピング
+  - 対応コミット `63afa0d`（クロスプラットフォームオーディオアーキテクチャリファクタリング）で導入された回帰
+
+- **WinInput.cs / Creator.Method.cs** — AWAIT ループで高速マウスクリックが消失（A35 補足修正）
+  - 根因：`MouseDown` + `MouseUp` が同じ `DoEvents()` 内で処理される可能性があり、`SetKeyReleased` が直ちに `_keyState` をクリアするため、`GETKEYTRIGGERED` が 0 を読み取る
+  - V3 の Win32 `GetKeyState` はハードウェア状態を直接読み取るため、メッセージキューのタイミングの影響を受けない
+  - 修正：`_keyLatch` ラッチ配列を追加、`SetKeyPressed` 時に 1 を設定、`GETKEYTRIGGERED` はラッチを優先消費（`ConsumeKeyLatch`）、ボタンが既に解放されていても押下イベントを検出可能に
+
+***
+
+## [4.1.3] — 廃止された #FUNCTION ... 可変長引数構文の削除
+
+### Removed — 廃止構文のクリーンアップ
+
+- **UserDefinedFunctionDataArgType** — `__Variadic = 0x80` 列挙値を削除
+  - `#FUNCTION` 宣言の `...` 可変長引数構文は字句解析器の浮動小数点解析と競合するため、廃止済み
+  - 可変長引数は `VARIADIC` キーワードで関数定義に統一宣言（`@FUNC(VARIADIC ARG:0)`）、`#FUNCTION` 宣言に可変長引数情報は含まれない
+- **UserDefinedFunction.cs** — `case '.'` 解析コードと `state == 7` 処理を削除
+- **UserDefinedRefMethod.cs** — `__Variadic` フラグマッチングを削除（2箇所）
+
+***
+
+## [4.1.2] — debug_log 持続書き込み修正
+
+### Fixed — debug_log が持続的に書き込まれなくなる
+
+- **Process.cs / Process.ScriptProc.cs** — `DebugLogEnabled` が `true` に設定されると（例外や THROW のトリガー時）、その後リセットされず、正常な実行フローでもログが持続的に書き込まれる
+  - 根因：`catch` ブロックと `THROW` 命令で `DebugLogEnabled = true` とするが、全 `return`/`break` パスで `false` にリセットしていない
+  - 影響：WinForms では THROW 後にプログラムが終了するため影響は小さい；Android アプリはゲームリストに戻った後もプロセスが継続し、`DebugLogEnabled` が `true` のまま、次回ゲーム进入時に `IntoFunction`/`ReturnF`/`ClearFunctionList`/`GetValue` 等の高頻度呼び出しでログが持続的に書き込まれ、debug_log.log が急速に増大
+  - 修正：全例外処理終了パス（`ClearFunctionList` の後）と THROW の全 `break` パスの前に `DebugLogEnabled = false` にリセット
+
+***
+
+## [4.1.1] — オーディオ API バグ修正（A33-A34 バックポート）
+
+### Fixed — カーネルバグ修正（A類、feature/xamarin からバックポート）
+
+- **Creator.Method.cs** — ISPLAYINGSOUND デッドコード + 無限ループ（A33）
+  - `arguments[0] == null` は常に偽：`arguments[0].GetIntValue(exm)` 呼び出し後、`arguments[0]` は null になり得ない
+  - for ループ条件 `channelId < GlobalStatic.Sound.Length` は `i < GlobalStatic.Sound.Length` であるべき、`channelId` を使用すると無限ループに
+  - 修正：指定チャンネルが再生中かを直接チェックするように簡素化
+
+- **Creator.Method.cs** — SOUNDCONTROL コメント誤り（A34）
+  - コメント `2=変速` が実際の switch ロジックと不一致（action=2 は停止、action=3 が変速）
+  - コメントを `0=一時停止, 1=再開, 2=停止, 3=変速` に修正
 
 ***
 

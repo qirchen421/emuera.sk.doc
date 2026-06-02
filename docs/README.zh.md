@@ -57,4 +57,4 @@ hide:
 
 ## 下载
 
-[**最新版本：Emuera_skiaV5_x64**](assets/files/Emuera_skiaV5_x64.zip) ｜ [**SkiaX Android：v0.61.0**](assets/files/Emuera.SkiaX.0.61.0.apk.zip)
+[**最新版本：Emuera_skiaV6_x64**](assets/files/Emuera_skiaV6_x64.zip) ｜ [**SkiaX Android：v0.61.0**](assets/files/Emuera.SkiaX.0.61.0.apk.zip)

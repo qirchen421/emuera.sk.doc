@@ -4,6 +4,53 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [6.1.0] — IsFunctionMethod 边界检查 + FindContextByLabel 快照枚举
+
+### Fixed — A 类跨平台 Bug 修复（双端受益）
+
+- **Process.State.cs** — `IsFunctionMethod` 属性 `ArgumentOutOfRangeException`
+  - `functionList[currentMin]` 在 `functionList` 被部分清除后索引越界
+  - 修复：添加 `if (currentMin >= functionList.Count) return false;` 边界检查
+  - 触发场景：异常路径（BEFORE_ERROR/BEFORE_THROW 处理）中 `RollbackToState()` 修改 `functionList` 但未同步 `currentMin`
+
+- **Process.State.cs** — `FindContextByLabel` 方法 `InvalidOperationException`
+  - `foreach (var ctx in stack)` 枚举 `_contextStack` 期间栈被 `ClearFunctionList()` 等操作修改
+  - 修复：改用快照枚举 `foreach (var ctx in stack.ToArray())`
+  - 触发场景：LOCAL/ARG 变量带 subID 访问时，`Return()` 异常触发 BEFORE_ERROR → `ClearFunctionList()` 修改 `_contextStack`
+
+## [6.0.0] — 调试窗口修复：LOCAL@FUNCNAME + 调用栈保留 + 监视稳定性
+
+### Fixed
+
+- **LOCAL@FUNCNAME 检测失效** — `GetArrayLocal()` 忽略 `subID`，始终返回 `CurrentContext` 的数组。现在按 `subID` 在上下文栈中查找匹配的 `ExecutionContext`
+- **错误/THROW 后调试窗口调用栈被清空** — `handleException` 后不再调用 `ClearFunctionList()`，保留调用栈供调试窗口查看。新增 `ClearFunctionListPreserveTrace()` 供 BEFORE_ERROR/BEFORE_THROW 内部使用
+- **调试窗口监视含 LOCAL 变量的表达式报错** — `saveCurrentState` 克隆 state 后 `CurrentContext` 为 null，LOCAL 变量走 FallbackArray 返回空数组。现在 `Clone()` 保留对原始 `_contextStack` 的引用，`CurrentContext` 在自身栈为空时自动回退
+- **调试窗口表达式函数求值后 currentLine 残留** — `Process.GetValue` 的 finally 块在成功路径下 `PopContext()` 但未恢复 `currentLine`。现在 `CaptureCallState` 同时保存 `currentLine`，成功/失败路径均恢复
+- **调试窗口一个监视报错后其他监视全部失败** — 上述 currentLine 残留导致后续监视在错误函数上下文中解析私有变量。修复 currentLine 恢复后错误传播链断裂
+
+### Changed
+
+- `DisableBeforeErrorThrow` 配置项不再必要（错误后调用栈已默认保留），但保留以维持向后兼容
+- 新增 `ProcessState.ContextStackCount` 属性
+
+***
+
+## [5.2.0] — DisableBeforeErrorThrow 配置项：保留调试函数栈
+
+### Added
+
+- **DisableBeforeErrorThrow 配置项** — 新增配置选项，启用后跳过 BEFORE_ERROR/BEFORE_THROW 事件函数，直接抛出异常。解决这两个事件在异常处理时清空函数栈的问题，使调试窗口能在异常发生时正确显示调用栈和局部变量。默认关闭以保持向后兼容。
+
+### Fixed
+
+- 调试窗口在 THROW 或错误发生时无法监视函数参数的问题（需启用 DisableBeforeErrorThrow）
+
+### Xamarin 移植注意
+
+- Xamarin 端 `ConfigData.SetDefault()` 已同步添加对应 ConfigItem（参考 v0.60.2 PluginAvailableWarn NRE 修复）
+
+***
+
 ## [5.1.0] — EEv56 上游对齐：PluginAvailableWarn + TOOLTIP 回退
 
 ### Changed — 上游对齐（emuera.em EEv56）
@@ -26,6 +73,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Skia 版本号 v5 → v5.1
 
 ### Fixed
+
+- **设置窗口在 TINPUT 定时器运行时无法交互** — `ShowConfigDialog()` 使用模态 `ShowDialog()`，但 TINPUTNF 的 `System.Timers.Timer` 仍在运行，超时后触发 `RunEmueraProgram` 占用主线程导致设置窗口无响应
+  - `EmueraConsole.cs`：新增 `PauseTimer()` / `ResumeTimer()` 方法，暂停/恢复 genericTimer 并重置计时起点
+  - `MainWindow.cs`：`ShowConfigDialog()` 中打开对话框前暂停定时器，关闭后恢复
+
+- **系统页 checkBoxUseLazyLoading 缺少说明文本** — 控件在 Designer 中创建但未设置 Text、未绑定 ConfigCode
+  - `ConfigDialog.cs`：添加 `checkBoxUseLazyLoading.Text`（`Lang.UI.ConfigDialog.System.UseLazyLoading`）
+  - `ConfigDialog.cs`：SetConfig 中绑定 `ConfigCode.UseLazyLoading`，SaveConfig 中保存值
+
+- **PluginAvailableWarn 英文描述拼写错误** — `"If available pllugins, Show warning"` → `"Plugin available warning"`
+  - `ConfigData.cs`：修正拼写（`pllugins` → `plugins`），改为名词性短语与其他条目风格一致
 
 - **Program.cs bgm.close 注释恢复** — ee 恢复了被注释掉的 `bgm.close()` / `sound[].close()`，本仓库已在 A 类修复中取消注释，无需额外操作
 
@@ -108,6 +166,62 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 0=Windows, 1=Android, 2=iOS, 3=macOS, 4=Linux, 5=Unknown
   - `CanRestructure = true`（纯函数，编译期可常量折叠）
   - ERB 脚本可通过 `IF GETPLATFORM() == 0` 等方式做平台条件分支
+
+***
+
+## [4.1.4] — GETKEY/GETKEYTRIGGERED 鼠标按键修复
+
+### Fixed — 跨平台回流引入的回归 Bug
+
+- **MainWindow.cs** — `GETKEYTRIGGERED(1/2/4)` 鼠标按键永远返回 0（A35）
+  - V4.1.0 将 `WinInput.GetKeyState` 从 Win32 `user32.dll GetKeyState` 改为事件驱动的 `_keyState` 数组
+  - `SetKeyPressed`/`SetKeyReleased` 只在 `richTextBox1_KeyDown`/`KeyUp` 中调用，鼠标按键不触发 `KeyDown` 事件
+  - 导致 `GETKEYTRIGGERED(1)` (VK_LBUTTON)、`GETKEYTRIGGERED(2)` (VK_RBUTTON)、`GETKEYTRIGGERED(4)` (VK_MBUTTON) 永远返回 0
+  - 修复：在 `mainPicBox_MouseDown`/`mainPicBox_MouseUp` 中添加 `WinInput.SetKeyPressed`/`SetKeyReleased` 映射鼠标按键到 VK_LBUTTON/VK_RBUTTON/VK_MBUTTON
+  - 对应 commit `63afa0d`（跨平台音频架构重构）引入的回归
+
+- **WinInput.cs / Creator.Method.cs** — 快速鼠标点击在 AWAIT 循环中丢失（A35 补充修复）
+  - 根因：`MouseDown` + `MouseUp` 可能在同一个 `DoEvents()` 中被处理，`SetKeyReleased` 立即清除 `_keyState`，导致 `GETKEYTRIGGERED` 读到 0
+  - V3 的 Win32 `GetKeyState` 直接读硬件状态，不受消息队列时序影响
+  - 修复：添加 `_keyLatch` 锁存数组，`SetKeyPressed` 时置 1，`GETKEYTRIGGERED` 优先消费 latch（`ConsumeKeyLatch`），确保即使按键已释放也能检测到按下事件
+
+***
+
+## [4.1.3] — 移除废弃的 #FUNCTION ... 可变参数语法
+
+### Removed — 废弃语法清理
+
+- **UserDefinedFunctionDataArgType** — 移除 `__Variadic = 0x80` 枚举值
+  - `#FUNCTION` 声明中的 `...` 可变参数语法与词法分析器的浮点数解析冲突，已废弃
+  - 可变参数统一通过 `VARIADIC` 关键字在函数定义中声明（`@FUNC(VARIADIC ARG:0)`），`#FUNCTION` 声明不包含可变参数信息
+- **UserDefinedFunction.cs** — 移除 `case '.'` 解析代码和 `state == 7` 处理
+- **UserDefinedRefMethod.cs** — 移除 `__Variadic` 标志匹配（2 处）
+
+***
+
+## [4.1.2] — debug_log 持续写入修复
+
+### Fixed — debug_log 不再持续写入
+
+- **Process.cs / Process.ScriptProc.cs** — `DebugLogEnabled` 一旦被设为 `true`（异常或 THROW 触发）后永不重置，导致后续正常执行流程持续写日志
+  - 根因：`catch` 块和 `THROW` 指令中 `DebugLogEnabled = true`，但所有 `return`/`break` 路径均未重置为 `false`
+  - 影响：WinForms 中 THROW 后程序退出影响不大；Android app 返回游戏列表后进程继续，`DebugLogEnabled` 保持 `true`，下次进入游戏时 `IntoFunction`/`ReturnF`/`ClearFunctionList`/`GetValue` 等高频调用持续写日志，导致 debug_log.log 快速增长
+  - 修复：在所有异常处理结束路径（`ClearFunctionList` 之后）和 THROW 的所有 `break` 路径前重置 `DebugLogEnabled = false`
+
+***
+
+## [4.1.1] — 音频 API Bug 修复（A33-A34 回流）
+
+### Fixed — 内核 Bug 修复（A类，从 feature/xamarin 回流）
+
+- **Creator.Method.cs** — ISPLAYINGSOUND 死代码 + 无限循环（A33）
+  - `arguments[0] == null` 永假：在调用 `arguments[0].GetIntValue(exm)` 之后，`arguments[0]` 不可能为 null
+  - for 循环条件 `channelId < GlobalStatic.Sound.Length` 应为 `i < GlobalStatic.Sound.Length`，使用 `channelId` 导致死循环
+  - 修复：简化为直接检查指定通道是否正在播放
+
+- **Creator.Method.cs** — SOUNDCONTROL 注释错误（A34）
+  - 注释 `2=变速` 与实际 switch 逻辑不一致（action=2 是停止，action=3 才是变速）
+  - 修正注释为 `0=暂停, 1=恢复, 2=停止, 3=变速`
 
 ***
 
