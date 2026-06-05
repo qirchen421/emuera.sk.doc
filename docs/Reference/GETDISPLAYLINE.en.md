@@ -17,10 +17,15 @@ hide:
 
 	Returns the string from the specified line of already displayed lines.
 
+	!!! warning "Skia Extension"
+
+		Negative arguments index from the bottom: `-1` = last line, `-2` = second-to-last line, etc. Returns an empty string when out of range.
+
 !!! hint "Hint"
 
     Command and expression function both supported.  
-	Display lines are managed as an array, so they start from 0. You can loop through all lines using the `LINECOUNT` variable.
+	Display lines are managed as an array, so they start from 0. You can loop through all lines using the `LINECOUNT` variable.  
+	Note: `LINECOUNT` is the logical line count, while `GETDISPLAYLINE` uses display line index — these may not align. Using negative indexing counts directly from the bottom, avoiding the misalignment.
 
 !!! example "Example"
 

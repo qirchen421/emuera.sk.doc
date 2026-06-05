@@ -290,6 +290,26 @@
 
 ## 规格变更的命令·式中函数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)`GETDISPLAYLINE` 的负数倒数索引
+!!! summary ""
+
+    `GETDISPLAYLINE` 新增负数参数支持。负数表示从底部倒数索引：`-1` = 最后一行，`-2` = 倒数第二行，以此类推。超出范围时返回空字符串。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    string GETDISPLAYLINE lineNumber
+    ```
+
+    | 参数 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | 正数 | 从顶部索引（0=第一行） | 同左 |
+    | 负数 | 返回空字符串 | 从底部倒数（-1=最后一行） |
+
+!!! hint "提示"
+
+    `LINECOUNT` 是逻辑行数，`GETDISPLAYLINE` 是显示行索引，两者可能不对齐。使用负数索引可直接从底部计数，避免 `GETDISPLAYLINE(LINECOUNT - 1)` 的不对齐问题。
+
 ### ![](../assets/images/IconSK.webp) T 前缀 INPUT 指令的 NF 后缀变体
 !!! summary ""
 

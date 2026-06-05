@@ -4,6 +4,18 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [6.2.0] — GETDISPLAYLINE Negative Reverse Index
+
+### Added
+
+- **GETDISPLAYLINE negative argument support** — Negative arguments index from the bottom
+  - `GETDISPLAYLINE(-1)` returns the last line, `GETDISPLAYLINE(-2)` returns the second-to-last line
+  - Original positive index behavior unchanged (0=first line)
+  - Resolves the semantic misalignment of `GETDISPLAYLINE(LINECOUNT - 1)`: `LINECOUNT` is logical line count, `GETDISPLAYLINE` uses display line index; negative indexing operates directly on display lines, bypassing the misalignment
+  - Fixed `long.MinValue` and large negative `long→int` cast overflow issues
+
+***
+
 ## [6.1.0] — IsFunctionMethod Bounds Check + FindContextByLabel Snapshot Enumeration
 
 ### Fixed — Type A Cross-platform Bug Fixes (Dual-platform Benefit)

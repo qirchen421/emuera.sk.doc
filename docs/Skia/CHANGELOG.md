@@ -4,6 +4,18 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [6.2.0] — GETDISPLAYLINE 負数逆順インデックス
+
+### Added
+
+- **GETDISPLAYLINE 負数引数サポート** — 負数引数で下から逆順インデックス
+  - `GETDISPLAYLINE(-1)` は最後の行、`GETDISPLAYLINE(-2)` は下から2番目の行を返す
+  - 従来の正数インデックスの動作は変更なし（0=最初の行）
+  - `GETDISPLAYLINE(LINECOUNT - 1)` の意味的不整合を解決：`LINECOUNT` は論理行数、`GETDISPLAYLINE` は表示行インデックスであり、両者は整合しない；負数インデックスは表示行レベルで直接操作し、不整合を回避
+  - `long.MinValue` および大きな負数の `long→int` キャストオーバーフロー問題を修正
+
+***
+
 ## [6.1.0] — IsFunctionMethod 境界チェック + FindContextByLabel スナップショット列挙
 
 ### Fixed — A類クロスプラットフォームバグ修正（デュアルプラットフォーム受益）

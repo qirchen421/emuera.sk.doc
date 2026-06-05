@@ -290,6 +290,26 @@
 
 ## 仕様が変更された命令・式中関数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)`GETDISPLAYLINE` 負数逆順インデックス
+!!! summary ""
+
+    `GETDISPLAYLINE` が負数引数に対応しました。負数は下からの逆順インデックスを示します：`-1` = 最後の行、`-2` = 下から2番目の行、など。範囲外の場合は空文字列を返します。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    string GETDISPLAYLINE lineNumber
+    ```
+
+    | 引数 | EM+EE | Skia版 |
+    |:---|:---|:---|
+    | 正数 | 上からインデックス（0=最初の行） | 同左 |
+    | 負数 | 空文字列を返す | 下から逆順インデックス（-1=最後の行） |
+
+!!! hint "ヒント"
+
+    `LINECOUNT` は論理行数、`GETDISPLAYLINE` は表示行インデックスであり、両者は整合しない場合があります。負数インデックスで下から直接カウントすることで、`GETDISPLAYLINE(LINECOUNT - 1)` の不整合を回避できます。
+
 ### ![](../assets/images/IconSK.webp) T プレフィックス INPUT 命令の NF サフィックス変体
 !!! summary ""
 

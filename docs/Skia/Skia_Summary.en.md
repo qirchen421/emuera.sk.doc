@@ -290,6 +290,26 @@
 
 ## Changed Commands & Expression Functions { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)`GETDISPLAYLINE` Negative Reverse Index
+!!! summary ""
+
+    `GETDISPLAYLINE` now supports negative arguments. Negative values index from the bottom: `-1` = last line, `-2` = second-to-last line, etc. Returns an empty string when out of range.
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    string GETDISPLAYLINE lineNumber
+    ```
+
+    | Argument | EM+EE | Skia Version |
+    |:---|:---|:---|
+    | Positive | Index from top (0=first line) | Same |
+    | Negative | Returns empty string | Reverse index from bottom (-1=last line) |
+
+!!! hint "Hint"
+
+    `LINECOUNT` is the logical line count, while `GETDISPLAYLINE` uses display line index — these may not align. Using negative indexing counts directly from the bottom, avoiding the misalignment of `GETDISPLAYLINE(LINECOUNT - 1)`.
+
 ### ![](../assets/images/IconSK.webp) T-Prefixed INPUT Instruction NF Suffix Variants
 !!! summary ""
 

@@ -4,6 +4,18 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [6.2.0] — GETDISPLAYLINE 负数倒数索引
+
+### Added
+
+- **GETDISPLAYLINE 负数参数支持** — 负数参数表示从底部倒数索引
+  - `GETDISPLAYLINE(-1)` 返回最后一行，`GETDISPLAYLINE(-2)` 返回倒数第二行
+  - 原有正数索引行为不变（0=第一行）
+  - 解决了 `GETDISPLAYLINE(LINECOUNT - 1)` 的语义不对齐问题：`LINECOUNT` 是逻辑行数，`GETDISPLAYLINE` 是显示行索引，两者不对齐；负数索引直接在显示行层面操作，绕过了不对齐问题
+  - 修复 `long.MinValue` 和大负数 `long→int` 强转溢出问题
+
+***
+
 ## [6.1.0] — IsFunctionMethod 边界检查 + FindContextByLabel 快照枚举
 
 ### Fixed — A 类跨平台 Bug 修复（双端受益）
