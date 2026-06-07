@@ -29,6 +29,7 @@
 | ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER` | 命令 | 删除指定深度的图层 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.zh.md) |
 | ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER_ALL` | 命令 | 删除全部图层 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.zh.md) |
 | ![](../assets/images/IconSK.webp) `EXISTSIMAGELAYER` | 式中函数 | 确认图层是否存在 | [EXISTSIMAGELAYER](../Reference/EXISTSIMAGELAYER.zh.md) |
+| ![](../assets/images/IconSK.webp) `GETLINEY` | 式中函数 | 获取指定行的物理Y坐标 | [GETLINEY](../Reference/GETLINEY.zh.md) |
 | ![](../assets/images/IconSK.webp) `CALLSTR` | 命令 | 调用字符串变量中的函数 | [CALLSTR](../Reference/CALLSTR.zh.md) |
 | ![](../assets/images/IconSK.webp) `JUMPSTR` | 命令 | 跳转到字符串变量中的函数 | [CALLSTR](../Reference/CALLSTR.zh.md) |
 | ![](../assets/images/IconSK.webp) `TRYCALLSTR` | 命令 | 带存在检查的CALLSTR | [CALLSTR](../Reference/CALLSTR.zh.md) |
@@ -515,7 +516,19 @@
 ### ![](../assets/images/IconSK.webp)`SETIMAGELAYER` 系 — 独立图像图层
 !!! summary ""
 
-    与 CBG/SETBGIMAGE 独立的图像图层系统。支持 depth 顺序绘制、透明度、颜色矩阵和滚动跟随。
+    独立图像图层系统，支持 depth 顺序绘制、透明度、颜色矩阵和滚动跟随。与 CBG 系共享统一的深度排序管线。
+
+    !!! info "统一深度渲染管线"
+
+        SETIMAGELAYER、CBG 和 escapedParts（包括 div）共享同一套深度排序系统。三个深度来源（edepth + cbgList.zdepth + idepths）合并为统一的降序列表，在每个深度层级按以下顺序绘制：ImageLayer → CBG → 文本 → escapedParts。
+
+        **旧行为**：ImageLayer 在 Step 3 独立绘制，escapedParts/div 在 Step 4 独立绘制——两套分离的深度系统，div 始终渲染在 ImageLayer 之上。
+
+        **新行为**：SETIMAGELAYER 的 depth 大于 div 的 depth 时，ImageLayer 可以渲染在 div 之上。
+
+    !!! info "DrawingParam_ShapePositionShift 偏移"
+
+        HTML img/shape/text 有 2–4px 的 X 轴偏移，而 div 背景和 SETIMAGELAYER 无此偏移。
 
 !!! info "API"
 
@@ -524,12 +537,14 @@
     CLEARIMAGELAYER depth
     CLEARIMAGELAYER_ALL
     int EXISTSIMAGELAYER(depth)
+    int GETLINEY(lineNo)
     ```
 
     - `depth`：图层深度。值越小越靠前绘制
     - `opacity`（可省略，默认 `255`）：不透明度
     - `CM_ARRAY`（可省略）：`ref int[]` 型。4×5 颜色矩阵（20 个元素）
     - `followScroll`（可省略，默认 `0`）：`1` 时跟随文本滚动
+    - `GETLINEY`：返回指定行号的物理 Y 坐标，用于将 SETIMAGELAYER 图层与文本流对齐
 
 !!! example "例"
 
@@ -546,7 +561,7 @@
 
 !!! warning "注意"
 
-    SETIMAGELAYER 仅在 Skia 版中可用。与 CBG 系是完全独立的图层系统。
+    SETIMAGELAYER 仅在 Skia 版中可用。与 CBG 系共享统一深度排序管线，但图层数据独立管理。
 
 ### ![](../assets/images/IconSK.webp)`CALLSTR` 系 — 动态函数调用
 !!! summary ""

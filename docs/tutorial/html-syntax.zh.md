@@ -68,6 +68,10 @@
 
 可嵌套。颜色名遵循 .NET 的 `Color` 结构体定义（不可指定 `Transparent`）。
 
+!!! info "ARGB 颜色格式"
+
+    `color`/`bcolor` 属性支持 8 位 ARGB 颜色：`#AARRGGBB`（如 `#80FF0000` = 半透明红色）。6 位 `#RRGGBB` 格式 alpha 默认为 255（不透明）。
+
 ### `<b>` / `<i>` / `<u>` / `<s>` — 文字装饰
 
 ```html
@@ -225,12 +229,22 @@ INPUTS
 
 `<div>` 不支持嵌套结构。可与其他标签组合使用。
 
+!!! warning "必需属性"
+
+    `width` 为**必需属性**，省略会触发运行时错误。仅接受整数或 `Npx` 格式（`"auto"` 不合法）。
+
+    `height` 为可选属性。省略时自动从内容行数 + padding/border 计算高度（`行数 × 行高 + padding上下 + border上下`）。
+
+!!! warning "不支持 align"
+
+    `<div>` **不支持** `align` 属性。文本对齐需在 `<div>` 内部使用 `<p align='center'>内容</p>` 实现。
+
 #### 布局属性
 
 | 属性 | 说明 | 变体 |
 |------|------|------|
 | `width` | ✅ 子区域宽度（%、`px`） | |
-| `height` | ✅ 子区域高度（%、`px`） | |
+| `height` | 子区域高度（%、`px`）。省略时自动计算 | Skia |
 | `xpos` | 从当前位置的横向距离 | |
 | `ypos` | 从当前位置的纵向距离 | |
 | `size` | `width,height` 的简写 | EM+EE, Skia |
@@ -269,7 +283,7 @@ INPUTS
 | `margin` | 外边距（1～4 值、`px`/%） | EM+EE, Skia |
 | `padding` | 内边距（1～4 值、`px`/%） | |
 | `border` | 边框宽度（1～4 值、`px`/%） | EM+EE, Skia |
-| `bcolor` | 边框颜色 | EM+EE, Skia |
+| `bcolor` | 边框颜色（省略时默认文本色） | EM+EE, Skia |
 | `radius` | 圆角（1～4 值、`px`/%） | EM+EE, Skia |
 
 **4 值指定格式**（`margin`/`padding`/`border`/`radius` 通用）：
@@ -300,6 +314,108 @@ INPUTS
 ### 注释
 
 `<!-- 注释 -->` 包围的文字在 HTML 解析时被忽略。
+
+---
+
+## 标签闭合规则
+
+Emuera 的 HTML 解析器**严格要求**所有非自闭合标签必须正确闭合。未闭合的标签会触发运行时错误："存在没有结尾的标签"。
+
+### 自闭合标签（无需闭合）
+
+| 标签 | 说明 |
+|------|------|
+| `<br>` | 换行 |
+| `<img>` | 内联图像 |
+| `<shape>` | 图形绘制 |
+
+### 必须闭合的标签
+
+| 标签 | 闭合形式 |
+|------|---------|
+| `<font>` | `</font>` |
+| `<p>` | `</p>`（可省略，但建议显式闭合） |
+| `<b>` / `<i>` / `<u>` / `<s>` | 对应的 `</b>` / `</i>` / `</u>` / `</s>` |
+| `<button>` / `<nonbutton>` | `</button>` / `</nonbutton>` |
+| `<div>` | `</div>` |
+| `<nobr>` | `</nobr>` |
+
+### 嵌套规则
+
+标签必须按嵌套顺序闭合（后开先关）：
+
+```html
+<!-- ✅ 正确 -->
+<font color='red'><b>文本</b></font>
+
+<!-- ❌ 错误：交叉嵌套 -->
+<font color='red'><b>文本</font></b>
+```
+
+---
+
+## 行平衡 HTML
+
+### 问题
+
+当 HTML 内容包含 `<br>` 换行，且 `<font>` 等标签跨越 `<br>` 边界时，按 `<br>` 分割后每行会出现未配对标签：
+
+```html
+<!-- 整体包裹：跨行 <font> -->
+<font color='red'>第一行<br>第二行<br>第三行</font>
+
+<!-- 按 <br> 分割后 -->
+<font color='red'>第一行    ← 未闭合
+第二行                   ← 无标签
+第三行</font>            ← 无开标签
+```
+
+Emuera 解析器检测到 `FonttagList.Count > 0`，抛出"存在没有结尾的标签"错误。
+
+### 解决方案：行平衡 HTML
+
+**每行独立包裹 `<font>` 标签**，确保按 `<br>` 分割后每行标签配对：
+
+```html
+<!-- 行平衡：每行独立 <font> -->
+<font color='red'>第一行</font><br><font color='red'>第二行</font><br><font color='red'>第三行</font>
+```
+
+### 适用场景
+
+行平衡 HTML 是**按行处理 HTML 内容**的必要前提：
+
+| 场景 | 说明 |
+|------|------|
+| 字符画信箱（`LETTERBOX_DRAW`） | 按 `<br>` 分割后逐行添加边框字符 |
+| VN 框架（`FLAN_LETTERBOX_FRAME`） | 同上 |
+| `HTML_STRINGLEN` 逐行测量 | 对每行独立测量渲染宽度 |
+
+### 生产者契约
+
+`LETTER_TEXT_TO_HTML` / `FLAN_TEXT_BLOCK` 等文本→HTML 转换函数**必须**输出行平衡 HTML。下游消费者（`LETTERBOX_DRAW` / `FLAN_LETTERBOX_FRAME`）可安全地按 `<br>` 分割处理。
+
+---
+
+## HTML 内置函数
+
+Emuera 提供以下 HTML 处理内置函数，用于在 ERB 脚本中操作 HTML 字符串：
+
+| 函数 | 类型 | 用途 |
+|------|------|------|
+| `HTML_ESCAPE(文本)` | 函数 | 纯文本 → HTML 转义（`<` → `&lt;` 等） |
+| `HTML_TOPLAINTEXT(HTML)` | 函数 | HTML → 纯文本（删除标签 + 展开字符引用） |
+| `HTML_STRINGLEN(HTML, 模式)` | 函数 | HTML 渲染宽度（模式 0=半角字符数，1=像素） |
+| `HTML_SUBSTRING(HTML, 宽度)` | 函数 | 按 HTML 渲染宽度截取子串（`RESULTS:1` = 剩余部分） |
+| `HTML_STRINGLINES(HTML, 宽度)` | 函数 | HTML 按宽度分割后的行数 |
+| `HTML_GETPRINTEDSTR(行号)` | 函数 | 获取已显示行的 HTML 内容 |
+| `HTML_POPPRINTINGSTR()` | 函数 | 获取当前 PRINT 缓冲区的 HTML 内容 |
+
+| 指令 | 类型 | 用途 |
+|------|------|------|
+| `HTML_TAGSPLIT HTML, 结果数, 结果数组` | 指令 | 将 HTML 拆分为纯文本段和标签段交替数组（偶数索引=纯文本，奇数索引=标签） |
+
+> 各函数的详细参数和返回值见 Reference 分类中的对应页面。
 
 ---
 

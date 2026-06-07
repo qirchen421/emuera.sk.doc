@@ -33,9 +33,13 @@ hide:
 
     !!! warning "Notes"
         - Command syntax only. Cannot be called as an expression function.
-        - `depth` is used for layer sorting and unique identification. Layers with the same `depth` will be overwritten.
+        - `depth` is used for layer sorting. Layers with the same `depth` are rendered in insertion order and are not overwritten. Use [`CLEARIMAGELAYER depth`](./CLEARIMAGELAYER.en.md) to remove all layers at the same depth.
+        - Parameters 3–9 support empty parameters (`,,`). Empty values use their defaults.
+        - [`SETIMAGELAYERL`](./SETIMAGELAYERL.en.md) is a suffix command that automatically sets `followScroll=1` and converts the Y coordinate via `GETLINEY`, ideal for aligning layers with HTML img elements.
         - Use [`EXISTSIMAGELAYER(depth)`](./EXISTSIMAGELAYER.en.md) to check if a layer at the specified depth exists.
         - Use [`CLEARIMAGELAYER depth`](./CLEARIMAGELAYER.en.md) to clear a specific layer, or [`CLEARIMAGELAYER_ALL`](./CLEARIMAGELAYER.en.md) to clear all layers.
+        - **Rendering hierarchy** (v7.0 unified depth pipeline): SETIMAGELAYER, CBG, and escapedParts (including div) share the same depth sorting system. When SETIMAGELAYER's depth > div's depth, the layer renders above the div.
+        - **Rendering offset difference**: SETIMAGELAYER uses pixel-precise positioning (no offset), while HTML `<img>` rendering automatically adds an X offset of approximately 2-4px (`DrawingParam_ShapePositionShift`).
         - Not supported in WINAPI mode.
 
 !!! hint "Hint"
@@ -80,6 +84,7 @@ hide:
     ```
 
 ### See Also
+- [SETIMAGELAYERL](SETIMAGELAYERL.en.md)
 - [CLEARIMAGELAYER](CLEARIMAGELAYER.en.md)
 - [EXISTSIMAGELAYER](EXISTSIMAGELAYER.en.md)
 - [CBGSETSPRITE](CBGSETSPRITE.en.md)

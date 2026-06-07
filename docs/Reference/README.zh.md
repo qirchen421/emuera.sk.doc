@@ -595,9 +595,11 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.zh.md)                   | `string`                                                                                | 无     |
 | ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.zh.md)                    | 无                                                                                    | 无     |
 | ![](../assets/images/IconSK.webp)[`SETIMAGELAYER`](./SETIMAGELAYER.zh.md)               | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`, `int`                           | 无     |
+| ![](../assets/images/IconSK.webp)[`SETIMAGELAYERL`](./SETIMAGELAYERL.zh.md)             | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`                                  | 无     |
 | ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER`](./CLEARIMAGELAYER.zh.md)           | `int`                                                                                   | 无     |
 | ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER_ALL`](./CLEARIMAGELAYER.zh.md)       | 无                                                                                    | 无     |
 | ![](../assets/images/IconSK.webp)[`EXISTSIMAGELAYER`](./EXISTSIMAGELAYER.zh.md)      | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETLINEY`](./GETLINEY.zh.md)                    | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`SET_TEXT_DRAWING_MODE`](./SKIA_RENDER.zh.md)          | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`GET_TEXT_DRAWING_MODE`](./SKIA_RENDER.zh.md)          | 无                                                                                    | `int`    |
 | ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.zh.md)               | `int`(, `int`, `int`)                                                                   | `int`    |

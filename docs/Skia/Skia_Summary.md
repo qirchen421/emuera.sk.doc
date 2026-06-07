@@ -29,6 +29,7 @@
 | ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER` | 命令 | 指定深度のレイヤーを削除 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.md) |
 | ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER_ALL` | 命令 | 全レイヤーを削除 | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.md) |
 | ![](../assets/images/IconSK.webp) `EXISTSIMAGELAYER` | 式中関数 | レイヤーの存在確認 | [EXISTSIMAGELAYER](../Reference/EXISTSIMAGELAYER.md) |
+| ![](../assets/images/IconSK.webp) `GETLINEY` | 式中関数 | 指定行の物理Y座標を取得 | [GETLINEY](../Reference/GETLINEY.md) |
 | ![](../assets/images/IconSK.webp) `CALLSTR` | 命令 | 文字列変数の関数を呼び出し | [CALLSTR](../Reference/CALLSTR.md) |
 | ![](../assets/images/IconSK.webp) `JUMPSTR` | 命令 | 文字列変数の関数にジャンプ | [CALLSTR](../Reference/CALLSTR.md) |
 | ![](../assets/images/IconSK.webp) `TRYCALLSTR` | 命令 | 存在チェック付きCALLSTR | [CALLSTR](../Reference/CALLSTR.md) |
@@ -516,7 +517,19 @@
 ### ![](../assets/images/IconSK.webp)`SETIMAGELAYER`系 — 独立画像レイヤー
 !!! summary ""
 
-    CBG/SETBGIMAGEとは独立した画像レイヤーシステム。depth順の描画、透明度、カラーマトリクス、スクロール追従をサポート。
+    独立画像レイヤーシステム。depth順の描画、透明度、カラーマトリクス、スクロール追従をサポート。CBG系と統一深度ソートパイプラインを共有。
+
+    !!! info "統一深度レンダリングパイプライン"
+
+        SETIMAGELAYER、CBG、escapedParts（divを含む）は同一の深度ソートシステムを共有する。3つの深度ソース（edepth + cbgList.zdepth + idepths）を統一降順リストにマージし、各深度レベルで以下の順序で描画する：ImageLayer → CBG → テキスト → escapedParts。
+
+        **旧動作**：ImageLayerはStep 3で独立描画、escapedParts/divはStep 4で独立描画——2つの分離された深度システムであり、divは常にImageLayerの上にレンダリングされていた。
+
+        **新動作**：SETIMAGELAYERのdepthがdivのdepthより大きい場合、ImageLayerをdivの上にレンダリング可能。
+
+    !!! info "DrawingParam_ShapePositionShift オフセット"
+
+        HTML img/shape/textには2–4pxのX軸オフセットがあるが、div背景とSETIMAGELAYERにはこのオフセットはない。
 
 !!! info "API"
 
@@ -525,12 +538,14 @@
     CLEARIMAGELAYER depth
     CLEARIMAGELAYER_ALL
     int EXISTSIMAGELAYER(depth)
+    int GETLINEY(lineNo)
     ```
 
     - `depth`：レイヤーの深度。小さいほど手前に描画
     - `opacity`（省略可，デフォルト`255`）：不透明度
     - `CM_ARRAY`（省略可）：`ref int[]`型。4×5カラーマトリクス（20要素）
     - `followScroll`（省略可，デフォルト`0`）：`1`でテキストスクロールに追従
+    - `GETLINEY`：指定行番号の物理Y座標を返す。SETIMAGELAYERレイヤーとテキストフローの配置合わせに使用
 
 !!! example "例"
 
@@ -547,7 +562,7 @@
 
 !!! warning "注意"
 
-    SETIMAGELAYERはSkia版でのみ利用可能。CBG系とは完全に独立したレイヤーシステム。
+    SETIMAGELAYERはSkia版でのみ利用可能。CBG系と統一深度ソートパイプラインを共有するが、レイヤーデータは独立管理される。
 
 ### ![](../assets/images/IconSK.webp)`CALLSTR`系 — 動的関数呼び出し
 !!! summary ""

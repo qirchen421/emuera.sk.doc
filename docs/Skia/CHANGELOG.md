@@ -4,6 +4,93 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [7.3.2] — Xamarin HtmlManager カラーセンチネル同期
+
+### エンジン層修正
+
+- **Xamarin HtmlManager カラーセンチネル未同期**：Xamarin側に独立した `HtmlManager.cs` コピーがあり、v7.3.1のカラーセンチネル修正が同期されていなかった
+  - 症状：`color`属性なしの`<div>`がAndroid側で純白背景で表示（`Color.FromArgb(-1)` = `0xFFFFFFFF`）
+  - 修正：Xamarin `HtmlManager.cs` の全カラーセンチネルを`-1`から`int.MinValue`に変更、ガードを`>= 0`/`< 0`から`!= int.MinValue`/`== int.MinValue`に変更
+  - `stringToColorInt32`同期修正：RGBモードは自動的に`0xFF`アルファを補完、ARGBモードは`ToInt64`でオーバーフロー防止
+
+***
+
+## [7.3.1] — カラーセンチネル修正 + SETIMAGELAYERL GetLineNo 修正 + ボーダーデフォルト色
+
+### エンジン層修正
+
+- **カラーセンチネル `-1` と `0xFFFFFFFF` の競合**：`stringToColorInt32("#FFFFFF")` が `0xFFFFFFFF`（符号付き int = -1）を返し、ガードで「色未設定」と誤判定
+  - 全カラーセンチネルを `-1` から `int.MinValue` に変更
+  - `ConsoleDivPart` で `color != int.MinValue` に変更
+  - 3プラットフォーム同期修正：LazyLoading Desktop + SkiaX Desktop + SkiaX Xamarin
+- **SETIMAGELAYERL 行アンカーエラー**：`LineCount`（論理行番号）ではなく `GetLineNo`（表示行インデックス）を使用すべきところで誤使用、Y座標オフセット発生
+  - 修正：`exm.Console.GetLineNo` に変更
+- **HTML div ボーダー bcolor 省略時描画されない**：WinForms 原版は `colors == null` 時 `Config.ForeColor` を使用
+  - 修正：`box.border != null && box.color == null` 時、`borderColors` のデフォルトを `Config.ForeColor` に
+- **`stringToColorInt32` ARGB 分岐 `ToInt32` オーバーフロー**：9桁以上の16進数が int32 をオーバーフロー
+  - 修正：≤6 は `ToInt32`（RGB）、>6 は `ToInt64`（ARGB）を使用
+
+### ドキュメント更新
+
+- SETIMAGELAYERL アンカー意味を「現在行（LINECOUNT）」から「現在表示行（GetLineNo）」に修正
+- HTML構文ドキュメントにARGBカラーフォーマット（`#AARRGGBB`）を追加
+- HTML構文ドキュメントに `bcolor` 省略時のデフォルトテキスト色を追記
+
+***
+
+## [7.3.0] — SETIMAGELAYERL 行相対位置決め（xpos/ypos）+ ARGB_TO_HTML_COLOR ユーティリティ関数
+
+### エンジン層変更
+
+- **SETIMAGELAYERL パラメータ再設計**：API を `SETIMAGELAYERL spriteName, depth, xpos, ypos, width, height, opacity, CM_ARRAY` に簡素化
+  - `lineNo` パラメータを削除、常に現在の行（LINECOUNT）にアンカー、HTML `<img>` と同じパラメータ規約
+  - `xpos`：行位置からのXオフセット（HTML `<img>` の `xpos` 属性と同じ意味、`ShapePositionShift` を自動含む）
+  - `ypos`：行上端からのYオフセット（HTML `<img>` の `ypos` 属性と同じ意味）
+  - `xpos=0, ypos=0` の場合、同じ行の `<img>` と全く同じ位置にレンダリング
+  - SETIMAGELAYER と SETIMAGELAYERL の位置決めモデルを明確に区別：絶対座標 vs 行相対オフセット
+
+***
+
+## [7.2.0] — レンダリングパイプライン統合depth + SETIMAGELAYER マルチスプライト + SETIMAGELAYERL + ARGB 透明度 + div height auto
+
+### エンジン層修正
+
+- **レンダリングパイプライン統合depth**：SETIMAGELAYER、CBG、escapedParts（div含む）が同じdepthソートシステムを共有
+  - divが常にImageLayerの上に表示される問題を修正——従来ImageLayerはStep 3で一括描画、divはStep 4で描画され、2つの独立したdepthシステムが存在
+  - `ImageLayerManager` に `DrawLayersAtDepth(canvas, viewportW, viewportH, scrollY, int? depth)` と `GetDepths()` メソッドを追加
+  - `EmueraConsole.OnPaint` は3つのdepthソース（edepth + cbgList.zdepth + idepths）を統合降順リストにマージし、各depthでImageLayer→CBG/div/テキストの順に描画
+- **SETIMAGELAYER マルチスプライト対応**：`ImageLayerManager._layers` を `Dictionary<long, ImageLayer>` から `List<ImageLayer>` に変更。同じ depth のスプライトは追加順にレンダリングされ、上書きされなくなりました
+- **SETIMAGELAYERL 新規命令**：自動 `followScroll=1` + 自動 `GETLINEY` Y座標変換。y パラメータは行番号（LINECOUNT）で、HTML img と同じ位置にレンダリング
+- **SETIMAGELAYER 空パラメータ対応**：第3～9パラメータが空の場合にデフォルト値を使用。spriteName/depth のみ必須
+- **HTML div color ARGB 対応**：`stringToColorInt32` が ARGB 透明度をサポート。6桁以下は RGB（Alpha=255）、6桁超は ARGB として解析。`ConsoleDivPart` は Alpha=255 を強制しなくなりました
+- **HTML div height auto**：`<div>` の `height` 属性を省略可能に変更。省略時は内容行数 × 行高 + padding/border から自動計算
+
+***
+
+## [6.3.1] — SETIMAGELAYER マルチスプライト対応 + SETIMAGELAYERL + ARGB 透明度 + div height auto
+
+### エンジン層修正
+
+- **SETIMAGELAYER マルチスプライト対応**：`ImageLayerManager._layers` を `Dictionary<long, ImageLayer>` から `List<ImageLayer>` に変更。同じ depth のスプライトは追加順にレンダリングされ、上書きされなくなりました
+- **SETIMAGELAYERL 新規命令**：自動 `followScroll=1` + 自動 `GETLINEY` Y座標変換。y パラメータは行番号（LINECOUNT）で、HTML img と同じ位置にレンダリング
+- **SETIMAGELAYER 空パラメータ対応**：第3～9パラメータが空の場合にデフォルト値を使用。spriteName/depth のみ必須
+- **HTML div color ARGB 対応**：`stringToColorInt32` が ARGB 透明度をサポート。6桁以下は RGB（Alpha=255）、6桁超は ARGB として解析。`ConsoleDivPart` は Alpha=255 を強制しなくなりました
+- **HTML div height auto**：`<div>` の `height` 属性を省略可能に変更。省略時は内容行数 × 行高 + padding/border から自動計算
+
+***
+
+## [7.0.0] — GETLINEY 式中関数
+
+### Added
+
+- **GETLINEY 式中関数** — 指定行番号の物理Y座標（左下原点、SETIMAGELAYERと同じ座標系）を返す
+  - `GETLINEY(lineNo)` は `lineNo` 行の物理Y座標を返す
+  - SETIMAGELAYERレイヤーとHTMLテキストフローの配置合わせに使用
+  - 内部で `EmueraConsole.GetLinePointY(int lineNo)` メソッドを再利用
+  - 負数引数は `CodeEE` をスロー
+
+***
+
 ## [6.2.0] — GETDISPLAYLINE 負数逆順インデックス
 
 ### Added

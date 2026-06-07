@@ -4,6 +4,93 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [7.3.2] — Xamarin HtmlManager Color Sentinel Sync
+
+### Engine-Level Fixes
+
+- **Xamarin HtmlManager color sentinel not synced**: Xamarin has an independent `HtmlManager.cs` copy, and the v7.3.1 color sentinel fix was not synced to this copy
+  - Symptom: `<div>` without `color` attribute shows pure white background on Android (`Color.FromArgb(-1)` = `0xFFFFFFFF`)
+  - Fix: All color sentinels in Xamarin `HtmlManager.cs` changed from `-1` to `int.MinValue`, guards changed from `>= 0`/`< 0` to `!= int.MinValue`/`== int.MinValue`
+  - Synced fix to `stringToColorInt32`: RGB mode auto-appends `0xFF` alpha, ARGB mode uses `ToInt64` to prevent overflow
+
+***
+
+## [7.3.1] — Color Sentinel Fix + SETIMAGELAYERL GetLineNo Fix + Border Default Color
+
+### Engine-Level Fixes
+
+- **Color sentinel `-1` conflicts with `0xFFFFFFFF`**: `stringToColorInt32("#FFFFFF")` returns `0xFFFFFFFF` (signed int = -1), misidentified as "color not set" by guards
+  - All color sentinels changed from `-1` to `int.MinValue`
+  - `ConsoleDivPart` uses `color != int.MinValue` instead of `color != -1`
+  - Synced across 3 platforms: LazyLoading Desktop + SkiaX Desktop + SkiaX Xamarin
+- **SETIMAGELAYERL line anchor error**: Used `LineCount` (logical line) instead of `GetLineNo` (display line index), causing Y offset
+  - Fix: Changed to `exm.Console.GetLineNo`
+- **HTML div border not drawn without bcolor**: WinForms original uses `Config.ForeColor` when `colors == null`
+  - Fix: When `box.border != null && box.color == null`, `borderColors` defaults to `Config.ForeColor`
+- **`stringToColorInt32` ARGB branch `ToInt32` overflow**: 9+ digit hex overflows int32
+  - Fix: ≤6 uses `ToInt32` (RGB), >6 uses `ToInt64` (ARGB)
+
+### Documentation Updates
+
+- SETIMAGELAYERL anchor semantics corrected from "current line (LINECOUNT)" to "current display line (GetLineNo)"
+- HTML syntax docs: added ARGB color format (`#AARRGGBB`)
+- HTML syntax docs: added `bcolor` defaults to text color when omitted
+
+***
+
+## [7.3.0] — SETIMAGELAYERL Line-Relative Positioning (xpos/ypos) + ARGB_TO_HTML_COLOR Utility Function
+
+### Engine-Level Changes
+
+- **SETIMAGELAYERL parameter redesign**: API simplified to `SETIMAGELAYERL spriteName, depth, xpos, ypos, width, height, opacity, CM_ARRAY`
+  - Removed `lineNo` parameter, always anchors to current line (LINECOUNT), consistent with HTML `<img>` parameter conventions
+  - `xpos`: X offset relative to line position (matches HTML `<img>` `xpos` attribute semantics, automatically includes `ShapePositionShift`)
+  - `ypos`: Y offset relative to line top-edge (matches HTML `<img>` `ypos` attribute semantics)
+  - When `xpos=0, ypos=0`, rendering position matches `<img>` on the same line exactly
+  - Clear distinction between SETIMAGELAYER and SETIMAGELAYERL positioning models: absolute coordinates vs line-relative offsets
+
+***
+
+## [7.2.0] — Unified Depth Rendering Pipeline + SETIMAGELAYER Multi-Sprite + SETIMAGELAYERL + ARGB Transparency + div height auto
+
+### Engine-Level Fixes
+
+- **Unified depth rendering pipeline**: SETIMAGELAYER, CBG, and escapedParts (including div) now share the same depth sorting system
+  - Fixed the issue where div was always rendered above ImageLayer — previously ImageLayer was drawn in bulk at Step 3, div at Step 4, with two independent depth systems
+  - Added `DrawLayersAtDepth(canvas, viewportW, viewportH, scrollY, int? depth)` and `GetDepths()` methods to `ImageLayerManager`
+  - `EmueraConsole.OnPaint` merges three depth sources (edepth + cbgList.zdepth + idepths) into a unified descending list, drawing ImageLayer → CBG/div/text at each depth
+- **SETIMAGELAYER multi-sprite support**: Changed `ImageLayerManager._layers` from `Dictionary<long, ImageLayer>` to `List<ImageLayer>`. Sprites with the same depth are rendered in insertion order and are no longer overwritten
+- **SETIMAGELAYERL new command**: Automatically sets `followScroll=1` and converts Y coordinate via `GETLINEY`. The y parameter is a line number (LINECOUNT), rendering at the same position as HTML img
+- **SETIMAGELAYER empty parameter support**: Parameters 3–9 use default values when empty. Only spriteName/depth are required
+- **HTML div color ARGB support**: `stringToColorInt32` now supports ARGB transparency. 6 digits or fewer are parsed as RGB (Alpha=255), more than 6 digits as ARGB. `ConsoleDivPart` no longer forces Alpha=255
+- **HTML div height auto**: `<div>` `height` attribute is now optional. When omitted, auto-calculated from content line count × line height + padding/border
+
+***
+
+## [6.3.1] — SETIMAGELAYER Multi-Sprite Support + SETIMAGELAYERL + ARGB Transparency + div height auto
+
+### Engine-Level Fixes
+
+- **SETIMAGELAYER multi-sprite support**: Changed `ImageLayerManager._layers` from `Dictionary<long, ImageLayer>` to `List<ImageLayer>`. Sprites with the same depth are rendered in insertion order and are no longer overwritten
+- **SETIMAGELAYERL new command**: Automatically sets `followScroll=1` and converts Y coordinate via `GETLINEY`. The y parameter is a line number (LINECOUNT), rendering at the same position as HTML img
+- **SETIMAGELAYER empty parameter support**: Parameters 3–9 use default values when empty. Only spriteName/depth are required
+- **HTML div color ARGB support**: `stringToColorInt32` now supports ARGB transparency. 6 digits or fewer are parsed as RGB (Alpha=255), more than 6 digits as ARGB. `ConsoleDivPart` no longer forces Alpha=255
+- **HTML div height auto**: `<div>` `height` attribute is now optional. When omitted, auto-calculated from content line count × line height + padding/border
+
+***
+
+## [7.0.0] — GETLINEY Expression Function
+
+### Added
+
+- **GETLINEY expression function** — Returns the physical Y coordinate (bottom-left origin) of the specified line number, using the same coordinate system as SETIMAGELAYER
+  - `GETLINEY(lineNo)` returns the physical Y coordinate of line `lineNo`
+  - Used to align SETIMAGELAYER layers with the HTML text flow
+  - Internally reuses the `EmueraConsole.GetLinePointY(int lineNo)` method
+  - Negative arguments throw a `CodeEE`
+
+***
+
 ## [6.2.0] — GETDISPLAYLINE Negative Reverse Index
 
 ### Added

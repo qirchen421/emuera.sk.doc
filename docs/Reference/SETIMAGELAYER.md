@@ -33,9 +33,13 @@ hide:
 
     !!! warning "注意"
         - 命令構文のみ対応。式中関数としては呼び出せません。
-        - `depth`はレイヤーのソートと一意識別に使用されます。同じ`depth`のレイヤーは上書きされます。
+        - `depth`はレイヤーのソートに使用されます。同じ`depth`のレイヤーは追加順にレンダリングされ、上書きされません。同じ`depth`のレイヤーをすべて削除するには[`CLEARIMAGELAYER depth`](./CLEARIMAGELAYER.md)を使用します。
+        - 第3～9パラメータは空パラメータ（`,,`）に対応しています。空の場合はデフォルト値が使用されます。
+        - [`SETIMAGELAYERL`](./SETIMAGELAYERL.md)は、自動で`followScroll=1`＋`GETLINEY`によるY座標変換を行う後置命令です。HTML imgと同じ位置にレイヤーを配置する場合に便利です。
         - [`EXISTSIMAGELAYER(depth)`](./EXISTSIMAGELAYER.md)で指定深度のレイヤーの存在確認ができます。
         - [`CLEARIMAGELAYER depth`](./CLEARIMAGELAYER.md)で指定深度のレイヤーを、[`CLEARIMAGELAYER_ALL`](./CLEARIMAGELAYER.md)ですべてのレイヤーをクリアできます。
+        - **レンダリング階層**（v7.0 統一 depth パイプライン）：SETIMAGELAYER、CBG、escapedParts（div を含む）は同じ depth ソートシステムを共有します。SETIMAGELAYER の depth > div の depth の場合、レイヤーは div の上にレンダリングされます。
+        - **レンダリングオフセット差異**：SETIMAGELAYER はピクセル単位の正確な位置決め（オフセットなし）ですが、HTML `<img>` のレンダリング時、エンジンは自動的に約 2-4px の X オフセットを追加します（`DrawingParam_ShapePositionShift`）。
         - WINAPIモードでは使用できません。
 
 !!! hint "ヒント"
@@ -80,6 +84,7 @@ hide:
     ```
 
 ### 関連項目
+- [SETIMAGELAYERL](SETIMAGELAYERL.md)
 - [CLEARIMAGELAYER](CLEARIMAGELAYER.md)
 - [EXISTSIMAGELAYER](EXISTSIMAGELAYER.md)
 - [CBGSETSPRITE](CBGSETSPRITE.md)

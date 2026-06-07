@@ -29,6 +29,7 @@
 | ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER` | Command | Delete layer at specified depth | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.en.md) |
 | ![](../assets/images/IconSK.webp) `CLEARIMAGELAYER_ALL` | Command | Delete all layers | [CLEARIMAGELAYER](../Reference/CLEARIMAGELAYER.en.md) |
 | ![](../assets/images/IconSK.webp) `EXISTSIMAGELAYER` | Expression | Check layer existence | [EXISTSIMAGELAYER](../Reference/EXISTSIMAGELAYER.en.md) |
+| ![](../assets/images/IconSK.webp) `GETLINEY` | Expression | Get physical Y coordinate of a line | [GETLINEY](../Reference/GETLINEY.en.md) |
 | ![](../assets/images/IconSK.webp) `CALLSTR` | Command | Call function from string variable | [CALLSTR](../Reference/CALLSTR.en.md) |
 | ![](../assets/images/IconSK.webp) `JUMPSTR` | Command | Jump to function from string variable | [CALLSTR](../Reference/CALLSTR.en.md) |
 | ![](../assets/images/IconSK.webp) `TRYCALLSTR` | Command | CALLSTR with existence check | [CALLSTR](../Reference/CALLSTR.en.md) |
@@ -516,7 +517,19 @@
 ### ![](../assets/images/IconSK.webp)`SETIMAGELAYER` Series — Independent Image Layers
 !!! summary ""
 
-    An image layer system independent of CBG/SETBGIMAGE. Supports depth-ordered rendering, opacity, color matrix, and scroll following.
+    An independent image layer system supporting depth-ordered rendering, opacity, color matrix, and scroll following. Shares a unified depth sorting pipeline with the CBG series.
+
+    !!! info "Unified Depth Rendering Pipeline"
+
+        SETIMAGELAYER, CBG, and escapedParts (including div) share the same depth sorting system. Three depth sources (edepth + cbgList.zdepth + idepths) are merged into a unified descending list, drawing at each depth level in the following order: ImageLayer → CBG → text → escapedParts.
+
+        **Old behavior**: ImageLayer was drawn at Step 3 independently, escapedParts/div at Step 4 independently — two separate depth systems where div was always rendered above ImageLayer.
+
+        **New behavior**: When SETIMAGELAYER's depth is greater than a div's depth, the ImageLayer can now render on top of the div.
+
+    !!! info "DrawingParam_ShapePositionShift Offset"
+
+        HTML img/shape/text have a 2–4px X-axis offset, while div backgrounds and SETIMAGELAYER have no such offset.
 
 !!! info "API"
 
@@ -525,12 +538,14 @@
     CLEARIMAGELAYER depth
     CLEARIMAGELAYER_ALL
     int EXISTSIMAGELAYER(depth)
+    int GETLINEY(lineNo)
     ```
 
     - `depth`: Layer depth. Smaller values are drawn closer to the front
     - `opacity` (optional, default `255`): Opacity
     - `CM_ARRAY` (optional): `ref int[]` type. 4×5 color matrix (20 elements)
     - `followScroll` (optional, default `0`): `1` to follow text scroll
+    - `GETLINEY`: Returns the physical Y coordinate of a line number, used to align SETIMAGELAYER layers with the text flow
 
 !!! example "Example"
 
@@ -547,7 +562,7 @@
 
 !!! warning "Note"
 
-    SETIMAGELAYER is only available in the Skia version. It is a completely independent layer system from the CBG series.
+    SETIMAGELAYER is only available in the Skia version. It shares a unified depth sorting pipeline with the CBG series, but layer data is managed independently.
 
 ### ![](../assets/images/IconSK.webp)`CALLSTR` Series — Dynamic Function Calls
 !!! summary ""

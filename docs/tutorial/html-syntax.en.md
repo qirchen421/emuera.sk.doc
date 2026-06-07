@@ -68,6 +68,10 @@ A display-line break. Multiple `<br>` tags still count as one line for `CLEARLIN
 
 Nestable. Color names follow .NET's `Color` struct definitions (`Transparent` not allowed).
 
+!!! info "ARGB Color Format"
+
+    The `color`/`bcolor` attributes support 8-digit ARGB colors: `#AARRGGBB` (e.g., `#80FF0000` = semi-transparent red). The 6-digit `#RRGGBB` format defaults alpha to 255 (fully opaque).
+
 ### `<b>` / `<i>` / `<u>` / `<s>` — Text Decoration
 
 ```html
@@ -225,12 +229,18 @@ The `cm` attribute specifies a 5×5 two-dimensional integer array variable name 
 
 `<div>` does not support nesting. Can be combined with other tags.
 
+!!! warning "Required attributes"
+
+    `width` is a **required attribute**. Omitting it triggers a runtime error. Only integers or `Npx` format accepted (`"auto"` is not valid).
+
+    `height` is optional. When omitted, it is auto-calculated from content lines + padding/border (`lineCount × lineHeight + paddingTop/Bottom + borderTop/Bottom`).
+
 #### Layout Attributes
 
 | Attribute | Description | Variant |
 |-----------|-------------|---------|
 | `width` | ✅ Sub-area width (%, `px`) | |
-| `height` | ✅ Sub-area height (%, `px`) | |
+| `height` | Sub-area height (%, `px`). Auto-calculated when omitted | Skia |
 | `xpos` | Horizontal distance from current position | |
 | `ypos` | Vertical distance from current position | |
 | `size` | Shorthand for `width,height` | EM+EE, Skia |
@@ -269,7 +279,7 @@ The `cm` attribute specifies a 5×5 two-dimensional integer array variable name 
 | `margin` | Outer margin (1–4 values, `px`/%) | EM+EE, Skia |
 | `padding` | Inner padding (1–4 values, `px`/%) | |
 | `border` | Border width (1–4 values, `px`/%) | EM+EE, Skia |
-| `bcolor` | Border color | EM+EE, Skia |
+| `bcolor` | Border color (defaults to text color when omitted) | EM+EE, Skia |
 | `radius` | Border radius (1–4 values, `px`/%) | EM+EE, Skia |
 
 **4-value specification format** (common to `margin`/`padding`/`border`/`radius`):

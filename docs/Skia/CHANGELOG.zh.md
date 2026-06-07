@@ -4,6 +4,93 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [7.3.2] — Xamarin HtmlManager 颜色哨兵值同步
+
+### 引擎层修复
+
+- **Xamarin HtmlManager 颜色哨兵值未同步**：Xamarin 端有独立的 `HtmlManager.cs` 副本，v7.3.1 的颜色哨兵值修复未同步到此副本
+  - 症状：无 `color` 属性的 `<div>` 在安卓端显示纯白背景（`Color.FromArgb(-1)` = `0xFFFFFFFF`）
+  - 修复：Xamarin `HtmlManager.cs` 所有颜色哨兵值从 `-1` 改为 `int.MinValue`，守卫从 `>= 0` / `< 0` 改为 `!= int.MinValue` / `== int.MinValue`
+  - 同步修复 `stringToColorInt32`：RGB 模式自动补 `0xFF` alpha，ARGB 模式用 `ToInt64` 防溢出
+
+***
+
+## [7.3.1] — 颜色哨兵值修复 + SETIMAGELAYERL GetLineNo 修复 + border 默认颜色
+
+### 引擎层修复
+
+- **颜色哨兵值 `-1` 与 `0xFFFFFFFF` 冲突**：`stringToColorInt32("#FFFFFF")` 返回 `0xFFFFFFFF`（有符号 int = -1），被守卫误判为"颜色未设置"
+  - 所有颜色哨兵值从 `-1` 改为 `int.MinValue`
+  - `ConsoleDivPart` 中 `color != int.MinValue` 替代 `color != -1`
+  - 3 端同步修复：LazyLoading Desktop + SkiaX Desktop + SkiaX Xamarin
+- **SETIMAGELAYERL 行号锚定错误**：使用 `LineCount`（逻辑行号）而非 `GetLineNo`（显示行索引），导致 Y 坐标偏移
+  - 修复：改为 `exm.Console.GetLineNo`
+- **HTML div border 无 bcolor 时边框不绘制**：WinForms 原版在 `colors == null` 时用 `Config.ForeColor`
+  - 修复：`box.border != null && box.color == null` 时，`borderColors` 默认使用 `Config.ForeColor`
+- **`stringToColorInt32` ARGB 分支 `ToInt32` 溢出**：9 位+ hex 溢出 int32
+  - 修复：≤6 走 `ToInt32`（RGB），>6 走 `ToInt64`（ARGB）
+
+### 文档更新
+
+- SETIMAGELAYERL 锚定语义从"当前行（LINECOUNT）"修正为"当前显示行（GetLineNo）"
+- HTML 语法文档新增 ARGB 颜色格式说明（`#AARRGGBB`）
+- HTML 语法文档补充 `bcolor` 省略时默认文本色
+
+***
+
+## [7.3.0] — SETIMAGELAYERL 行相对定位（xpos/ypos）+ ARGB_TO_HTML_COLOR 工具函数
+
+### 引擎层修改
+
+- **SETIMAGELAYERL 参数重新设计**：API 简化为 `SETIMAGELAYERL spriteName, depth, xpos, ypos, width, height, opacity, CM_ARRAY`
+  - 移除 `lineNo` 参数，始终锚定当前行（LINECOUNT），与 HTML `<img>` 参数约定一致
+  - `xpos`：相对行位置的 X 偏移（与 HTML `<img>` 的 `xpos` 属性语义一致，自动包含 `ShapePositionShift`）
+  - `ypos`：相对行顶边的 Y 偏移（与 HTML `<img>` 的 `ypos` 属性语义一致）
+  - `xpos=0, ypos=0` 时渲染位置与同行的 `<img>` 完全一致
+  - SETIMAGELAYER 与 SETIMAGELAYERL 的定位模型明确区分：绝对坐标 vs 行相对偏移
+
+***
+
+## [7.2.0] — 渲染管线统一 depth + SETIMAGELAYER 多精灵 + SETIMAGELAYERL + ARGB 透明度 + div height auto
+
+### 引擎层修复
+
+- **渲染管线统一 depth**：SETIMAGELAYER、CBG、escapedParts（含 div）共享同一 depth 排序系统
+  - 修复了 div 永远在 ImageLayer 之上的问题——原来 ImageLayer 在 Step 3 整批绘制，div 在 Step 4 绘制，两套独立 depth 系统
+  - `ImageLayerManager` 新增 `DrawLayersAtDepth(canvas, viewportW, viewportH, scrollY, int? depth)` 和 `GetDepths()` 方法
+  - `EmueraConsole.OnPaint` 将三个 depth 源（edepth + cbgList.zdepth + idepths）合并为统一降序列表，每个 depth 先绘制 ImageLayer 再绘制 CBG/div/文本
+- **SETIMAGELAYER 多精灵支持**：`ImageLayerManager._layers` 从 `Dictionary<long, ImageLayer>` 改为 `List<ImageLayer>`，同 depth 多精灵按添加顺序渲染，不再覆盖
+- **SETIMAGELAYERL 新增指令**：自动 followScroll=1 + 自动 GETLINEY y 轴转换，y 参数为行号（LINECOUNT），渲染位置与 HTML img 完全一致
+- **SETIMAGELAYER 空参数支持**：第 3-9 参数为空时采用默认值，只有 spriteName/depth 不可为空
+- **HTML div color ARGB 支持**：`stringToColorInt32` 支持 ARGB 透明度，6 位及以下解析为 RGB（Alpha=255），6 位以上解析为 ARGB；`ConsoleDivPart` 不再强制 Alpha=255
+- **HTML div height auto**：`<div>` 的 `height` 属性改为可选，省略时自动从内容行数 × 行高 + padding/border 计算高度
+
+***
+
+## [7.1.0] — SETIMAGELAYER 多精灵支持 + SETIMAGELAYERL + ARGB 透明度 + div height auto
+
+### 引擎层修复
+
+- **SETIMAGELAYER 多精灵支持**：`ImageLayerManager._layers` 从 `Dictionary<long, ImageLayer>` 改为 `List<ImageLayer>`，同 depth 多精灵按添加顺序渲染，不再覆盖
+- **SETIMAGELAYERL 新增指令**：自动 followScroll=1 + 自动 GETLINEY y 轴转换，y 参数为行号（LINECOUNT），渲染位置与 HTML img 完全一致
+- **SETIMAGELAYER 空参数支持**：第 3-9 参数为空时采用默认值，只有 spriteName/depth 不可为空
+- **HTML div color ARGB 支持**：`stringToColorInt32` 支持 ARGB 透明度，6 位及以下解析为 RGB（Alpha=255），6 位以上解析为 ARGB；`ConsoleDivPart` 不再强制 Alpha=255
+- **HTML div height auto**：`<div>` 的 `height` 属性改为可选，省略时自动从内容行数 × 行高 + padding/border 计算高度
+
+***
+
+## [7.0.0] — GETLINEY 表达式函数
+
+### Added
+
+- **GETLINEY 表达式函数** — 返回指定行号的物理 Y 坐标（左下原点，与 SETIMAGELAYER 坐标系一致）
+  - `GETLINEY(lineNo)` 返回 `lineNo` 行在窗口中的物理 Y 坐标
+  - 用于将 SETIMAGELAYER 图层与 HTML 文本流对齐
+  - 底层复用 `EmueraConsole.GetLinePointY(int lineNo)` 方法
+  - 负数参数抛出 `CodeEE`
+
+***
+
 ## [6.2.0] — GETDISPLAYLINE 负数倒数索引
 
 ### Added

@@ -12,10 +12,13 @@ hide:
 !!! info "API"
 
     ``` { #language-erbapi }
-    int HTML_SUBSTRING html, width
+    string HTML_SUBSTRING html, width
     ```
 
     使用 `HTML_PRINT` 命令打印 `html` 时，返回不超过 `width`（半角字符数量）的部分。
+
+    截取部分赋值给 `RESULTS:0`（与返回值相同），剩余部分赋值给 `RESULTS:1`。  
+    截取时会自动闭合未关闭的标签，剩余部分会自动重开被闭合的标签。
 
     !!! warning "注意"
 
@@ -40,6 +43,22 @@ hide:
     <b>D</b>EFG
     ```
     因为粗体比常规字体宽。
+
+    ``` { #language-erb title="逐行分割循环" }
+    ; 用 HTML_SUBSTRING 逐行分割（自动处理标签配对）
+    #DIMS L_REMAIN
+    #DIMS L_LINE
+    #DIM L_LINE_CNT
+    
+    L_REMAIN '= HTML_CONTENT
+    L_LINE_CNT = 0
+    WHILE STRLENS(L_REMAIN) > 0
+        L_LINE '= HTML_SUBSTRING(L_REMAIN, L_WIDTH)
+        L_LINES:L_LINE_CNT '= L_LINE
+        L_LINE_CNT += 1
+        L_REMAIN '= RESULTS:1
+    WEND
+    ```
 
 ### 相关项目
 - [SUBSTRING](SUBSTRING.zh.md)

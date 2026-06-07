@@ -595,9 +595,11 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.md)                   | `string`                                                                                | なし     |
 | ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.md)                    | なし                                                                                    | なし     |
 | ![](../assets/images/IconSK.webp)[`SETIMAGELAYER`](./SETIMAGELAYER.md)               | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`, `int`                           | なし     |
+| ![](../assets/images/IconSK.webp)[`SETIMAGELAYERL`](./SETIMAGELAYERL.md)             | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`                                  | なし     |
 | ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER`](./CLEARIMAGELAYER.md)           | `int`                                                                                   | なし     |
 | ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER_ALL`](./CLEARIMAGELAYER.md)       | なし                                                                                    | なし     |
 | ![](../assets/images/IconSK.webp)[`EXISTSIMAGELAYER`](./EXISTSIMAGELAYER.md)      | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETLINEY`](./GETLINEY.md)                    | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`SET_TEXT_DRAWING_MODE`](./SKIA_RENDER.md)          | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`GET_TEXT_DRAWING_MODE`](./SKIA_RENDER.md)          | なし                                                                                    | `int`    |
 | ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.md)               | `int`(, `int`, `int`)                                                                   | `int`    |

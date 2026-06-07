@@ -68,6 +68,10 @@
 
 入れ子可能。色名は .NET の `Color` 構造体に準じます（`Transparent` 不可）。
 
+!!! info "ARGB カラーフォーマット"
+
+    `color`/`bcolor` 属性は8桁ARGBカラーをサポートします：`#AARRGGBB`（例：`#80FF0000` = 半透明の赤）。6桁`#RRGGBB`形式のalphaはデフォルト255（完全不透明）です。
+
 ### `<b>` / `<i>` / `<u>` / `<s>` — 文字装飾
 
 ```html
@@ -225,12 +229,18 @@ INPUTS
 
 `<div>`は入れ子構造に対応していません。他のタグと併用可能です。
 
+!!! warning "必須属性"
+
+    `width`は**必須属性**です。省略すると実行時エラーになります。整数または`Npx`形式のみ対応（`"auto"`は不可）。
+
+    `height`は省略可能です。省略時は内容行数 + padding/borderから自動計算されます（`行数 × 行高 + padding上下 + border上下`）。
+
 #### レイアウト属性
 
 | 属性 | 説明 | 変体 |
 |------|------|------|
 | `width` | ✅ サブエリアの幅（%、`px`） | |
-| `height` | ✅ サブエリアの高さ（%、`px`） | |
+| `height` | サブエリアの高さ（%、`px`）。省略時は自動計算 | Skia |
 | `xpos` | 現在位置からの横方向距離 | |
 | `ypos` | 現在位置からの縦方向距離 | |
 | `size` | `width,height`の簡略化 | EM+EE, Skia |
@@ -269,7 +279,7 @@ INPUTS
 | `margin` | 外側余白（1～4値、`px`/%） | EM+EE, Skia |
 | `padding` | 内側余白（1～4値、`px`/%） | |
 | `border` | 境界線の幅（1～4値、`px`/%） | EM+EE, Skia |
-| `bcolor` | 境界線の色 | EM+EE, Skia |
+| `bcolor` | 境界線の色（省略時はテキスト色がデフォルト） | EM+EE, Skia |
 | `radius` | 角丸（1～4値、`px`/%） | EM+EE, Skia |
 
 **4値指定フォーマット**（`margin`/`padding`/`border`/`radius`共通）：

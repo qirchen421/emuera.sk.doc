@@ -595,9 +595,11 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/Iconetc.webp)[`REMOVEBGIMAGE`](./BACKGROUND.en.md)                   | `string`                                                                                | none     |
 | ![](../assets/images/Iconetc.webp)[`CLEARBGIMAGE`](./BACKGROUND.en.md)                    | none                                                                                    | none     |
 | ![](../assets/images/IconSK.webp)[`SETIMAGELAYER`](./SETIMAGELAYER.en.md)               | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`, `int`                           | none     |
+| ![](../assets/images/IconSK.webp)[`SETIMAGELAYERL`](./SETIMAGELAYERL.en.md)             | `str`, `int`, `int`, `int`, `int`, `int`, `int`, `var`                                  | none     |
 | ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER`](./CLEARIMAGELAYER.en.md)           | `int`                                                                                   | none     |
 | ![](../assets/images/IconSK.webp)[`CLEARIMAGELAYER_ALL`](./CLEARIMAGELAYER.en.md)       | none                                                                                    | none     |
 | ![](../assets/images/IconSK.webp)[`EXISTSIMAGELAYER`](./EXISTSIMAGELAYER.en.md)      | `int`                                                                                   | `int`    |
+| ![](../assets/images/IconSK.webp)[`GETLINEY`](./GETLINEY.en.md)                    | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`SET_TEXT_DRAWING_MODE`](./SKIA_RENDER.en.md)          | `int`                                                                                   | `int`    |
 | ![](../assets/images/IconSK.webp)[`GET_TEXT_DRAWING_MODE`](./SKIA_RENDER.en.md)          | none                                                                                    | `int`    |
 | ![](../assets/images/IconSK.webp)[`SET_SKIA_QUALITY`](./SKIA_RENDER.en.md)               | `int`(, `int`, `int`)                                                                   | `int`    |
