@@ -79,4 +79,4 @@ csv文件中指定的所有图像文件会在Emuera启动时展开到内存中�
     - **AnimSpriteCache**：动画精灵 LRU 缓存（max 6），超出自动释放
     - **SPRITECREATEFROMFILE**：运行时动态加载，无需 CSV 预定义
 
-    详见 [HTML 与图形 — 资源设置](../tutorial/html-syntax.zh.md#skia-版的资源管理机制)
+    详见 [HTML 与图形 — 资源设置](../tutorial/html-syntax.zh.md#resource-configuration)

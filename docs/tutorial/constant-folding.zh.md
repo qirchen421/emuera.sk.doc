@@ -2,7 +2,7 @@
 
 !!! info "前置知识"
 
-    - **Reference 分类**: [变量声明系列](../Reference/README.zh.md#variable-declaration)
+    - **Reference 分类**: [变量声明系列](../Reference/README.zh.md#variable-operations)
     - [变量声明系统](variable-declaration.zh.md) — #DIM/#DIMS/#DIMF 声明、数组初始化
     - [条件分支](condition.zh.md) — SELECTCASE 语法
     - [命令 vs 表达式](command-vs-expression.zh.md) — 表达式函数机制

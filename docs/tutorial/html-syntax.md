@@ -360,7 +360,7 @@ INPUTS
 
 ---
 
-## リソース設定
+## リソース設定 { #resource-configuration }
 
 画像リソースの準備方法、CSV定義フォーマット、Skia版リソース管理機構（遅延読み込みインデックス、SharedBitmapCache、AnimSpriteCache）および使用ガイドラインについては、[リソース設定 — 画像リソースの準備方法](resources.md)を参照してください。
 

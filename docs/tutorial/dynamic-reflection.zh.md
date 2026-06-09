@@ -291,7 +291,7 @@ GETPALAMLV  CALLFORM    ENUM*       ALS修复
 | 你想了解什么 | 前往 |
 |:---|:---|
 | 运行时机制（ConvertArg→IntoFunction） | [运行时机制](runtime-mechanics.zh.md)（待创建） |
-| 反模式与常见错误 | [反模式](anti-patterns.zh.md)（待创建） |
+| 反模式与常见错误 | （待创建） |
 | 函数声明系统 | [变量声明系统](variable-declaration.zh.md) |
 | 命令 vs 表达式 | [命令 vs 表达式](command-vs-expression.zh.md) |
 | CSV 别名机制 | [角色变量](character-variables.zh.md) |

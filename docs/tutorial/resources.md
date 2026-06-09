@@ -79,7 +79,7 @@ ERB内から`GCREATEFROMFILE`や`SPRITECREATEFROMFILE`で動的に画像を読�
 
 ---
 
-## Skia版のリソース管理機構
+## Skia版のリソース管理機構 { #skia-resource-management }
 
 !!! tag-variant "Skia"
 

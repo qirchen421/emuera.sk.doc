@@ -16,7 +16,7 @@ hide:
     TONEINPUTNF timeLimit, defaultValue(, displayTimeRemain, timeOverMessage, allowClick)
     TONEINPUTSNF timeLimit, defaultValue(, displayTimeRemain, timeOverMessage, allowClick)
     ```
-    Functionally identical to [`TONEINPUT`](TONEINPUT.en.md) / [`TONEINPUTS`](TONEINPUTS.en.md), but **does not force scroll to the bottom**.
+    Functionally identical to [`TONEINPUT`](TONEINPUT.en.md) / [`TONEINPUTS`](TONEINPUT.en.md), but **does not force scroll to the bottom**.
 
     NF = NoFocus. Enters the `WaitInputNoFocus` state on execution. The only difference from `WaitInput` is that it does not reposition the text box, allowing the user to freely scroll through historical output.
 
@@ -26,7 +26,7 @@ hide:
     - ✅ User can freely scroll; scroll position is not forced back to the bottom
     - ✅ Timeout mechanism is identical to the original TONEINPUT
 
-    Arguments and return values are identical to the original versions. See [`TONEINPUT`](TONEINPUT.en.md) / [`TONEINPUTS`](TONEINPUTS.en.md).
+    Arguments and return values are identical to the original versions. See [`TONEINPUT`](TONEINPUT.en.md) / [`TONEINPUTS`](TONEINPUT.en.md).
 
 !!! hint "Hint"
 
@@ -56,6 +56,6 @@ ENDSELECT
 
 ### See Also
 - [TONEINPUT](TONEINPUT.en.md)
-- [TONEINPUTS](TONEINPUTS.en.md)
+- [TONEINPUTS](TONEINPUT.en.md)
 - [TINPUTNF](TINPUTNF.en.md)
 - [AWAIT](AWAIT.en.md)

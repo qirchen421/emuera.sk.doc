@@ -466,7 +466,7 @@ Emuera 提供以下 HTML 处理内置函数，用于在 ERB 脚本中操作 HTML
 
 ---
 
-## 资源设置
+## 资源设置 { #resource-configuration }
 
 图像资源的准备方法、CSV 定义格式、Skia 版资源管理机制（懒加载索引、SharedBitmapCache、AnimSpriteCache）及使用建议，详见 [资源设置 — 图像资源的准备方法](resources.zh.md)。
 

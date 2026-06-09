@@ -79,7 +79,7 @@ You can also load images dynamically from ERB using `GCREATEFROMFILE` or `SPRITE
 
 ---
 
-## Skia Resource Management
+## Skia Resource Management { #skia-resource-management }
 
 !!! tag-variant "Skia"
 

@@ -79,7 +79,7 @@
 
 ---
 
-## Skia 版的资源管理机制
+## Skia 版的资源管理机制 { #skia-resource-management }
 
 !!! tag-variant "Skia"
 

@@ -360,7 +360,7 @@ Text enclosed in `<!-- comment -->` is ignored during HTML parsing.
 
 ---
 
-## Resource Configuration
+## Resource Configuration { #resource-configuration }
 
 For image resource preparation, CSV definition format, Skia resource management (lazy-load index, SharedBitmapCache, AnimSpriteCache), and usage guidelines, see [Resource Configuration — Preparing Image Resources](resources.en.md).
 

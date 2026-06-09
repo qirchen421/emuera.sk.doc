@@ -291,7 +291,7 @@ GETPALAMLV      CALLFORM        ENUM*               ALS fix
 | What would you like to learn? | Go to |
 |:---|:---|
 | Runtime mechanics (ConvertArg→IntoFunction) | [Runtime Mechanics](runtime-mechanics.en.md) (TBD) |
-| Anti-patterns and common mistakes | [Anti-patterns](anti-patterns.en.md) (TBD) |
+| Anti-patterns and common mistakes | (TBD) |
 | Function declaration system | [Variable Declaration](variable-declaration.en.md) |
 | Commands vs expressions | [Commands vs Expressions](command-vs-expression.en.md) |
 | CSV alias mechanism | [Character Variables](character-variables.en.md) |

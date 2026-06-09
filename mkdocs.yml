@@ -389,6 +389,7 @@ nav:
           - Reference/BACKGROUND.md
           - Reference/CLEARIMAGELAYER.md
           - Reference/EXISTSIMAGELAYER.md
+          - Reference/GETLINEY.md
           - Reference/SETIMAGELAYER.md
           - Reference/SETIMAGELAYERL.md
           - Reference/SKIA_RENDER.md

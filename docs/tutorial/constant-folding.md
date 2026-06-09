@@ -2,7 +2,7 @@
 
 !!! info "前提知識"
 
-    - **Reference 分類**: [変数宣言系](../Reference/README.md#variable-declaration)
+    - **Reference 分類**: [変数宣言系](../Reference/README.md#variable-operations)
     - [変数宣言システム](variable-declaration.md) — #DIM/#DIMS/#DIMF 宣言、配列初期化
     - [条件分岐](condition.md) — SELECTCASE 構文
     - [コマンド vs 式](command-vs-expression.md) — 式中関数の仕組み

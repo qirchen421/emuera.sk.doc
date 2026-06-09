@@ -2,7 +2,7 @@
 
 !!! warning "歴史ドキュメント"
 
-    このページは原版Emueraのリソース設定方法を説明しています。Skia版は画像リソース管理を全面的に再設計しており（遅延読み込みインデックス、SharedBitmapCache、AnimSpriteCache）、リソース設定の説明は [HTML・グラフィック — リソース設定](../tutorial/html-syntax.md#リソース設定--画像リソースの準備方法) に移行しました。
+    このページは原版Emueraのリソース設定方法を説明しています。Skia版は画像リソース管理を全面的に再設計しており（遅延読み込みインデックス、SharedBitmapCache、AnimSpriteCache）、リソース設定の説明は [HTML・グラフィック — リソース設定](../tutorial/html-syntax.md#resource-configuration) に移行しました。
 
 ここではEmueraで画像を表示するためのリソースファイルの準備方法を解説します。  
 
@@ -79,4 +79,4 @@ csvファイルで指定された全ての画像ファイルはEmueraの起動�
     - **AnimSpriteCache**：アニメーションスプライトLRUキャッシュ（最大6）、超過時自動解放
     - **SPRITECREATEFROMFILE**：実行時動的読み込み、CSVの事前定義不要
 
-    詳細は [リソース設定 — 画像リソースの準備方法](../tutorial/resources.md#skia版のリソース管理機構) を参照
+    詳細は [リソース設定 — 画像リソースの準備方法](../tutorial/resources.md#skia-resource-management) を参照

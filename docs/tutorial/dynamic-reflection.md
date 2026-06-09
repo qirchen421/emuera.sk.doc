@@ -291,7 +291,7 @@ GETPALAMLV      CALLFORM        ENUM*               ALS修正
 | 知りたい内容 | 移動先 |
 |:---|:---|
 | ランタイム機構（ConvertArg→IntoFunction） | [ランタイム機構](runtime-mechanics.md)（未作成） |
-| アンチパターンとよくあるエラー | [アンチパターン](anti-patterns.md)（未作成） |
+| アンチパターンとよくあるエラー | （未作成） |
 | 関数宣言システム | [変数宣言](variable-declaration.md) |
 | 命令 vs 式 | [命令 vs 式](command-vs-expression.md) |
 | CSV別名機構 | [キャラ変数](character-variables.md) |

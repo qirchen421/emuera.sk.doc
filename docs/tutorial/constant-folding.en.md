@@ -2,7 +2,7 @@
 
 !!! info "Prerequisites"
 
-    - **Reference Category**: [Variable Declaration Series](../Reference/README.en.md#variable-declaration)
+    - **Reference Category**: [Variable Declaration Series](../Reference/README.en.md#variable-operations)
     - [Variable Declaration System](variable-declaration.en.md) — #DIM/#DIMS/#DIMF declarations, array initialization
     - [Conditionals](condition.en.md) — SELECTCASE syntax
     - [Command vs Expression](command-vs-expression.en.md) — Expression function mechanics
