@@ -891,12 +891,15 @@
 ## History and Development Background
 
 This project was originally aimed at keeping up with EM+EE updates in the [CRER/emuera.em](https://gitlab.com/CRER/emuera.em) project, a lazyloading variant that had been in long-term development hiatus.
+
 The CRER version claimed to have updated its kernel to EE47, but it was found that the ports of both EE46 and EE47 were incomplete. One reason was that EM+EE had undergone major refactoring of namespaces and file architecture across several versions starting from EE46, making it extremely difficult for derivatives to keep up with upstream updates.
 
 After that, the developer made various feature optimizations, bug fixes, and feature additions.
 
 Subsequently, the developer undertook the merge of the `ee+em/VVII-SkiaSharp` branch from the EM+EE repository. Although both projects use the SkiaSharp library, their rendering architectures are completely different — this is not because the developer was unwilling to reuse VVII's code, but because both EM+EE and this project had each introduced a large number of rendering-related new features, making architectural restructuring inevitable.
+
 It should also be noted that Skia's SQL system was developed completely independently. The developer got the idea to develop this function series after seeing eraMS, which uses the Emuera DotNet engine, utilizing SQL series functions. During development, the DotNet source code could not be found; only release information on anonymous boards was available, and it was mistakenly assumed to be MGT's proprietary engine. It was not until compiling this document that the developer discovered VVII's SkiaSharp variant was the DotNet variant, which already contained an SQL system implementation.
 
 SkiaX is an Android Xamarin engine developed with the Skia variant's logic as its kernel, with its framework ported from [Future-R/XEmuera](https://github.com/Future-R/XEmuera).
+
 However, similarly, because the two kernel engines have undergone fundamental changes at the rendering level — the original XEmuera kernel only supported the Emuera base, and was later gradually adapted by CKRainbow and Future-R to support EM+EE kernel rendering logic — apart from the framework, page navigation, and touch interaction logic being consistent with XEmuera, the rendering implementation is almost entirely different.

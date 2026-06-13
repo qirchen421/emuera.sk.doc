@@ -891,12 +891,15 @@
 ## 沿革与开发背景
 
 本项目最初的目标是在 CRER 长期暂停开发的 lazyloading 功能变体 [CRER/emuera.em](https://gitlab.com/CRER/emuera.em) 中跟进 EM+EE 的更新。
+
 - CRER 版本声称内核已更新至 EE47，但实际发现 EE46–47 两个版本的移植均不完整。原因之一是 EM+EE 从 EE46 起连续数个版本对命名空间和文件架构进行了大幅重构，使得变体跟进上游更新变得极为困难。
 
 此后，开发者进行了若干功能优化、错误修正与功能新增。
 
 随后，开发者着手合并 EM+EE 仓库中的 `ee+em/VVII-SkiaSharp` 分支。虽然两者都用上了 SkiaSharp 库，但渲染架构完全不同——这并非开发者不愿复用 VVII 的代码，而是因为 EM+EE 和本项目各自引入了大量渲染相关的新功能，使得架构性重构成为必然。
+
 - 另外需要说明的是，Skia 的 SQL 系统是完全独立开发的。开发者是在看到使用 Emuera DotNet 引擎的 eraMS 使用了 SQL 系列函数后，才萌生了开发此系列函数的想法。开发时并未找到 DotNet 的源代码，仅检索到匿名版上的发布信息，误以为是 MGT 的自研引擎。直到编纂本文档时才发现 VVII 开发的 SkiaSharp 变体就是 DotNet 变体，其中已存在 SQL 系统的实现。
 
 SkiaX 是以 Skia 变体的逻辑为内核开发的 Android 端 Xamarin 引擎，框架移植自 [Future-R/XEmuera](https://github.com/Future-R/XEmuera)。
+
 - 但同样地，由于两者的内核引擎在渲染层面发生了根本性变化——最初的 XEmuera 内核仅支持 Emuera 本体，之后由 CKRainbow 和 Future-R 逐步适配了 EM+EE 内核的渲染逻辑——因此除了框架、页面导航和触屏交互逻辑两者一致外，渲染实现上几乎完全不同。
