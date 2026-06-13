@@ -4,6 +4,22 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [8.0.0] — ERD System ALS Alias Support
+
+### Engine-Level Additions
+
+- **User-defined variable ALS alias support**: Variables declared with `#DIM` can now define enumeration aliases via `.als` files
+  - Before: Only system variables (ABL/TALENT/CFLAG etc.) CSV files supported `.als` alias files
+  - Now: User-defined variable (e.g. `BUFF`) CSV files also support corresponding `.als` files
+  - Usage: Place `CSV/BUFF.als` alongside `CSV/BUFF.csv`, format is the same as system variable ALS files (`index,alias`)
+  - Example: `1,气力` in `BUFF.als` makes `BUFF:2:气力` equivalent to `BUFF:2:1`
+  - Multi-dimensional variable support: 2D/3D variable ALS file naming is consistent with ERD (e.g. `BUFF@1.als`, `BUFF@2.als`)
+  - Aliases do not override existing same-name definitions in CSV (CSV takes priority)
+  - New `loadAliasesForUserDefined()` method injects aliases into `erdNameToIntDics` dictionary
+  - 3-platform sync: LazyLoading Desktop + SkiaX Desktop + SkiaX Xamarin
+
+***
+
 ## [7.3.2] — Xamarin HtmlManager Color Sentinel Sync
 
 ### Engine-Level Fixes

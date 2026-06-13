@@ -291,6 +291,47 @@
 
 ## 仕様が変更された命令・式中関数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)ALS別名システム拡張
+
+!!! summary ""
+
+    ALS（別名）システムをシステム変数のみからユーザー定義変数にも対応するよう拡張し、多対1マッピング制限を修正。
+
+    - **ERDシステム ALS対応**：`#DIM`で宣言されたユーザー変数が`.als`ファイルで列挙別名を定義可能に
+      - 使用法：`CSV/BUFF.csv`の横に`CSV/BUFF.als`を配置、書式は`index,別名`
+      - 多次元変数のALSファイル命名はERDと同一（例：`BUFF@1.als`）
+      - 別名はCSV内の同名定義を上書きしない（CSV優先）
+    - **多対1マッピング**：複数の別名を同じindexにマッピング可能
+      - 原版制限：`loadAliases()`が`HashSet<int>`でindex一意性をチェック、重複時にエラーでスキップ
+      - Skia版：別名名称の一意性チェックに変更、多別名→同一indexを許可
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    ; CSV/BUFF.csv
+    1,気力
+    2,体力
+
+    ; CSV/BUFF.als
+    1,气力    ; BUFF:X:气力 → BUFF:X:1
+    2,體力    ; BUFF:X:體力 → BUFF:X:2
+    1,精力    ; 多対1：BUFF:X:精力 → BUFF:X:1
+    ```
+
+!!! example "例"
+
+    ``` { #language-erb title="ERB" }
+    ; ユーザー定義変数（DIM.ERH）
+    #DIM CHARADATA SAVEDATA BUFF, 50
+
+    ; CSV列挙名の使用
+    PRINTV BUFF:MASTER:気力    ; → BUFF:MASTER:1
+
+    ; ALS別名の使用
+    PRINTV BUFF:MASTER:气力    ; → BUFF:MASTER:1（.als別名経由）
+    PRINTV BUFF:MASTER:精力    ; → BUFF:MASTER:1（多対1マッピング）
+    ```
+
 ### ![](../assets/images/IconSK.webp)`GETDISPLAYLINE` 負数逆順インデックス
 !!! summary ""
 
@@ -808,6 +849,8 @@
 | DIV ボタンヒットテストフォールバック | [DIV レンダリング最適化](#skia-sharp)の境界保護：O(1)定位は等高行を前提とし、複数行でインデックスマッピングが崩れた場合、線形走査へフォールバックしてクリック可用性を確保 |
 | SQL_CONNECTION_OPEN 安全修正 | [セキュリティ強化](#changed-commands)の安定性次元：パストラバーサル阻断・接続漏洩修正・PRAGMA OFF→WALによるクラッシュ破損防止 |
 | opDictionary 演算子逆引き修正 | 上流 emuera.em の `opDictionary` コレクション初期化子で `/`, `%`, `==` の3エントリが欠落。`ToOperatorString()` が空文字列を返しエラーメッセージが不完全に；演算子自体の計算には影響なし |
+| ALS 多対1マッピング修正 | システム変数ALSファイルで複数の別名が同じindexを指す場合、原版ではエラーでスキップ；別名名称の重複チェックに変更、多別名→同一indexを許可 |
+| ERDシステム ALS別名対応 | ユーザー定義変数（`#DIM`）のCSVファイルに対応する`.als`別名ファイルを配置可能、別名を`erdNameToIntDics`辞書に注入 |
 
 ---
 
@@ -844,6 +887,7 @@
 | リソース管理 | なし | ✅ RM_系/LRUキャッシュ | |
 | 全画面モード | ❌ | ✅ F11 | ツールバー自動表示 |
 | エラー処理イベント | ❌ | ✅ BEFORE_THROW/BEFORE_ERROR | スクリプトレベルの例外インターセプト |
+| ALS別名 | システム変数のみ | ✅ ユーザー変数+多対1マッピング | ERDシステム拡張 |
 
 ## 沿革と開発背景
 

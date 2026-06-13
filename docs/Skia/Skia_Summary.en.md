@@ -291,6 +291,47 @@
 
 ## Changed Commands & Expression Functions { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)ALS Alias System Extension
+
+!!! summary ""
+
+    The ALS (alias) system has been extended from system variables only to also support user-defined variables, and the many-to-one mapping limitation has been fixed.
+
+    - **ERD System ALS Support**: Variables declared with `#DIM` can now define enumeration aliases via `.als` files
+      - Usage: Place `CSV/BUFF.als` alongside `CSV/BUFF.csv`, format is `index,alias`
+      - Multi-dimensional variable ALS file naming is consistent with ERD (e.g. `BUFF@1.als`)
+      - Aliases do not override existing same-name definitions in CSV (CSV takes priority)
+    - **Many-to-one mapping**: Multiple aliases can map to the same index
+      - Original limitation: `loadAliases()` used `HashSet<int>` to check index uniqueness, reporting error and skipping on duplicates
+      - Skia version: Changed to checking alias name uniqueness, allowing multiple aliases → same index
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    ; CSV/BUFF.csv
+    1,気力
+    2,体力
+
+    ; CSV/BUFF.als
+    1,气力    ; BUFF:X:气力 → BUFF:X:1
+    2,體力    ; BUFF:X:體力 → BUFF:X:2
+    1,精力    ; Many-to-one: BUFF:X:精力 → BUFF:X:1
+    ```
+
+!!! example "Example"
+
+    ``` { #language-erb title="ERB" }
+    ; User-defined variable (DIM.ERH)
+    #DIM CHARADATA SAVEDATA BUFF, 50
+
+    ; Using CSV enumeration name
+    PRINTV BUFF:MASTER:気力    ; → BUFF:MASTER:1
+
+    ; Using ALS alias
+    PRINTV BUFF:MASTER:气力    ; → BUFF:MASTER:1 (via .als alias)
+    PRINTV BUFF:MASTER:精力    ; → BUFF:MASTER:1 (many-to-one mapping)
+    ```
+
 ### ![](../assets/images/IconSK.webp)`GETDISPLAYLINE` Negative Reverse Index
 !!! summary ""
 
@@ -807,6 +848,8 @@
 | OpenGL context loss crash | Auto-fallback in dual-GPU/virtual machine environments |
 | DIV button hit-test fallback | Boundary protection for [DIV rendering optimization](#skia-sharp): O(1) positioning assumes uniform line height; multi-line content breaks index mapping, falls back to linear traversal to preserve click usability |
 | SQL_CONNECTION_OPEN security fix | Stability dimension of [security hardening](#changed-commands): path traversal blocking, connection leak fix, PRAGMA OFF→WAL preventing crash corruption |
+| ALS many-to-one mapping fix | When multiple aliases in system variable ALS files point to the same index, original version reported error and skipped; changed to checking alias name duplication, allowing multiple aliases → same index |
+| ERD system ALS alias support | User-defined variables (`#DIM`) CSV files now support corresponding `.als` alias files, aliases injected into `erdNameToIntDics` dictionary |
 
 ---
 
@@ -843,6 +886,7 @@
 | Resource management | None | ✅ RM_ series/LRU cache | |
 | Fullscreen mode | ❌ | ✅ F11 | Auto-show toolbar |
 | Error handling events | ❌ | ✅ BEFORE_THROW/BEFORE_ERROR | Script-level exception interception |
+| ALS aliases | System vars only | ✅ User vars + many-to-one mapping | ERD system extension |
 
 ## History and Development Background
 

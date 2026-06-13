@@ -4,6 +4,22 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [8.0.0] — ERD 系统 ALS 别名支持
+
+### 引擎层新增
+
+- **用户定义变量 ALS 别名支持**：`#DIM` 声明的用户变量现在可以通过 `.als` 文件定义枚举别名
+  - 之前：只有系统变量（ABL/TALENT/CFLAG 等）的 CSV 文件支持 `.als` 别名文件
+  - 现在：用户定义变量（如 `BUFF`）的 CSV 文件也支持对应的 `.als` 文件
+  - 用法：在 `CSV/BUFF.csv` 旁放置 `CSV/BUFF.als`，格式与系统变量的 ALS 文件相同（`index,别名`）
+  - 示例：`BUFF.als` 中 `1,气力` 使得 `BUFF:2:气力` 等价于 `BUFF:2:1`
+  - 多维变量支持：2D/3D 变量的 ALS 文件命名与 ERD 一致（如 `BUFF@1.als`、`BUFF@2.als`）
+  - 别名不覆盖 CSV 中已有的同名定义（CSV 优先）
+  - 新增 `loadAliasesForUserDefined()` 方法，将别名注入 `erdNameToIntDics` 字典
+  - 3 端同步：LazyLoading Desktop + SkiaX Desktop + SkiaX Xamarin
+
+***
+
 ## [7.3.2] — Xamarin HtmlManager 颜色哨兵值同步
 
 ### 引擎层修复

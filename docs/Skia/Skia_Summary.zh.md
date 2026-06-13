@@ -291,6 +291,47 @@
 
 ## 规格变更的命令·式中函数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)ALS 别名系统扩展
+
+!!! summary ""
+
+    ALS（别名）系统从仅支持系统变量扩展为同时支持用户定义变量，并修复了多对一映射限制。
+
+    - **ERD 系统 ALS 支持**：`#DIM` 声明的用户变量现在可以通过 `.als` 文件定义枚举别名
+      - 用法：在 `CSV/BUFF.csv` 旁放置 `CSV/BUFF.als`，格式为 `index,别名`
+      - 多维变量 ALS 文件命名与 ERD 一致（如 `BUFF@1.als`）
+      - 别名不覆盖 CSV 中已有的同名定义（CSV 优先）
+    - **多对一映射**：多个别名可以映射到同一个 index
+      - 原版限制：`loadAliases()` 使用 `HashSet<int>` 检查 index 唯一性，重复时报错跳过
+      - Skia 版：改为检查别名名称唯一性，允许多别名→同一 index
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    ; CSV/BUFF.csv
+    1,気力
+    2,体力
+
+    ; CSV/BUFF.als
+    1,气力    ; BUFF:X:气力 → BUFF:X:1
+    2,體力    ; BUFF:X:體力 → BUFF:X:2
+    1,精力    ; 多对一：BUFF:X:精力 → BUFF:X:1
+    ```
+
+!!! example "示例"
+
+    ``` { #language-erb title="ERB" }
+    ; 用户定义变量（DIM.ERH）
+    #DIM CHARADATA SAVEDATA BUFF, 50
+
+    ; 使用 CSV 枚举名
+    PRINTV BUFF:MASTER:気力    ; → BUFF:MASTER:1
+
+    ; 使用 ALS 别名
+    PRINTV BUFF:MASTER:气力    ; → BUFF:MASTER:1（通过 .als 别名）
+    PRINTV BUFF:MASTER:精力    ; → BUFF:MASTER:1（多对一映射）
+    ```
+
 ### ![](../assets/images/IconSK.webp)`GETDISPLAYLINE` 的负数倒数索引
 !!! summary ""
 
@@ -807,6 +848,8 @@
 | DIV 按钮命中测试回退 | [DIV 渲染优化](#skia-sharp)的边界保护：O(1) 定位以等高行为前提，多行内容破坏索引映射，回退到线性遍历确保点击仍可用 |
 | SQL_CONNECTION_OPEN 安全修复 | [安全强化](#changed-commands)的稳定性维度：路径穿越阻断、连接泄露修复、PRAGMA OFF→WAL 防崩溃损坏 |
 | opDictionary 运算符反查修复 | 上游 emuera.em 的 `opDictionary` 集合初始化器遗漏 `/`, `%`, `==` 三个条目，`ToOperatorString()` 返回空字符串导致错误消息不完整；运算符本身计算不受影响 |
+| ALS 多对一映射修复 | 系统变量 ALS 文件中多个别名指向同一 index 时原版报错跳过；改为检查别名名称重复，允许多个别名映射同一 index |
+| ERD 系统 ALS 别名支持 | 用户定义变量（`#DIM`）的 CSV 文件现在支持对应的 `.als` 别名文件，别名注入 `erdNameToIntDics` 字典 |
 
 ---
 
@@ -843,6 +886,7 @@
 | 资源管理 | 无 | ✅ RM_系/LRU缓存 | |
 | 全屏模式 | ❌ | ✅ F11 | 工具栏自动显示 |
 | 错误处理事件 | ❌ | ✅ BEFORE_THROW/BEFORE_ERROR | 脚本级异常拦截 |
+| ALS 别名 | 仅系统变量 | ✅ 用户变量+多对一映射 | ERD 系统扩展 |
 
 ## 沿革与开发背景
 

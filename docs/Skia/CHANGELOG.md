@@ -4,6 +4,22 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [8.0.0] — ERDシステム ALS別名対応
+
+### エンジン層追加
+
+- **ユーザー定義変数 ALS別名対応**：`#DIM`で宣言されたユーザー変数が`.als`ファイルで列挙別名を定義可能に
+  - 従来：システム変数（ABL/TALENT/CFLAG等）のCSVファイルのみ`.als`別名ファイルに対応
+  - 現在：ユーザー定義変数（例：`BUFF`）のCSVファイルにも対応する`.als`ファイルを配置可能
+  - 使用法：`CSV/BUFF.csv`の横に`CSV/BUFF.als`を配置、書式はシステム変数のALSファイルと同じ（`index,別名`）
+  - 例：`BUFF.als`で`1,气力`と定義すると`BUFF:2:气力`は`BUFF:2:1`と等価
+  - 多次元変数対応：2D/3D変数のALSファイル命名はERDと同一（例：`BUFF@1.als`、`BUFF@2.als`）
+  - 別名はCSV内の同名定義を上書きしない（CSV優先）
+  - 新規`loadAliasesForUserDefined()`メソッド、別名を`erdNameToIntDics`辞書に注入
+  - 3プラットフォーム同期：LazyLoading Desktop + SkiaX Desktop + SkiaX Xamarin
+
+***
+
 ## [7.3.2] — Xamarin HtmlManager カラーセンチネル同期
 
 ### エンジン層修正
