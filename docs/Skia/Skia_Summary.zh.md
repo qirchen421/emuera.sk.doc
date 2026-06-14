@@ -291,6 +291,65 @@
 
 ## 规格变更的命令·式中函数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)CanReturnFloat 动态返回类型
+
+!!! summary ""
+
+    POWER/SQRT/ABS 等数学函数现在根据参数类型动态返回 Integer 或 Float。此前这些函数始终返回 Integer，导致 Float 参数的运算结果被隐式截断。
+
+    - **编译期类型推论**：`GetEraType()` 检查参数中是否有 Float 类型，有则返回 `EraType.Float`
+    - **运行时分派**：`GetReturnValue()` 通过 `HasFloatArg` 将实际返回值分派为 `SingleFloatTerm`/`SingleLongTerm`
+    - **设计约束**：不能将 `ReturnType` 直接设为 `Float`，否则整数参数调用（如 `POWER(2,32)-1`）会被编译期判定为 Float，导致 `%` 运算报错和 `#FUNCTION` 类型不匹配等回归错误，因此采用 `CanReturnFloat` 属性进行动态解析
+
+!!! info "涉及函数"
+
+    | 函数 | CanReturnFloat | 备注 |
+    |:---|:---|:---|
+    | `POWER`, `ABS`, `SQRT`, `CBRT` | ✅ | HasFloatArg 分派 |
+    | `LOG`, `EXP`, `SIGN` | ✅ | HasFloatArg 分派 |
+    | `LIMIT` | ✅ | HasFloatArg 分派 |
+    | `MAX`, `MIN` | ✅ | HasFloatArg 分派 |
+    | `SIN`, `COS`, `TAN`, `ASIN`, `ACOS`, `ATAN` | ✅ | HasFloatArg 分派 |
+    | `FLOOR`, `CEIL`, `ROUND` | ✅ | HasFloatArg 分派 |
+    | `RAND` | ❌ | GetIntValue 返回整数随机数，GetFloatValue 有独立实现 |
+
+!!! example "示例"
+
+    ``` { #language-erb title="ERB" }
+    ; Integer 参数 → Integer 返回
+    PRINTFORML POWER(2, 32) - 1    ; → 4294967295（Integer）
+
+    ; Float 参数 → Float 返回
+    PRINTFORML POWER(1.1, 6) * 200  ; → 354.3122（Float 运算）
+
+    ; 修复前的问题
+    ; 200 * POWER(1.1, 6) → 200（Int×Int 分派，截断）
+    ```
+
+### ![](../assets/images/IconSK.webp)Float 类型错误消息修复
+
+!!! summary ""
+
+    Float 类型新增后的错误消息修正。原引擎使用 Integer/String 二分法错误消息，导致 Float 相关错误被误报为"字符串型"或"整型"。
+
+    - `#FUNCTION`/`#FUNCTIONS` 返回值类型检查：修复返回 Float 时的误报
+    - 函数参数类型转换：修复 Float→Integer 转换时的误报
+    - 变量赋值类型检查：修复 String→Float 和 Float→Integer 赋值时的误报
+    - 新增 8 条错误消息（日/中/英三语言支持）
+
+!!! info "新增错误消息"
+
+    | 消息键 | 含义 |
+    |:---|:---|
+    | `ReturnfFloatInIntFunc` | `#FUNCTION` 函数返回了 Float 类型 |
+    | `ReturnfFloatInStrFunc` | `#FUNCTIONS` 函数返回了 Float 类型 |
+    | `CanNotConvertFloatToInt` | 函数参数不能从 Float 型转换为 Integer 型 |
+    | `ArgIsNotFloat` | 函数参数不是浮点数 |
+    | `ArgIsNotFloatVar` | 函数参数不是 Float 型变量 |
+    | `ArgIsNotFloatArray` | 函数参数不是 Float 型数组变量 |
+    | `SetStrToFloat` | 尝试将字符串赋值给 Float 型变量 |
+    | `SetFloatToInt` | 尝试将 Float 型赋值给 Integer 型变量 |
+
 ### ![](../assets/images/IconSK.webp)ALS 别名系统扩展
 
 !!! summary ""
@@ -850,6 +909,7 @@
 | opDictionary 运算符反查修复 | 上游 emuera.em 的 `opDictionary` 集合初始化器遗漏 `/`, `%`, `==` 三个条目，`ToOperatorString()` 返回空字符串导致错误消息不完整；运算符本身计算不受影响 |
 | ALS 多对一映射修复 | 系统变量 ALS 文件中多个别名指向同一 index 时原版报错跳过；改为检查别名名称重复，允许多个别名映射同一 index |
 | ERD 系统 ALS 别名支持 | 用户定义变量（`#DIM`）的 CSV 文件现在支持对应的 `.als` 别名文件，别名注入 `erdNameToIntDics` 字典 |
+| 调试窗口自定义函数求值修复 | WaitInput 状态下 `console.IsRunning=False` 导致 `runScriptProc` 拒绝执行函数体；`GetValue` 新增 `forceRunning` 标志绕过检查；清除 `MethodReturnValue` 残留值防止返回无关 HTML 字符串；修复 `ReturnF` 后 `currentLine=null` 的 NRE；修复 `GetValue` 失败路径 `ScopeOut` 泄漏和成功路径 `currentLine` 残留 |
 
 ---
 

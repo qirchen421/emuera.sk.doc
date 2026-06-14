@@ -4,6 +4,45 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [8.2.0] — 调试窗口自定义函数求值修复
+
+### 引擎层修复
+
+- **调试窗口自定义表达式函数返回值错误（WaitInput 状态）**：`console.IsRunning` 在 WaitInput 时返回 `False`，导致 `runScriptProc` 不执行函数体即退出
+  - `GetValue` 新增 `forceRunning` 标志：调试求值时绕过 `console.IsRunning` 检查
+  - 清除 `MethodReturnValue` 残留值：修复前一个 `#FUNCTIONS` 函数的返回值残留导致返回无关 HTML 字符串的问题
+  - 修复 `NullReferenceException`：`ReturnF` 后 `currentLine` 为 null 导致 `ShiftNextLine` 崩溃
+  - 修复私有变量状态泄漏：`GetValue` 失败路径未调用 `ScopeOut`
+  - 修复 `currentLine` 残留：`GetValue` 成功路径恢复 `currentLine`
+  - 状态损坏防护：`updateVarWatch` 异常时 `loadPrevState` 未被调用（try-finally 修复）
+
+***
+
+## [8.1.0] — Float 类型错误消息修复 + CanReturnFloat 动态返回类型
+
+### 引擎层修复
+
+- **Float 类型错误消息误报为"字符串型"**：原引擎只有 Integer/String 两种类型，错误消息使用二则判断（`== String ? Str消息 : Int消息`），Float 类型被误报为"字符串型"或"整型"
+  - `#FUNCTION` 函数返回 Float 时报 `ReturnfStrInIntFunc`（"返回了字符串类型"）→ 区分 Float→`ReturnfFloatInIntFunc` / String→`ReturnfStrInIntFunc`
+  - `#FUNCTIONS` 函数返回 Float 时同理 → 新增 `ReturnfFloatInStrFunc`
+  - 函数参数 Float→Integer 转换报 `CanNotConvertStrToInt`（"不能从字符串型转换"）→ 报 `CanNotConvertFloatToInt`
+  - 函数参数类型不匹配时 `String? Str : Int` 二则判断 → 三则：`String? Str : Float? Float : Int`（2处）
+  - Ref 参数类型不匹配时缺少 Float 分支 → 添加 `Float? FloatVar : Var` 和 `Float? FloatArray : Array`
+  - Float 变量赋 String 报 `SetIntToStr`（"向非整型赋整数"）→ 报 `SetStrToFloat`（"向浮点型赋字符串"）
+  - Integer 变量赋 Float 报 `SetIntToStr` → 区分 Float→`SetFloatToInt` / String→`SetStrToInt`
+
+### 引擎层变更
+
+- **CanReturnFloat 动态返回类型机制**：POWER/SQRT/ABS 等函数根据参数类型动态返回 Integer 或 Float
+  - 编译期 `GetEraType()` 检查参数中是否有 Float 类型来决定返回类型
+  - 运行期 `GetReturnValue()` 通过 `HasFloatArg` 分派实际返回值
+  - `FunctionMethod.CanReturnFloat` 属性标记动态返回函数
+  - `FunctionMethodTerm.GetEraType()` 覆盖基类方法
+  - 涉及函数：POWER, ABS, SQRT, CBRT, LOG, EXP, SIGN, LIMIT, MAX, MIN, SIN, COS, TAN, ASIN, ACOS, ATAN, FLOOR, CEIL, ROUND
+- **版本签名**：`Skiav8` → `Skiav8.1`（`1824+v24+EMv18+EEv56+Skiav8.1`）
+
+***
+
 ## [8.0.0] — ERD 系统 ALS 别名支持
 
 ### 引擎层新增

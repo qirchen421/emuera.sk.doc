@@ -4,6 +4,45 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [8.2.0] — デバッグウィンドウのカスタム関数評価修正
+
+### エンジン層修正
+
+- **デバッグウィンドウでカスタム式関数が正しい値を返さない（WaitInput状態）**：`console.IsRunning`がWaitInput時に`False`を返し、`runScriptProc`が関数本体を実行せずに即時終了する問題を修正
+  - `GetValue`に`forceRunning`フラグを追加：デバッグ評価時に`console.IsRunning`チェックをバイパス
+  - `MethodReturnValue`の残留値をクリア：前の`#FUNCTIONS`関数の戻り値が残り、無関係なHTML文字列が返される問題を修正
+  - `NullReferenceException`修正：`ReturnF`後`currentLine`がnullになり`ShiftNextLine`でクラッシュする問題を修正
+  - プライベート変数状態リーク修正：`GetValue`失敗パスで`ScopeOut`が呼ばれない問題を修正
+  - `currentLine`残留修正：`GetValue`成功パスで`currentLine`を復元するよう修正
+  - 状態破損防止：`updateVarWatch`の例外時に`loadPrevState`が呼ばれない問題を修正（try-finally）
+
+***
+
+## [8.1.0] — Float型エラーメッセージ修正 + CanReturnFloat 動的戻り値型
+
+### エンジン層修正
+
+- **Float型エラーメッセージの「文字列型」誤報**：元エンジンはInteger/String二分法のエラーメッセージを使用、Float型が「文字列型」または「整数型」と誤報
+  - `#FUNCTION`関数がFloatを返す時`ReturnfStrInIntFunc`（「文字列型が指定されました」）→ Float→`ReturnfFloatInIntFunc` / String→`ReturnfStrInIntFunc`に区別
+  - `#FUNCTIONS`関数がFloatを返す時同理 → `ReturnfFloatInStrFunc`を追加
+  - 関数引数 Float→Integer 変換時`CanNotConvertStrToInt`（「文字列型から変換できません」）→ `CanNotConvertFloatToInt`
+  - 関数引数型不一致時の`String? Str : Int`二分判断 → 三分：`String? Str : Float? Float : Int`（2箇所）
+  - Ref引数型不一致時にFloat分岐欠落 → `Float? FloatVar : Var`と`Float? FloatArray : Array`を追加
+  - Float変数にString代入時`SetIntToStr`（「非整数型に整数を代入」）→ `SetStrToFloat`（「浮動小数点型に文字列を代入」）
+  - Integer変数にFloat代入時`SetIntToStr` → Float→`SetFloatToInt` / String→`SetStrToInt`に区別
+
+### エンジン層変更
+
+- **CanReturnFloat 動的戻り値型メカニズム**：POWER/SQRT/ABS等の関数が引数型に応じてIntegerまたはFloatを動的に返す
+  - コンパイル時`GetEraType()`は引数にFloat型があるかをチェックして戻り値型を決定
+  - 実行時`GetReturnValue()`は`HasFloatArg`で実際の戻り値を分派
+  - `FunctionMethod.CanReturnFloat`プロパティで動的戻り値関数をマーク
+  - `FunctionMethodTerm.GetEraType()`が基底クラスメソッドをオーバーライド
+  - 対象関数：POWER, ABS, SQRT, CBRT, LOG, EXP, SIGN, LIMIT, MAX, MIN, SIN, COS, TAN, ASIN, ACOS, ATAN, FLOOR, CEIL, ROUND
+- **バージョン署名**：`Skiav8` → `Skiav8.1`（`1824+v24+EMv18+EEv56+Skiav8.1`）
+
+***
+
 ## [8.0.0] — ERDシステム ALS別名対応
 
 ### エンジン層追加

@@ -4,6 +4,45 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [8.2.0] — Debug Window Custom Function Evaluation Fix
+
+### Engine Layer Fixes
+
+- **Debug window custom expression functions returning incorrect values (WaitInput state)**：`console.IsRunning` returns `False` during WaitInput, causing `runScriptProc` to exit immediately without executing the function body
+  - Added `forceRunning` flag in `GetValue`：bypasses `console.IsRunning` check during debug evaluation
+  - Clear residual `MethodReturnValue`：fixes previous `#FUNCTIONS` function return value persisting, causing unrelated HTML strings to be returned
+  - Fixed `NullReferenceException`：`currentLine` becoming null after `ReturnF` caused crash in `ShiftNextLine`
+  - Fixed private variable state leak：`GetValue` failure path not calling `ScopeOut`
+  - Fixed `currentLine` residual：`GetValue` success path now restores `currentLine`
+  - State corruption prevention：`loadPrevState` not called on `updateVarWatch` exception（try-finally fix）
+
+***
+
+## [8.1.0] — Float Type Error Message Fix + CanReturnFloat Dynamic Return Type
+
+### Engine-Level Fixes
+
+- **Float type error messages misreporting as "string type"**: Original engine used Integer/String binary error messages, Float type was misreported as "string type" or "integer type"
+  - `#FUNCTION` returning Float reported `ReturnfStrInIntFunc` ("string type specified") → Distinguish Float→`ReturnfFloatInIntFunc` / String→`ReturnfStrInIntFunc`
+  - `#FUNCTIONS` returning Float similarly → Added `ReturnfFloatInStrFunc`
+  - Function argument Float→Integer conversion reported `CanNotConvertStrToInt` ("cannot convert from string") → Reports `CanNotConvertFloatToInt`
+  - Function argument type mismatch used `String? Str : Int` binary check → Ternary: `String? Str : Float? Float : Int` (2 locations)
+  - Ref argument type mismatch missing Float branch → Added `Float? FloatVar : Var` and `Float? FloatArray : Array`
+  - Assigning String to Float variable reported `SetIntToStr` ("assigning integer to non-integer") → Reports `SetStrToFloat` ("assigning string to float")
+  - Assigning Float to Integer variable reported `SetIntToStr` → Distinguish Float→`SetFloatToInt` / String→`SetStrToInt`
+
+### Engine-Level Changes
+
+- **CanReturnFloat dynamic return type mechanism**: Functions like POWER/SQRT/ABS dynamically return Integer or Float based on argument types
+  - Compile-time `GetEraType()` checks if any argument is Float type to determine return type
+  - Runtime `GetReturnValue()` dispatches actual return value via `HasFloatArg`
+  - `FunctionMethod.CanReturnFloat` property marks dynamic return functions
+  - `FunctionMethodTerm.GetEraType()` overrides base class method
+  - Affected functions: POWER, ABS, SQRT, CBRT, LOG, EXP, SIGN, LIMIT, MAX, MIN, SIN, COS, TAN, ASIN, ACOS, ATAN, FLOOR, CEIL, ROUND
+- **Version signature**: `Skiav8` → `Skiav8.1` (`1824+v24+EMv18+EEv56+Skiav8.1`)
+
+***
+
 ## [8.0.0] — ERD System ALS Alias Support
 
 ### Engine-Level Additions

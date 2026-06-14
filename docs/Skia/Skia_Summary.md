@@ -291,6 +291,65 @@
 
 ## 仕様が変更された命令・式中関数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)CanReturnFloat 動的戻り値型
+
+!!! summary ""
+
+    POWER/SQRT/ABS等の数学関数が引数型に応じてIntegerまたはFloatを動的に返すよう変更。従来は常にIntegerを返していたため、Float引数での演算結果が暗黙に切り捨てられていた。
+
+    - **コンパイル時型推論**：`GetEraType()`が引数にFloat型があるかをチェック、Float引数があれば`EraType.Float`を返す
+    - **実行時分派**：`GetReturnValue()`が`HasFloatArg`で実際の戻り値を`SingleFloatTerm`/`SingleLongTerm`に分派
+    - **設計制約**：`ReturnType`を直接`Float`に設定すると、整数引数の呼び出し（`POWER(2,32)-1`等）がコンパイル時にFloatと判定され、`%`演算エラーや`#FUNCTION`型不一致等の回帰エラーが発生するため、`CanReturnFloat`プロパティによる動的解決を採用
+
+!!! info "対象関数"
+
+    | 関数 | CanReturnFloat | 備考 |
+    |:---|:---|:---|
+    | `POWER`, `ABS`, `SQRT`, `CBRT` | ✅ | HasFloatArg分派 |
+    | `LOG`, `EXP`, `SIGN` | ✅ | HasFloatArg分派 |
+    | `LIMIT` | ✅ | HasFloatArg分派 |
+    | `MAX`, `MIN` | ✅ | HasFloatArg分派 |
+    | `SIN`, `COS`, `TAN`, `ASIN`, `ACOS`, `ATAN` | ✅ | HasFloatArg分派 |
+    | `FLOOR`, `CEIL`, `ROUND` | ✅ | HasFloatArg分派 |
+    | `RAND` | ❌ | GetIntValueは整数乱数、GetFloatValueは独立実装 |
+
+!!! example "例"
+
+    ``` { #language-erb title="ERB" }
+    ; Integer引数 → Integer戻り値
+    PRINTFORML POWER(2, 32) - 1    ; → 4294967295（Integer）
+
+    ; Float引数 → Float戻り値
+    PRINTFORML POWER(1.1, 6) * 200  ; → 354.3122（Float演算）
+
+    ; 従来の問題（修正前）
+    ; 200 * POWER(1.1, 6) → 200（Int×Int分派で切り捨て）
+    ```
+
+### ![](../assets/images/IconSK.webp)Float型エラーメッセージ修正
+
+!!! summary ""
+
+    Float型追加に伴うエラーメッセージの修正。元エンジンはInteger/String二分法のエラーメッセージを使用していたため、Float型関連のエラーが「文字列型」または「整数型」と誤報されていた。
+
+    - `#FUNCTION`/`#FUNCTIONS`関数の戻り値型チェック：Float返却時の誤報を修正
+    - 関数引数型変換：Float→Integer変換時の誤報を修正
+    - 変数代入型チェック：Float変数へのString代入、Integer変数へのFloat代入時の誤報を修正
+    - 新規エラーメッセージ8件を追加（日/中/英三言語対応）
+
+!!! info "追加エラーメッセージ"
+
+    | メッセージキー | 意味 |
+    |:---|:---|
+    | `ReturnfFloatInIntFunc` | `#FUNCTION`関数がFloat型を返した |
+    | `ReturnfFloatInStrFunc` | `#FUNCTIONS`関数がFloat型を返した |
+    | `CanNotConvertFloatToInt` | 関数引数をFloat型からInteger型に変換できない |
+    | `ArgIsNotFloat` | 関数引数が浮動小数点数ではない |
+    | `ArgIsNotFloatVar` | 関数引数が浮動小数点型変数ではない |
+    | `ArgIsNotFloatArray` | 関数引数が浮動小数点型配列変数ではない |
+    | `SetStrToFloat` | 浮動小数点型変数に文字列型を代入しようとした |
+    | `SetFloatToInt` | 整数型変数に浮動小数点型を代入しようとした |
+
 ### ![](../assets/images/IconSK.webp)ALS別名システム拡張
 
 !!! summary ""
@@ -851,6 +910,7 @@
 | opDictionary 演算子逆引き修正 | 上流 emuera.em の `opDictionary` コレクション初期化子で `/`, `%`, `==` の3エントリが欠落。`ToOperatorString()` が空文字列を返しエラーメッセージが不完全に；演算子自体の計算には影響なし |
 | ALS 多対1マッピング修正 | システム変数ALSファイルで複数の別名が同じindexを指す場合、原版ではエラーでスキップ；別名名称の重複チェックに変更、多別名→同一indexを許可 |
 | ERDシステム ALS別名対応 | ユーザー定義変数（`#DIM`）のCSVファイルに対応する`.als`別名ファイルを配置可能、別名を`erdNameToIntDics`辞書に注入 |
+| デバッグウィンドウ カスタム関数評価修正 | WaitInput状態で`console.IsRunning=False`により`runScriptProc`が関数本体を実行せず即時終了；`GetValue`に`forceRunning`フラグを追加してチェックをバイパス；`MethodReturnValue`残留値をクリアして無関係なHTML文字列の返却を防止；`ReturnF`後`currentLine=null`のNRE修正；`GetValue`失敗パスの`ScopeOut`リークと成功パスの`currentLine`残留を修正 |
 
 ---
 

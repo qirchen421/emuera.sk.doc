@@ -291,6 +291,65 @@
 
 ## Changed Commands & Expression Functions { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)CanReturnFloat Dynamic Return Type
+
+!!! summary ""
+
+    Math functions like POWER/SQRT/ABS now dynamically return Integer or Float based on argument types. Previously they always returned Integer, causing Float argument results to be implicitly truncated.
+
+    - **Compile-time type inference**: `GetEraType()` checks if any argument is Float type, returns `EraType.Float` if so
+    - **Runtime dispatch**: `GetReturnValue()` dispatches actual return value via `HasFloatArg` to `SingleFloatTerm`/`SingleLongTerm`
+    - **Design constraint**: Setting `ReturnType` directly to `Float` causes regression errors (e.g. `POWER(2,32)-1` would be typed as Float, breaking `%` operator and `#FUNCTION` compatibility), so `CanReturnFloat` property is used for dynamic resolution
+
+!!! info "Affected Functions"
+
+    | Function | CanReturnFloat | Notes |
+    |:---|:---|:---|
+    | `POWER`, `ABS`, `SQRT`, `CBRT` | ✅ | HasFloatArg dispatch |
+    | `LOG`, `EXP`, `SIGN` | ✅ | HasFloatArg dispatch |
+    | `LIMIT` | ✅ | HasFloatArg dispatch |
+    | `MAX`, `MIN` | ✅ | HasFloatArg dispatch |
+    | `SIN`, `COS`, `TAN`, `ASIN`, `ACOS`, `ATAN` | ✅ | HasFloatArg dispatch |
+    | `FLOOR`, `CEIL`, `ROUND` | ✅ | HasFloatArg dispatch |
+    | `RAND` | ❌ | GetIntValue returns integer random, GetFloatValue has independent impl |
+
+!!! example "Example"
+
+    ``` { #language-erb title="ERB" }
+    ; Integer args → Integer return
+    PRINTFORML POWER(2, 32) - 1    ; → 4294967295 (Integer)
+
+    ; Float args → Float return
+    PRINTFORML POWER(1.1, 6) * 200  ; → 354.3122 (Float arithmetic)
+
+    ; Previous issue (before fix)
+    ; 200 * POWER(1.1, 6) → 200 (Int×Int dispatch, truncated)
+    ```
+
+### ![](../assets/images/IconSK.webp)Float Type Error Message Fix
+
+!!! summary ""
+
+    Error message corrections following Float type addition. The original engine used Integer/String binary error messages, causing Float-related errors to be misreported as "string type" or "integer type".
+
+    - `#FUNCTION`/`#FUNCTIONS` return type check: Fixed misreporting when returning Float
+    - Function argument type conversion: Fixed misreporting for Float→Integer conversion
+    - Variable assignment type check: Fixed misreporting for String→Float and Float→Integer assignments
+    - Added 8 new error messages (Japanese/Chinese/English trilingual)
+
+!!! info "New Error Messages"
+
+    | Message Key | Meaning |
+    |:---|:---|
+    | `ReturnfFloatInIntFunc` | `#FUNCTION` function returned Float type |
+    | `ReturnfFloatInStrFunc` | `#FUNCTIONS` function returned Float type |
+    | `CanNotConvertFloatToInt` | Cannot convert function argument from Float to Integer |
+    | `ArgIsNotFloat` | Function argument is not a float |
+    | `ArgIsNotFloatVar` | Function argument is not a Float variable |
+    | `ArgIsNotFloatArray` | Function argument is not a Float array variable |
+    | `SetStrToFloat` | Attempted to assign String to Float variable |
+    | `SetFloatToInt` | Attempted to assign Float to Integer variable |
+
 ### ![](../assets/images/IconSK.webp)ALS Alias System Extension
 
 !!! summary ""
@@ -850,6 +909,7 @@
 | SQL_CONNECTION_OPEN security fix | Stability dimension of [security hardening](#changed-commands): path traversal blocking, connection leak fix, PRAGMA OFF→WAL preventing crash corruption |
 | ALS many-to-one mapping fix | When multiple aliases in system variable ALS files point to the same index, original version reported error and skipped; changed to checking alias name duplication, allowing multiple aliases → same index |
 | ERD system ALS alias support | User-defined variables (`#DIM`) CSV files now support corresponding `.als` alias files, aliases injected into `erdNameToIntDics` dictionary |
+| Debug window custom function evaluation fix | `console.IsRunning=False` during WaitInput caused `runScriptProc` to exit without executing function body; added `forceRunning` flag in `GetValue` to bypass check; clear residual `MethodReturnValue` preventing unrelated HTML string returns; fixed NRE from `currentLine=null` after `ReturnF`; fixed `ScopeOut` leak in `GetValue` failure path and `currentLine` residual in success path |
 
 ---
 
