@@ -4,6 +4,40 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [9.1.0] — STRFORMCHECK Function + HTML_PRINT font valign Extension
+
+### Added
+
+- **STRFORMCHECK function**: Takes a string argument, checks if it can be expanded as STRFORM; returns 1 if expandable, 0 if not
+  - Parse failure (syntax error) returns 0
+  - Runtime evaluation failure (non-existent variable etc.) returns 0
+  - Shares the same parser as STRFORM, ensuring semantic consistency
+- **HTML_PRINT `<font>` valign attribute**: Adds `valign` attribute (`top`/`middle`/`bottom`) to the `<font>` tag, controlling vertical alignment of text with different font sizes on the same line
+  - `valign='top'` (default): text top-aligned, consistent with existing behavior
+  - `valign='middle'`: text vertically centered
+  - `valign='bottom'`: text bottom-aligned
+  - Invalid values throw `CanNotInterpretAttribute` error
+  - Nested `<font>` tags inherit outer `valign` setting
+  - Desktop and SkiaX Xamarin implementations synchronized
+
+***
+
+## [9.0.0] — F11 Fullscreen Proportional Scaling
+
+### Added
+
+- **F11 Fullscreen Proportional Scaling**: When F11 is pressed, game window content (fonts, images, separators, HTML shape, ImageLayer, CBG background images, and all other visible elements) is scaled to fullscreen proportionally based on the configured width, adapting to high-resolution displays
+  - Core mechanism: Applies a single `canvas.Scale()` transform at the `SKCanvas` drawing entry point, all subsequent drawing operations are automatically scaled up proportionally
+  - Does not modify `Config.FontSize`, `Config.WindowX`, `Config.DrawableWidth` — engine continues laying out at logical dimensions
+  - Does not reflow display lines — avoids HTML round-trip bugs
+  - Mouse coordinates are automatically converted to logical coordinates
+  - Input box (WinForms RichTextBox) font and height are scaled separately
+  - Supports multi-monitor (`Screen.FromControl` gets current screen)
+  - Introduces `RenderWidth`/`RenderHeight` properties representing logical render dimensions, `EmueraConsole.OnPaint` and related methods use these properties instead of `MainPicBox.Width`/`Height`
+  - Zero impact on Android (does not compile desktop `MainWindow.cs` and `EmueraConsole.cs`)
+
+***
+
 ## [8.2.0] — Debug Window Custom Function Evaluation Fix
 
 ### Engine Layer Fixes

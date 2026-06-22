@@ -4,6 +4,40 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [9.1.0] — STRFORMCHECK 関数 + HTML_PRINT font valign 拡張
+
+### Added
+
+- **STRFORMCHECK 関数**：文字列引数を取り、STRFORM として展開可能かチェックする。展開可能なら 1、不可なら 0 を返す
+  - 解析失敗（構文エラー）の場合は 0 を返す
+  - 実行時評価失敗（存在しない変数など）の場合は 0 を返す
+  - STRFORM と同じパーサーを共有し、セマンティクスの一貫性を保証
+- **HTML_PRINT `<font>` valign 属性**：`<font>` タグに `valign` 属性（`top`/`middle`/`bottom`）を追加。同一行内で異なるフォントサイズのテキストの垂直位置を揃える
+  - `valign='top'`（デフォルト）：テキスト上端揃え、既存の動作と一致
+  - `valign='middle'`：テキスト垂直中央揃え
+  - `valign='bottom'`：テキスト下端揃え
+  - 無効な値は `CanNotInterpretAttribute` エラーをスロー
+  - ネストされた `<font>` タグは外側の `valign` 設定を継承
+  - デスクトップ版と SkiaX Xamarin 版の実装を同期
+
+***
+
+## [9.0.0] — F11 フルスクリーン比例スケーリング
+
+### Added
+
+- **F11 フルスクリーン比例スケーリング**：F11 押下時、ゲームウィンドウ内容（フォント、画像、区切り線、HTML shape、ImageLayer、CBG 背景画像など全ての可視要素）が設定の幅比例でフルスクリーンにスケーリングされ、高解像度ディスプレイに対応
+  - 中核メカニズム：`SKCanvas` 描画入口で `canvas.Scale()` 変換を一度適用、以降の全描画操作が自動的に比例拡大
+  - `Config.FontSize`、`Config.WindowX`、`Config.DrawableWidth` を変更しない——エンジンは引き続き論理サイズでレイアウト
+  - 表示行を再配置しない——HTML ラウンドトリップバグを回避
+  - マウス座標は自動的に論理座標に変換
+  - 入力ボックス（WinForms RichTextBox）はフォントと高さを個別にスケーリング
+  - マルチモニター対応（`Screen.FromControl` で現在の画面を取得）
+  - `RenderWidth`/`RenderHeight` プロパティを導入し論理レンダリングサイズを表現、`EmueraConsole.OnPaint` 及び関連メソッドは `MainPicBox.Width`/`Height` の代わりにこのプロパティを使用
+  - Android 端への影響ゼロ（デスクトップの `MainWindow.cs` と `EmueraConsole.cs` をコンパイルしない）
+
+***
+
 ## [8.2.0] — デバッグウィンドウのカスタム関数評価修正
 
 ### エンジン層修正

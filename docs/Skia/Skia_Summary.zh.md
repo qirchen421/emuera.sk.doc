@@ -38,6 +38,7 @@
 | ![](../assets/images/IconSK.webp) `TRYCJUMPSTR` | 命令 | 带存在检查的JUMPSTR（带CATCH） | [CALLSTR](../Reference/CALLSTR.zh.md) |
 | ![](../assets/images/IconSK.webp) `EVAL` | 式中函数 | 将字符串表达式作为整数求值 | [EVAL](../Reference/EVAL.zh.md) |
 | ![](../assets/images/IconSK.webp) `EVALS` | 式中函数 | 将字符串表达式作为字符串求值 | [EVAL](../Reference/EVAL.zh.md) |
+| ![](../assets/images/IconSK.webp) `STRFORMCHECK` | 式中函数 | 判断格式化字符串是否可展开 | [STRFORM](../Reference/STRFORM.zh.md#strformcheck) |
 | ![](../assets/images/IconSK.webp) `BITSET` | 式中函数 | 设置指定位 | [BITARRAY](../Reference/BITARRAY.zh.md) |
 | ![](../assets/images/IconSK.webp) `BITGET` | 式中函数 | 获取指定位的值 | [BITARRAY](../Reference/BITARRAY.zh.md) |
 | ![](../assets/images/IconSK.webp) `BITTOGGLE` | 式中函数 | 翻转指定位 | [BITARRAY](../Reference/BITARRAY.zh.md) |

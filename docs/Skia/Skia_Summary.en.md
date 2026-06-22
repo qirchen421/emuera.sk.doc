@@ -38,6 +38,7 @@
 | ![](../assets/images/IconSK.webp) `TRYCJUMPSTR` | Command | JUMPSTR with existence check (with CATCH) | [CALLSTR](../Reference/CALLSTR.en.md) |
 | ![](../assets/images/IconSK.webp) `EVAL` | Expression | Evaluate string expression as integer | [EVAL](../Reference/EVAL.en.md) |
 | ![](../assets/images/IconSK.webp) `EVALS` | Expression | Evaluate string expression as string | [EVAL](../Reference/EVAL.en.md) |
+| ![](../assets/images/IconSK.webp) `STRFORMCHECK` | Expression function | Check if formatted string is expandable | [STRFORM](../Reference/STRFORM.en.md#strformcheck) |
 | ![](../assets/images/IconSK.webp) `BITSET` | Expression | Set specified bit | [BITARRAY](../Reference/BITARRAY.en.md) |
 | ![](../assets/images/IconSK.webp) `BITGET` | Expression | Get value of specified bit | [BITARRAY](../Reference/BITARRAY.en.md) |
 | ![](../assets/images/IconSK.webp) `BITTOGGLE` | Expression | Toggle specified bit | [BITARRAY](../Reference/BITARRAY.en.md) |
@@ -524,6 +525,17 @@
     FONTSTYLE 12
     PRINTL Underline + Strikethrough
     ```
+
+### ![](../assets/images/IconSK.webp)`HTML_PRINT` `<font>` tag `valign` attribute
+!!! summary ""
+
+    Adds `valign` attribute to the `<font>` tag, controlling vertical alignment of text with different font sizes on the same line.
+
+    - `valign='top'` (default): text top-aligned
+    - `valign='middle'`: text vertically centered
+    - `valign='bottom'`: text bottom-aligned
+    - Nested `<font>` tags inherit outer `valign` setting
+    - See [HTML_PRINT](../Emuera/HTML_PRINT.en.md#font) for details
 
 ### ![](../assets/images/IconSK.webp)Image Flip Logic (DotNet Sync)
 !!! summary ""

@@ -38,6 +38,7 @@
 | ![](../assets/images/IconSK.webp) `TRYCJUMPSTR` | 命令 | 存在チェック付きJUMPSTR（CATCH付き） | [CALLSTR](../Reference/CALLSTR.md) |
 | ![](../assets/images/IconSK.webp) `EVAL` | 式中関数 | 文字列式を整数として評価 | [EVAL](../Reference/EVAL.md) |
 | ![](../assets/images/IconSK.webp) `EVALS` | 式中関数 | 文字列式を文字列として評価 | [EVAL](../Reference/EVAL.md) |
+| ![](../assets/images/IconSK.webp) `STRFORMCHECK` | 式中関数 | 書式付文字列の展開可能性を判定 | [STRFORM](../Reference/STRFORM.md#strformcheck) |
 | ![](../assets/images/IconSK.webp) `BITSET` | 式中関数 | 指定ビットを設定 | [BITARRAY](../Reference/BITARRAY.md) |
 | ![](../assets/images/IconSK.webp) `BITGET` | 式中関数 | 指定ビットの値を取得 | [BITARRAY](../Reference/BITARRAY.md) |
 | ![](../assets/images/IconSK.webp) `BITTOGGLE` | 式中関数 | 指定ビットを反転 | [BITARRAY](../Reference/BITARRAY.md) |
@@ -524,6 +525,17 @@
     FONTSTYLE 12
     PRINTL 下線+取り消し線
     ```
+
+### ![](../assets/images/IconSK.webp)`HTML_PRINT`の`<font>`タグ`valign`属性
+!!! summary ""
+
+    `<font>`タグに`valign`属性を追加し、行内の異なるフォントサイズのテキストの垂直位置を制御します。
+
+    - `valign='top'`（デフォルト）：テキストを上揃え
+    - `valign='middle'`：テキストを垂直中央揃え
+    - `valign='bottom'`：テキストを下揃え
+    - ネスト時に外側の`valign`設定を継承
+    - 詳細は [HTML_PRINT](../Emuera/HTML_PRINT.md#font) を参照
 
 ### ![](../assets/images/IconSK.webp)画像反転ロジック（DotNet同期）
 !!! summary ""

@@ -4,6 +4,40 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [9.1.0] — STRFORMCHECK 函数 + HTML_PRINT font valign 扩展
+
+### Added
+
+- **STRFORMCHECK 函数**：接受字符串参数，检查其能否作为 STRFORM 展开；可展开返回 1，不可展开返回 0
+  - 解析失败（语法错误）返回 0
+  - 运行时求值失败（不存在的变量等）返回 0
+  - 与 STRFORM 共享同一解析器，确保语义一致性
+- **HTML_PRINT `<font>` valign 属性**：为 `<font>` 标签添加 `valign` 属性（`top`/`middle`/`bottom`），控制同一行内不同字体大小文本的垂直对齐方式
+  - `valign='top'`（默认）：文本顶部对齐，与现有行为一致
+  - `valign='middle'`：文本垂直居中对齐
+  - `valign='bottom'`：文本底部对齐
+  - 无效值抛出 `CanNotInterpretAttribute` 错误
+  - 嵌套的 `<font>` 标签继承外层的 `valign` 设置
+  - 桌面端与 SkiaX Xamarin 端实现同步
+
+***
+
+## [9.0.0] — F11 全屏比例缩放
+
+### Added
+
+- **F11 全屏比例缩放**：按 F11 时，游戏窗口内容（字体、图片、分割线、HTML shape、ImageLayer、CBG 背景图等所有可见元素）按配置中的宽度比例缩放到全屏，适配高分辨率显示屏
+  - 核心机制：在 `SKCanvas` 绘制入口处应用一次 `canvas.Scale()` 变换，所有后续绘制操作自动按比例放大
+  - 不修改 `Config.FontSize`、`Config.WindowX`、`Config.DrawableWidth`——引擎继续以逻辑尺寸布局
+  - 不重排显示行——避免 HTML 往返 bug
+  - 鼠标坐标自动转换为逻辑坐标
+  - 输入框（WinForms RichTextBox）单独缩放字体和高度
+  - 支持多显示器（`Screen.FromControl` 获取当前屏幕）
+  - 引入 `RenderWidth`/`RenderHeight` 属性表示逻辑渲染尺寸，`EmueraConsole.OnPaint` 及相关方法使用此属性替代 `MainPicBox.Width`/`Height`
+  - 安卓端零影响（不编译桌面 `MainWindow.cs` 和 `EmueraConsole.cs`）
+
+***
+
 ## [8.2.0] — 调试窗口自定义函数求值修复
 
 ### 引擎层修复
