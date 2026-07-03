@@ -100,7 +100,8 @@
 | ![](../assets/images/IconSK.webp) `TINPUTNF` | 命令 | TINPUT の NF 変種、強制スクロールなし | [TINPUTNF](../Reference/TINPUTNF.md) |
 | ![](../assets/images/IconSK.webp) `TINPUTSNF` | 命令 | TINPUTS の NF 変種、強制スクロールなし | [TINPUTSNF](../Reference/TINPUTNF.md) |
 | ![](../assets/images/IconSK.webp) `TONEINPUTNF` | 命令 | TONEINPUT の NF 変種、強制スクロールなし | [TONEINPUTNF](../Reference/TONEINPUTNF.md) |
-| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS の NF 変種、強制スクロールなし | [TONEINPUTSNF](../Reference/TONEINPUTNF.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS の NF 変種、強制スクロールなし | [TONEINPUTSNF](../Reference/TONEINPUTSNF.md) |
+| ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | 式中関数 | 次回入力待機時に自動送信する文字列をキュー | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.md) |
 
 ---
 

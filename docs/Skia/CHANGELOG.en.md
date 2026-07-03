@@ -4,6 +4,20 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [10.0.0] — SEQUENCEINPUT Function
+
+### Added
+
+- **SEQUENCEINPUT function**: Takes a string argument and automatically submits it as user input at the next input wait
+  - After calling `SEQUENCEINPUT("input content")`, when the engine next enters WaitInput state, it calls `PressEnterKey` to process the queued string. Same behavior as textbox input and pressing Enter
+  - `\n` in the string splits it into multiple segments, each segment is sent to a separate ERB WaitInput
+  - `\e` in the string is recognized as MesSkip (skip waiting)
+  - Return value is always `0`
+  - Works with both `WaitInput` and `WaitInputNoFocus` (NF suffix commands)
+  - Desktop version is implemented in `EmueraConsole.cs`, SkiaX Xamarin version is ported to `Platform/GameView/EmueraConsole.cs`
+
+***
+
 ## [9.1.0] — STRFORMCHECK Function + HTML_PRINT font valign Extension
 
 ### Added

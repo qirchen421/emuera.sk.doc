@@ -4,6 +4,20 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [10.0.0] — SEQUENCEINPUT 函数
+
+### Added
+
+- **SEQUENCEINPUT 函数**：接受字符串参数，在下一次输入等待时自动作为用户输入提交
+  - 调用 `SEQUENCEINPUT("输入内容")` 后，下一次进入 WaitInput 状态时，引擎调用 `PressEnterKey` 处理队列中的字符串。行为与文本框输入并按回车键一致
+  - 字符串中的 `\n` 会被拆分为多段，每段分别送入一个 ERB WaitInput
+  - 字符串中的 `\e` 会被识别为 MesSkip（跳过等待）
+  - 返回值始终为 `0`
+  - 同时作用于 `WaitInput` 和 `WaitInputNoFocus`（NF 后缀指令）
+  - 桌面端实现于 `EmueraConsole.cs`，SkiaX Xamarin 端移植到 `Platform/GameView/EmueraConsole.cs`
+
+***
+
 ## [9.1.0] — STRFORMCHECK 函数 + HTML_PRINT font valign 扩展
 
 ### Added
