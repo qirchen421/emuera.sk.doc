@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [10.1.0] — 入力マクロスイッチ
+
+### Added
+
+- **DISABLE_INPUT_MACRO 関数**：全入力（textbox + SEQUENCEINPUT）のマクロ解析を無効化する
+  - 呼び出し後、入力はそのまま1段として渡され、`(...)` 反復マクロを解析しない
+  - `\n` による分割と `\e` MesSkip 処理も行わない
+  - 戻り値は常に `0`
+  - デスクトップ版は `Emuera/UI/Game/EmueraConsole.cs` に実装、SkiaX Xamarin 版は `Emuera.Xamarin/Platform/GameView/EmueraConsole.cs` に実装
+- **ENABLE_INPUT_MACRO 関数**：入力マクロ解析を復元する（デフォルト動作）
+  - 本来の PressEnterKey 動作と一致
+  - 戻り値は常に `0`
+
+### Changed
+
+- **バージョン署名**：`Skiav10` → `Skiav10.1`（`1824+v24+EMv18+EEv56+Skiav10.1`）
+
+***
+
 ## [10.0.0] — SEQUENCEINPUT 関数
 
 ### Added
@@ -14,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 文字列中の `\e` は MesSkip（待機スキップ）として認識される
   - 戻り値は常に `0`
   - `WaitInput` と `WaitInputNoFocus`（NF接尾辞命令）の両方で動作
-  - デスクトップ版は `EmueraConsole.cs` に実装、SkiaX Xamarin 版は `Platform/GameView/EmueraConsole.cs` に移植
+  - デスクトップ版は `Emuera/UI/Game/EmueraConsole.cs` に実装、SkiaX Xamarin 版は `Emuera.Xamarin/Platform/GameView/EmueraConsole.cs` に実装
 
 ***
 

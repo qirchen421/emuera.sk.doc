@@ -102,6 +102,8 @@
 | ![](../assets/images/IconSK.webp) `TONEINPUTNF` | 命令 | TONEINPUT の NF 変種、強制スクロールなし | [TONEINPUTNF](../Reference/TONEINPUTNF.md) |
 | ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS の NF 変種、強制スクロールなし | [TONEINPUTSNF](../Reference/TONEINPUTSNF.md) |
 | ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | 式中関数 | 次回入力待機時に自動送信する文字列をキュー | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.md) |
+| ![](../assets/images/IconSK.webp) `DISABLE_INPUT_MACRO` | 式中関数 | 全入力のマクロ解析を無効化 | [DISABLE_INPUT_MACRO](../Reference/DISABLE_INPUT_MACRO.md) |
+| ![](../assets/images/IconSK.webp) `ENABLE_INPUT_MACRO` | 式中関数 | 入力マクロ解析を復元（デフォルト動作） | [ENABLE_INPUT_MACRO](../Reference/ENABLE_INPUT_MACRO.md) |
 
 ---
 

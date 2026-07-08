@@ -347,6 +347,8 @@ For detailed explanations and usage examples of each category, see the correspon
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.en.md)                  | (`string`, `int`, `int`)                  | `string`         |
 | ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.en.md)         | none                                      | none             |
 | ![](../assets/images/IconSK.webp)[`SEQUENCEINPUT`](./SEQUENCEINPUT.en.md) | `string`                                  | `integer`        |
+| ![](../assets/images/IconSK.webp)[`DISABLE_INPUT_MACRO`](./DISABLE_INPUT_MACRO.en.md) | none                                      | `integer`        |
+| ![](../assets/images/IconSK.webp)[`ENABLE_INPUT_MACRO`](./ENABLE_INPUT_MACRO.en.md) | none                                      | `integer`        |
 
 ### Loop/branch syntax { #flow-control }
 

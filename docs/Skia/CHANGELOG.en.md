@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [10.1.0] — Input Macro Switch
+
+### Added
+
+- **DISABLE_INPUT_MACRO function**: Disables macro parsing for all input (textbox + SEQUENCEINPUT)
+  - After calling, input is passed literally as a single segment, without parsing `(...)` repeat macros
+  - No `\n` splitting and no `\e` MesSkip processing
+  - Return value is always `0`
+  - Desktop version implemented in `Emuera/UI/Game/EmueraConsole.cs`; SkiaX Xamarin version implemented in `Emuera.Xamarin/Platform/GameView/EmueraConsole.cs`
+- **ENABLE_INPUT_MACRO function**: Restores input macro parsing (default behavior)
+  - Matches the original PressEnterKey behavior
+  - Return value is always `0`
+
+### Changed
+
+- **Version signature**: `Skiav10` → `Skiav10.1` (`1824+v24+EMv18+EEv56+Skiav10.1`)
+
+***
+
 ## [10.0.0] — SEQUENCEINPUT Function
 
 ### Added
@@ -14,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - `\e` in the string is recognized as MesSkip (skip waiting)
   - Return value is always `0`
   - Works with both `WaitInput` and `WaitInputNoFocus` (NF suffix commands)
-  - Desktop version is implemented in `EmueraConsole.cs`, SkiaX Xamarin version is ported to `Platform/GameView/EmueraConsole.cs`
+  - Desktop version implemented in `Emuera/UI/Game/EmueraConsole.cs`; SkiaX Xamarin version implemented in `Emuera.Xamarin/Platform/GameView/EmueraConsole.cs`
 
 ***
 

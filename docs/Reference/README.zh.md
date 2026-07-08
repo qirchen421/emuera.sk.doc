@@ -347,6 +347,8 @@
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.zh.md)                  | (`string`, `int`, `int`)                  | `string`         |
 | ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.zh.md)         | 无                                      | 无               |
 | ![](../assets/images/IconSK.webp)[`SEQUENCEINPUT`](./SEQUENCEINPUT.zh.md) | `string`                                  | `integer`        |
+| ![](../assets/images/IconSK.webp)[`DISABLE_INPUT_MACRO`](./DISABLE_INPUT_MACRO.zh.md) | 无                                      | `integer`        |
+| ![](../assets/images/IconSK.webp)[`ENABLE_INPUT_MACRO`](./ENABLE_INPUT_MACRO.zh.md) | 无                                      | `integer`        |
 
 ### 循环・分支语法 { #flow-control }
 

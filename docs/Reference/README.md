@@ -347,6 +347,8 @@
 | ![](../assets/images/IconEE.webp)[`BINPUTS`](./BINPUT.md)                  | (`string`, `int`, `int`)                  | `string`         |
 | ![](../assets/images/IconEE.webp)[`BREAKBUTTON`](./BREAKBUTTON.md)         | なし                                      | なし             |
 | ![](../assets/images/IconSK.webp)[`SEQUENCEINPUT`](./SEQUENCEINPUT.md) | `string`                                  | `integer`        |
+| ![](../assets/images/IconSK.webp)[`DISABLE_INPUT_MACRO`](./DISABLE_INPUT_MACRO.md) | なし                                      | `integer`        |
+| ![](../assets/images/IconSK.webp)[`ENABLE_INPUT_MACRO`](./ENABLE_INPUT_MACRO.md) | なし                                      | `integer`        |
 
 ### ループ・分岐構文 { #flow-control }
 
