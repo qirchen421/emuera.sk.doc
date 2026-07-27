@@ -57,7 +57,7 @@
 ### `<font>` — 字体指定
 
 ```html
-<font face='～' color='～' bcolor='～' valign='～'>文本</font>
+<font face='～' color='～' bcolor='～' size='～' valign='～' render='～' edging='～' hinting='～'>文本</font>
 ```
 
 | 属性 | 说明 |
@@ -65,7 +65,11 @@
 | `face` | 字体名。空字符串使用配置中指定的字体 |
 | `color` | 文本颜色（`#FF0080` / `red`） |
 | `bcolor` | 按钮选中时的颜色 |
+| `size` ![](../assets/images/IconSK.webp) | 字号。可用像素值（如 `12px`）或纯数字（解释为像素）。必须大于 0 |
 | `valign` ![](../assets/images/IconSK.webp) | 行内垂直位置（`top` / `middle` / `bottom`）。默认为 `top`。嵌套时继承外层设置 |
+| `render` ![](../assets/images/IconSK.webp) | 渲染模式（`gdi` / `skia`） |
+| `edging` ![](../assets/images/IconSK.webp) | 字体边缘处理方式（`alias` / `antialias` / `subpixel`） |
+| `hinting` ![](../assets/images/IconSK.webp) | 字体 hinting 方式（`none` / `slight` / `normal` / `full`） |
 
 可嵌套。颜色名遵循 .NET 的 `Color` 结构体定义（不可指定 `Transparent`）。
 

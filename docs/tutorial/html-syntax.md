@@ -57,7 +57,7 @@
 ### `<font>` — フォント指定
 
 ```html
-<font face='～' color='～' bcolor='～' valign='～'>テキスト</font>
+<font face='～' color='～' bcolor='～' size='～' valign='～' render='～' edging='～' hinting='～'>テキスト</font>
 ```
 
 | 属性 | 説明 |
@@ -65,7 +65,11 @@
 | `face` | フォント名。空文字列でコンフィグ指定フォント |
 | `color` | テキスト色（`#FF0080` / `red`） |
 | `bcolor` | ボタン選択中の色 |
+| `size` ![](../assets/images/IconSK.webp) | フォントサイズ。`12px` のようなピクセル指定、または数値（ピクセルとして解釈）。0 以下不可 |
 | `valign` ![](../assets/images/IconSK.webp) | 行内垂直位置（`top` / `middle` / `bottom`）。デフォルトは `top`。ネスト時に外側の設定を継承 |
+| `render` ![](../assets/images/IconSK.webp) | 描画モード（`gdi` / `skia`） |
+| `edging` ![](../assets/images/IconSK.webp) | フォントエッジ処理（`alias` / `antialias` / `subpixel`） |
+| `hinting` ![](../assets/images/IconSK.webp) | フォントヒンティング（`none` / `slight` / `normal` / `full`） |
 
 入れ子可能。色名は .NET の `Color` 構造体に準じます（`Transparent` 不可）。
 

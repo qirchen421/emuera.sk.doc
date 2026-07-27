@@ -57,7 +57,7 @@ A display-line break. Multiple `<br>` tags still count as one line for `CLEARLIN
 ### `<font>` — Font Specification
 
 ```html
-<font face='～' color='～' bcolor='～' valign='～'>text</font>
+<font face='～' color='～' bcolor='～' size='～' valign='～' render='～' edging='～' hinting='～'>text</font>
 ```
 
 | Attribute | Description |
@@ -65,7 +65,11 @@ A display-line break. Multiple `<br>` tags still count as one line for `CLEARLIN
 | `face` | Font name. Empty string uses the configured font |
 | `color` | Text color (`#FF0080` / `red`) |
 | `bcolor` | Button selection color |
+| `size` ![](../assets/images/IconSK.webp) | Font size. Pixel value (e.g. `12px`) or plain number (interpreted as pixels). Must be greater than 0 |
 | `valign` ![](../assets/images/IconSK.webp) | Inline vertical alignment (`top` / `middle` / `bottom`). Default is `top`. Inherited from outer tag when nested |
+| `render` ![](../assets/images/IconSK.webp) | Rendering mode (`gdi` / `skia`) |
+| `edging` ![](../assets/images/IconSK.webp) | Font edging mode (`alias` / `antialias` / `subpixel`) |
+| `hinting` ![](../assets/images/IconSK.webp) | Font hinting mode (`none` / `slight` / `normal` / `full`) |
 
 Nestable. Color names follow .NET's `Color` struct definitions (`Transparent` not allowed).
 
