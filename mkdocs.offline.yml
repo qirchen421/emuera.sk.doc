@@ -1,0 +1,5 @@
+# 离线版构建配置（不依赖任何外部 CDN）
+INHERIT: mkdocs.yml
+
+theme:
+  font: false

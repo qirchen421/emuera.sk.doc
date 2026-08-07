@@ -50,7 +50,7 @@ hide:
 ## ライセンス
 > 本ドキュメントは、[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)の利用範囲でご利用ください。
 
-[![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
+[![CC BY-NC 4.0](assets/images/cc-by-nc-4.0.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
 
 ## ダウンロード
 [**最新版:Emuera_skiaV9_x64**](assets/files/Emuera_skiaV9_x64.zip)

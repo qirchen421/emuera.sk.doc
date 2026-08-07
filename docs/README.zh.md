@@ -53,7 +53,7 @@ hide:
 
 > 本文档采用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可证授权。
 
-[![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
+[![CC BY-NC 4.0](assets/images/cc-by-nc-4.0.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
 
 ## 下载
 
