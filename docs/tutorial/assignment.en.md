@@ -85,7 +85,7 @@ SCORE = 10 / 3.0
 
 String variables have two assignment methods with completely different behaviors:
 
-### FORM Syntax Assignment (`=`)
+### FORM Syntax Assignment (=) { #string-form-assignment }
 
 When assigning with `=`, the right side is parsed as FORM syntax — `{variable}` is interpolated and `%variable%` is substituted:
 
@@ -96,6 +96,8 @@ STR:1 = Money: {MONEY}G            ; → "Money: 500G"
 STR:2 = %NAME:0%'s Adventure       ; → "Elina's Adventure"
 STR:3 = NAME:0                     ; → "NAME:0" (no % means literal text!)
 STR:4 = CSVNAME(0)                 ; → "CSVNAME(0)" (function is NOT called, stored as-is)
+STR:5 = "Elina"                    ; → value = "Elina" (quotes are literal characters, kept as-is!)
+STR:6 = ""                         ; → value = "" (two literal quotes, NOT an empty string!)
 ```
 
 This is eramaker's original behavior. In eramaker, `STR:0 = %RESULTS%` assigns the contents of `RESULTS` to `STR:0`.
@@ -110,6 +112,8 @@ STR:1 '= "Hello %NAME:0%"          ; → "Hello %NAME:0%" (no interpolation! per
 STR:2 '= NAME:0 + "'s Adventure"   ; → "Elina's Adventure" (string concatenation)
 STR:3 '= TSTR:0 + "Continue"       ; → variable value + "Continue"
 STR:4 '= CSVNAME(0)                ; → name of character 0 (function called via expression evaluation)
+STR:5 '= "Elina"                   ; → value = Elina (quotes are delimiters, not stored)
+STR:6 '= ""                        ; → value = empty string (correct way to clear with `'= `)
 ```
 
 ### Comparison of the Two Methods
@@ -303,13 +307,37 @@ L_FLOAT = 10              ; ✅ Integer automatically converts to float
 
 ---
 
-## Common Pitfalls
+## #DIMS Initialization vs. Assignment Statement Semantics { #dims-init-vs-assignment }
+
+The `=` in a `#DIMS` declaration initialization and the `=` in an assignment statement have different semantics:
+
+| Position | Syntax | Parsing | FORM interpolation |
+|----------|--------|---------|--------------------|
+| `#DIMS` initialization | `#DIMS S = "hello"` | **Expression evaluation** | ❌ No |
+| Assignment statement | `S = hello %NAME%` | **FORM syntax** | ✅ Yes |
+
+```erb
+@MY_FUNC
+#DIMS L_STR = "Hello %NAME%"     ; → "Hello %NAME%" (literal text, no interpolation!)
+    L_STR = Hello %NAME%         ; → "Hello Elina" (FORM interpolation)
+    L_STR '= "Hello %NAME%"      ; → "Hello %NAME%" (expression, no interpolation)
+RETURN
+```
+
+This is because `#DIMS` initialization goes through `ExpressionParser.ReduceArguments` (expression syntax), while assignment `=` goes through `AnalyseFormattedString` (FORM syntax). Also, there is no `'= ` syntax for `#DIMS` — initialization only supports `=`, and the value must be a constant expression.
+
+> Source reference: `FORM_STR_ANY` (assignment `=`) vs `ReduceArguments` (#DIMS initialization) in `ArgumentBuilder.cs`.
+
+---
+
+## Common Pitfalls { #common-pitfalls }
 
 | Pitfall | Wrong | Correct | Reason |
 |---------|-------|---------|--------|
 | String without quotes | `S '= hello` | `S '= "hello"` | Without quotes, treated as variable name |
 | Accidental interpolation in FORM syntax | `S = 100%` | `S = 100\%` or `S '= "100%"` | `%` is a variable substitution marker in FORM syntax |
 | Batch assignment with `=` | `STR:0 = "a","b"` | `STR:0 '= "a","b"` | `=` treats commas as part of FORM text |
+| `=` with quoted string | `S = "text"` / `S = ""` | `S '= "text"` / `S '= ""` | In FORM syntax `"` is a literal character: `S = "text"` stores `"text"`, `S = ""` stores `""` (not an empty string) |
 | `==` misused as assignment | `A == 10` | `A = 10` | `==` is a comparison operator, use `=` for assignment |
 | Compound batch assignment | `A:0 += 1,2,3` | `A:0 = 1,2,3` | Compound assignment does not support batch |
 | Assignment target not a variable | `A + B = 10` | Not allowed | Left side of assignment must be a variable |
