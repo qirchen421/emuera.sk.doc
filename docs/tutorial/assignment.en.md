@@ -94,6 +94,8 @@ NAME:0 = Elina
 STR:0 = Hello, %NAME:0%!          ; → "Hello, Elina!"
 STR:1 = Money: {MONEY}G            ; → "Money: 500G"
 STR:2 = %NAME:0%'s Adventure       ; → "Elina's Adventure"
+STR:3 = NAME:0                     ; → "NAME:0" (no % means literal text!)
+STR:4 = CSVNAME(0)                 ; → "CSVNAME(0)" (function is NOT called, stored as-is)
 ```
 
 This is eramaker's original behavior. In eramaker, `STR:0 = %RESULTS%` assigns the contents of `RESULTS` to `STR:0`.
@@ -107,6 +109,7 @@ STR:0 '= "Hello"                   ; → "Hello" (literal)
 STR:1 '= "Hello %NAME:0%"          ; → "Hello %NAME:0%" (no interpolation! percent signs are literal text)
 STR:2 '= NAME:0 + "'s Adventure"   ; → "Elina's Adventure" (string concatenation)
 STR:3 '= TSTR:0 + "Continue"       ; → variable value + "Continue"
+STR:4 '= CSVNAME(0)                ; → name of character 0 (function called via expression evaluation)
 ```
 
 ### Comparison of the Two Methods
