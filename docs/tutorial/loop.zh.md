@@ -274,3 +274,5 @@ PRINTFORML 循环结束后 COUNT = {COUNT}    ; → 3
 | 赋值语句 | [赋值语句](assignment.zh.md) |
 | REPEAT 完整 API | [REPEAT ~ REND](../Reference/REPEAT.zh.md) |
 | FOR 完整 API | [FOR ~ NEXT](../Reference/FOR.zh.md) |
+| 语法速查（知识库） | [ERABASIC 语法速查](file:///d:/emuera/shared-trae/knowledge/erabasic/syntax-quickref.md) |
+| 循环结构（知识库） | [loop-control.md](file:///d:/emuera/shared-trae/knowledge/erabasic/loop-control.md) |

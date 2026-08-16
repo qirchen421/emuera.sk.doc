@@ -1,10 +1,200 @@
 # Values, Types & Variables
 
-!!! warning "This page is still under construction"
+---
 
-    Explains ERABASIC's three type systems (integer, string, float), variable naming rules, and type conversion functions (TO series).
+## The Three Type Systems
 
-    For details on type conversion functions (TOSTR / TOSTRF / TOINT / TOFLOAT), see [Reference](../Reference/TOSTR.en.md).
+ERABASIC has three basic data types, each with its own declaration keyword, argument variable, and default value:
+
+| Type | Declaration keyword | Argument variable | Literal example | Default value |
+|------|-----------|---------|------------|--------|
+| Integer | `#DIM` | `ARG` | `42`, `0x2A`, `1p5` | `0` |
+| String | `#DIMS` | `ARGS` | `"hello"`, `@"form"` | `""` |
+| Float | `#DIMF` | `ARGF` | `3.14`, `-1.5e2` | `0.0` |
+
+!!! tip "Float is a Skia-variant addition"
+
+    The float type (`#DIMF` / `ARGF` / `RESULTF`) is a type extension added in the Skia variant; the original Emuera does not support it.
+    This tutorial uses Emuera as the baseline, and Float-related content is specially noted.
+
+The three types are **not automatically converted** (except the safe Int→Float promotion). This means you cannot assign a string to an integer variable, nor an integer to a string variable — you must use an explicit conversion function.
+
+---
+
+## Integer Type
+
+Integer is the default type in ERABASIC. Internally the engine uses a 64-bit signed integer (`Int64`/`long`), with a value range of `-9223372036854775808` ~ `9223372036854775807`.
+
+### Integer Literals
+
+ERABASIC supports several integer literal notations:
+
+| Notation | Format | Example | Value |
+|--------|------|------|----|
+| Decimal | digit sequence | `42` | 42 |
+| Hexadecimal | `0x` prefix | `0x2A` | 42 |
+| Binary | `0b` prefix | `0b101010` | 42 |
+| Power of two | `p` suffix | `1p5` | 32 (1×2⁵) |
+| Power of ten | `e` suffix | `13e3` | 13000 (13×10³) |
+
+```erb
+#DIM L_VAL
+L_VAL = 42            ; decimal
+L_VAL = 0x2A          ; hexadecimal
+L_VAL = 0b101010      ; binary
+L_VAL = 1p5           ; 1 × 2⁵ = 32
+L_VAL = 13e3          ; 13 × 10³ = 13000
+L_VAL = -0xFF         ; -255
+L_VAL = 2p10          ; 2 × 2¹⁰ = 2048
+```
+
+!!! warning "`e` and `p` are part of the integer literal, not floats"
+
+    `13e3` is the integer 13000, not the float 13000.0. `p` denotes a power of two, `e` a power of ten.
+    These suffixes can only appear inside integer literals, not in variable names.
+
+    Source reference: `LexicalAnalyzer.ReadInt64()` parses `p`/`P` as the binary exponent and `e`/`E` as the decimal exponent; the result is still a `long`.
+
+### Integer Arithmetic
+
+Integer arithmetic follows standard precedence. Division is **integer division** (truncating the fractional part):
+
+```erb
+#DIM L_RESULT
+L_RESULT = 10 / 3        ; → 3 (truncated, not 3.333...)
+L_RESULT = -7 / 2        ; → -3 (truncated toward zero)
+L_RESULT = 10 % 3        ; → 1 (remainder)
+L_RESULT = 7 & 3         ; → 3 (bitwise AND)
+L_RESULT = 7 | 8         ; → 15 (bitwise OR)
+L_RESULT = 7 ^ 8         ; → 15 (bitwise XOR)
+L_RESULT = 1 << 4        ; → 16 (left shift)
+L_RESULT = 256 >> 4      ; → 16 (right shift)
+```
+
+!!! skia "Skia-variant overflow protection (SafeArithmetic)"
+
+    In the Skia variant, arithmetic operators (`+`, `-`, `*`, unary `-`) enable overflow protection. When a result exceeds the `long` range, a warning is emitted and the result is clamped to `Long.MaxValue` or `Long.MinValue` instead of silently wrapping around.
+
+    If you need wrap-around overflow behavior (e.g., for hash computation), use the [UNCHECKED series functions](../Reference/UNCHECKED.en.md):
+
+    ```erb
+    ; Normal addition: clamps + warns on overflow
+    ; 9223372036854775807 + 1 → Long.MaxValue
+
+    ; Wrap-around addition: wraps on overflow, no warning
+    ; UNCHECKED_ADD(9223372036854775807, 1) → -9223372036854775808
+    ```
+
+---
+
+## String Type
+
+The string type stores text data. String literals are wrapped in `""`.
+
+### String Literals
+
+```erb
+#DIMS L_NAME
+L_NAME '= "艾莉娜"          ; string literals must be wrapped in ""
+L_NAME '= "Hello World"     ; without "" it is treated as a variable name!
+L_NAME '= ""                ; empty string
+```
+
+!!! danger "String literals must be wrapped in double quotes"
+
+    ```erb
+    ; ❌ Wrong: without quotes it is treated as a variable name
+    L_NAME '= hello
+
+    ; ✅ Correct: quotes make it a string literal
+    L_NAME '= "hello"
+    ```
+
+### Two Ways to Assign Strings
+
+String variables have two assignment syntaxes with completely different behavior:
+
+```erb
+#DIMS L_STR
+
+; = goes through FORM syntax (supports variable interpolation)
+L_STR = 你好，%NAME:TARGET%！    ; %NAME:TARGET% is replaced with the character name
+L_STR = 金钱：{MONEY}元           ; {MONEY} is replaced with the money value
+
+; '= goes through expression syntax (no interpolation, supports concatenation)
+L_STR '= "你好"                   ; literal assignment
+L_STR '= NAME:TARGET + "的冒险"   ; string concatenation
+L_STR '= "Hello %NAME%"           ; the percent sign is literal text, not interpolated!
+```
+
+| | `=` (FORM syntax) | `'= ` (expression) |
+|------|:---:|:---:|
+| `{var}` interpolation | ✅ | ❌ |
+| `%var%` substitution | ✅ | ❌ |
+| string concatenation `+` | ❌ | ✅ |
+| string literal `""` | not required | **required** |
+
+> See [assignment statements](assignment.en.md) and [FORM syntax](form-syntax.en.md) for details.
+
+### String Operations
+
+Strings support comparison and concatenation:
+
+```erb
+; Concatenation (requires '= assignment)
+L_STR '= "你好" + "世界"        ; → "你好世界"
+L_STR '= L_STR + "！"           ; → "你好世界！"
+
+; Repetition
+L_STR '= "啊" * 3               ; → "啊啊啊"
+
+; Comparison
+IF L_STR == "你好"
+    PRINTL 匹配
+ENDIF
+IF L_STR != ""
+    PRINTL 非空
+ENDIF
+```
+
+---
+
+## Float Type (Skia variant addition)
+
+Float is a distinct `EraType` enum value and must be declared with `#DIMF`. Internally the engine uses `double` (64-bit double-precision float).
+
+### Float Literals
+
+```erb
+#DIMF L_FLOAT
+L_FLOAT = 3.14              ; decimal-point literal
+L_FLOAT = -1.5e2            ; scientific notation → -150.0
+L_FLOAT = 0.001             ; decimal
+L_FLOAT = 10 / 3.0          ; float division → 3.333...
+```
+
+!!! warning "Integer division vs float division"
+
+    ```erb
+    #DIMF L_F
+    L_F = 10 / 3         ; → 3.0 (integer division promoted to float afterward)
+    L_F = 10 / 3.0       ; → 3.333... (float division)
+    L_F = 10.0 / 3       ; → 3.333... (float division)
+    ```
+
+    The type of the assignment target variable does not affect how the right-hand expression is evaluated. `10 / 3` is always integer division and yields `3`;
+    float division is only triggered when one of the operands is a float value.
+
+### Float Arithmetic
+
+```erb
+#DIMF L_PI = 3.14159265
+#DIMF L_R = 5.0
+#DIMF L_AREA
+
+L_AREA = L_PI * L_R * L_R       ; circle area
+L_AREA = L_R * L_R * L_PI       ; equivalent form
+```
 
 ---
 

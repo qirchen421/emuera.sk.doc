@@ -100,7 +100,7 @@
 | ![](../assets/images/IconSK.webp) `TINPUTNF` | 命令 | TINPUT 的 NF 变体，不强制滚动 | [TINPUTNF](../Reference/TINPUTNF.zh.md) |
 | ![](../assets/images/IconSK.webp) `TINPUTSNF` | 命令 | TINPUTS 的 NF 变体，不强制滚动 | [TINPUTSNF](../Reference/TINPUTNF.zh.md) |
 | ![](../assets/images/IconSK.webp) `TONEINPUTNF` | 命令 | TONEINPUT 的 NF 变体，不强制滚动 | [TONEINPUTNF](../Reference/TONEINPUTNF.zh.md) |
-| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS 的 NF 变体，不强制滚动 | [TONEINPUTSNF](../Reference/TONEINPUTSNF.zh.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | 命令 | TONEINPUTS 的 NF 变体，不强制滚动 | [TONEINPUTSNF](../Reference/TONEINPUTNF.zh.md) |
 | ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | 式中函数 | 排队下次输入等待时自动提交的字符串 | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.zh.md) |
 | ![](../assets/images/IconSK.webp) `DISABLE_INPUT_MACRO` | 式中函数 | 关闭所有输入的宏解析 | [DISABLE_INPUT_MACRO](../Reference/DISABLE_INPUT_MACRO.zh.md) |
 | ![](../assets/images/IconSK.webp) `ENABLE_INPUT_MACRO` | 式中函数 | 恢复输入宏解析（默认行为） | [ENABLE_INPUT_MACRO](../Reference/ENABLE_INPUT_MACRO.zh.md) |

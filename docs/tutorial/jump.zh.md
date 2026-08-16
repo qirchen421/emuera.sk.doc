@@ -256,3 +256,5 @@ LOOP RESULT < 0
 | 条件分支 | [条件分支](condition.zh.md) |
 | 函数调用 | [函数与 CALL](call.zh.md) |
 | GOTO 完整 API | [GOTO](../Reference/GOTO.zh.md) |
+| 语法速查（知识库） | [ERABASIC 语法速查](file:///d:/emuera/shared-trae/knowledge/erabasic/syntax-quickref.md) |
+| 跳转与标签（知识库） | [jump-goto.md](file:///d:/emuera/shared-trae/knowledge/erabasic/jump-goto.md) |

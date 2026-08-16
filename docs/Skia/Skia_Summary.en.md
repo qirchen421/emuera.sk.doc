@@ -100,7 +100,7 @@
 | ![](../assets/images/IconSK.webp) `TINPUTNF` | Command | NF variant of TINPUT, no forced scroll | [TINPUTNF](../Reference/TINPUTNF.en.md) |
 | ![](../assets/images/IconSK.webp) `TINPUTSNF` | Command | NF variant of TINPUTS, no forced scroll | [TINPUTSNF](../Reference/TINPUTNF.en.md) |
 | ![](../assets/images/IconSK.webp) `TONEINPUTNF` | Command | NF variant of TONEINPUT, no forced scroll | [TONEINPUTNF](../Reference/TONEINPUTNF.en.md) |
-| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | Command | NF variant of TONEINPUTS, no forced scroll | [TONEINPUTSNF](../Reference/TONEINPUTSNF.en.md) |
+| ![](../assets/images/IconSK.webp) `TONEINPUTSNF` | Command | NF variant of TONEINPUTS, no forced scroll | [TONEINPUTSNF](../Reference/TONEINPUTNF.en.md) |
 | ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | Expression | Queue a string for auto-submission at next input wait | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.en.md) |
 | ![](../assets/images/IconSK.webp) `DISABLE_INPUT_MACRO` | Expression | Disable macro parsing for all input | [DISABLE_INPUT_MACRO](../Reference/DISABLE_INPUT_MACRO.en.md) |
 | ![](../assets/images/IconSK.webp) `ENABLE_INPUT_MACRO` | Expression | Restore input macro parsing (default behavior) | [ENABLE_INPUT_MACRO](../Reference/ENABLE_INPUT_MACRO.en.md) |

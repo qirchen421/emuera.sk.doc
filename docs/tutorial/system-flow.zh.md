@@ -398,3 +398,5 @@ THROW 执行
 | BEGIN 指令 API | [BEGIN](../Reference/BEGIN.zh.md) |
 | 角色变量系统 | [角色变量](../Emuera/variables.zh.md) |
 | 完整流程图 | [流程图](../Emuera/system_flow.zh.md) |
+| 语法速查（知识库） | [ERABASIC 语法速查](file:///d:/emuera/shared-trae/knowledge/erabasic/syntax-quickref.md) |
+| 引擎状态机（知识库） | [system-flow.md](file:///d:/emuera/shared-trae/knowledge/erabasic/system-flow.md) |
