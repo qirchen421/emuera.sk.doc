@@ -218,7 +218,7 @@ PRINTL Text after keypress
     ; Wrong: Using PRINT + WAIT to simulate inline waiting
     PRINT Please wait...
     WAIT
-    ; → Content before WAIT is not visible in the buffer; after keypress it flushes to screen and forces a newline
+    ; → Outputs "Please wait...", adds a newline, pauses for keypress (subsequent content goes to a new line, not appended to the same line)
 
     ; Correct: Using PRINTN for inline waiting
     PRINTN Please wait...
