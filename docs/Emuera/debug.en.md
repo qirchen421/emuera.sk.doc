@@ -72,6 +72,18 @@ The row will be deleted when the variable watch is updated.
 Targets added to the variable watch are saved when the debug window is closed and loaded when opened.  
 If you want to save/load at other times, use Save/Load from the File menu.
 
+Checking the `Lock` column's checkbox pins that row's value as the actual value: a built-in **200 ms timer** inside the debug window writes the pinned value back (only at safe moments when the game is not executing) — even if scripts change it, the variable is pulled back to the pinned value within a few cycles, letting you isolate variables during testing.  
+Targets that cannot be assigned (expressions, functions, constants, read-only variables) show an error at check time and are not locked.  
+Lock state is session-only and is not saved; unchecking stops the write-back and resumes live refreshing.  
+During game startup or before loading a save, values may not be valid yet — keep rows unlocked until values become valid, then lock.  
+
+Click, double-click, or press F2 on the `Target` cell to edit the expression.
+
+Clicking or double-clicking the `Value` cell lets you edit it; confirming executes the assignment `Target = input`.  
+Assignment uses the same execution path as the debug console and only works for assignable variables (variables, array elements, etc.).  
+For non-assignable targets such as expressions, functions, constants, or read-only variables, the error message is shown in the `Value` cell.  
+Like the debug console, assignment is not executed while the game is running.  
+
 You can use constants and expressions as `Target`, not just variables, but be careful when calling expression functions.  
 Variable watch actually calls that expression function each time it updates the value.  
 If the called expression function has side effects such as changing other variables, side effects will occur each time the variable watch is updated.

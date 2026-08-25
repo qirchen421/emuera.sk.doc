@@ -4,6 +4,65 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.0.0] — Debug Window: Variable Watch "Lock" and Direct Assignment
+
+### Added
+
+- **New `Lock` column in the Variable Watch**: checking it pins the variable's value — the value is automatically written back every 200 ms at safe moments, preventing scripts from changing it. Non-assignable targets (expressions, functions, constants, read-only variables) cannot be locked
+- **Direct assignment from the `Value` cell**: click to edit and confirm to assign, with the same semantics as the debug console
+- Lock state is session-only (not persisted)
+
+### Fixed
+
+- **Debug window UI layout**: fixed the bottom buttons overlapping the panel on high-DPI displays and clipped button text
+
+### Changed
+
+- Variable watch columns rearranged to `Lock / Target / Value`; default window width increased
+- **Version signature**: `Skiav11.2` → `Skiav12` (`1824+v24+EMv18+EEv56+Skiav12`)
+
+***
+
+## [11.1.0] — ToolTip Async Callback NRE Defense
+
+### Fixed — NullReference crash in OnPaint ToolTip async callback
+
+- **`context.Post` callback hardening** (`EmueraConsole.cs` OnPaint ToolTip block):
+  - `SynchronizationContext.Current` null check: skip ToolTip dispatch when `context` is `null`, avoiding the `context.Post` NullReference crash
+  - Window lifecycle check: the callback first checks `window == null || window.IsDisposed || window.MainPicBox == null || window.MainPicBox.IsDisposed` and bails out during disposal/control-rebuild gaps
+  - `Cursor.Current` null check: after the mouse leaves the window, `Cursor.Current` is `null` and the old code accessed `Cursor.Current.Size.Height` directly, throwing `NullReferenceException`; now fetched safely with a 32px fallback height
+  - **`Screen.FromPoint` argument fix**: the old code passed `mousePos` (window-local coordinates), but `Screen.FromPoint` requires screen absolute coordinates; changed to `absoluteP` (`Cursor.Position`), fixing ToolTip positioning on multi-monitor/scaled setups
+- **Affected scenario**: during the tooltip's delayed display (`Task.Delay(InitialDelay)`), moving the mouse away, closing the window, or triggering a repaint frequently crashed; dense button scenes (e.g. banquet events) reproduced it most often
+
+### Changed
+
+- **Version signature**: `Skiav11` → `Skiav11.1` (`1824+v24+EMv18+EEv56+Skiav11.1`)
+
+***
+
+## [11.0.0] — GC Config Revert + Gated Memory Diagnostics
+
+### Changed — GC config revert
+
+- **ServerGC → WorkstationGC**: reverted `<ServerGarbageCollection>true</ServerGarbageCollection>` introduced by the [3.0.0] upstream sync (commit `4432ee9d`)
+  - Desktop GUI apps (single window, single-thread interaction) fit WorkstationGC: lower memory usage, timely return to the OS
+  - Text games are insensitive to a single GC pause; WorkstationGC collects more often but with shorter pauses
+
+### Added — memory diagnostic tool (gated)
+
+- **MemoryDiagnostic tool gated behind config**: new setting `MemoryDiagnosticEnabled` (default `false`); while off, the engine does not write `memory_diagnostic.log`
+  - Temporary diagnostic utility: on shutdown it writes a memory snapshot (process memory / GC heap breakdown / compiled scripts / VariableData / FontFactory caches / SQLite connections, etc.) to the game root directory
+  - To diagnose memory issues later, add `MEMORYDIAGNOSTICLOG:YES` to `emuera.config`
+
+### Added — diagnostic section extensions
+
+- **GC heap breakdown**: HeapSizeBytes / FragmentedBytes / Gen0-2 heap sizes / LOH size from `GC.GetGCMemoryInfo()`
+- **Thread statistics**: total thread count and Running / Wait distribution
+- **FontFactory caches**: entry counts of fontDic / fallbackTypefaceCache / fallbackTypefaceCodepointCache / gdiFontDic
+- **Display-line cache**: displayLineList current line count / MaxLog
+
+***
+
 ## [10.1.0] — Input Macro Switch
 
 ### Added

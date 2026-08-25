@@ -4,6 +4,65 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.0.0] — 调试窗口：变量监视「锁定」与直接赋值
+
+### Added
+
+- **变量监视新增「锁定」列**：勾选后固定该变量的值，并每 200ms 在安全时机自动写回，防止其被脚本改动；表达式、函数、常量、只读变量等不可赋值对象无法锁定
+- **「值」单元格可直接赋值**：点击编辑并确认即可赋值，与调试控制台语义一致
+- 锁定状态为会话内状态，不持久化
+
+### Fixed
+
+- **调试窗口 UI 布局**：修复高 DPI 下底部按钮与面板重叠、按钮文字被裁切的问题
+
+### Changed
+
+- 变量监视改为「锁定 / 对象 / 值」三列布局，默认窗口宽度加大
+- **版本签名**：`Skiav11.2` → `Skiav12`（`1824+v24+EMv18+EEv56+Skiav12`）
+
+***
+
+## [11.1.0] — ToolTip 异步回调 NRE 防御
+
+### Fixed — OnPaint ToolTip 异步回调空引用崩溃
+
+- **`context.Post` 回调空引用加固**（`EmueraConsole.cs` OnPaint ToolTip 块）：
+  - `SynchronizationContext.Current` 判空：`context` 为 `null` 时跳过 ToolTip 调度，避免 `context.Post` 空引用崩溃
+  - 窗口生命周期检查：回调内先检查 `window == null || window.IsDisposed || window.MainPicBox == null || window.MainPicBox.IsDisposed`，窗口销毁/控件重建间隙直接返回，放弃显示 ToolTip
+  - `Cursor.Current` 判空：鼠标移出窗口后 `Cursor.Current` 为 `null`，原代码直接访问 `Cursor.Current.Size.Height` 触发 `NullReferenceException`；改为安全获取，缺失时回退默认高度 32px
+  - **`Screen.FromPoint` 参数修正**：原代码传入 `mousePos`（窗口局部坐标），`Screen.FromPoint` 需要屏幕绝对坐标，改为传入 `absoluteP`（`Cursor.Position`），修正 ToolTip 在多显示器/缩放场景下的定位错误
+- **影响场景**：鼠标悬停 ToolTip 延迟显示期间（`Task.Delay(InitialDelay)`），若玩家移开鼠标、关闭窗口或触发画面重建，高概率触发该崩溃；宴会等多人同屏场景按钮密集，复现频繁
+
+### Changed
+
+- **版本签名**：`Skiav11` → `Skiav11.1`（`1824+v24+EMv18+EEv56+Skiav11.1`）
+
+***
+
+## [11.0.0] — GC 配置回退 + 内存诊断门控
+
+### Changed — GC 配置回退
+
+- **ServerGC → WorkstationGC**：回退 [3.0.0] 上游同步（commit `4432ee9d`）引入的 `<ServerGarbageCollection>true</ServerGarbageCollection>`
+  - 桌面 GUI 程序（单窗口、单线程交互）适合 WorkstationGC：内存占用低、及时归还 OS
+  - 文字游戏对 GC 单次回收暂停不敏感，WorkstationGC 的回收更频繁但更短
+
+### Added — 内存诊断工具（门控）
+
+- **MemoryDiagnostic 工具门控化**：新增配置项 `MemoryDiagnosticEnabled`（默认 `false`），关闭时引擎不输出 `memory_diagnostic.log`
+  - 该工具为临时诊断用途：关闭引擎时将内存快照（进程内存 / GC 堆细分 / 编译后脚本 / VariableData / FontFactory 缓存 / SQLite 连接等）写入游戏主目录
+  - 日后需要诊断内存问题时，在 `emuera.config` 中添加 `MEMORYDIAGNOSTICLOG:YES` 即可开启
+
+### Added — 诊断段落扩展
+
+- **GC 堆细分**：`GC.GetGCMemoryInfo()` 的 HeapSizeBytes / FragmentedBytes / Gen0-2 堆大小 / LOH 大小
+- **线程统计**：线程总数及 Running / Wait 状态分布
+- **FontFactory 缓存**：fontDic / fallbackTypefaceCache / fallbackTypefaceCodepointCache / gdiFontDic 条目数
+- **显示行缓存**：displayLineList 当前行数 / MaxLog
+
+***
+
 ## [10.1.0] — 输入宏开关
 
 ### Added

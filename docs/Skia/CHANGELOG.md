@@ -4,6 +4,65 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.0.0] — デバッグウインドウ：変数ウォッチの「ロック」と直接代入
+
+### Added
+
+- **変数ウォッチに「ロック」列を追加**：チェックを入れると変数の値を固定し、200msごとに安全なタイミングで自動的に書き戻すため、スクリプトによる値の変更を防げる。式・関数・定数・読み取り専用変数など代入できない対象はロックできない
+- **「値」セルから直接代入**：クリックして編集・確定するだけで代入できる（デバッグコンソールと同じ意味）
+- ロック状態はセッション内のみ有効（永続化しない）
+
+### Fixed
+
+- **デバッグウインドウのUIレイアウト**：高DPI環境で下部ボタンがパネルに重なる問題、ボタン文字の切れを修正
+
+### Changed
+
+- 変数ウォッチの列構成を「ロック / 対象 / 値」の3列に変更し、デフォルトウィンドウ幅を拡大
+- **バージョン署名**：`Skiav11.2` → `Skiav12`（`1824+v24+EMv18+EEv56+Skiav12`）
+
+***
+
+## [11.1.0] — ToolTip 非同期コールバック NRE 防御
+
+### Fixed — OnPaint ToolTip 非同期コールバックのnull参照クラッシュ
+
+- **`context.Post` コールバックのnull参照対策**（`EmueraConsole.cs` OnPaint ToolTip ブロック）：
+  - `SynchronizationContext.Current` のnullチェック：`context` が `null` の場合は ToolTip のディスパッチをスキップし、`context.Post` のnull参照クラッシュを回避
+  - ウィンドウライフサイクルチェック：コールバック内で `window == null || window.IsDisposed || window.MainPicBox == null || window.MainPicBox.IsDisposed` を確認し、破棄やコントロール再生成の隙間では ToolTip 表示を放棄
+  - `Cursor.Current` のnullチェック：マウスがウィンドウ外へ出た後 `Cursor.Current` が `null` になり、`Cursor.Current.Size.Height` で `NullReferenceException` を起こしていた。安全に取得し、欠落時はデフォルト高さ 32px にフォールバック
+  - **`Screen.FromPoint` 引数修正**：元コードは `mousePos`（ウィンドウローカル座標）を渡しており、`Screen.FromPoint` は画面絶対座標を要求するため、`absoluteP`（`Cursor.Position`）に変更。マルチディスプレイ・スケーリング環境での ToolTip 座標誤りを修正
+- **影響シナリオ**：ToolTip 遅延表示中（`Task.Delay(InitialDelay)`）、プレイヤーがマウスを動かす・ウィンドウを閉じる・描画再構築が起きると高確率でクラッシュ。宴会など多人数同屏シーンでボタンが密集し、再現頻度が高い
+
+### Changed
+
+- **バージョン署名**：`Skiav11` → `Skiav11.1`（`1824+v24+EMv18+EEv56+Skiav11.1`）
+
+***
+
+## [11.0.0] — GC 設定の巻き戻し + メモリ診断ゲート
+
+### Changed — GC 設定の巻き戻し
+
+- **ServerGC → WorkstationGC**：アップストリーム同期（commit `4432ee9d`）で導入された `<ServerGarbageCollection>true</ServerGarbageCollection>` を巻き戻し
+  - デスクトップGUI（単一ウィンドウ・単一スレッド対話）に適するのは WorkstationGC：メモリ使用量が低く、OS への早期返還が行われる
+  - ノベルゲームは GC の単一停止時間に鈍感で、WorkstationGC は回収が頻繁だが短い
+
+### Added — メモリ診断ツール（ゲート付き）
+
+- **MemoryDiagnostic ツールのゲート化**：新設設定項目 `MemoryDiagnosticEnabled`（デフォルト `false`）。無効時はエンジンが `memory_diagnostic.log` を出力しない
+  - 一時診断用途：終了時にメモリスナップショット（プロセスメモリ / GC ヒープ細分 / コンパイル後スクリプト / VariableData / FontFactory キャッシュ / SQLite 接続など）をゲーム主ディレクトリへ書き出す
+  - メモリ問題の診断が必要になったら、`emuera.config` に `MEMORYDIAGNOSTICLOG:YES` を追加すれば有効化できる
+
+### Added — 診断セクションの拡張
+
+- **GC ヒープ細分**：`GC.GetGCMemoryInfo()` の HeapSizeBytes / FragmentedBytes / Gen0-2 ヒープサイズ / LOH サイズ
+- **スレッド統計**：総スレッド数と Running / Wait 状態の分布
+- **FontFactory キャッシュ**：fontDic / fallbackTypefaceCache / fallbackTypefaceCodepointCache / gdiFontDic のエントリ数
+- **表示行キャッシュ**：displayLineList の現在行数 / MaxLog
+
+***
+
 ## [10.1.0] — 入力マクロスイッチ
 
 ### Added
