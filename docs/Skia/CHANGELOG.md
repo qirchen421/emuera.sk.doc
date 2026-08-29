@@ -4,6 +4,22 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.1.0] — 多言語エンコーディング互換 + CHKDATA セーブデータバージョン情報
+
+### Added
+
+- **CHKDATA がセーブデータのバージョン情報を返す**：`EraDataResult` に `Version` フィールドを追加。`CHKDATA` の `RESULT:1` にセーブデータ内のバージョン番号を代入（ファイルが存在しない等のエラー時は `0`、バージョン不一致・正常時は実際のバージョン値）。対象：`EraDataStream.cs` / `VariableEvaluator.cs` / `Creator.Method.cs`
+
+### Fixed
+
+- **多言語エンコーディング互換性**：`LangManager` のバイト長計算を「現在の言語エンコーディング → 日文 932 → 現在の言語エンコーディング」の文字単位往復方式に変更。非日本語エンコーディング（例：GBK）下の CJK テキストで `GetStrlenLang`/`GetUFTIndex`/`GetSubStringLang` の長さ・部分文字列が乱れる問題を修正
+
+### Changed
+
+- **バージョン署名**：`Skiav12` → `Skiav12.1`（`1824+v24+EMv18+EEv56+Skiav12.1`）
+
+***
+
 ## [12.0.0] — デバッグウインドウ：変数ウォッチの「ロック」と直接代入
 
 ### Added

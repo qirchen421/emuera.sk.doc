@@ -4,6 +4,22 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.1.0] — 多语言编码兼容 + CHKDATA 存档版本信息
+
+### Added
+
+- **CHKDATA 返回存档版本信息**：`EraDataResult` 新增 `Version` 字段；`CHKDATA` 的 `RESULT:1` 返回存档内版本号（文件不存在等其他错误时 `0`，版本不匹配或正常时返回实际版本）。涉及 `EraDataStream.cs` / `VariableEvaluator.cs` / `Creator.Method.cs`
+
+### Fixed
+
+- **多语言编码兼容性**：`LangManager` 的字节长度计算改为「当前语言编码 → 日文 932 → 当前语言编码」逐字符往返回退，修复非日文编码（如 GBK）下 CJK 文本在 `GetStrlenLang`/`GetUFTIndex`/`GetSubStringLang` 中的长度与子串错乱
+
+### Changed
+
+- **版本签名**：`Skiav12` → `Skiav12.1`（`1824+v24+EMv18+EEv56+Skiav12.1`）
+
+***
+
 ## [12.0.0] — 调试窗口：变量监视「锁定」与直接赋值
 
 ### Added

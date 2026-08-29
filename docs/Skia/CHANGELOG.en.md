@@ -4,6 +4,22 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.1.0] — Multilingual Encoding Compatibility + CHKDATA Save Version Info
+
+### Added
+
+- **CHKDATA returns save-data version info**: added the `Version` field to `EraDataResult`; `CHKDATA` now assigns the save's version number to `RESULT:1` (`0` on errors such as a missing file, the actual version value when the version differs or the data is valid). Files: `EraDataStream.cs` / `VariableEvaluator.cs` / `Creator.Method.cs`
+
+### Fixed
+
+- **Multilingual encoding compatibility**: `LangManager` byte-length calculation now uses per-character round-trip fallback (chars that cannot round-trip in the active language encoding are counted via the Japanese 932 encoding), fixing length/substring corruption in `GetStrlenLang`/`GetUFTIndex`/`GetSubStringLang` for CJK text under non-Japanese encodings (e.g., GBK)
+
+### Changed
+
+- **Version signature**: `Skiav12` → `Skiav12.1` (`1824+v24+EMv18+EEv56+Skiav12.1`)
+
+***
+
 ## [12.0.0] — Debug Window: Variable Watch "Lock" and Direct Assignment
 
 ### Added
