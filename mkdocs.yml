@@ -727,7 +727,7 @@ plugins:
       minify_js: true
 site_name: Emuera SKIA Document
 repo_url: https://gitgud.io/qrchen/emuera.em.doc
-site_url: https://qrchen.gitgud.site/emuera.em.doc/
+site_url: https://qirchen421.github.io/emuera.sk.doc/
 theme:
   name: material
   highlightjs: false
