@@ -182,12 +182,12 @@ The parsing of `\@` is implemented in `LexicalAnalyzer.AnalyseYenAt()`:
 
 ### Differences from Expression Ternary Operator
 
-| Feature | FORM Ternary `\@ ? # \@` | Expression Ternary `? :` |
+| Feature | FORM Ternary `\@ ? # \@` | Expression Ternary `? #` |
 |---------|--------------------------|--------------------------|
 | Context | Inside FORM strings | Inside expressions |
 | Condition type | Integer expression | Integer expression |
 | Result type | **String** | Integer or string (depends on operands) |
-| Delimiters | `?` and `#` | `?` and `:` |
+| Delimiters | `?` and `#` | `?` and `#` |
 | Closing marker | `\@` | None (relies on precedence) |
 | True/false values | FORM strings (support nested interpolation) | Expressions |
 | `#` can be omitted | Yes (false value defaults to empty string) | No |

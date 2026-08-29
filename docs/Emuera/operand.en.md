@@ -26,7 +26,7 @@
 			ENDIF
 
 	Numeric ternary operators can be used in normal calculations by putting them in (), and string ternary operators can be used directly in PRINTFORM instructions.
-	However, the `#` cannot be omitted in the ternary operator in the format of `\@～\@`.
+	However, `#` can also be omitted in the ternary operator in the format of `\@～\@` (if omitted, the false value defaults to an empty string and a warning is issued).
 
 ### Assignment Operator
 - `'=` Operator for assigning to string-type variables using a string expression. [See here for details](expression.en.md#assignment-to-string-variable-using-form-syntax)
