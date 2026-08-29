@@ -8,3 +8,7 @@ poetry.lock
 
 .vscode/*
 agents.md
+
+# 本地软链（指向 D:/emuera/shared-trae，仅本机开发用，不入库）
+/.trae/knowledge
+/.trae/skills
