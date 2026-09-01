@@ -3,6 +3,7 @@ pages:
   script:
     - $env:Path = "C:\Users\Hasee\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Hasee\AppData\Local\Programs\Python\Python313\;$env:Path"
     - pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-static-i18n mkdocs-material-extensions
+    - sed -i "s|repo_url:.*|repo_url: https://gitgud.io/qrchen/emuera.sk.doc|" mkdocs.yml
     - mkdocs build -d public
   artifacts:
     paths:

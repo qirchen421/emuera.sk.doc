@@ -32,6 +32,9 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-static-i18n mkdocs-material-extensions
 
+      - name: Set repo_url for GitHub Pages
+        run: sed -i 's|repo_url:.*|repo_url: https://github.com/qirchen421/emuera.sk.doc|' mkdocs.yml
+
       - name: Build site
         run: mkdocs build -d public
 
