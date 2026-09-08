@@ -295,6 +295,29 @@
 
 ## 规格变更的命令·式中函数 { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)`RAND` 入口安全保护（v12.2.0）
+!!! summary ""
+
+    RAND 随机数的参数非法时不再弹窗中断脚本，改为入口钳制，与兼容模式 RAND 的归一化策略对齐。
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    int RAND:n
+    int RAND max
+    int RAND min, max
+    ```
+
+    | 调用形式 | 参数非法 | EM+EE | Skia版 |
+    |:---|:---|:---|:---|
+    | `RAND:n` | `n ≤ 0` | 弹窗中断脚本 | 返回 `0` |
+    | `RAND(max)` / `RAND(min,max)` | `max ≤ min` | 弹窗中断脚本 | 返回下界 `min` |
+    | 浮点参数（如 `RAND(0.5, 1.0)`） | `max ≤ min` | 弹窗中断脚本 | 返回下界 `min` |
+
+!!! hint "提示"
+
+    首次触发非法参数时向控制台输出一次错误色警告（调试模式下同时进入调试窗口），之后同类触发静默钳制，避免循环调用刷屏。依赖报错来发现概率逻辑异常的脚本，请改用调试窗口观察警告输出。
+
 ### ![](../assets/images/IconSK.webp)CanReturnFloat 动态返回类型
 
 !!! summary ""

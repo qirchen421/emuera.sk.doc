@@ -4,6 +4,15 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.2.0] — RAND Random-Number Entry Safety Guard
+
+### Changed
+
+- **Invalid RAND arguments no longer pop up and abort**: `RAND:n` with an argument ≤ 0 now clamps to `0`; `RAND(min,max)` / `RAND(max)` (including the float overload) with `max ≤ min` now clamps to the lower bound `min`. Previously a CodeEE was thrown, showing an error popup and terminating the script — of no operational value to players and it interrupts the save session. Behavior now aligns with the compatibility-mode RAND (CompatiRandToken) normalization strategy. The first occurrence prints an error-colored warning to the console (also routed to the debug window in debug mode); subsequent occurrences clamp silently to avoid flooding in loops. Files: `VariableToken.cs` (RandToken) / `Creator.Method.cs` (RandMethod integer and float branches)
+- **Version signature**: `Skiav12.1` → `Skiav12.2` (`1824+v24+EMv18+EEv56+Skiav12.2`)
+
+***
+
 ## [12.1.0] — Multilingual Encoding Compatibility + CHKDATA Save Version Info
 
 ### Added

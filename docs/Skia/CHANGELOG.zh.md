@@ -4,6 +4,15 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.2.0] — RAND 随机数入口安全保护
+
+### Changed
+
+- **RAND 参数非法不再弹窗中断**：`RAND:n` 参数 ≤ 0 时钳制为返回 `0`；`RAND(min,max)` / `RAND(max)`（含浮点重载）参数 `max ≤ min` 时钳制为返回下界 `min`。原行为为抛 CodeEE 弹窗并终止脚本，对玩家无操作价值且中断存档会话；现与兼容模式 RAND（CompatiRandToken）的归一化策略对齐。首次触发时向控制台输出一次错误色警告（调试模式下同时进入调试窗口），后续触发静默钳制，避免循环刷屏。涉及 `VariableToken.cs`（RandToken）/ `Creator.Method.cs`（RandMethod 整数/浮点两分支）
+- **版本签名**：`Skiav12.1` → `Skiav12.2`（`1824+v24+EMv18+EEv56+Skiav12.2`）
+
+***
+
 ## [12.1.0] — 多语言编码兼容 + CHKDATA 存档版本信息
 
 ### Added

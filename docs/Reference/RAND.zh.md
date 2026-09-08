@@ -27,6 +27,16 @@ hide:
 
     命令和表达式函数均支持。
 
+!!! warning "Skia 扩展"
+
+    Skia 版在参数非法时不再弹出错误中断脚本（v12.2.0）。
+
+    - `RAND:n` 且 `n ≤ 0` 时：返回 `0`
+    - `RAND(max)` / `RAND(min,max)` 且 `max ≤ min` 时：返回下界 `min`（浮点参数同理）
+    - 仅首次触发时向控制台输出一次警告，之后静默钳制
+
+    原版在 `max` 不大于 `min` 或 `RAND:0` 等情况下会弹出错误并终止脚本。
+
 ### 相关项目
 - [PRINTDATA](PRINTDATA.zh.md)
 - [STRDATA](STRDATA.zh.md)

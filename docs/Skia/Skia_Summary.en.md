@@ -295,6 +295,29 @@
 
 ## Changed Commands & Expression Functions { #changed-commands }
 
+### ![](../assets/images/IconSK.webp)`RAND` Entry Safety Guard (v12.2.0)
+!!! summary ""
+
+    Invalid RAND arguments no longer pop up and abort the script; they are clamped at the entry point instead, aligning with the compatibility-mode RAND normalization strategy.
+
+!!! info "API"
+
+    ``` { #language-erbapi }
+    int RAND:n
+    int RAND max
+    int RAND min, max
+    ```
+
+    | Call form | Invalid argument | EM+EE | Skia |
+    |:---|:---|:---|:---|
+    | `RAND:n` | `n ≤ 0` | Popup aborts script | Returns `0` |
+    | `RAND(max)` / `RAND(min,max)` | `max ≤ min` | Popup aborts script | Returns lower bound `min` |
+    | Float arguments (e.g. `RAND(0.5, 1.0)`) | `max ≤ min` | Popup aborts script | Returns lower bound `min` |
+
+!!! hint "Hint"
+
+    The first occurrence of an invalid argument prints an error-colored warning to the console (also routed to the debug window in debug mode); subsequent occurrences clamp silently to avoid flooding when called in loops. Scripts that relied on the error popup to detect probability logic anomalies should switch to observing warnings in the debug window.
+
 ### ![](../assets/images/IconSK.webp)CanReturnFloat Dynamic Return Type
 
 !!! summary ""

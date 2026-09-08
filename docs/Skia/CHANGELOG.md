@@ -4,6 +4,15 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [12.2.0] — RAND 乱数エントリーセーフガード
+
+### Changed
+
+- **RAND の引数不正でポップアップ中断しない**：`RAND:n` の引数 ≤ 0 の場合は `0` を返すようクランプ。`RAND(min,max)` / `RAND(max)`（浮動小数点オーバーロード含む）の引数 `max ≤ min` の場合は下限 `min` を返すようクランプ。従来は CodeEE をスローしてポップアップ表示しスクリプトを終了していたが、プレイヤーにとって操作価値がなくセーブ中のセッションも中断されるため、互換モード RAND（CompatiRandToken）の正規化戦略に合わせた。初回トリガー時にコンソールへエラー色の警告を一度出力し（デバッグモードではデバッグウインドウにも出力）、以降は警告なしでクランプしてループ時のスパムを防止。対象：`VariableToken.cs`（RandToken）/ `Creator.Method.cs`（RandMethod 整数・浮動小数点の両分岐）
+- **バージョン署名**：`Skiav12.1` → `Skiav12.2`（`1824+v24+EMv18+EEv56+Skiav12.2`）
+
+***
+
 ## [12.1.0] — 多言語エンコーディング互換 + CHKDATA セーブデータバージョン情報
 
 ### Added

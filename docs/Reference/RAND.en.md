@@ -27,6 +27,16 @@ hide:
 
     Available as both command and function in expressions
 
+!!! warning "Skia Extension"
+
+    The Skia version no longer aborts the script with an error popup on invalid arguments (v12.2.0).
+
+    - `RAND:n` with `n ≤ 0`: returns `0`
+    - `RAND(max)` / `RAND(min,max)` with `max ≤ min`: returns the lower bound `min` (same for float arguments)
+    - A warning is printed to the console only on the first occurrence; afterwards it clamps silently
+
+    The original engine showed an error popup and terminated the script when `max` was not greater than `min`, or for cases like `RAND:0`.
+
 ### Related
 - [PRINTDATA](PRINTDATA.en.md)
 - [STRDATA](STRDATA.en.md)
