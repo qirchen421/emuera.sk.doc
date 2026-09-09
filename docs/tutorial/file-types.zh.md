@@ -78,6 +78,8 @@ BASE:1,500
 TALENT:0,1
 ```
 
+关于 `item.csv`、`abl.csv` 这类名字定义文件与 ERH `#DIM` 用户变量的 `.erd`、别名 `.als` 机制，见[变量标识符：CSV／ALS／ERD](variable-declaration.zh.md#identifiers)。
+
 ---
 
 ## ERH 头文件

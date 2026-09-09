@@ -79,7 +79,7 @@
 | 主题 | 内容 |
 |:---|:---|
 | [函数与 CALL](call.zh.md) | @标签、CALL/JUMP、RETURN、参数传递、INPUT |
-| [变量声明系统](variable-declaration.zh.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC |
+| [变量声明系统](variable-declaration.zh.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC、CSV／ALS／ERD 标识符 |
 | [ERB 文件格式扩展](erb-format-extension.zh.md) | 行连接、#DIM/#DIMS、#FUNCTION、条件编译 |
 | [命令 vs 表达式](command-vs-expression.zh.md) | 命令语法与表达式语法的边界、RESULT 污染、CALLF |
 

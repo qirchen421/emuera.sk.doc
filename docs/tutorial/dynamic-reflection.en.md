@@ -143,6 +143,8 @@ S '= ERDNAME(TALENT, 5)      ; Returns the name of TALENT:5 (e.g., "害羞")
 
 **Function Reference**: [ERDNAME](../Reference/ERDNAME.en.md)
 
+These names are provided by CSV/ERD files, see [Variable Identifiers: CSV / ALS / ERD](variable-declaration.en.md#identifiers).
+
 ### DotNet Extension: Character Name to Index Lookup
 
 DotNet variant introduced the `GETCSVNOBY*` series, looking up template indices by character name:

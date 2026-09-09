@@ -78,6 +78,8 @@ BASE:1,500
 TALENT:0,1
 ```
 
+For name-definition files like `item.csv` and `abl.csv`, and the `.erd` / alias `.als` mechanism for ERH `#DIM` user variables, see [Variable Identifiers: CSV / ALS / ERD](variable-declaration.en.md#identifiers).
+
 ---
 
 ## ERH Header Files

@@ -79,7 +79,7 @@
 | Topic | Content |
 |:---|:---|
 | [Functions & CALL](call.en.md) | @label, CALL/JUMP, RETURN, parameter passing, INPUT |
-| [Variable Declaration System](variable-declaration.en.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT, VARIADIC |
+| [Variable Declaration System](variable-declaration.en.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT, VARIADIC, CSV/ALS/ERD identifiers |
 | [ERB Format Extensions](erb-format-extension.en.md) | Line continuation, #DIM/#DIMS, #FUNCTION, conditional compilation |
 | [Command vs Expression](command-vs-expression.en.md) | Boundary between command syntax and expression syntax, RESULT pollution, CALLF |
 

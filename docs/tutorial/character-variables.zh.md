@@ -331,6 +331,8 @@ PRINTFORML %BASENAME:0%：{BASE:TARGET:0}
 ; 输出：体力：1000
 ```
 
+内置变量的名字来自 `CSV` 文件夹内对应的 CSV 文件；用户变量用 `.erd`、别名用 `.als` 的完整机制见[变量标识符：CSV／ALS／ERD](variable-declaration.zh.md#identifiers)。
+
 ### CSV → 变量的完整映射
 
 CSV 文件、名称变量、数据变量、CharaXX.csv 关键字、CSV读取函数的关系一览。

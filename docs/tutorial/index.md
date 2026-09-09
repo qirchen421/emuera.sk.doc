@@ -79,7 +79,7 @@
 | トピック | 内容 |
 |:---|:---|
 | [関数とCALL](call.md) | @ラベル、CALL/JUMP、RETURN、引数渡し、INPUT |
-| [変数宣言システム](variable-declaration.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC |
+| [変数宣言システム](variable-declaration.md) | CONST/DYNAMIC/STATIC/GLOBAL/SAVEDATA/CHARADATA/REF/OUT、VARIADIC、CSV／ALS／ERD 識別子 |
 | [ERBファイル形式拡張](erb-format-extension.md) | 行連結、#DIM/#DIMS、#FUNCTION、条件付きコンパイル |
 | [コマンド vs 式](command-vs-expression.md) | コマンド構文と式構文の境界、RESULT汚染、CALLF |
 

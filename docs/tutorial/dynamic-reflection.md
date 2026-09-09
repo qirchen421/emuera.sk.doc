@@ -143,6 +143,8 @@ S '= ERDNAME(TALENT, 5)      ; TALENT:5の名前を返す（例："害羞"）
 
 **関数リファレンス**：[ERDNAME](../Reference/ERDNAME.md)
 
+これらの名前は CSV／ERD ファイルから提供される。詳しくは[変数識別子：CSV／ALS／ERD](variable-declaration.md#identifiers)を参照。
+
 ### DotNet拡張：キャラクタ名→番号逆引き
 
 DotNet派生版は`GETCSVNOBY*`シリーズを導入し、キャラクタ名からテンプレート番号を逆引きする：

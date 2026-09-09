@@ -316,6 +316,8 @@ PRINTFORML %BASENAME:0%：{BASE:TARGET:0}
 ; 出力：体力：1000
 ```
 
+内蔵変数の名前は `CSV` フォルダ内の対応する CSV ファイルから来る。ユーザー変数の `.erd`、別名の `.als` を含む完全な仕組みは[変数識別子：CSV／ALS／ERD](variable-declaration.md#identifiers)を参照。
+
 ### CSV → 変数の完全マッピング
 
 CSV ファイル、名称変数、データ変数、CharaXX.csv キーワード、CSV読取関数の関係を一覧にする。

@@ -316,6 +316,8 @@ PRINTFORML %BASENAME:0%: {BASE:TARGET:0}
 ; Output: HP: 1000
 ```
 
+Built-in variable names come from the corresponding CSV files in the `CSV` folder; the full mechanism including user-variable `.erd` and alias `.als` is covered in [Variable Identifiers: CSV / ALS / ERD](variable-declaration.en.md#identifiers).
+
 ### CSV → Variable Complete Mapping
 
 The relationship between CSV files, name variables, data variables, CharaXX.csv keywords, and CSV reading functions:

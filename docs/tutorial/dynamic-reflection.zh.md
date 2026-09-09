@@ -143,6 +143,8 @@ S '= ERDNAME(TALENT, 5)      ; 返回 TALENT:5 的名称（如"害羞"）
 
 **函数参考**：[ERDNAME](../Reference/ERDNAME.zh.md)
 
+这些名字由 CSV／ERD 文件提供，详见[变量标识符：CSV／ALS／ERD](variable-declaration.zh.md#identifiers)。
+
 ### DotNet 扩展：角色名→编号反查
 
 DotNet 变体引入了 `GETCSVNOBY*` 系列，通过角色名称反查模板编号：

@@ -149,3 +149,27 @@ For multi-dimensional array variables, append `@` followed by a dimension number
     HOGE3D@1.ERD
     HOGE3D@2.ERD
     HOGE3D@3.ERD
+
+### File locations and merge rules
+
+- Files in the `CSV` folder use the conventional `"VariableName.csv"` format (top-level directory only), while files in `ERB` use the `"VariableName.ERD"` format (subdirectories included, recursive). File name matching is case-insensitive.
+- When both `.erd` and `.csv` exist for the same variable name, they are **merged**: identifiers from both files are collected into a single identifier-to-index dictionary, so complementary names from either file all work.
+- **An error is thrown at startup only when the same identifier is defined in multiple files** (regardless of index). Writing different identifiers for the same index is legal, and both names point to the same element.
+
+    ; ERB/HOGE.ERD
+    0, りんご
+
+    ; CSV/HOGE.CSV
+    1, みかん
+    0, 林檎
+
+    HOGE:りんご   ; -> 0 (from ERD)
+    HOGE:みかん   ; -> 1 (from CSV)
+    HOGE:林檎     ; -> 0 (same element as りんご)
+
+- When the same index is written twice in a single file, the later line overwrites the earlier one (warning only), and the earlier name is lost. To give multiple names to the same index, either split them across two files as above, or use a same-named `.als` alias file (`HOGE.als` next to `HOGE.ERD`, same `index, alias` format; one index can have multiple aliases; an alias colliding with an existing identifier is silently skipped, no error).
+
+### Boundary with engine built-in variables
+
+- ERD only applies to variables defined with `#DIM` in ERH. Names of engine built-in variables such as `ITEM`, `CFLAG`, and `ABL` can only be defined in the corresponding `ITEM.CSV`, `CFLAG.CSV`, etc. inside the `CSV` folder; a same-named `.ERD` file placed in `ERB` is never read.
+- Each dimension of a multi-dimensional array is named with its own file (`HOGE2D@1.ERD`, `HOGE2D@2.ERD`); a dimension without its file can only be indexed by number. A line whose index exceeds the declared element count is warned about and skipped.

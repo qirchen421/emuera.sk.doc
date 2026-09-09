@@ -79,6 +79,8 @@ BASE:1,500
 TALENT:0,1
 ```
 
+`item.csv`・`abl.csv` のような名前定義ファイル、および ERH `#DIM` ユーザー変数の `.erd`・別名 `.als` の仕組みは、[変数識別子：CSV／ALS／ERD](variable-declaration.md#identifiers)を参照。
+
 ---
 
 ## ERH ヘッダファイル

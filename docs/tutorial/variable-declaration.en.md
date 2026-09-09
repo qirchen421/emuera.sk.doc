@@ -543,7 +543,119 @@ RETURN
 
 ---
 
+## Variable Identifiers: CSV / ALS / ERD { #identifiers }
+
+Declarations fix the length of an array; identifiers name each element. Name-based indexing like `HOGE:りんご`, `GETNUM` (name → index), and `ERDNAME` (index → name) all consume the same identifier-to-index dictionary, whose content comes from three kinds of files:
+
+| File | Location | Serves |
+|------|------|---------|
+| `CSV/VariableName.CSV` (e.g. `ITEM.CSV`) | `CSV` folder top level (subdirectories excluded) | Engine built-in variables (`ITEM`, `CFLAG`, `ABL`, …) |
+| `ERB/VariableName.ERD` | `ERB` folder (subdirectories included, recursive) | Global variables declared with `#DIM` in ERH |
+| `CSV/VariableName.CSV` (same name as `#DIM`) | `CSV` folder top level | Same as above, on equal footing with `.erd` |
+| Same-named `.als` (e.g. `HOGE.als`) | Same directory as its `.erd`/`.csv` | Alias: another name for the same index |
+
+### Minimal example: naming a global array
+
+```erb
+; Variable.ERH
+#DIM HOGE, 3
+```
+
+```csv
+; ERB/HOGE.ERD
+0, りんご
+1, みかん
+2, バナナ
+```
+
+```erb
+HOGE:りんご = 100
+PRINTV HOGE:みかん
+```
+
+File name matching is case-insensitive. The format is the same as CSV variable files: one `index, identifier` pair per line. A line whose index exceeds the declared element count is warned about and skipped.
+
+### Same-named `.erd` and `.csv`: merged
+
+When both `.erd` and `.csv` exist for the same variable name, they are **merged**: identifiers are collected into a single dictionary, so complementary names from either file all work.
+
+```csv
+; ERB/HOGE.ERD
+0, りんご
+```
+
+```csv
+; CSV/HOGE.CSV
+1, みかん
+0, 林檎
+```
+
+```erb
+HOGE:りんご   ; -> 0 (from ERD)
+HOGE:みかん   ; -> 1 (from CSV)
+HOGE:林檎     ; -> 0 (same element as りんご)
+```
+
+**An error is thrown at startup only when the same identifier is defined in multiple files** (regardless of index). Writing different identifiers for the same index is legal, and both names point to the same element.
+
+### One index, multiple names: `.als` alias files
+
+When the same index is written twice in a single file, the later line overwrites the earlier one (warning only), and the earlier name is lost — **no syntax inside a single file can give multiple names to one index**. To give multiple names to the same index, either split them across two files as above, or use a same-named `.als` alias file:
+
+```csv
+; ERB/HOGE.ERD
+0, りんご
+```
+
+```csv
+; ERB/HOGE.als
+0, アップル
+0, アポー
+```
+
+```erb
+HOGE:りんご     ; -> 0 (formal name)
+HOGE:アップル   ; -> 0 (alias)
+HOGE:アポー     ; -> 0 (alias)
+```
+
+`HOGE.als` sits next to `HOGE.ERD`, uses the same `index, alias` format, and one index can have multiple aliases. An alias colliding with an existing identifier is silently skipped, no error — deliberately asymmetric with formal-name collisions, which abort startup.
+
+### Multi-dimensional arrays: `@1` / `@2` / `@3` per dimension
+
+Each dimension is named with its own file, corresponding from the leftmost index as `1`, `2`, `3`. A dimension without its file can only be indexed by number:
+
+```csv
+; ERB/HOGE2D@1.ERD (first dimension)
+0, 赤
+1, 青
+```
+
+```csv
+; ERB/HOGE2D@2.ERD (second dimension)
+0, りんご
+1, みかん
+```
+
+```erb
+HOGE2D:赤:りんご = 5
+```
+
+### Boundary with engine built-in variables
+
+- ERD only applies to variables defined with `#DIM` in ERH. Names of engine built-in variables such as `ITEM`, `CFLAG`, and `ABL` can only be defined in the corresponding `ITEM.CSV`, `CFLAG.CSV`, etc. inside the `CSV` folder; a same-named `.ERD` file placed in `ERB` is never read.
+- The third column (price) of `ITEM.CSV` belongs to the built-in pipeline; a third column written in a user variable ERD/CSV is ignored.
+
+!!! warning "Do not rely on `ERDNAME` reverse lookup with one-index-multiple-names"
+
+    `ERDNAME(variable, index)` returns the first matching name, and which one comes first is undefined when multiple names map to the same index. Do not use its return value as a branching condition.
+
+**Specification references**: [User-Defined Variables](../Emuera/user_defined_variables.en.md) (ERD feature section), [ERDNAME](../Reference/ERDNAME.en.md).
+
+---
+
 ## VARIADIC — Variable Arguments
+
 
 The `VARIADIC` keyword declares a variable number of arguments. It can only modify the last parameter:
 
