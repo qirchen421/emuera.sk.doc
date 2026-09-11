@@ -1,71 +1,31 @@
-# Project Rules — emuera.em.doc-1
+---
+alwaysApply: true
+---
 
-## 项目类型
+# Project Rules — emuera.em.doc-1（L2 薄壳）
 
-Emuera 文档项目（MkDocs + mkdocs-i18n 多语言站点），非代码项目。
+> 本文件是 **Trae 侧的文档站薄壳**；DSH 侧同构入口为仓库根 `AGENTS.md`，两份内容同构、互相指认。
+> **集群通用规范不在本文件维护**，指向 L1 正本：`D:\emuera\shared-trae\AGENTS.md` ＋ `knowledge\meta\**`。
+> 分层模型：`D:\emuera\shared-trae\knowledge\meta\instruction-layering.md`。
 
-## 通用语言与技能
+## 本仓特有规则
 
-通用语言：[CONTEXT.md](file:///d:/emuera/shared-trae/CONTEXT.md)
-技能有效性反馈：[SKILL-EFFECTIVENESS-LOG.md](file:///d:/emuera/shared-trae/skills/SKILL-EFFECTIVENESS-LOG.md)
+1. **三语言同步（强制）**：改任意语言版必须同步其余两版。
 
-### 默认技能
+   | 语言 | 后缀 |
+   |------|------|
+   | 日语（默认） | `.md` |
+   | 中文 | `.zh.md` |
+   | 英语 | `.en.md` |
 
-| 技能 | 激活条件 |
-|------|---------|
-| **doc-building** | 文档翻译、创建页面、修复链接、更新导航 |
-| **erabasic** | ERABASIC 语法确认、API 签名查阅；**编写教程示例代码时（强制）**；`%变量%` 是字符串替换，`{表达式}` 是整数插值，禁止 `{字符串变量}` |
-| **powershell-git** | 终端命令、Git 操作 |
-| **knowledge-builder** | 发现新洞见时 |
+   同步范围：`Skia/Skia_Summary.*`、`Skia/CHANGELOG.*`、`EMEE/EMEE_Summary.*`、`EMEE/CHANGELOG.*`、`Reference/README.*`、`Reference/<FunctionName>.*`。
+   译后必须更新交叉引用链接（日文→`.md`、中文→`.zh.md`、英文→`.en.md`）；细则见 [mkdocs-i18n.md](file:///d:/emuera/shared-trae/knowledge/doc-building/mkdocs-i18n.md)。
+2. **CJK 标题必须显式锚点**：中文/日文自动 slug 会生成 `_1` 之类编号锚点，必须用 `{ #custom-id }` 指定，且三语言使用相同锚点 ID。
+3. **Changelog 权威位置**：
+   - `EMEE/CHANGELOG.*` —— **当前权威位置**（MkDocs 实际访问）。
+   - `Changelog/README.*` —— 上游旧位置；收到上游更新后翻译并同步进 `EMEE/`。
+   - Skia 变体源文件在引擎仓：`emuera_lazyloading_selfmodified_version/CHANGELOG.md` → 同步到 `docs/skia/CHANGELOG.*`。
+4. **分支策略**：`master` 接收上游更新（生产部署），`feature/*` 开发（预览部署）；**master 不直接开发**；feature 分支需同步更新 `.gitlab-ci.yml` 的 `rules`。
+5. **教程示例代码用 ERABASIC 真语法**：`%变量%` 是字符串替换、`{表达式}` 是整数插值，**禁止 `{字符串变量}`**（不展开）。见 [form-syntax.md](file:///d:/emuera/shared-trae/knowledge/erabasic/form-syntax.md)。
 
-### 辅助技能
-
-| 技能 | 激活条件 |
-|------|---------|
-| **grill-with-docs** | 对齐教程结构、术语锐化 |
-| **caveman** | 长翻译会话节省 token |
-| **handoff** | 结束会话、交接翻译进度 |
-
-## 多语言同步规则
-
-> 修改任意语言版时必须同步更新其余两版。
-
-| 语言 | 后缀 |
-|------|------|
-| 日语（默认） | `.md` |
-| 中文 | `.zh.md` |
-| 英语 | `.en.md` |
-
-同步范围：`Skia/Skia_Summary.*`、`Skia/CHANGELOG.*`、`EMEE/EMEE_Summary.*`、`EMEE/CHANGELOG.*`、`Reference/README.*`、`Reference/<FunctionName>.*`
-
-流程：确认语言版本 → 检查其他语言版本是否存在 → **同时修改所有版本**
-
-## Changelog 同步规则
-
-> 上游 `Changelog/README.md` 已被移动到子栏目 `EMEE/CHANGELOG.md`。
-> **当前权威位置为 `EMEE/CHANGELOG.*`**。上游更新时需同步。
-> **Skia 变体 Changelog 权威位置为 `emuera_lazyloading_selfmodified_version/CHANGELOG.md`**。
-
-| 文件 | 作用 | 同步方向 |
-|------|------|---------|
-| `Changelog/README.*` | 上游旧位置（可能不再更新） | 接收上游后 → 同步到 EMEE |
-| `EMEE/CHANGELOG.*` | **当前权威位置**，MkDocs 实际访问 | 主编辑位置 |
-| `emuera_lazyloading_selfmodified_version/CHANGELOG.md` | Skia 变体源文件 | 源更新后 → 同步到 docs/skia/CHANGELOG.* |
-
-### EMEE Changelog 同步流程
-1. 上游 `Changelog/README.en.md` 更新 → 翻译后更新 `Changelog/README.md` + `README.zh.md`
-2. 将更新同步到 `EMEE/CHANGELOG.md` + `CHANGELOG.en.md` + `CHANGELOG.zh.md`
-3. 三语言必须全部同步
-
-### Skia Changelog 同步流程
-1. `emuera_lazyloading_selfmodified_version/CHANGELOG.md` 更新 → 作为源文件将源文件内容同步到 `docs/skia/CHANGELOG.zh.md`
-2. 三语言必须全部同步
-
-## Git 分支策略
-
-| 分支 | 用途 | CI |
-|------|------|-----|
-| `master` | 接收上游更新 | 生产部署 |
-| `feature/*` | 开发工作 | 预览部署 |
-
-约束：master 不直接开发；feature 分支需同步更新 `.gitlab-ci.yml` 的 `rules`
+> 完整清单与全部链接见仓库根 `AGENTS.md`（同构）。
