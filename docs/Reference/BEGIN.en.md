@@ -15,7 +15,7 @@ hide:
 	BEGIN identifier
     ```
 	`BEGIN` advances the game by calling various system commands.  
-	When `BEGIN` is called, the currently executing function ends. Even if called from somewhere via `CALL`, it will not return to the original function.
+	When `BEGIN` is called, **the current function** ends immediately — the lines after `BEGIN` are never executed. It does **not**, however, break the call chain: the caller keeps running, control unwinds level by level, and the state transition happens only once the whole call stack is empty (at which point the engine invokes the event function for the target state). Do not read it as "everything stops here". `BEGIN` does not modify `RESULT` either.
 
 	`BEGIN TRAIN` starts training.  
 	`BEGIN AFTERTRAIN` ends training.  

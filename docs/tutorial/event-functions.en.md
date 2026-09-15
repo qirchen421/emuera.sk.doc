@@ -23,6 +23,39 @@ Event functions are one of ERABASIC's core mechanisms — the engine automatical
 
 ---
 
+## How `BEGIN` triggers event functions {#begin-triggers-events}
+
+Event functions do not fire on their own — **`BEGIN` is the trigger**. But the link between them is **indirect**, and understanding this avoids a typical misreading:
+
+````
+BEGIN TURNEND             ← it does exactly two things:
+  ├ SetBegin("TURNEND")     ① records the target state (no jump)
+  └ state.Return(0)         ② ends the current frame
+        ↓
+  the caller runs to completion → control unwinds level by level
+        ↓
+  the call stack becomes empty (currentLine == null)
+        ↓
+  Begin() enters the TURNEND state
+        ↓
+  the engine calls @EVENTTURNEND (and stage hooks such as @EVENTCOMEND)
+````
+
+| Assertion | Explanation |
+|------|------|
+| `BEGIN` does not break the call chain | It pops only the current frame; the caller keeps running to completion ([Process.State.cs:L363-L431](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L363-L431)) |
+| The transition is deferred | The actual switch happens once the script stack is empty ([Process.State.cs:L270](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L270), `Begin()`) |
+| Event functions are invoked by the engine, per state | Not called by `BEGIN` itself; `BEGIN AFTERTRAIN` → stack empty → engine calls `@EVENTEND` (see [Process.State.cs:L37](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L37)) |
+| `BEGIN` does not modify `RESULT` | It goes through an engine method, not the script-level `RETURN` statement |
+
+!!! warning "A common misreading"
+
+    "I wrote `BEGIN AFTERTRAIN` in the function, so the later dialogue / event handling will not run." — **Wrong.** The call chain runs to completion; only the current function ends at `BEGIN`. Skipping later handling requires an explicit flag.
+
+> Full explanation: [System flow — Scope of `BEGIN`](system-flow.en.md#begin-scope).
+
+---
+
 ## Event Functions vs. System Functions
 
 While both event functions and system functions are automatically called by the engine, they have fundamental differences:

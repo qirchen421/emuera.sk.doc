@@ -23,6 +23,39 @@ ERABASIC 中的函数分为三类：
 
 ---
 
+## `BEGIN` 如何触发事件函数 {#begin-triggers-events}
+
+事件函数不会凭空触发 —— **触发开关就是 `BEGIN`**。但两者的连接是**间接的**，理解这一点能规避一类典型误判：
+
+````
+BEGIN TURNEND             ← 只做两件事：
+  ├ SetBegin("TURNEND")     ① 记下目标状态（不跳转）
+  └ state.Return(0)         ② 结束当前这一帧
+        ↓
+  调用者照常执行完毕 → 控制权逐层交还
+        ↓
+  整个调用栈清空（currentLine == null）
+        ↓
+  Begin() 进入 TURNEND 状态
+        ↓
+  引擎调用 @EVENTTURNEND（以及 @EVENTCOMEND 等阶段钩子）
+````
+
+| 断言 | 说明 |
+|------|------|
+| `BEGIN` 不中断调用链 | 它只弹当前一帧，调用者继续执行到自然结束（[Process.State.cs:L363-L431](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L363-L431)） |
+| 状态切换是"延迟"的 | 真正切换发生在整个脚本栈清空时（[Process.State.cs:L270](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L270) 的 `Begin()`） |
+| 事件函数由引擎按状态调用 | 不是 `BEGIN` 直接调；`BEGIN AFTERTRAIN` → 栈空 → 引擎调 `@EVENTEND`（[Process.State.cs:L37](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L37) 注释） |
+| `BEGIN` 不改写 `RESULT` | 走引擎方法而非脚本 `RETURN` 语句 |
+
+!!! warning "常见误判"
+
+    「我在函数里写了 `BEGIN AFTERTRAIN`，所以后面的口上 / 事件处理不会再执行」—— **错**。调用链照常跑完，只有当前函数在 `BEGIN` 处终止。要跳过后续处理必须用显式标志。
+
+> 完整说明见 [状态机流程 — `BEGIN` 的作用范围](system-flow.zh.md#begin-scope)。
+
+---
+
 ## 事件函数 vs 系统函数
 
 虽然事件函数和系统函数都由引擎自动调用，但它们有本质区别：

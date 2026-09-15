@@ -80,6 +80,8 @@ Next, call @EVENTCOM, followed by the corresponding @COM.
 If @COM returns a non-zero value, call @SOURCE_CHECK and @EVENTCOMEND and return to @SHOW_STATUS.  
 After @SOURCE_CHECK ends, set all SOURCE elements of all characters to 0 before calling @EVENTCOMEND.  
 After @SOURCE_CHECK ends, if @EVENTCOMEND does not exist or no WAIT instruction is performed in @EVENTCOMEND, WAIT is generated just before @SHOW_STATUS.  
+
+> **Note**: `@SOURCE_CHECK` is a **script-side system function**. All the engine does here is call it after `@COM` returns a non-zero value. What happens inside it (numeric settlement, dialogue dispatch, …) is entirely up to the game script — the engine does not interfere. That is why games such as eraTW further call their own command-execution layer from inside `@SOURCE_CHECK` (e.g. `@CALL_COM`, which contains the SCOM branch and the `TFLAG:50` resolution). When tracing such flows, read the game's scripts rather than the engine docs.
 If @COM returns 0, it returns to @SHOW_STATUS.  
 When the UPCHECK instruction is executed, the UP and DOWN values are added and subtracted to the TARGET's PALAM, and all of the UP and DOWN values are assigned to 0.  
 If the input result is not an executable command, it calls @USERCOM and returns to @SHOW_STATUS.  

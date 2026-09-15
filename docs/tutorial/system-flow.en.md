@@ -300,7 +300,34 @@ Entered via `BEGIN TURNEND`. End-of-day processing.
 
 ## BEGIN Instruction — State Transition
 
-`BEGIN` is the only way to transition between states. It includes an implicit `RETURN` — code after `BEGIN` will never execute.
+`BEGIN` is the only way to transition between states. It includes an implicit `RETURN` — code after `BEGIN` will never execute (**see the next section for its scope**).
+
+### Scope of `BEGIN` {#begin-scope}
+
+The rule above applies **only within the current function**. `BEGIN` does not break the whole call chain:
+
+````
+@A                     @B                          Engine
+BEGIN SHOP  ←────────  CALL B            (begintype = SHOP)
+(A ends here)          ↓
+                       PRINTL this line still runs
+                       (B finishes → returns to A's caller → …)
+                                                    ↓ call stack becomes empty
+                                                    Begin() → SHOP → @SHOW_SHOP
+````
+
+- `BEGIN` compiles to `SetBegin(keyword, true)` + `state.Return(0)`: it only **records the target state** and **ends the current frame** — it does not jump ([Instraction.Child.cs:L3037-L3054](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Statements/Instraction.Child.cs#L3037-L3054)).
+- The caller keeps running to completion; the actual transition happens when **the call stack becomes empty** ([Process.State.cs:L363-L431](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L363-L431)).
+- So **event functions are not called by `BEGIN` directly**: `BEGIN TURNEND` merely "reserves" the TURNEND state, and the engine invokes `@EVENTTURNEND` only after the stack is empty.
+- `BEGIN` does **not modify `RESULT`** either (it goes through an engine method, not the script-level `RETURN` statement).
+
+!!! warning "Practical implication"
+
+    If a command should "not run the later dialogue / event handling after it finishes", **you cannot achieve that with `BEGIN`** — the call chain runs to completion anyway. Use an explicit skip flag (e.g. `nSkipKojo` in this repository), or simply do not duplicate the call.
+
+    **Assertion**: `BEGIN` pops only the current frame; the caller continues executing.
+    **If violated**: assuming "everything stops here" and calling the same handler again on a path the framework already covers ⇒ duplicated output.
+    **Diagnosis path**: duplicated output → check whether the function calls the framework hook itself before `BEGIN` → check whether the framework has its own call site for that hook.
 
 ```erb
 @MY_FUNC
@@ -383,7 +410,9 @@ When any uncaught error occurs, if `@BEFORE_ERROR` event function (Skia exclusiv
 |---------|-------------|----------|
 | Event function doesn't execute BEGIN | `@EVENTFIRST`, `@EVENTEND`, etc. will error-terminate without `BEGIN` | Ensure `BEGIN` or `RETURN` at the end |
 | @EVENTSHOP not called after loading | After loading a save, SHOP is entered directly, skipping `@EVENTSHOP` | Use `@EVENTLOAD` or `@SYSTEM_LOADEND` |
-| Code after BEGIN doesn't execute | `BEGIN` includes an implicit `RETURN` | Don't write code after `BEGIN` |
+| Code after BEGIN doesn't execute | `BEGIN` includes an implicit `RETURN` (scope: the current function) | Don't write code after `BEGIN` |
+| Believing `BEGIN` breaks the whole call chain | The caller still runs to completion; the transition happens only after the stack empties | Use an explicit flag (e.g. `nSkipKojo`) to skip later handling — `BEGIN` won't do it |
+| Believing event functions are called directly by `BEGIN` | `BEGIN` only reserves a state; the engine calls that state's event function after the stack empties | See "Scope of `BEGIN`" above |
 | Forgetting BEGIN SHOP in TRAIN | The TRAIN loop doesn't end automatically | Handle "return" logic in `@USERCOM` |
 | @COMxx returns 0 | Command is treated as failed; `@SOURCE_CHECK` and `@EVENTCOMEND` are not called | Ensure successful commands return non-zero |
 

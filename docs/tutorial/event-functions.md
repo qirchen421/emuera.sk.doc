@@ -23,6 +23,39 @@ ERABASICの関数は3つのカテゴリに分かれます：
 
 ---
 
+## `BEGIN` がイベント関数を呼び出す仕組み {#begin-triggers-events}
+
+イベント関数は自然に発火するわけではありません —— **引き金は `BEGIN`** です。ただし両者の結びつきは**間接的**であり、ここを理解すると典型的な誤解を避けられます：
+
+````
+BEGIN TURNEND             ← 行うことは2つだけ：
+  ├ SetBegin("TURNEND")     ① 目標状態を記録（ジャンプはしない）
+  └ state.Return(0)         ② 現在のフレームを終了
+        ↓
+  呼び出し元は通常どおり実行を終える → 制御は順に戻る
+        ↓
+  コールスタックが空になる（currentLine == null）
+        ↓
+  Begin() が TURNEND 状態へ
+        ↓
+  エンジンが @EVENTTURNEND を呼び出す（@EVENTCOMEND などの段階フックも同様）
+````
+
+| 断言 | 説明 |
+|------|------|
+| `BEGIN` はコールチェーンを中断しない | 現在のフレームを1つポップするだけで、呼び出し元は通常どおり最後まで実行される（[Process.State.cs:L363-L431](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L363-L431)） |
+| 状態遷移は「遅延」する | 実際の遷移はスクリプトスタックが空になった時点（[Process.State.cs:L270](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L270) の `Begin()`） |
+| イベント関数はエンジンが状態に応じて呼ぶ | `BEGIN` が直接呼ぶのではない；`BEGIN AFTERTRAIN` → スタック空 → エンジンが `@EVENTEND` を呼ぶ（[Process.State.cs:L37](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L37) のコメント） |
+| `BEGIN` は `RESULT` を書き換えない | スクリプトの `RETURN` 文ではなくエンジンメソッドを通る |
+
+!!! warning "よくある誤解"
+
+    「関数内で `BEGIN AFTERTRAIN` を書いたので、以降の口上／イベント処理は実行されない」—— **誤り**。コールチェーンは通常どおり最後まで走り、`BEGIN` で終わるのは現在の関数だけである。以降の処理を飛ばすには明示的なフラグが必要。
+
+> 詳細は [状態遷移フロー — `BEGIN` の作用範囲](system-flow.md#begin-scope) を参照。
+
+---
+
 ## イベント関数とシステム関数
 
 イベント関数とシステム関数はどちらもエンジンが自動的に呼び出しますが、本質的な違いがあります：

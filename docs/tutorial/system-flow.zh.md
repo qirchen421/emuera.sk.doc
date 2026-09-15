@@ -300,7 +300,34 @@ BEGIN TRAIN
 
 ## BEGIN 指令 — 状态跳转
 
-`BEGIN` 是状态跳转的唯一方式。它包含隐式 `RETURN`——`BEGIN` 之后的代码永远不会执行。
+`BEGIN` 是状态跳转的唯一方式。它包含隐式 `RETURN`——`BEGIN` 之后的代码永远不会执行（**作用范围见下节**）。
+
+### `BEGIN` 的作用范围 {#begin-scope}
+
+上面那句"`BEGIN` 之后的代码不会执行"，作用范围**仅限于当前函数**。`BEGIN` 并不会中断整条调用链：
+
+````
+@A                     @B                          引擎
+BEGIN SHOP  ←────────  CALL B            （begintype = SHOP）
+（A 在此终止）          ↓
+                       PRINTL 这行照常执行
+                       （B 自然结束 → 回到 A 的调用者 → …）
+                                                    ↓ 整个调用栈清空
+                                                    Begin() → 进入 SHOP → @SHOW_SHOP
+````
+
+- `BEGIN` 编译为 `SetBegin(keyword, true)` + `state.Return(0)`：只**记录目标阶段** + **结束当前一帧**，不做跳转（[Instraction.Child.cs:L3037-L3054](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Statements/Instraction.Child.cs#L3037-L3054)）。
+- 调用者照常执行完毕；真正的状态切换发生在**调用栈清空**时（[Process.State.cs:L363-L431](file:///d:/emuera/emuera.em/Emuera/Runtime/Script/Process.State.cs#L363-L431)）。
+- 因此**事件函数不是 `BEGIN` 直接调用的**：`BEGIN TURNEND` 只是"预约" TURNEND 阶段，栈清空后引擎才调用该阶段的事件函数 `@EVENTTURNEND`。
+- `BEGIN` 也**不改写 `RESULT`**（它走引擎方法，不是脚本 `RETURN` 语句）。
+
+!!! warning "实践含义"
+
+    若想让某条指令"结束后不再走后续的口上 / 事件处理"，**不能靠 `BEGIN`** —— 调用链会照常跑完。必须使用显式跳过标志（如本仓 `nSkipKojo`），或干脆不要重复调用。
+
+    **断言**：`BEGIN` 只弹当前一帧，调用者继续执行。
+    **违反后果**：误以为"到此为止"，在框架本来就会触发的路径上重复调用同一处理 ⇒ 输出重复。
+    **排查路径**：出现重复输出 → 检查该函数是否在 `BEGIN` 之前自行调用了框架钩子 → 查框架侧的同一钩子调用点是否存在。
 
 ```erb
 @MY_FUNC
@@ -383,7 +410,9 @@ THROW 执行
 |------|------|---------|
 | 事件函数不执行 BEGIN | `@EVENTFIRST`、`@EVENTEND` 等如果不执行 `BEGIN`，引擎报错终止 | 确保末尾有 `BEGIN` 或 `RETURN` |
 | `@EVENTSHOP` 加载后不触发 | 加载存档后直接进入 SHOP，跳过 `@EVENTSHOP` | 使用 `@EVENTLOAD` 或 `@SYSTEM_LOADEND` |
-| `BEGIN` 后的代码不执行 | `BEGIN` 包含隐式 `RETURN` | 不要在 `BEGIN` 后写代码 |
+| `BEGIN` 后的代码不执行 | `BEGIN` 包含隐式 `RETURN`（作用范围＝当前函数） | 不要在 `BEGIN` 后写代码 |
+| 以为 `BEGIN` 会中断整条调用链 | 调用者照常执行完，状态切换延后到调用栈清空 | 想跳过后续处理要用显式标志（如 `nSkipKojo`），别指望 `BEGIN` |
+| 以为事件函数由 `BEGIN` 直接调用 | `BEGIN` 只预约阶段；栈清空后引擎才调该阶段事件函数 | 见上节「`BEGIN` 的作用范围」 |
 | TRAIN 中忘记 `BEGIN SHOP` | TRAIN 循环不会自动结束 | 在 `@USERCOM` 中处理"返回"逻辑 |
 | `@COMxx` 返回 0 | 命令被视为执行失败，不触发 `@SOURCE_CHECK` 和 `@EVENTCOMEND` | 确保成功的命令返回非 0 值 |
 

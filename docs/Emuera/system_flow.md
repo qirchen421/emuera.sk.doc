@@ -83,6 +83,8 @@ Emueraの`NEXTCOM`は旧来のコードの動作を前記不具合を含めて�
 `@COM`が`0`でない値を返したならば`@SOURCE_CHECK`、`@EVENTCOMEND`を呼び出し、`@SHOW_STATUS`に戻る。  
 `@SOURCE_CHECK`終了後、`@EVENTCOMEND`呼び出し前に全てのキャラの`SOURCE`の全ての要素を0にする。  
 `@SOURCE_CHECK`終了後、`@EVENTCOMEND`が存在しないか`@EVENTCOMEND`内で一度も`WAIT`命令が行われない場合、`@SHOW_STATUS`の直前に`WAIT`を発生させる。  
+
+> **注**：`@SOURCE_CHECK`は**スクリプト側のシステム関数**であり、エンジンが行うのは「`@COM`が非0を返した後に呼び出す」ことだけである。内部の処理（数値計算・口上配布など）はすべて作品側のスクリプトが実装しており、エンジンは関与しない。そのためeraTWなどでは`@SOURCE_CHECK`内からさらに独自の命令実行層（`@CALL_COM` など。SCOM分岐や`TFLAG:50`の解釈を含む）を呼び出す。この種の流れを追う際はエンジンドキュメントではなく、対象作品のスクリプトを読むこと。
 `@COM`が`0`を返したならば`@SHOW_STATUS`に戻る。  
 なお、`UPCHECK`命令が実行されると`TARGET`の`PALAM`に`UP`と`DOWN`の値が加算・減算され、`UP`と`DOWN`の全てに`0`が代入される。  
 入力結果が実行可能なコマンドでなければ`@USERCOM`を呼びだし、`@SHOW_STATUS`に戻る。  

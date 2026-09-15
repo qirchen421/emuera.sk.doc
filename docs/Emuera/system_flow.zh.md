@@ -83,6 +83,8 @@ Emuera的`NEXTCOM`是为了重现旧代码动作（包括前述缺陷）而实�
 如果`@COM`返回非0值，则调用`@SOURCE_CHECK`、`@EVENTCOMEND`，返回`@SHOW_STATUS`。
 `@SOURCE_CHECK`结束后，在调用`@EVENTCOMEND`前将所有角色的`SOURCE`的所有元素设为0。
 `@SOURCE_CHECK`结束后，如果`@EVENTCOMEND`不存在或在`@EVENTCOMEND`中没有执行`WAIT`指令，则在`@SHOW_STATUS`前产生`WAIT`。
+
+> **注**：`@SOURCE_CHECK` 是**脚本侧的系统函数**——引擎在这里只负责"在 `@COM` 返回非 0 值之后调用它"。它内部做什么（数值结算、口上分发……）全部由作品脚本自行实现，引擎不介入。正因如此，eraTW 一类作品会在 `@SOURCE_CHECK` 内进一步 `CALL` 自己的指令执行层（如 `@CALL_COM`，其中含 SCOM 分支与 `TFLAG:50` 解析）。排查这类流程时不要以引擎文档为准，要去读对应作品的脚本。
 如果`@COM`返回`0`则返回`@SHOW_STATUS`。
 另外，执行`UPCHECK`指令时，将`UP`和`DOWN`的值加减到`TARGET`的`PALAM`上，并将`UP`和`DOWN`的所有值设为`0`。
 如果输入结果不是可执行的命令，则调用`@USERCOM`，返回`@SHOW_STATUS`。
