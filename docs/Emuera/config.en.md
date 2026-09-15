@@ -93,9 +93,14 @@ Image buffers became unnecessary due to drawing processing changes.
 This option was deprecated in 1.700.  
 Please set with the `Drawing Interface` option.
 
-### Frames Per Second
+### Frames Per Second {#fps}
+
 The maximum number of draws per second. Smaller values make operation faster.  
-If `Maximum Skip Frame Count` is small, making frames per second smaller may not make it faster.
+If `Maximum Skip Frame Count` is small, making frames per second smaller may not make it faster.  
+
+It is actually used as the minimum interval for non-forced drawing (`1000 / frames per second` milliseconds).  
+Drawing performed on entering commands that wait for user input (`INPUT` family), and forced drawing by [`REDRAW`](../Reference/REDRAW.en.md) with `2` added, are not subject to this limit.  
+On screens where drawing a single frame takes a long time (such as animation loops), the actual drawing interval far exceeds this value, so changing frames per second may not change what you see.  
 
 ### (Maximum Skip Frame Count)
 This option was deprecated.
