@@ -930,6 +930,11 @@
 
     Migrates `SpriteAnime`/`SpriteAnimated` animation frame timing from `DateTime.Now` to `Stopwatch.GetTimestamp()`. Eliminates system clock precision limitations (~15ms), improving animation frame rate stability.
 
+### ![](../assets/images/IconSK.webp)Variable Write Watch
+!!! summary ""
+
+    Adds "Start Watch / Stop Watch and Print Report" buttons to the debug window's variable watch tab. Records every ERB script write (variable, new value, function, file:line) to the watch-listed variables during the watch session. Details go to `debug\var_write.log` (statistics only after 100,000 entries); a summary report is printed to the console on stop. Covers single assignments (`=` / `+=` etc.), `VARSET` / `CVARSET`, and array literal assignments; the debug window's own writes (lock write-back, value-cell assignment, manual console assignment) are excluded automatically; associative arrays and string subscripts are not yet supported, with skip reasons shown explicitly at watch start.
+
 ---
 
 ## Stability Fixes { #stability-fixes }

@@ -4,6 +4,31 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [14.0.0] — 变量写入监视
+
+### Added
+
+- **变量写入监视（调试窗口）**：变量监视页新增"开始监视 / 停止监视并打印报告"按钮，以监视列表中的变量为对象集，记录监视期间每次 ERB 脚本写入的变量、新值、所在函数与文件行号，明细写入 `debug\var_write.log`（超 10 万条后仅统计），停止时在控制台打印汇总报告。单点赋值（`=` / `+=` 等）、`VARSET` / `CVARSET`、数组字面量赋值均覆盖；调试窗口自身的写入（锁定写回/值单元格赋值/控制台手动赋值）自动排除；关联数组与字符串下标暂不支持，开始监视时明确提示跳过原因。涉及 `VarWriteWatch.cs`（新）/ `VariableTerm.cs` / `VariableEvaluator.cs` / `DebugDialog.cs`
+
+### Changed
+
+- **版本签名**：`Skiav13` → `Skiav14`（`1824+v24+EMv18+EEv56+Skiav14`）
+
+***
+
+## [13.0.0] — 预设变量 ERD 扩展
+
+### Added
+
+- **预设变量同名 ERD 合并**：ERB 目录下与预设变量同名的 `.erd` 文件（如 `ITEM.erd`）可扩展对应预设变量的名表。ERD 只填 CSV 为空的槽（CSV 优先）；ITEM 额外支持第三列价格（CSV 出现过价格列即视为已设，含显式 0，ERD 不得覆盖）。合并发生在全部 CSV 加载后、逆引字典建立前，ERD 补入的名字同样可被 `GETNUM` / `ITEMNAME:n` 使用。涉及 `ConstantData.cs`
+- **`EXIST_IN_CSV` / `EXIST_IN_ERD` 表达式函数**：`EXIST_IN_CSV("ITEM", 6)` 查询指定槽位名字的有效来源（合并后来源，非"谁申请过"），CSV 则为 1；ERD 版同理。首参为字符串变量名（GETNUMB 风格，可反射拼接枚举）；第二参数只收整数索引，不支持的变量名/越界索引返回 0。被 CSV 顶掉的 ERD 名在运行时不可见（仅加载期警告），跨槽重名 ERD 行警告跳过。涉及 `Creator.Method.cs` / `Creator.cs`
+
+### Changed
+
+- **版本签名**：`Skiav12.2` → `Skiav13`（`1824+v24+EMv18+EEv56+Skiav13`）
+
+***
+
 ## [12.2.0] — RAND 随机数入口安全保护
 
 ### Changed

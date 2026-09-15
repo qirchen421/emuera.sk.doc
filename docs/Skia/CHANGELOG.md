@@ -4,6 +4,31 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [14.0.0] — 変数書き込み監視
+
+### Added
+
+- **変数書き込み監視（デバッグウィンドウ）**：変数ウォッチページに「監視開始 / 監視停止してレポート出力」ボタンを追加。ウォッチリストの変数を対象に、監視期間中の ERB スクリプトによる書き込み（変数・新値・関数・ファイル行番号）を記録する。明細は `debug\var_write.log` に出力（10 万件超過後は集計のみ）、停止時にコンソールへサマリーレポートを出力。単発代入（`=` / `+=` 等）・`VARSET` / `CVARSET`・配列リテラル代入に対応；デバッグウィンドウ自身の書き込み（ロック書き戻し/値セル代入/コンソール手動代入）は自動除外；連想配列・文字列添字は未対応で、監視開始時にスキップ理由を明示。対象：`VarWriteWatch.cs`（新規）/ `VariableTerm.cs` / `VariableEvaluator.cs` / `DebugDialog.cs`
+
+### Changed
+
+- **バージョン署名**：`Skiav13` → `Skiav14`（`1824+v24+EMv18+EEv56+Skiav14`）
+
+***
+
+## [13.0.0] — プリセット変数 ERD 拡張
+
+### Added
+
+- **プリセット変数同名 ERD マージ**：ERB ディレクトリ下のプリセット変数と同名の `.erd` ファイル（例 `ITEM.erd`）で、対応するプリセット変数の名前表を拡張できる。ERD は CSV が空のスロットのみ埋める（CSV 優先）；ITEM は第 3 列の価格を追加サポート（CSV に価格列が出現したら設定済みとみなし、明示的 0 を含めて ERD は上書き不可）。マージは全 CSV ロード後・逆引き辞書構築前に行い、ERD から補完された名前も `GETNUM` / `ITEMNAME:n` で利用可能。対象：`ConstantData.cs`
+- **`EXIST_IN_CSV` / `EXIST_IN_ERD` 式中関数**：`EXIST_IN_CSV("ITEM", 6)` で指定スロットの名前の有効な由来（マージ後の由来であり「誰が申請したか」ではない）を問い合わせ、CSV 由来なら 1；ERD 版も同様。第 1 引数は文字列の変数名（GETNUMB 形式、リフレクションによる連結列挙が可能）；第 2 引数は整数インデックスのみ受け付け、未対応の変数名・範囲外インデックスは 0 を返す。CSV に押しのけられた ERD 名は実行時に不可視（ロード時警告のみ）、スロットをまたぐ同名 ERD 行は警告してスキップ。対象：`Creator.Method.cs` / `Creator.cs`
+
+### Changed
+
+- **バージョン署名**：`Skiav12.2` → `Skiav13`（`1824+v24+EMv18+EEv56+Skiav13`）
+
+***
+
 ## [12.2.0] — RAND 乱数エントリーセーフガード
 
 ### Changed

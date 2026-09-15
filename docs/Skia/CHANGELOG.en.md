@@ -4,6 +4,31 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [14.0.0] — Variable Write Watch
+
+### Added
+
+- **Variable write watch (debug window)**: adds "Start Watch / Stop Watch and Print Report" buttons to the variable watch tab. Records every ERB script write (variable, new value, function, file:line) to the watch-listed variables during the watch session. Details go to `debug\var_write.log` (statistics only after 100,000 entries); a summary report is printed to the console on stop. Covers single assignments (`=` / `+=` etc.), `VARSET` / `CVARSET`, and array literal assignments; the debug window's own writes (lock write-back, value-cell assignment, manual console assignment) are excluded automatically; associative arrays and string subscripts are not yet supported, with skip reasons shown explicitly at watch start. Files: `VarWriteWatch.cs` (new), `VariableTerm.cs`, `VariableEvaluator.cs`, `DebugDialog.cs`
+
+### Changed
+
+- **Version signature**: `Skiav13` → `Skiav14` (`1824+v24+EMv18+EEv56+Skiav14`)
+
+***
+
+## [13.0.0] — Preset Variable ERD Extension
+
+### Added
+
+- **Same-name ERD merge for preset variables**: `.erd` files in the ERB directory sharing a preset variable's name (e.g. `ITEM.erd`) extend that preset variable's name table. ERD only fills slots left empty by CSV (CSV wins); ITEM additionally supports a third price column (any price-column appearance in CSV counts as set, including explicit 0, which ERD may not overwrite). The merge runs after all CSVs are loaded and before the reverse-lookup dictionary is built, so ERD-supplied names work with `GETNUM` / `ITEMNAME:n` alike. Files: `ConstantData.cs`
+- **`EXIST_IN_CSV` / `EXIST_IN_ERD` expression functions**: `EXIST_IN_CSV("ITEM", 6)` queries the effective source of a slot's name (post-merge source, not "who claimed it"), returning 1 for CSV; the ERD variant works the same way. The first parameter is a string variable name (GETNUMB style, enumerable via reflective concatenation); the second parameter takes integer indices only, returning 0 for unsupported variable names or out-of-range indices. ERD names displaced by CSV are invisible at runtime (load-time warning only); same-name ERD rows across slots are warned and skipped. Files: `Creator.Method.cs`, `Creator.cs`
+
+### Changed
+
+- **Version signature**: `Skiav12.2` → `Skiav13` (`1824+v24+EMv18+EEv56+Skiav13`)
+
+***
+
 ## [12.2.0] — RAND Random-Number Entry Safety Guard
 
 ### Changed
