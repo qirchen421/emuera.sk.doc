@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [15.0.0] — CLI 调试模式 + 打印监视
+
+### Added
+
+- **`--CliDebug` CLI 调试模式**：stdin/stdout JSON Lines 协议，供 AI agent 等外部程序驱动解释器调试。隐含 `-Debug`；保留 WinForms 消息循环与渲染管线，仅最小化隐藏窗口。stdin 线程读取命令并经 `MainWindow.Invoke` 派发到 UI 线程执行，stdout 推送 `hello` / `ready` / `out` / `wait` / `state` / `dialog` / `exit` 事件；命令含 `input` / `click` / `key` / `debug` / `watch`（变量写入监视）/ `trace` / `screen` / `buttons` / `quit` 等，另支持 `!表达式` 便捷输入。模态对话框在 CLI 模式下全部替换为 stdout 事件，避免无人值守卡死。涉及 `CliDebugHost.cs`（新）/ `Program.cs` / `EmueraConsole.cs`
+- **打印监视（调试窗口）**：调试窗口新增「打印监视」页签（开始 / 停止并报告 / 记录调用栈勾选），记录每一次送往游戏控制台的文本输出及其触发位置（函数 + 文件:行号），明细写入 `debug\print_trace.log`（超 10 万条后仅统计），页签内 300ms 实时视图，停止时打印按位置统计的汇总报告（次数降序）。可选附加最多 20 帧的内联调用栈（由内到外，各层取调用点）。常规 PRINT 族、HTML_PRINT / HTML_PRINTC、系统单行输出与错误按钮均覆盖；调试窗口自身 ERB 执行的输出自动排除；未开启时每次打印仅多一次静态 bool 判断，零行为影响。涉及 `PrintWatch.cs`（新）/ `PrintStringBuffer.cs` / `EmueraConsole.Print.cs` / `DebugDialog.cs`
+
+### Fixed
+
+- CLI `screen` 在 div 画面上返回空数组：改按物理行自底向上读取
+- div（HTML `rect` 覆盖层）内容与按钮无法读取/点击：经 `ConsoleEscapedParts` 同源路径补充收集，`screen` 结果新增 `divs` 字段
+- CLI 首条 stdin 命令偶发 `invalid JSON`：锁定 stdin 显式 UTF-8（含 BOM 自动侦测/剥离）
+
+### Changed
+
+- **版本签名**：`Skiav14` → `Skiav15`（`1824+v24+EMv18+EEv56+Skiav15`）
+
+***
+
 ## [14.0.0] — 变量写入监视
 
 ### Added

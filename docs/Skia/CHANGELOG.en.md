@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [15.0.0] — CLI Debug Mode + Print Watch
+
+### Added
+
+- **`--CliDebug` CLI debug mode**: a stdin/stdout JSON Lines protocol that lets external programs such as AI agents drive the interpreter for debugging. Implies `-Debug`; keeps the WinForms message loop and rendering pipeline while only minimizing/hiding the window. A stdin thread reads commands and dispatches them to the UI thread via `MainWindow.Invoke`; stdout pushes `hello` / `ready` / `out` / `wait` / `state` / `dialog` / `exit` events. Commands include `input` / `click` / `key` / `debug` / `watch` (variable write watch) / `trace` / `screen` / `buttons` / `quit` etc., plus `!expression` shorthand input. Modal dialogs are all replaced with stdout events in CLI mode to avoid stalls in unattended runs. Files: `CliDebugHost.cs` (new), `Program.cs`, `EmueraConsole.cs`
+- **Print watch (debug window)**: adds a "Print Watch" tab (Start / Stop and Report / Record call stack checkbox) that records every text output sent to the game console together with its trigger site (function + file:line). Details go to `debug\print_trace.log` (statistics only after 100,000 entries); the tab shows a 300ms live view; on stop a per-site summary report (count, descending) is printed to the console. Optionally appends an inline call stack of up to 20 frames (inside out, each frame at its call site). Covers the regular PRINT family, HTML_PRINT / HTML_PRINTC, system single-line output and error buttons; output produced by the debug window's own ERB execution is excluded automatically. When disabled, each print costs one static bool check — zero behavior impact. Files: `PrintWatch.cs` (new), `PrintStringBuffer.cs`, `EmueraConsole.Print.cs`, `DebugDialog.cs`
+
+### Fixed
+
+- CLI `screen` returning an empty array on div screens: now reads physical lines bottom-up
+- div (HTML `rect` overlay) content and buttons not readable/clickable: collection completed via the same path as `ConsoleEscapedParts`, and `screen` results gained a `divs` field
+- Occasional `invalid JSON` on the first CLI stdin command: stdin is locked to explicit UTF-8 (with BOM auto-detection/stripping)
+
+### Changed
+
+- **Version signature**: `Skiav14` → `Skiav15` (`1824+v24+EMv18+EEv56+Skiav15`)
+
+***
+
 ## [14.0.0] — Variable Write Watch
 
 ### Added

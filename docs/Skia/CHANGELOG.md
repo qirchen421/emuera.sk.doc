@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [15.0.0] — CLI デバッグモード + プリント監視
+
+### Added
+
+- **`--CliDebug` CLI デバッグモード**：stdin/stdout JSON Lines プロトコルにより、AI エージェント等の外部プログラムからインタプリタを駆動してデバッグできる。`-Debug` を暗黙指定。WinForms のメッセージループと描画パイプラインは維持しつつ、ウィンドウは最小化・非表示のみ。stdin スレッドがコマンドを読み取り `MainWindow.Invoke` で UI スレッドへディスパッチし、stdout へ `hello` / `ready` / `out` / `wait` / `state` / `dialog` / `exit` イベントを推送。コマンドは `input` / `click` / `key` / `debug` / `watch`（変数書き込み監視）/ `trace` / `screen` / `buttons` / `quit` 等に加え、`!式` の簡便入力にも対応。モーダルダイアログは CLI モードではすべて stdout イベントに置き換わり、無人実行での停滞を回避。対象：`CliDebugHost.cs`（新規）/ `Program.cs` / `EmueraConsole.cs`
+- **プリント監視（デバッグウィンドウ）**：デバッグウィンドウに「プリント監視」タブ（監視開始 / 停止してレポート / 呼び出しスタック記録チェックボックス）を追加。ゲームコンソールへ送られるすべてのテキスト出力とその発生源（関数 + ファイル:行番号）を記録し、明細は `debug\print_trace.log` に出力（10 万件超過後は集計のみ）、タブ内に 300ms 間隔のライブビュー、停止時に位置別集計レポート（回数降順）をコンソールへ出力。最大 20 フレームのインライン呼び出しスタック（内側から外側へ、各層の呼び出し箇所）を任意で付加。通常 PRINT 系・HTML_PRINT / HTML_PRINTC・システム単行出力とエラーボタンをすべて網羅し、デバッグウィンドウ自身の ERB 実行による出力は自動除外。未有効時はプリントごとに静的 bool 判定 1 回のみで動作影響ゼロ。対象：`PrintWatch.cs`（新規）/ `PrintStringBuffer.cs` / `EmueraConsole.Print.cs` / `DebugDialog.cs`
+
+### Fixed
+
+- CLI `screen` が div 画面で空配列を返す問題：物理行単位で下から読み取る方式に変更
+- div（HTML `rect` オーバーレイ）の内容・ボタンが読み取り/クリックできない問題：`ConsoleEscapedParts` と同源の経路で収集を補完し、`screen` 結果に `divs` フィールドを追加
+- CLI の最初の stdin コマンドが稀に `invalid JSON` になる問題：stdin を明示的 UTF-8 に固定（BOM 自動検出/剥離）
+
+### Changed
+
+- **バージョン署名**：`Skiav14` → `Skiav15`（`1824+v24+EMv18+EEv56+Skiav15`）
+
+***
+
 ## [14.0.0] — 変数書き込み監視
 
 ### Added
