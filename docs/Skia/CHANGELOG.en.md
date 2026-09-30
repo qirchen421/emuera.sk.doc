@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [15.1.0] — Call Stack in Variable Write Watch
+
+### Added
+
+- **Optional call-stack recording for variable write watch (debug window)**: the control row of the variable watch tab becomes a flow layout (same as the print watch tab — laid out by actual text width, wrapping automatically when the window is too narrow) and gains a "Record call stack" checkbox. When checked, the location field of each record expands from "function (file:line)" into an inline call stack of up to 20 frames (inside out), in the same format used by print watch — the site/stack formatting of both is extracted into a shared file. The state is marked both in the start message and in the first line of the log file. Files: `CallStackFormatter.cs` (new), `PrintWatch.cs`, `VarWriteWatch.cs`, `DebugDialog.cs`, `DebugDialog.Designer.cs`
+- **`stack` parameter for the CLI `watch` command**: `{"cmd":"watch","action":"start","vars":[…],"stack":true}` is equivalent to the debug window checkbox; the result event echoes `"stack":true|false`. Files: `CliDebugHost.cs`
+
+### Fixed
+
+- CLI watch start inherited the debug window's checkbox state: `watch start` never assigned the static switch, so a previously ticked "Record call stack" silently kept recording with stacks (different aggregation granularity), while the new capability was otherwise unavailable to the CLI. It is now assigned explicitly from the `stack` parameter, defaulting to `false`
+- Non-deterministic line order in the variable write watch report: the "per variable" section followed `Dictionary` iteration order, so the same data could produce different line orders. Now sorted by write count descending, then variable name ordinal — the same rule as print watch (15.0.0)
+
+### Changed
+
+- The location marker for out-of-script writes in variable write watch changed from `<unknown>` to `<system>` (the necessary consequence of sharing the formatter with print watch); this field can no longer be aggregated across versions in one pass
+- **Version signature**: `Skiav15` → `Skiav15.1` (`1824+v24+EMv18+EEv56+Skiav15.1`)
+
+***
+
 ## [15.0.0] — CLI Debug Mode + Print Watch
 
 ### Added

@@ -4,6 +4,25 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [15.1.0] — 变量写入监视调用栈
+
+### Added
+
+- **变量写入监视可选记录调用栈（调试窗口）**：变量监视页的控制行改为流式布局（与打印监视页同款，按文字实际占位排版、窗口过窄时自动换行），新增「记录调用栈」勾选项。勾选后每条写入记录的位置字段由「函数(文件:行号)」扩展为由内到外最多 20 帧的内联调用栈，与打印监视同格式——两者的位置/调用栈格式化抽取为共用文件。开始监视时的控制台提示与日志首行均标记该状态。涉及 `CallStackFormatter.cs`（新）/ `PrintWatch.cs` / `VarWriteWatch.cs` / `DebugDialog.cs` / `DebugDialog.Designer.cs`
+- **CLI `watch` 命令的 `stack` 参数**：`{"cmd":"watch","action":"start","vars":[…],"stack":true}` 与调试窗口勾选项等价，结果事件回显 `"stack":true|false`。涉及 `CliDebugHost.cs`
+
+### Fixed
+
+- CLI 启动变量写入监视时残留调试窗口的勾选状态：`watch start` 从不给该静态开关赋值，先在 GUI 勾过「记录调用栈」会静默按含调用栈记录（统计粒度不同），反之该能力对 CLI 不可用。现按 `stack` 参数显式赋值，缺省 `false`
+- 变量写入监视报告行序不确定：「按变量统计」段原按 `Dictionary` 遍历顺序输出，同一份数据两次报告行序可能不同。现按写入次数降序、同次数按变量名 Ordinal，与打印监视（15.0.0）同规则
+
+### Changed
+
+- 变量写入监视的「脚本外写入」位置标记由 `<unknown>` 统一为 `<system>`（与打印监视共用格式化器的必然结果），跨版本日志的该字段不可直接混排统计
+- **版本签名**：`Skiav15` → `Skiav15.1`（`1824+v24+EMv18+EEv56+Skiav15.1`）
+
+***
+
 ## [15.0.0] — CLI 调试模式 + 打印监视
 
 ### Added
