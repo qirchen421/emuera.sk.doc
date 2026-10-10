@@ -118,6 +118,7 @@
 | [実行時メカニズム](runtime-mechanics.md) | ConvertArg→SetTransporter→IntoFunction、REF変数ライフサイクル |
 | [関数安全性と METHOD_SAFE](method-safety.md) | #FUNCTION本体内で使用可能な命令の制限、METHOD_SAFEフラグ、RESULT汚染との違い |
 | [定数畳み込み](constant-folding.md) | CanRestructure、配列初期化の定数畳み込み、SELECTCASEジャンプテーブル最適化 |
+| [Renameマクロ](rename-macro.md) | `[[名前]]` コンパイル時置換、_Rename.csv 書式、CSV/ERD/ALS との対比 |
 
 ---
 

@@ -188,3 +188,4 @@ ENDSELECT
 - [変数宣言システム](variable-declaration.md) — #DIM/#DIMS/#DIMF 宣言と配列初期化
 - [条件分岐](condition.md) — SELECTCASE 構文の基本
 - [コマンド vs 式](command-vs-expression.md) — 式中関数の仕組み
+- [Renameマクロ](rename-macro.md) — `[[名前]]` 置換結果も定数畳み込みに参加する

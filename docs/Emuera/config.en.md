@@ -197,7 +197,8 @@ Whether to ignore case differences in commands and variables in ERB. Default is 
 
 ### Use _Rename.csv
 Whether to use `EraMakerEx`'s `_Rename.csv`. Default is `NO` (do not use).  
-For `_Rename.csv` specifications, refer to `EraMakerEx`'s `Readme.txt` (not included with Emuera).
+For `_Rename.csv` specifications, refer to `EraMakerEx`'s `Readme.txt` (not included with Emuera).  
+For details on `_Rename.csv` and the `[[name]]` notation, see the tutorial page [Rename Macro](../tutorial/rename-macro.en.md).
 
 ### Use _Replace.csv
 Whether to use the `_Replace.csv` functionality added in private modification version 1.52a-c.

@@ -196,6 +196,7 @@ EM+EE的功能，现在可以从与Emuera同目录下的`font`文件夹及`ttf`�
 ### 使用 _Rename.csv  
 是否使用`EraMakerEx`的`_Rename.csv`。默认为`NO（不使用）`。  
 关于`_Rename.csv`的规格，请参考`EraMakerEx`的`Readme.txt`（Emuera中未包含）。  
+`_Rename.csv`与`[[名字]]`记法的详细说明见教程的[Rename 宏](../tutorial/rename-macro.zh.md)。  
 
 ### 使用 _Replace.csv  
 是否使用私家改造版1.52a-c中新增的`_Replace.csv`功能。  

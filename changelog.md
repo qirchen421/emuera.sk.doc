@@ -104,6 +104,7 @@
 
 | 日期 | 变更 |
 |------|------|
+| 2026-10-10 | 新建教程页「Renameマクロ／Rename 宏／Rename Macro」三语言版（`[[名前]]` 编译期置换、_Rename.csv 格式、与 CSV/ERD/ALS 机制对比），入第7章高级主题导航；file-types／variable-declaration#identifiers／constant-folding／config 的 rename 选项节交叉引用（三语言同步） |
 | 2026-05-22 | METHOD_SAFE / 常量折叠进阶主题三语言版；资源设置独立教程页；anti-patterns 移除；章节编号统一；导航标签翻译；Emuera/resources 标注历史文档 |
 | 2026-05-15 | 第7章高级主题三语言版（runtime-mechanics、dynamic-reflection）；mkdocs.yml 导航更新 |
 | 2026-05-12 | Phase 4 多语言同步（12 个 .en.md + 2500+ 链接修复）；函数手册页返回值标注统一；角色变量系统；CSV→变量映射；eramaker 语法覆盖 |

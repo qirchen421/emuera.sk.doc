@@ -652,6 +652,8 @@ HOGE2D:赤:りんご = 5
 
 **Specification references**: [User-Defined Variables](../Emuera/user_defined_variables.en.md) (ERD feature section), [ERDNAME](../Reference/ERDNAME.en.md).
 
+> **A separate name→value mechanism**: everything above is a dictionary of name-indexed variables. The `[[name]]` compile-time substitution, which embeds a value (number) anywhere in an expression, is a different mechanism — see [Rename Macro](rename-macro.en.md).
+
 ---
 
 ## VARIADIC — Variable Arguments

@@ -192,6 +192,7 @@ ERB中の命令や変数の大文字・小文字の違いを無視するかど�
 ### _Rename.csvを利用する  
 `EraMakerEx`の`_Rename.csv`を使用するかどうかです。ディフォルトは`NO（しない）`です。  
 なお、`_Rename.csv`の仕様に関しては`EraMakerEx`の`Readme.txt`（Emueraには同梱されていません）を参照してください。  
+`_Rename.csv`と`[[名前]]`記法の詳細はチュートリアルの[Renameマクロ](../tutorial/rename-macro.md)を参照してください。  
 
 ### _Replace.csvを利用する  
 私家改造版1.52a-cで追加された`_Replace.csv`の機能を使用するかどうかです。  

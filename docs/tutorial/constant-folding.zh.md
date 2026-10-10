@@ -188,3 +188,4 @@ ENDSELECT
 - [变量声明系统](variable-declaration.zh.md) — #DIM/#DIMS/#DIMF 声明与数组初始化
 - [条件分支](condition.zh.md) — SELECTCASE 语法基础
 - [命令 vs 表达式](command-vs-expression.zh.md) — 表达式函数机制
+- [Rename 宏](rename-macro.zh.md) — `[[名字]]` 替换结果同样参与常量折叠

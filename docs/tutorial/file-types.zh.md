@@ -78,7 +78,7 @@ BASE:1,500
 TALENT:0,1
 ```
 
-关于 `item.csv`、`abl.csv` 这类名字定义文件与 ERH `#DIM` 用户变量的 `.erd`、别名 `.als` 机制，见[变量标识符：CSV／ALS／ERD](variable-declaration.zh.md#identifiers)。
+关于 `item.csv`、`abl.csv` 这类名字定义文件与 ERH `#DIM` 用户变量的 `.erd`、别名 `.als` 机制，见[变量标识符：CSV／ALS／ERD](variable-declaration.zh.md#identifiers)。`_Rename.csv` 的 `[[名字]]` 编译期替换见 [Rename 宏](rename-macro.zh.md)。
 
 ---
 

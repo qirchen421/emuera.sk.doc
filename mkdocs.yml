@@ -73,6 +73,7 @@ nav:
           - tutorial/runtime-mechanics.md
           - tutorial/method-safety.md
           - tutorial/constant-folding.md
+          - tutorial/rename-macro.md
   - 仕様概要:
       - Skia版:
           - Skia/Skia_Summary.md

@@ -652,6 +652,8 @@ HOGE2D:赤:りんご = 5
 
 **规格参考**：[用户定义变量](../Emuera/user_defined_variables.zh.md)（ERD 功能节）、[ERDNAME](../Reference/ERDNAME.zh.md)。
 
+> **另一系的名字→值机制**：以上都是"变量的名字下标"字典。可以把值（编号）嵌入表达式任意位置的 `[[名字]]` 编译期替换是另一套机制，见 [Rename 宏](rename-macro.zh.md)。
+
 ---
 
 ## VARIADIC — 可变参数

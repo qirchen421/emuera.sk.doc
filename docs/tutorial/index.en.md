@@ -118,6 +118,7 @@
 | [Runtime Mechanics](runtime-mechanics.en.md) | ConvertArg→SetTransporter→IntoFunction, REF variable lifecycle |
 | [Function Safety & METHOD_SAFE](method-safety.en.md) | Command restrictions in #FUNCTION bodies, METHOD_SAFE flag, distinction from RESULT pollution |
 | [Constant Folding](constant-folding.en.md) | CanRestructure, array initialization constant folding, SELECTCASE jump table optimization |
+| [Rename Macro](rename-macro.en.md) | `[[name]]` compile-time substitution, _Rename.csv format, contrast with CSV/ERD/ALS |
 
 ---
 

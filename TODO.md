@@ -24,6 +24,16 @@
 
 ## ✅ 已完成
 
+### Rename 宏教程页（2026-10-10）
+
+> `_Rename.csv`／`[[名前]]` 此前全站零覆盖（仅 config 选项一句话 + 指向未随附的 EraMakerEx Readme）。规格正源以本站教程页为准，机制细节由引擎源码（lazyloading fork）验证。
+
+| 项目 | 操作 | 状态 |
+|------|------|------|
+| `tutorial/rename-macro.md`（日/中/英三语言） | 新建：格式·处理流程·机制对比表·示例·陷阱 | ✅ |
+| mkdocs.yml 导航 | 第7章「高度なトピック」追加 | ✅ |
+| 交叉引用（三语言） | file-types／variable-declaration#identifiers／constant-folding 関連章／config 选项节／tutorial index 第7章表 | ✅ |
+
 ### Reference 页面补充：EM+EE 新增函数
 
 > 来源：[Creator.cs](file:///d:/emuera/emuera_lazyloading_selfmodified_version/Emuera/Runtime/Script/Statements/Function/Creator.cs)

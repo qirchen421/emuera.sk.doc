@@ -118,6 +118,7 @@
 | [运行时机制](runtime-mechanics.zh.md) | ConvertArg→SetTransporter→IntoFunction、REF变量生命周期 |
 | [函数安全性与 METHOD_SAFE](method-safety.zh.md) | #FUNCTION 体内可用命令限制、METHOD_SAFE flag、与 RESULT 污染的区别 |
 | [常量折叠](constant-folding.zh.md) | CanRestructure、数组初始化常量折叠、SELECTCASE 跳转表优化 |
+| [Rename 宏](rename-macro.zh.md) | `[[名字]]` 编译期替换、_Rename.csv 格式、与 CSV/ERD/ALS 的对比 |
 
 ---
 

@@ -188,3 +188,4 @@ Constant folding and jump table optimization are **completely transparent** — 
 - [Variable Declaration System](variable-declaration.en.md) — #DIM/#DIMS/#DIMF declarations and array initialization
 - [Conditionals](condition.en.md) — SELECTCASE syntax basics
 - [Command vs Expression](command-vs-expression.en.md) — Expression function mechanics
+- [Rename Macro](rename-macro.en.md) — `[[name]]` substitution results also participate in constant folding

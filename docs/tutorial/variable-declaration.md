@@ -651,6 +651,8 @@ HOGE2D:赤:りんご = 5
 
 **仕様参考**：[ユーザー定義の変数](../Emuera/user_defined_variables.md)（ERD 機能節）、[ERDNAME](../Reference/ERDNAME.md)。
 
+> **別系統の名前→値仕組み**：上記はいずれも「変数の名前添字」辞書です。式の任意の位置に値（番号）を埋め込める `[[名前]]` コンパイル時置換は別物で、[Renameマクロ](rename-macro.md)を参照してください。
+
 ---
 
 ## VARIADIC — 可変引数
