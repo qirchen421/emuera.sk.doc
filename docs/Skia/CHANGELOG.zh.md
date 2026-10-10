@@ -12,7 +12,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **私有字体（`font/` 目录，如 game-icons）在 Skia/GDI 两条链均无法命中**：`SKTypeface.FromFamilyName` 对未安装字体名返回默认字体而非 null，致自定义字体分支成为死代码。Skia 链改为私有字体优先匹配；GDI 链改为在 `PrivateFontCollection` 中按族名查 `FontFamily`。`<font face='game-icons'>`、`GSETFONT "game-icons"` 链路恢复。涉及 `FontFactory.cs`
 - **GDRAWTEXT 对 BMP 外字符（emoji 等代理对）画出豆腐块**：UTF-16 码元逐字处理改为按完整 codepoint 处理，BMP 字符与代理对统一走 `GetFallbackTypefaceForCodepoint`（继承 `GSETFONT` 指定的字体族倾向）。涉及 `GraphicsImage.cs` / `FontFactory.cs`
 - **emoji/符号回退落到彩色字体（Segoe UI Emoji）**：`MatchCharacter` 之前新增单色符号字体（`Segoe UI Symbol`）优先层，emoji/符号以黑白呈现。涉及 `FontFactory.cs`
-- **TEXT_BGC_ON 背景色判定漏排空格行与图片/形状行**：`IsNullOrWhiteSpace` 判定改为「非空字符串即有内容（允许全角/半角空格）」「非文本节点（图片/形状/像素制表）一律算有内容」，修复 UI 排版/进度条用空格行丢失背景色。涉及 `ConsoleDisplayLine.cs`（Xamarin 端同步修复）
 
 ### Changed
 

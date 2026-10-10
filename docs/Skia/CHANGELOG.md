@@ -12,7 +12,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **プライベートフォント（`font/` ディレクトリ、例：game-icons）が Skia・GDI 両経路で命中しない**：`SKTypeface.FromFamilyName` は未インストールのフォント名に対して null でなく既定フォントを返すため、後続のカスタムフォント分岐が死コード化していた。Skia 経路はカスタムフォント優先の照合へ、GDI 経路は `PrivateFontCollection` 内の `FontFamily` 検索へ変更。`<font face='game-icons'>` や `GSETFONT "game-icons"` の経路が復旧。対象：`FontFactory.cs`
 - **GDRAWTEXT の BMP 外文字（emoji 等の代理ペア）が豆腐になる**：UTF-16 コード単位の走査を完全な codepoint 単位へ変更し、BMP 文字と代理ペアのフォールバック経路を `GetFallbackTypefaceForCodepoint` へ統一（`GSETFONT` で指定したフォント族の傾向を継承）。対象：`GraphicsImage.cs` / `FontFactory.cs`
 - **emoji/記号のフォールバックがカラーフォント（Segoe UI Emoji）に落ちる**：`MatchCharacter` の前にモノクロシンボルフォント（`Segoe UI Symbol`）優先層を追加し、白黒文字として描画可能に。対象：`FontFactory.cs`
-- **TEXT_BGC_ON の背景色判定が空白行・画像/形状行を取りこぼす**：`IsNullOrWhiteSpace` による判定を「空文字列でなければ内容あり（全角/半角スペースを許容）」「非テキストノード（画像/形状/ピクセルタブ）は常に内容あり」へ変更し、UI レイアウトやプログレスバー用のスペース行が背景色を失う問題を修正。対象：`ConsoleDisplayLine.cs`（Xamarin 端も同時修正）
 
 ### Changed
 

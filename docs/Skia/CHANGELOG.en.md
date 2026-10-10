@@ -12,7 +12,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Private fonts (`font/`, e.g. game-icons) were never matched on either the Skia or the GDI path**: `SKTypeface.FromFamilyName` returns the default font instead of null for uninstalled family names, which turned the custom-font branch into dead code. The Skia path now matches custom typefaces first; the GDI path looks up `FontFamily` inside `PrivateFontCollection`. `<font face='game-icons'>` and `GSETFONT "game-icons"` work again. Files: `FontFactory.cs`
 - **GDRAWTEXT drew tofu blocks for non-BMP characters (emoji surrogate pairs)**: scanning switched from UTF-16 code units to full codepoints; BMP characters and surrogate pairs now share one fallback path via `GetFallbackTypefaceForCodepoint` (inheriting the family set by `GSETFONT`). Files: `GraphicsImage.cs` / `FontFactory.cs`
 - **Emoji/symbol fallback landed on a color font (Segoe UI Emoji)**: a monochrome symbol font (`Segoe UI Symbol`) is now preferred before `MatchCharacter`, so emoji/symbols render in black-and-white. Files: `FontFactory.cs`
-- **TEXT_BGC_ON background detection skipped space-only and image/shape-only lines**: the `IsNullOrWhiteSpace` check was replaced by "any non-empty string counts as content (full-width/half-width spaces allowed)" and "non-text nodes (image/shape/pixel tab) always count as content", fixing lost backgrounds in UI layout and progress-bar spacing. Files: `ConsoleDisplayLine.cs` (Xamarin side fixed in tandem)
 
 ### Changed
 
