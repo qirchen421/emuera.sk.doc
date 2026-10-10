@@ -4,6 +4,23 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.0.0] — 安定性・フォント描画とプラグイン読み込み
+
+### Fixed
+
+- **共有 `SKFont` の早すぎる解放による use-after-free（ネイティブアクセス違反の根本原因）**：`GraphicsImage.GDispose()` が、`GSETFONT` で渡された `FontFactory.GetFont` のキャッシュに属する共有 `SKFont` インスタンスを `Dispose()` しており、他の保持者が解放済みのネイティブハンドルへアクセスして `0xc0000005` を引き起こしていた。`GDispose()` は参照解除のみに変更、`FontFactory.ClearFont()` も共有 typeface を解放しないよう収拾（GC / SkiaSharp のファイナライザーに委ねる）。対象：`GraphicsImage.cs` / `FontFactory.cs`
+- **プライベートフォント（`font/` ディレクトリ、例：game-icons）が Skia・GDI 両経路で命中しない**：`SKTypeface.FromFamilyName` は未インストールのフォント名に対して null でなく既定フォントを返すため、後続のカスタムフォント分岐が死コード化していた。Skia 経路はカスタムフォント優先の照合へ、GDI 経路は `PrivateFontCollection` 内の `FontFamily` 検索へ変更。`<font face='game-icons'>` や `GSETFONT "game-icons"` の経路が復旧。対象：`FontFactory.cs`
+- **GDRAWTEXT の BMP 外文字（emoji 等の代理ペア）が豆腐になる**：UTF-16 コード単位の走査を完全な codepoint 単位へ変更し、BMP 文字と代理ペアのフォールバック経路を `GetFallbackTypefaceForCodepoint` へ統一（`GSETFONT` で指定したフォント族の傾向を継承）。対象：`GraphicsImage.cs` / `FontFactory.cs`
+- **emoji/記号のフォールバックがカラーフォント（Segoe UI Emoji）に落ちる**：`MatchCharacter` の前にモノクロシンボルフォント（`Segoe UI Symbol`）優先層を追加し、白黒文字として描画可能に。対象：`FontFactory.cs`
+- **TEXT_BGC_ON の背景色判定が空白行・画像/形状行を取りこぼす**：`IsNullOrWhiteSpace` による判定を「空文字列でなければ内容あり（全角/半角スペースを許容）」「非テキストノード（画像/形状/ピクセルタブ）は常に内容あり」へ変更し、UI レイアウトやプログレスバー用のスペース行が背景色を失う問題を修正。対象：`ConsoleDisplayLine.cs`（Xamarin 端も同時修正）
+
+### Changed
+
+- **プラグイン読み込みの堅牢化（MR-19 コア変更の還流）**：個別プラグイン DLL の読み込み失敗はエラー出力後に継続（旧：初期化全体が中断）；プラグインディレクトリは `Program.ExeDir` 配下の `Plugins` を優先し、CWD 相対パスへフォールバック（旧：CWD のみ）；`AppDomain.AssemblyResolve` でプラグインの参照アセンブリ名 `Emuera` をコアアセンブリへ転送し、依存 DLL もプラグインディレクトリからフォールバック読み込み（Windows 本体アセンブリ名は元が `Emuera` のため転送はフォールバックとしてのみ機能）。対象：`PluginManager.cs`
+- **バージョン署名**：`Skiav15.1` → `Skiav16`（`1824+v24+EMv18+EEv56+Skiav16`）
+
+***
+
 ## [15.1.0] — 変数書き込み監視の呼び出しスタック
 
 ### Added

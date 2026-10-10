@@ -4,6 +4,23 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.0.0] — 稳定性、字体渲染与插件加载
+
+### Fixed
+
+- **共享 `SKFont` 被提前释放导致 use-after-free（原生访问冲突根因）**：`GraphicsImage.GDispose()` 曾对 `GSETFONT` 传入、由 `FontFactory.GetFont` 缓存共享的 `SKFont` 实例调用 `Dispose()`，其余持有者访问已释放的原生句柄触发 `0xc0000005`。现 `GDispose()` 仅置空引用；`FontFactory.ClearFont()` 也不再 Dispose 共享 typeface，交由 GC/SkiaSharp 终结器回收。涉及 `GraphicsImage.cs` / `FontFactory.cs`
+- **私有字体（`font/` 目录，如 game-icons）在 Skia/GDI 两条链均无法命中**：`SKTypeface.FromFamilyName` 对未安装字体名返回默认字体而非 null，致自定义字体分支成为死代码。Skia 链改为私有字体优先匹配；GDI 链改为在 `PrivateFontCollection` 中按族名查 `FontFamily`。`<font face='game-icons'>`、`GSETFONT "game-icons"` 链路恢复。涉及 `FontFactory.cs`
+- **GDRAWTEXT 对 BMP 外字符（emoji 等代理对）画出豆腐块**：UTF-16 码元逐字处理改为按完整 codepoint 处理，BMP 字符与代理对统一走 `GetFallbackTypefaceForCodepoint`（继承 `GSETFONT` 指定的字体族倾向）。涉及 `GraphicsImage.cs` / `FontFactory.cs`
+- **emoji/符号回退落到彩色字体（Segoe UI Emoji）**：`MatchCharacter` 之前新增单色符号字体（`Segoe UI Symbol`）优先层，emoji/符号以黑白呈现。涉及 `FontFactory.cs`
+- **TEXT_BGC_ON 背景色判定漏排空格行与图片/形状行**：`IsNullOrWhiteSpace` 判定改为「非空字符串即有内容（允许全角/半角空格）」「非文本节点（图片/形状/像素制表）一律算有内容」，修复 UI 排版/进度条用空格行丢失背景色。涉及 `ConsoleDisplayLine.cs`（Xamarin 端同步修复）
+
+### Changed
+
+- **插件加载健壮化（MR-19 内核改动回流）**：单个插件 DLL 加载失败改为错误输出后继续（旧：中断整个初始化）；插件目录 `Program.ExeDir` 下 `Plugins` 优先、CWD 相对路径兜底（旧：仅 CWD）；`AppDomain.AssemblyResolve` 将插件引用的程序集名 `Emuera` 转发到内核程序集、依赖 DLL 从插件目录兜底加载（Windows 主程序集名本就是 `Emuera`，转发仅作兜底）。涉及 `PluginManager.cs`
+- **版本签名**：`Skiav15.1` → `Skiav16`（`1824+v24+EMv18+EEv56+Skiav16`）
+
+***
+
 ## [15.1.0] — 变量写入监视调用栈
 
 ### Added

@@ -4,6 +4,23 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.0.0] — Stability, Font Rendering and Plugin Loading
+
+### Fixed
+
+- **Use-after-free from premature disposal of a shared `SKFont` (root cause of native access violations)**: `GraphicsImage.GDispose()` used to `Dispose()` the `SKFont` instance passed in via `GSETFONT`, which is cached and shared by `FontFactory.GetFont` across holders; later accesses hit the freed native handle and raised `0xc0000005`. `GDispose()` now only clears the reference; `FontFactory.ClearFont()` no longer disposes shared typefaces either, leaving reclamation to GC/SkiaSharp finalizers. Files: `GraphicsImage.cs` / `FontFactory.cs`
+- **Private fonts (`font/`, e.g. game-icons) were never matched on either the Skia or the GDI path**: `SKTypeface.FromFamilyName` returns the default font instead of null for uninstalled family names, which turned the custom-font branch into dead code. The Skia path now matches custom typefaces first; the GDI path looks up `FontFamily` inside `PrivateFontCollection`. `<font face='game-icons'>` and `GSETFONT "game-icons"` work again. Files: `FontFactory.cs`
+- **GDRAWTEXT drew tofu blocks for non-BMP characters (emoji surrogate pairs)**: scanning switched from UTF-16 code units to full codepoints; BMP characters and surrogate pairs now share one fallback path via `GetFallbackTypefaceForCodepoint` (inheriting the family set by `GSETFONT`). Files: `GraphicsImage.cs` / `FontFactory.cs`
+- **Emoji/symbol fallback landed on a color font (Segoe UI Emoji)**: a monochrome symbol font (`Segoe UI Symbol`) is now preferred before `MatchCharacter`, so emoji/symbols render in black-and-white. Files: `FontFactory.cs`
+- **TEXT_BGC_ON background detection skipped space-only and image/shape-only lines**: the `IsNullOrWhiteSpace` check was replaced by "any non-empty string counts as content (full-width/half-width spaces allowed)" and "non-text nodes (image/shape/pixel tab) always count as content", fixing lost backgrounds in UI layout and progress-bar spacing. Files: `ConsoleDisplayLine.cs` (Xamarin side fixed in tandem)
+
+### Changed
+
+- **Hardened plugin loading (kernel change from MR-19 backflowed)**: a single failing plugin DLL now logs an error and loading continues (previously the whole initialization aborted); the plugin directory resolves `Plugins` under `Program.ExeDir` first with a CWD-relative fallback (previously CWD only); `AppDomain.AssemblyResolve` forwards the plugin-referenced assembly name `Emuera` to the core assembly and loads plugin dependency DLLs from the plugin directory as a fallback (on Windows the main assembly is already named `Emuera`, so the forwarding acts as a fallback only). Files: `PluginManager.cs`
+- **Version signature**: `Skiav15.1` → `Skiav16` (`1824+v24+EMv18+EEv56+Skiav16`)
+
+***
+
 ## [15.1.0] — Call Stack in Variable Write Watch
 
 ### Added
