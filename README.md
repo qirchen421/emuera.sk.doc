@@ -1,43 +1,47 @@
-# Release page
+| [日本語](README.ja.md) | [English](README.en.md) | [简体中文](README.md) |
+| :---: | :---: | :---: |
 
-> **Emuera-SKIA 帮助手册** — 基于 [emuera.em.doc](https://gitlab.com/EvilMask/emuera.em.doc) 派生的 SkiaSharp 版本文档。
+# [Release page](https://qirchen421.github.io/emuera.sk.doc/index.html)
 
-| [日本語](https://emuera-sk-doc-705c3d.gitgud.site/index.html) | [English](https://emuera-sk-doc-705c3d.gitgud.site/en/index.html) | [简体中文](https://emuera-sk-doc-705c3d.gitgud.site/zh/index.html) |
-| :-------------------------------------------------------------: | :-----------------------------------------------------------------: | :------------------------------------------------------------------: |
+> **[Emuera-SKIA 帮助手册](https://qirchen421.github.io/emuera.sk.doc/index.html)** — 基于 [emuera.em.doc](https://gitlab.com/EvilMask/emuera.em.doc) 派生的 SkiaSharp 版本文档。
 
-# Contribute guide
+| [日本語](https://qirchen421.github.io/emuera.sk.doc/index.html) | [English](https://qirchen421.github.io/emuera.sk.doc/en/index.html) | [简体中文](https://qirchen421.github.io/emuera.sk.doc/zh/index.html) |
+| :---: | :---: | :---: |
 
-1. Fork and clone this repository.
-2. Edit `.md` files for your language, by adding lang-code.
-    
-    For example:
-    | Default(ja) | English(en)  | Chinese(zh)  |
+# 贡献指南
+
+1. Fork 并克隆本仓库。
+2. 编辑你所使用语言的 `.md` 文件，为其加上对应的语言代码后缀。
+
+    例如：
+    | 默认(ja) | English(en)  | 中文(zh)     |
     | ----------- | ------------ | ------------ |
     | README.md   | README.en.md | README.zh.md |
-4. Commit to your forked repository and make a pull request.
-    
-        Note: Your don't neet to change and link that link to the internal file, like
-        changing [`REGEXPMATCH`](./REGEXPMATCH.md) into [`REGEXPMATCH`](./REGEXPMATCH.en.md)
-        the mkdocs will handle it automatically. Just simply add a `REGEXPMATCH.en.md` into
-        the folder.
+3. 提交到你 fork 的仓库，并创建 pull request。
 
-# Preview on local machine
+    ```
+    注意：指向仓库内部文件的链接无需改写，例如把
+    [`REGEXPMATCH`](./REGEXPMATCH.md) 改成 [`REGEXPMATCH`](./REGEXPMATCH.en.md)，
+    mkdocs 会自动处理。只需把 `REGEXPMATCH.en.md` 放进同一目录即可。
+    ```
 
-1. Prepare a Python environment.
-2. Open a terminal in the repository root folder.
-3. Install dependencies:
+# 本地预览
+
+1. 准备 Python 环境。
+2. 在仓库根目录打开终端。
+3. 安装依赖：
     ``` bash
     pip install mkdocs
     pip install mkdocs-material
     pip install mkdocs-minify-plugin
     pip install mkdocs-static-i18n
     ```
-    If you want to make an offline build, you should additionally install:
+    若需要离线构建，还应额外安装：
     ``` bash
     pip install mkdocs-minify-plugin
     ```
-    The versions of the latest building environment are:
-    | Name                       | Version |
+    最新构建环境所用版本如下：
+    | 名称                       | 版本    |
     | -------------------------- | ------- |
     | Python                     | 3.12.2  |
     | mkdocs                     | 1.5.3   |
@@ -46,10 +50,9 @@
     | mkdocs-minify-plugin       | 0.8.0   |
     | mkdocs-static-i18n         | 1.2.2   |
 
-4. Run the command to build and start local server:
+4. 运行以下命令构建并启动本地服务器：
 
     ``` bash
     mkdocs serve
     ```
-5. Preview in the browser. (The default URL should be http://127.0.0.1:8000/)
-
+5. 在浏览器中预览。（默认地址应为 http://127.0.0.1:8000/）
