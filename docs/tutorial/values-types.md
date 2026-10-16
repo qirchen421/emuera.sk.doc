@@ -157,6 +157,20 @@ IF L_STR != ""
 ENDIF
 ```
 
+### 文字列関数と C# 正規表現
+
+以下の文字列関数は**内部で C# 正規表現**（`System.Text.RegularExpressions`）を使用し、パターン引数は C# 正規表現の仕様に従います：
+
+| 関数 | 正規表現の箇所 |
+|------|--------------|
+| `STRCOUNT` | 第 2 引数＝正規表現パターン |
+| `REPLACE` | パターン引数＝正規表現 |
+| `FINDELEMENT` / `FINDLASTELEMENT` | 文字列配列の検索値＝正規表現 |
+| `REGEXPMATCH` | パターン引数＝正規表現 |
+| `ESCAPE` | リテラル文字列を正規表現で使えるようエスケープ（`Regex.Escape`） |
+
+> 詳細は [STRCOUNT](../Reference/STRCOUNT.md)、[REPLACE](../Reference/REPLACE.md)、[ESCAPE](../Reference/ESCAPE.md)、[FINDELEMENT](../Reference/FINDELEMENT.md)、[REGEXPMATCH](../Reference/REGEXPMATCH.md) を参照。
+
 ---
 
 ## 浮動小数点型（Skia 変体で追加）

@@ -157,6 +157,20 @@ IF L_STR != ""
 ENDIF
 ```
 
+### String Functions and C# Regex
+
+The following string functions use **C# regular expressions** (`System.Text.RegularExpressions`) internally; their pattern arguments follow C# regex syntax:
+
+| Function | Regex position |
+|----------|----------------|
+| `STRCOUNT` | 2nd argument = regex pattern |
+| `REPLACE` | pattern argument = regex |
+| `FINDELEMENT` / `FINDLASTELEMENT` | the search value of a string array = regex |
+| `REGEXPMATCH` | pattern argument = regex |
+| `ESCAPE` | escapes a literal string so it can be used in a regex (`Regex.Escape`) |
+
+> See [STRCOUNT](../Reference/STRCOUNT.en.md), [REPLACE](../Reference/REPLACE.en.md), [ESCAPE](../Reference/ESCAPE.en.md), [FINDELEMENT](../Reference/FINDELEMENT.en.md), [REGEXPMATCH](../Reference/REGEXPMATCH.en.md) for details.
+
 ---
 
 ## Float Type (Skia variant addition)

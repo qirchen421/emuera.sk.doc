@@ -163,6 +163,24 @@ IF L_STR != ""
 ENDIF
 ```
 
+### 字符串函数与 C# 正则
+
+下列字符串函数**内部使用 C# 正则表达式**（`System.Text.RegularExpressions`），其模式参数遵循 C# 正则规范：
+
+| 函数 | 正则点 |
+|------|--------|
+| `STRCOUNT` | 第 2 参＝正则模式 |
+| `REPLACE` | 模式参数＝正则 |
+| `FINDELEMENT` / `FINDLASTELEMENT` | 字符串数组的搜索值＝正则 |
+| `REGEXPMATCH` | 模式参数＝正则 |
+| `ESCAPE` | 把字面串转义为可安全进正则的文本（`Regex.Escape`） |
+
+!!! warning "元字符须转义"
+
+    因走正则，`()`、`[]`、`$`、`.`、`*`、`+`、`/`（亦可写作 `\/`）等元字符需转义；要按**字面**匹配时用 `ESCAPE(...)` 包裹。
+
+> 详见 [STRCOUNT](../Reference/STRCOUNT.zh.md)、[REPLACE](../Reference/REPLACE.zh.md)、[ESCAPE](../Reference/ESCAPE.zh.md)、[FINDELEMENT](../Reference/FINDELEMENT.zh.md)、[REGEXPMATCH](../Reference/REGEXPMATCH.zh.md)。
+
 ---
 
 ## 浮点数类型（Skia 变体新增）
