@@ -4,6 +4,19 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.1.0] — ユーザー定義変数 ALS 別名のドメイン分離
+
+### Fixed
+
+- **異なるユーザー定義変数ドメインで同名別名を使うと「別名は既に定義されています」（Lv1）**：`loadDataTo` が `ERD_NAMES_INDEX` のグローバル別名表へ全ユーザー変数の `.als` を登録していたため、`EI_BASE.als` / `EI_FLAG.als` などが旧名を共有すると後着が重複警告。ユーザー変数は `loadAliasesForUserDefined` の per-variable 辞書で解決されるため、グローバル表への登録をスキップ。eratw-chs 実測 11 件 → 0 件。対象：`ConstantData.cs`
+
+### Changed
+
+- **バージョン署名**：`Skiav16` → `Skiav16.1`
+- **Android バージョン**：`0.77.0` → `0.77.1`（versionCode 77）
+
+***
+
 ## [16.0.0] — 安定性・フォント描画とプラグイン読み込み
 
 ### Fixed

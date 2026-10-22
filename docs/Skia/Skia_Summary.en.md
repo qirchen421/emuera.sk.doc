@@ -390,6 +390,7 @@
     - **Many-to-one mapping**: Multiple aliases can map to the same index
       - Original limitation: `loadAliases()` used `HashSet<int>` to check index uniqueness, reporting error and skipping on duplicates
       - Skia version: Changed to checking alias name uniqueness, allowing multiple aliases → same index
+    - **Duplicate check is scoped per variable domain (v16.1)**: `.als` files of different user-defined variables may use the same alias name; duplicates within the same variable domain are still skipped. Previously all user-defined variables shared one global alias table, so cross-domain duplicate names produced false "alias already defined" warnings.
 
 !!! info "API"
 

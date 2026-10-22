@@ -4,6 +4,19 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.1.0] — 用户定义变量 ALS 别名按变量域隔离
+
+### Fixed
+
+- **不同用户定义变量域使用同一别名时误报「别名已被定义」（Lv1）**：`loadDataTo` 曾把所有用户变量的 `.als` 注册进 `ERD_NAMES_INDEX` 全局别名表，导致 `EI_BASE.als` / `EI_FLAG.als` 共享旧名时后加载者逐条报警。用户变量别名由 `loadAliasesForUserDefined` 写入 per-variable 字典解析，现跳过全局表注册。eratw-chs 实测 11 条 → 0 条。涉及：`ConstantData.cs`
+
+### Changed
+
+- **版本签名**：`Skiav16` → `Skiav16.1`
+- **Android 版本**：`0.77.0` → `0.77.1`（versionCode 77）
+
+***
+
 ## [16.0.0] — 稳定性、字体渲染与插件加载
 
 ### Fixed

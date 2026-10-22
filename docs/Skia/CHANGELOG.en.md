@@ -4,6 +4,19 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.1.0] — Per-domain isolation of user-defined variable ALS aliases
+
+### Fixed
+
+- **False "alias already defined" (Lv1) when different user-defined variable domains use the same alias**: `loadDataTo` registered every user-defined variable's `.als` into the global `ERD_NAMES_INDEX` alias table, so `EI_BASE.als` / `EI_FLAG.als` sharing legacy names produced duplicate warnings on the later file. User-defined aliases are resolved through the per-variable dictionary built by `loadAliasesForUserDefined`, so the global registration is now skipped. Measured on eratw-chs: 11 warnings → 0. Affected: `ConstantData.cs`
+
+### Changed
+
+- **Version signature**: `Skiav16` → `Skiav16.1`
+- **Android version**: `0.77.0` → `0.77.1` (versionCode 77)
+
+***
+
 ## [16.0.0] — Stability, Font Rendering and Plugin Loading
 
 ### Fixed
