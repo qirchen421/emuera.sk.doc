@@ -81,6 +81,7 @@ nav:
       - EM+EE:
           - EMEE/EMEE_Summary.md
           - 更新日志: EMEE/CHANGELOG.md
+          - CLI 与解析模式: EMEE/CLI_debug_analysis.md
       - Emuera:
           - Emuera/README.md
           - 基本文法:
