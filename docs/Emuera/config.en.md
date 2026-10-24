@@ -333,6 +333,8 @@ If `YES`, even if variables other than ARG, ARGS, or user-defined private variab
 This reproduces the specification from Emuera 1.807 and earlier where omitting arguments with these variables would not perform assignment and maintain the state before calling the function.  
 If errors occur in functions when updating from Emuera 1.807 or earlier, setting this config to `YES` may solve it.
 
+See [Argument omission and the compatibility option](function.en.md#arg-omission) for details.
+
 ### Automatically Supplement TOSTR for User Function Arguments
 Default is `NO`.  
 If `YES`, when passing a number to a string-type argument when calling a function as in Emuera 1.807 and earlier, it automatically converts to string type.  

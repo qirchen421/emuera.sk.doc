@@ -112,9 +112,30 @@
 
 	;错误(初始值仅限常量和常字符串)  
 	@FOOBAR, ARG:0 = MASTER, ARG:1 = TARGET  
-	;对ARG、ARGS、函数中使用#DIM、#DIMS定义的私有变量以外的参数设置初始值会被忽略。  
-	;因此无法按预期运行。  
+	;对 ARG、ARGS、#DIM/#DIMS 私有变量以外的参数设置初始值会触发解析错误（ArgCanOnlyPrivVar）。  
+	;初始值请设置在 ARG/ARGS/私有变量上。  
 	@FOOBAR, X = 5, Y = 4  
+
+### 参数省略与兼容设置 {#arg-omission}
+
+能否省略参数由**形参类型**决定。`ALLOW ARGUMENTS OMISSION FOR USER FUNCTIONS`（[允许省略用户定义函数的所有参数](config.zh.md)）只影响其中**除 ARG/ARGS/私有变量以外**（全局变量）的形参。
+
+| 形参 | 可省略 | 省略时的值 | 是否受配置影响 |
+|---|---|---|---|
+| `ARG`／`ARGS`／`ARGF`、`#DIM`/`#DIMS` 私有变量（有初始值） | 可 | 初始值 | 否 |
+| 同上（无初始值） | 可 | 数值 `0`／实数 `0.0`／字符串 `""` | 否 |
+| 全局变量（`A`、`STR` 等）且无初始值 | `NO`：不可（`CanNotOmitArg`）／`YES`：可 | `YES` 时不赋值，维持调用前的值（1.807 以前行为） | **是** |
+| 非 `OUT` 的 `REF` 形参 | 不可（`CanNotOmitRefArg`） | — | 否 |
+| `OUT` 的 `REF` 形参 | 可 | 空引用 | 否 |
+
+- 配置名虽叫「所有参数」，实际只影响**全局变量形参（无初始值）**；`ARG`/`ARGS`/私有变量的省略在 `NO` 下也始终合法。
+- 判定由现行 fork 的 `ErbLoader.cs` 的 `canDef` 分支（`ARG`/`ARGS`/`ARGF`/私有变量补 `0`/`0.0`/`""`）与 `Process.CalledFunction.cs` 的 `ConvertArg`（`func.Def[i]` 为 `null` 且配置 `NO` 时报 `CanNotOmitArg`）完成。
+- 初始值只能设置在 `ARG`/`ARGS`/私有变量上；给全局变量形参写初始值会触发 `ArgCanOnlyPrivVar` 解析错误。
+
+```
+@F(ARGS:0 = "x", ARG:1)   ; 省略第 2 参时 ARG:1 = 0
+@G(FLAG:0)                ; 配置 NO 时不能省略 FLAG:0
+```
 
 ### 参数引用传递  
 从ver1.810开始，通过在形参中使用引用型变量可以实现参数的引用传递。  

@@ -115,9 +115,30 @@ If the function is called without omitting, the passed values are assigned to `A
 
 	;Error (default values can only be constants and constant strings)
 	@FOOBAR, ARG:0 = MASTER, ARG:1 = TARGET
-	;Setting default values for arguments other than ARG, ARGS, or private variables defined with #DIM, #DIMS in the function is ignored.
-	;Therefore, it does not behave as expected.
+	;Setting a default value for arguments other than ARG, ARGS, or private #DIM/#DIMS variables is a parse error (ArgCanOnlyPrivVar).
+	;Set initial values only on ARG/ARGS/private variables.
 	@FOOBAR, X = 5, Y = 4
+
+### Argument omission and the compatibility option {#arg-omission}
+
+Whether an argument can be omitted depends on the **kind of formal parameter**. `ALLOW ARGUMENTS OMISSION FOR USER FUNCTIONS` ([Allow Omitting All Arguments of User Functions](config.en.md)) only affects formal parameters that are **neither ARG/ARGS nor user-defined private variables** (that is, global variables).
+
+| Formal parameter | Omittable | Value when omitted | Affected by the option |
+|---|---|---|---|
+| `ARG`/`ARGS`/`ARGF`, or a private `#DIM`/`#DIMS` variable (with default) | yes | the default | no |
+| same (without default) | yes | `0` / `0.0` / `""` | no |
+| global variable (`A`, `STR`, ...) without default | `NO`: no (`CanNotOmitArg`) / `YES`: yes | with `YES`, no assignment; keeps the value from before the call (pre-1.807 behavior) | **yes** |
+| non-`OUT` `REF` formal parameter | no (`CanNotOmitRefArg`) | — | no |
+| `OUT` `REF` formal parameter | yes | null reference | no |
+
+- Despite its name ("all arguments"), the option only affects **global-variable formal parameters without defaults**. Omission of `ARG`/`ARGS`/private variables is always allowed, even when the option is `NO`.
+- The decision is made by the `canDef` branch in `ErbLoader.cs` (fills `0`/`0.0`/`""` for `ARG`/`ARGS`/`ARGF`/private variables) and by `ConvertArg` in `Process.CalledFunction.cs` (`func.Def[i]` is `null` and the option is `NO` ⇒ `CanNotOmitArg`).
+- Initial values can only be set on `ARG`/`ARGS`/private variables. A default on a global-variable formal parameter is a parse error (`ArgCanOnlyPrivVar`).
+
+```
+@F(ARGS:0 = "x", ARG:1)   ; omitting arg 2 gives ARG:1 = 0
+@G(FLAG:0)                ; with the option NO, FLAG:0 cannot be omitted
+```
 
 ### Pass by Reference for Arguments
 
