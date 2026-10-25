@@ -4,6 +4,54 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.5.0] — EWP v0.1 finalized: MessagePack as default encoding
+
+### Changed
+
+- **`--ewp` now defaults to MessagePack** (EWP v0.1 canonical form): 4-byte big-endian length-prefixed frames; `--ewp-json` switches to JSON-Lines for debugging/tcpdump-style inspection (zero-dependency dumb frontends); `--ewp-msgpack` kept as a synonym. `hello` now reports `proto:"EWP/0.1"`. The eraWire-godot frontend mirrors the switch (default MessagePack, `--json` opt-in).
+- **Version signature**: `Skiav16.4` → `Skiav16.5`
+
+***
+
+## [16.4.0] — Channel semantic stream (UI_CHANNEL macro boundaries)
+
+### Added
+
+- **`UI_CHANNEL_BEGIN/END/CLEAR` channel hooks**: the three script-side macros (game repo `UI_CHANNEL.ERB`, no-ops on engines without the hook) emit `channel.create/begin/commit/clear` events under `--ewp` (channel id, kind, monotonic rev); `snapshot.full` gains `channels[]`, `state` gains `channels`/`channelMismatch`. Zero overhead outside EWP mode.
+
+### Changed
+
+- **Version signature**: `Skiav16.3` → `Skiav16.4`
+
+***
+
+## [16.3.0] — Pixel stream and MessagePack encoding
+
+### Added
+
+- **`pixel.frame` pixel stream**: full-frame offscreen Skia render → PNG encode (dedicated thread) → event stream; enabled only when the frontend requests `mode.pixel`; overload drops frames instead of blocking script execution. base64 under `--ewp-json`, binary under MessagePack.
+- **L0.5 dual encoding**: JSON-Lines (newline-delimited) and MessagePack (length-prefixed frames) side by side, no third-party package dependency (hand-written subset codec).
+- **Frame-count conservation**: text events are batched into `frame.commit`; `pixel.frame` is an independent frame type, so a dumb frontend can assert "total events = Σevents".
+
+### Changed
+
+- **Version signature**: `Skiav16.2` → `Skiav16.3`
+
+***
+
+## [16.2.0] — EWP event-stream host (external frontend protocol)
+
+### Added
+
+- **`--ewp` event-stream host** (stdio or `--ewp-port` TCP): `hello` capability negotiation, `legacy.line` (monotonic line IDs), `legacy.clear`, `input.request`/`input.submit` round-trip (reqId + generation check, stale input rejected), `meta.state`, `dialog.request`, `frame.commit`, `snapshot.full` (reconnect rebuild), `sprite.set/clear`, `overlay.island`, `hello.metrics` (grid baseline cellW/cellH/lineH/font).
+- **Credit-window backpressure**: sending pauses while the script keeps running once unacked frames hit the cap (replaces the CliDebug pipe-deadlock path).
+- **Frontend viewport report**: `hello.ok.viewport` sets the window client area directly, and `CLIENTWIDTH()/CLIENTHEIGHT()` follow.
+
+### Changed
+
+- **Version signature**: `Skiav16.1` → `Skiav16.2`
+
+***
 ## [16.1.0] — Per-domain isolation of user-defined variable ALS aliases
 
 ### Fixed

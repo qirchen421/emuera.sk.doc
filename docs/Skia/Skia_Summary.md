@@ -189,6 +189,19 @@
 
 ---
 
+### ![](../assets/images/IconSK.webp)外部フロントエンドプロトコル（EWP）
+!!! summary ""
+
+    Emuera をイベントストリームホストとして動作させ、外部フロントエンド（Godot／ブラウザ／AI エージェント／ダム端末）から駆動する。
+
+    - **`--ewp` ホスト**：stdio または TCP（`--ewp-port`）の二伝送。MessagePack が既定エンコード（`--ewp-json` で JSON-Lines デバッグ形態に切替）
+    - **イベント語彙**：`legacy.line`（単調行 ID）／`legacy.clear`／`input.request`↔`input.submit`（reqId＋世代検証）／`frame.commit`／`snapshot.full`（再接続時再構築）／`sprite.*`／`overlay.island`／`pixel.frame`（オフスクリーン全面 PNG）／`channel.*`（スクリプト側 `UI_CHANNEL_*` マクロ境界）
+    - **交渉**：`hello` が caps とグリッド基準（cellW/cellH/lineH/font）を通知、フロントエンドは `hello.ok` でビューポートとピクセルモードを返す
+    - **バックプレッシャ**：クレジット窓（未 ack フレーム上限）で送信を停止しつつスクリプトは継続。ピクセルストリーム過負荷時はフレームを捨ててブロックしない
+    - **移行ゼロ**：旧 ERB の出力は全て legacy チャンネルへ流れ、スクリプト改変不要。チャンネルマクロはフック非搭載エンジンでは空展開
+
+---
+
 ## 定数・変数 { #variables }
 
 ### ![](../assets/images/IconSK.webp)浮動小数点数（Float型）サポート

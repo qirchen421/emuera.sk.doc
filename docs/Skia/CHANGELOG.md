@@ -4,6 +4,54 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.5.0] — EWP v0.1 確定：MessagePack を既定エンコードに
+
+### Changed
+
+- **`--ewp` の既定エンコードを MessagePack に変更**（EWP v0.1 正本）：4 バイトビッグエンディアン長さ前置フレーム。`--ewp-json` で JSON-Lines（デバッグ／パケット観察向け、依存ゼロのダムフロントエンド用）に切替。`--ewp-msgpack` は同義パラメータとして維持。`hello` は `proto:"EWP/0.1"` を報告。フロントエンド eraWire-godot も既定 MessagePack に同期（`--json` で任意切替）。
+- **バージョン署名**：`Skiav16.4` → `Skiav16.5`
+
+***
+
+## [16.4.0] — チャンネル意味ストリーム（UI_CHANNEL マクロ境界）
+
+### Added
+
+- **`UI_CHANNEL_BEGIN/END/CLEAR` チャンネル境界フック**：スクリプト側三マクロ（ゲーム側 `UI_CHANNEL.ERB`、フック非搭載エンジンでは空展開）が `--ewp` 時に `channel.create/begin/commit/clear` イベントを発行（チャンネル id・kind・単調 rev）。`snapshot.full` に `channels[]`、`state` に `channels`/`channelMismatch` を追加。EWP モード外ではゼロオーバーヘッド。
+
+### Changed
+
+- **バージョン署名**：`Skiav16.3` → `Skiav16.4`
+
+***
+
+## [16.3.0] — ピクセルストリームと MessagePack エンコード
+
+### Added
+
+- **`pixel.frame` ピクセルストリーム**：オフスクリーン Skia 全面描画 → PNG エンコード（専用スレッド）→ イベントストリーム。フロントエンドが `mode.pixel` を要求した時のみ有効。過負荷時はフレームを捨て、スクリプト実行を止めない。`--ewp-json` では base64、MessagePack ではバイナリ。
+- **L0.5 デュアルエンコード**：JSON-Lines（改行区切り）と MessagePack（長さ前置フレーム）を併存。サードパーティパッケージ非依存（手書きサブセットコーデック）。
+- **フレーム数保存則**：テキストイベントは `frame.commit` にバッチ合成、`pixel.frame` は独立フレーム種別。ダムフロントエンドで「全イベント数 = Σevents」を検証可能。
+
+### Changed
+
+- **バージョン署名**：`Skiav16.2` → `Skiav16.3`
+
+***
+
+## [16.2.0] — EWP イベントストリームホスト（外部フロントエンドプロトコル）
+
+### Added
+
+- **`--ewp` イベントストリームホスト**（stdio または `--ewp-port` TCP）：`hello` 能力交渉、`legacy.line`（行 ID 単調）、`legacy.clear`、`input.request`/`input.submit` 往復（reqId＋世代検証、期限切れ入力は拒否）、`meta.state`、`dialog.request`、`frame.commit`、`snapshot.full`（再接続時再構築）、`sprite.set/clear`、`overlay.island`、`hello.metrics`（グリッド基準 cellW/cellH/lineH/font）。
+- **クレジット窓バックプレッシャ**：未 ack フレーム数が上限に達すると送信を停止しつつスクリプトは継続（CliDebug のパイプ逆圧デッドロック経路を置換）。
+- **フロントエンドビューポート通知**：`hello.ok.viewport` でウィンドウクライアント領域を直接設定、`CLIENTWIDTH()/CLIENTHEIGHT()` が追従。
+
+### Changed
+
+- **バージョン署名**：`Skiav16.1` → `Skiav16.2`
+
+***
 ## [16.1.0] — ユーザー定義変数 ALS 別名のドメイン分離
 
 ### Fixed

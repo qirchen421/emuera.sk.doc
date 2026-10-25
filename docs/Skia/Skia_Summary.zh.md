@@ -189,6 +189,19 @@
 
 ---
 
+### ![](../assets/images/IconSK.webp)外部前端协议（EWP）
+!!! summary ""
+
+    Emuera 作为事件流宿主，供外部前端（Godot / 浏览器 / AI 代理 / 哑终端）驱动。
+
+    - **`--ewp` 宿主**：stdio 或 TCP（`--ewp-port`）双传输；MessagePack 为默认编码（`--ewp-json` 切 JSON-Lines 调试形态）
+    - **事件词表**：`legacy.line`（单调行 ID）/`legacy.clear`/`input.request`↔`input.submit`（reqId＋世代校验）/`frame.commit`/`snapshot.full`（重连重建）/`sprite.*`/`overlay.island`/`pixel.frame`（离屏整帧 PNG）/`channel.*`（脚本侧 `UI_CHANNEL_*` 宏边界）
+    - **协商**：`hello` 报 caps 与网格基准（cellW/cellH/lineH/font），前端 `hello.ok` 回传视口与像素模式开关
+    - **背压**：信用窗（未 ack 帧数上限）暂停发送但脚本继续执行；像素流过载丢帧不阻塞
+    - **零迁移**：旧 ERB 全部输出落 legacy 通道，无需改动脚本；频道宏在无挂钩引擎上为空展开
+
+---
+
 ## 常量·变量 { #variables }
 
 ### ![](../assets/images/IconSK.webp)浮点数（Float型）支持

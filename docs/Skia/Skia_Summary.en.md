@@ -189,6 +189,19 @@
 
 ---
 
+### ![](../assets/images/IconSK.webp)External Frontend Protocol (EWP)
+!!! summary ""
+
+    Emuera acts as an event-stream host for external frontends (Godot / browser / AI agents / dumb terminals).
+
+    - **`--ewp` host**: stdio or TCP (`--ewp-port`); MessagePack is the default encoding (`--ewp-json` switches to JSON-Lines for debugging)
+    - **Event vocabulary**: `legacy.line` (monotonic line IDs) / `legacy.clear` / `input.request`↔`input.submit` (reqId + generation check) / `frame.commit` / `snapshot.full` (reconnect rebuild) / `sprite.*` / `overlay.island` / `pixel.frame` (full-frame offscreen PNG) / `channel.*` (script-side `UI_CHANNEL_*` macro boundaries)
+    - **Negotiation**: `hello` reports caps and grid baseline (cellW/cellH/lineH/font); the frontend replies `hello.ok` with viewport and pixel-mode switch
+    - **Backpressure**: credit window (unacked frame cap) pauses sending while scripts keep running; pixel-stream overload drops frames without blocking
+    - **Zero migration**: all legacy ERB output lands in the legacy channel with no script changes; channel macros are no-ops on engines without the hook
+
+---
+
 ## Constants & Variables { #variables }
 
 ### ![](../assets/images/IconSK.webp)Floating-Point (Float Type) Support

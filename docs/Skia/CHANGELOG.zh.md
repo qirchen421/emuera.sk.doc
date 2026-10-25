@@ -4,6 +4,54 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.5.0] — EWP v0.1 定稿：MessagePack 默认编码
+
+### Changed
+
+- **`--ewp` 默认编码改为 MessagePack**（EWP v0.1 正本）：4 字节大端长度前缀帧；`--ewp-json` 切换 JSON-Lines 调试形态（抓包/哑前端零依赖）；`--ewp-msgpack` 保留为同义参数。hello 升版 `proto:"EWP/0.1"`。前端 eraWire-godot 同步默认 MessagePack（`--json` 可选）。
+- **版本签名**：`Skiav16.4` → `Skiav16.5`
+
+***
+
+## [16.4.0] — 频道语义流（UI_CHANNEL 宏边界）
+
+### Added
+
+- **`UI_CHANNEL_BEGIN/END/CLEAR` 频道边界挂钩**：脚本侧三宏（游戏仓 `UI_CHANNEL.ERB`，未挂钩引擎上为空展开）在 `--ewp` 模式下产生 `channel.create/begin/commit/clear` 事件（含频道 id、kind、单调 rev）；`snapshot.full` 增 `channels[]`，`state` 增 `channels`/`channelMismatch`。非 EWP 模式零开销。
+
+### Changed
+
+- **版本签名**：`Skiav16.3` → `Skiav16.4`
+
+***
+
+## [16.3.0] — 像素流与 MessagePack 编码
+
+### Added
+
+- **`pixel.frame` 像素流**：离屏 Skia 画布整帧渲染 → PNG 编码（独立线程）→ 事件流；前端请求 `mode.pixel` 才启用，过载丢帧不阻塞脚本执行。`--ewp-json` 下为 base64，MessagePack 下为二进制。
+- **L0.5 双编码**：JSON-Lines（换行定界）与 MessagePack（长度前缀帧）并存，无第三方包依赖（手写子集编解码）。
+- **帧计数守恒**：文本事件按 `frame.commit` 批合成，`pixel.frame` 为独立帧型；哑前端可断言「事件总数 = Σevents」。
+
+### Changed
+
+- **版本签名**：`Skiav16.2` → `Skiav16.3`
+
+***
+
+## [16.2.0] — EWP 事件流宿主（外部前端协议）
+
+### Added
+
+- **`--ewp` 事件流宿主**（stdio 或 `--ewp-port` TCP）：`hello` 能力协商、`legacy.line`（行 ID 单调）、`legacy.clear`、`input.request`/`input.submit` 闭环（reqId + 世代校验，过期输入拒收）、`meta.state`、`dialog.request`、`frame.commit`、`snapshot.full`（断线重连重建）、`sprite.set/clear`、`overlay.island`、`hello.metrics`（网格基准 cellW/cellH/lineH/font）。
+- **信用窗背压**：未 ack 帧数达上限时暂停发送但继续执行脚本（替代 CliDebug 管道反压死锁路径）。
+- **FE 视口回传**：`hello.ok.viewport` 直接设定窗口客户区，`CLIENTWIDTH()/CLIENTHEIGHT()` 随之生效。
+
+### Changed
+
+- **版本签名**：`Skiav16.1` → `Skiav16.2`
+
+***
 ## [16.1.0] — 用户定义变量 ALS 别名按变量域隔离
 
 ### Fixed
