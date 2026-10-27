@@ -4,6 +4,20 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.3] — div の `align` を直列化（フロントエンドの盒内整列用）
+
+### 変更
+
+- `ConsoleDivPart` の開始タグは、先頭子行が左寄せ以外のとき `align='center'|'right'` を付与（左寄せは省略＝大半の行テキストは不変）。`legacy.line` はプレーンテキスト直列化で `<p align>` が落ちていたため、フロントエンドが div 内テキストの整列を復元できなかった
+- 属性の追加のみ。描画/レイアウトは不変。旧フロントエンドは未知属性を無視
+
+### 検証
+
+- `dotnet build` 0 error；eraWire `fdiv_gate` U/R/L/G PASS（n2/r1/c3 回帰含む）；V8-A/V8-B 再実行は eraWire E4 カード §12 参照
+- バージョン署名：`Skiav16.6.2` → `Skiav16.6.3`
+
+***
+
 ## [16.6.2] — レイヤー描画の座標基準を統一（+2px ずれ修正）
 
 ### 変更

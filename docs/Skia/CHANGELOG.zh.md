@@ -4,6 +4,20 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.3] — div 序列化补 `align`（供前端还原盒内对齐）
+
+### 变更
+
+- `ConsoleDivPart` 的开放标签在子行非左对齐时追加 `align='center'|'right'`（取自首个子行；左对齐不写，旧文本不变）。`legacy.line` 是纯文本序列化，原先丢失 `<p align>`，前端无法还原 div 内文字对齐
+- 仅新增属性，不改绘制/布局；旧前端忽略未知属性
+
+### 验证
+
+- `dotnet build` 0 error；eraWire `fdiv_gate` U/R/L/G PASS（含 n2/r1/c3 回归）；V8-A/V8-B 复跑见 eraWire E4 卡 §12
+- 版本签名：`Skiav16.6.2` -> `Skiav16.6.3`
+
+***
+
 ## [16.6.2] — 图层绘制坐标基准统一（修正 +2px 偏移）
 
 ### 变更

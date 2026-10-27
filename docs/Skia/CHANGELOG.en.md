@@ -4,6 +4,20 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.3] — serialize div `align` (for frontends to restore in-box alignment)
+
+### Changed
+
+- The `ConsoleDivPart` open tag appends `align='center'|'right'` when the first child line is not left-aligned (left is omitted, so most line text is unchanged). `legacy.line` is a plain-text serialization and previously dropped `<p align>`, so frontends could not restore div text alignment
+- Attribute-only addition; drawing/layout unchanged; old frontends ignore unknown attributes
+
+### Verification
+
+- `dotnet build` 0 error; eraWire `fdiv_gate` U/R/L/G PASS (including n2/r1/c3 regressions); V8-A/V8-B reruns: see eraWire E4 card section 12
+- Version signature: `Skiav16.6.2` -> `Skiav16.6.3`
+
+***
+
 ## [16.6.2] — unified layer draw basis (fixes +2px offset)
 
 ### Changed
