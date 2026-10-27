@@ -57,4 +57,4 @@ hide:
 
 ## 下载
 
-[**最新版本：Emuera_skiaV16.5_x64**](assets/files/Emuera_skiaV16.5_x64.zip)
+[**最新版本：Emuera_skiaV16.6_x64**](assets/files/Emuera_skiaV16.6_x64.zip)

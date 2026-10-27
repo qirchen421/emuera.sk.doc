@@ -4,6 +4,41 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.0] — EWP v0.3 finalized (runtime sprite snapshots) + modal-timeout race closed systematically
+
+### Added
+
+- **EWP v0.3 (frozen) runtime sprite snapshots**: `sprite.req` / `sprite.data` / `sprite.data.fail`, `sprite.set.rev`, `snapshot.full.sprites[].rev`. An immutable snapshot is frozen at `SETIMAGELAYER` (LRU 96 entries / 32 MiB, PNG encoding, `not_found` / `expired` / `not_exportable` / `too_large` / `bad_request`). `sprite.req` is ignored (counted as `requestsIgnored`) unless the FE declares the `sprite.export` cap
+- **`sys.title`**: return to title (full clear + snapshot cache drop, replies `result{ok:true,detail:"title"}`)
+- **`ModalTimerGuard`**: a single gate for modal dialogs (wraps `PauseTimer` / `ResumeTimer`)
+
+### Changed
+
+- **`hello.proto` → `EWP/0.3`**: same command surface as v0.2 (the only increment is `sprite.export`); unknown `0.x` (x>=2) protos are treated as the v0.2 command surface
+- **Timed-input timeouts are deferred while a modal dialog is open**: the stopwatch restarts while modal and counts a full period again after closing (`DisplayTime` countdown freezes at full). No effect on Headless / EWP / CliDebug
+
+### Fixed
+
+- **Startup error when the default font could not be created**: `Config.DefaultFont` became null and `StringMeasure.GetDisplayLength` threw an NRE (`Process.Initialize -> setStBar`). Failures are now logged once and fall back to `CreateEmergencyFont`; the measure path also guards null and returns `>0` (returning 0 would loop `getStBar` forever)
+
+### Changed
+
+- **Version signature**: `Skiav16.5.1` -> `Skiav16.6.0`
+
+***
+
+## [16.5.1] — Input-timeout timer paused while a modal dialog is open
+
+### Fixed
+
+- **`TINPUT`-family timeouts no longer fire behind modal dialogs**: previously the 20-second no-input auto-DEMO timer on the title screen kept running while a modal dialog (e.g. "Copy log to clipboard") was open, then hijacked the UI thread with an uncancellable playback (both windows frozen, ~3:37). All modal points of the main window now pause the input timer while open and resume (with a fresh countdown) on close; cancel/validation-error paths are covered as well.
+
+### Changed
+
+- **Version signature**: `Skiav16.5` → `Skiav16.5.1`
+
+***
+
 ## [16.5.0] — EWP v0.1 finalized: MessagePack as default encoding
 
 ### Changed

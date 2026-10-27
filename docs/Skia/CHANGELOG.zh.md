@@ -4,6 +4,41 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.0] — EWP v0.3 定稿（运行期快照导出）＋模态超时竞态系统化收口
+
+### Added
+
+- **EWP v0.3（冻结）运行期精灵快照**：`sprite.req` / `sprite.data` / `sprite.data.fail`、`sprite.set.rev`、`snapshot.full.sprites[].rev`；`SETIMAGELAYER` 时冻结不可变快照（LRU 96 项/32 MiB、PNG 编码、`not_found`/`expired`/`not_exportable`/`too_large`/`bad_request`）。FE 未声明 `sprite.export` cap 时忽略 `sprite.req`（计入 `requestsIgnored`）
+- **`sys.title`**：返回标题（整屏清场＋快照缓存清空，回 `result{ok:true,detail:"title"}`）
+- **`ModalTimerGuard`**：统一模态闸（内包 `PauseTimer`/`ResumeTimer`）
+
+### Changed
+
+- **`hello.proto` → `EWP/0.3`**：命令面与 v0.2 同形（增量仅 `sprite.export`）；`0.x`（x≥2）未知 proto 按 v0.2 命令面处理
+- **模态窗口期间带时限输入的超时推迟**：模态打开时重启秒表、关窗后重新计满（`DisplayTime` 倒计时冻结于满值）；Headless/EWP/CliDebug 无影响
+
+### Fixed
+
+- **默认字体创建失败导致启动即报错**：`Config.DefaultFont` 为 null → `StringMeasure.GetDisplayLength` NRE（`Process.Initialize → setStBar`）。现失败只记录一次并由 `CreateEmergencyFont` 兜底；测量侧空守卫返回 `>0`（返回 0 会让 `getStBar` 死循环）
+
+### Changed
+
+- **版本签名**：`Skiav16.5.1` → `Skiav16.6.0`
+
+***
+
+## [16.5.1] — 模态窗口期间暂停输入超时定时器
+
+### Fixed
+
+- **模态窗口打开期间 `TINPUT` 系超时不再抢跑脚本**：此前模态窗口（如标题画面「复制日志到剪贴板」）打开期间，20 秒无输入自动 DEMO 计时器照常到点，并在 UI 线程不可取消地播放（双窗假死约 3 分 37 秒）。现主窗全部模态点打开前暂停输入定时器、关闭后恢复并重新计满；取消/校验错误路径同被覆盖。
+
+### Changed
+
+- **版本签名**：`Skiav16.5` → `Skiav16.5.1`
+
+***
+
 ## [16.5.0] — EWP v0.1 定稿：MessagePack 默认编码
 
 ### Changed

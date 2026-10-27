@@ -4,6 +4,41 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.0] — EWP v0.3 確定（実行時スナップショット書き出し）＋モーダル競合の恒久対処
+
+### Added
+
+- **EWP v0.3（凍結）実行時スプライトスナップショット**：`sprite.req` / `sprite.data` / `sprite.data.fail`、`sprite.set.rev`、`snapshot.full.sprites[].rev`。`SETIMAGELAYER` 時に不変スナップショットを凍結（LRU 96 件/32 MiB、PNG 符号化、`not_found`/`expired`/`not_exportable`/`too_large`/`bad_request`）。FE が `sprite.export` cap を宣言しない場合は `sprite.req` を無視（`requestsIgnored` に計上）
+- **`sys.title`**：タイトルへ戻る（画面全消去＋スナップショットキャッシュ消去、`result{ok:true,detail:"title"}`）
+- **`ModalTimerGuard`**：モーダル表示を一元管理するガード（`PauseTimer`/`ResumeTimer` を内包）
+
+### Changed
+
+- **`hello.proto` を `EWP/0.3` に**：コマンド面は v0.2 と同形（増分は `sprite.export` のみ）。`0.x`（x≥2）の未知 proto は v0.2 のコマンド面として扱う
+- **モーダル表示中は制限時間付き入力のタイムアウトを延期**：モーダルが開いている間はストップウォッチを再起動し、閉じた後に満了まで再計測（`DisplayTime` のカウントダウンは満了値で凍結）。Headless/EWP/CliDebug では無効（挙動不変）
+
+### Fixed
+
+- **既定フォント生成失敗で起動直後にエラーになる問題**：`Config.DefaultFont` が null になり `StringMeasure.GetDisplayLength` で NRE（`Process.Initialize → setStBar`）。失敗時は一度だけログを出し `CreateEmergencyFont` で代替。計測側も null ガード（0 を返すと `getStBar` が無限ループするため >0 を返す）
+
+### Changed
+
+- **バージョン署名**：`Skiav16.5.1` → `Skiav16.6.0`
+
+***
+
+## [16.5.1] — モーダルダイアログ中表示は入力タイムアウトを停止
+
+### Fixed
+
+- **モーダルダイアログ表示中に `TINPUT` 系のタイムアウトが裏で発火しなくなった**：以前はタイトル画面の「ログをクリップボードにコピー」等のモーダル表示中も 20 秒無入力 DEMO タイマーが進行し、UI スレッド上でキャンセル不可の再生（両ウィンドウ操作不能、約 3 分 37 秒）を引き起こしていた。現在はメインウィンドウの全モーダル箇所で表示前にタイマーを一時停止し、閉じ後に再計測で再開。キャンセル／検証エラーパスも同様に対象。
+
+### Changed
+
+- **バージョン署名**：`Skiav16.5` → `Skiav16.5.1`
+
+***
+
 ## [16.5.0] — EWP v0.1 確定：MessagePack を既定エンコードに
 
 ### Changed
