@@ -198,6 +198,7 @@
     - **イベント語彙**：`legacy.line`（単調行 ID）／`legacy.clear`／`input.request`↔`input.submit`（reqId＋世代検証）／`frame.commit`／`snapshot.full`（再接続時再構築）／`sprite.*`／`overlay.island`／`pixel.frame`（オフスクリーン全面 PNG）／`channel.*`（スクリプト側 `UI_CHANNEL_*` マクロ境界）
     - **交渉**：`hello` が caps とグリッド基準（cellW/cellH/lineH/font）を通知、フロントエンドは `hello.ok` でビューポートとピクセルモードを返す
     - **バックプレッシャ**：クレジット窓（未 ack フレーム上限）で送信を停止しつつスクリプトは継続。ピクセルストリーム過負荷時はフレームを捨ててブロックしない
+    - **実行時スプライトスナップショット（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`、`sprite.set.rev` と `snapshot.full.sprites[].rev` が不変スナップショットを識別。FE が `hello.ok` で `sprite.export` cap を宣言した場合のみ提供され、未宣言なら `sprite.req` は無視される。`sys.title` はタイトルへ戻しスナップショットキャッシュを破棄。`hello.proto=EWP/0.3`（コマンド面は v0.2 と同形）
     - **移行ゼロ**：旧 ERB の出力は全て legacy チャンネルへ流れ、スクリプト改変不要。チャンネルマクロはフック非搭載エンジンでは空展開
 
 ---
@@ -469,6 +470,12 @@
     ```
 
     **NF サフィックスのセマンティクス**：`WaitInput` ではなく `WaitInputNoFocus` 状態に入り、`ApplyTextBoxChanges()` を呼び出さず、ボタン ハイライト/Tooltip 機能を保持する。
+
+### ![](../assets/images/IconSK.webp) モーダルダイアログ表示中の入力タイムアウト延期
+!!! summary ""
+
+    制限時間付き入力（`TINPUT`／`TINPUTS`／`TINPUTNF` など）の待機中にモーダルダイアログ（ログのコピー、ファイル保存／読み直し、確認メッセージ、設定、ホットキー通知）を開くと、タイムアウトの計測を**一時停止**し、閉じた後に満了まで再計測する。ダイアログの背後で既定値が入力されてスクリプトが進むことはない。
+    `DisplayTime` のカウントダウンはモーダル中は満了値で凍結。ウィンドウを持たないホスト（EWP／Headless／CliDebug）では挙動不変。
 
 ### ![](../assets/images/IconSK.webp)`CBGSETSPRITE`の拡張パラメータ
 !!! summary ""

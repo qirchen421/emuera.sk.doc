@@ -198,6 +198,7 @@
     - **事件词表**：`legacy.line`（单调行 ID）/`legacy.clear`/`input.request`↔`input.submit`（reqId＋世代校验）/`frame.commit`/`snapshot.full`（重连重建）/`sprite.*`/`overlay.island`/`pixel.frame`（离屏整帧 PNG）/`channel.*`（脚本侧 `UI_CHANNEL_*` 宏边界）
     - **协商**：`hello` 报 caps 与网格基准（cellW/cellH/lineH/font），前端 `hello.ok` 回传视口与像素模式开关
     - **背压**：信用窗（未 ack 帧数上限）暂停发送但脚本继续执行；像素流过载丢帧不阻塞
+    - **运行期精灵快照（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`，`sprite.set.rev` 与 `snapshot.full.sprites[].rev` 标识不可变快照；前端在 `hello.ok` 声明 `sprite.export` cap 后引擎才提供，未声明则 `sprite.req` 被忽略；`sys.title` 回标题并清空快照缓存；`hello.proto=EWP/0.3`（命令面与 v0.2 同形）
     - **零迁移**：旧 ERB 全部输出落 legacy 通道，无需改动脚本；频道宏在无挂钩引擎上为空展开
 
 ---
@@ -468,6 +469,12 @@
     ```
 
     **NF 后缀语义**：进入 `WaitInputNoFocus` 状态而非 `WaitInput`，不调用 `ApplyTextBoxChanges()`，保留按钮高亮/Tooltip 功能。
+
+### ![](../assets/images/IconSK.webp) 模态窗口打开期间的输入超时推迟
+!!! summary ""
+
+    带时限输入（`TINPUT`／`TINPUTS`／`TINPUTNF` 等）在等待期间打开模态窗口（复制日志到剪贴板、保存/读取文件、确认框、配置窗口、热键提示）时，超时计时**暂停**；关闭窗口后重新计满，不会在窗口背后以默认值抢跑脚本。
+    `DisplayTime` 的倒计时在模态期间冻结在满值。无窗宿主（EWP／Headless／CliDebug）行为不变。
 
 ### ![](../assets/images/IconSK.webp)`CBGSETSPRITE` 的扩展参数
 !!! summary ""

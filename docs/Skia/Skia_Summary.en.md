@@ -198,6 +198,7 @@
     - **Event vocabulary**: `legacy.line` (monotonic line IDs) / `legacy.clear` / `input.request`↔`input.submit` (reqId + generation check) / `frame.commit` / `snapshot.full` (reconnect rebuild) / `sprite.*` / `overlay.island` / `pixel.frame` (full-frame offscreen PNG) / `channel.*` (script-side `UI_CHANNEL_*` macro boundaries)
     - **Negotiation**: `hello` reports caps and grid baseline (cellW/cellH/lineH/font); the frontend replies `hello.ok` with viewport and pixel-mode switch
     - **Backpressure**: credit window (unacked frame cap) pauses sending while scripts keep running; pixel-stream overload drops frames without blocking
+    - **Runtime sprite snapshots (v0.3)**: `sprite.req` -> `sprite.data` (PNG) / `sprite.data.fail`; `sprite.set.rev` and `snapshot.full.sprites[].rev` identify an immutable snapshot. Provided only when the frontend declares the `sprite.export` cap in `hello.ok`; otherwise `sprite.req` is ignored. `sys.title` returns to the title screen and drops the snapshot cache. `hello.proto=EWP/0.3` (same command surface as v0.2)
     - **Zero migration**: all legacy ERB output lands in the legacy channel with no script changes; channel macros are no-ops on engines without the hook
 
 ---
@@ -469,6 +470,12 @@
     ```
 
     **NF suffix semantics**: Enters `WaitInputNoFocus` state instead of `WaitInput`, does not call `ApplyTextBoxChanges()`, preserves button highlighting/Tooltip functionality.
+
+### ![](../assets/images/IconSK.webp) Input timeouts deferred while a modal dialog is open
+!!! summary ""
+
+    While a timed input (`TINPUT` / `TINPUTS` / `TINPUTNF` and friends) is waiting, opening a modal dialog (copy log to clipboard, save/reload file, confirmation, settings, hotkey toast) **pauses** the timeout; after closing, the full period is counted again, so the script is never resumed with the default value behind the dialog.
+    The `DisplayTime` countdown freezes at full while modal. Windowless hosts (EWP / Headless / CliDebug) are unaffected.
 
 ### ![](../assets/images/IconSK.webp)`CBGSETSPRITE` Extended Parameters
 !!! summary ""
