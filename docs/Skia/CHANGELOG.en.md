@@ -4,6 +4,34 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.2] — unified layer draw basis (fixes +2px offset)
+
+### Changed
+
+- `ImageLayer` drawing used `graph.LocalClipBounds` for the Y basis (desktop SKControl measured 1802x923), while text/CBG use `window.RenderWidth/RenderHeight` (1782x921) -> layers were shifted +2px. Now unified to `window.RenderWidth/RenderHeight`, matching the `sprite.set` `y+renderH-h` semantics
+- Only affects GUI/pixel layer placement (-2px); headless has identical values and is unchanged
+
+### Verification
+
+- eraWire E4: V8-A/V8-B mask 100%, shift [0,0], maxDiff <=1; `r2_gate` (including live/realPixel) / `c3` / `r1` / `fdiv` / `n2` regressions PASS
+- Version signature: `Skiav16.6.1` -> `Skiav16.6.2`
+
+***
+
+## [16.6.1] — keep div color alpha in legacy.line (faithful translucent div compositing)
+
+### Changed
+
+- `ConsoleDivPart` `color` / `bcolor` tags now use ARGB serialization: opaque stays 6-digit `#RRGGBB`, translucent becomes 8-digit `#AARRGGBB` (new `HtmlManager.GetColorToStringArgb` and `Utils.AddColorParamArgb` / `AddColorParam4Argb`). `GetColorToString` is unchanged (font colors / shapes / clipboard keep 6-digit)
+- Only div tag text is affected; the GUI/pixel drawing path is unchanged. Fixes the default Flan `0x807B0000` being written as `#7B0000` in `legacy.line`
+
+### Verification
+
+- `dotnet build` 0 error, `n2` text hash unchanged, `fdiv_gate` U/R/L PASS, E4-A regression PASS
+- Version signature: `Skiav16.6.0` -> `Skiav16.6.1`
+
+***
+
 ## [16.6.0] — EWP v0.3 finalized (runtime sprite snapshots) + modal-timeout race closed systematically
 
 ### Added

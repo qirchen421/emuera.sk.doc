@@ -4,6 +4,34 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.2] — 图层绘制坐标基准统一（修正 +2px 偏移）
+
+### 变更
+
+- `ImageLayer` 的绘制 Y 原用 `graph.LocalClipBounds`（桌面 SKControl 实测 1802×923），与文字/CBG 使用的 `window.RenderWidth/RenderHeight`（1782×921）不同源 ⇒ 图层整体 +2px。现统一到 `window.RenderWidth/RenderHeight`，与 `sprite.set` 的 `y+renderH-h` 语义一致
+- 仅影响 GUI/pixel 的图层落画位置（-2px）；headless 下两者同值，行为不变
+
+### 验证
+
+- eraWire E4：V8-A/V8-B mask 100%、shift [0,0]、maxDiff ≤1；`r2_gate`（含 live/realPixel）/`c3/r1/fdiv/n2` 回归 PASS
+- 版本签名：`Skiav16.6.1` → `Skiav16.6.2`
+
+***
+
+## [16.6.1] — `legacy.line` 保留 div 颜色 alpha（半透明 div 合成保真）
+
+### 变更
+
+- `ConsoleDivPart` 的 `color` / `bcolor` 标签改走 ARGB 序列化：不透明仍为 6 位 `#RRGGBB`，半透明输出 8 位 `#AARRGGBB`（新增 `HtmlManager.GetColorToStringArgb` 与 `Utils.AddColorParamArgb` / `AddColorParam4Argb`）。`GetColorToString` 不变（字体色/形状/剪贴板仍走 6 位）
+- 仅影响 div 标签文本；GUI/pixel 绘制路径不变。修复默认 Flan `0x807B0000` 在 `legacy.line` 被写成 `#7B0000` 的问题
+
+### 验证
+
+- `dotnet build` 0 error，`n2` 文本 hash 同基线，`fdiv_gate` U/R/L PASS，E4-A 回归 PASS
+- 版本签名：`Skiav16.6.0` → `Skiav16.6.1`
+
+***
+
 ## [16.6.0] — EWP v0.3 定稿（运行期快照导出）＋模态超时竞态系统化收口
 
 ### Added

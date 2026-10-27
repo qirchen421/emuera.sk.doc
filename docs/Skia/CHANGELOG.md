@@ -4,6 +4,34 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.2] — レイヤー描画の座標基準を統一（+2px ずれ修正）
+
+### 変更
+
+- `ImageLayer` の描画 Y は `graph.LocalClipBounds`（デスクトップ SKControl 実測 1802×923）を使っており、文字/CBG の `window.RenderWidth/RenderHeight`（1782×921）と基準が異なっていた ⇒ レイヤー全体が +2px ずれていた。`window.RenderWidth/RenderHeight` に統一し、`sprite.set` の `y+renderH-h` と実描画を一致
+- 影響は GUI/pixel のレイヤー描画位置（-2px）のみ。headless では両者同値で挙動不変
+
+### 検証
+
+- eraWire E4：V8-A/V8-B mask 100%、shift [0,0]、maxDiff ≤1；`r2_gate`（live/realPixel 含む）/`c3`/`r1`/`fdiv`/`n2` 回帰 PASS
+- バージョン署名：`Skiav16.6.1` → `Skiav16.6.2`
+
+***
+
+## [16.6.1] — legacy.line で div 色の alpha を保持（半透明 div の合成忠実化）
+
+### 変更
+
+- `ConsoleDivPart` の `color` / `bcolor` タグを ARGB 直列化へ：不透明は従来通り 6 桁 `#RRGGBB`、半透明は 8 桁 `#AARRGGBB` を出力（`HtmlManager.GetColorToStringArgb` と `Utils.AddColorParamArgb` / `AddColorParam4Argb` を追加）。`GetColorToString` は不変（フォント色・図形・クリップボードは従来通り）
+- 影響は div タグの本文のみ。GUI/pixel の描画経路は不変。既定 Flan の `0x807B0000` が `legacy.line` で `#7B0000` に落ちていた問題を修正
+
+### 検証
+
+- `dotnet build` 0 error、`n2` テキスト hash は同一、`fdiv_gate` U/R/L PASS、E4-A 回帰 PASS
+- バージョン署名：`Skiav16.6.0` → `Skiav16.6.1`
+
+***
+
 ## [16.6.0] — EWP v0.3 確定（実行時スナップショット書き出し）＋モーダル競合の恒久対処
 
 ### Added
