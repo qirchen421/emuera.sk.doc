@@ -37,7 +37,10 @@ hide:
     ```
 
 	In this example, `CFLAG:0～999` of `MASTER` (if VariableSize.csv has not been changed) become `0`, but the `CFLAG` of other characters are not affected.  
-	Also, if the target is omitted, it is treated as `TARGET` as usual, so all `CSTR` of `TARGET` become empty strings. The `CSTR` of other characters are not affected.  
+	Also, if the target is omitted, it is treated as `TARGET` as usual, so all `CSTR` of `TARGET` become empty strings. The `CSTR` of other characters are not affected.
+	!!! warning "Subscript count and the character dimension (common pitfall)"
+		For character variables, the subscript count decides the bound axis: with a **single subscript** (e.g. `VARSET CFLAG:LOCAL, 0`) the subscript is an **element** index and the character number defaults to `TARGET` (≡ `VARSET CFLAG:TARGET:LOCAL`) — LOCAL exceeding the declared element count is an out-of-range error. To initialize the **entire row of a given character**, use the two-subscript form `VARSET CFLAG:<charaNo>:0, 0` (the second subscript is only validated; the assignment range is all elements of that character).
+  
 	When used on non-1-dimensional arrays and non-array character variables such as `DITEMTYPE` or `TA`, the third argument and beyond are ignored, and assignment is made to all elements of the array.
 
 !!! hint "Hint"
