@@ -185,3 +185,5 @@ THROW 命令実行
 
 > **SK専用**：`BEFORE_THROW` と `BEFORE_ERROR` イベント関数は Skia版で追加された機能で、スクリプトが例外のスロー前にインターセプト・処理することを可能にする。これらのイベントは原版 Emuera では利用できない。
 > 詳細は[イベント関数 — BEFORE_THROW / BEFORE_ERROR](../tutorial/event-functions.md#before_throw)を参照。
+
+> **運用上の注意（2026-10-29 実装踏査）**：`@BEFORE_THROW` は実行されても**例外を無効化しない** — 終了後は必ず例外がスローされ、エラーダイアログで当該処理が中断される（`handleException` → 関数スタック解放）。「緊急セーブは走るがプレイヤーは妨害されない」は誤り。CASEELSE 等の検出用 `THROW` を実行時に入れておくと未知値ごとにプレイヤーが中断されるため、値域検証は静的監査に寄せ、実行時は `DEBUGPRINT` 系＋値リセット（自愈）で代替する設計が有効。参照：[THROW](../Reference/THROW.md)。

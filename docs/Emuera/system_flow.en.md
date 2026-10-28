@@ -182,3 +182,5 @@ Error occurs
 
 > **SK Exclusive**: The `BEFORE_THROW` and `BEFORE_ERROR` event functions are new features added in the Skia version, allowing scripts to intercept and handle exceptions before they are thrown. These events are not available in the original Emuera.
 > See [Event Functions — BEFORE_THROW / BEFORE_ERROR](../tutorial/event-functions.en.md#before_throw).
+
+> **Practical note (implementation survey, 2026-10-29)**: running `@BEFORE_THROW` does **not** cancel the exception — it is always thrown afterwards, and the error dialog interrupts the current processing (`handleException` → function stack released). "Emergency save runs but the player is not disturbed" is a misunderstanding. A runtime `THROW` placed in a `CASEELSE` guard interrupts the player every time an unknown value arrives; push value-domain validation to static audits and replace runtime detection with `DEBUGPRINT` logging plus value reset (self-healing). See [THROW](../Reference/THROW.en.md).

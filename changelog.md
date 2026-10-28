@@ -104,6 +104,7 @@
 
 | 日期 | 变更 |
 |------|------|
+| 2026-10-29 | `Reference/THROW` 三语言页新增「SK版 `@BEFORE_THROW` 联动」节：处理结束后异常照常抛出（错误对话框＋当前处理中断），`@BEFORE_THROW` 不取消异常；追加脚本侧运用指南（CASEELSE 检测用 THROW 的打断代价、DEBUGPRINT＋自愈替代设计）；`Emuera/system_flow` 三语言错误处理节追加同旨运用注意（实现踏查：fork `Process.ScriptProc.cs` THROW 分支／`Process.cs` InBeforeThrow 路径） |
 | 2026-10-10 | 新建教程页「Renameマクロ／Rename 宏／Rename Macro」三语言版（`[[名前]]` 编译期置换、_Rename.csv 格式、与 CSV/ERD/ALS 机制对比），入第7章高级主题导航；file-types／variable-declaration#identifiers／constant-folding／config 的 rename 选项节交叉引用（三语言同步） |
 | 2026-05-22 | METHOD_SAFE / 常量折叠进阶主题三语言版；资源设置独立教程页；anti-patterns 移除；章节编号统一；导航标签翻译；Emuera/resources 标注历史文档 |
 | 2026-05-15 | 第7章高级主题三语言版（runtime-mechanics、dynamic-reflection）；mkdocs.yml 导航更新 |

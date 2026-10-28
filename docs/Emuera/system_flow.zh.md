@@ -185,3 +185,5 @@ THROW 指令执行
 
 > **SK 专属说明**：`BEFORE_THROW` 和 `BEFORE_ERROR` 事件函数是 Skia 版本新增的功能，允许脚本在异常抛出前进行拦截和处理。原版 Emuera 不支持这些事件。
 > 详见[事件函数 — BEFORE_THROW / BEFORE_ERROR](../tutorial/event-functions.zh.md#before_throw)。
+
+> **运用要点（2026-10-29 实现踏查）**：`@BEFORE_THROW` 即使被执行也**不会取消异常** — 结束后必定照常抛出，错误对话框会打断当前处理（`handleException` → 函数栈释放）。「紧急存档会跑但玩家不受打扰」是错误理解。CASEELSE 等检测位放运行期 `THROW`，未知值每到达一次玩家就被打断一次；值域校验应交给静态审计，运行期用 `DEBUGPRINT` 系＋值重置（自愈）替代。参照：[THROW](../Reference/THROW.zh.md)。
