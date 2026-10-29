@@ -4,6 +4,106 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.10] — EWP `sys.scroll` (programmatic scrolling) and snapshot scroll position
+
+### Added
+
+- FE→VM `sys.scroll{value|delta}`: same state path as the mouse wheel (`ScrollValue → NotifyUserScrolled → RefreshStrings(true)`), clamped to `[0, ScrollMaximum]`
+- `sys.state` / `snapshot.full` gain optional `scroll{value,max,visible,top}` (`visible=floor(RenderHeight/LineHeight)`, `top=first visible line`); old FEs ignore it
+
+### Verification
+
+- eraWire `r3b2_visible_gate` PASS: clock line 780/842 → scrolled to 792 (top 741), GUI⇄FE edges 0/0/0/0; title unchanged
+- Version signature: `Skiav16.6.9` -> `Skiav16.6.10`
+
+***
+
+## [16.6.9] — button rects derive/self-check from the real display-list bottom
+
+### Fixed
+
+- `GetSelectableButtonRects`/`HitTestButtonAt` bottom line from `ScrollValue-1` (stale `ScrollMaximum`, 41–50 lines off) to `displayLineList.Count-1`; latest-row rects no longer fall off-screen
+- `sys.state.rectDiag` failure-reason breakdown + `renderInvalid` startup-race guard (clean degradation, no degenerate rects)
+
+### Verification
+
+- Real device: main menu 54/54, saves 39/46, menu-screen rect real click PASS; `rect_gate` R1–R7 unchanged
+- Version signature: `Skiav16.6.8` -> `Skiav16.6.9`
+
+***
+
+## [16.6.8] — inline `div.children` and multi-div text serialization fix
+
+### Added
+
+- Bounded `div.children` emission (text/img/shape/div; coords relative to the content box; ≤512 child spans per div, nesting ≤1, `truncated` on overflow); reuses inline `rt/rev`; `sys.state` gains `spansChildNodes`/`spansChildTruncated`
+
+### Fixed
+
+- Wire `text` collapsed to only the last div when multiple sibling divs existed (`ConsoleButtonString.ToString` now uses a local builder)
+- `ConsoleDivPart` gains read-only views for span serialization
+
+### Verification
+
+- Real eratw `bodyGraph_*`: one line with 11 divs / 37 child spans / 5 runtime rt; GUI⇄FE 5 images edge diff 0
+- Version signature: `Skiav16.6.7` -> `Skiav16.6.8`
+
+***
+
+## [16.6.7] — inline runtime pixels W0 (explicit cm failure / snapshot re-signed revs)
+
+### Fixed
+
+- `CaptureInline` takes the actual `ColorMatrix`: cm images still get a rev but request `not_exportable/color_matrix` (never an unfiltered success image)
+- `snapshot.full` rebuilds spans, recaptures and signs new revs for retained rt lines; old revs stay immutable, out-of-capacity returns explicit `expired`
+
+### Verification
+
+- G1/G2/G3 (`r3b2_inline_gate` / `r3b2_integration_gate`) + live `rerun-w0` PASS
+- Version slot `Skiav16.6.7`
+
+***
+
+## [16.6.6] — `legacy.spans` inline node/style serialization
+
+### Added
+
+- Optional `spans` on `legacy.line` / `snapshot.full.lines[]` (gated by `legacy.spans`): codepoint offsets; text/img/shape/div/unsupported; parsed color/x/advance/draw; `text`/`AltText` unchanged
+- `sys.state` gains `spansEnabled/spansEmitted/spansSkipped`
+
+### Verification
+
+- `r3b_spans_gate` / `r3b1_fe_gate` (incl. real event streams) PASS; n2 text hash unchanged
+- Version signature: `Skiav16.6.5` -> `Skiav16.6.6`
+
+***
+
+## [16.6.5] — `meta.metrics` adds draw origin / baseline / default colors
+
+### Added
+
+- `originX` (text/img/rect only; not on div background/border), `baselineOffset`, `foreColor`/`bgColor`; old FEs ignore them, `hello.proto` unchanged
+
+### Verification
+
+- `text_pixel_gate` / `fdiv_gate` / V8 full regression PASS
+- Version signature: `Skiav16.6.4` -> `Skiav16.6.5`
+
+***
+
+## [16.6.4] — `HTML_PRINT_ISLAND` div drawing fix
+
+### Fixed
+
+- Only island lines set `DrawDivInline` (normal lines keep escapedParts to avoid double drawing); three surfaces (desktop GUI / desktop pixel / headless pixel) bbox edge diff 0
+
+### Verification
+
+- `island_probe` three-surface bbox edge diff 0; C2-island card closed
+- Version slot `Skiav16.6.4`
+
+***
+
 ## [16.6.3] — serialize div `align` (for frontends to restore in-box alignment)
 
 ### Changed

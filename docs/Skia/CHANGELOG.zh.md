@@ -4,6 +4,106 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.10] — EWP `sys.scroll`（程序化滚动）与快照滚动位置
+
+### 新增
+
+- FE→VM `sys.scroll{value|delta}`：与鼠标滚轮同一状态路径（`ScrollValue → NotifyUserScrolled → RefreshStrings(true)`），clamp 到 `[0, ScrollMaximum]`
+- `sys.state` / `snapshot.full` 增可选 `scroll{value,max,visible,top}`（`visible=floor(RenderHeight/LineHeight)`，`top=可见窗口首行`）；旧 FE 忽略
+
+### 验证
+
+- eraWire `r3b2_visible_gate` PASS：clock 行 780/842 → 滚 792（top 741），GUI⇄FE 逐边 0/0/0/0；title 未回归
+- 版本签名：`Skiav16.6.9` -> `Skiav16.6.10`
+
+***
+
+## [16.6.9] — 按钮矩形导出/自检改用显示列表真底（rect 覆盖根因）
+
+### 修复
+
+- `GetSelectableButtonRects`/`HitTestButtonAt` 底行弃 `ScrollValue-1`（`ScrollMaximum` 陈旧 41–50 行）→ `displayLineList.Count-1`；最新行 rect 不再落到屏幕外
+- `sys.state.rectDiag` 失败原因分布＋`renderInvalid` 启动竞态守卫（整轮干净降级，不发退化 rect）
+
+### 验证
+
+- 真机：主菜单 54/54、存档 39/46、菜单屏 rect 真点击 PASS；`rect_gate` R1–R7 逐值不变
+- 版本签名：`Skiav16.6.8` -> `Skiav16.6.9`
+
+***
+
+## [16.6.8] — 行内 `div.children` 与多 div 文本序列化修复
+
+### 新增
+
+- `div.children` 有界发射（text/img/shape/div；坐标相对内容框；每 div ≤512 子 span、嵌套≤1、超限 `truncated`）；复用行内 `rt/rev`；`sys.state` 增 `spansChildNodes`/`spansChildTruncated`
+
+### 修复
+
+- 多兄弟 div 的 wire `text` 只剩最后一个 div 的序列化缺陷（`ConsoleButtonString.ToString` 改局部 builder）
+- `ConsoleDivPart` 增只读视图供 spans 序列化
+
+### 验证
+
+- 真实 eratw `bodyGraph_*`：一行 11 div／37 子 span／5 运行期 rt；GUI⇄FE 5 图逐边 0
+- 版本签名：`Skiav16.6.7` -> `Skiav16.6.8`
+
+***
+
+## [16.6.7] — 行内运行期像素 W0 收口（cm 明确失败／快照重签 rev）
+
+### 修复
+
+- `CaptureInline` 接收实际 `ColorMatrix`：带 cm 仍分配 rev，请求回 `not_exportable/color_matrix`，不再返回未滤镜成功图
+- `snapshot.full` 对 retained 且含 rt 的行重建 spans、重捕获并签发新 rev；旧 rev 不可变，容量外明确 `expired`
+
+### 验证
+
+- G1/G2/G3（`r3b2_inline_gate`／`r3b2_integration_gate`）＋ live `rerun-w0` PASS
+- 版本位 `Skiav16.6.7`
+
+***
+
+## [16.6.6] — `legacy.spans` 行内节点/样式序列化
+
+### 新增
+
+- `legacy.line` / `snapshot.full.lines[]` 可选 `spans`（cap `legacy.spans` 门控）：码点偏移；text/img/shape/div/unsupported；解析色/x/advance/draw；`text`/`AltText` 不变
+- `sys.state` 增 `spansEnabled/spansEmitted/spansSkipped`
+
+### 验证
+
+- `r3b_spans_gate`／`r3b1_fe_gate`（含真实事件流）PASS；n2 文本 hash 不变
+- 版本签名：`Skiav16.6.5` -> `Skiav16.6.6`
+
+***
+
+## [16.6.5] — `meta.metrics` 增绘制原点/基线/默认色
+
+### 新增
+
+- `originX`（仅文本/img/rect；div 背景/边框不加）、`baselineOffset`、`foreColor`/`bgColor`；旧 FE 忽略，不翻 `hello.proto`
+
+### 验证
+
+- `text_pixel_gate`／`fdiv_gate`／V8 全回归 PASS
+- 版本签名：`Skiav16.6.4` -> `Skiav16.6.5`
+
+***
+
+## [16.6.4] — `HTML_PRINT_ISLAND` div 落画修复
+
+### 修复
+
+- island 行独占 `DrawDivInline`，普通行仍走 escapedParts 避免二重绘；三端（桌面 GUI／桌面 pixel／headless pixel）bbox 逐边差 0
+
+### 验证
+
+- `island_probe` 三端 bbox 逐边 0；C2-island 卡收口
+- 版本位 `Skiav16.6.4`
+
+***
+
 ## [16.6.3] — div 序列化补 `align`（供前端还原盒内对齐）
 
 ### 变更

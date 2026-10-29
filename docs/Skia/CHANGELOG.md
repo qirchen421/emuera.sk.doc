@@ -4,6 +4,106 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.10] — EWP `sys.scroll`（プログラム制御スクロール）とスナップショットのスクロール位置
+
+### 追加
+
+- FE→VM `sys.scroll{value|delta}`：マウスホイールと同じ状態経路（`ScrollValue → NotifyUserScrolled → RefreshStrings(true)`）、`[0, ScrollMaximum]` に clamp
+- `sys.state` / `snapshot.full` に任意 `scroll{value,max,visible,top}`（`visible=floor(RenderHeight/LineHeight)`、`top=可視窓の先頭行`）を追加。旧 FE は無視
+
+### 検証
+
+- eraWire `r3b2_visible_gate` PASS：clock 行 780/842 → 792（top 741）、GUI⇄FE 各辺差 0/0/0/0；title 回帰なし
+- バージョン署名：`Skiav16.6.9` -> `Skiav16.6.10`
+
+***
+
+## [16.6.9] — ボタン矩形の導出/自己検査を表示リストの真の底へ（rect 被覆の根因）
+
+### 修正
+
+- `GetSelectableButtonRects`/`HitTestButtonAt` の底行を `ScrollValue-1`（`ScrollMaximum` が 41–50 行古い）から `displayLineList.Count-1` へ。最新行の rect が画面外に落ちない
+- `sys.state.rectDiag`（失敗理由の分布）と `renderInvalid` 起動競合ガード（退化 rect を出さずクリーンに降格）
+
+### 検証
+
+- 実機：メインメニュー 54/54、セーブ 39/46、メニュー画面 rect 実クリック PASS；`rect_gate` R1–R7 不変
+- バージョン署名：`Skiav16.6.8` -> `Skiav16.6.9`
+
+***
+
+## [16.6.8] — 行内 `div.children` と複数 div テキスト直列化の修正
+
+### 追加
+
+- `div.children` の有界送出（text/img/shape/div；座標は内容框基準；1 div ≤512 子 span、入れ子≤1、超過は `truncated`）；行内 `rt/rev` を再利用；`sys.state` に `spansChildNodes`/`spansChildTruncated`
+
+### 修正
+
+- 兄弟 div が複数あるとき wire `text` が最後の div だけになる直列化不具合（`ConsoleButtonString.ToString` をローカル builder 化）
+- `ConsoleDivPart` に読み取り専用ビューを追加（spans 直列化用）
+
+### 検証
+
+- 実 eratw `bodyGraph_*`：1 行 11 div／37 子 span／5 実行時 rt；GUI⇄FE 5 図各辺差 0
+- バージョン署名：`Skiav16.6.7` -> `Skiav16.6.8`
+
+***
+
+## [16.6.7] — 行内実行時ピクセル W0 収口（cm は明示失敗／スナップショット再署名 rev）
+
+### 修正
+
+- `CaptureInline` が実際の `ColorMatrix` を受け取る：cm 付きでも rev を割り当て、要求は `not_exportable/color_matrix`（未フィルタの成功画像を返さない）
+- `snapshot.full` は保持中の rt 行の spans を再構築し、再キャプチャして新しい rev を発行。旧 rev は不変、容量外は明示 `expired`
+
+### 検証
+
+- G1/G2/G3（`r3b2_inline_gate`／`r3b2_integration_gate`）＋ live `rerun-w0` PASS
+- バージョン位 `Skiav16.6.7`
+
+***
+
+## [16.6.6] — `legacy.spans`（行内ノード/スタイルの直列化）
+
+### 追加
+
+- `legacy.line` / `snapshot.full.lines[]` に任意 `spans`（cap `legacy.spans` でゲート）：コードポイント偏移；text/img/shape/div/unsupported；解析色/x/advance/draw；`text`/`AltText` は不変
+- `sys.state` に `spansEnabled/spansEmitted/spansSkipped`
+
+### 検証
+
+- `r3b_spans_gate`／`r3b1_fe_gate`（実イベント流含む）PASS；n2 テキスト hash 不変
+- バージョン署名：`Skiav16.6.5` -> `Skiav16.6.6`
+
+***
+
+## [16.6.5] — `meta.metrics` に描画原点/ベースライン/既定色を追加
+
+### 追加
+
+- `originX`（テキスト/img/rect のみ。div 背景/枠には加算しない）、`baselineOffset`、`foreColor`/`bgColor`；旧 FE は無視、`hello.proto` は据え置き
+
+### 検証
+
+- `text_pixel_gate`／`fdiv_gate`／V8 全回帰 PASS
+- バージョン署名：`Skiav16.6.4` -> `Skiav16.6.5`
+
+***
+
+## [16.6.4] — `HTML_PRINT_ISLAND` の div 描画修正
+
+### 修正
+
+- island 行だけ `DrawDivInline` を許可（通常行は escapedParts のまま＝二重描画防止）；三面（デスクトップ GUI／デスクトップ pixel／headless pixel）で bbox 各辺差 0
+
+### 検証
+
+- `island_probe` 三面 bbox 各辺差 0；C2-island カード収口
+- バージョン位 `Skiav16.6.4`
+
+***
+
 ## [16.6.3] — div の `align` を直列化（フロントエンドの盒内整列用）
 
 ### 変更
