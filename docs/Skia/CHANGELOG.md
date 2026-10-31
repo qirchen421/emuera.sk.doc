@@ -4,6 +4,32 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.13] — EWP audio v1（P3-E：AudioLedger v2 / ERB 内建 6 個）
+
+### 追加
+
+- **v1 台帳**（cap `audio.instances`）：単調ハンドル（セッション内で再利用しない／0＝拒否）、8 状態＋終態保持、`priority`／`steal:none`／`maxVoices`／`maxInstances` の准入と強奪、`stolenBy`。旧 11 スロットは上限に数えず、強奪対象にもならない
+- **バス**：`master`／`bgm`／`se`／`voice` の `volume`／`mute`／`stop_all`。duck ルール（複数は min、既定 `voice→bgm` −12 dB は `audio.bus` 時のみ）
+- **遷移**：`fadeIn`／`crossfade`／`seek`／`if_changed`。`audio.sync` 全量再構築（セッション最初の v1 イベント、≤128 KiB）
+- **v1 イベント**：`audio.play`／`ctl`／`bus`／`duck`／`sync`。回供 `audio.state`／`fail` の handle 形＋`audio.device`／`audio.bus.state`。`sys.state.audio` v1 加法
+- **ERB 内建 6 個**：`AUDIO_PLAY`／`AUDIO_CTL`／`AUDIO_BUS`／`AUDIO_DUCK`／`AUDIO_QUERY`／`AUDIO_BUS_QUERY`（v0.2 セッションは fail-closed）
+- v1 モードでは旧 6 命令／5 メソッドを v1 イベントへ変換。`STOPSOUND` は旧 10 スロットの `playing`／`deferred` のみ。`audio.bgm/se` の二重送信なし
+
+### 変更
+
+- `hello.caps` に `audio.instances`／`audio.bus`／`audio.transitions`／`audio.meta` を追加（旧 FE は無視）
+- hello.ok 前の音声意図は v1 shadow に記録し `audio.sync` で再構築。v0.2／audio なしは従来どおり破棄（再送なし）
+
+### 検証（2026-10-31）
+
+- eraWire `r_aud_wire.py --g1v1` **PASS 139/139**：55 ハンドル（44 新＋11 旧）の遅延接続 sync 75,031 B ≤128 KiB、sync がセッション最初の v1 イベント、強奪／`steal:none`／曲上限、`STOPSOUND`×`deferred`、未知ハンドル回供、`no_device` 閉鎖と `restored`、`bus`／`transitions`／`meta` 欠如の降格マトリクス
+- v0.2 零回帰：`--g1` 120/120、`--g4` 旧 FE は v1 イベント 0 件
+- 実機／聴感／PCM はユーザー側スモーク。⛔ 音声可用とは宣言しない
+- 16.6.11／16.6.12 の項目はリリース時に補完
+- バージョン署名：`Skiav16.6.12` → `Skiav16.6.13`
+
+***
+
 ## [16.6.10] — EWP `sys.scroll`（プログラム制御スクロール）とスナップショットのスクロール位置
 
 ### 追加

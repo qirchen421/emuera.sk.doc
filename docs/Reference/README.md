@@ -624,6 +624,12 @@ ARGB型は 16 進数で0xAARRGGBBで表されます。<br>
 | ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.md) | `int`{, `int`} | `int`  |
 | ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.md)   | {`int`}  | `int`  |
 | ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.md)     | なし     | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_PLAY`](./AUDIO_PLAY.md) | `string`, `string`, `int`, `int`, `int`(, `int`, `int`, `int`, `int`, `int`, `int`, `real`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_CTL`](./AUDIO_CTL.md) | `int`, `int`, `any`, `int`(, `int`, `string`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_BUS`](./AUDIO_BUS.md) | `string`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_DUCK`](./AUDIO_DUCK.md) | `string`, `string`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_QUERY`](./AUDIO_QUERY.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_BUS_QUERY`](./AUDIO_BUS_QUERY.md) | `string`, `int` | `int`  |
 
 ### XML 系 { #xmlmapdatatable }
 

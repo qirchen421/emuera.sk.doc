@@ -4,6 +4,32 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [16.6.13] — EWP audio v1 (P3-E: AudioLedger v2 / 6 ERB built-ins)
+
+### Added
+
+- **v1 ledger** (cap `audio.instances`): monotonic handles (never reused in a session; 0 = rejected), 8-state machine with terminal retention, `priority` / `steal:none` / `maxVoices` / `maxInstances` admission and stealing, `stolenBy`. The 11 legacy slots are excluded from the limits and can never be stolen
+- **Buses**: `master` / `bgm` / `se` / `voice` with `volume` / `mute` / `stop_all`; duck rules (multiple rules take `min`; the default `voice→bgm` −12 dB is installed only with `audio.bus`)
+- **Transitions**: `fadeIn` / `crossfade` / `seek` / `if_changed`; `audio.sync` full rebuild (the first v1 event of a session, ≤128 KiB)
+- **v1 events**: `audio.play` / `ctl` / `bus` / `duck` / `sync`; handle-shaped `audio.state` / `fail` plus `audio.device` / `audio.bus.state`; `sys.state.audio` v1 additions
+- **6 ERB built-ins**: `AUDIO_PLAY` / `AUDIO_CTL` / `AUDIO_BUS` / `AUDIO_DUCK` / `AUDIO_QUERY` / `AUDIO_BUS_QUERY` (fail-closed in v0.2 sessions)
+- In v1 mode the old 6 commands / 5 methods map to v1 events; `STOPSOUND` only stops the old 10 slots' `playing` / `deferred`; no `audio.bgm` / `audio.se` double-send
+
+### Changed
+
+- `hello.caps` adds `audio.instances` / `audio.bus` / `audio.transitions` / `audio.meta` (old FEs ignore them)
+- Audio intents before hello.ok are recorded in the v1 shadow and rebuilt by `audio.sync`; v0.2 / no audio still discard them (no resend)
+
+### Verification (2026-10-31)
+
+- eraWire `r_aud_wire.py --g1v1` **PASS 139/139**: 55 handles (44 new + 11 legacy) late-connect sync 75,031 B ≤128 KiB, sync is the first v1 event, stealing / `steal:none` / per-track limit, `STOPSOUND` × `deferred`, unknown-handle reports, `no_device` lock and `restored`, degradation matrix without `bus` / `transitions` / `meta`
+- v0.2 zero regression: `--g1` 120/120; `--g4` old FE sees 0 v1 events
+- Real devices / listening / PCM remain a user smoke test; ⛔ not claiming audio is available
+- 16.6.11 / 16.6.12 entries will be filled at release time
+- Version signature: `Skiav16.6.12` → `Skiav16.6.13`
+
+***
+
 ## [16.6.10] — EWP `sys.scroll` (programmatic scrolling) and snapshot scroll position
 
 ### Added

@@ -624,6 +624,12 @@ ARGB 型以 16 进制表示为 0xAARRGGBB。<br>
 | ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.zh.md) | `int`{, `int`} | `int`  |
 | ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.zh.md)   | {`int`}  | `int`  |
 | ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.zh.md)     | 无     | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_PLAY`](./AUDIO_PLAY.zh.md) | `string`, `string`, `int`, `int`, `int`(, `int`, `int`, `int`, `int`, `int`, `int`, `real`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_CTL`](./AUDIO_CTL.zh.md) | `int`, `int`, `any`, `int`(, `int`, `string`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_BUS`](./AUDIO_BUS.zh.md) | `string`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_DUCK`](./AUDIO_DUCK.zh.md) | `string`, `string`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_QUERY`](./AUDIO_QUERY.zh.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_BUS_QUERY`](./AUDIO_BUS_QUERY.zh.md) | `string`, `int` | `int`  |
 
 ### XML 系列 { #xmlmapdatatable }
 

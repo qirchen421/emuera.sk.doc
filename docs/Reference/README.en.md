@@ -624,6 +624,12 @@ When called as a function, the result value is not assigned to `RESULT` but beco
 | ![](../assets/images/IconSK.webp)[`GETSOUNDORBGMINFO`](./SOUNDCONTROL.en.md) | `int`{, `int`} | `int`  |
 | ![](../assets/images/IconSK.webp)[`ISPLAYINGSOUND`](./SOUNDCONTROL.en.md)   | {`int`}  | `int`  |
 | ![](../assets/images/IconSK.webp)[`ISPLAYINGBGM`](./SOUNDCONTROL.en.md)     | none     | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_PLAY`](./AUDIO_PLAY.en.md) | `string`, `string`, `int`, `int`, `int`(, `int`, `int`, `int`, `int`, `int`, `int`, `real`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_CTL`](./AUDIO_CTL.en.md) | `int`, `int`, `any`, `int`(, `int`, `string`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_BUS`](./AUDIO_BUS.en.md) | `string`, `int`, `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_DUCK`](./AUDIO_DUCK.en.md) | `string`, `string`, `int`(, `int`, `int`) | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_QUERY`](./AUDIO_QUERY.en.md) | `int`, `int` | `int`  |
+| ![](../assets/images/IconSK.webp)[`AUDIO_BUS_QUERY`](./AUDIO_BUS_QUERY.en.md) | `string`, `int` | `int`  |
 
 ### XML related { #xmlmapdatatable }
 
