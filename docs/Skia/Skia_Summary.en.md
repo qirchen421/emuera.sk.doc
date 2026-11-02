@@ -104,6 +104,12 @@
 | ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | Expression | Queue a string for auto-submission at next input wait | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.en.md) |
 | ![](../assets/images/IconSK.webp) `DISABLE_INPUT_MACRO` | Expression | Disable macro parsing for all input | [DISABLE_INPUT_MACRO](../Reference/DISABLE_INPUT_MACRO.en.md) |
 | ![](../assets/images/IconSK.webp) `ENABLE_INPUT_MACRO` | Expression | Restore input macro parsing (default behavior) | [ENABLE_INPUT_MACRO](../Reference/ENABLE_INPUT_MACRO.en.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_PLAY` | Expression | Play audio (returns a v1 ledger handle) | [AUDIO_PLAY](../Reference/AUDIO_PLAY.en.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_CTL` | Expression | Playback control (stop / volume / seek / fades) | [AUDIO_CTL](../Reference/AUDIO_CTL.en.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_BUS` | Expression | Bus volume / mute / stop-all | [AUDIO_BUS](../Reference/AUDIO_BUS.en.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_DUCK` | Expression | Configure inter-bus ducking rules | [AUDIO_DUCK](../Reference/AUDIO_DUCK.en.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_QUERY` | Expression | Query playback instance state | [AUDIO_QUERY](../Reference/AUDIO_QUERY.en.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_BUS_QUERY` | Expression | Query bus state | [AUDIO_BUS_QUERY](../Reference/AUDIO_BUS_QUERY.en.md) |
 
 ---
 
@@ -162,6 +168,17 @@
     - Audio pitch change (pitch change, speed preserved)
     - Real-time conversion playback
 
+### ![](../assets/images/IconSK.webp)EWP audio v1 (AudioLedger v2)
+!!! summary ""
+
+    Extends the EWP host (`--ewp`) audio surface to the v1 ledger. ERB controls it through six `AUDIO_*` functions; with no frontend attached everything stays inside the engine.
+
+    - **Ledger**: monotonic handles (never reused within a session / 0 = rejected), 8-state machine with terminal retention, `priority` / `steal:none` / `maxVoices` / `maxInstances` admission and stealing (`stolenBy`)
+    - **Buses**: `volume` / `mute` / `stop_all` for `master` / `bgm` / `se` / `voice`; ducking takes the min across sources, and the default `voice→bgm` −12 dB applies only with the `audio.bus` cap
+    - **Transitions**: `fadeIn` / `crossfade` / `seek` / `if_changed`; on reconnect `audio.sync` rebuilds the whole state (≤128 KiB)
+    - v0.2 sessions are fail-closed (no fallback to the old channel)
+    - See [AUDIO_PLAY](../Reference/AUDIO_PLAY.en.md) and the other 5 pages (v16.6.13)
+
 ### ![](../assets/images/IconSK.webp)SELECTCASE Compile-time Jump Table Optimization
 !!! summary ""
 
@@ -198,7 +215,7 @@
     - **Event vocabulary**: `legacy.line` (monotonic line IDs) / `legacy.clear` / `input.request`↔`input.submit` (reqId + generation check) / `frame.commit` / `snapshot.full` (reconnect rebuild) / `sprite.*` / `overlay.island` / `pixel.frame` (full-frame offscreen PNG) / `channel.*` (script-side `UI_CHANNEL_*` macro boundaries)
     - **Negotiation**: `hello` reports caps and grid baseline (cellW/cellH/lineH/font); the frontend replies `hello.ok` with viewport and pixel-mode switch
     - **Backpressure**: credit window (unacked frame cap) pauses sending while scripts keep running; pixel-stream overload drops frames without blocking
-    - **Runtime sprite snapshots (v0.3)**: `sprite.req` -> `sprite.data` (PNG) / `sprite.data.fail`; `sprite.set.rev` and `snapshot.full.sprites[].rev` identify an immutable snapshot. Provided only when the frontend declares the `sprite.export` cap in `hello.ok`; otherwise `sprite.req` is ignored. `sys.title` returns to the title screen and drops the snapshot cache. `hello.proto=EWP/0.3` (same command surface as v0.2)
+    - **Runtime sprite snapshots (v0.3)**: `sprite.req` -> `sprite.data` (PNG) / `sprite.data.fail`; `sprite.set.rev` and `snapshot.full.sprites[].rev` identify an immutable snapshot. Provided only when the frontend declares the `sprite.export` cap in `hello.ok`; otherwise `sprite.req` is ignored. `sys.title` returns to the title screen and drops the snapshot cache. `hello.proto=EWP/0.3` (same command surface as v0.2)。animated sprites carry an `anim{count,delays}` frame table (v16.6.11) and can be fetched per frame through a negative `sprite.req` rev (`frame = -rev-1`); `div.children` child images use the same shape (v16.6.12)。
     - **Zero migration**: all legacy ERB output lands in the legacy channel with no script changes; channel macros are no-ops on engines without the hook
 
 ---

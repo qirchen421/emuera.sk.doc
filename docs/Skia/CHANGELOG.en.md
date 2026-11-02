@@ -25,8 +25,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - eraWire `r_aud_wire.py --g1v1` **PASS 139/139**: 55 handles (44 new + 11 legacy) late-connect sync 75,031 B ≤128 KiB, sync is the first v1 event, stealing / `steal:none` / per-track limit, `STOPSOUND` × `deferred`, unknown-handle reports, `no_device` lock and `restored`, degradation matrix without `bus` / `transitions` / `meta`
 - v0.2 zero regression: `--g1` 120/120; `--g4` old FE sees 0 v1 events
 - Real devices / listening / PCM remain a user smoke test; ⛔ not claiming audio is available
-- 16.6.11 / 16.6.12 entries will be filled at release time
 - Version signature: `Skiav16.6.12` → `Skiav16.6.13`
+
+***
+
+## [16.6.12] — Animation frame tables inside `div.children` (N-4 wrap-up)
+
+### Added
+
+- **Optional `anim{count,delays}` on div child `img`**: same shape as top-level spans (cap `sprite.export`). Previously only top-level inline `<img>` carried a frame table, so animated sprites inside `div.children` were treated as static images; old FEs ignore the key and the protocol version is unchanged
+- Negative `rev` in `sprite.req` keeps its meaning (`frame = -rev-1`); div-level animation reuses the same on-demand frame path
+
+### Verification
+
+- eraWire `r3c_anim_gate` div case PASS: a real `<div><img anim></div>` child span carries `anim{count,delays}`, and pseudo-rev frames match the source frame pixel-for-pixel; Godot FE offline checks confirm div-child request/hit/phase independence
+- Version signature: `Skiav16.6.11` -> `Skiav16.6.12`
+
+***
+
+## [16.6.11] — Animation frame export (R-3c: multi-frame ANIME / animated webp)
+
+### Added
+
+- **`anim{count,delays}` on spans** (cap `sprite.export`): frame tables for animated sprites. `SpriteAnime` (ANIME CSV) and `SpriteAnimated` (multi-frame animated files) share one shape; old FEs ignore the key
+- **Negative `rev` in `sprite.req` = animation-frame pseudo key** (`frame = -rev-1`): captures that frame into the existing LRU/rev/failure semantics (96 entries / 32 MiB); success returns `sprite.data{…,"frame":k}` with the pseudo key echoed in `rev`, failure goes to `sprite.data.fail`
+- `SpriteAnime` / `SpriteAnimated` gain `FrameCount`, `GetDelays()` and per-frame drawing
+
+### Verification
+
+- eraWire `r3c_anim_gate` **PASS (both types)**: animated webp (159 frames × 270×270) frames 0/79/158 and ANIME CSV (121 frames × 500×500×42 ms) frames 0/60/120 all match the source pixel-for-pixel; FE offline render test PASS
+- Correction: the earlier observation that "l13 webp falls back to a static first frame" **does not hold** — that run used the 16.6.10 build, which did not yet include this feature
+- Version signature: `Skiav16.6.10` -> `Skiav16.6.11`
 
 ***
 

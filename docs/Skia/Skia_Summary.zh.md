@@ -104,6 +104,12 @@
 | ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | 式中函数 | 排队下次输入等待时自动提交的字符串 | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.zh.md) |
 | ![](../assets/images/IconSK.webp) `DISABLE_INPUT_MACRO` | 式中函数 | 关闭所有输入的宏解析 | [DISABLE_INPUT_MACRO](../Reference/DISABLE_INPUT_MACRO.zh.md) |
 | ![](../assets/images/IconSK.webp) `ENABLE_INPUT_MACRO` | 式中函数 | 恢复输入宏解析（默认行为） | [ENABLE_INPUT_MACRO](../Reference/ENABLE_INPUT_MACRO.zh.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_PLAY` | 式中函数 | 播放音频（返回 v1 账本句柄） | [AUDIO_PLAY](../Reference/AUDIO_PLAY.zh.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_CTL` | 式中函数 | 播放控制（停止／音量／跳转／淡入淡出） | [AUDIO_CTL](../Reference/AUDIO_CTL.zh.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_BUS` | 式中函数 | 总线音量／静音／全部停止 | [AUDIO_BUS](../Reference/AUDIO_BUS.zh.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_DUCK` | 式中函数 | 总线间闪避规则设定 | [AUDIO_DUCK](../Reference/AUDIO_DUCK.zh.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_QUERY` | 式中函数 | 查询播放实例状态 | [AUDIO_QUERY](../Reference/AUDIO_QUERY.zh.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_BUS_QUERY` | 式中函数 | 查询总线状态 | [AUDIO_BUS_QUERY](../Reference/AUDIO_BUS_QUERY.zh.md) |
 
 ---
 
@@ -162,6 +168,17 @@
     - 音频音高变更（变调不变速）
     - 实时转换播放
 
+### ![](../assets/images/IconSK.webp)EWP 音频 v1（AudioLedger v2）
+!!! summary ""
+
+    EWP 宿主（`--ewp`）的音频面扩展到 v1 账本。ERB 侧用 `AUDIO_*` 六个函数控制，前端未连接时在引擎内闭环。
+
+    - **账本**：单调句柄（会话内不复用／0＝拒绝）、8 态机与终态保留、`priority`／`steal:none`／`maxVoices`／`maxInstances` 准入与抢占（`stolenBy`）
+    - **总线**：`master`／`bgm`／`se`／`voice` 的音量／静音／全部停止；闪避取多源 min，默认 `voice→bgm` −12 dB 仅在 `audio.bus` cap 时下发
+    - **过渡**：`fadeIn`／`crossfade`／`seek`／`if_changed`；重连时用 `audio.sync` 全量重建（≤128 KiB）
+    - v0.2 会话为 fail-closed（不回退旧通道）
+    - 详见：[AUDIO_PLAY](../Reference/AUDIO_PLAY.zh.md) 等 6 页（v16.6.13）
+
 ### ![](../assets/images/IconSK.webp)SELECTCASE 编译时跳转表优化
 !!! summary ""
 
@@ -198,7 +215,7 @@
     - **事件词表**：`legacy.line`（单调行 ID）/`legacy.clear`/`input.request`↔`input.submit`（reqId＋世代校验）/`frame.commit`/`snapshot.full`（重连重建）/`sprite.*`/`overlay.island`/`pixel.frame`（离屏整帧 PNG）/`channel.*`（脚本侧 `UI_CHANNEL_*` 宏边界）
     - **协商**：`hello` 报 caps 与网格基准（cellW/cellH/lineH/font），前端 `hello.ok` 回传视口与像素模式开关
     - **背压**：信用窗（未 ack 帧数上限）暂停发送但脚本继续执行；像素流过载丢帧不阻塞
-    - **运行期精灵快照（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`，`sprite.set.rev` 与 `snapshot.full.sprites[].rev` 标识不可变快照；前端在 `hello.ok` 声明 `sprite.export` cap 后引擎才提供，未声明则 `sprite.req` 被忽略；`sys.title` 回标题并清空快照缓存；`hello.proto=EWP/0.3`（命令面与 v0.2 同形）
+    - **运行期精灵快照（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`，`sprite.set.rev` 与 `snapshot.full.sprites[].rev` 标识不可变快照；前端在 `hello.ok` 声明 `sprite.export` cap 后引擎才提供，未声明则 `sprite.req` 被忽略；`sys.title` 回标题并清空快照缓存；`hello.proto=EWP/0.3`（命令面与 v0.2 同形）。动画精灵带 `anim{count,delays}` 帧表（v16.6.11），可用 `sprite.req` 的负 rev（`frame = -rev-1`）按帧获取；`div.children` 的子图像同形（v16.6.12）。
     - **零迁移**：旧 ERB 全部输出落 legacy 通道，无需改动脚本；频道宏在无挂钩引擎上为空展开
 
 ---

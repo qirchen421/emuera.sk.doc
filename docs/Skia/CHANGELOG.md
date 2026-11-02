@@ -25,8 +25,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - eraWire `r_aud_wire.py --g1v1` **PASS 139/139**：55 ハンドル（44 新＋11 旧）の遅延接続 sync 75,031 B ≤128 KiB、sync がセッション最初の v1 イベント、強奪／`steal:none`／曲上限、`STOPSOUND`×`deferred`、未知ハンドル回供、`no_device` 閉鎖と `restored`、`bus`／`transitions`／`meta` 欠如の降格マトリクス
 - v0.2 零回帰：`--g1` 120/120、`--g4` 旧 FE は v1 イベント 0 件
 - 実機／聴感／PCM はユーザー側スモーク。⛔ 音声可用とは宣言しない
-- 16.6.11／16.6.12 の項目はリリース時に補完
 - バージョン署名：`Skiav16.6.12` → `Skiav16.6.13`
+
+***
+
+## [16.6.12] — EWP div.children 内のアニメーションフレーム表（N-4 収口）
+
+### 追加
+
+- **div 子ノード img に任意 `anim{count,delays}`**：最上位 span と同形（cap `sprite.export`）。従来は最上位行内 `<img>` のみがフレーム表を持ち、`div.children` 内のアニメスプライトは静的画像として扱われていた。旧 FE はこのキーを無視し、プロトコル版数は不変
+- `sprite.req` の負 rev は従来どおりアニメフレーム疑似キー（`frame = -rev-1`）。div 内アニメも同じオンデマンド取得経路を共有する
+
+### 検証
+
+- eraWire `r3c_anim_gate` の div 用例 PASS：実 `<div><img anim></div>` の child span が `anim{count,delays}` を持ち、疑似 rev 取得フレームがソースフレームと画素一致。Godot FE のオフライン検査で div 子の取得／ヒット／位相が独立
+- バージョン署名：`Skiav16.6.11` -> `Skiav16.6.12`
+
+***
+
+## [16.6.11] — EWP アニメーションフレームのエクスポート（R-3c：ANIME 多フレーム／動画 webp）
+
+### 追加
+
+- **span `anim{count,delays}`**（cap `sprite.export`）：アニメスプライトのフレーム表。`SpriteAnime`（ANIME CSV）と `SpriteAnimated`（動画ファイルの多フレーム）を同一口径で扱う。旧 FE はこのキーを無視
+- **`sprite.req` の負 rev＝アニメフレーム疑似キー**（`frame = -rev-1`）：そのフレームを既存の LRU／rev／失敗セマンティクス（96 件 / 32 MiB）に載せてオンデマンド取得。成功時は `sprite.data{…,"frame":k}` と `rev` に疑似キーを返し、失敗時は `sprite.data.fail`
+- `SpriteAnime` / `SpriteAnimated` に `FrameCount`・`GetDelays()`・フレーム指定描画を追加
+
+### 検証
+
+- eraWire `r3c_anim_gate` **PASS（両型）**：動画 webp（159 フレーム×270×270）のフレーム 0/79/158、ANIME CSV（121 フレーム×500×500×42 ms）のフレーム 0/60/120 が、いずれもソースと画素一致。FE のオフライン描画テストも PASS
+- 訂正：以前の「l13 webp は静的先頭フレームになる」という観察は**成立しない**——その時使ったのは本機能を含まない 16.6.10 ビルドだった
+- バージョン署名：`Skiav16.6.10` -> `Skiav16.6.11`
 
 ***
 

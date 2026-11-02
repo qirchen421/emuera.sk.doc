@@ -104,6 +104,12 @@
 | ![](../assets/images/IconSK.webp) `SEQUENCEINPUT` | 式中関数 | 次回入力待機時に自動送信する文字列をキュー | [SEQUENCEINPUT](../Reference/SEQUENCEINPUT.md) |
 | ![](../assets/images/IconSK.webp) `DISABLE_INPUT_MACRO` | 式中関数 | 全入力のマクロ解析を無効化 | [DISABLE_INPUT_MACRO](../Reference/DISABLE_INPUT_MACRO.md) |
 | ![](../assets/images/IconSK.webp) `ENABLE_INPUT_MACRO` | 式中関数 | 入力マクロ解析を復元（デフォルト動作） | [ENABLE_INPUT_MACRO](../Reference/ENABLE_INPUT_MACRO.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_PLAY` | 式中関数 | 音声再生（v1 台帳ハンドルを返す） | [AUDIO_PLAY](../Reference/AUDIO_PLAY.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_CTL` | 式中関数 | 再生制御（停止／音量／シーク／フェード） | [AUDIO_CTL](../Reference/AUDIO_CTL.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_BUS` | 式中関数 | バスの音量／ミュート／全停止 | [AUDIO_BUS](../Reference/AUDIO_BUS.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_DUCK` | 式中関数 | バス間ダッキング規則の設定 | [AUDIO_DUCK](../Reference/AUDIO_DUCK.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_QUERY` | 式中関数 | 再生インスタンスの状態照会 | [AUDIO_QUERY](../Reference/AUDIO_QUERY.md) |
+| ![](../assets/images/IconSK.webp) `AUDIO_BUS_QUERY` | 式中関数 | バスの状態照会 | [AUDIO_BUS_QUERY](../Reference/AUDIO_BUS_QUERY.md) |
 
 ---
 
@@ -162,6 +168,17 @@
     - 音声のピッチ変更（音程変更、速度保持）
     - リアルタイム変換再生
 
+### ![](../assets/images/IconSK.webp)EWP オーディオ v1（AudioLedger v2）
+!!! summary ""
+
+    EWP ホスト（`--ewp`）の音声面を v1 台帳へ拡張。ERB から `AUDIO_*` の 6 関数で制御でき、FE 未接続時はエンジン内で完結する。
+
+    - **台帳**：単調ハンドル（セッション内で再利用しない／0＝拒否）、8 状態＋終態保持、`priority`／`steal:none`／`maxVoices`／`maxInstances` の准入と強奪（`stolenBy`）
+    - **バス**：`master`／`bgm`／`se`／`voice` の音量・ミュート・全停止。duck は複数源の min を採り、既定の `voice→bgm` −12 dB は `audio.bus` cap 時のみ
+    - **遷移**：`fadeIn`／`crossfade`／`seek`／`if_changed`。再接続時は `audio.sync` で全量再構築（≤128 KiB）
+    - v0.2 セッションでは fail-closed（旧チャンネルへは戻さない）
+    - 詳細：[AUDIO_PLAY](../Reference/AUDIO_PLAY.md) ほか 6 ページ（v16.6.13）
+
 ### ![](../assets/images/IconSK.webp)SELECTCASE コンパイル時ジャンプテーブル最適化
 !!! summary ""
 
@@ -198,7 +215,7 @@
     - **イベント語彙**：`legacy.line`（単調行 ID）／`legacy.clear`／`input.request`↔`input.submit`（reqId＋世代検証）／`frame.commit`／`snapshot.full`（再接続時再構築）／`sprite.*`／`overlay.island`／`pixel.frame`（オフスクリーン全面 PNG）／`channel.*`（スクリプト側 `UI_CHANNEL_*` マクロ境界）
     - **交渉**：`hello` が caps とグリッド基準（cellW/cellH/lineH/font）を通知、フロントエンドは `hello.ok` でビューポートとピクセルモードを返す
     - **バックプレッシャ**：クレジット窓（未 ack フレーム上限）で送信を停止しつつスクリプトは継続。ピクセルストリーム過負荷時はフレームを捨ててブロックしない
-    - **実行時スプライトスナップショット（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`、`sprite.set.rev` と `snapshot.full.sprites[].rev` が不変スナップショットを識別。FE が `hello.ok` で `sprite.export` cap を宣言した場合のみ提供され、未宣言なら `sprite.req` は無視される。`sys.title` はタイトルへ戻しスナップショットキャッシュを破棄。`hello.proto=EWP/0.3`（コマンド面は v0.2 と同形）
+    - **実行時スプライトスナップショット（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`、`sprite.set.rev` と `snapshot.full.sprites[].rev` が不変スナップショットを識別。FE が `hello.ok` で `sprite.export` cap を宣言した場合のみ提供され、未宣言なら `sprite.req` は無視される。`sys.title` はタイトルへ戻しスナップショットキャッシュを破棄。`hello.proto=EWP/0.3`（コマンド面は v0.2 と同形）。アニメスプライトは `anim{count,delays}` のフレーム表を伴い（v16.6.11）、`sprite.req` の負 rev（`frame = -rev-1`）でフレーム単位に取得できる。`div.children` の子画像も同形（v16.6.12）。
     - **移行ゼロ**：旧 ERB の出力は全て legacy チャンネルへ流れ、スクリプト改変不要。チャンネルマクロはフック非搭載エンジンでは空展開
 
 ---

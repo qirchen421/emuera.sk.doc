@@ -25,8 +25,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - eraWire `r_aud_wire.py --g1v1` **PASS 139/139**：55 句柄（44 新＋11 旧）晚连接 sync 75,031 B ≤128 KiB、sync 为会话首条 v1 事件、抢占／`steal:none`／曲目上限、`STOPSOUND`×`deferred`、未知句柄回供、`no_device` 闭锁与 `restored`、缺 `bus`／`transitions`／`meta` 的降级矩阵
 - v0.2 零回归：`--g1` 120/120；`--g4` 旧 FE 0 条 v1 事件
 - 真实设备／听感／PCM 仍由用户冒烟，⛔ 不宣称音频可用
-- 16.6.11／16.6.12 的条目在发布时补
 - 版本签名：`Skiav16.6.12` → `Skiav16.6.13`
+
+***
+
+## [16.6.12] — EWP div.children 内的动画帧表（N-4 收口）
+
+### 新增
+
+- **div 子节点 img 增可选 `anim{count,delays}`**：与顶层 span 同形（cap `sprite.export`）。此前只有顶层行内 `<img>` 带帧表，`div.children` 里的动画精灵被当作静态图；旧 FE 忽略该键，无协议版本变化
+- `sprite.req` 负 rev 语义不变（`frame = -rev-1`），div 内动画复用同一按需取帧路径
+
+### 验证
+
+- eraWire `r3c_anim_gate` div 用例 PASS：真实 `<div><img anim></div>` 的 child span 带 `anim{count,delays}`，按伪 rev 取帧与源帧逐像素一致；Godot FE 离线断言 div 子节点的请求/命中/相位独立
+- 版本签名：`Skiav16.6.11` -> `Skiav16.6.12`
+
+***
+
+## [16.6.11] — EWP 动画帧导出（R-3c：ANIME 多帧／动图 webp）
+
+### 新增
+
+- **span `anim{count,delays}`**（cap `sprite.export`）：动画精灵的帧表。`SpriteAnime`（ANIME CSV）与 `SpriteAnimated`（动图文件多帧）统一口径；旧 FE 忽略该键
+- **`sprite.req` 支持负 rev＝动画帧伪键**（`frame = -rev-1`）：按需把该帧载入既有 LRU／rev／失败语义（96 项 / 32 MiB），成功回 `sprite.data{…,"frame":k}` 且 `rev` 回显伪键，失败走 `sprite.data.fail`
+- `SpriteAnime` / `SpriteAnimated` 增 `FrameCount`、`GetDelays()`、按帧绘制
+
+### 验证
+
+- eraWire `r3c_anim_gate` **PASS（两型都验）**：动图 webp（159 帧×270×270）的帧 0/79/158、ANIME CSV（121 帧×500×500×42 ms）的帧 0/60/120，均与源帧逐像素一致；FE 离线渲染测试 PASS
+- 更正：早前「l13 webp 在本构建走静态首帧」的观察**不成立**——那次用的是尚未包含本特性的 16.6.10 构建
+- 版本签名：`Skiav16.6.10` -> `Skiav16.6.11`
 
 ***
 
