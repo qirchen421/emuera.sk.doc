@@ -197,8 +197,8 @@
 
     全面重新设计图像资源管理。
 
-    - **SharedBitmapCache**：全局位图池（max 200）+ ConstImage 轻量外壳（仅记录 filepath，不持有 SKBitmap）
-    - **AnimSpriteCache**：动画精灵 LRU 缓存（max 6），超出时 Evict 释放帧数据，再次访问时重新解码
+    - **SharedBitmapCache**：全局位图池（**256 MB 硬字节预算 LRU**，v16.6.14）+ ConstImage 轻量外壳（仅记录 filepath，不持有 SKBitmap）
+    - **AnimSpriteCache**：动画精灵 LRU 缓存（max 6 ＋ **256 MB 帧字节预算**，v16.6.14），超出时 Evict 释放帧数据，再次访问时重新解码
     - **SpriteAnime 优化**：修复同一文件重复解码导致的内存爆炸
     - **懒加载索引**：CSV 预加载仅建立 SQLite :memory: 索引，图片数据 0 字节，首次渲染时才解码
     - **DIV 渲染优化**：命中测试 O(1) 定位 + Y 轴预过滤
@@ -215,7 +215,7 @@
     - **事件词表**：`legacy.line`（单调行 ID）/`legacy.clear`/`input.request`↔`input.submit`（reqId＋世代校验）/`frame.commit`/`snapshot.full`（重连重建）/`sprite.*`/`overlay.island`/`pixel.frame`（离屏整帧 PNG）/`channel.*`（脚本侧 `UI_CHANNEL_*` 宏边界）
     - **协商**：`hello` 报 caps 与网格基准（cellW/cellH/lineH/font），前端 `hello.ok` 回传视口与像素模式开关
     - **背压**：信用窗（未 ack 帧数上限）暂停发送但脚本继续执行；像素流过载丢帧不阻塞
-    - **运行期精灵快照（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`，`sprite.set.rev` 与 `snapshot.full.sprites[].rev` 标识不可变快照；前端在 `hello.ok` 声明 `sprite.export` cap 后引擎才提供，未声明则 `sprite.req` 被忽略；`sys.title` 回标题并清空快照缓存；`hello.proto=EWP/0.3`（命令面与 v0.2 同形）。动画精灵带 `anim{count,delays}` 帧表（v16.6.11），可用 `sprite.req` 的负 rev（`frame = -rev-1`）按帧获取；`div.children` 的子图像同形（v16.6.12）。
+    - **运行期精灵快照（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`，`sprite.set.rev` 与 `snapshot.full.sprites[].rev` 标识不可变快照；前端在 `hello.ok` 声明 `sprite.export` cap 后引擎才提供，未声明则 `sprite.req` 被忽略；`sys.title` 回标题并清空快照缓存；`hello.proto=EWP/0.3`（命令面与 v0.2 同形）。动画精灵带 `anim{count,delays}` 帧表（v16.6.11），可用 `sprite.req` 的负 rev（`frame = -rev-1`）按帧获取；`div.children` 的子图像同形（v16.6.12）。**CBG 合成快照**（v16.6.15）：cap `bg` 提供 `bg.set`／`bg.data`／`bg.fail`／`bg.clear`、FE→VM `bg.req`（按 rev 重取）、`legacy.textbgc` 全局底色事件，以及 `sys.state`／`snapshot.full` 的 `bg` 加法字段。快照只含「清底色＋SETBGIMAGE 烘焙层＋CBG」；文字行、行内 `escapedParts`、`SETIMAGELAYER` 图层不含（由 EWP 语义事件承载）。
     - **零迁移**：旧 ERB 全部输出落 legacy 通道，无需改动脚本；频道宏在无挂钩引擎上为空展开
 
 ---
@@ -949,7 +949,7 @@
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)Preload 字节级缓存
 !!! summary ""
 
-    启动时将 ERB/CSV 文件预加载到内存。通过 `EraStreamReader.OpenOnCache()` 从缓存读取，避免磁盘 IO。
+    启动时将 ERB/CSV 文件预加载到内存。通过 `EraStreamReader.OpenOnCache()` 从缓存读取，避免磁盘 IO。编译完成后调用 `Preload.ClearAndCompact()` 释放源码缓存（一次 LOH 压缩 GC），需要时再从磁盘回读（v16.6.14；eraTW 实测标题界面工作集 1.08 GB → 0.67 GB）。
 
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)Stopwatch 高精度计时
 !!! summary ""

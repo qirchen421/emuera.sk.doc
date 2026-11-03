@@ -4,6 +4,34 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [17.0.0] — 内存优化与背景快照转正（16.6.14／16.6.15 合并发布）
+
+> 16.6.14／16.6.15 是 `develop-skiasharp` 上的开发版本，未单独出包。本版把两段的改动一并对外发布，明细仍见下方 16.6.14／16.6.15 两段。
+
+### 新增
+
+- **CBG 合成快照导出**（cap `bg`）：`bg.set`／`bg.data`／`bg.fail`／`bg.clear`、FE→VM `bg.req`（按 rev 重取）、`legacy.textbgc` 全局底色事件、`sys.state.bg`／`snapshot.full.bg` 加法字段。快照只含「清底色＋SETBGIMAGE 烘焙层＋CBG」，**不含**文字行、行内 `escapedParts`、`SETIMAGELAYER` 图层（由 EWP 语义事件单独承载）
+- `meta.metrics` 增 `bgDropped`／`bgSkippedIdentical`（bg 导出诊断计数，命名与 pixel 的 `dropped`／`writeDropped` 区分）
+- **信用窗 ack 即醒**：`NoteAck` 增 `Monitor.PulseAll(ackGate)`，写手不再空等 250 ms 超时（突发帧下吞吐不再涓流化）
+
+### 变更
+
+- **内存优化**：ERB/CSV 编译完成后 `Preload.ClearAndCompact()`（清源码缓存＋一次完整压缩 GC＋LOH `CompactOnce`；eraTW 实测标题界面工作集 1.08 GB → 0.67 GB、读档后 1.36 GB → 1.01 GB）。`SharedBitmapCache` 由「最多 200 张」改为 **256 MB 硬字节预算 LRU**；`AnimSpriteCache` 增 256 MB 帧字节预算；`SKBitmap.Decode` 移出全局锁
+- **版本签名**：`Skiav16.6.15` → `Skiav17`（`1824+v24+EMv18+EEv56+Skiav17`）
+
+### 未验收
+
+- GUI `Emuera.exe --ewp`＋最小化启动的 boot 竞态（`meta.state` 停在 boot，~50% 复现；与 bg 功能无关，归启动面待查）
+
+### 验收（2026-11-04）
+
+- `dotnet build Emuera.sln -c Debug` 0 error（950 条既有 CA 警告）；eraWire `rimg1a_bg_gate` PASS（`bg.set`×20／`bg.data` 8 rev／`bgDropped=14`／`bgSkippedIdentical 0→2`／`pending` 正例／旧 FE 零事件）
+- eraWire `t7_ci` 12 套件功能全 PASS（`n2` 文本 hash 用本版 GUI 引擎跑通）
+- headless 真实 staging（4100 ERB）首行 7.7 s／工作集 732 MiB（无渲染口径）
+- 音频听感／GUI 截图／VN 体感仍由用户冒烟
+
+***
+
 ## [16.6.13] — EWP audio v1（P3-E：AudioLedger v2 / 6 个 ERB 内建）
 
 ### 新增

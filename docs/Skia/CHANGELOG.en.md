@@ -4,6 +4,34 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [17.0.0] — Memory optimisation and background snapshots out of preview (16.6.14 / 16.6.15 rolled up)
+
+> 16.6.14 / 16.6.15 were `develop-skiasharp` development builds and were never shipped on their own. This release publishes both together; details remain in the 16.6.14 / 16.6.15 sections below.
+
+### Added
+
+- **CBG composite snapshot export** (cap `bg`): `bg.set` / `bg.data` / `bg.fail` / `bg.clear`, FE→VM `bg.req` (re-fetch by rev), `legacy.textbgc` global text-background event, and additive `bg{rev,w,h,has,textbgc}` in `sys.state` / `snapshot.full`. The snapshot contains only "clear colour + baked SETBGIMAGE layer + CBG"; text lines, inline `escapedParts` and `SETIMAGELAYER` layers are **not** included (EWP semantic events carry them)
+- `meta.metrics` gains `bgDropped` / `bgSkippedIdentical` (bg export diagnostics; deliberately named apart from pixel's `dropped` / `writeDropped`)
+- **Credit-window ack wakes immediately**: `NoteAck` now calls `Monitor.PulseAll(ackGate)`, so the writer no longer waits out the 250 ms timeout (burst throughput no longer trickles)
+
+### Changed
+
+- **Memory optimisation**: `Preload.ClearAndCompact()` after ERB/CSV compilation (drop source cache + full compacting GC + LOH `CompactOnce`; measured on eraTW: title screen working set 1.08 GB → 0.67 GB, after load 1.36 GB → 1.01 GB). `SharedBitmapCache` switched from "max 200 entries" to a **256 MB hard byte-budget LRU**; `AnimSpriteCache` gains a 256 MB frame-byte budget; `SKBitmap.Decode` moved out of the global lock
+- **Version signature**: `Skiav16.6.15` → `Skiav17` (`1824+v24+EMv18+EEv56+Skiav17`)
+
+### Unverified
+
+- GUI `Emuera.exe --ewp` + minimised startup boot race (`meta.state` stuck at boot, ~50% reproduction; unrelated to the bg feature, tracked as a startup-side issue)
+
+### Verification (2026-11-04)
+
+- `dotnet build Emuera.sln -c Debug` 0 errors (950 pre-existing CA warnings); eraWire `rimg1a_bg_gate` PASS (`bg.set`×20 / `bg.data` 8 revs / `bgDropped=14` / `bgSkippedIdentical 0→2` / `pending` positive case / old FE sees zero events)
+- eraWire `t7_ci` all 12 suites pass functionally (`n2` text hashes re-run on this build's GUI engine)
+- headless real staging (4100 ERB files): first line in 7.7 s, working set 732 MiB (no-render basis)
+- Audio listening, GUI screenshots and VN feel remain user-side smoke tests
+
+***
+
 ## [16.6.13] — EWP audio v1 (P3-E: AudioLedger v2 / 6 ERB built-ins)
 
 ### Added

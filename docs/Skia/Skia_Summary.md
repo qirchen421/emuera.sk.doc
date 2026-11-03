@@ -197,8 +197,8 @@
 
     画像リソース管理を全面的に再設計。
 
-    - **SharedBitmapCache**：グローバルビットマッププール（max 200）+ ConstImage軽量シェル（filepathのみ記録、SKBitmapを保持しない）
-    - **AnimSpriteCache**：アニメーション精霊LRUキャッシュ（max 6）、超過時Evictでフレームデータ解放、再アクセス時に再デコード
+    - **SharedBitmapCache**：グローバルビットマッププール（**256 MB ハードバイト予算の LRU**、v16.6.14）+ ConstImage軽量シェル（filepathのみ記録、SKBitmapを保持しない）
+    - **AnimSpriteCache**：アニメーション精霊LRUキャッシュ（max 6 ＋ **256 MB フレームバイト予算**、v16.6.14）、超過時Evictでフレームデータ解放、再アクセス時に再デコード
     - **SpriteAnime最適化**：同一ファイルの重複デコードによるメモリ爆発を修正
     - **遅延読み込みインデックス**：CSVプリロードはSQLite :memory: インデックスのみ構築、画像データは0バイト、初回レンダリング時にデコード
     - **DIV レンダリング最適化**：ヒットテストO(1)定位 + Y軸プレフィルタリング
@@ -215,7 +215,7 @@
     - **イベント語彙**：`legacy.line`（単調行 ID）／`legacy.clear`／`input.request`↔`input.submit`（reqId＋世代検証）／`frame.commit`／`snapshot.full`（再接続時再構築）／`sprite.*`／`overlay.island`／`pixel.frame`（オフスクリーン全面 PNG）／`channel.*`（スクリプト側 `UI_CHANNEL_*` マクロ境界）
     - **交渉**：`hello` が caps とグリッド基準（cellW/cellH/lineH/font）を通知、フロントエンドは `hello.ok` でビューポートとピクセルモードを返す
     - **バックプレッシャ**：クレジット窓（未 ack フレーム上限）で送信を停止しつつスクリプトは継続。ピクセルストリーム過負荷時はフレームを捨ててブロックしない
-    - **実行時スプライトスナップショット（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`、`sprite.set.rev` と `snapshot.full.sprites[].rev` が不変スナップショットを識別。FE が `hello.ok` で `sprite.export` cap を宣言した場合のみ提供され、未宣言なら `sprite.req` は無視される。`sys.title` はタイトルへ戻しスナップショットキャッシュを破棄。`hello.proto=EWP/0.3`（コマンド面は v0.2 と同形）。アニメスプライトは `anim{count,delays}` のフレーム表を伴い（v16.6.11）、`sprite.req` の負 rev（`frame = -rev-1`）でフレーム単位に取得できる。`div.children` の子画像も同形（v16.6.12）。
+    - **実行時スプライトスナップショット（v0.3）**：`sprite.req` → `sprite.data`（PNG）／`sprite.data.fail`、`sprite.set.rev` と `snapshot.full.sprites[].rev` が不変スナップショットを識別。FE が `hello.ok` で `sprite.export` cap を宣言した場合のみ提供され、未宣言なら `sprite.req` は無視される。`sys.title` はタイトルへ戻しスナップショットキャッシュを破棄。`hello.proto=EWP/0.3`（コマンド面は v0.2 と同形）。アニメスプライトは `anim{count,delays}` のフレーム表を伴い（v16.6.11）、`sprite.req` の負 rev（`frame = -rev-1`）でフレーム単位に取得できる。`div.children` の子画像も同形（v16.6.12）。**CBG 合成スナップショット**（v16.6.15）：cap `bg` により `bg.set`／`bg.data`／`bg.fail`／`bg.clear`、FE→VM `bg.req`（rev 指定の再取得）、`legacy.textbgc` グローバル背景色イベント、`sys.state.bg`／`snapshot.full.bg` の加法フィールドを提供。スナップショットは「背景色クリア＋SETBGIMAGE ベイク層＋CBG」のみで、テキスト行・行内 `escapedParts`・`SETIMAGELAYER` 層は含まない（EWP のセマンティックイベントが担う）。
     - **移行ゼロ**：旧 ERB の出力は全て legacy チャンネルへ流れ、スクリプト改変不要。チャンネルマクロはフック非搭載エンジンでは空展開
 
 ---
@@ -961,7 +961,7 @@
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)Preload バイトレベルキャッシュ
 !!! summary ""
 
-    起動時にERB/CSVファイルをメモリにプリロード。`EraStreamReader.OpenOnCache()`でキャッシュから読み取り、ディスクIOを回避。
+    起動時にERB/CSVファイルをメモリにプリロード。`EraStreamReader.OpenOnCache()`でキャッシュから読み取り、ディスクIOを回避。コンパイル完了後は `Preload.ClearAndCompact()` でソースキャッシュを解放し（LOH 圧縮 GC を 1 回）、必要時にディスクから再読込する（v16.6.14。eraTW 実測：タイトル画面ワーキングセット 1.08 GB → 0.67 GB）。
 
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)Stopwatch 高精度計時
 !!! summary ""

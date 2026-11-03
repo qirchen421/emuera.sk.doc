@@ -4,6 +4,34 @@ All notable changes to Emuera-SKIA will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [17.0.0] — メモリ最適化と背景スナップショットの正式化（16.6.14／16.6.15 の集約）
+
+> 16.6.14／16.6.15 は `develop-skiasharp` 上の開発版で、単独では配布していない。本版でこの 2 版の変更をまとめて公開する。細目は下の 16.6.14／16.6.15 の各節を参照。
+
+### 追加
+
+- **CBG 合成スナップショット書き出し**（cap `bg`）：`bg.set`／`bg.data`／`bg.fail`／`bg.clear`、FE→VM `bg.req`（rev 指定で再取得）、`legacy.textbgc` グローバル背景色イベント、`sys.state.bg`／`snapshot.full.bg` の加法フィールド。スナップショットは「背景色クリア＋SETBGIMAGE ベイク層＋CBG」のみで、テキスト行・行内 `escapedParts`・`SETIMAGELAYER` 層は含まない（EWP のセマンティックイベントが担う）
+- `meta.metrics` に `bgDropped`／`bgSkippedIdentical` を追加（bg 書き出しの診断カウンタ。pixel の `dropped`／`writeDropped` とは命名を分ける）
+- **クレジットウィンドウの ack 即時起床**：`NoteAck` に `Monitor.PulseAll(ackGate)` を追加し、ライターが 250 ms タイムアウトを待たずに起床（バースト時に吞吐が細らない）
+
+### 変更
+
+- **メモリ最適化**：ERB/CSV コンパイル完了後に `Preload.ClearAndCompact()`（ソースキャッシュ解放＋完全圧縮 GC＋LOH `CompactOnce`。eraTW 実測：タイトル画面ワーキングセット 1.08 GB → 0.67 GB、ロード後 1.36 GB → 1.01 GB）。`SharedBitmapCache` を「最大 200 枚」から **256 MB ハードバイト予算の LRU** に変更、`AnimSpriteCache` に 256 MB フレームバイト予算を追加、`SKBitmap.Decode` をグローバルロック外へ移動
+- **バージョン署名**：`Skiav16.6.15` → `Skiav17`（`1824+v24+EMv18+EEv56+Skiav17`）
+
+### 未検証
+
+- GUI `Emuera.exe --ewp`＋最小化起動の boot 競合（`meta.state` が boot のまま、約 50% で再現。bg 機能とは無関係で、起動面の課題として保留）
+
+### 検証（2026-11-04）
+
+- `dotnet build Emuera.sln -c Debug` 0 error（既存 CA 警告 950 件）；eraWire `rimg1a_bg_gate` PASS（`bg.set`×20／`bg.data` 8 rev／`bgDropped=14`／`bgSkippedIdentical 0→2`／`pending` 正例／旧 FE はゼロイベント）
+- eraWire `t7_ci` 12 スイート機能全 PASS（`n2` テキストハッシュを本版 GUI エンジンで実行）
+- headless 実 staging（4100 ERB）初行 7.7 秒／ワーキングセット 732 MiB（描画なし口径）
+- 音声の聴感・GUI スクリーンショット・VN 体感はユーザー側スモーク
+
+***
+
 ## [16.6.13] — EWP audio v1（P3-E：AudioLedger v2 / ERB 内建 6 個）
 
 ### 追加

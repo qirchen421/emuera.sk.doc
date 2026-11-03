@@ -197,8 +197,8 @@
 
     Complete redesign of image resource management.
 
-    - **SharedBitmapCache**: Global bitmap pool (max 200) + ConstImage lightweight shell (records filepath only, does not hold SKBitmap)
-    - **AnimSpriteCache**: Animation sprite LRU cache (max 6), evicts frame data on overflow, re-decodes on re-access
+    - **SharedBitmapCache**: Global bitmap pool (**256 MB hard byte-budget LRU**, v16.6.14) + ConstImage lightweight shell (records filepath only, does not hold SKBitmap)
+    - **AnimSpriteCache**: Animation sprite LRU cache (max 6 + **256 MB frame-byte budget**, v16.6.14), evicts frame data on overflow, re-decodes on re-access
     - **SpriteAnime optimization**: Fixes memory explosion from duplicate decoding of the same file
     - **Lazy loading index**: CSV preload builds SQLite :memory: index only, image data is 0 bytes, decodes on first render
     - **DIV rendering optimization**: Hit-test O(1) positioning + Y-axis pre-filtering
@@ -215,7 +215,7 @@
     - **Event vocabulary**: `legacy.line` (monotonic line IDs) / `legacy.clear` / `input.request`↔`input.submit` (reqId + generation check) / `frame.commit` / `snapshot.full` (reconnect rebuild) / `sprite.*` / `overlay.island` / `pixel.frame` (full-frame offscreen PNG) / `channel.*` (script-side `UI_CHANNEL_*` macro boundaries)
     - **Negotiation**: `hello` reports caps and grid baseline (cellW/cellH/lineH/font); the frontend replies `hello.ok` with viewport and pixel-mode switch
     - **Backpressure**: credit window (unacked frame cap) pauses sending while scripts keep running; pixel-stream overload drops frames without blocking
-    - **Runtime sprite snapshots (v0.3)**: `sprite.req` -> `sprite.data` (PNG) / `sprite.data.fail`; `sprite.set.rev` and `snapshot.full.sprites[].rev` identify an immutable snapshot. Provided only when the frontend declares the `sprite.export` cap in `hello.ok`; otherwise `sprite.req` is ignored. `sys.title` returns to the title screen and drops the snapshot cache. `hello.proto=EWP/0.3` (same command surface as v0.2)。animated sprites carry an `anim{count,delays}` frame table (v16.6.11) and can be fetched per frame through a negative `sprite.req` rev (`frame = -rev-1`); `div.children` child images use the same shape (v16.6.12)。
+    - **Runtime sprite snapshots (v0.3)**: `sprite.req` -> `sprite.data` (PNG) / `sprite.data.fail`; `sprite.set.rev` and `snapshot.full.sprites[].rev` identify an immutable snapshot. Provided only when the frontend declares the `sprite.export` cap in `hello.ok`; otherwise `sprite.req` is ignored. `sys.title` returns to the title screen and drops the snapshot cache. `hello.proto=EWP/0.3` (same command surface as v0.2)。animated sprites carry an `anim{count,delays}` frame table (v16.6.11) and can be fetched per frame through a negative `sprite.req` rev (`frame = -rev-1`); `div.children` child images use the same shape (v16.6.12)。**CBG composite snapshot** (v16.6.15): cap `bg` provides `bg.set` / `bg.data` / `bg.fail` / `bg.clear`, FE→VM `bg.req` (re-fetch by rev), the `legacy.textbgc` global text-background event, and additive `bg` fields in `sys.state` / `snapshot.full`. The snapshot contains only "clear colour + baked SETBGIMAGE layer + CBG"; text lines, inline `escapedParts` and `SETIMAGELAYER` layers are not included (EWP semantic events carry them)。
     - **Zero migration**: all legacy ERB output lands in the legacy channel with no script changes; channel macros are no-ops on engines without the hook
 
 ---
@@ -961,7 +961,7 @@
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)Preload Byte-Level Cache
 !!! summary ""
 
-    Preloads ERB/CSV files into memory at startup. Reads from cache via `EraStreamReader.OpenOnCache()`, avoiding disk IO.
+    Preloads ERB/CSV files into memory at startup. Reads from cache via `EraStreamReader.OpenOnCache()`, avoiding disk IO. After compilation finishes, `Preload.ClearAndCompact()` releases the source cache (one compacting LOH GC) and re-reads from disk on demand (v16.6.14; measured on eraTW: title-screen working set 1.08 GB → 0.67 GB).
 
 ### ![](../assets/images/Icondotnet.webp)![](../assets/images/IconSK.webp)Stopwatch High-Precision Timing
 !!! summary ""
